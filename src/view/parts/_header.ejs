@@ -1,0 +1,133 @@
+<%
+  topNav = [
+    {
+      texts: 'もてぎの楽しみ方',
+      link: '#',
+    },
+    {
+      texts: 'ニュース・イベント',
+      link: '#',
+    },
+    {
+      texts: '営業時間',
+      link: '#',
+    },
+    {
+      texts: '料金・チケット',
+      link: '#',
+    },
+    {
+      texts: 'よくあるご質問',
+      link: '#',
+    },
+    {
+      texts: 'アクセス',
+      link: '#',
+    }
+  ]
+
+
+  bottomNav = [
+    {
+      modifier: 'header-bottom-item-location',
+      texts: 'エリア・施設',
+      link: '#',
+      icon: 'location'
+    },
+    {
+      modifier: 'header-bottom-item-activity',
+      texts: 'アトラクション・<br>アクティビティ',
+      link: '#',
+      icon: 'activity'
+    },
+    {
+      modifier: 'header-bottom-item-motorsports',
+      texts: 'モーター<br>スポーツ',
+      link: '#',
+      icon: 'motorsports'
+    },
+    {
+      modifier: 'header-bottom-item-camp',
+      texts: 'ホテル・<br>キャンプ',
+      link: '#',
+      icon: 'camp'
+    },
+    {
+      modifier: 'header-bottom-item-restaurant',
+      texts: 'レストラン',
+      link: '#',
+      icon: 'restaurant'
+    },
+    {
+      modifier: 'header-bottom-item-shop',
+      texts: 'グッズ＆<br>ショップ',
+      link: '#',
+      icon: 'shop'
+    }
+  ]
+%>
+
+
+<div class="l-header">
+  <div class="l-container">
+    <header class="header">
+      <div class="l-header-top">
+        <div class="l-header-top-logo">
+          <a class="header-logo" href="/">
+            <img src="<%- assetsPath %>images/logo.svg" alt="Twin Ring Motegi">
+          </a>
+        </div>
+        <div class="l-header-top-right">
+          <ul class="header-top-others">
+            <li class="header-top-others-item header-top-others-item-logo">
+              <a class="header-top-others-link" ref="#">
+                <img src="<%- assetsPath %>images/logo-motogp.png" alt="MotoGP">
+              </a>
+            </li>
+            <li class="header-top-others-item">
+              <a class="header-top-others-link" href="#">
+                <span class="header-top-others-lang-texts">LANGUAGE
+                  <i class="header-top-others-lang-icon">
+                    <%- include('view/parts/_svg', {
+                      name: 'arrow-down'
+                    }) %>
+                  </i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <nav class="header-top-nav">
+            <%
+              topNav.forEach( topNavItem => {
+            %>
+            <li class="header-top-nav-item">
+              <a class="header-top-nav-link" href="<%- topNavItem.link %>"><%- topNavItem.texts %></a>
+            </li>
+            <% }) %>
+          </nav>
+        </div>
+      </div>
+
+      <div class="l-header-bottom">
+        <nav>
+          <ul class="header-bottom-list">
+            <%
+              bottomNav.forEach( bottomNavItem => {
+            %>
+            <li class="header-bottom-item<%- ' '+bottomNavItem.modifier %>">
+              <a class="header-bottom-link" href="<%- bottomNavItem.link %>">
+                <span class="header-bottom-link-texts"><%- bottomNavItem.texts %></span>
+                <i class="header-bottom-icon">
+                  <%- include('view/parts/_svg', {
+                    name: bottomNavItem.icon
+                  }) %>
+                </i>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+</div>

@@ -1,4 +1,52 @@
 <% include view/template/_head %>
 
-<% include view/template/_footer %>
+  <div class="mv">
+    <div class="mv-buttons">
+      <ul class="mv-buttons-list">
+        <li class="mv-buttons-item">
+          <a class="mv-buttons-link" href="#">
+            <span>料金<br>・チケット</span>
+          </a>
+        </li>
+        <li class="mv-buttons-item">
+          <a class="mv-buttons-link" href="#">
+            <span>アクセス</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="mv-image" style="background-image:url(<%- assetsPath %>images/mv-img.png);"></div>
+      </li>
+    </ul>
 
+    <div class="l-container mv-container">
+      <h1 class="mv-heading">
+        <span class="mv-heading-texts">
+          <img src="<%- assetsPath %>images/mv-twinring-motegi.png" alt="Twinring Motegi">
+        </span>
+        <span class="mv-heading-subtexts">
+          <img src="<%- assetsPath %>images/mv-heading.png" alt="家族にちょうどいい冒険を">
+        </span>
+      </h1>
+
+      <div class="mv-today">
+        <div class="mv-today-inner">
+          <img class="mv-today-texts" src="<%- assetsPath %>images/mv-today-texts.png" alt="">
+          <span class="mv-today-time">10:00-17:00</span>
+          <span class="mv-today-degree">
+            <i class="mv-today-degree-icon">
+              <%- include('view/parts/_svg', {
+                name: 'sun'
+              }) %>
+            </i>
+            <span class="mv-today-celcius-value">28</span>
+            <span class="mv-today-celcius">&#176;c</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% include view/template/_footer %>

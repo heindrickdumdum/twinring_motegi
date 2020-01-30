@@ -1,0 +1,24 @@
+//show pc
+.u-show-pc {
+  @include query($breakpoint-mobile) {
+    // sass-lint:disable-block no-important
+    display: none !important;
+  }
+}
+
+
+//show sp
+.u-show-sp {
+  // sass-lint:disable-block no-important
+  display: none !important;
+
+  @include query($breakpoint-mobile) {
+    display: block !important;
+  }
+
+  &.u-show-sp-flex {
+    @include query($breakpoint-mobile) {
+      display: flex !important;
+    }
+  }
+}

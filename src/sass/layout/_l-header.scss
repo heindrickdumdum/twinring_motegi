@@ -1,0 +1,20 @@
+.l-header-top {
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba($color-primary, .12);
+}
+
+.l-header-top-logo {
+  width: 242px;
+  border-top: 4px solid $color-green;
+  padding-top: 20px;
+}
+
+.l-header-top-right {
+  width: calc(100% - 242px);
+  text-align: right;
+}
+
+.l-header-bottom {
+  padding: 20px 0;
+}

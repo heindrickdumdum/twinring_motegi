@@ -18,3 +18,16 @@ body {
   color: $base-font-color;
   background-color: $base-background-color;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  &:hover {
+    @include query($breakpoint-mobile, min) {
+      transition: color $duration $ease-animation;
+    }
+  }
+}

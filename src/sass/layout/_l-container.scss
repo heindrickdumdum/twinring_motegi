@@ -1,0 +1,9 @@
+.l-container {
+  padding: 0 32px;
+  width: 1220px + 64;
+  margin: 0 auto;
+
+  @include query($breakpoint-mobile) {
+    width: 100%;
+  }
+}

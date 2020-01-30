@@ -59,3 +59,12 @@
     background: $color;
   }
 }
+
+@mixin query($size, $type: max) {
+  @if $type == min {
+    $size: $size + 1;
+  }
+  @media all and (#{$type}-width: $size) {
+    @content;
+  }
+}

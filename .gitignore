@@ -1,7 +1,9 @@
 .idea
+.atom
+.vscode
 .sass-cache
 .DS_Store
 node_modules
-public
-public/data/*
+npm-debug.log
 guide
+public

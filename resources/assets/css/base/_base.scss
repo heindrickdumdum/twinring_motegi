@@ -1,0 +1,43 @@
+/*
+#styleguide
+基本スタイル
+
+```
+<p>特に何も指定しないときの状態</p>
+```
+*/
+body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  text-rendering: $text-rendering;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  color: $base-font-color;
+  background-color: $base-background-color;
+  min-width: $breakpoint-tablet;
+  overflow-x: hidden;
+
+  @media screen and (max-width: $breakpoint-mobile + 1) {
+		min-width: 100%;
+	}
+}
+
+html {
+  min-width: $breakpoint-tablet;
+  position: relative;
+
+  @media screen and (max-width: $breakpoint-mobile + 1) {
+    min-width: 100%;
+  }
+}
+
+* {
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}

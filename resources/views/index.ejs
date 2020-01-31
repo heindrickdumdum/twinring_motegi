@@ -1,0 +1,69 @@
+<%
+  var title = 'Twin Ring Motegi'
+%>
+
+<%- include('/partials/head', { title }) -%>
+
+<div class="mv">
+  <div class="mv-buttons">
+    <ul class="mv-buttons-list">
+      <li class="mv-buttons-item">
+        <a class="mv-buttons-link" href="#">
+          <span>料金<br>・チケット</span>
+        </a>
+      </li>
+      <li class="mv-buttons-item">
+        <a class="mv-buttons-link" href="#">
+          <span>アクセス</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <ul class="mv-list">
+    <li class="mv-item">
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.png') %>);"></div>
+    </li>
+  </ul>
+
+  <div class="l-container mv-container">
+    <h2 class="mv-heading">
+      <span class="mv-heading-texts">
+        <img src="<%= mix('/assets/images/mv-twinring-motegi.png') %>" alt="Twinring Motegi">
+      </span>
+      <span class="mv-heading-subtexts">
+        <img src="<%= mix('/assets/images/mv-heading.png') %>" alt="家族にちょうどいい冒険を">
+      </span>
+    </h2>
+
+    <div class="mv-today">
+      <div class="mv-today-inner">
+        <img class="mv-today-texts" src="<%= mix('/assets/images/mv-today-texts.png') %>" alt="">
+        <span class="mv-today-time">10:00-17:00</span>
+        <span class="mv-today-degree">
+          <i class="mv-today-degree-icon">
+            <svg>
+              <title>Sun</title>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-sun') %>"></use>
+            </svg>
+          </i>
+          <span class="mv-today-celcius-value">28</span>
+          <span class="mv-today-celcius">&#176;c</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l-feature">
+  <section class="feature">
+    <ul>
+      <li>
+        <a class="" href="#">
+
+        </a>
+      </li>
+    </ul>
+  </section>
+</div>
+
+<%- include('/partials/footer') -%>

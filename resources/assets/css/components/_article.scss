@@ -30,6 +30,27 @@
   }
 }
 
+.article-image {
+  height: 218px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: url(#{$image-path}article/bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
+    position: absolute;
+    left: -26px;
+    top: -31px;
+    width: 120%;
+    height: 132%;
+  }
+}
+
 .article-image-wrap {
   padding: 15px;
   position: relative;
@@ -79,27 +100,6 @@
         display: none;
       }
     }
-  }
-}
-
-.article-image {
-  height: 218px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-
-  &::before {
-    content: '';
-    background-image: url(#{$image-path}article/bg.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left top;
-    position: absolute;
-    left: -26px;
-    top: -31px;
-    width: 120%;
-    height: 132%;
   }
 }
 

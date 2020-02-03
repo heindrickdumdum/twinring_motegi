@@ -21,7 +21,7 @@
     top: 50%;
     right: 40px;
     transform-origin: center;
-    transform: translateY(-50%) rotate(0deg);
+    transform: translateY(-50%) rotate(180deg);
     content: "";
     display: inline-block;
     width: 0;
@@ -34,7 +34,7 @@
 
   &.is-collapsed {
     &:after {
-      transform: translateY(-50%) rotate(180deg);
+      transform: translateY(-50%) rotate(0deg);
     }
   }
 }

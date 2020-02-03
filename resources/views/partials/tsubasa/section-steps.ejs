@@ -2,24 +2,87 @@
 stepsData = [
   {
     'step': 'Step 1',
-    'image': '/assets/images/top/feature/img1.jpg',
+    'image': '/assets/images/tsubasa/step_01.png',
     'heading': '装備装着',
     'sub heading': '安全ベルト「ハーネス」初体験',
     'sub text': 'まずは安全ベルト「ハーネス」を装着。これで空を飛ぶ準備は万端だ！'
   },
   {
-    'step': 'Step 1',
-    'image': '/assets/images/top/feature/img1.jpg',
-    'heading': '装備装着',
-    'sub heading': '安全ベルト「ハーネス」初体験',
-    'sub text': 'まずは安全ベルト「ハーネス」を装着。これで空を飛ぶ準備は万端だ！'
+    'step': 'Step 2',
+    'image': '/assets/images/tsubasa/step_02.png',
+    'heading': '飛び方の説明',
+    'sub heading': 'これで不安解消',
+    'sub text': '飛び方や止まり方の方法を詳しくレクチャーするぞ'
   },
   {
-    'step': 'Step 1',
-    'image': '/assets/images/top/feature/img1.jpg',
-    'heading': '装備装着',
-    'sub heading': '安全ベルト「ハーネス」初体験',
-    'sub text': 'まずは安全ベルト「ハーネス」を装着。これで空を飛ぶ準備は万端だ！'
+    'step': 'Step 3',
+    'image': '/assets/images/tsubasa/step_03.png',
+    'heading': 'ハイタッチ',
+    'subHeading': '準備OKの合図',
+    'subText': '準備ができたら、スタッフとハイタッ チして出発だ！'
+  },
+  {
+    'step': 'Step 4',
+    'image': '/assets/images/tsubasa/step_04.png',
+    'heading': 'いざ出発。',
+    'subHeading': 'スタッフと一緒にプチ登山！',
+    'subText': '冒険の塔、冒険のつり橋を渡って、いざスタートデッキへ！'
+  },
+  {
+    'step': 'Step 5',
+    'image': '/assets/images/tsubasa/step_05.png',
+    'heading': 'スタートデッキ到着！',
+    'subHeading': '景色を楽しみながら「心の準備」',
+    'subText': 'いよいよスタートデッキ到着！日本最大級！往復561m"森からサーキットの大空へ"空中散歩を楽しもう！'
+  },
+  {
+    'step': 'Step 6',
+    'image': '/assets/images/tsubasa/step_06.png',
+    'heading': '指差し確認',
+    'subHeading': 'プーリー「よし！」カラビナ「よし！」',
+    'subText': '安全に飛ぶために、ワイヤーと滑車がちゃんとかかっているかスタッフと一緒に"指差し確認"だ！'
+  },
+  {
+    'step': 'Step 7',
+    'image': '/assets/images/tsubasa/step_07.png',
+    'heading': 'スタート直前',
+    'subHeading': 'カメラの準備はOK？',
+    'subText': 'いよいよフライト直前！応援席からシャッターチャンスを狙え！'
+  },
+  {
+    'step': 'Step 8',
+    'image': '/assets/images/tsubasa/step_08.png',
+    'heading': '3カウントで出発！',
+    'subHeading': 'スタッフと一緒に声だしちゃおう！',
+    'subText': 'まずは343mの空中滑走！森を抜けてサーキットの特等席までひとっ飛びだ！'
+  },
+  {
+    'step': 'Step 9',
+    'image': '/assets/images/tsubasa/step_09.png',
+    'heading': '中間デッキ到着！',
+    'subHeading': 'VIPスイートよりも高い特等席',
+    'subText': '一周4.8kmの広大な国際レーシングコースを一望！レース開催日は「一番の特等席」だ！'
   }
 ];
+
 %>
+
+
+
+<ul>
+  <%
+  stepsData.forEach(item => {
+  %>
+  <li>
+    <div class="step-no"><%= item.step %></div>
+    <div class="step-image">
+      <img src="<%= item.image %>" alt="Step 1">
+    </div>
+    <div class="step-title"><%= item.heading %></div>
+    <div class="step-subtitle"><%= item.subHeading %></div>
+    <p class="step-desc">
+      <%= item.subText %>
+    </p>
+  </li>
+  <% }) %>
+</ul>

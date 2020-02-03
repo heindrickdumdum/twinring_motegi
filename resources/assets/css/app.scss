@@ -12,14 +12,25 @@
 @import "lib/clearfix";
 
 @import "components/fonts";
+@import "components/heading";
 @import "components/header";
 @import "components/mv";
 @import "components/article";
+@import "components/feature";
+@import "components/parkmap";
+@import "components/button";
+@import "components/button-gradient";
+@import "components/section";
+@import "components/section-cards";
 @import "components/sumika-table";
 
 @import 'layout/grid';
 @import "layout/l-container";
 @import "layout/l-header";
+@import "layout/l-feature";
+@import "layout/l-parkmap";
+@import "layout/l-section";
+@import "layout/l-how-to";
 
 // Required
 .svg-sprite {

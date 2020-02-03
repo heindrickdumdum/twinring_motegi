@@ -1,0 +1,19 @@
+<div class="heading-wrap<%- ' '+modifier %>">
+  <h2 class="heading">
+    <span class="heading-texts">
+      <img src="<%- texts %>" alt="<%- alt %>">
+    </span>
+    <span class="heading-subtexts">
+      <% if(!altSubtexts) { %>
+      <svg>
+        <title><%- subtexts %></title>
+        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-'+subtexts) %>"></use>
+      </svg>
+      <% } %>
+
+      <% if(altSubtexts) { %>
+      <img src="<%- subtexts %>" alt="<%- altSubtexts %>">
+      <% } %>
+    </span>
+  </h2>
+</div>

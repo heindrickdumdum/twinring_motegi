@@ -1,0 +1,16 @@
+.feature-list {
+  display: flex;
+  list-style: none;
+  margin: 0 -40px;
+
+  &.feature-list-no-design {
+    margin: 35px -40px 0;
+  }
+}
+
+.feature-item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 25px;
+  width: calc((1220px / 3) - 30px);
+}

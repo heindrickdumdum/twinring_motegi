@@ -3,11 +3,11 @@
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
 
-<%- include('/partials/head', { title }) -%>
+<%- include('./../partials/head', { title }) -%>
 
 <div class="mv-sumika">
   <div class="-container">
-    <%- include /partials/acc %>
+    
   </div>
 </div>
 
@@ -24,34 +24,57 @@
     肉食動物や大きな鳥から小動物まで、あらゆる生きもの達の隠れ家となっている場所、それがすみか。 ネットが張りめぐらされた「巨大ネ
   </p>
 
-  <dl class="sumika-table">
-    <dt class="sumika-table-label">場所</dt>
-    <dd class="sumika-table-content">モビパーク内</dd>
-    <dt class="sumika-table-label">所要時間</dt>
-    <dd class="sumika-table-content">説明10分、遊ぶ時間30分の計40分（受付終了時間は営業終了の約1時間前）</dd>
-    <dt class="sumika-table-label">雨天の運行</dt class="">
-    <dd class="sumika-table-content">屋内施設となりますので、雨天時でもお楽しみいただけます。</dd>
-    <dt class="sumika-table-label">対象者</dt>
-    <dd class="sumika-table-content">3歳以上※1</dd>
-    <dt class="sumika-table-label">身長制限</dt>
-    <dd class="sumika-table-content">なし</dd class="">
-    <dt class="sumika-table-label">料金</dt>
-    <dd class="sumika-table-content">
-      モビパークパスポート対象
-      アトラクションチケット利用：800円
-    </dd>
-    <dt class="sumika-table-label">ご利用にあたって</dt>
-    <dd class="sumika-table-content">
-      服装について : 
-      靴を脱いでのご利用となります。 必ず靴下を履いてご利用ください。なお、指先が分かれたタイプの靴下、たび、ストッキング、タイツはご利用いただけません。もし、ご準備ない場合は、SUMIKA内に、靴下の自動販売機がございますのでご利用ください。
-      
-      ※１小学生未満のお子様の利用について : 
-      小学生未満のお子さまは中学生以上の同伴者の付添い（有料）が必要になります。
-      
-      0歳〜2歳のお子様の利用について : 
-      0歳〜2歳のお子様は遊具では遊ぶことはできません。保護者様同伴（有料）にてSUMIKA内の芝生のレストエリアをご利用いただけます。
-    </dd>
-  </dl>
+  <table class="table">
+    <tbody>
+      <tr class="table-row">
+        <th class="table-head">場所</th>
+        <td class="table-col">モビパーク内</td>
+      </tr>
+
+      <tr class="table-row">
+        <th class="table-head">所要時間</th>
+        <td class="table-col">説明10分、遊ぶ時間30分の計40分（受付終了時間は営業終了の約1時間前）</td>
+      </tr>
+
+      <tr class="table-row">
+        <th class="table-head">雨天の運行</th>
+        <td class="table-col">屋内施設となりますので、雨天時でもお楽しみいただけます。</td>
+      </tr>
+
+      <tr class="table-row">
+        <th class="table-head">対象者</th>
+        <td class="table-col">3歳以上※1</td>
+      </tr>
+
+      <tr class="table-row">
+        <th class="table-head">身長制限</th>
+        <td class="table-col">なし</td>
+      </tr>
+
+      <tr class="table-row">
+        <th class="table-head">料金</th>
+        <td class="table-col">
+          モビパークパスポート対象
+          アトラクションチケット利用：800円
+        </td>
+      </tr>
+
+      <tr class="table-row">
+        <th class="table-head">ご利用にあたって</th>
+        <td class="table-col">
+          服装について : 
+          靴を脱いでのご利用となります。 必ず靴下を履いてご利用ください。なお、指先が分かれたタイプの靴下、たび、ストッキング、タイツはご利用いただけません。もし、ご準備ない場合は、SUMIKA内に、靴下の自動販売機がございますのでご利用ください。
+          
+          ※１小学生未満のお子様の利用について : 
+          小学生未満のお子さまは中学生以上の同伴者の付添い（有料）が必要になります。
+          
+          0歳〜2歳のお子様の利用について : 
+          0歳〜2歳のお子様は遊具では遊ぶことはできません。保護者様同伴（有料）にてSUMIKA内の芝生のレストエリアをご利用いただけます。
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
 </section>
 
 <section class="">
@@ -61,27 +84,43 @@
     期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
   </p>
 
-  <dl class="sumika-table">
-    <dt class="sumika-table-label">日程</dt class="">
-    <dd class="sumika-table-content">
-      9月		15日（日）、16日（月）、29日（日）
-      10月	15日（日）、16日（月）、29日（日）
-      11月	15日（日）、16日（月）、29日（日）
-    </dd>
-    <dt class="sumika-table-label">対象アトラクション</dt class="">
-    <dd class="sumika-table-content">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</dd>
-    <dt class="sumika-table-label">配布場所</dt>
-    <dd class="sumika-table-content">アトラクション前特設テント</dd>
-    <dt class="sumika-table-label">配布枚数</dt class="">
-    <dd class="sumika-table-content">各回約200枚配布※1回の所要時間約40分（説明10分、遊べる時間30分、時間入れ替え割）</dd>
-    <dt class="sumika-table-label">配布にあたって</dt>
-    <dd class="sumika-table-content">
-      ※入場整理券は定員に達し次第、受付を終了いたします。
-      ※別途、モビパークパスポートまたはのりもの券をお買い求めください。
-      ※アトラクションには年齢制限がございます。 >>詳しくはこちら
-      ※混雑状況や天候などより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
-    </dd>
-  </dl>
+<table class="sumika-table">
+  <tbody>
+      <tr class="table-row">
+        <th class="table-head">日程</th>
+        <td class="table-col">
+          9月		15日（日）、16日（月）、29日（日）
+          10月	15日（日）、16日（月）、29日（日）
+          11月	15日（日）、16日（月）、29日（日）
+        </td>
+      </tr>
+      
+      <tr class="table-row">
+        <th class="table-head">対象アトラクション</th>
+        <td class="table-col">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</td>
+      </tr>
+      
+      <tr class="table-row">
+        <th class="table-head">配布場所</th>
+        <td class="table-col">アトラクション前特設テント</td>
+      </tr>
+      
+      <tr class="table-row">
+        <th class="table-head">配布枚数</th>
+        <td class="table-col">各回約200枚配布※1回の所要時間約40分（説明10分、遊べる時間30分、時間入れ替え割）</td>
+      </tr>
+
+      <tr class="table-row">
+        <th class="table-head">配布にあたって</th>
+        <td class="table-col">
+          ※入場整理券は定員に達し次第、受付を終了いたします。
+          ※別途、モビパークパスポートまたはのりもの券をお買い求めください。
+          ※アトラクションには年齢制限がございます。 >>詳しくはこちら
+          ※混雑状況や天候などより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </section>
 
 <section>
@@ -160,4 +199,4 @@
   </div>
 </section>
 
-<%- include('/partials/footer') -%>
+<%- include('./../partials/footer') -%>

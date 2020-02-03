@@ -1,0 +1,49 @@
+.heading-texts {
+  display: block;
+}
+
+.heading-subtexts {
+  display: block;
+  margin: 17px 0 0 10px;
+  height: 36px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.heading-wrap {
+  &.heading-wrap-center {
+    text-align: center;
+
+    .heading-texts,
+    .heading-subtexts {
+      margin: 0 auto;
+    }
+
+    .heading-subtexts {
+      margin: 17px auto 0;
+    }
+  }
+
+  &.heading-wrap-parkmap {
+    .heading-texts {
+      width: 144px;
+    }
+
+    .heading-subtexts {
+      width: 750px;
+    }
+  }
+
+  &.heading-wrap-activity {
+    .heading-texts {
+      width: 258px;
+    }
+
+    .heading-subtexts {
+      width: 800px;
+    }
+  }
+}

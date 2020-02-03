@@ -1,0 +1,164 @@
+.parkmap-container {
+  position: relative;
+}
+
+.parkmap-image {
+  background: url(#{$image-path}top/parkmap/image.jpg) no-repeat center top;
+  background-size: contain;
+  width: 1402px;
+  height: 903px;
+  position: relative;
+  left: -308px;
+}
+
+.parkmap-image-list {
+  counter-reset: parkmap_image_list;
+  position: relative;
+  left: 330px;
+}
+
+.parkmap-image-item {
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+
+  &::before {
+    counter-increment: parkmap_image_list;
+    content: '0'#{counter(parkmap_image_list)};
+    position: relative;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: normal;
+    color: $color-white;
+    letter-spacing: 0.08em;
+    background: url(#{$image-path}top/parkmap/number-bg-border.png) no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+  }
+
+  &:first-child {
+    left: 201px;
+    top: 137px;
+  }
+
+  &:nth-of-type(2) {
+    left: 163px;
+    top: 299px;
+  }
+
+  &:nth-of-type(3) {
+    left: 417px;
+    top: 222px;
+  }
+
+  &:nth-of-type(4) {
+    left: 553px;
+    top: 250px;
+  }
+
+  &:nth-of-type(5) {
+    left: 592px;
+    top: 311px;
+  }
+
+  &:nth-of-type(6) {
+    left: 525px;
+    top: 562px;
+  }
+
+  &:nth-of-type(7) {
+    left: 101px;
+    top: 476px;
+  }
+}
+
+.parkmap-list {
+  counter-reset: parkmap_list;
+}
+
+.parkmap-right {
+  position: absolute;
+  right: 0;
+  top: 161px;
+  width: 410px;
+}
+
+.parkmap-link {
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  height: 73px;
+  background: url(#{$image-path}top/parkmap/button-bg.jpg) repeat;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: $base-font-color;
+  position: relative;
+
+  &::before {
+    counter-increment: parkmap_list;
+    content: '0'#{counter(parkmap_list)};
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 61px;
+    height: 61px;
+    font-size: 20px;
+    font-weight: normal;
+    color: $color-white;
+    letter-spacing: 0.08em;
+    background: url(#{$image-path}top/parkmap/number-bg.png) no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    @include query($breakpoint-mobile, min) {
+      .parkmap-link-icon {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+.parkmap-item {
+  display: block;
+  margin-bottom: 10px;
+
+  &.parkmap-item-last {
+    margin-top: 20px;
+
+    .parkmap-link {
+      padding-left: 0;
+      justify-content: center;
+      font-size: 16px;
+      border-image: url(#{$image-path}button-border.png);
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.parkmap-link-icon {
+  width: 25px;
+  position: absolute;
+  right: 18px;
+  transition: transform $duration $ease-in-out;
+
+  svg {
+    width: 100%;
+    height: 12px;
+  }
+}

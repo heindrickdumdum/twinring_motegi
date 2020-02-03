@@ -1,55 +1,49 @@
 <%
   var title = 'Twin Ring Motegi'
   SPRITE_SVG = '/assets/svg/sprite.svg';
-%>
 
-<%
-  getData = () => {
-    return {
-      data: [
-        {
-          src: '',
-          alt: ''
-        },
-        {
-          src: '',
-          alt: ''
-        },
-        {
-          src: '',
-          alt: ''
-        },
-        {
-          src: '',
-          alt: ''
-        },
-        {
-          src: '',
-          alt: ''
-        },
-        {
-          src: '',
-          alt: ''
-        },
-        {
-          src: '',
-          alt: ''
-        },
-        {
-          src: '',
-          alt: ''
-        },
-        {
-          src: '',
-          alt: ''
-        },
-        {
-          src: '',
-          alt: ''
-        }
-      ]
+  instaData = [
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
     }
-  }
+  ]
 %>
 
 <%- include('./../partials/head', { title }) -%>
@@ -207,65 +201,77 @@
     <p class="how-to-subtext">DOKIDOKIを楽しむポイント</p>
 
     <div class="-content">
-      <div class="sumika-media u-clear">
-        <div class="sumika-media-left">
-          <div class="sumika-media-thumb">
-            <img src="https://via.placeholder.com/350x150" alt="">
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(https://via.placeholder.com/350x150);"></div>
+            </div>
           </div>
         </div>
-        <div class="sumika-media-right">
-          <h4 class="sumika-media-title">舞台は森の生きもの達のすみか！</h4>
-          <p class="sumika-media-desc">
-            夜明け直後は多くの森の生きものが活動を始める賑やかな時間となり、昼間は強い生きものが中心に活動し、夜になると夜行性の生きものが闇に隠れて動き始めます。「巨大ネットの森「SUMIKA」では、そんなリアルな森の雰囲気を音で再現します。
+        <div class="media-right">
+          <h4 class="media-title"><span>ドキドキの連続！39のアスレチック</span></h4>
+          <p class="media-desc">
+            5階建ての建物を“巨大などんぐりの木”に見立てた「森感覚アスレチック DOKIDOKI」には、1階から5階に行くルートには、全部で39のアスレチックがあります。さまざまなアスレチックをクリアしててっぺんをめざしましょう！
           </p>
-
-          <div class="sumika-media- -" style="background-image: url();">
-            <span class="sumika-media- -text">
-              SUMIKAの中で、
-              森の仲間たちを感じられタネ！
-            </span>
+      
+          <div class="media-bottom">
+            <div class="media-note">
+              <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+              <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+              <div class="media-note-text">
+                てっぺんまで登れタネ！
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="sumika-media u-clear">
-        <div class="sumika-media-left">
-          <div class="sumika-media-thumb">
-            <img src="https://via.placeholder.com/350x150" alt="">
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(https://via.placeholder.com/350x150);"></div>
+            </div>
           </div>
         </div>
-        <div class="sumika-media-right">
-          <h4 class="sumika-media-title">
-            朝から夜まで森の24時間を再現。
-            昼と夜で雰囲気が逆転！
+        <div class="media-right">
+          <h4 class="media-title">
+            <span>体力と勇気が試される！</span><br>
+            <span>選んで進む2つのコース</span>
           </h4>
-          <p class="sumika-media-desc">
-            昼間はオオタカが飛び回っていた空が、夜には満点の星空に。光の演出で森の24時間を再現しています。
-            巨大ネットを広葉樹に見立て、四季折々で変化する木々を再現します。また、夏は昼間が長く、冬は夜が長くなるように光の演出は細部にまでこだわっています。
+          <p class="media-desc">
+            DOKIDOKIは小学1年生から高学年、そして大人も楽しめるアスレチックです。 コースを進んで行くと、アスレチックの難易度でコースが分かれ、年齢や体力に応じてコースを選ぶことができます。 
           </p>
-
-          <div class="sumika-media- -" style="background-image: url();">
-            <span class="sumika-media- -text">
-              昼と夜や季節ごとの
-              森の変化を知ることができタネ！
-            </span>
+      
+          <div class="media-bottom">
+            <div class="media-note">
+              <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+              <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+              <div class="media-note-text">
+                難しいコースに<br>
+                チャレンジできタネ！
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="sumika-media u-clear">
-        <div class="sumika-media-left">
-          <div class="sumika-media-thumb">
-            <img src="https://via.placeholder.com/350x150" alt="">
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(https://via.placeholder.com/350x150);"></div>
+            </div>
           </div>
         </div>
-        <div class="sumika-media-right">
-          <h4 class="sumika-media-title">国内最大面積の巨大ネットアスレチック</h4>
-          <p class="sumika-media-desc">
-            SUMIKAは、最大高さ約11m 、ネット面積：約1000㎡の巨大ネットアスレチック。屋内では日本最大面積（※当社調べ）となっており、これまでにないスケールの空間の中で、身体を動かして遊べます。
+        <div class="media-right">
+          <h4 class="media-title">小学生未満のお子様はどきどきひろばで</h4>
+          <p class="media-desc">
+            DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。<br/>
+丸太や小さな山の形をしたアスレチックで遊んだり、キッズボルダリングで“プチボルダリング体験”をお楽しみいただけます。
           </p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -298,13 +304,13 @@
 
     <div class="video-container">
       <div class="row">
-        <div class="col-lg-5 video-wrapper">
+        <div class="col-lg-6 video-wrapper">
           <div class="video-bg">
             <iframe width="100%" src="https://www.youtube.com/embed/cJEgRZ-UMcY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <p class="video-text">仲間とチャレンジコースに挑戦！</p>
         </div>
-        <div class="col-lg-5 video-wrapper">
+        <div class="col-lg-6 video-wrapper">
           <div class="video-bg">
             <iframe width="100%" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -321,7 +327,15 @@
 
     <div class="instagram-wrapper">
       <ul class="thumbnail-list">
-        <li></li>
+        <%
+          instaData.forEach(insta => { 
+        %>
+          <li class="thumbnail-item">
+            <a class="thumbnail" href="#">
+              <img src="<%= insta.src %>" alt="<%= insta.alt %>">
+            </a>
+          </li>
+        <% }) %>
       </ul>
     </div>
 

@@ -10,6 +10,7 @@
 
 .media-thumb-bg {
   position: relative;
+
   img {
     position: absolute;
     content: "";
@@ -28,6 +29,7 @@
     z-index: 0;
   }
 }
+
 .media-thumb {
   position: relative;
   width: 370px;

@@ -16,29 +16,33 @@
   letter-spacing: 0.16em;
 }
 
-.row {
-  justify-content: space-around;
+.video-wrapper {
+  padding: 40px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
 }
 
-.video-wrapper {
-  flex-direction: column;
+.video-bg {
+  height: 40vh;
+  padding: 15px;
+  background-image: url(../images/dokidoki/video-frame-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 
-  .video-bg {
-    height: 40vh;
-    padding: 15px;
-    background-image: url(../images/dokidoki/video-frame-bg.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-
-    iframe {
-      height: 98%;
-    }
+  iframe {
+    height: 98%;
   }
+}
 
-  .video-text {
-      font-size: 20px;
-      font-family: "Hiragino Kaku Gothic ProN";
-      color: rgb(45, 45, 45);
-      line-height: 1.731;    
-  }
+.video-text {
+    font-size: 20px;
+    font-family: "Hiragino Kaku Gothic ProN";
+    color: rgb(45, 45, 45);
+    line-height: 1.731;    
 }

@@ -1,0 +1,15 @@
+<article class="article">
+  <div class="article-image-wrap article-image-wrap-no-design">
+    <div class="article-image"
+         style="background-image: url(<% if(image != '') { %>
+           <%- image %>
+           <% } else { %><%= mix('/assets/images/noimage.jpg') %>
+           <% } %>)"></div>
+  </div>
+  <p class="article-heading"><%- heading %></p>
+  <%- include('/partials/button-gradient', {
+    'texts': mix('/assets/images/top/parkmap/parkmap.png'),
+    'alt':  'test',
+    'link': buttonLink
+  }) %>
+</article>

@@ -6,19 +6,25 @@ $text-rendering: auto;
 
 $font-hiragino: 'HiraKakuPro-W6-AlphaNum';
 
-$base-font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$base-font-family: $font-hiragino, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 $base-font-size: 14px;
 $base-font-color: #333;
 $base-background-color: #fff;
 
+$color-base: $base-font-color;
 $color-primary: $base-font-color;
-$color-mineshaft: #2d2d2d;
 $color-green: #00a040;
 $color-light-green: #47b97f;
 $color-gray: #ccc;
+$color-mineshaft: #2d2d2d;
+$color-seaweed: #12290f;
+$color-crusoe: #1a4d01;
+$color-white: #fff;
 
 $breakpoint-tablet: 1279px;
 $breakpoint-mobile: 767px;
+
+$container: 1220px;
 
 //path
 $font-path: "../lib/fonts/";

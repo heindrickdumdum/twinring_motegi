@@ -1,0 +1,20 @@
+.attraction-info-table {
+  margin-top: 50px;
+
+  tr {
+    border-top: 2px dashed #e0e0df;
+
+    &:last-child {
+      border-top: 2px dashed #e0e0df;
+    }
+  }
+
+  td {
+    padding: 25px 0 25px 40px;
+    vertical-align: top;
+
+    &:first-child {
+      white-space: nowrap;
+    }
+  }
+}

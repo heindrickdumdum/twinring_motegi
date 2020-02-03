@@ -1,0 +1,121 @@
+<%- include('/partials/head', { title }) -%>
+
+<!-- mv -->
+<div class="mv">
+  <div class="mv-buttons">
+    <ul class="mv-buttons-list">
+      <li class="mv-buttons-item">
+        <a class="mv-buttons-link" href="#">
+          <span>料金<br>・チケット</span>
+        </a>
+      </li>
+      <li class="mv-buttons-item">
+        <a class="mv-buttons-link" href="#">
+          <span>アクセス</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <ul class="mv-list">
+    <li class="mv-item">
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.png') %>);"></div>
+    </li>
+  </ul>
+
+  <div class="l-container mv-container">
+    <div class="mv-today">
+      <div class="mv-today-inner">
+        <img class="mv-today-texts" src="<%= mix('/assets/images/mv-today-texts.png') %>" alt="">
+        <span class="mv-today-time">10:00-17:00</span>
+        <span class="mv-today-degree">
+          <i class="mv-today-degree-icon">
+            <svg>
+              <title>Sun</title>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-sun') %>"></use>
+            </svg>
+          </i>
+          <span class="mv-today-celcius-value">28</span>
+          <span class="mv-today-celcius">&#176;c</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end mv -->
+
+<!--  main content -->
+<main class="content">
+  <div class="l-container"><!-- main title -->
+    <div class="dokidoki-title-svg">
+      <svg>
+        <title>Dokidoki</title>
+        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-main-title') %>"></use>
+      </svg>
+    </div>
+  </div><!-- end main title -->
+
+  <div class="l-youtube"><!-- youtube iframe -->
+    <section class="youtube">
+      <div class="l-container">
+        <div class="youtube-iframe-container">
+          <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </div><!-- end youtube iframe -->
+
+  <div class="attraction-information"><!-- attraction section -->
+    <section class="l-container">
+      <div class="attraction-title">
+        <svg class="svg-attraction-title">
+          <title>Attraction Information</title>
+          <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-attraction-title') %>"></use>
+        </svg>
+        <p class="attraction-subtext">
+          巨大などんぐりの木に  隠された多くの難関を乗り越えて木のてっぺんを目指す、これまでにない新感覚の「木登り型アスレチック」です。
+        </p>
+      </div>
+
+      <div class="l-attraction-table attraction-info-table">
+        <table>
+          <tr>
+            <td>場所</td>
+            <td>モビパーク内</td>
+          </tr>
+          <tr>
+            <td>所要時間</td>
+            <td>約30分（受付は営業終了10分前まで）</td>
+          </tr>
+          <tr>
+            <td>雨天の運行</td>
+            <td>雨天時は見合せとなります。</td>
+          </tr>
+          <tr>
+            <td>対象者</td>
+            <td>小学生1年生以上</td>
+          </tr>
+          <tr>
+            <td>身長制限</td>
+            <td>なし</td>
+          </tr>
+          <tr>
+            <td>料金</td>
+            <td>モビパークパスポート対象
+              アトラクションチケット利用：800円</td>
+          </tr>
+          <tr>
+            <td>ご利用にあたって</td>
+            <td>服装について : 
+              サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。
+              
+              小学生未満のお子様の利用について：
+              DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </div><!-- end attraction section -->
+</main>
+<!-- end main content -->
+
+<%- include('/partials/footer') -%>

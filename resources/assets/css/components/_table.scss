@@ -1,0 +1,35 @@
+.table {
+  display: table;
+  width: 100%;
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+.table-row {
+  width: 100%;
+}
+
+.table-head, .table-col {
+  font-size: 15px;
+  font-weight: 700;
+  border-top: 1px dashed #e0e0df;
+  border-bottom: 1px dashed #e0e0df;
+  text-align: left;
+  padding: 0 40px;
+  vertical-align: top;
+}
+
+.table-head {
+  background-color: #f7f7f7;
+  width: 220px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.table-col {
+  width: 1000px;
+  line-height: 2.15;
+  letter-spacing: 0.18em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

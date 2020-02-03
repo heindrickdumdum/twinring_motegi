@@ -1,121 +1,336 @@
-<%- include('/partials/head', { title }) -%>
+<%
+  var title = 'Twin Ring Motegi'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+%>
 
-<!-- mv -->
-<div class="mv">
-  <div class="mv-buttons">
-    <ul class="mv-buttons-list">
-      <li class="mv-buttons-item">
-        <a class="mv-buttons-link" href="#">
-          <span>料金<br>・チケット</span>
-        </a>
-      </li>
-      <li class="mv-buttons-item">
-        <a class="mv-buttons-link" href="#">
-          <span>アクセス</span>
-        </a>
-      </li>
-    </ul>
-  </div>
+<%
+  getData = () => {
+    return {
+      data: [
+        {
+          src: '',
+          alt: ''
+        },
+        {
+          src: '',
+          alt: ''
+        },
+        {
+          src: '',
+          alt: ''
+        },
+        {
+          src: '',
+          alt: ''
+        },
+        {
+          src: '',
+          alt: ''
+        },
+        {
+          src: '',
+          alt: ''
+        },
+        {
+          src: '',
+          alt: ''
+        },
+        {
+          src: '',
+          alt: ''
+        },
+        {
+          src: '',
+          alt: ''
+        },
+        {
+          src: '',
+          alt: ''
+        }
+      ]
+    }
+  }
+%>
+
+<%- include('./../partials/head', { title }) -%>
+
+<div class="mv-dokidoki">
   <ul class="mv-list">
     <li class="mv-item">
       <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.png') %>);"></div>
     </li>
   </ul>
 
-  <div class="l-container mv-container">
-    <div class="mv-today">
-      <div class="mv-today-inner">
-        <img class="mv-today-texts" src="<%= mix('/assets/images/mv-today-texts.png') %>" alt="">
-        <span class="mv-today-time">10:00-17:00</span>
-        <span class="mv-today-degree">
-          <i class="mv-today-degree-icon">
-            <svg>
-              <title>Sun</title>
-              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-sun') %>"></use>
-            </svg>
-          </i>
-          <span class="mv-today-celcius-value">28</span>
-          <span class="mv-today-celcius">&#176;c</span>
-        </span>
-      </div>
-    </div>
-  </div>
+  <div class="l-container"></div>
 </div>
-<!-- end mv -->
 
-<!--  main content -->
-<main class="content">
-  <div class="l-container"><!-- main title -->
-    <div class="dokidoki-title-svg">
+<section class="main-content">
+  <div class="l-container">
+    <h2 class="dokidoki-title-svg">
       <svg>
         <title>Dokidoki</title>
-        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-main-title') %>"></use>
+        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-title') %>"></use>
       </svg>
-    </div>
-  </div><!-- end main title -->
+    </h2>
 
-  <div class="l-youtube"><!-- youtube iframe -->
-    <section class="youtube">
-      <div class="l-container">
+    <!-- YOUTUBE -->
+    <div class="l-youtube">
+      <section class="youtube">
         <div class="youtube-iframe-container">
           <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-      </div>
-    </section>
-  </div><!-- end youtube iframe -->
+      </section>
+    </div>
 
-  <div class="attraction-information"><!-- attraction section -->
-    <section class="l-container">
-      <div class="attraction-title">
-        <svg class="svg-attraction-title">
-          <title>Attraction Information</title>
-          <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-attraction-title') %>"></use>
-        </svg>
-        <p class="attraction-subtext">
-          巨大などんぐりの木に  隠された多くの難関を乗り越えて木のてっぺんを目指す、これまでにない新感覚の「木登り型アスレチック」です。
-        </p>
+    <h3 class="attraction-title">
+      <svg class="svg-attraction-title">
+        <title>Attraction Information</title>
+        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-attraction-title') %>"></use>
+      </svg>
+    </h3>
+
+    <p class="attraction-subtext">
+      肉食動物や大きな鳥から小動物まで、あらゆる生きもの達の隠れ家となっている場所、それがすみか。 ネットが張りめぐらされた「巨大ネ
+    </p>
+
+    <table class="table">
+      <tbody>
+        <tr class="table-row">
+          <th class="table-head">場所</th>
+          <td class="table-col">モビパーク内</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">所要時間</th>
+          <td class="table-col">説明10分、遊ぶ時間30分の計40分（受付終了時間は営業終了の約1時間前）</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">雨天の運行</th>
+          <td class="table-col">屋内施設となりますので、雨天時でもお楽しみいただけます。</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">対象者</th>
+          <td class="table-col">3歳以上※1</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">身長制限</th>
+          <td class="table-col">なし</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">料金</th>
+          <td class="table-col">
+            モビパークパスポート対象
+            アトラクションチケット利用：800円
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">ご利用にあたって</th>
+          <td class="table-col">
+            服装について : <br>
+            靴を脱いでのご利用となります。 必ず靴下を履いてご利用ください。なお、指先が分かれたタイプの靴下、たび、ストッキング、タイツはご利用いただけません。もし、ご準備ない場合は、SUMIKA内に、靴下の自動販売機がございますのでご利用ください。
+            <br>
+            ※１小学生未満のお子様の利用について : <br>
+            小学生未満のお子さまは中学生以上の同伴者の付添い（有料）が必要になります。
+            <br>
+            0歳〜2歳のお子様の利用について : <br>
+            0歳〜2歳のお子様は遊具では遊ぶことはできません。保護者様同伴（有料）にてSUMIKA内の芝生のレストエリアをご利用いただけます。
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="admission">
+  <div class="l-container">
+    <h3 class="admission-title">入場整理券（スマートエントリー）配布のお知らせ</h3>
+    <p class="admission-subtext">
+      下記の日程は 混雑が予想されるため、 対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
+      期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
+    </p>
+
+    <table class="table">
+      <tbody>
+        <tr class="table-row">
+          <th class="table-head">日程</th>
+          <td class="table-col">
+            9月		15日（日）、16日（月）、29日（日）<br>
+            10月	15日（日）、16日（月）、29日（日）<br>
+            11月	15日（日）、16日（月）、29日（日）
+          </td>
+        </tr>
+          
+        <tr class="table-row">
+          <th class="table-head">対象アトラクション</th>
+          <td class="table-col">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</td>
+        </tr>
+        
+        <tr class="table-row">
+          <th class="table-head">配布場所</th>
+          <td class="table-col">アトラクション前特設テント</td>
+        </tr>
+        
+        <tr class="table-row">
+          <th class="table-head">配布枚数</th>
+          <td class="table-col">各回約200枚配布※1回の所要時間約40分（説明10分、遊べる時間30分、時間入れ替え割）</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">配布にあたって</th>
+          <td class="table-col">
+            ※入場整理券は定員に達し次第、受付を終了いたします。
+            ※別途、モビパークパスポートまたはのりもの券をお買い求めください。
+            ※アトラクションには年齢制限がございます。 >>詳しくはこちら
+            ※混雑状況や天候などより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="how-to-enjoy">
+  <div class="l-container">
+    <h3 class="how-to-title">
+      <!--How to Enjoy-->
+      <svg>
+        <title>How to enjoy</title>
+        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-how-to-title') %>"></use>
+      </svg>
+    </h3>
+    <p class="how-to-subtext">DOKIDOKIを楽しむポイント</p>
+
+    <div class="-content">
+      <div class="sumika-media u-clear">
+        <div class="sumika-media-left">
+          <div class="sumika-media-thumb">
+            <img src="https://via.placeholder.com/350x150" alt="">
+          </div>
+        </div>
+        <div class="sumika-media-right">
+          <h4 class="sumika-media-title">舞台は森の生きもの達のすみか！</h4>
+          <p class="sumika-media-desc">
+            夜明け直後は多くの森の生きものが活動を始める賑やかな時間となり、昼間は強い生きものが中心に活動し、夜になると夜行性の生きものが闇に隠れて動き始めます。「巨大ネットの森「SUMIKA」では、そんなリアルな森の雰囲気を音で再現します。
+          </p>
+
+          <div class="sumika-media- -" style="background-image: url();">
+            <span class="sumika-media- -text">
+              SUMIKAの中で、
+              森の仲間たちを感じられタネ！
+            </span>
+          </div>
+        </div>
       </div>
 
-      <div class="l-attraction-table attraction-info-table">
-        <table>
-          <tr>
-            <td>場所</td>
-            <td>モビパーク内</td>
-          </tr>
-          <tr>
-            <td>所要時間</td>
-            <td>約30分（受付は営業終了10分前まで）</td>
-          </tr>
-          <tr>
-            <td>雨天の運行</td>
-            <td>雨天時は見合せとなります。</td>
-          </tr>
-          <tr>
-            <td>対象者</td>
-            <td>小学生1年生以上</td>
-          </tr>
-          <tr>
-            <td>身長制限</td>
-            <td>なし</td>
-          </tr>
-          <tr>
-            <td>料金</td>
-            <td>モビパークパスポート対象
-              アトラクションチケット利用：800円</td>
-          </tr>
-          <tr>
-            <td>ご利用にあたって</td>
-            <td>服装について : 
-              サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。
-              
-              小学生未満のお子様の利用について：
-              DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。</td>
-          </tr>
-        </table>
-      </div>
-    </section>
-  </div><!-- end attraction section -->
-</main>
-<!-- end main content -->
+      <div class="sumika-media u-clear">
+        <div class="sumika-media-left">
+          <div class="sumika-media-thumb">
+            <img src="https://via.placeholder.com/350x150" alt="">
+          </div>
+        </div>
+        <div class="sumika-media-right">
+          <h4 class="sumika-media-title">
+            朝から夜まで森の24時間を再現。
+            昼と夜で雰囲気が逆転！
+          </h4>
+          <p class="sumika-media-desc">
+            昼間はオオタカが飛び回っていた空が、夜には満点の星空に。光の演出で森の24時間を再現しています。
+            巨大ネットを広葉樹に見立て、四季折々で変化する木々を再現します。また、夏は昼間が長く、冬は夜が長くなるように光の演出は細部にまでこだわっています。
+          </p>
 
-<%- include('/partials/footer') -%>
+          <div class="sumika-media- -" style="background-image: url();">
+            <span class="sumika-media- -text">
+              昼と夜や季節ごとの
+              森の変化を知ることができタネ！
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sumika-media u-clear">
+        <div class="sumika-media-left">
+          <div class="sumika-media-thumb">
+            <img src="https://via.placeholder.com/350x150" alt="">
+          </div>
+        </div>
+        <div class="sumika-media-right">
+          <h4 class="sumika-media-title">国内最大面積の巨大ネットアスレチック</h4>
+          <p class="sumika-media-desc">
+            SUMIKAは、最大高さ約11m 、ネット面積：約1000㎡の巨大ネットアスレチック。屋内では日本最大面積（※当社調べ）となっており、これまでにないスケールの空間の中で、身体を動かして遊べます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sumika">
+  <div class="l-container">
+    <h2 class="sumika-title">
+      <svg>
+        <title>Ways to feel the forext</title>
+        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-waystofeel-title') %>"></use>
+      </svg>
+    </h2>
+    <p class="sumika-subtext">ドキドキする刺激するアスレチック</p>
+
+    <div class="sumika-slider">
+
+    </div>
+  </div>
+</section>
+
+<section class="video">
+  <div class="l-container">
+    <h2 class="video-title">
+      <svg>
+        <title>Sumika Videos</title>
+        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-video') %>"></use>
+      </svg>
+    </h2>
+    <p class="video-subtext">動画で見るDOKIDOKI</p>
+
+    <div class="video-container">
+      <div class="row">
+        <div class="col-lg-5 video-wrapper">
+          <div class="video-bg">
+            <iframe width="100%" src="https://www.youtube.com/embed/cJEgRZ-UMcY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-text">仲間とチャレンジコースに挑戦！</p>
+        </div>
+        <div class="col-lg-5 video-wrapper">
+          <div class="video-bg">
+            <iframe width="100%" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-text">DOKIDOKI タイムアタック映像！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="instagram">
+  <div class="l-container">
+    <h2 class="instagram-title">#森感覚アスレチックDOKIDOKI</h2>
+
+    <div class="instagram-thumbnails">
+      
+    </div>
+
+    <div class="section-button">
+      <%- include('/partials/button', {
+        'modifier': '',
+        'texts': 'インスタグラムでもっと見る',
+        'link': '#'
+      }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('./../partials/footer') -%>

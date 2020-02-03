@@ -24,10 +24,15 @@
 @import "components/section-cards";
 @import "components/table";
 
+@import "components/dokidoki/dokidoki";
 @import "components/dokidoki/iframes";
 @import "components/dokidoki/main-title";
 @import "components/dokidoki/attraction";
-@import "components/dokidoki/attraction-table";
+@import "components/dokidoki/admission";
+@import "components/dokidoki/how-to";
+@import "components/dokidoki/sumika";
+@import "components/dokidoki/video";
+@import "components/dokidoki/instagram";
 
 @import 'layout/grid';
 @import "layout/l-container";

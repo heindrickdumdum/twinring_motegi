@@ -1,5 +1,79 @@
 <%
-  var title = 'Twin Ring Motegi'
+  title = 'Twin Ring Motegi'
+
+  featureContent = [
+    {
+      'category': 'EVENT',
+      'image': mix('/assets/images/top/feature/img1.jpg'),
+      'heading': '「わくわくの森 春フェスタ」3/20～開催',
+      'date': '2020.3.20～2020.4.5',
+      'link': '#',
+    },
+    {
+      'category': 'NEWS',
+      'image': mix('/assets/images/top/feature/img2.jpg'),
+      'heading': '家族みんなで団らん「スーペリアファミリールーム」新登場',
+      'date': '2020.3.13~',
+      'link': '#',
+    },
+    {
+      'category': 'NEWS',
+      'image': mix('/assets/images/top/feature/img3.jpg'),
+      'heading': '体験！×発見！×絶景！「森のファミリーウォーク TEKUTEKU」新登場',
+      'date': '2020.3.7 オープン',
+      'link': '#',
+    }
+  ]
+
+  parkmapButtons = [
+    {
+      'texts': 'ハローウッズ',
+      'link': '#',
+    },
+    {
+      'texts': 'モビパーク',
+      'link': '#',
+    },
+    {
+      'texts': '森と星空のキャンプヴィレッジ',
+      'link': '#',
+    },
+    {
+      'texts': 'ホテルツインリンク',
+      'link': '#',
+    },
+    {
+      'texts': 'モータースポーツ',
+      'link': '#',
+    },
+    {
+      'texts': 'ホンダコレクションホール',
+      'link': '#',
+    },
+    {
+      'texts': '安全運転スクール',
+      'link': '#',
+    },
+  ]
+
+
+  howToContent = [
+    {
+      'image': mix('/assets/images/top/feature/img1.jpg'),
+      'heading': '体験！×発見！×絶景！「森のファミリーウォーク TEKUTEKU」新登場',
+      'buttonLink': '#',
+    },
+    {
+      'image': mix('/assets/images/top/feature/img2.jpg'),
+      'heading': '体験！×発見！×絶景！「森のファミリーウォーク TEKUTEKU」新登場',
+      'buttonLink': '#',
+    },
+    {
+      'image': mix('/assets/images/top/feature/img3.jpg'),
+      'heading': '体験！×発見！×絶景！「森のファミリーウォーク TEKUTEKU」新登場',
+      'buttonLink': '#',
+    },
+  ]
 %>
 
 <%- include('/partials/head', { title }) -%>
@@ -56,14 +130,121 @@
 
 <div class="l-feature">
   <section class="feature">
-    <ul>
-      <li>
-        <a class="" href="#">
-
-        </a>
-      </li>
-    </ul>
+    <div class="l-container">
+      <ul class="feature-list">
+        <%
+          featureContent.forEach(item => {
+        %>
+        <li class="feature-item">
+          <%- include('/partials/article', {
+            'category': item.category,
+            'image': item.image,
+            'heading': item.heading,
+            'date': item.date,
+            'link': item.link
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
   </section>
+</div>
+
+<div class="l-parkmap">
+  <section class="parkmap">
+    <div class="l-container parkmap-container">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-parkmap',
+        'texts': mix('/assets/images/top/parkmap/parkmap.png'),
+        'alt': 'Park Map',
+        'subtexts': 'parkmap-subtexts',
+        'altSubtexts': '',
+      }) %>
+
+
+      <div class="parkmap-inner">
+        <div class="parkmap-image">
+          <ul class="parkmap-image-list">
+            <%
+              for(x=1; x <= 7; x++) {
+            %>
+            <li class="parkmap-image-item"></li>
+            <% } %>
+          </ul>
+        </div>
+        <div class="parkmap-right">
+          <ul class="parkmap-list">
+            <%
+              parkmapButtons.forEach( button => {
+            %>
+            <li class="parkmap-item">
+              <a class="parkmap-link" href="<%- button.link %>"><%- button.texts %>
+                <i class="parkmap-link-icon">
+                  <%- include('/partials/svg', {
+                    'name': 'arrow'
+                  }) %>
+                </i>
+              </a>
+            </li>
+            <% }) %>
+            <li class="parkmap-item parkmap-item-last">
+              <%- include('/partials/button', {
+                'modifier': 'button-parkmap',
+                'texts': 'エリア・施設一覧を見る',
+                'link': '#'
+              }) %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="l-section">
+  <%- include('/partials/top/section-activity') -%>
+</div>
+
+<div class="l-section">
+  <%- include('/partials/top/section-activity') -%>
+</div>
+
+<div class="l-section">
+  <%- include('/partials/top/section-activity') -%>
+</div>
+
+<div class="l-section">
+  <%- include('/partials/top/section-activity') -%>
+</div>
+
+<div class="l-container">
+  <div class="l-how-to">
+    <section class="how-to">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-parkmap heading-wrap-center',
+        'texts': mix('/assets/images/top/parkmap/parkmap.png'),
+        'alt': 'Park Map',
+        'subtexts': 'parkmap-subtexts',
+        'altSubtexts': '',
+      }) %>
+
+      <div class="l-container">
+        <ul class="feature-list feature-list-no-design">
+          <%
+            howToContent.forEach(item => {
+          %>
+          <li class="feature-item">
+            <%- include('/partials/article-no-design', {
+              'image': item.image,
+              'heading': item.heading,
+              'buttonLink': item.buttonLink
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </section>
+  </div>
 </div>
 
 <%- include('/partials/footer') -%>

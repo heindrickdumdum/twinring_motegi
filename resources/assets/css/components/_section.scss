@@ -1,0 +1,38 @@
+.section-inner {
+  margin-top: 27px;
+}
+
+.section-image {
+  height: 400px;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.section-image-logo {
+  margin: 0 auto;
+  width: 301px;
+  position: absolute;
+  top: 33px;
+  left: 0;
+  right: 0;
+}
+
+.section-contents {
+  margin-top: -41px;
+  padding: 33px;
+  background-color: $color-white;
+  position: relative;
+  text-align: center;
+}
+
+.section-contents-copy {
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.19em;
+}
+
+.section-button {
+  margin-top: 34px;
+}

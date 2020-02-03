@@ -1,0 +1,23 @@
+.sumika-table {
+  display: block;
+  width: 100%;
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+.sumika-table-label, .sumika-table-content {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+}
+
+.sumika-table-label {
+  background-color: #ccc;
+  width: 30%;
+}
+
+.sumika-table-content {
+  width: 70%;
+}

@@ -352,9 +352,21 @@
 </section>
 
 <section class="sumika-cta">
-  <div class="sumika-cta-inner">
-    <div class="l-section-title">
-    
+  <div class="l-container">
+    <div class="sumika-cta-inner">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-net-sumika',
+        'texts': mix('/assets/images/sumika/sumika-cta.png'),
+        'alt': 'SUMIKAをもっと楽しむ',
+        'altSubtexts': '',
+        'subtexts': ''
+      }) %>
+      <div class="sumika-cta-description">
+        <p class="sumika-cta-description-text">
+          SUMIKAのこだわりポイントや、<br>
+          知っているともっと楽しくなる情報を配信中しています。
+        </p>
+      </div>
     </div>
   </div>
 </section>

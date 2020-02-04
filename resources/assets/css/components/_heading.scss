@@ -77,8 +77,10 @@
   }
 
   &.heading-net-sumika {
+    margin-bottom: 40px;
     .heading-texts {
-      width: 480px;
+      width: 412px;
+      height: 28px;
       margin: 0 auto;
   }
 
@@ -92,6 +94,22 @@
     .heading-texts {
       margin: 0 auto;
       text-align: center;
+    }
+  }
+
+  &.heading-sumika-faq {
+    margin-bottom: 40px;
+
+    .heading-subtexts {
+      width: 284px;
+      height: 34px;
+      margin: 0 auto;
+    }
+
+    .heading-texts {
+      width: 104px;
+      height: 43px;
+      margin: 0 auto 24px;
     }
   }
 }

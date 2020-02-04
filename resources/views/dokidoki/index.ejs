@@ -228,7 +228,7 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
 
 <section class="admission">
   <div class="l-container">
-    <h3 class="admission-title l-title">
+    <h3 class="admission-title">
       <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
     </h3>
     <p class="admission-subtext">
@@ -364,7 +364,7 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
   </div>
 </section>
 
-<section class="ways-to-feel l-to-feel">
+<section class="forest">
   <div class="l-container">
     <div class="heading-wrap heading-dokidoki">
       <h2 class="heading">
@@ -447,7 +447,7 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
 
 <section class="dokidoki-instagram">
   <div class="dokidoki-wrapper l-container">
-    <div class="dokidoki-inner l-dokidoki-insta">
+    <div class="dokidoki-inner">
       <div class="dokidoki-inner-content">
         <%- include('/partials/heading', {
           'modifier': 'heading-net-dokidoki',
@@ -469,10 +469,15 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
         </div>
         <div class="l-button">
           <%- include('/partials/button', {
-            'modifier': 'button-dokidoki',
+            'modifier': 'button-sumika',
             'texts': 'インスタグラムでもっと見る',
             'link': '#'
           }) %>
+        </div>
+        <div class="dokidoki-instagram-banner">
+          <a href="#">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/')%> ">
+          </a>
         </div>
       </div>
     </div>
@@ -521,15 +526,15 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
       <div class="dokidoki-cta-inner">
         <%- include('/partials/heading', {
           'modifier': 'heading-net-sumika',
-          'texts': mix('/assets/images/sumika/sumika-cta.png'),
-          'alt': 'SUMIKAをもっと楽しむ',
+          'texts': mix('/assets/images/dokidoki/dokidoki-cta.png'),
+          'alt': 'DOKIDOKIをもっと楽しむ',
           'altSubtexts': '',
           'subtexts': ''
         }) %>
         <div class="dokidoki-cta-description">
           <p class="dokidoki-cta-description-text">
-            SUMIKAのこだわりポイントや、<br>
-            知っているともっと楽しくなる情報を配信中しています。
+            DOKIDOKIのこだわりポイントや、<br>
+知っているともっと楽しくなる情報を配信中しています。
           </p>
         </div>
         <div class="l-button">

@@ -31,25 +31,18 @@
 @import "components/accordion";
 
 @import "components/dokidoki/dokidoki";
-@import "components/dokidoki/mv";
-@import "components/dokidoki/iframes";
-@import "components/dokidoki/main-title";
-@import "components/dokidoki/attraction";
-@import "components/dokidoki/admission";
-@import "components/dokidoki/how-to";
-@import "components/dokidoki/dokidoki-slider";
-@import "components/dokidoki/sumika";
-@import "components/dokidoki/video";
-@import "components/dokidoki/dokidoki-instagram";
-@import "components/dokidoki/faq";
-@import "components/dokidoki/enjoy-more";
-@import "components/dokidoki/license";
-@import "components/dokidoki/ways-to-feel";
-@import "components/dokidoki/sumika-video";
-@import "components/dokidoki/recommendation";
+@import "components/dokidoki/dokidoki-admission";
+@import "components/dokidoki/dokidoki-attraction";
 @import "components/dokidoki/dokidoki-cta";
+@import "components/dokidoki/dokidoki-enjoy";
 @import "components/dokidoki/dokidoki-faq";
-
+@import "components/dokidoki/dokidoki-forest";
+@import "components/dokidoki/dokidoki-instagram";
+@import "components/dokidoki/dokidoki-license";
+@import "components/dokidoki/dokidoki-mv";
+@import "components/dokidoki/dokidoki-recommendation";
+@import "components/dokidoki/dokidoki-slider";
+@import "components/dokidoki/dokidoki-video";
 
 @import 'layout/grid';
 @import "layout/l-container";

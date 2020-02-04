@@ -1,7 +1,7 @@
 .button-gradient-icon {
   width: 25px;
   position: absolute;
-  right: 39px;
+  right: 0;
   transition: transform $duration $ease-in-out;
 
   svg {
@@ -29,7 +29,13 @@
     }
   }
 
-  img {
-    width: 100px;
+  &.button-gradient-cmn {
+    height: auto;
   }
+}
+
+.button-gradient-texts {
+  background: linear-gradient(to right, #34b0e7 0%, #1cc763 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

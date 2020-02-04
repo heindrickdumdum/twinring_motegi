@@ -1,5 +1,5 @@
-<article class="article">
-  <div class="article-image-wrap article-image-wrap-no-design">
+<article class="article article-no-design">
+  <div class="article-image-wrap">
     <div class="article-image"
          style="background-image: url(<% if(image != '') { %>
            <%- image %>
@@ -8,8 +8,8 @@
   </div>
   <p class="article-heading"><%- heading %></p>
   <%- include('/partials/button-gradient', {
-    'texts': mix('/assets/images/top/parkmap/parkmap.png'),
-    'alt':  'test',
+    'modifier': 'button-gradient-cmn',
+    'texts': 'モデルコース',
     'link': buttonLink
   }) %>
 </article>

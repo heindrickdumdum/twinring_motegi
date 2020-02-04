@@ -59,18 +59,18 @@
 
   howToContent = [
     {
-      'image': mix('/assets/images/top/feature/img1.jpg'),
-      'heading': '体験！×発見！×絶景！「森のファミリーウォーク TEKUTEKU」新登場',
+      'image': mix('/assets/images/top/how-to/img1.jpg'),
+      'heading': '0歳〜6歳のお子様とのお楽しみ方',
       'buttonLink': '#',
     },
     {
-      'image': mix('/assets/images/top/feature/img2.jpg'),
-      'heading': '体験！×発見！×絶景！「森のファミリーウォーク TEKUTEKU」新登場',
+      'image': mix('/assets/images/top/how-to/img2.jpg'),
+      'heading': '小学校低学年のお子様とのお楽しみ方',
       'buttonLink': '#',
     },
     {
-      'image': mix('/assets/images/top/feature/img3.jpg'),
-      'heading': '体験！×発見！×絶景！「森のファミリーウォーク TEKUTEKU」新登場',
+      'image': mix('/assets/images/top/how-to/img3.jpg'),
+      'heading': '小学校高学年のお子様とのお楽しみ方',
       'buttonLink': '#',
     },
   ]
@@ -105,7 +105,7 @@
         <img src="<%= mix('/assets/images/mv-twinring-motegi.png') %>" alt="Twinring Motegi">
       </span>
       <span class="mv-heading-subtexts">
-        <img src="<%= mix('/assets/images/mv-heading.png') %>" alt="家族にちょうどいい冒険を">
+        <img src="<%= mix('/assets/images/mv-heading.svg') %>" alt="家族にちょうどいい冒険を">
       </span>
     </h2>
 
@@ -206,25 +206,29 @@
 </div>
 
 <div class="l-section">
-  <%- include('/partials/top/section-activity') -%>
+  <%- include('/partials/top/section-mobi-park') -%>
 </div>
 
 <div class="l-section">
-  <%- include('/partials/top/section-activity') -%>
+  <%- include('/partials/top/section-motosports') -%>
 </div>
 
 <div class="l-section">
-  <%- include('/partials/top/section-activity') -%>
+  <%- include('/partials/top/section-twinring') -%>
+</div>
+
+<div class="l-section">
+  <%- include('/partials/top/section-hotel-twin') -%>
 </div>
 
 <div class="l-container">
   <div class="l-how-to">
     <section class="how-to">
       <%- include('/partials/heading', {
-        'modifier': 'heading-wrap-parkmap heading-wrap-center',
-        'texts': mix('/assets/images/top/parkmap/parkmap.png'),
-        'alt': 'Park Map',
-        'subtexts': 'parkmap-subtexts',
+        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'texts': mix('/assets/images/top/how-to/how-to-enjoy.png'),
+        'alt': 'How to Enjoy',
+        'subtexts': 'how-to-subtexts',
         'altSubtexts': '',
       }) %>
 

@@ -9,7 +9,7 @@
 
 .sumika-cta-inner {
   position: relative;
-  padding: 40px;
+  padding: 28px 0 31px;
   
   &:before {
     position: absolute;
@@ -49,7 +49,7 @@
 
 .sumika-cta-dot-1 {
   left: -40px;
-  bottom: 4px;
+  bottom: -30px;
 }
 
 .sumika-cta-dot-2 {
@@ -58,11 +58,34 @@
 }
 
 .sumika-cta-dot-3 {
-  bottom: 4px;
+  bottom: -30px;
   right: 135px;
 }
 
 .sumika-cta-dot-4 {
   top: -28px;
   right: -27px;
+}
+
+.sumika-cta-bottom {
+  margin: 180px 0;
+  position: relative;
+  text-align: center;
+  z-index: $z-max;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $color-light-gray;
+    top: 99px;
+    left: 0;
+    right: 0;
+    bottom: -126px;
+    z-index: 1;
+  }
+}
+
+.sumika-cta-bottom-inner {
+  position: relative;
+  z-index: $z-max;
 }

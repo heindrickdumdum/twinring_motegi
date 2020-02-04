@@ -1,0 +1,16 @@
+.dokdoki-wrapper {
+  margin-top: 50px;
+}
+
+.dokdoki-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.slide-text {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}

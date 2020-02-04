@@ -261,7 +261,9 @@
           </div>
         </div>
         <div class="media-right">
-          <h4 class="media-title">小学生未満のお子様はどきどきひろばで</h4>
+          <h4 class="media-title">
+            <span>小学生未満のお子様はどきどきひろばで</span>
+          </h4>
           <p class="media-desc">
             DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。<br/>
 丸太や小さな山の形をしたアスレチックで遊んだり、キッズボルダリングで“プチボルダリング体験”をお楽しみいただけます。
@@ -273,71 +275,117 @@
   </div>
 </section>
 
-<section class="sumika">
+<section class="ways-to-feel">
   <div class="l-container">
-    <h2 class="sumika-title">
-      <img src="<%- mix('/assets/images/dokidoki/ways-to-feel.png') %>" alt="title">
-    </h2>
-    <p class="sumika-subtext">ドキドキする刺激するアスレチック</p>
-
-    <div class="sumika-slider">
-
+    <div class="heading-wrap heading-dokidoki">
+      <h2 class="heading">
+        <span class="heading-texts">
+          <img src="<%- mix('/assets/images/dokidoki/ways-to-feel.png') %>" alt="title">
+        </span>
+        <span class="heading-subtexts">
+          <svg>
+            <title>Dokidoki</title>
+            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-forest') %>"></use>
+          </svg>
+        </span>
+      </h2>
     </div>
+  </div>
+    
+  <div class="dokdoki-wrapper">
+    <ul class="dokdoki-container">
+      <li>
+        <div class="slide-image">
+          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
+        </div>
+        <span class="slide-text">
+          目の前の壁を超えろ！新芽のチャレンジウォール
+        </span>
+      </li>
+      <li>
+        <div class="slide-image">
+          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
+        </div>
+        <span class="slide-text">
+          アカネズミのひみつの場所！どんぐりころころ
+        </span>
+      </li>
+      <li>
+        <div class="slide-image">
+          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
+        </div>
+        <span class="slide-text">
+          丸太の一般橋を渡ろう！
+        </span>
+      </li>
+    </ul>
   </div>
 </section>
 
-<section class="video">
-  <div class="l-container">
-    <h2 class="video-title">
-      <img src="<%- mix('/assets/images/dokidoki/sumika-videos.png') %>" alt="title">
-    </h2>
-    <p class="video-subtext">動画で見るDOKIDOKI</p>
+<!-- BOTTOM -->
 
-    <div class="video-container">
-      <div class="row">
-        <div class="col-lg-6 video-wrapper">
-          <div class="video-bg">
-            <iframe width="100%" src="https://www.youtube.com/embed/cJEgRZ-UMcY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<section class="sumika-video l-container">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-sumika',
+      'texts': mix('/assets/images/sumika/sumika_videos.png'),
+      'alt': 'sumika videos',
+      'subtexts': 'video-sumika',
+      'altSubtexts': '',
+    }) %>
+  </div>
+  <div class="sumika-video-content">
+    <ul class="sumika-video-list row">
+      <li class="sumika-video-item col-lg-6 col-md-6 col-sm-12">
+        <div class="sumika-video-wrapper">
+          <div class="sumika-video-inner">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <p class="video-text">仲間とチャレンジコースに挑戦！</p>
         </div>
-        <div class="col-lg-6 video-wrapper">
-          <div class="video-bg">
-            <iframe width="100%" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="sumika-video-description">仲間とチャレンジコースに挑戦！</p>
+      </li>
+      <li class="sumika-video-item col-lg-6 col-md-6 col-sm-12">
+        <div class="sumika-video-wrapper">
+          <div class="sumika-video-inner">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <p class="video-text">DOKIDOKI タイムアタック映像！</p>
+        </div>
+        <p class="sumika-video-description">DOKIDOKI タイムアタック映像！</p>
+      </li>
+    </ul> 
+  </div>
+</section>
+
+<section class="dokidoki-instagram">
+  <div class="dokidoki-wrapper l-container">
+    <div class="dokidoki-inner">
+      <div class="dokidoki-inner-content">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-net-dokidoki',
+          'texts': mix('/assets/images/dokidoki/insta-title.png'),
+          'alt': '#森感覚アスレチックDOKIDOKI',
+          'altSubtexts': '',
+          'subtexts': ''
+        }) %>
+        <div class="dokidoki-instagram-content">
+          <ul class="dokidoki-instagram-list">
+            <% instagram.forEach(item => { %>
+            <li class="dokidoki-instagram-list-item">
+              <div class="dokidoki-instagram-list-item-image">
+                <img src="<%- item.image %>" alt="<%- item.alt %>">
+              </div>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+        <div class="l-button">
+          <%- include('/partials/button', {
+            'modifier': 'button-dokidoki',
+            'texts': 'インスタグラムでもっと見る',
+            'link': '#'
+          }) %>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="instagram">
-  <div class="l-container">
-    <h2 class="instagram-title">
-      <img src="<%- mix('/assets/images/dokidoki/insta-title.png') %>" alt="title">
-    </h2>
-
-    <div class="instagram-wrapper">
-      <ul class="thumbnail-list">
-        <%
-          instaData.forEach(item => { 
-        %>
-          <li class="thumbnail-item">
-            <a class="thumbnail" href="#">
-              <img src="<%= item.src %>" alt="<%= item.alt %>">
-            </a>
-          </li>
-        <% }) %>
-      </ul>
-    </div>
-
-    <div class="section-button">
-      <%- include('/partials/button', {
-        'modifier': '',
-        'texts': 'インスタグラムでもっと見る',
-        'link': '#'
-      }) %>
     </div>
   </div>
 </section>
@@ -350,7 +398,40 @@
     <p class="faq-subtext">よくあるご質問</p>
 
     <div class="faq-container">
-      
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn is-collapsed" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              小さい子どもが遊べますか？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content">
+            <p class="accordion-desc">「3歳からご利用いただけます。キッズコーナーも併設しております。<br/>
+              ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br/>
+              ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br/>
+              は3～6歳のお子様限定のエリアです。<br/>
+              ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              「メガジップライン つばさ」を見学できる場所はありますか？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style="display: none;">
+            <p class="accordion-desc">「ハローウッズインフォメーション」です。 整理券の発行には利用制限の確認が必要なので、ご利用者様ご 本人がお越しください。未成年の方は保護者様の同意署名が必要です。保護者様と一緒にお越しください。</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

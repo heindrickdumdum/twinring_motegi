@@ -1,0 +1,193 @@
+<%
+  footerTopList = [
+    list1 = [
+      {
+        'texts': 'トップページ',
+        'sub': ''
+      },
+      {
+        'texts': 'もてぎの楽しみ方',
+        'sub': ''
+      },
+      {
+        'texts': 'ニュース・イベント',
+        'sub': ''
+      },
+      {
+        'texts': 'もてぎの楽しみ方',
+        'sub': ''
+      },
+      {
+        'texts': 'ニュース・イベント',
+        'sub': [
+          { 'texts': 'ニュース一覧', 'link': '#' },
+          { 'texts': 'イベント一覧', 'link': '#' },
+          { 'texts': '春のイベント特集', 'link': '#' },
+          { 'texts': 'GWのイベント特集', 'link': '#' },
+          { 'texts': '冬のイベント特集', 'link': '#' },
+          { 'texts': '花火の祭典　夏/冬', 'link': '#' },
+        ]
+      },
+      {
+        'texts': 'エリア・施設',
+        'sub': [
+          { 'texts': 'ハローウッズ', 'link': '#' },
+          { 'texts': 'イベント一覧', 'link': '#' },
+          { 'texts': '森と星空のキャンプヴィレッジ', 'link': '#' },
+          { 'texts': 'ホテルツインリンク', 'link': '#' },
+          { 'texts': 'モータースポーツ', 'link': '#' },
+          { 'texts': 'ホンダコレクションホール/冬', 'link': '#' },
+          { 'texts': '安全運転スクール/冬', 'link': '#' },
+        ]
+      },
+    ],
+    list2 = [
+      {
+        'texts': 'アトラクション・アクティビティ',
+        'sub': [
+          { 'texts': '巨大ネットの森SUMIKA', 'link': '#' },
+          { 'texts': '森感覚アスレチックDOKIDOKI', 'link': '#' },
+          { 'texts': '迷宮森殿ITADAKI', 'link': '#' },
+        ]
+      },
+      {
+        'texts': '',
+        'sub': [
+          { 'texts': 'お子様のクルマ＆バイクのアトラクション', 'link': '#' },
+          { 'texts': '大人も楽しめる本格レーシングカート', 'link': '#' },
+          { 'texts': 'クルマのワークショップ（ピット工房）', 'link': '#' },
+        ]
+      },
+      {
+        'texts': '',
+        'sub': [
+          { 'texts': 'メガジップラインつばさ', 'link': '#' },
+          { 'texts': '森のジップラインムササビ', 'link': '#' },
+        ]
+      },
+      {
+        'texts': '',
+        'sub': [
+          { 'texts': '森の散策プログラム', 'link': '#' },
+          { 'texts': '森の研究室', 'link': '#' },
+          { 'texts': '森のクラフト体験', 'link': '#' },
+          { 'texts': '森の体験プログラム', 'link': '#' },
+        ]
+      },
+      {
+        'texts': '',
+        'sub': [
+          { 'texts': 'コチラレーシング', 'link': '#' },
+        ]
+      },
+    ],
+    list3 = [
+      {
+        'texts': 'モータースポーツ',
+        'sub': [
+          { 'texts': 'MotoGP', 'link': '#' },
+          { 'texts': 'トライアル世界選手権', 'link': '#' },
+          { 'texts': 'SUPER　GT', 'link': '#' },
+          { 'texts': '２＆４レース', 'link': '#' },
+          { 'texts': '全日本ロードレース選手権', 'link': '#' },
+          { 'texts': 'スーパー耐久', 'link': '#' },
+          { 'texts': '全日本トライアル選手権', 'link': '#' },
+          { 'texts': '全日本カート選手権', 'link': '#' },
+        ]
+      },
+      {
+        'texts': '',
+        'sub': [
+          { 'texts': 'サーキットを走るTOP', 'link': '#' },
+        ]
+      },
+      {
+        'texts': '',
+        'sub': [
+          { 'texts': '安全運転スクール', 'link': '#' },
+          { 'texts': 'スクール・走行会　４輪', 'link': '#' },
+          { 'texts': 'スクール・走行会　２輪', 'link': '#' },
+          { 'texts': 'TRMC-S会員', 'link': '#' },
+          { 'texts': 'ツインリンクもてぎエンジェル', 'link': '#' },
+        ]
+      },
+    ],
+    list4 = [
+      {
+        'texts': 'ホテル・キャンプ',
+        'sub': [
+          { 'texts': '森と星空のキャンプヴィレッジ', 'link': '#' },
+          { 'texts': 'グランピング', 'link': '#' },
+          { 'texts': 'ログキャビン', 'link': '#' },
+          { 'texts': '２＆４レース', 'link': '#' },
+          { 'texts': 'キャンプ', 'link': '#' },
+          { 'texts': 'BBQ', 'link': '#' },
+          { 'texts': '宿泊者限定アクティビティ', 'link': '#' },
+        ]
+      },
+      {
+        'texts': '',
+        'sub': [
+          { 'texts': 'ホテルツインリンク', 'link': '#' },
+          { 'texts': 'スーペリアファミリールーム', 'link': '#' },
+          { 'texts': 'グランルーム', 'link': '#' },
+          { 'texts': 'ゲストルーム', 'link': '#' },
+          { 'texts': 'のぞみの湯', 'link': '#' },
+          { 'texts': '里山懐石 登谷', 'link': '#' },
+        ]
+      },
+      {
+        'texts': 'レストラン',
+        'sub': [
+          { 'texts': 'レストラン一覧', 'link': '#' },
+        ]
+      },
+      {
+        'texts': 'グッズ＆ショップ',
+        'sub': ''
+      },
+    ]
+  ]
+
+%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="footer-top-links">
+  <%
+    footerTopList.forEach( list => {
+  %>
+  <ul class="footer-top-links-list">
+    <%
+      list.forEach( item => {
+    %>
+    <li class="footer-top-links-item">
+      <span class="footer-top-links-texts"><%- item.texts %></span>
+
+       <% if(item.sub != '') { %>
+        <ul class="footer-top-links-sub">
+          <%
+            item.sub.forEach( sub => {
+          %>
+          <li><a href="<%- sub.texts %>"><%- sub.texts %></a></li>
+          <% }) %>
+        </ul>
+      <% } %>
+    </li>
+    <% }) %>
+  </ul>
+  <% }) %>
+</nav>

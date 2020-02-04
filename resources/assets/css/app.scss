@@ -22,6 +22,15 @@
 @import "components/button-gradient";
 @import "components/section";
 @import "components/section-cards";
+@import "components/block-image";
+@import "components/image-border";
+@import "components/how-to";
+@import "components/information";
+@import "components/post";
+@import "components/footer";
+@import "components/footer-top";
+@import "components/footer-bottom";
+@import "components/sns";
 
 @import 'layout/grid';
 @import "layout/l-container";
@@ -29,7 +38,6 @@
 @import "layout/l-feature";
 @import "layout/l-parkmap";
 @import "layout/l-section";
-@import "layout/l-how-to";
 
 // Required
 .svg-sprite {

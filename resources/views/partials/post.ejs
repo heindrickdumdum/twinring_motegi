@@ -1,0 +1,78 @@
+<%
+  postContent = [
+    content1 = [
+      {
+        'texts': '9月の「森あそび」・「ものづくり」プログラムを更新',
+        'category': 'アトラクション・アクティビティ',
+        'time': '2019.01.10',
+      },
+      {
+        'texts': '夏のおすすめグッズ情報を更新しました',
+        'category': 'グッズ＆ショップ',
+        'time': '2019.01.10',
+      },
+      {
+        'texts': '夏季期間（7/1〜8/31）の営業時間について',
+        'category': 'お知らせ',
+        'time': '2019.01.10',
+      },
+      {
+        'texts': 'モトレーサー タイムアタック選手権2019開催！',
+        'category': 'モータースポーツ',
+        'time': '2019.01.10',
+      }
+    ],
+    content2 = [
+      {
+        'texts': '新アトラクション「巨大ネットの森 SUMIKA」オープン！',
+        'category': 'アトラクション・アクティビティ',
+        'time': '2019.01.10',
+      },
+      {
+        'texts': 'HELLO WOODSのフォトギャラリー更新',
+        'category': 'お知らせ',
+        'time': '2019.01.10',
+      },
+      {
+        'texts': 'ディナーセットメニューがリニューアル！',
+        'category': 'レストラン',
+        'time': '2019.01.10',
+      },
+      {
+        'texts': 'ツインリンクもてぎ 花火の祭典“冬”のご予約開始',
+        'category': 'ホテル・キャンプ',
+        'time': '2019.01.10',
+      }
+    ]
+  ]
+%>
+<div class="post-wrap">
+  <%
+    postContent.forEach(content => {
+  %>
+  <ul class="post-list">
+
+    <%
+      content.forEach(item => {
+    %>
+    <li class="post-item">
+      <a class="post-link" href="#">
+        <p class="post-texts">
+          <%- item.texts %>
+          <span class="post-texts-bottom">
+            <span class="post-category"><%- item.category %></span>
+            <time class="post-time" datetime="<%- item.time %>"><%- item.time %></time>
+          </span>
+        </p>
+
+        <i class="post-link-icon">
+          <%- include('/partials/svg', {
+            'name': 'arrow'
+          }) %>
+        </i>
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+  <% }) %>
+</div>

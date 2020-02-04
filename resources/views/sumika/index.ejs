@@ -1,6 +1,53 @@
+
 <%
   var title = 'Twin Ring Motegi'
   SPRITE_SVG = '/assets/svg/sprite.svg';
+%>
+
+<% 
+    instagram = [
+      {
+        'image': mix('/assets/images/sumika/net-sumika/insta-1.png'),
+        'alt' : ''
+      },
+      {
+        'image': mix('/assets/images/sumika/net-sumika/insta-2.jpg'),
+        'alt' : ''
+      },
+      {
+        'image': mix('/assets/images/sumika/net-sumika/insta-3.jpg'),
+        'alt' : ''
+      },
+      {
+        'image': mix('/assets/images/sumika/net-sumika/insta-4.jpg'),
+        'alt' : ''
+      },
+      {
+        'image': mix('/assets/images/sumika/net-sumika/insta-5.jpg'),
+        'alt' : ''
+      },
+      {
+        'image': mix('/assets/images/sumika/net-sumika/insta-6.jpg'),
+        'alt' : ''
+      },
+      {
+        'image': mix('/assets/images/sumika/net-sumika/insta-7.jpg'),
+        'alt' : ''
+      },
+      {
+        'image': mix('/assets/images/sumika/net-sumika/insta-8.jpg'),
+        'alt' : ''
+      },
+      {
+        'image': mix('/assets/images/sumika/net-sumika/insta-9.jpg'),
+        'alt' : ''
+      },
+      {
+        'image': mix('/assets/images/sumika/net-sumika/insta-10.jpg'),
+        'alt' : ''
+      }
+    ]
+
 %>
 
 <%- include('./../partials/head', { title }) -%>
@@ -252,5 +299,143 @@
     </div>
   </div>
 </section>
+
+ <!-- BOTTOM -->
+
+ <section class="sumika-video l-container">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-sumika',
+      'texts': mix('/assets/images/sumika/sumika_videos.png'),
+      'alt': 'sumika videos',
+      'subtexts': 'video-sumika',
+      'altSubtexts': '',
+    }) %>
+  </div>
+  <div class="sumika-video-content">
+    <ul class="sumika-video-list row">
+      <li class="sumika-video-item col-lg-6 col-md-6 col-sm-12">
+        <div class="sumika-video-wrapper">
+          <div class="sumika-video-inner">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <p class="sumika-video-description">仲間とチャレンジコースに挑戦！</p>
+      </li>
+      <li class="sumika-video-item col-lg-6 col-md-6 col-sm-12">
+        <div class="sumika-video-wrapper">
+          <div class="sumika-video-inner">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <p class="sumika-video-description">DOKIDOKI タイムアタック映像！</p>
+      </li>
+    </ul> 
+  </div>
+</section>
+
+<section class="sumika-instagram">
+  <div class="sumika-wrapper l-container">
+    <div class="sumika-inner">
+      <div class="sumika-inner-content">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-net-sumika',
+          'texts': mix('/assets/images/sumika/net-sumika.png'),
+          'alt': '巨大ネットの森SUMIKA',
+          'altSubtexts': '',
+          'subtexts': ''
+        }) %>
+        <div class="sumika-instagram-content">
+          <ul class="sumika-instagram-list">
+            <% instagram.forEach(item => { %>
+            <li class="sumika-instagram-list-item">
+              <div class="sumika-instagram-list-item-image">
+                <img src="<%- item.image %>" alt="<%- item.alt %>">
+              </div>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+        <div class="l-button">
+          <%- include('/partials/button', {
+            'modifier': 'button-sumika',
+            'texts': 'インスタグラムでもっと見る',
+            'link': '#'
+          }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sumika-faq">
+  <div class="l-section-title">
+    
+  </div>
+  <div class="sumika-faq-content">
+    <ul class="sumika-faq-list">
+      <li class="sumika-faq-list-item"></li>
+      <li class="sumika-faq-list-item"></li>
+      <li class="sumika-faq-list-item"></li>
+      <li class="sumika-faq-list-item"></li>
+      <li class="sumika-faq-list-item"></li>
+      <li class="sumika-faq-list-item"></li>
+      <li class="sumika-faq-list-item"></li>
+      <li class="sumika-faq-list-item"></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sumika-cta">
+  <div class="l-container">
+    <div class="sumika-cta-inner">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-net-sumika',
+        'texts': mix('/assets/images/sumika/sumika-cta.png'),
+        'alt': 'SUMIKAをもっと楽しむ',
+        'altSubtexts': '',
+        'subtexts': ''
+      }) %>
+      <div class="sumika-cta-description">
+        <p class="sumika-cta-description-text">
+          SUMIKAのこだわりポイントや、<br>
+          知っているともっと楽しくなる情報を配信中しています。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sumika-recommendation">
+  <div class="l-section-title">
+    
+  </div>
+  <div class="sumika-recommendation-content">
+    <ul class="sumika-recommendation-slider">
+      <li class="sumika-recommendation-slider-item"></li>
+      <li class="sumika-recommendation-slider-item"></li>
+      <li class="sumika-recommendation-slider-item"></li>
+      <li class="sumika-recommendation-slider-item"></li>
+      <li class="sumika-recommendation-slider-item"></li>
+      <li class="sumika-recommendation-slider-item"></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sumika-pick-up">
+  <div class="l-section-title">
+    
+  </div>
+  <div class="sumkia-pick-up-content">
+    <ul class="sumika-pick-up-content-list">
+      <li class="sumika-pick-up-list-item"></li>
+      <li class="sumika-pick-up-list-item"></li>
+      <li class="sumika-pick-up-list-item"></li>
+      <li class="sumika-pick-up-list-item"></li>
+    </ul>
+  </div>
+</section>
+<!-- END BOTTOM -->
+
 
 <%- include('./../partials/footer') -%>

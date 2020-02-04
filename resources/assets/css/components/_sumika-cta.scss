@@ -1,0 +1,68 @@
+.sumika-cta {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.sumika-cta-wrapper {
+  padding: 0 100px;
+}
+
+.sumika-cta-inner {
+  position: relative;
+  padding: 40px;
+  
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url(#{$image-path}sumika/frame-sm.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    background-image: url(#{$image-path}sumika/green-dots.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 22px;
+    left: 33px;
+    right: 23px;
+    bottom: 39px;
+  }
+
+}
+
+.sumika-cta-description-text {
+  font-size: 15px;
+  line-height: 1.667;
+  margin-top: 20px;
+}
+
+.sumika-cta-dot {
+  position: absolute;
+}
+
+.sumika-cta-dot-1 {
+  left: -40px;
+  bottom: 4px;
+}
+
+.sumika-cta-dot-2 {
+  top: -19px;
+  left: 128px;
+}
+
+.sumika-cta-dot-3 {
+  bottom: 4px;
+  right: 135px;
+}
+
+.sumika-cta-dot-4 {
+  top: -28px;
+  right: -27px;
+}

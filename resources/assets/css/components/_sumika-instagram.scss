@@ -3,15 +3,20 @@
   margin-top: 80px;
 }
 
-.sumika-wrapper {
+// .sumika-wrapper {
 
+// }
+
+.sumika-instagram-banner {
+  text-align: center;
+  margin-top: 72px;
 }
 
 .sumika-inner {
   position: relative;
   background: url(#{$image-path}sumika/frame-lg.png) no-repeat center top;
   background-size: 100% 100%;
-  padding-bottom: 360px;
+  padding-bottom: 80px;
   z-index: $z-max;
 
   &:before {
@@ -56,10 +61,10 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    left: -91px;
-    top: -61px;
+    left: -89px;
+    top: -99px;
     right: -67px;
-    bottom: -90px;
+    bottom: -197px;
   }
 }
 

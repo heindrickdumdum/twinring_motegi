@@ -151,17 +151,206 @@
   </section>
 
   <section class="l-section">
-    <div class="heading-wrap heading-wrap-center heading-wrap-faq">
-      <h2 class="heading">
-        <span class="heading-texts">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="104" height="43" viewBox="0 0 104 43">
-            <image id="FAQ" width="104" height="43" xlink:href="data:img/png;base64,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"/>
-          </svg>
-        </span>
-        <span class="heading-subtexts"> 
-          よくあるご質問
-        </span>
-      </h2>
+    <div class="l-container">
+      <div class="heading-wrap heading-wrap-center heading-wrap-faq">
+        <h2 class="heading">
+          <span class="heading-texts">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="104" height="43" viewBox="0 0 104 43">
+              <image id="FAQ" width="104" height="43" xlink:href="data:img/png;base64,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"/>
+            </svg>
+          </span>
+          <span class="heading-subtexts"> 
+            よくあるご質問
+          </span>
+        </h2>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn is-collapsed" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              「メガジップライン つばさ」と「森のジップライン ムササビ」の受付（整理券配布所）はどこですか？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content">
+            <p class="accordion-desc">
+              「ハローウッズインフォメーション」です。 整理券の発行には利用制限の確認が必要なので、ご利用者様ご 本人がお越しください。未成年の方は保護者様の同意署名が必要です。保護者様と一緒にお越しください。  
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              「メガジップライン つばさ」を見学できる場所はありますか？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style="display: none;">
+            <p class="accordion-desc">
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              「メガジップライン つばさ」を見学できる場所はありますか？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style="display: none;">
+            <p class="accordion-desc">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              体験中に写真撮れますか？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style="display: none;">
+            <p class="accordion-desc">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              幼児がいるけど夫婦で一緒に体験したい。
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style="display: none;">
+            <p class="accordion-desc">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              子どもを抱っこして乗ることはできますか？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style="display: none;">
+            <p class="accordion-desc">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              何時頃までに行けば参加出来ますか？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style="display: none;">
+            <p class="accordion-desc">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              体重の確認の仕方は？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style="display: none;">
+            <p class="accordion-desc">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              前日予約や電話での予約はできますか？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style="display: none;">
+            <p class="accordion-desc">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              スピードはどれくらいでますか？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style="display: none;">
+            <p class="accordion-desc">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+            </span>
+            <span class="accordion-btn-text">
+              飛んでいる時間はどれくらいですか？
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style="display: none;">
+            <p class="accordion-desc">
+              
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>

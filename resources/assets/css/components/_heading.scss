@@ -46,4 +46,23 @@
       width: 800px;
     }
   }
+
+  &.heading-sumika {
+    .heading-texts {
+      width: 216px;
+      margin: 0 auto;
+    }
+
+    .heading-subtexts {
+      width: 404px;
+      margin: 24px auto 0;
+    }
+  }
+
+  &.heading-net-sumika {
+    .heading-texts {
+      width: 480px;
+      margin: 0 auto;
+    }
+  }
 }

@@ -1,6 +1,8 @@
 <%
   title = 'Twin Ring Motegi'
 
+
+
   featureContent = [
     {
       'category': 'EVENT',
@@ -233,6 +235,7 @@
       }) %>
 
       <div class="l-container">
+
         <ul class="feature-list feature-list-no-design">
           <%
             howToContent.forEach(item => {
@@ -241,7 +244,8 @@
             <%- include('/partials/article-no-design', {
               'image': item.image,
               'heading': item.heading,
-              'buttonLink': item.buttonLink
+              'buttonLink': item.buttonLink,
+              'buttonText': 'モデルコース'
             }) %>
           </li>
           <% }) %>

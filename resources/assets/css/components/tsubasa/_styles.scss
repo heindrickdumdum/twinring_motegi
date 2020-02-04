@@ -31,6 +31,42 @@
     }
   }
 
+  .steps-list {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap; 
+    justify-content: center;
+
+    .steps-list-item {
+      width: 33%;
+      text-align: center;
+      margin-bottom: 80px;
+      .step-no {
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-family: "Holland";
+        color: $color-green;
+      }
+
+      .step-title {
+        color: $color-green;
+      }
+      
+      .step-image {
+        margin-bottom: 30px;
+      }
+
+      .step-subtitle {
+        font-weight: bold;
+      }
+
+      .step-desc {
+        max-width: 300px;
+        margin: auto;
+      }
+
+    }
+  }
 
 
 }

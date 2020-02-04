@@ -1,8 +1,78 @@
+.article-image-wrap {
+  padding: 15px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    height: 72px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
+  }
+
+  &::before {
+    width: 279px;
+    left: 12px;
+    top: -12px;
+    background-image: url(#{$image-path}article/leaves.png);
+    background-position: -44px top;
+    overflow: hidden;
+    z-index: $z-min;
+  }
+
+  &::after {
+    right: 5px;
+    bottom: -2px;
+    transform: scaleY(-1);
+    background-image: url(#{$image-path}article/leaves2.png);
+    width: 156px;
+  }
+}
+
+.article-heading {
+  margin-top: 8px;
+  padding-left: 7px;
+  height: 68px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $color-seaweed;
+  line-height: 1.67;
+  letter-spacing: 0.03em;
+  overflow: hidden;
+}
+
 .article {
   display: block;
   position: relative;
   padding-bottom: 36px;
   height: 100%;
+
+  &.article-no-design {
+    .article-heading {
+      color: $color-mineshaft;
+    }
+  }
+
+  .article-image-wrap {
+    padding: 0;
+    height: auto;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .article-image {
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
 
 .article-link {
@@ -51,75 +121,10 @@
   }
 }
 
-.article-image-wrap {
-  padding: 15px;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-
-  &::before,
-  &::after {
-    content: '';
-    height: 72px;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left top;
-  }
-
-  &::before {
-    width: 279px;
-    left: 12px;
-    top: -12px;
-    background-image: url(#{$image-path}article/leaves.png);
-    background-position: -44px top;
-    overflow: hidden;
-    z-index: $z-min;
-  }
-
-  &::after {
-    right: 5px;
-    bottom: -2px;
-    transform: scaleY(-1);
-    background-image: url(#{$image-path}article/leaves2.png);
-    width: 156px;
-  }
-
-  &.article-image-wrap-no-design {
-    padding: 0;
-    height: auto;
-
-    &::before,
-    &::after {
-      display: none;
-    }
-
-    .article-image {
-      &::before {
-        display: none;
-      }
-    }
-  }
-}
-
-.article-heading {
-  margin-top: 8px;
-  padding-left: 7px;
-  font-size: 18px;
-  font-weight: bold;
-  color: $color-seaweed;
-  line-height: 1.67;
-  letter-spacing: 0.03em;
-}
-
 .article-period {
   padding-left: 7px;
   width: 100%;
   font-size: 14px;
   color: $color-seaweed;
   letter-spacing: 0.06em;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }

@@ -17,6 +17,16 @@
   top: 33px;
   left: 0;
   right: 0;
+
+  &.section-image-logo-twinring {
+    width: 314px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.section-image-logo-hotel-twin {
+    top: 76px;
+  }
 }
 
 .section-contents {

@@ -4,6 +4,14 @@
   margin: 42px -10px 0;
 }
 
+.section-cards-image-wrap {
+  padding: 10px 10px 22px;
+  height: 220px;
+  background: url(#{$image-path}section/card-frame.png) no-repeat center top;
+  background-size: contain;
+  position: relative;
+}
+
 .section-cards-item {
   width: calc((100% / 3) - 20px);
   margin: 0 10px;
@@ -54,14 +62,6 @@
     transform: rotate(45deg);
     transform-origin: center;
   }
-}
-
-.section-cards-image-wrap {
-  padding: 10px 10px 22px;
-  height: 220px;
-  background: url(#{$image-path}section/card-frame.png) no-repeat center top;
-  background-size: contain;
-  position: relative;
 }
 
 .section-cards-image {

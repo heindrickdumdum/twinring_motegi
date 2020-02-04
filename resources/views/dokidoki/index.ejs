@@ -1,7 +1,9 @@
 <%
   var title = 'Twin Ring Motegi'
   SPRITE_SVG = '/assets/svg/sprite.svg';
+%>
 
+<%
   instaData = [
     {
       'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
@@ -44,7 +46,6 @@
       'alt': 'insta thumbnail'
     }
   ]
-
 %>
 
 <%- include('./../partials/head', { title }) -%>
@@ -52,7 +53,7 @@
 <div class="mv-dokidoki">
   <ul class="mv-list">
     <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.png') %>) "></div>
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.png'); %>) "></div>
     </li>
   </ul>
 
@@ -78,10 +79,7 @@
     </div>
 
     <h3 class="attraction-title">
-      <svg class="svg-attraction-title">
-        <title>Attraction Information</title>
-        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-attraction-title') %>"></use>
-      </svg>
+      <img src="<%- mix('/assets/images/dokidoki/attraction-title.png') %>" alt="title">
     </h3>
 
     <p class="attraction-subtext">
@@ -144,7 +142,9 @@
 
 <section class="admission">
   <div class="l-container">
-    <h3 class="admission-title">入場整理券（スマートエントリー）配布のお知らせ</h3>
+    <h3 class="admission-title">
+      <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
+    </h3>
     <p class="admission-subtext">
       下記の日程は 混雑が予想されるため、 対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
       期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
@@ -193,11 +193,7 @@
 <section class="how-to-enjoy">
   <div class="l-container">
     <h3 class="how-to-title">
-      <!--How to Enjoy-->
-      <svg>
-        <title>How to enjoy</title>
-        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-how-to-title') %>"></use>
-      </svg>
+      <img src="<%- mix('/assets/images/dokidoki/how-to-enjoy.png') %>" alt="title">
     </h3>
     <p class="how-to-subtext">DOKIDOKIを楽しむポイント</p>
 
@@ -280,10 +276,7 @@
 <section class="sumika">
   <div class="l-container">
     <h2 class="sumika-title">
-      <svg>
-        <title>Ways to feel the forext</title>
-        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-waystofeel-title') %>"></use>
-      </svg>
+      <img src="<%- mix('/assets/images/dokidoki/ways-to-feel.png') %>" alt="title">
     </h2>
     <p class="sumika-subtext">ドキドキする刺激するアスレチック</p>
 
@@ -296,10 +289,7 @@
 <section class="video">
   <div class="l-container">
     <h2 class="video-title">
-      <svg>
-        <title>Sumika Videos</title>
-        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-video') %>"></use>
-      </svg>
+      <img src="<%- mix('/assets/images/dokidoki/sumika-videos.png') %>" alt="title">
     </h2>
     <p class="video-subtext">動画で見るDOKIDOKI</p>
 
@@ -324,16 +314,18 @@
 
 <section class="instagram">
   <div class="l-container">
-    <h2 class="instagram-title">#森感覚アスレチックDOKIDOKI</h2>
+    <h2 class="instagram-title">
+      <img src="<%- mix('/assets/images/dokidoki/insta-title.png') %>" alt="title">
+    </h2>
 
     <div class="instagram-wrapper">
       <ul class="thumbnail-list">
         <%
-          instaData.forEach(insta => { 
+          instaData.forEach(item => { 
         %>
           <li class="thumbnail-item">
             <a class="thumbnail" href="#">
-              <img src="<%= insta.src %>" alt="<%= insta.alt %>">
+              <img src="<%= item.src %>" alt="<%= item.alt %>">
             </a>
           </li>
         <% }) %>
@@ -352,7 +344,9 @@
 
 <section class="faq">
   <div class="l-container">
-    <h2 class="faq-title">FAQ</h2>
+    <h2 class="faq-title">
+      <img src="<%- mix('/assets/images/dokidoki/faq-title.png') %>" alt="title">
+    </h2>
     <p class="faq-subtext">よくあるご質問</p>
 
     <div class="faq-container">

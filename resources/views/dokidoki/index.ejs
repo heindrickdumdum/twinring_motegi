@@ -46,33 +46,11 @@
       'alt': 'insta thumbnail'
     }
   ]
-%>
 
-<%
   accordion = [
     {
-      'btntext': "小さい子どもが遊べますか？"
-    },
-    {
-      'btntext': "所要時間は？"
-    },
-    {
-      'btntext': "以下に記載している方はご利用をご遠慮ください。"
-    },
-    {
-      'btntext': "トイレ・授乳室について"
-    },
-    {
-      'btntext': "荷物はどこに置けばいいですか？"
-    },
-    {
-      'btntext': "飲食物の持ち込みは？"
-    },
-    {
-      'btntext': "カメラについて"
-    },
-    {
-      'btntext': "ベビーカーについて"
+      'btntext': "小さい子どもが遊べますか？",
+      'desc': ""
     }
   ]
 %>
@@ -531,5 +509,31 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
     </div>
   </div>
 </div>
+
+<section class="recommendation">
+  <%- include('/partials/heading', {
+    'modifier': 'heading-wrap-how-to heading-wrap-center',
+    'texts': mix('/assets/images/dokidoki/recommendation.png'),
+    'alt': 'recommendation',
+    'subtexts': 'recommendation-subtext',
+    'altSubtexts': '',
+  }) %>
+
+  <div class="l-container">
+    <ul class="feature-list feature-list-no-design">
+      <%
+        howToContent.forEach(item => {
+      %>
+      <li class="feature-item">
+        <%- include('/partials/article-no-design', {
+          'image': item.image,
+          'heading': item.heading,
+          'buttonLink': item.buttonLink
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
 
 <%- include('./../partials/footer') -%>

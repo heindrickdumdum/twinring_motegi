@@ -46,13 +46,76 @@
       'alt': 'insta thumbnail'
     }
   ]
+%>
 
-  accordion = [
-    {
-      'btntext': "小さい子どもが遊べますか？",
-      'desc': ""
-    }
-  ]
+<%
+accordionData = [
+      {
+        question: '小さい子どもが遊べますか？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '所要時間は？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '以下に記載している方はご利用をご遠慮ください。',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: 'トイレ・授乳室について ',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '荷物はどこに置けばいいですか？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '飲食物の持ち込みは？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: 'カメラについて',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: 'ベビーカーについて',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      
+    ]
 %>
 
 <%- include('./../partials/head', { title }) -%>
@@ -416,38 +479,33 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
   </div>
 </section>
 
-<section class="faq">
+<section class="dokidoki-faq">
   <div class="l-container">
-    <%- include('/partials/heading', {
-      'modifier': 'heading-net-dokidoki',
-      'texts': mix('/assets/images/dokidoki/faq-title.png'),
-      'alt': 'よくあるご質問',
-      'altSubtexts': '',
-      'subtexts': 'faq-subtext'
-    }) %>
+    <div class="dokidoki-faq-inner">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-sumika-faq',
+        'texts': mix('/assets/images/dokidoki/faq-title.png'),
+        'alt': 'faq',
+        'subtexts': 'faq-subtext',
+        'altSubtexts': '',
+      }) %>
 
-    <div class="faq-container l-faq">
-      <%
-        accordion.forEach(item => {
-      %>
-      
+      <% accordionData.forEach(data => { %>
+
       <div class="accordion">
         <div class="accordion-inner">
           <button class="accordion-btn js-accordion-btn" type="button">
             <span class="accordion-btn-label">
-              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
+              <img src="<%= mix('/assets/images/acc-q.png') %>">
             </span>
             <span class="accordion-btn-text">
-              <%= item.btntext %>
+              <%- data.question %>
             </span>
           </button>
-
-          <div class="accordion-content js-accordion-content" style="display: none;">
-            <p class="accordion-desc">「3歳からご利用いただけます。キッズコーナーも併設しております。<br/>
-              ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br/>
-              ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br/>
-              は3～6歳のお子様限定のエリアです。<br/>
-              ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。</p>
+          <div class="accordion-content js-accordion-content" style=" display: none;">
+            <p class="accordion-desc">
+              <%- data.answer %>
+            </p>
           </div>
         </div>
       </div>
@@ -457,45 +515,41 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
   </div>
 </section>
 
-<section class="enjoy-more">
+<section class="dokidoki-cta">
   <div class="l-container">
-    <div class="enjoy-more-inner l-enjoy-more">
-      <div class="heading-wrapper heading-net-dokidoki">
-        <h2 class="heading">
-          <span class="heading-texts">
-            <svg>
-              <title>Dokidoki</title>
-              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-enjoy-title') %>"></use>
-            </svg>
-          </span>
-        </h2>
-
-        <p class="enjoy-text">
-          DOKIDOKIのこだわりポイントや、<br>
-知っているともっと楽しくなる情報を配信中しています。
-        </p>
-
+    <div class="dokidoki-cta-wrapper">
+      <div class="dokidoki-cta-inner">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-net-sumika',
+          'texts': mix('/assets/images/sumika/sumika-cta.png'),
+          'alt': 'SUMIKAをもっと楽しむ',
+          'altSubtexts': '',
+          'subtexts': ''
+        }) %>
+        <div class="dokidoki-cta-description">
+          <p class="dokidoki-cta-description-text">
+            SUMIKAのこだわりポイントや、<br>
+            知っているともっと楽しくなる情報を配信中しています。
+          </p>
+        </div>
         <div class="l-button">
           <%- include('/partials/button', {
-            'modifier': 'button-enjoy',
+            'modifier': 'button-dokidoki',
             'texts': 'もっと見る',
             'link': '#'
           }) %>
         </div>
-      </div>
-
-      <div class="bubble">
-        <span class="bubble-bg-">
-          <img src="<%= mix('/assets/images/dokidoki/bubble-image1.png') %>" alt="bubble image">
+        <span class="dokidoki-cta-dot dokidoki-cta-dot-1">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
         </span>
-        <span class="bubble-bg-">
-          <img src="<%= mix('/assets/images/dokidoki/bubble-image2.png') %>" alt="bubble image">
+        <span class="dokidoki-cta-dot dokidoki-cta-dot-2">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
         </span>
-        <span class="bubble-bg-">
-          <img src="<%= mix('/assets/images/dokidoki/bubble-image3.png') %>" alt="bubble image">
+        <span class="dokidoki-cta-dot dokidoki-cta-dot-3">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
         </span>
-        <span class="bubble-bg-">
-          <img src="<%= mix('/assets/images/dokidoki/bubble-image4.png') %>" alt="bubble image">
+        <span class="dokidoki-cta-dot dokidoki-cta-dot-4">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
         </span>
       </div>
     </div>
@@ -511,28 +565,30 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
 </div>
 
 <section class="recommendation">
-  <%- include('/partials/heading', {
-    'modifier': 'heading-wrap-how-to heading-wrap-center',
-    'texts': mix('/assets/images/dokidoki/recommendation.png'),
-    'alt': 'recommendation',
-    'subtexts': 'recommendation-subtext',
-    'altSubtexts': '',
-  }) %>
+  <div class="l-recommendation">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-wrap-how-to heading-wrap-center',
+      'texts': mix('/assets/images/dokidoki/recommendation.png'),
+      'alt': 'recommendation',
+      'subtexts': 'recommendation-subtext',
+      'altSubtexts': '',
+    }) %>
 
-  <div class="l-container">
-    <ul class="feature-list feature-list-no-design">
-      <%
-        howToContent.forEach(item => {
-      %>
-      <li class="feature-item">
-        <%- include('/partials/article-no-design', {
-          'image': item.image,
-          'heading': item.heading,
-          'buttonLink': item.buttonLink
-        }) %>
-      </li>
-      <% }) %>
-    </ul>
+    <div class="l-container">
+      <ul class="feature-list feature-list-no-design">
+        <%
+          howToContent.forEach(item => {
+        %>
+        <li class="feature-item">
+          <%- include('/partials/article-no-design', {
+            'image': item.image,
+            'heading': item.heading,
+            'buttonLink': item.buttonLink
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
   </div>
 </section>
 

@@ -1,0 +1,25 @@
+.sns-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sns-item {
+  width: 24px;
+  height: 24px;
+  margin: 0 23px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.sns-item-twitter {
+    width: 42px;
+    height: 39px;
+  }
+
+  &.sns-item-youtube {
+    height: 26px;
+  }
+}

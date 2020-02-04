@@ -1,8 +1,17 @@
 $color-light-blue: #f2f7fb;
 $color-light-green: #f2faf5;
 $color-border-grey: #dfdfdf;
+$color-green: #4fae32;
+$color-grey: #9c9c9c;
+
+
 
 .tsubasa-wrapper {
+  .text-center,
+  .text-center * {
+    text-align: center;
+  }
+
   .mv {
     margin-bottom: 70px;
   }
@@ -132,6 +141,9 @@ $color-border-grey: #dfdfdf;
     }
   }
 
+  .heading-wrap-faq {
+    margin-bottom: 25px;
+  }
   .comparison {
     .heading-wrap-comparison {
       margin-bottom: 45px;
@@ -145,6 +157,19 @@ $color-border-grey: #dfdfdf;
         text-align: center;
         &:before,&:after {background-image: none;}
         svg, img {margin-top: 40px;}
+      }
+      .highlighted {
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: inline-block;
+        color: $color-white;
+
+        &.green {
+          background-color: $color-green;
+        }
+        &.grey {
+          background-color: $color-grey;
+        }
       }
     }
 
@@ -163,4 +188,140 @@ $color-border-grey: #dfdfdf;
     }
     
   }
+
+
+  .enjoy-more-inner {
+    width: 1020px;
+    margin: 50px auto 50px;
+    padding: 46px 0 47px;
+    text-align: center;
+    background-image: url(/assets/images/dokidoki/enjoy-more-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    .enjoy-text {
+      font-size: 15px;
+      color: rgb(51, 51, 51);
+      letter-spacing: 0.16em;
+    }
+    .heading-texts {
+      width: 423px;
+      height: 29px;
+      margin: 0 auto 24px;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .l-button {
+      margin-top: 25px;
+    }
+  }
+  .bubble {
+    span {
+      position: absolute;
+      &:first-child {
+        left: -40px;
+        bottom: -15px;
+      }
+      &:nth-child(2) {
+        left: 130px;
+        top: -15px;
+      }
+      &:nth-child(3) {
+        right: -40px;
+        top: -30px;
+      }
+      &:nth-child(4) {
+        right: 135px;
+        bottom: -22px;
+      }
+    }
+  }
+
+  .tsubasa-cta {
+    text-align: center;
+    margin: 80px 0;
+  }
+  
+  .tsubasa-cta-wrapper {
+    padding: 0 100px;
+  }
+  
+  .tsubasa-cta-inner {
+    position: relative;
+    padding: 40px;
+    
+    &:before {
+      position: absolute;
+      content: '';
+      background-image: url(#{$image-path}tsubasa/frame-sm.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  
+    &:after {
+      position: absolute;
+      content: '';
+      background-image: url(#{$image-path}tsubasa/green-dots.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      top: 22px;
+      left: 33px;
+      right: 23px;
+      bottom: 39px;
+    }
+  
+  }
+  
+  .tsubasa-cta-description-text {
+    font-size: 15px;
+    line-height: 1.667;
+    margin-top: 20px;
+  }
+  
+  .tsubasa-cta-dot {
+    position: absolute;
+  }
+  
+  .tsubasa-cta-dot-1 {
+    left: -40px;
+    bottom: 4px;
+  }
+  
+  .tsubasa-cta-dot-2 {
+    top: -19px;
+    left: 128px;
+  }
+  
+  .tsubasa-cta-dot-3 {
+    bottom: 4px;
+    right: 135px;
+  }
+  
+  .tsubasa-cta-dot-4 {
+    top: -28px;
+    right: -27px;
+  }
+
+  .staff-intro {
+    .grey-cta {
+      background-color: #333333;
+      color: #fff;
+      padding: 54px 57px;
+      height: auto;
+      width: auto;
+      max-width: 670px;
+      
+      &:before {
+        display: none;
+      }
+    }
+  }
+  
+  
 }

@@ -1,5 +1,5 @@
-<a class="button-gradient" href="<%- link %>">
-  <img src="<%- texts %>" alt="<%- alt %>">
+<a class="button-gradient<%- ' '+modifier %>" href="<%- link %>">
+  <span class="button-gradient-texts"><%- texts %></span>
   <i class="button-gradient-icon">
     <%- include('/partials/svg', {
       'name': 'arrow'

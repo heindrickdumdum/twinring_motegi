@@ -1,11 +1,17 @@
-.dokdoki-wrapper {
-  margin-top: 50px;
+.dokidoki-wrapper {
+  margin-top: 55px;
+  overflow-x: hidden;
 }
 
-.dokdoki-container {
+.dokidoki-container {
+  width: 1850px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+
+  .dokidoki-item {
+    width: 576px;
+  }
 }
 
 .slide-text {

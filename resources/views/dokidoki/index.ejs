@@ -48,16 +48,57 @@
   ]
 %>
 
+<%
+  accordion = [
+    {
+      'btntext': "小さい子どもが遊べますか？"
+    },
+    {
+      'btntext': "所要時間は？"
+    },
+    {
+      'btntext': "以下に記載している方はご利用をご遠慮ください。"
+    },
+    {
+      'btntext': "トイレ・授乳室について"
+    },
+    {
+      'btntext': "荷物はどこに置けばいいですか？"
+    },
+    {
+      'btntext': "飲食物の持ち込みは？"
+    },
+    {
+      'btntext': "カメラについて"
+    },
+    {
+      'btntext': "ベビーカーについて"
+    }
+  ]
+%>
+
 <%- include('./../partials/head', { title }) -%>
 
 <div class="mv-dokidoki">
   <ul class="mv-list">
     <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.png'); %>) "></div>
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dokidoki/mv-bg.png'); %>) "></div>
     </li>
   </ul>
 
-  <div class="l-container"></div>
+  <div class="l-container mv-container">
+    <h2 class="mv-heading">
+      <span class="mv-heading-texts">
+        <svg>
+          <title>Dokidoki</title>
+          <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mv-text') %>"></use>
+        </svg>
+      </span>
+      <span class="mv-heading-subtexts">
+        森感覚アスレチックDOKIDOKI
+      </span>
+    </h2>
+  </div>
 </div>
 
 <section class="main-content">
@@ -82,7 +123,7 @@
       </section>
     </div>
 
-    <h3 class="attraction-title">
+    <h3 class="attraction-title l-title">
       <img src="<%- mix('/assets/images/dokidoki/attraction-title.png') %>" alt="title">
     </h3>
 
@@ -99,17 +140,20 @@
 
         <tr class="table-row">
           <th class="table-head">所要時間</th>
-          <td class="table-col">説明10分、遊ぶ時間30分の計40分（受付終了時間は営業終了の約1時間前）</td>
+          <td class="table-col">約30分（受付は営業終了10分前まで）
+          </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">雨天の運行</th>
-          <td class="table-col">屋内施設となりますので、雨天時でもお楽しみいただけます。</td>
+          <td class="table-col">雨天時は見合せとなります。
+          </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">対象者</th>
-          <td class="table-col">3歳以上※1</td>
+          <td class="table-col">小学生1年生以上
+          </td>
         </tr>
 
         <tr class="table-row">
@@ -120,7 +164,7 @@
         <tr class="table-row">
           <th class="table-head">料金</th>
           <td class="table-col">
-            モビパークパスポート対象
+            モビパークパスポート対象 <br>
             アトラクションチケット利用：800円
           </td>
         </tr>
@@ -129,13 +173,10 @@
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
             服装について : <br>
-            靴を脱いでのご利用となります。 必ず靴下を履いてご利用ください。なお、指先が分かれたタイプの靴下、たび、ストッキング、タイツはご利用いただけません。もし、ご準備ない場合は、SUMIKA内に、靴下の自動販売機がございますのでご利用ください。
-            <br>
-            ※１小学生未満のお子様の利用について : <br>
-            小学生未満のお子さまは中学生以上の同伴者の付添い（有料）が必要になります。
-            <br>
-            0歳〜2歳のお子様の利用について : <br>
-            0歳〜2歳のお子様は遊具では遊ぶことはできません。保護者様同伴（有料）にてSUMIKA内の芝生のレストエリアをご利用いただけます。
+サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。<br>
+小学生未満のお子様の利用について：<br>
+DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。
+
           </td>
         </tr>
 
@@ -146,7 +187,7 @@
 
 <section class="admission">
   <div class="l-container">
-    <h3 class="admission-title">
+    <h3 class="admission-title l-title">
       <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
     </h3>
     <p class="admission-subtext">
@@ -183,9 +224,9 @@
         <tr class="table-row">
           <th class="table-head">配布にあたって</th>
           <td class="table-col">
-            ※入場整理券は定員に達し次第、受付を終了いたします。
-            ※別途、モビパークパスポートまたはのりもの券をお買い求めください。
-            ※アトラクションには年齢制限がございます。 >>詳しくはこちら
+            ※入場整理券は定員に達し次第、受付を終了いたします。<br>
+            ※別途、モビパークパスポートまたはのりもの券をお買い求めください。<br>
+            ※アトラクションには年齢制限がございます。 >>詳しくはこちら<br>
             ※混雑状況や天候などより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
           </td>
         </tr>
@@ -194,7 +235,7 @@
   </div>
 </section>
 
-<section class="how-to-enjoy">
+<section class="how-to-enjoy l-how-enjoy">
   <div class="l-container">
     <%- include('/partials/heading', {
       'modifier': 'heading-dokidoki',
@@ -204,7 +245,7 @@
       'altSubtexts': '',
     }) %>
 
-    <div class="-content">
+    <div class="how-to-content">
       <div class="media u-clear">
         <div class="media-left">
           <div class="media-bg">
@@ -282,7 +323,7 @@
   </div>
 </section>
 
-<section class="ways-to-feel">
+<section class="ways-to-feel l-to-feel">
   <div class="l-container">
     <div class="heading-wrap heading-dokidoki">
       <h2 class="heading">
@@ -299,9 +340,9 @@
     </div>
   </div>
     
-  <div class="dokdoki-wrapper">
-    <ul class="dokdoki-container">
-      <li>
+  <div class="dokidoki-wrapper">
+    <ul class="dokidoki-container" style="transform: translate3d(-205px, 0, 0);">
+      <li class="dokidoki-item">
         <div class="slide-image">
           <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
         </div>
@@ -309,22 +350,22 @@
           目の前の壁を超えろ！新芽のチャレンジウォール
         </span>
       </li>
-      <li>
+      <li class="dokidoki-item">
         <div class="slide-image">
           <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
         </div>
         <span class="slide-text">
           アカネズミのひみつの場所！どんぐりころころ
         </span>
-      </li>
-      <li>
+      </li class="dokidoki-item">
+      <li class="dokidoki-item">
         <div class="slide-image">
           <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
         </div>
         <span class="slide-text">
           丸太の一般橋を渡ろう！
         </span>
-      </li>
+      </li class="dokidoki-item">
     </ul>
   </div>
 </section>
@@ -332,7 +373,7 @@
 <!-- BOTTOM -->
 
 <section class="sumika-video l-container">
-  <div class="l-section-title">
+  <div class="l-section-title l-sumika-video">
     <%- include('/partials/heading', {
       'modifier': 'heading-sumika',
       'texts': mix('/assets/images/sumika/sumika_videos.png'),
@@ -365,7 +406,7 @@
 
 <section class="dokidoki-instagram">
   <div class="dokidoki-wrapper l-container">
-    <div class="dokidoki-inner">
+    <div class="dokidoki-inner l-dokidoki-insta">
       <div class="dokidoki-inner-content">
         <%- include('/partials/heading', {
           'modifier': 'heading-net-dokidoki',
@@ -407,18 +448,28 @@
       'subtexts': 'faq-subtext'
     }) %>
 
-    <div class="faq-container">
+    <div class="faq-container l-faq">
+      <%
+        accordion.forEach(item => {
+      %>
+      
+      <%
+          modifier = idx === 0 ? 'is-collapse' : ' ';
+          styleIsShow = idx === 0 ? 'display:block' : 'display: none';
+      %>
+      
       <div class="accordion">
         <div class="accordion-inner">
-          <button class="accordion-btn js-accordion-btn is-collapsed" type="button">
+          <button class="accordion-btn js-accordion-btn <%= modifier %>" type="button">
             <span class="accordion-btn-label">
               <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
             </span>
             <span class="accordion-btn-text">
-              小さい子どもが遊べますか？
+              <%= item.btntext %>
             </span>
           </button>
-          <div class="accordion-content js-accordion-content">
+
+          <div class="accordion-content js-accordion-content" style="<%= styleIsShow %>">
             <p class="accordion-desc">「3歳からご利用いただけます。キッズコーナーも併設しております。<br/>
               ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br/>
               ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br/>
@@ -427,23 +478,63 @@
           </div>
         </div>
       </div>
-      <div class="accordion">
-        <div class="accordion-inner">
-          <button class="accordion-btn js-accordion-btn" type="button">
-            <span class="accordion-btn-label">
-              <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
-            </span>
-            <span class="accordion-btn-text">
-              「メガジップライン つばさ」を見学できる場所はありますか？
-            </span>
-          </button>
-          <div class="accordion-content js-accordion-content" style="display: none;">
-            <p class="accordion-desc">「ハローウッズインフォメーション」です。 整理券の発行には利用制限の確認が必要なので、ご利用者様ご 本人がお越しください。未成年の方は保護者様の同意署名が必要です。保護者様と一緒にお越しください。</p>
-          </div>
+
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="enjoy-more">
+  <div class="l-container">
+    <div class="enjoy-more-inner l-enjoy-more">
+      <div class="heading-wrapper heading-net-dokidoki">
+        <h2 class="heading">
+          <span class="heading-texts">
+            <svg>
+              <title>Dokidoki</title>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-enjoy-title') %>"></use>
+            </svg>
+          </span>
+        </h2>
+
+        <p class="enjoy-text">
+          DOKIDOKIのこだわりポイントや、<br>
+知っているともっと楽しくなる情報を配信中しています。
+        </p>
+
+        <div class="l-button">
+          <%- include('/partials/button', {
+            'modifier': 'button-enjoy',
+            'texts': 'もっと見る',
+            'link': '#'
+          }) %>
         </div>
+      </div>
+
+      <div class="bubble">
+        <span class="bubble-bg-">
+          <img src="<%= mix('/assets/images/dokidoki/bubble-image1.png') %>" alt="bubble image">
+        </span>
+        <span class="bubble-bg-">
+          <img src="<%= mix('/assets/images/dokidoki/bubble-image2.png') %>" alt="bubble image">
+        </span>
+        <span class="bubble-bg-">
+          <img src="<%= mix('/assets/images/dokidoki/bubble-image3.png') %>" alt="bubble image">
+        </span>
+        <span class="bubble-bg-">
+          <img src="<%= mix('/assets/images/dokidoki/bubble-image4.png') %>" alt="bubble image">
+        </span>
       </div>
     </div>
   </div>
 </section>
+
+<div class="license">
+  <div class="l-license">
+    <div class="banner-container">
+      <img src="<%= mix('https://via.placeholder.com/1020x210') %>" alt="license banner">
+    </div>
+  </div>
+</div>
 
 <%- include('./../partials/footer') -%>

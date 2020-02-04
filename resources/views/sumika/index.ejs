@@ -4,7 +4,39 @@
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
 
+
+
 <% 
+
+
+    pickup = [
+      {
+        'image': mix('/assets/images/top/feature/img1.jpg'),
+        'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
+        'date': '2019.11.02 〜 2019.11.03',
+        'link': '#',
+        },
+      {
+        'image': mix('/assets/images/top/feature/img2.jpg'),
+        'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
+        'date': '2019.11.02 〜 2019.11.03',
+        'link': '#',
+      },
+      {
+        'image': mix('/assets/images/top/feature/img3.jpg'),
+        'heading': 'モトレーサー タイムアタック選手権2019予選',
+        'date': '2019.11.02 〜 2019.11.03',
+        'link': '#',
+      },
+      {
+        'image': mix('/assets/images/top/feature/img3.jpg'),
+        'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
+        'date': '2019.11.02 〜 2019.11.03',
+        'link': '#',
+      }
+    
+    ]
+
     instagram = [
       {
         'image': mix('/assets/images/sumika/net-sumika/insta-1.png'),
@@ -116,6 +148,26 @@ accordionData = [
       },
       
     ]
+%>
+
+<% 
+recommend = [
+{
+  'image': mix('/assets/images/top/how-to/img1.jpg'),
+  'heading': '巨大ネットの森SUMIKA',
+  'buttonLink': '#',
+},
+{
+  'image': mix('/assets/images/top/how-to/img2.jpg'),
+  'heading': '森感覚アスレチックDOKIDOKI',
+  'buttonLink': '#',
+},
+{
+  'image': mix('/assets/images/top/how-to/img3.jpg'),
+  'heading': '迷宮森殿ITADAKI',
+  'buttonLink': '#',
+},
+]
 %>
 
 <%- include('./../partials/head', { title }) -%>
@@ -398,7 +450,7 @@ accordionData = [
         </div>
         <div class="sumika-instagram-banner">
           <a href="#">
-            <img src="<%- mix('/assets/images/sumika/net-sumika/')%> ">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/instagram-banner.jpg')%> ">
           </a>
         </div>
       </div>
@@ -456,7 +508,7 @@ accordionData = [
             知っているともっと楽しくなる情報を配信中しています。
           </p>
         </div>
-        <div class="l-button">
+        <div class="l-button l-button-sumika-cta">
           <%- include('/partials/button', {
             'modifier': 'button-sumika',
             'texts': 'もっと見る',
@@ -480,32 +532,63 @@ accordionData = [
   </div>
 </section>
 
+<div class="sumika-cta-bottom">
+  <div class="l-container">
+    <div class="sumika-cta-bottom-inner">
+      <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
+    </div>
+  </div>
+</div>
+
 <section class="sumika-recommendation">
   <div class="l-section-title">
-    
+    <%- include('/partials/heading', {
+      'modifier': 'heading-net-sumika',
+      'texts': mix('/assets/images/sumika/recommendation.png'),
+      'alt': 'recommendation',
+      'altSubtexts': '',
+      'subtexts': 'recommend'
+    }) %>
   </div>
-  <div class="sumika-recommendation-content">
-    <ul class="sumika-recommendation-slider">
-      <li class="sumika-recommendation-slider-item"></li>
-      <li class="sumika-recommendation-slider-item"></li>
-      <li class="sumika-recommendation-slider-item"></li>
-      <li class="sumika-recommendation-slider-item"></li>
-      <li class="sumika-recommendation-slider-item"></li>
-      <li class="sumika-recommendation-slider-item"></li>
+  <div class="l-container">
+    <ul class="feature-list feature-list-no-design">
+      <% recommend.forEach(item => { %>
+      <li class="feature-item">
+        <%- include('/partials/article-no-design', {
+          'image': item.image,
+          'heading': item.heading,
+          'buttonLink': item.buttonLink,
+          'buttonText': 'モビパーク'
+        }) %>
+      </li>
+      <% }) %>
     </ul>
   </div>
 </section>
 
 <section class="sumika-pick-up">
   <div class="l-section-title">
-    
+    <%- include('/partials/heading', {
+      'modifier': 'heading-net-sumika',
+      'texts': mix('/assets/images/sumika/pickup.png'),
+      'alt': 'recommendation',
+      'altSubtexts': '',
+      'subtexts': 'pickup'
+    }) %>
   </div>
-  <div class="sumkia-pick-up-content">
-    <ul class="sumika-pick-up-content-list">
-      <li class="sumika-pick-up-list-item"></li>
-      <li class="sumika-pick-up-list-item"></li>
-      <li class="sumika-pick-up-list-item"></li>
-      <li class="sumika-pick-up-list-item"></li>
+  <div class="l-container">
+    <ul class="feature-list">
+      <% pickup.forEach(item => { %>
+      <li class="feature-item">
+        <%- include('/partials/article', {
+          'category': item.category,
+          'image': item.image,
+          'heading': item.heading,
+          'date': item.date,
+          'link': item.link
+        }) %>
+      </li>
+      <% }) %>
     </ul>
   </div>
 </section>

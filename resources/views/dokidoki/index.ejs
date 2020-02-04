@@ -62,12 +62,16 @@
 
 <section class="main-content">
   <div class="l-container">
-    <h2 class="dokidoki-title-svg">
-      <svg>
-        <title>Dokidoki</title>
-        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-title') %>"></use>
-      </svg>
-    </h2>
+    <div class="heading-wrap heading-dokidoki">
+      <h2 class="heading">
+        <span class="heading-texts">
+          <svg>
+            <title>Dokidoki</title>
+            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-main-title') %>"></use>
+          </svg>
+        </span>
+      </h2>
+    </div>
 
     <!-- YOUTUBE -->
     <div class="l-youtube">
@@ -192,10 +196,13 @@
 
 <section class="how-to-enjoy">
   <div class="l-container">
-    <h3 class="how-to-title">
-      <img src="<%- mix('/assets/images/dokidoki/how-to-enjoy.png') %>" alt="title">
-    </h3>
-    <p class="how-to-subtext">DOKIDOKIを楽しむポイント</p>
+    <%- include('/partials/heading', {
+      'modifier': 'heading-dokidoki',
+      'texts': mix('/assets/images/dokidoki/how-to-enjoy.png'),
+      'alt': 'DOKIDOKIを楽しむポイント',
+      'subtexts': 'enjoy-dokidoki',
+      'altSubtexts': '',
+    }) %>
 
     <div class="-content">
       <div class="media u-clear">
@@ -330,7 +337,7 @@
       'modifier': 'heading-sumika',
       'texts': mix('/assets/images/sumika/sumika_videos.png'),
       'alt': 'sumika videos',
-      'subtexts': 'video-sumika',
+      'subtexts': 'video-dokidoki',
       'altSubtexts': '',
     }) %>
   </div>
@@ -392,10 +399,13 @@
 
 <section class="faq">
   <div class="l-container">
-    <h2 class="faq-title">
-      <img src="<%- mix('/assets/images/dokidoki/faq-title.png') %>" alt="title">
-    </h2>
-    <p class="faq-subtext">よくあるご質問</p>
+    <%- include('/partials/heading', {
+      'modifier': 'heading-net-dokidoki',
+      'texts': mix('/assets/images/dokidoki/faq-title.png'),
+      'alt': 'よくあるご質問',
+      'altSubtexts': '',
+      'subtexts': 'faq-subtext'
+    }) %>
 
     <div class="faq-container">
       <div class="accordion">

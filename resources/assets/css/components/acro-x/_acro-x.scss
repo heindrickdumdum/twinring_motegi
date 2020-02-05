@@ -5,10 +5,13 @@
   
   .heading {
     margin: 50px 0;
+    text-align: center;
   }
 
-  .heading-texts {
-    width: 497px;
-    text-align: center;
+  .heading-acro-x {
+    .heading-texts {
+      width: 497px;
+      display: inline-block;
+    }
   }
 }

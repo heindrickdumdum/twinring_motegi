@@ -5,10 +5,7 @@
 }
 
 .section-cards-image-wrap {
-  padding: 10px 10px 22px;
   height: 220px;
-  background: url(#{$image-path}section/card-frame.png) no-repeat center top;
-  background-size: contain;
   position: relative;
 }
 
@@ -42,8 +39,8 @@
   font-size: 12px;
   background-color: $color-white;
   position: absolute;
-  left: -50px;
-  top: 58px;
+  left: -61px;
+  top: 46px;
   transform: rotate(-45deg);
   transform-origin: left;
   z-index: $z-min;
@@ -72,7 +69,7 @@
 }
 
 .section-cards-title {
-  margin-top: 6px;
+  margin-top: 16px;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.1em;

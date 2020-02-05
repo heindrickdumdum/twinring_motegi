@@ -1,7 +1,134 @@
+<%
+  footerTopNav = [
+    {
+      texts: '営業時間',
+      link: '#',
+      image: mix('/assets/images/icon-time.svg'),
+    },
+    {
+      texts: '料金・チケット',
+      link: '#',
+      image: mix('/assets/images/icon-ticket.svg'),
+    },
+    {
+      texts: 'よくあるご質問',
+      link: '#',
+      image: mix('/assets/images/icon-qa.svg'),
+    },
+    {
+      texts: 'アトラクションの<br>ご利用基準',
+      link: '#',
+      image: mix('/assets/images/icon-tall.svg'),
+    },
+    {
+      texts: '交通アクセス',
+      link: '#',
+      image: mix('/assets/images/icon-car.svg'),
+    },
+  ]
+
+  footerBottomNav = [
+    {
+      texts: '会社情報',
+      link: '#',
+    },
+    {
+      texts: '広報',
+      link: '#',
+    },
+    {
+      texts: '採用情報',
+      link: '#',
+    },
+    {
+      texts: '企業の方へ',
+      link: '#',
+    },
+    {
+      texts: 'プライバシー',
+      link: '#',
+    },
+    {
+      texts: 'リーガル',
+      link: '#',
+    },
+    {
+      texts: 'お問い合わせ',
+      link: '#',
+    },
+    {
+      texts: 'アンケート',
+      link: '#',
+    },
+  ]
+%>
   <footer>
 
-  </footer>
+  <nav class="l-container">
+    <ul class="footer-top-nav-list">
+      <%
+        footerTopNav.forEach( topLink => {
+      %>
+      <li class="footer-top-nav-item">
+        <a class="footer-top-nav-link" href="<%- topLink.link %>">
+          <span class="footer-top-nav-icon">
+            <img class="footer-bottom-item-image" src="<%- topLink.image %>" alt="time">
+          </span>
+          <span class="footer-top-nav-texts"><%- topLink.texts %></span>
+        </a>
+      </li>
+      <% }) %>
+    </ul>
+  </nav>
 
+  <div class="footer-top-links">
+    <div class="l-container">
+      <%- include('/partials/footer-top-links') -%>
+    </div>
+  </div>
+
+  <div class="footer-sns">
+    <%- include('/partials/sns') -%>
+  </div>
+
+  <div class="footer-background"></div>
+
+  <div class="footer-bottom">
+    <div class="l-container">
+      <nav>
+        <ul class="footer-bottom-list">
+          <li class="footer-bottom-item">
+            <a class="footer-bottom-link" href="#"><img class="footer-bottom-item-image" src="<%= mix('/assets/images/footer-name.png') %>" alt=""></a>
+          </li>
+          <%
+            footerBottomNav.forEach( bottomLink => {
+          %>
+          <li class="footer-bottom-item">
+            <a class="footer-bottom-link" href="<%- bottomLink.link %>"><%- bottomLink.texts %></a>
+          </li>
+          <% }) %>
+        </ul>
+      </nav>
+
+      <div class="footer-bottom-copyright-wrap">
+        <p class="footer-bottom-copyright">
+          <small>(c) Mobilityland Corporation All Rights Reserved.
+                <br>Kochira (Kochira family) is an original character of MOBILITYLAND designed by Mr. Osamu Tezuka. (c)TEZUKA PRODUCTIONS</small>
+        </p>
+        <ul class="footer-bottom-logos">
+          <li>
+            <img src="<%= mix('/assets/images/suzuka-logo.png') %>" alt="Suzuka">
+          </li>
+          <li>
+            <img src="<%= mix('/assets/images/suzuka-zh-logo.png') %>" alt="Suzuka ZH">
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  </footer>
 
   <script src="<%= mix('/assets/js/app.js') %>" async></script>
 </body>

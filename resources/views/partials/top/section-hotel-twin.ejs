@@ -16,6 +16,24 @@
       'title': '里山懐石 登谷',
     },
   ]
+
+
+  hotelTwinBlockImage = [
+    {
+      'modifier': '',
+      'bg': mix('/assets/images/top/hotel-twin/block-img1.jpg'),
+      'title': mix('/assets/images/top/hotel-twin/restaurant.png'),
+      'alt': 'Restaurant',
+      'subtexts': 'レストラン',
+    },
+    {
+      'modifier': 'block-image-item-last',
+      'bg': mix('/assets/images/top/hotel-twin/block-img2.jpg'),
+      'title': mix('/assets/images/top/hotel-twin/goods-shop.png'),
+      'alt': 'Goods & Shop',
+      'subtexts': 'グッズ & ショップ',
+    }
+  ]
 %>
 
 <section class="section">
@@ -32,7 +50,7 @@
             sectionHotelTwinCards.forEach( card => {
           %>
           <li class="section-cards-item">
-            <div class="section-cards-image-wrap">
+            <div class="section-cards-image-wrap image-border">
               <span class="section-cards-category"><%- card.category %></span>
               <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
             </div>
@@ -51,6 +69,29 @@
           }) %>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="block-image">
+    <div class="l-container">
+      <ul class="block-image-list">
+        <%
+          hotelTwinBlockImage.forEach( block => {
+        %>
+        <li class="block-image-item image-border <%- block.modifier %>">
+          <div class="block-image-inner" style="background-image: url(<%- block.bg %>);">
+            <div class="block-image-texts-wrap">
+              <p class="block-image-texts">
+                <img src="<%- block.title %>" alt="<%- block.title %>">
+                <span class="block-image-subtexts"><%- block.subtexts %></span>
+              </p>
+            </div>
+          </div>
+        </li>
+        <%
+          })
+        %>
+      </ul>
     </div>
   </div>
 </section>

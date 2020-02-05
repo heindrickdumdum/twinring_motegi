@@ -1,0 +1,68 @@
+.block-image {
+  margin-top: 66px;
+  padding-bottom: 143px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 284px;
+    background-color: $color-light;
+  }
+}
+
+.block-image-list {
+  display: flex;
+  margin: 0 -8px;
+  position: relative;
+  z-index: $z-min;
+}
+
+.block-image-texts {
+  img {
+    width: 134px;
+  }
+}
+
+.block-image-item {
+  margin: 0 8px;
+  width: calc(100% / 2);
+
+  &.block-image-item-last {
+    .block-image-texts {
+      img {
+        width: 156px;
+      }
+    }
+  }
+}
+
+.block-image-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 255px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.block-image-texts-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 216px;
+  height: 136px;
+  background-color: rgba($color-white, .89);
+}
+
+.block-image-subtexts {
+  display: block;
+  font-size: 15px;
+  color: $color-mineshaft;
+  text-align: center;
+}

@@ -3,7 +3,7 @@
 }
 
 .heading-subtexts {
-  display: block;
+  display: inline-block;
   margin: 17px 0 0 10px;
   height: 36px;
 
@@ -114,6 +114,12 @@
       width: 104px;
       height: 43px;
       margin: 0 auto 24px;
+    }
+  }
+  
+  &.heading-wrap-information {
+    .heading-texts {
+      width: 149px;
     }
   }
 }

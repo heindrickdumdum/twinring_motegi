@@ -393,7 +393,7 @@ recommend = [
       'modifier': 'heading-sumika',
       'texts': mix('/assets/images/sumika/sumika_videos.png'),
       'alt': 'sumika videos',
-      'subtexts': 'video-sumika',
+      'subtextsSvg': 'video-sumika',
       'altSubtexts': '',
     }) %>
   </div>
@@ -465,7 +465,7 @@ recommend = [
         'modifier': 'heading-sumika-faq',
         'texts': mix('/assets/images/sumika/faq.png'),
         'alt': 'faq',
-        'subtexts': 'faq',
+        'subtextsSvg': 'faq',
         'altSubtexts': '',
       }) %>
       <% accordionData.forEach(data => { %>
@@ -547,7 +547,7 @@ recommend = [
       'texts': mix('/assets/images/sumika/recommendation.png'),
       'alt': 'recommendation',
       'altSubtexts': '',
-      'subtexts': 'recommend'
+      'subtextsSvg': 'recommend'
     }) %>
   </div>
   <div class="l-container">
@@ -573,7 +573,7 @@ recommend = [
       'texts': mix('/assets/images/sumika/pickup.png'),
       'alt': 'recommendation',
       'altSubtexts': '',
-      'subtexts': 'pickup'
+      'subtextsSvg': 'pickup'
     }) %>
   </div>
   <div class="l-container">
@@ -585,7 +585,8 @@ recommend = [
           'image': item.image,
           'heading': item.heading,
           'date': item.date,
-          'link': item.link
+          'link': item.link,
+          'modifier': 'sumika-recommendation-article'
         }) %>
       </li>
       <% }) %>

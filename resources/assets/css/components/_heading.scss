@@ -1,8 +1,8 @@
-.heading-texts {
+.heading-text {
   display: block;
 }
 
-.heading-subtexts {
+.heading-subtext {
   display: inline-block;
   margin: 17px 0 0 10px;
   height: 36px;
@@ -17,43 +17,43 @@
   &.heading-wrap-center {
     text-align: center;
 
-    .heading-texts,
-    .heading-subtexts {
+    .heading-text,
+    .heading-subtext {
       margin: 0 auto;
     }
 
-    .heading-subtexts {
+    .heading-subtext {
       margin: 17px auto 0;
     }
   }
 
   &.heading-wrap-parkmap {
-    .heading-texts {
+    .heading-text {
       width: 144px;
     }
 
-    .heading-subtexts {
+    .heading-subtext {
       width: 750px;
     }
   }
 
   &.heading-wrap-activity {
-    .heading-texts {
+    .heading-text {
       width: 258px;
     }
 
-    .heading-subtexts {
+    .heading-subtext {
       width: 800px;
     }
   }
 
   &.heading-sumika {
-    .heading-texts {
+    .heading-text {
       width: 216px;
       margin: 0 auto;
     }
 
-    .heading-subtexts {
+    .heading-subtext {
       width: 404px;
       margin: 24px auto 0;
     }
@@ -79,7 +79,7 @@
   &.heading-net-sumika {
     margin-bottom: 40px;
     
-    .heading-texts {
+    .heading-text {
       width: 412px;
       height: 28px;
       margin: 0 auto;
@@ -87,7 +87,7 @@
   }
 
   &.heading-wrap-how-to {
-    .heading-texts {
+    .heading-text {
       width: 189px;
     }
   }
@@ -114,13 +114,13 @@
     margin-bottom: 40px;
     text-align: center;
 
-    .heading-subtexts {
+    .heading-subtext {
       width: 284px;
       height: 34px;
       margin: 0 auto;
     }
 
-    .heading-texts {
+    .heading-text {
       width: 104px;
       height: 43px;
       margin: 0 auto 24px;
@@ -128,7 +128,7 @@
   }
   
   &.heading-wrap-information {
-    .heading-texts {
+    .heading-text {
       width: 149px;
     }
   }

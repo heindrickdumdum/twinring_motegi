@@ -215,10 +215,7 @@ accordionData = [
     <div class="heading-wrap heading-dokidoki">
       <h2 class="heading">
         <span class="heading-texts">
-          <svg>
-            <title>Dokidoki</title>
-            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-main-title') %>"></use>
-          </svg>
+          <img src="<%= mix('/assets/images/dokidoki/dokidoki-title.png') %>" alt="dokidoki">
         </span>
       </h2>
     </div>
@@ -542,7 +539,7 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
         </div>
         <div class="dokidoki-instagram-banner">
           <a href="#">
-            <img src="<%- mix('/assets/images/sumika/net-sumika/')%> ">
+            <img src="<%- mix('https://via.placeholder.com/1019x228')%> ">
           </a>
         </div>
       </div>
@@ -647,7 +644,7 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
       'subtexts': 'recommendation-subtext'
     }) %>
   </div>
-  
+
   <div class="l-container">
     <ul class="feature-list feature-list-no-design">
       <% recommend.forEach(item => { %>

@@ -1,22 +1,49 @@
+<%
+if (typeof modifier === 'undefined'){
+  var modifier = '';
+}
+
+if (typeof text === 'undefined'){
+  var text = '';
+}
+
+if (typeof alt === 'undefined'){
+  var alt = '';
+}
+
+if (typeof subtextvg === 'undefined'){
+  var subtextvg = '';
+}
+
+if (typeof subtext === 'undefined'){
+    var subtext = '';
+}
+
+if (typeof altSubtext === 'undefined'){
+      var altSubtext = '';
+}
+
+%>
+
 <div class="heading-wrap<%- ' '+modifier %>">
-  <h2 class="heading">
-    <span class="heading-texts">
-      <img src="<%- texts %>" alt="<%- alt %>">
-    </span>
+  <div class="heading">
+    <p class="heading-text">
+      <img src="<%- text %>" alt="<%- alt %>">
+    </p>
     
-    <% if(subtexts) { %>
-    <span class="heading-subtexts">
+    <% if(subtextvg) { %>
+    <h2 class="heading-subtext">
       <svg>
-        <title><%- subtexts %></title>
-        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-'+subtexts) %>"></use>
+        <title><%- subtextvg %></title>
+        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-'+subtextvg) %>"></use>
       </svg>
-    </span>
+    </h2>
     <% } %>
 
-    <% if(altSubtexts) { %>
-    <span class="heading-subtexts">
-      <img src="<%- subtexts %>" alt="<%- altSubtexts %>">
-    </span>
+    <% if(altSubtext) { %>
+    <p class="heading-subtext">
+      <img src="<%- subtext %>" alt="<%- altSubtext %>">
+    </p>
     <% } %>
-  </h2>
+  </div>
 </div>

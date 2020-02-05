@@ -1,9 +1,22 @@
 .mv {
   height: 607px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -72px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(#{$image-path}mv-curve.png) no-repeat center top;
+    background-size: cover;
+  }
 }
 
 .mv-container {
   position: relative;
+  z-index: $z-min;
 }
 
 .mv-list,
@@ -16,6 +29,7 @@
   height: 607px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .mv-buttons {
@@ -76,11 +90,11 @@
   }
 }
 
-.mv-heading-texts {
+.mv-heading-text {
   width: 252px;
 }
 
-.mv-heading-subtexts {
+.mv-heading-subtext {
   margin-top: 13px;
   width: 887px;
 }
@@ -100,7 +114,7 @@
   background-size: contain;
 }
 
-.mv-today-texts {
+.mv-today-text {
   display: block;
   margin: 0 auto;
   width: 92px;

@@ -4,16 +4,19 @@
       'category': 'ACTIVITY',
       'image': mix('/assets/images/top/activity/img1.jpg'),
       'title': 'ジップラインつばさ・ムササビ',
+      'url' : '#',
     },
     {
       'category': 'PROGRAM',
       'image': mix('/assets/images/top/activity/img2.jpg'),
       'title': '森のファミリーウォーク',
+      'url' : '#',
     },
     {
       'category': 'WORKSHOP',
       'image': mix('/assets/images/top/activity/img3.jpg'),
       'title': 'クラフト体験',
+      'url' : '#',
     },
   ]
 %>
@@ -21,10 +24,10 @@
 <section class="section">
     <%- include('/partials/heading', {
       'modifier': 'heading-wrap-center heading-wrap-activity',
-      'texts': mix('/assets/images/top/activity/attraction-activity.png'),
+      'text': mix('/assets/images/top/activity/attraction-activity.png'),
       'alt': 'Attraction & Activity',
-      'subtexts': mix('/assets/images/top/activity/subtexts.png'),
-      'altSubtexts': 'ツインリンクもてぎの楽しさをエリア別に紹介',
+      'subtext': mix('/assets/images/top/activity/subtext.png'),
+      'altSubtext': 'ツインリンクもてぎの楽しさをエリア別に紹介',
     }) %>
 
     <div class="section-inner">
@@ -40,11 +43,13 @@
               sectionActivityCards.forEach( card => {
             %>
             <li class="section-cards-item">
-              <div class="section-cards-image-wrap image-border">
-                <span class="section-cards-category"><%- card.category %></span>
-                <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
-              </div>
-              <p class="section-cards-title"><%- card.title %></p>
+              <a href="<%- card.url %>" class="section-card-link">
+                <div class="section-cards-image-wrap image-border">
+                  <span class="section-cards-category"><%- card.category %></span>
+                  <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+                </div>
+                <p class="section-cards-title"><%- card.title %></p>
+              </a>
             </li>
             <%
               })
@@ -54,7 +59,7 @@
           <div class="section-button">
             <%- include('/partials/button', {
               'modifier': '',
-              'texts': 'もっと見る',
+              'text': 'もっと見る',
               'link': '#'
             }) %>
           </div>

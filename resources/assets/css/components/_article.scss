@@ -76,6 +76,19 @@
     .article-heading {
       color: $color-mineshaft;
     }
+    &:hover {
+      @include query($breakpoint-mobile, min) {
+        .button-gradient-icon {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  &.sumika-recommendation-article {
+    .article-heading {
+      min-height: 93px;
+    }
   }
 
   .article-image-wrap {

@@ -27,31 +27,31 @@
 
   parkmapButtons = [
     {
-      'texts': 'ハローウッズ',
+      'text': 'ハローウッズ',
       'link': '#',
     },
     {
-      'texts': 'モビパーク',
+      'text': 'モビパーク',
       'link': '#',
     },
     {
-      'texts': '森と星空のキャンプヴィレッジ',
+      'text': '森と星空のキャンプヴィレッジ',
       'link': '#',
     },
     {
-      'texts': 'ホテルツインリンク',
+      'text': 'ホテルツインリンク',
       'link': '#',
     },
     {
-      'texts': 'モータースポーツ',
+      'text': 'モータースポーツ',
       'link': '#',
     },
     {
-      'texts': 'ホンダコレクションホール',
+      'text': 'ホンダコレクションホール',
       'link': '#',
     },
     {
-      'texts': '安全運転スクール',
+      'text': '安全運転スクール',
       'link': '#',
     },
   ]
@@ -81,44 +81,44 @@
   informationContent = [
     content1 = [
       {
-        'texts': '9月の「森あそび」・「ものづくり」プログラムを更新',
+        'text': '9月の「森あそび」・「ものづくり」プログラムを更新',
         'category': 'アトラクション・アクティビティ',
         'time': '2019.01.10',
       },
       {
-        'texts': '夏のおすすめグッズ情報を更新しました',
+        'text': '夏のおすすめグッズ情報を更新しました',
         'category': 'グッズ＆ショップ',
         'time': '2019.01.10',
       },
       {
-        'texts': '夏季期間（7/1〜8/31）の営業時間について',
+        'text': '夏季期間（7/1〜8/31）の営業時間について',
         'category': 'お知らせ',
         'time': '2019.01.10',
       },
       {
-        'texts': 'モトレーサー タイムアタック選手権2019開催！',
+        'text': 'モトレーサー タイムアタック選手権2019開催！',
         'category': 'モータースポーツ',
         'time': '2019.01.10',
       }
     ],
     content2 = [
       {
-        'texts': '新アトラクション「巨大ネットの森 SUMIKA」オープン！',
+        'text': '新アトラクション「巨大ネットの森 SUMIKA」オープン！',
         'category': 'アトラクション・アクティビティ',
         'time': '2019.01.10',
       },
       {
-        'texts': 'HELLO WOODSのフォトギャラリー更新',
+        'text': 'HELLO WOODSのフォトギャラリー更新',
         'category': 'お知らせ',
         'time': '2019.01.10',
       },
       {
-        'texts': 'ディナーセットメニューがリニューアル！',
+        'text': 'ディナーセットメニューがリニューアル！',
         'category': 'レストラン',
         'time': '2019.01.10',
       },
       {
-        'texts': 'ツインリンクもてぎ 花火の祭典“冬”のご予約開始',
+        'text': 'ツインリンクもてぎ 花火の祭典“冬”のご予約開始',
         'category': 'ホテル・キャンプ',
         'time': '2019.01.10',
       }
@@ -146,23 +146,23 @@
   </div>
   <ul class="mv-list">
     <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.png') %>);"></div>
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.jpg') %>);"></div>
     </li>
   </ul>
 
   <div class="l-container mv-container">
     <h2 class="mv-heading">
-      <span class="mv-heading-texts">
+      <span class="mv-heading-text">
         <img src="<%= mix('/assets/images/mv-twinring-motegi.png') %>" alt="Twinring Motegi">
       </span>
-      <span class="mv-heading-subtexts">
+      <span class="mv-heading-subtext">
         <img src="<%= mix('/assets/images/mv-heading.svg') %>" alt="家族にちょうどいい冒険を">
       </span>
     </h2>
 
     <div class="mv-today">
       <div class="mv-today-inner">
-        <img class="mv-today-texts" src="<%= mix('/assets/images/mv-today-texts.png') %>" alt="">
+        <img class="mv-today-text" src="<%= mix('/assets/images/mv-today-text.png') %>" alt="">
         <span class="mv-today-time">10:00-17:00</span>
         <span class="mv-today-degree">
           <i class="mv-today-degree-icon">
@@ -206,10 +206,10 @@
     <div class="l-container parkmap-container">
       <%- include('/partials/heading', {
         'modifier': 'heading-wrap-parkmap',
-        'texts': mix('/assets/images/top/parkmap/parkmap.png'),
+        'text': mix('/assets/images/top/parkmap/parkmap.png'),
         'alt': 'Park Map',
-        'subtexts': 'parkmap-subtexts',
-        'altSubtexts': '',
+        'subtextvg': 'parkmap-subtext',
+        'altSubtext': '',
       }) %>
 
 
@@ -229,7 +229,7 @@
               parkmapButtons.forEach( button => {
             %>
             <li class="parkmap-item">
-              <a class="parkmap-link" href="<%- button.link %>"><%- button.texts %>
+              <a class="parkmap-link" href="<%- button.link %>"><%- button.text %>
                 <i class="parkmap-link-icon">
                   <%- include('/partials/svg', {
                     'name': 'arrow'
@@ -241,7 +241,7 @@
             <li class="parkmap-item parkmap-item-last">
               <%- include('/partials/button', {
                 'modifier': 'button-parkmap',
-                'texts': 'エリア・施設一覧を見る',
+                'text': 'エリア・施設一覧を見る',
                 'link': '#'
               }) %>
             </li>
@@ -276,10 +276,10 @@
   <section class="how-to">
     <%- include('/partials/heading', {
       'modifier': 'heading-wrap-how-to heading-wrap-center',
-      'texts': mix('/assets/images/top/how-to/how-to-enjoy.png'),
+      'text': mix('/assets/images/top/how-to/how-to-enjoy.png'),
       'alt': 'How to Enjoy',
-      'subtexts': 'how-to-subtexts',
-      'altSubtexts': '',
+      'subtextvg': 'how-to-subtext',
+      'altSubtext': '',
     }) %>
 
     <ul class="feature-list feature-list-no-design">
@@ -303,10 +303,10 @@
   <div class="l-container information-container">
     <%- include('/partials/heading', {
       'modifier': 'heading-wrap-information',
-      'texts': mix('/assets/images/top/information/information.png'),
+      'text': mix('/assets/images/top/information/information.png'),
       'alt': 'Information',
-      'subtexts': 'information-subtexts',
-      'altSubtexts': '',
+      'subtextvg': 'information-subtext',
+      'altSubtext': '',
     }) %>
 
     <%- include('/partials/post', {
@@ -316,7 +316,7 @@
     <div class="information-button">
       <%- include('/partials/button', {
         'modifier': '',
-        'texts': 'もっと見る',
+        'text': 'もっと見る',
         'link': '#'
       }) %>
     </div>

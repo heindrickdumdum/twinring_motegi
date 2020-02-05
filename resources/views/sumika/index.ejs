@@ -391,10 +391,10 @@ recommend = [
   <div class="l-section-title">
     <%- include('/partials/heading', {
       'modifier': 'heading-sumika',
-      'texts': mix('/assets/images/sumika/sumika_videos.png'),
+      'text': mix('/assets/images/sumika/sumika_videos.png'),
       'alt': 'sumika videos',
-      'subtexts': 'video-sumika',
-      'altSubtexts': '',
+      'subtextvg': 'video-sumika',
+      'altSubtext': '',
     }) %>
   </div>
   <div class="sumika-video-content">
@@ -425,10 +425,10 @@ recommend = [
       <div class="sumika-inner-content">
         <%- include('/partials/heading', {
           'modifier': 'heading-net-sumika',
-          'texts': mix('/assets/images/sumika/net-sumika.png'),
+          'text': mix('/assets/images/sumika/net-sumika.png'),
           'alt': '巨大ネットの森SUMIKA',
-          'altSubtexts': '',
-          'subtexts': ''
+          'altSubtext': '',
+          'subtext': ''
         }) %>
         <div class="sumika-instagram-content">
           <ul class="sumika-instagram-list">
@@ -444,7 +444,7 @@ recommend = [
         <div class="l-button">
           <%- include('/partials/button', {
             'modifier': 'button-sumika',
-            'texts': 'インスタグラムでもっと見る',
+            'text': 'インスタグラムでもっと見る',
             'link': '#'
           }) %>
         </div>
@@ -463,10 +463,10 @@ recommend = [
     <div class="sumika-faq-inner">
       <%- include('/partials/heading', {
         'modifier': 'heading-sumika-faq',
-        'texts': mix('/assets/images/sumika/faq.png'),
+        'text': mix('/assets/images/sumika/faq.png'),
         'alt': 'faq',
-        'subtexts': 'faq',
-        'altSubtexts': '',
+        'subtextvg': 'faq',
+        'altSubtext': '',
       }) %>
       <% accordionData.forEach(data => { %>
       <div class="accordion">
@@ -497,10 +497,10 @@ recommend = [
       <div class="sumika-cta-inner">
         <%- include('/partials/heading', {
           'modifier': 'heading-net-sumika',
-          'texts': mix('/assets/images/sumika/sumika-cta.png'),
+          'text': mix('/assets/images/sumika/sumika-cta.png'),
           'alt': 'SUMIKAをもっと楽しむ',
-          'altSubtexts': '',
-          'subtexts': ''
+          'altSubtext': '',
+          'subtext': ''
         }) %>
         <div class="sumika-cta-description">
           <p class="sumika-cta-description-text">
@@ -511,7 +511,7 @@ recommend = [
         <div class="l-button l-button-sumika-cta">
           <%- include('/partials/button', {
             'modifier': 'button-sumika',
-            'texts': 'もっと見る',
+            'text': 'もっと見る',
             'link': '#'
           }) %>
         </div>
@@ -544,10 +544,10 @@ recommend = [
   <div class="l-section-title">
     <%- include('/partials/heading', {
       'modifier': 'heading-net-sumika',
-      'texts': mix('/assets/images/sumika/recommendation.png'),
+      'text': mix('/assets/images/sumika/recommendation.png'),
       'alt': 'recommendation',
-      'altSubtexts': '',
-      'subtexts': 'recommend'
+      'altSubtext': '',
+      'subtextvg': 'recommend'
     }) %>
   </div>
   <div class="l-container">
@@ -570,10 +570,10 @@ recommend = [
   <div class="l-section-title">
     <%- include('/partials/heading', {
       'modifier': 'heading-net-sumika',
-      'texts': mix('/assets/images/sumika/pickup.png'),
+      'text': mix('/assets/images/sumika/pickup.png'),
       'alt': 'recommendation',
-      'altSubtexts': '',
-      'subtexts': 'pickup'
+      'altSubtext': '',
+      'subtextvg': 'pickup'
     }) %>
   </div>
   <div class="l-container">
@@ -585,7 +585,8 @@ recommend = [
           'image': item.image,
           'heading': item.heading,
           'date': item.date,
-          'link': item.link
+          'link': item.link,
+          'modifier': 'sumika-recommendation-article'
         }) %>
       </li>
       <% }) %>

@@ -1,5 +1,5 @@
 <%
-howToContent = [
+dataCategory = [
 {
   'image': mix('/assets/images/car-and-bike/category-car.png'),
   'heading': '0歳〜6歳のお子様とのお楽しみ方',
@@ -25,7 +25,7 @@ howToContent = [
 <div class="mv-car-and-bike">
   <ul class="mv-list">
     <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.png') %>);"></div>
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.jpg') %>);"></div>
     </li>
   </ul>
 
@@ -66,7 +66,7 @@ howToContent = [
         <div class="media-left">
           <div class="media-bg">
             <div class="media-thumb">
-              <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+              <div style="background-image: url(<%= mix('http://via.placeholder.com/480x280') %>);"></div>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ howToContent = [
         <div class="media-left">
           <div class="media-bg">
             <div class="media-thumb">
-              <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+              <div style="background-image: url(<%= mix('http://via.placeholder.com/480x280') %>);"></div>
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@ howToContent = [
         <div class="media-left">
           <div class="media-bg">
             <div class="media-thumb">
-              <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+              <div style="background-image: url(<%= mix('http://via.placeholder.com/480x280') %>);"></div>
             </div>
           </div>
         </div>
@@ -128,15 +128,15 @@ howToContent = [
   <section class="how-to">
     <%- include('/partials/heading', {
       'modifier': 'heading-wrap-how-to heading-wrap-center',
-      'texts': mix('/assets/images/car-and-bike/attraction-category.png'),
+      'text': mix('/assets/images/car-and-bike/attraction-category.png'),
       'alt': 'How to Enjoy',
-      'subtexts': 'car-and-bike-attraction-categories',
-      'altSubtexts': '',
+      'subtextvg': 'car-and-bike-attraction-categories',
+      'altSubtext': '',
     }) %>
 
     <ul class="feature-list feature-list-no-design">
       <%
-        howToContent.forEach(item => {
+        dataCategory.forEach(item => {
       %>
       <li class="feature-item">
         <article class="article article-no-design">
@@ -153,5 +153,42 @@ howToContent = [
     </ul>
   </section>
 </div>
+
+<div class="cars-attraction l-how-to l-container">
+  <section class="how-to">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-wrap-how-to heading-wrap-center',
+      'text': mix('/assets/images/car-and-bike/cars-attraction.png'),
+      'alt': 'Cars Category',
+      'subtextvg': '',
+      'altSubtext': '',
+    }) %>
+
+    <ul class="feature-list feature-list-no-design">
+      <%
+        howToContent.forEach(item => {
+      %>
+      <li class="feature-item">
+        <article class="article article-no-design">
+          <div class="article-image-wrap">
+            <div class="article-image"
+                 style="background-image: url(<% if(item.image != '') { %>
+                   <%- item.image %>
+                   <% } else { %><%= mix('/assets/images/noimage.jpg') %>
+                   <% } %>)"></div>
+          </div>
+          <table>
+            <tr>
+              
+            </tr>
+          </table>
+        </article>
+      </li>
+      <% }) %>
+    </ul>
+  </section>
+</div>
+
+
 
 <%- include('/partials/footer') -%>

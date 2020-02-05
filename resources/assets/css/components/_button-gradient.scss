@@ -21,13 +21,13 @@
   color: $base-font-color;
   position: relative;
 
-  &:hover {
-    @include query($breakpoint-mobile, min) {
-      .button-gradient-icon {
-        transform: translateX(5px);
-      }
-    }
-  }
+  // &:hover {
+  //   @include query($breakpoint-mobile, min) {
+  //     .button-gradient-icon {
+  //       transform: translateX(5px);
+  //     }
+  //   }
+  // }
 
   &.button-gradient-cmn {
     height: auto;

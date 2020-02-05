@@ -4,16 +4,19 @@
       'category': 'ACTIVITY',
       'image': mix('/assets/images/top/activity/img1.jpg'),
       'title': 'ジップラインつばさ・ムササビ',
+      'url' : '#',
     },
     {
       'category': 'PROGRAM',
       'image': mix('/assets/images/top/activity/img2.jpg'),
       'title': '森のファミリーウォーク',
+      'url' : '#',
     },
     {
       'category': 'WORKSHOP',
       'image': mix('/assets/images/top/activity/img3.jpg'),
       'title': 'クラフト体験',
+      'url' : '#',
     },
   ]
 %>
@@ -40,11 +43,13 @@
               sectionActivityCards.forEach( card => {
             %>
             <li class="section-cards-item">
-              <div class="section-cards-image-wrap image-border">
-                <span class="section-cards-category"><%- card.category %></span>
-                <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
-              </div>
-              <p class="section-cards-title"><%- card.title %></p>
+              <a href="<%- card.url %>" class="section-card-link">
+                <div class="section-cards-image-wrap image-border">
+                  <span class="section-cards-category"><%- card.category %></span>
+                  <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+                </div>
+                <p class="section-cards-title"><%- card.title %></p>
+              </a>
             </li>
             <%
               })

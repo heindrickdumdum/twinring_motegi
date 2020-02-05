@@ -4,7 +4,7 @@
   margin: 0 -40px;
 
   &.feature-list-no-design {
-    margin: 48px -40px 0;
+    margin: 48px -25px 0;
   }
 }
 
@@ -12,5 +12,5 @@
   display: inline-block;
   vertical-align: top;
   margin: 0 25px;
-  width: calc((1220px / 3) - 30px);
+  width: calc(1220px / 3);
 }

@@ -29,8 +29,16 @@
 @import "components/table";
 @import "components/media";
 @import "components/accordion";
-
-
+@import "components/block-image";
+@import "components/image-border";
+@import "components/how-to";
+@import "components/information";
+@import "components/post";
+@import "components/footer";
+@import "components/footer-top";
+@import "components/footer-bottom";
+@import "components/sns";
+@import "components/tsubasa/styles";
 
 @import 'layout/grid';
 @import "layout/l-container";
@@ -38,11 +46,8 @@
 @import "layout/l-feature";
 @import "layout/l-parkmap";
 @import "layout/l-section";
-@import "layout/l-how-to";
 @import "layout/l-section-title";
 @import "layout/l-button";
-
-@import "components/tsubasa/styles";
 
 // Required
 .svg-sprite {

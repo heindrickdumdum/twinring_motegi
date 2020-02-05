@@ -1,0 +1,4 @@
+.image-border {
+  border: 10px solid transparent;
+  border-image: url(#{$image-path}frame.png) 30 stretch;
+}

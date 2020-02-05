@@ -4,12 +4,17 @@ $color-border-grey: #dfdfdf;
 $color-green: #4fae32;
 $color-grey: #9c9c9c;
 
-
-
 .tsubasa-wrapper {
   .text-center,
   .text-center * {
     text-align: center;
+  }
+
+  .heading-wrap-steps,
+  .heading-wrap-faq,
+  .heading-wrap-comparison,
+  .heading-wrap-how-to {
+    margin-bottom: 40px;
   }
 
   .mv {
@@ -19,6 +24,7 @@ $color-grey: #9c9c9c;
   .l-video {
     margin-bottom: 40px;
   }
+
   .video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -43,107 +49,6 @@ $color-grey: #9c9c9c;
     }
   }
 
-  .steps-list {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap; 
-    justify-content: center;
-
-    .steps-list-item {
-      width: calc(100%/3);
-      text-align: center;
-      margin-bottom: 80px;
-      
-      &:nth-child(3n),&.step-goal {
-        .step-image::after {
-          display: none;
-        }
-      }
-
-
-      &.step-goal {
-        width: calc(100%/3*2);
-
-        .img-step {
-          display: none;
-        }
-
-        .step-no {
-          margin-bottom: 0;
-          height: 45px;
-          position: relative;
-          margin: auto;
-
-          img {
-            position: absolute;
-            left: 0;
-            right: 0;
-            z-index: 3;
-            margin: auto;
-          }
-        }
-
-      }
-
-      .step-no {
-        margin-bottom: 15px;
-        font-size: 18px;
-        font-family: "Holland";
-        color: $color-green;
-      }
-
-      .step-title {
-        color: $color-green;
-      }
-      
-      .step-image {
-        display: inline-block;
-        margin-bottom: 30px;
-        padding: 5px 14px;
-        background-image: url("/assets/images/tsubasa/step-bg.png");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        position: relative;
-
-        &.goal-bg {
-          background-image: url("/assets/images/tsubasa/step-bg.png");
-        }
-
-        
-        
-        &::after {
-          content: " ";
-          width: 20px;
-          height: 50px;
-          position: absolute;
-          top: 50%;
-          right: -50px;
-          -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-          background: url(/assets/images/tsubasa/step-arrow.png) no-repeat;
-        }
-      }
-
-      .step-subtitle {
-        font-weight: bold;
-      }
-
-      .step-desc {
-        max-width: 300px;
-        margin: auto;
-      }
-
-      .sub-image {
-        margin-top: 30px;
-        
-      }
-
-    }
-  }
-
-  .heading-wrap-faq {
-    margin-bottom: 25px;
-  }
   .comparison {
     .heading-wrap-comparison {
       margin-bottom: 45px;
@@ -189,125 +94,177 @@ $color-grey: #9c9c9c;
     
   }
 
-
-  .enjoy-more-inner {
-    width: 1020px;
-    margin: 50px auto 50px;
-    padding: 46px 0 47px;
-    text-align: center;
-    background-image: url(/assets/images/dokidoki/enjoy-more-bg.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: relative;
-    .enjoy-text {
-      font-size: 15px;
-      color: rgb(51, 51, 51);
-      letter-spacing: 0.16em;
-    }
-    .heading-texts {
-      width: 423px;
-      height: 29px;
-      margin: 0 auto 24px;
-      svg {
-        width: 100%;
-        height: 100%;
+  .steps-list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    justify-content: center;
+    
+    .steps-list-item {
+      width: calc(100% / 3);
+      text-align: center;
+      margin-bottom: 80px;
+      
+      .step-no {
+        margin-bottom: 20px;
       }
-    }
-    .l-button {
-      margin-top: 25px;
+
+      .step-title {
+        color: $color-green;
+      }
+
+      .step-subtitle {
+        font-weight: bold;
+      }
+
+      .step-desc {
+        max-width: 300px;
+        margin: auto;
+      }
+
+      .sub-image {
+        margin-top: 30px;     
+      }
+      
+      .step-image {
+        display: inline-block;
+        margin-bottom: 30px;
+        padding: 5px 14px;
+        background-image: url("/assets/images/tsubasa/step-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: relative;
+
+        &::after {
+          content: " ";
+          width: 20px;
+          height: 50px;
+          position: absolute;
+          top: 50%;
+          right: -50px;
+          -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+          background: url(/assets/images/tsubasa/step-arrow.png) no-repeat;
+        }
+
+        &.goal-bg {
+          background-image: url("/assets/images/tsubasa/goal-bg.png");
+        }
+
+        img {
+          max-width: 300px;
+        }
+      }
+
+      &:nth-child(3n),&.step-goal {
+        .step-image::after {
+          display: none;
+        }
+      }
+
+      &.step-goal {
+        width: calc(100% / 3 * 2);
+
+        .img-step {
+          display: none;
+        }
+
+        .step-no {
+          margin: auto;
+          height: 45px;
+          position: relative;
+          font-size: 18px;
+          color: $color-green;
+
+          img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            margin: auto;
+          }
+        }
+
+        .step-image {
+          img {max-width: 660px;}
+        }
+      }
     }
   }
-  .bubble {
-    span {
-      position: absolute;
-      &:first-child {
-        left: -40px;
-        bottom: -15px;
-      }
-      &:nth-child(2) {
-        left: 130px;
-        top: -15px;
-      }
-      &:nth-child(3) {
-        right: -40px;
-        top: -30px;
-      }
-      &:nth-child(4) {
-        right: 135px;
-        bottom: -22px;
-      }
-    }
+
+  .faq {
+    margin-bottom: 25px;
   }
 
-  .tsubasa-cta {
+  .enjoy-more {
     text-align: center;
     margin: 80px 0;
-  }
   
-  .tsubasa-cta-wrapper {
-    padding: 0 100px;
-  }
-  
-  .tsubasa-cta-inner {
-    position: relative;
-    padding: 40px;
+    .tsubasa-cta-wrapper {
+      padding: 0 100px;
+    }
     
-    &:before {
-      position: absolute;
-      content: '';
-      background-image: url(#{$image-path}tsubasa/frame-sm.png);
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+    .tsubasa-cta-inner {
+      position: relative;
+      padding: 40px;
+      
+      &:before {
+        position: absolute;
+        content: '';
+        background-image: url(#{$image-path}tsubasa/frame-sm.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    
+      &:after {
+        position: absolute;
+        content: '';
+        background-image: url(#{$image-path}tsubasa/green-dots.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        top: 22px;
+        left: 33px;
+        right: 23px;
+        bottom: 39px;
+      }
+    
     }
-  
-    &:after {
-      position: absolute;
-      content: '';
-      background-image: url(#{$image-path}tsubasa/green-dots.png);
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      top: 22px;
-      left: 33px;
-      right: 23px;
-      bottom: 39px;
+    
+    .tsubasa-cta-description-text {
+      font-size: 15px;
+      line-height: 1.667;
+      margin-top: 20px;
     }
-  
+    
+    .tsubasa-cta-dot {
+      position: absolute;
+    }
+    
+    .tsubasa-cta-dot-1 {
+      left: -40px;
+      bottom: 4px;
+    }
+    
+    .tsubasa-cta-dot-2 {
+      top: -19px;
+      left: 128px;
+    }
+    
+    .tsubasa-cta-dot-3 {
+      bottom: 4px;
+      right: 135px;
+    }
+    
+    .tsubasa-cta-dot-4 {
+      top: -28px;
+      right: -27px;
+    }
   }
   
-  .tsubasa-cta-description-text {
-    font-size: 15px;
-    line-height: 1.667;
-    margin-top: 20px;
-  }
-  
-  .tsubasa-cta-dot {
-    position: absolute;
-  }
-  
-  .tsubasa-cta-dot-1 {
-    left: -40px;
-    bottom: 4px;
-  }
-  
-  .tsubasa-cta-dot-2 {
-    top: -19px;
-    left: 128px;
-  }
-  
-  .tsubasa-cta-dot-3 {
-    bottom: 4px;
-    right: 135px;
-  }
-  
-  .tsubasa-cta-dot-4 {
-    top: -28px;
-    right: -27px;
-  }
-
   .staff-intro {
     .grey-cta {
       background-color: #333333;
@@ -322,6 +279,4 @@ $color-grey: #9c9c9c;
       }
     }
   }
-  
-  
 }

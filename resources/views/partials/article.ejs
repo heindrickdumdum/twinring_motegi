@@ -1,6 +1,8 @@
 <article class="article">
   <a class="article-link" href="<%- link %>">
+    <% if(category) { %>
     <span class="article-category<% if(category == 'NEWS') { %> article-category-news<% } %>"><%- category %></span>
+    <% } %>
     <div class="article-image-wrap">
       <div class="article-image"
            style="background-image: url(

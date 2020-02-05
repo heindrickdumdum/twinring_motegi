@@ -61,16 +61,19 @@
     {
       'image': mix('/assets/images/top/how-to/img1.jpg'),
       'heading': '0歳〜6歳のお子様とのお楽しみ方',
+      'buttonText': 'モデルコース',
       'buttonLink': '#',
     },
     {
       'image': mix('/assets/images/top/how-to/img2.jpg'),
       'heading': '小学校低学年のお子様とのお楽しみ方',
+      'buttonText': 'モデルコース',
       'buttonLink': '#',
     },
     {
       'image': mix('/assets/images/top/how-to/img3.jpg'),
       'heading': '小学校高学年のお子様とのお楽しみ方',
+      'buttonText': 'モデルコース',
       'buttonLink': '#',
     },
   ]
@@ -221,34 +224,45 @@
   <%- include('/partials/top/section-hotel-twin') -%>
 </div>
 
-<div class="l-container">
-  <div class="l-how-to">
-    <section class="how-to">
-      <%- include('/partials/heading', {
-        'modifier': 'heading-wrap-how-to heading-wrap-center',
-        'texts': mix('/assets/images/top/how-to/how-to-enjoy.png'),
-        'alt': 'How to Enjoy',
-        'subtexts': 'how-to-subtexts',
-        'altSubtexts': '',
-      }) %>
+<div class="l-how-to l-container">
+  <section class="how-to">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-wrap-how-to heading-wrap-center',
+      'texts': mix('/assets/images/top/how-to/how-to-enjoy.png'),
+      'alt': 'How to Enjoy',
+      'subtexts': 'how-to-subtexts',
+      'altSubtexts': '',
+    }) %>
 
-      <div class="l-container">
-        <ul class="feature-list feature-list-no-design">
-          <%
-            howToContent.forEach(item => {
-          %>
-          <li class="feature-item">
-            <%- include('/partials/article-no-design', {
-              'image': item.image,
-              'heading': item.heading,
-              'buttonLink': item.buttonLink
-            }) %>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
-    </section>
-  </div>
+    <ul class="feature-list feature-list-no-design">
+      <%
+        howToContent.forEach(item => {
+      %>
+      <li class="feature-item">
+        <%- include('/partials/article-no-design', {
+          'image': item.image,
+          'heading': item.heading,
+          'buttonText': item.buttonText,
+          'buttonLink': item.buttonLink,
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </section>
 </div>
+
+<section class="information">
+  <div class="l-container">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-wrap-information',
+      'texts': mix('/assets/images/top/information/information.png'),
+      'alt': 'Information',
+      'subtexts': 'information-subtexts',
+      'altSubtexts': '',
+    }) %>
+
+    <%- include('/partials/post') -%>
+  </div>
+</section>
 
 <%- include('/partials/footer') -%>

@@ -59,8 +59,26 @@
     }
   }
 
+  &.heading-dokidoki {
+    .heading-texts {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .heading-subtexts {
+      margin: 24px auto 0;
+      text-align: center;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   &.heading-net-sumika {
     margin-bottom: 40px;
+    
     .heading-texts {
       width: 412px;
       height: 28px;
@@ -71,6 +89,15 @@
   &.heading-wrap-how-to {
     .heading-texts {
       width: 189px;
+    }
+  }
+
+  &.heading-net-dokidoki {
+    margin-bottom: 40px;
+    
+    .heading-texts {
+      margin: 0 auto;
+      text-align: center;
     }
   }
 
@@ -89,7 +116,7 @@
       margin: 0 auto 24px;
     }
   }
-
+  
   &.heading-wrap-information {
     .heading-texts {
       width: 149px;

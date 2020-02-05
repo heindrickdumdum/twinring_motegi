@@ -1,11 +1,3 @@
-.article {
-  &.sumika-recommendation-article {
-    .article-heading {
-      min-height: 93px;
-    }
-  }
-}
-
 .article-image-wrap {
   padding: 15px;
   position: relative;
@@ -50,7 +42,7 @@
   font-weight: 600;
   color: $color-seaweed;
   line-height: 1.67;
-  letter-spacing: 0.03em; 
+  letter-spacing: 0.03em;
 }
 
 .article-image {
@@ -83,13 +75,19 @@
   &.article-no-design {
     .article-heading {
       color: $color-mineshaft;
-    }   
+    }
     &:hover {
       @include query($breakpoint-mobile, min) {
         .button-gradient-icon {
           transform: translateX(5px);
         }
       }
+    }
+  }
+
+  &.sumika-recommendation-article {
+    .article-heading {
+      min-height: 93px;
     }
   }
 

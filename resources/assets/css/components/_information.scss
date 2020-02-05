@@ -1,3 +1,14 @@
 .information {
   padding: 95px 0 120px;
+  position: relative;
+}
+
+.information-container {
+  position: relative;
+}
+
+.information-button {
+  position: absolute;
+  right: 34px;
+  top: 29px;
 }

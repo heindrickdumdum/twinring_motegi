@@ -118,6 +118,55 @@ accordionData = [
     ]
 %>
 
+<%
+  recommend = [
+    {
+      'image': mix('/assets/images/top/how-to/img1.jpg'),
+      'heading': '巨大ネットの森SUMIKA',
+      'buttonLink': '#',
+    },
+    {
+      'image': mix('/assets/images/top/how-to/img2.jpg'),
+      'heading': '森感覚アスレチックDOKIDOKI',
+      'buttonLink': '#',
+    },
+    {
+      'image': mix('/assets/images/top/how-to/img3.jpg'),
+      'heading': '迷宮森殿ITADAKI',
+      'buttonLink': '#',
+    }
+  ]
+%>
+
+<%
+  pickup = [
+    {
+      'image': mix('/assets/images/dokidoki/feature/img1.png'),
+      'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+      },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img2.png'),
+      'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img3.png'),
+      'heading': 'モトレーサー タイムアタック選手権2019予選',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img4.png'),
+      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    }
+  ]
+%>
+
 <%- include('./../partials/head', { title }) -%>
 
 <div class="mv-dokidoki">
@@ -297,13 +346,15 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
 
 <section class="how-to-enjoy">
   <div class="l-container">
-    <%- include('/partials/heading', {
-      'modifier': 'heading-dokidoki',
-      'texts': mix('/assets/images/dokidoki/how-to-enjoy.png'),
-      'alt': 'DOKIDOKIを楽しむポイント',
-      'subtexts': 'enjoy-dokidoki',
-      'altSubtexts': '',
-    }) %>
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-dokidoki',
+        'texts': mix('/assets/images/dokidoki/how-to-enjoy.png'),
+        'alt': 'DOKIDOKIを楽しむポイント',
+        'subtexts': 'enjoy-dokidoki',
+        'altSubtexts': '',
+      }) %>
+    </div>
 
     <div class="how-to-content">
       <div class="media u-clear">
@@ -385,18 +436,14 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
 
 <section class="forest">
   <div class="l-container">
-    <div class="heading-wrap heading-dokidoki">
-      <h2 class="heading">
-        <span class="heading-texts">
-          <img src="<%- mix('/assets/images/dokidoki/ways-to-feel.png') %>" alt="title">
-        </span>
-        <span class="heading-subtexts">
-          <svg>
-            <title>Dokidoki</title>
-            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-dokidoki-forest') %>"></use>
-          </svg>
-        </span>
-      </h2>
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-dokidoki',
+        'texts': mix('/assets/images/dokidoki/ways-to-feel.png'),
+        'alt': 'dokidoki forest',
+        'subtexts': 'dokidoki-forest',
+        'altSubtexts': '',
+      }) %>
     </div>
   </div>
     
@@ -506,13 +553,15 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
 <section class="dokidoki-faq">
   <div class="l-container">
     <div class="dokidoki-faq-inner">
-      <%- include('/partials/heading', {
-        'modifier': 'heading-sumika-faq',
-        'texts': mix('/assets/images/dokidoki/faq-title.png'),
-        'alt': 'faq',
-        'subtexts': 'faq-subtext',
-        'altSubtexts': '',
-      }) %>
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-sumika-faq',
+          'texts': mix('/assets/images/dokidoki/faq-title.png'),
+          'alt': 'faq',
+          'subtexts': 'faq-subtext',
+          'altSubtexts': '',
+        }) %>
+      </div>
 
       <% accordionData.forEach(data => { %>
 
@@ -580,40 +629,67 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
   </div>
 </section>
 
-<div class="license">
-  <div class="l-license">
-    <div class="banner-container">
-      <img src="<%= mix('https://via.placeholder.com/1020x210') %>" alt="license banner">
+<div class="dokidoki-cta-bottom">
+  <div class="l-container">
+    <div class="dokidoki-cta-bottom-inner">
+      <img src="<%= mix('https://via.placeholder.com/1020x210') %>">
     </div>
   </div>
 </div>
 
-<section class="recommendation">
-  <div class="l-recommendation">
+<section class="dokidoki-recommendation">
+  <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-wrap-how-to heading-wrap-center',
+      'modifier': 'heading-net-dokidoki',
       'texts': mix('/assets/images/dokidoki/recommendation.png'),
       'alt': 'recommendation',
-      'subtexts': 'recommendation-subtext',
       'altSubtexts': '',
+      'subtexts': 'recommendation-subtext'
     }) %>
-
-    <div class="l-container">
-      <ul class="feature-list feature-list-no-design">
-        <%
-          howToContent.forEach(item => {
-        %>
-        <li class="feature-item">
-          <%- include('/partials/article-no-design', {
-            'image': item.image,
-            'heading': item.heading,
-            'buttonLink': item.buttonLink
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
+  </div>
+  
+  <div class="l-container">
+    <ul class="feature-list feature-list-no-design">
+      <% recommend.forEach(item => { %>
+      <li class="feature-item">
+        <%- include('/partials/article-no-design', {
+          'image': item.image,
+          'heading': item.heading,
+          'buttonLink': item.buttonLink,
+          'buttonText': 'モビパーク'
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
   </div>
 </section>
+
+<section class="dokidoki-pick-up">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-net-dokidoki',
+      'texts': mix('/assets/images/dokidoki/pickup.png'),
+      'alt': 'recommendation',
+      'altSubtexts': '',
+      'subtexts': 'pickup'
+    }) %>
+  </div>
+  <div class="l-container">
+    <ul class="feature-list">
+      <% pickup.forEach(item => { %>
+      <li class="feature-item">
+        <%- include('/partials/article', {
+          'category': item.category,
+          'image': item.image,
+          'heading': item.heading,
+          'date': item.date,
+          'link': item.link
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
+<!-- END BOTTOM -->
 
 <%- include('./../partials/footer') -%>

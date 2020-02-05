@@ -1,20 +1,28 @@
+<%
+howToContent = [
+{
+  'image': mix('/assets/images/car-and-bike/category-car.png'),
+  'heading': '0歳〜6歳のお子様とのお楽しみ方',
+  'buttonText': '',
+  'buttonLink': '',
+},
+{
+  'image': mix('/assets/images/car-and-bike/category-bike.png'),
+  'heading': '小学校低学年のお子様とのお楽しみ方',
+  'buttonText': '',
+  'buttonLink': '',
+},
+{
+  'image': mix('/assets/images/car-and-bike/category-workshop.png'),
+  'heading': '小学校高学年のお子様とのお楽しみ方',
+  'buttonText': '',
+  'buttonLink': '',
+},
+]
+%>
 <%- include('/partials/head', { title }) -%>
 
-<div class="mv">
-  <div class="mv-buttons">
-    <ul class="mv-buttons-list">
-      <li class="mv-buttons-item">
-        <a class="mv-buttons-link" href="#">
-          <span>料金<br>・チケット</span>
-        </a>
-      </li>
-      <li class="mv-buttons-item">
-        <a class="mv-buttons-link" href="#">
-          <span>アクセス</span>
-        </a>
-      </li>
-    </ul>
-  </div>
+<div class="mv-car-and-bike">
   <ul class="mv-list">
     <li class="mv-item">
       <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.png') %>);"></div>
@@ -24,32 +32,126 @@
   <div class="l-container mv-container">
     <h2 class="mv-heading">
       <span class="mv-heading-texts">
-        <img src="<%= mix('/assets/images/mv-twinring-motegi.png') %>" alt="Twinring Motegi">
+        <svg>
+          <title>Car</title>
+          <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mv-text') %>"></use>
+        </svg>
       </span>
       <span class="mv-heading-subtexts">
-        <img src="<%= mix('/assets/images/mv-heading.svg') %>" alt="家族にちょうどいい冒険を">
+        森感覚アスレチックCar
       </span>
     </h2>
 
-    <div class="mv-today">
-      <div class="mv-today-inner">
-        <img class="mv-today-texts" src="<%= mix('/assets/images/mv-today-texts.png') %>" alt="">
-        <span class="mv-today-time">10:00-17:00</span>
-        <span class="mv-today-degree">
-          <i class="mv-today-degree-icon">
-            <svg>
-              <title>Sun</title>
-              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-sun') %>"></use>
-            </svg>
-          </i>
-          <span class="mv-today-celcius-value">28</span>
-          <span class="mv-today-celcius">&#176;c</span>
-        </span>
+    <div class="mv-today mv-logo">
+      <div class="mv-l-inner">
       </div>
     </div>
   </div>
 </div>
 
+<section class="how-to-enjoy">
+  <div class="l-container">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-dokidoki',
+        'texts': mix('/assets/images/car-and-bike/how-to-enjoy.png'),
+        'alt': '',
+        'subtexts': '',
+        'altSubtexts': '',
+      }) %>
+    </div>
 
+    <div class="how-to-content">
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <h4 class="media-title">
+            <span>のりもののアトラクション</span><br>
+            <span>でも「森」をイメージ</span>
+          </h4>
+          <p class="media-desc">
+            森をイメージしているアトラクションは、SUMIKA・DOKIDOKI・ITADAKIだけではありません。車やバイクののりもののアトラクションでも森をイメージしています。森のやさしく、あたたかい雰囲気のながで楽しくのびのび遊べます。
+          </p>
+
+        </div>
+      </div>
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <h4 class="media-title">
+            <span>3歳からひとりで運転できる</span><br>
+            <span>操る喜びを実感できるアトラクション</span>
+          </h4>
+          <p class="media-desc">
+            ツインリンクもてぎには、3歳のお子様でもひとりで運転できるようなアトラクションがたくさんあります。<br>
+お子様にとってはこれまで体験したことがない、はじめての「操る喜び」を実感できます。
+          </p>
+      
+        </div>
+      </div>
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <h4 class="media-title">
+            <span>何度でも挑戦したくなるしくみや仕掛け</span>
+          </h4>
+          <p class="media-desc">
+            いくつかのアトラクションには、点数や走行タイム、順位でランクがつく仕掛けを用意しています。ランクアップを目指して何度も遊びたくたくなるのが、ツインリンクもてぎのアトラクションの魅力です。
+アトラクションが終わった後には、自分の写真入りのライセンスカードをつくることができます。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="attaction-category l-how-to l-container">
+  <section class="how-to">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-wrap-how-to heading-wrap-center',
+      'texts': mix('/assets/images/car-and-bike/attraction-category.png'),
+      'alt': 'How to Enjoy',
+      'subtexts': 'car-and-bike-attraction-categories',
+      'altSubtexts': '',
+    }) %>
+
+    <ul class="feature-list feature-list-no-design">
+      <%
+        howToContent.forEach(item => {
+      %>
+      <li class="feature-item">
+        <article class="article article-no-design">
+          <div class="article-image-wrap">
+            <div class="article-image"
+                 style="background-image: url(<% if(item.image != '') { %>
+                   <%- item.image %>
+                   <% } else { %><%= mix('/assets/images/noimage.jpg') %>
+                   <% } %>)"></div>
+          </div>
+        </article>
+      </li>
+      <% }) %>
+    </ul>
+  </section>
+</div>
 
 <%- include('/partials/footer') -%>

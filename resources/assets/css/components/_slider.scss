@@ -2,6 +2,10 @@
 
 .slider-wrapper {
   margin-left: 102px;
+
+  @include query($breakpoint-mobile){
+      margin-left: 0;
+  }
 }
 
 // .slider-item {}

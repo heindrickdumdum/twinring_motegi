@@ -169,12 +169,20 @@ accordionData = [
 
 <%- include('/partials/head', { title }) -%>
 
-<div class="mv-acro-x">
+<div class="mv-forest-driving">
   <ul class="mv-list">
     <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/acro-x/mv-img.png') %>);"></div>
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.png') %>);"></div>
     </li>
   </ul>
+
+  <div class="l-container mv-container">
+    <h2 class="mv-heading">
+      <span class="mv-heading-text">
+        森の教習所
+      </span>
+    </h2>
+  </div>
 </div>
 
 <section class="main-content">
@@ -187,11 +195,11 @@ accordionData = [
       </h2>
     </div>
 
-    <!-- YOUTUBE -->
-    <div class="l-youtube">
-      <section class="youtube">
-        <div class="youtube-iframe-container">
-          <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- BANNER -->
+    <div class="l-banner">
+      <section class="banner">
+        <div class="banner-container">
+          <img src="<%= mix('/assets/images/forest-driving/banner.jpg') %>" alt="forest forest-driving">
         </div>
       </section>
     </div>
@@ -201,7 +209,8 @@ accordionData = [
     </h3>
 
     <p class="attraction-subtext">
-      凸凹道、坂道、水の中など、どんな道も走行できるハイパワーマシンをみんなで協力しながら運転して100点満点を目指そう！
+      信号や横断歩道、道路標識や踏み切りなど森の市街地の中で交通ルールを学びながら優秀運転免許証を
+取得しよう。
     </p>
 
     <table class="table">
@@ -225,7 +234,7 @@ accordionData = [
 
         <tr class="table-row">
           <th class="table-head">対象者</th>
-          <td class="table-col">2歳以上※1
+          <td class="table-col">0歳以上でひとり座りできる方※
           </td>
         </tr>
 
@@ -237,16 +246,16 @@ accordionData = [
         <tr class="table-row">
           <th class="table-head">料金</th>
           <td class="table-col">
-            モビパークパスポート対象<br>
-アトラクションチケット利用：500円
+            モビパークパスポート対象 <br>
+アトラクションチケット利用：400円
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
-            ※1 2歳から小学校2年生までの方：<br>
-2歳から小学校2年生までのお子さまは、中学生以上の付き添いで乗車が可能です。小学校3年生以上のお子さまから、お一人で運転していただけます。
+            5歳未満のお子様について：<br>
+5歳未満のお子さまは中学生以上の同伴者の付添いが必要になります。
           </td>
         </tr>
 
@@ -277,9 +286,13 @@ accordionData = [
           </div>
         </div>
         <div class="media-right">
-          <h4 class="media-title"><span>ハイパワーマシンを操って障害物コースを走破！</span></h4>
+          <h4 class="media-title">
+            <span>運転しながら交通ルールを学ぼう！</span>
+          </h4>
           <p class="media-desc">
-            凸凹道や坂道、水の中など全９種類の障害物をハンドル操作とア<br>クセル、ブレーキで上手に走破しよう！
+            子どもが一人で運転できる教習車で挑戦。<br>
+信号や横断歩道、踏み切りなどが <br>
+再現された森の教習所で交通ルールを学ぼう！
           </p>
         </div>
       </div>
@@ -294,12 +307,13 @@ accordionData = [
         <div class="media-right">
           <h4 class="media-title">
             <span>
-              運転テクニックを磨いて高得点を目指せ！
+              交通ルールを守ってプラチナ免許をゲット！
             </span>
           </h4>
           <p class="media-desc">
-            障害物をクリアするたびに得点がアップ。スタートからゴ<br>
-            ールまで正確に運転して100点満点を目指そう！
+            交通ルールを守って走行できると得点がアップ。<br>
+90点以上はゴールド免許、 <br>
+100点満点ならプラチナ免許がゲットできるよ！
           </p>
       
           <div class="media-bottom">
@@ -312,24 +326,6 @@ accordionData = [
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="media u-clear">
-        <div class="media-left">
-          <div class="media-bg">
-            <div class="media-thumb">
-              <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
-            </div>
-          </div>
-        </div>
-        <div class="media-right">
-          <h4 class="media-title">
-            気分は探検隊！家族を乗せてみんなで出発
-          </h4>
-          <p class="media-desc">
-            子どもの気分は探検隊のリーダー。家族みんなでワクワク、<br>
-            ドキドキのドライブに出発しよう！
-          </p>
         </div>
       </div>
 
@@ -352,8 +348,8 @@ accordionData = [
         }) %>
         <div class="acro-x-cta-description">
           <p class="acro-x-cta-description-text">
-            アクロエックスのこだわりポイントや、知っているともっ <br>
-            と楽しくなる情報を配信中しています。
+            森の教習所のこだわりポイントや、<br>
+知っているともっと楽しくなる情報を配信中しています。
           </p>
         </div>
         <div class="l-button">

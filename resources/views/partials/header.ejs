@@ -1,27 +1,27 @@
 <%
   topNav = [
     {
-      texts: 'もてぎの楽しみ方',
+      text: 'もてぎの楽しみ方',
       link: '#',
     },
     {
-      texts: 'ニュース・イベント',
+      text: 'ニュース・イベント',
       link: '#',
     },
     {
-      texts: '営業時間',
+      text: '営業時間',
       link: '#',
     },
     {
-      texts: '料金・チケット',
+      text: '料金・チケット',
       link: '#',
     },
     {
-      texts: 'よくあるご質問',
+      text: 'よくあるご質問',
       link: '#',
     },
     {
-      texts: 'アクセス',
+      text: 'アクセス',
       link: '#',
     }
   ]
@@ -30,37 +30,37 @@
   bottomNav = [
     {
       modifier: 'header-bottom-item-location',
-      texts: 'エリア・施設',
-      link: '#',
+      text: 'エリア・施設',
+      link: '#header-sub-access',
       icon: 'location'
     },
     {
       modifier: 'header-bottom-item-activity',
-      texts: 'アトラクション・<br>アクティビティ',
-      link: '#',
+      text: 'アトラクション・<br>アクティビティ',
+      link: '#header-sub-attraction',
       icon: 'activity'
     },
     {
       modifier: 'header-bottom-item-motorsports',
-      texts: 'モーター<br>スポーツ',
-      link: '#',
+      text: 'モーター<br>スポーツ',
+      link: '#header-sub-motorsports',
       icon: 'motorsports'
     },
     {
       modifier: 'header-bottom-item-camp',
-      texts: 'ホテル・<br>キャンプ',
+      text: 'ホテル・<br>キャンプ',
       link: '#',
       icon: 'camp'
     },
     {
       modifier: 'header-bottom-item-restaurant',
-      texts: 'レストラン',
+      text: 'レストラン',
       link: '#',
       icon: 'restaurant'
     },
     {
       modifier: 'header-bottom-item-shop',
-      texts: 'グッズ＆<br>ショップ',
+      text: 'グッズ＆<br>ショップ',
       link: '#',
       icon: 'shop'
     }
@@ -70,7 +70,7 @@
 
 <div class="l-header">
   <div class="l-container">
-    <header class="header">
+    <header>
       <div class="l-header-top">
         <h1 class="l-header-top-logo">
           <a class="header-logo" href="/">
@@ -86,7 +86,7 @@
             </li>
             <li class="header-top-others-item">
               <a class="header-top-others-link" href="#">
-                <span class="header-top-others-lang-texts">LANGUAGE
+                <span class="header-top-others-lang-text">LANGUAGE
                   <i class="header-top-others-lang-icon">
                     <svg>
                       <title>arrow-down</title>
@@ -102,7 +102,7 @@
               topNav.forEach( topNavItem => {
             %>
             <li class="header-top-nav-item">
-              <a class="header-top-nav-link" href="<%- topNavItem.link %>"><%- topNavItem.texts %></a>
+              <a class="header-top-nav-link" href="<%- topNavItem.link %>"><%- topNavItem.text %></a>
             </li>
             <% }) %>
           </nav>
@@ -116,13 +116,12 @@
               bottomNav.forEach( bottomNavItem => {
             %>
             <li class="header-bottom-item<%- ' '+bottomNavItem.modifier %>">
-              <a class="header-bottom-link" href="<%- bottomNavItem.link %>">
-                <span class="header-bottom-link-texts"><%- bottomNavItem.texts %></span>
+              <a class="header-bottom-link js-header-button" href="<%- bottomNavItem.link %>">
+                <span class="header-bottom-link-text"><%- bottomNavItem.text %></span>
                 <i class="header-bottom-icon">
-                  <svg>
-                    <title><%- bottomNavItem.icon %></title>
-                    <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-'+bottomNavItem.icon) %>"></use>
-                  </svg>
+                  <%- include('/partials/svg', {
+                    'name': bottomNavItem.icon
+                  }) %>
                 </i>
               </a>
             </li>
@@ -131,5 +130,15 @@
         </nav>
       </div>
     </header>
+  </div>
+
+  <div class="header-sub-content-wrap" id="js-header-sub">
+    <div class="header-sub-content">
+      <span class="header-sub-close" id="js-header-close">閉じる</span>
+
+      <%- include('/partials/header-content-attraction') %>
+      <%- include('/partials/header-content-access') %>
+      <%- include('/partials/header-content-motorsports') %>
+    </div>
   </div>
 </div>

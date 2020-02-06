@@ -219,7 +219,13 @@
             <%
               for(x=1; x <= 7; x++) {
             %>
-            <li class="parkmap-image-item"></li>
+            <%
+              parkmapButtons.forEach( button => {
+            %>
+            <li class="parkmap-image-item js-parkmap-number">
+              <a href="<%- button.link %>"></a>
+            </li>
+            <% }) %>
             <% } %>
           </ul>
         </div>
@@ -228,7 +234,7 @@
             <%
               parkmapButtons.forEach( button => {
             %>
-            <li class="parkmap-item">
+            <li class="parkmap-item js-parkmap-button">
               <a class="parkmap-link" href="<%- button.link %>"><%- button.text %>
                 <i class="parkmap-link-icon">
                   <%- include('/partials/svg', {

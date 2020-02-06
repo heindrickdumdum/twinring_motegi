@@ -1,0 +1,362 @@
+<%
+  var title = 'Twin Ring Motegi | おさんぽでんでん'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+%>
+
+<%
+  recommend = [
+    {
+      'image': mix('/assets/images/forest-driving/recommendation-img1.jpg'),
+      'heading': '巨大ネットの森SUMIKA',
+      'buttonLink': '#',
+    },
+    {
+      'image': mix('/assets/images/forest-driving/recommendation-img2.jpg'),
+      'heading': '森感覚アスレチックDOKIDOKI',
+      'buttonLink': '#',
+    },
+    {
+      'image': mix('/assets/images/forest-driving/recommendation-img3.jpg'),
+      'heading': '迷宮森殿ITADAKI',
+      'buttonLink': '#',
+    }
+  ]
+%>
+
+<%
+  pickup = [
+    {
+      'image': mix('/assets/images/dokidoki/feature/img1.png'),
+      'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+      },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img2.png'),
+      'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img3.png'),
+      'heading': 'モトレーサー タイムアタック選手権2019予選',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img4.png'),
+      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    }
+  ]
+%>
+
+<%- include('/partials/head', { title }) -%>
+
+<div class="mv-deb-den">
+  <ul class="mv-list">
+    <li class="mv-item">
+      <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.png') %>);"></div>
+
+      <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/forest-driving/mobile-mv-img.png') %>);"></div>
+    </li>
+  </ul>
+
+  <div class="l-container mv-container">
+    <h2 class="mv-heading">
+      <span class="mv-heading-text">
+        <!--おさんぽでんでん-->
+      </span>
+    </h2>
+  </div>
+
+</div>
+
+<section class="main-content">
+  <div class="l-container">
+    <div class="l-section-title">
+      <div class="heading-wrap heading-deb-den">
+        <h2 class="heading">
+          <span class="heading-texts u-show-pc">
+            <img src="<%= mix('/assets/images/forest-driving/forest-driving-title.png') %>" alt="forest-driving">
+          </span>
+          <span class="heading-texts u-show-sp">
+            <img src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
+          </span>
+        </h2>
+      </div>
+    </div>
+
+    <!-- BANNER -->
+    <div class="l-banner">
+      <section class="banner">
+        <div class="banner-container">
+          <img class="u-show-pc" src="<%= mix('/assets/images/forest-driving/banner.jpg') %>" alt="forest forest-driving">
+
+          <img class="u-show-sp" src="<%= mix('/assets/images/forest-driving/sp-banner.jpg') %>" alt="forest-driving">
+        </div>
+      </section>
+    </div>
+
+    <h3 class="attraction-title">
+      <img src="<%- mix('/assets/images/forest-driving/attraction-title.png') %>" alt="forest-driving">
+    </h3>
+
+    <p class="attraction-subtext">
+      かたつむりに乗って葉っぱの上をのんびりお散歩。親子で一緒に乗ることができるのりものです。3歳からはひとりで運転できます。
+    </p>
+
+    <table class="table">
+      <tbody>
+        <tr class="table-row">
+          <th class="table-head">場所</th>
+          <td class="table-col">モビパーク内</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">所要時間</th>
+          <td class="table-col">約2分
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">雨天の運行</th>
+          <td class="table-col">雨天でも営業いたしております。
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">対象者</th>
+          <td class="table-col">0歳以上でひとり座りできる方※1
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">身長制限</th>
+          <td class="table-col">なし</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">料金</th>
+          <td class="table-col">
+            モビパークパスポート対象 <br>
+アトラクションチケット利用：200円
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">ご利用にあたって</th>
+          <td class="table-col">
+            ※1 0歳から2歳までの方：<br>
+0歳から2歳までのお子さまは中学生以上の同伴者の付添いが必要になります。
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="how-to-enjoy">
+  <div class="l-container">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-forest-driving',
+        'text': mix('/assets/images/how-to-enjoy.png'),
+        'alt': 'おさんぽでんでんを楽しむポイント',
+        'subtextvg': 'deb-den-subtext',
+        'altSubtext': '',
+      }) %>
+    </div>
+
+    <div class="how-to-content">
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb u-show-pc">
+              <div style="background-image: url(<%= mix('/assets/images/forest-driving/enjoy-img1.png') %>);"></div>
+            </div>
+
+            <div class="media-thumb u-show-sp">
+              <div style="background-image: url(<%= mix('/assets/images/forest-driving/sp-enjoy-img1.png') %>);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <h4 class="media-title">
+            <span>3歳から一人で運転！</span>
+          </h4>
+          <p class="media-desc">
+            3歳から一人で自由にアクセルとハンドルを操作。0歳から親子で一緒に乗れる、乗り物デビューにぴったりのアトラクション！
+          </p>
+        </div>
+      </div>
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb u-show-pc">
+              <div style="background-image: url(<%= mix('/assets/images/forest-driving/enjoy-img2.png') %>);"></div>
+            </div>
+
+            <div class="media-thumb u-show-sp">
+              <div style="background-image: url(<%= mix('/assets/images/forest-driving/sp-enjoy-img2.png') %>);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <h4 class="media-title">
+            <div class="u-show-pc">
+              <span>
+                でんでん虫になった気分でのんびりお散歩！
+              </span>
+            </div>
+
+            <div class="u-show-sp">
+              <span>でんでん虫になった気分でのんびりお散歩！</span>
+            </div>
+
+            
+          </h4>
+          <p class="media-desc">
+            大きな葉っぱの上がでんでん虫のコース。森と空を眺めながら、でんでん虫になった気分でお散歩しよう！
+          </p>
+      
+          <div class="media-bottom">
+            <div class="media-note">
+              <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+              <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+              <div class="media-note-text">
+                100点取れたら… <br>
+                交通ルールを守れタネ！
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM -->
+
+<section class="deb-den-cta">
+  <div class="l-container">
+    <div class="deb-den-cta-wrapper">
+      <div class="deb-den-cta-inner">
+        <div class="l-section-title u-show-pc">
+          <%- include('/partials/heading', {
+            'modifier': 'heading-net-deb-den',
+            'text': mix('/assets/images/forest-driving/forest-driving-cta.png'),
+            'alt': 'アクロエックスをもっと楽しむ',
+            'altSubtext': '',
+            'subtextvg': ''
+          }) %>
+        </div>
+
+        <div class="l-section-title u-show-sp">
+          <%- include('/partials/heading', {
+            'modifier': 'heading-net-deb-den',
+            'text': mix('/assets/images/forest-driving/sp-forest-driving-cta.png'),
+            'alt': 'アクロエックスをもっと楽しむ',
+            'altSubtext': '',
+            'subtextvg': ''
+          }) %>
+        </div>
+        
+
+        <div class="deb-den-cta-description">
+          <p class="deb-den-cta-description-text">
+            おさんぽでんでんのこだわりポイントや、知っているとも<br>っと楽しくなる情報を配信中しています。
+          </p>
+        </div>
+        <div class="l-button">
+          <%- include('/partials/button', {
+            'modifier': 'button-deb-den',
+            'text': 'もっと見る',
+            'link': '#'
+          }) %>
+        </div>
+        <span class="deb-den-cta-dot deb-den-cta-dot-1">
+          <img src="<%- mix('/assets/images/forest-driving/cta-img1.png')%> ">
+        </span>
+        <span class="deb-den-cta-dot deb-den-cta-dot-2">
+          <img src="<%- mix('/assets/images/forest-driving/cta-img2.png')%> ">
+        </span>
+        <span class="deb-den-cta-dot deb-den-cta-dot-3">
+          <img src="<%- mix('/assets/images/forest-driving/cta-img4.png')%> ">
+        </span>
+        <span class="deb-den-cta-dot deb-den-cta-dot-4">
+          <img src="<%- mix('/assets/images/forest-driving/cta-img3.png')%> ">
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="deb-den-cta-bottom">
+  <div class="l-container">
+    <div class="deb-den-cta-bottom-inner">
+      <img src="<%= mix('/assets/images/forest-driving/cta-bottom.jpg') %>">
+    </div>
+  </div>
+</div>
+
+<section class="deb-den-recommendation">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-net-deb-den',
+      'text': mix('/assets/images/recommendation.png'),
+      'alt': 'recommendation',
+      'altSubtext': '',
+      'subtextvg': 'recommendation-subtext'
+    }) %>
+  </div>
+
+  <div class="l-container">
+    <ul class="feature-list feature-list-no-design">
+      <% recommend.forEach(item => { %>
+      <li class="feature-item">
+        <%- include('/partials/article-no-design', {
+          'image': item.image,
+          'heading': item.heading,
+          'buttonLink': item.buttonLink,
+          'buttonText': 'モビパーク'
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
+
+<section class="deb-den-pick-up">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-net-deb-den',
+      'text': mix('/assets/images/pickup.png'),
+      'alt': 'pickup',
+      'altSubtext': '',
+      'subtextvg': 'pickup'
+    }) %>
+  </div>
+
+  <div class="l-container">
+    <ul class="feature-list">
+      <% pickup.forEach(item => { %>
+      <li class="feature-item">
+        <%- include('/partials/article', {
+          'category': item.category,
+          'image': item.image,
+          'heading': item.heading,
+          'date': item.date,
+          'link': item.link
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
+<!-- END BOTTOM -->
+
+<%- include('/partials/footer') -%>

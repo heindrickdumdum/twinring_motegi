@@ -1,0 +1,51 @@
+.attractions-list {
+  section {
+    margin-bottom: 80px;
+  }
+
+  .heading-wrap {
+    margin-bottom: 80px;
+
+    .heading-text {
+      width: auto;
+      max-width: 400px;
+    }
+  }
+  
+  .feature-list {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+
+    .feature-item {
+      width: calc(100% / 2);
+      max-width: 480px;
+
+      article {
+        padding-bottom: 80px;
+      }
+    }
+  }
+
+  .article-image-wrap {
+    position: relative;
+
+    .image-tag {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 15px;
+      color: $color-white;
+    }
+  }
+
+  .item-name {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 17px 0;
+    text-align: left;
+  }
+
+
+}

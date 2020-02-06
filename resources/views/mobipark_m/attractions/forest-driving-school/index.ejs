@@ -172,7 +172,9 @@ accordionData = [
 <div class="mv-forest-driving">
   <ul class="mv-list">
     <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.png') %>);"></div>
+      <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.png') %>);"></div>
+
+      <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/forest-driving/mobile-mv-img.png') %>);"></div>
     </li>
   </ul>
 
@@ -183,30 +185,37 @@ accordionData = [
       </span>
     </h2>
   </div>
-  
+
 </div>
 
 <section class="main-content">
   <div class="l-container">
-    <div class="heading-wrap heading-acro-x">
-      <h2 class="heading">
-        <span class="heading-texts">
-          <img src="<%= mix('/assets/images/acro-x/acro-x-title.png') %>" alt="acro-x">
-        </span>
-      </h2>
+    <div class="l-section-title">
+      <div class="heading-wrap heading-forest-driving">
+        <h2 class="heading">
+          <span class="heading-texts u-show-pc">
+            <img src="<%= mix('/assets/images/forest-driving/forest-driving-title.png') %>" alt="forest-driving">
+          </span>
+          <span class="heading-texts u-show-sp">
+            <img src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
+          </span>
+        </h2>
+      </div>
     </div>
 
     <!-- BANNER -->
     <div class="l-banner">
       <section class="banner">
         <div class="banner-container">
-          <img src="<%= mix('/assets/images/forest-driving/banner.jpg') %>" alt="forest forest-driving">
+          <img class="u-show-pc" src="<%= mix('/assets/images/forest-driving/banner.jpg') %>" alt="forest forest-driving">
+
+          <img class="u-show-sp" src="<%= mix('/assets/images/forest-driving/sp-banner.jpg') %>" alt="forest-driving">
         </div>
       </section>
     </div>
 
     <h3 class="attraction-title">
-      <img src="<%- mix('/assets/images/acro-x/attraction-title.png') %>" alt="acro-x">
+      <img src="<%- mix('/assets/images/forest-driving/attraction-title.png') %>" alt="forest-driving">
     </h3>
 
     <p class="attraction-subtext">
@@ -270,7 +279,7 @@ accordionData = [
     <div class="l-section-title">
       <%- include('/partials/heading', {
         'modifier': 'heading-forest-driving',
-        'text': mix('/assets/images/acro-x/how-to-enjoy.png'),
+        'text': mix('/assets/images/forest-driving/how-to-enjoy.png'),
         'alt': 'アクロエックスを楽しむポイント',
         'subtextvg': 'forest-enjoy-subtext',
         'altSubtext': '',
@@ -281,8 +290,12 @@ accordionData = [
       <div class="media u-clear">
         <div class="media-left">
           <div class="media-bg">
-            <div class="media-thumb">
+            <div class="media-thumb u-show-pc">
               <div style="background-image: url(<%= mix('/assets/images/forest-driving/enjoy-img1.png') %>);"></div>
+            </div>
+
+            <div class="media-thumb u-show-sp">
+              <div style="background-image: url(<%= mix('/assets/images/forest-driving/sp-enjoy-img1.png') %>);"></div>
             </div>
           </div>
         </div>
@@ -300,16 +313,29 @@ accordionData = [
       <div class="media u-clear">
         <div class="media-left">
           <div class="media-bg">
-            <div class="media-thumb">
+            <div class="media-thumb u-show-pc">
               <div style="background-image: url(<%= mix('/assets/images/forest-driving/enjoy-img2.png') %>);"></div>
+            </div>
+
+            <div class="media-thumb u-show-sp">
+              <div style="background-image: url(<%= mix('/assets/images/forest-driving/sp-enjoy-img2.png') %>);"></div>
             </div>
           </div>
         </div>
         <div class="media-right">
           <h4 class="media-title">
-            <span>
-              交通ルールを守ってプラチナ免許をゲット！
-            </span>
+            <div class="u-show-pc">
+              <span>
+                交通ルールを守ってプラチナ免許をゲット！
+              </span>
+            </div>
+
+            <div class="u-show-sp">
+              <span>交通ルールを守ってプラチナ免許を</span>
+              <span>ゲット！</span>
+            </div>
+
+            
           </h4>
           <p class="media-desc">
             交通ルールを守って走行できると得点がアップ。<br>
@@ -322,8 +348,8 @@ accordionData = [
               <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
               <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
               <div class="media-note-text">
-                どんな道でも <br>
-                上手に乗りこなせタネ！
+                100点取れたら… <br>
+                交通ルールを守れタネ！
               </div>
             </div>
           </div>
@@ -336,40 +362,43 @@ accordionData = [
 
 <!-- BOTTOM -->
 
-<section class="acro-x-cta">
+<section class="forest-driving-cta">
   <div class="l-container">
-    <div class="acro-x-cta-wrapper">
-      <div class="acro-x-cta-inner">
-        <%- include('/partials/heading', {
-          'modifier': 'heading-net-acro-x',
-          'text': mix('/assets/images/acro-x/acro-x-cta.png'),
-          'alt': 'アクロエックスをもっと楽しむ',
-          'altSubtext': '',
-          'subtextvg': ''
-        }) %>
-        <div class="acro-x-cta-description">
-          <p class="acro-x-cta-description-text">
+    <div class="forest-driving-cta-wrapper">
+      <div class="forest-driving-cta-inner">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            'modifier': 'heading-net-forest-driving',
+            'text': mix('/assets/images/forest-driving/forest-driving-cta.png'),
+            'alt': 'アクロエックスをもっと楽しむ',
+            'altSubtext': '',
+            'subtextvg': ''
+          }) %>
+        </div>
+
+        <div class="forest-driving-cta-description">
+          <p class="forest-driving-cta-description-text">
             森の教習所のこだわりポイントや、<br>
 知っているともっと楽しくなる情報を配信中しています。
           </p>
         </div>
         <div class="l-button">
           <%- include('/partials/button', {
-            'modifier': 'button-acro-x',
+            'modifier': 'button-forest-driving',
             'text': 'もっと見る',
             'link': '#'
           }) %>
         </div>
-        <span class="acro-x-cta-dot acro-x-cta-dot-1">
+        <span class="forest-driving-cta-dot forest-driving-cta-dot-1">
           <img src="<%- mix('/assets/images/forest-driving/cta-img1.png')%> ">
         </span>
-        <span class="acro-x-cta-dot acro-x-cta-dot-2">
+        <span class="forest-driving-cta-dot forest-driving-cta-dot-2">
           <img src="<%- mix('/assets/images/forest-driving/cta-img2.png')%> ">
         </span>
-        <span class="acro-x-cta-dot acro-x-cta-dot-3">
+        <span class="forest-driving-cta-dot forest-driving-cta-dot-3">
           <img src="<%- mix('/assets/images/forest-driving/cta-img4.png')%> ">
         </span>
-        <span class="acro-x-cta-dot acro-x-cta-dot-4">
+        <span class="forest-driving-cta-dot forest-driving-cta-dot-4">
           <img src="<%- mix('/assets/images/forest-driving/cta-img3.png')%> ">
         </span>
       </div>
@@ -377,19 +406,19 @@ accordionData = [
   </div>
 </section>
 
-<div class="acro-x-cta-bottom">
+<div class="forest-driving-cta-bottom">
   <div class="l-container">
-    <div class="acro-x-cta-bottom-inner">
-      <img src="<%= mix('/assets/images/acro-x/cta-bottom.jpg') %>">
+    <div class="forest-driving-cta-bottom-inner">
+      <img src="<%= mix('/assets/images/forest-driving/cta-bottom.jpg') %>">
     </div>
   </div>
 </div>
 
-<section class="acro-x-recommendation">
+<section class="forest-driving-recommendation">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-acro-x',
-      'text': mix('/assets/images/acro-x/recommendation.png'),
+      'modifier': 'heading-net-forest-driving',
+      'text': mix('/assets/images/recommendation.png'),
       'alt': 'recommendation',
       'altSubtext': '',
       'subtextvg': 'recommendation-subtext'
@@ -412,11 +441,11 @@ accordionData = [
   </div>
 </section>
 
-<section class="acro-x-pick-up">
+<section class="forest-driving-pick-up">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-acro-x',
-      'text': mix('/assets/images/acro-x/pickup.png'),
+      'modifier': 'heading-net-forest-driving',
+      'text': mix('/assets/images/pickup.png'),
       'alt': 'pickup',
       'altSubtext': '',
       'subtextvg': 'pickup'

@@ -1,10 +1,14 @@
 .mv-forest-driving {
-  position: relative
-  ;
+  position: relative;
+
   .mv-container {
     position: absolute;
     top: 23%;
     left: 45%;
+
+    @include max-screen($breakpoint-mobile) {
+      left: 30%;
+    }
   }
 
   .mv-heading {
@@ -14,5 +18,11 @@
   .mv-heading-text {
     font-size: 34.449px;
     color: $color-white;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 46px;
+      color: $color-white;
+      text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+    }
   }
 }

@@ -1,0 +1,123 @@
+.forest-driving-cta {
+  text-align: center;
+  margin: 110px 0 80px;
+}
+
+.forest-driving-cta-wrapper {
+  padding: 0 100px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 0;
+  }
+}
+
+.heading-net-forest-driving {
+  .heading-text {
+    max-width: 421px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.forest-driving-cta-inner {
+  position: relative;
+  padding: 40px;
+  
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url(#{$image-path}sumika/frame-sm.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    background-image: url(#{$image-path}sumika/green-dots.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 22px;
+    left: 33px;
+    right: 23px;
+    bottom: 39px;
+  }
+
+  .button-forest-driving {
+    position: relative;
+    z-index: $z-min;
+  }
+
+}
+
+.forest-driving-cta-description-text {
+  font-size: 15px;
+  line-height: 1.667;
+  margin-top: 20px;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 24px;
+  }
+}
+
+@include max-screen($breakpoint-mobile) {
+  .forest-driving-cta-dot {
+    display: none;
+  }
+}
+
+.forest-driving-cta-dot {
+  position: absolute;
+}
+
+.forest-driving-cta-dot-1 {
+  left: -40px;
+  bottom: -30px;
+}
+
+.forest-driving-cta-dot-2 {
+  top: -19px;
+  left: 128px;
+}
+
+.forest-driving-cta-dot-3 {
+  bottom: -30px;
+  right: 135px;
+}
+
+.forest-driving-cta-dot-4 {
+  top: -28px;
+  right: -27px;
+}
+
+.forest-driving-cta-bottom {
+  margin: 180px 0;
+  position: relative;
+  text-align: center;
+  z-index: $z-max;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $color-light-gray;
+    top: 99px;
+    left: 0;
+    right: 0;
+    bottom: -126px;
+    z-index: 1;
+  }
+}
+
+.forest-driving-cta-bottom-inner {
+  position: relative;
+  z-index: $z-max;
+
+  img {
+    max-width: 1020px;
+    width: 100%;
+  }
+}

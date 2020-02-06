@@ -5,6 +5,10 @@
     .feature-list {
       align-items: center;
       justify-content: center;
+
+      @include max-screen($breakpoint-mobile) {
+        display: block;
+      }
     }
   }
 
@@ -17,6 +21,11 @@
 
   .feature-item {
     max-width: 300px;
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+      margin: auto;
+    }
   }
 
   article {
@@ -31,6 +40,10 @@
       left: 0;
       bottom: 0;
       margin: auto;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 20px;
     }
   }
   

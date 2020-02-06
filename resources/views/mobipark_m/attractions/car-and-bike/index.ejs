@@ -22,7 +22,7 @@ dataCategory = [
 
 dataCars = [
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/car-1.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'アクロエックス',
     'rowHead': '保護者と',
@@ -32,7 +32,7 @@ dataCars = [
     'imageTagBg': 'bg-green'
   },
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/car-2.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'おさんぽでんでん',
     'rowHead': '保護者と',
@@ -42,7 +42,7 @@ dataCars = [
     'imageTagBg': 'bg-green'
   },
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/car-3.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'ワイルドレーサー',
     'rowHead': '保護者と',
@@ -53,7 +53,7 @@ dataCars = [
 
   },
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/car-4.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': '森の教習所',
     'rowHead': '保護者と',
@@ -64,7 +64,7 @@ dataCars = [
 
   },
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/car-5.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'ドリフトS',
     'rowHead': '一人で',
@@ -74,7 +74,7 @@ dataCars = [
     'imageTagBg': 'bg-green-2'
   },
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/car-6.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'ドリームカート',
     'rowHead': '一人で',
@@ -84,7 +84,7 @@ dataCars = [
     'imageTagBg': 'bg-green-2'
   },
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/car-7.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'チャレンジカート',
     'rowHead': '一人で',
@@ -94,7 +94,7 @@ dataCars = [
     'imageTagBg': 'bg-green-3'
   },
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/car-8.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'アクロエックス',
     'rowHead': '保護者と',
@@ -108,7 +108,7 @@ dataCars = [
 
 dataBike = [
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/bike-1.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'ぶんぶんスクーター',
     'rowHead': '一人で',
@@ -118,7 +118,7 @@ dataBike = [
     'imageTagBg': 'bg-green-4'
   },
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/bike-2.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'モーターサイクルトレーニング',
     'rowHead': '一人で',
@@ -128,7 +128,7 @@ dataBike = [
     'imageTagBg': 'bg-green-4'
   },
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/bike-3.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'モトツーリング',
     'rowHead': '一人で',
@@ -138,7 +138,7 @@ dataBike = [
     'imageTagBg': 'bg-green-4'
   },
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/bike-4.jpg'),
     'imageTag': 'モトレーサー',
     'itemName': 'ぶんぶんスクーター',
     'rowHead': '一人で',
@@ -151,7 +151,7 @@ dataBike = [
 
 dataWorkshop = [
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/workshop-1.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'ピット工房組み立て',
     'rowHead': '一人で',
@@ -161,7 +161,7 @@ dataWorkshop = [
     'imageTagBg': 'bg-green-5'
   },
   {
-    'image': mix('http://via.placeholder.com/480x280'),
+    'image': mix('/assets/images/car-and-bike/workshop-2.jpg'),
     'imageTag': 'モビパークパスポート対象',
     'itemName': 'NANONANOアクセサリー',
     'rowHead': '一人で',
@@ -204,7 +204,8 @@ dataRecommendation = [
   <div class="mv-car-and-bike">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.jpg') %>);"></div>
+        <div class="u-show-pc mv-image" style="background-image:url(<%= mix('http://via.placeholder.com/1440x650') %>);"></div>
+        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/car-and-bike/sp-mv.png') %>);"></div>
       </li>
     </ul>
 
@@ -224,7 +225,7 @@ dataRecommendation = [
         </span>
       </h2>
 
-      <div class="mv-today mv-logo">
+      <div class="u-show-pc mv-today mv-logo">
         <div class="mv-l-inner">
         </div>
       </div>
@@ -236,10 +237,10 @@ dataRecommendation = [
       <div class="l-section-title">
         <%- include('/partials/heading', {
           'modifier': 'heading-dokidoki',
-          'texts': mix('/assets/images/car-and-bike/how-to-enjoy.png'),
+          'text': mix('/assets/images/car-and-bike/how-to-enjoy.png'),
           'alt': '',
-          'subtexts': '',
-          'altSubtexts': '',
+          'subtext': '',
+          'altSubtext': ''
         }) %>
       </div>
 
@@ -248,7 +249,7 @@ dataRecommendation = [
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
-                <div style="background-image: url(<%= mix('http://via.placeholder.com/480x280') %>);"></div>
+                <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-1.png') %>);"></div>
               </div>
             </div>
           </div>
@@ -267,7 +268,7 @@ dataRecommendation = [
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
-                <div style="background-image: url(<%= mix('http://via.placeholder.com/480x280') %>);"></div>
+                <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-2.png') %>);"></div>
               </div>
             </div>
           </div>
@@ -287,7 +288,7 @@ dataRecommendation = [
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
-                <div style="background-image: url(<%= mix('http://via.placeholder.com/480x280') %>);"></div>
+                <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-3.png') %>);"></div>
               </div>
             </div>
           </div>

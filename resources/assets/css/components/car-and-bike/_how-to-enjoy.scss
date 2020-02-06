@@ -1,3 +1,11 @@
 .how-to-enjoy {
   margin-bottom: 80px;
+
+  .heading-text {
+    max-width: 600px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 60px !important;
+  }
 }

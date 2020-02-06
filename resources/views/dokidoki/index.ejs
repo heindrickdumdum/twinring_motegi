@@ -172,7 +172,7 @@ accordionData = [
 <div class="mv-dokidoki">
   <ul class="mv-list">
     <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.png') %>);"></div>
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dokidoki/mv-img.png') %>);"></div>
     </li>
   </ul>
 
@@ -332,10 +332,10 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
     <div class="l-section-title">
       <%- include('/partials/heading', {
         'modifier': 'heading-dokidoki',
-        'texts': mix('/assets/images/dokidoki/how-to-enjoy.png'),
+        'text': mix('/assets/images/dokidoki/how-to-enjoy.png'),
         'alt': 'DOKIDOKIを楽しむポイント',
-        'subtexts': 'enjoy-dokidoki',
-        'altSubtexts': '',
+        'subtextvg': 'enjoy-dokidoki',
+        'altSubtext': '',
       }) %>
     </div>
 
@@ -422,10 +422,10 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
     <div class="l-section-title">
       <%- include('/partials/heading', {
         'modifier': 'heading-dokidoki',
-        'texts': mix('/assets/images/dokidoki/ways-to-feel.png'),
+        'text': mix('/assets/images/dokidoki/ways-to-feel.png'),
         'alt': 'dokidoki forest',
-        'subtexts': 'dokidoki-forest',
-        'altSubtexts': '',
+        'subtextvg': 'dokidoki-forest',
+        'altSubtext': '',
       }) %>
     </div>
   </div>
@@ -466,10 +466,10 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
   <div class="l-section-title l-sumika-video">
     <%- include('/partials/heading', {
       'modifier': 'heading-sumika',
-      'texts': mix('/assets/images/sumika/sumika_videos.png'),
+      'text': mix('/assets/images/sumika/sumika_videos.png'),
       'alt': 'sumika videos',
-      'subtexts': 'video-dokidoki',
-      'altSubtexts': '',
+      'subtextvg': 'video-dokidoki',
+      'altSubtext': '',
     }) %>
   </div>
   <div class="sumika-video-content">
@@ -498,13 +498,15 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
   <div class="dokidoki-wrapper l-container">
     <div class="dokidoki-inner">
       <div class="dokidoki-inner-content">
-        <%- include('/partials/heading', {
-          'modifier': 'heading-net-dokidoki',
-          'texts': mix('/assets/images/dokidoki/insta-title.png'),
-          'alt': '#森感覚アスレチックDOKIDOKI',
-          'altSubtexts': '',
-          'subtexts': ''
-        }) %>
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            'modifier': 'heading-net-dokidoki',
+            'text': mix('/assets/images/dokidoki/insta-title.png'),
+            'alt': '#森感覚アスレチックDOKIDOKI',
+            'altSubtext': '',
+            'subtextvg': ''
+          }) %>
+        </div>
         <div class="dokidoki-instagram-content">
           <ul class="dokidoki-instagram-list">
             <% instagram.forEach(item => { %>
@@ -539,10 +541,10 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
       <div class="l-section-title">
         <%- include('/partials/heading', {
           'modifier': 'heading-sumika-faq',
-          'texts': mix('/assets/images/dokidoki/faq-title.png'),
+          'text': mix('/assets/images/dokidoki/faq-title.png'),
           'alt': 'faq',
-          'subtexts': 'faq-subtext',
-          'altSubtexts': '',
+          'subtextvg': 'faq-subtext',
+          'altSubtext': '',
         }) %>
       </div>
 
@@ -577,10 +579,10 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
       <div class="dokidoki-cta-inner">
         <%- include('/partials/heading', {
           'modifier': 'heading-net-sumika',
-          'texts': mix('/assets/images/dokidoki/dokidoki-cta.png'),
+          'text': mix('/assets/images/dokidoki/dokidoki-cta.png'),
           'alt': 'DOKIDOKIをもっと楽しむ',
-          'altSubtexts': '',
-          'subtexts': ''
+          'altSubtext': '',
+          'subtextvg': ''
         }) %>
         <div class="dokidoki-cta-description">
           <p class="dokidoki-cta-description-text">
@@ -591,7 +593,7 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
         <div class="l-button">
           <%- include('/partials/button', {
             'modifier': 'button-dokidoki',
-            'texts': 'もっと見る',
+            'text': 'もっと見る',
             'link': '#'
           }) %>
         </div>
@@ -624,10 +626,10 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
   <div class="l-section-title">
     <%- include('/partials/heading', {
       'modifier': 'heading-net-dokidoki',
-      'texts': mix('/assets/images/dokidoki/recommendation.png'),
+      'text': mix('/assets/images/dokidoki/recommendation.png'),
       'alt': 'recommendation',
-      'altSubtexts': '',
-      'subtexts': 'recommendation-subtext'
+      'altSubtext': '',
+      'subtextvg': 'recommendation-subtext'
     }) %>
   </div>
 
@@ -651,10 +653,10 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
   <div class="l-section-title">
     <%- include('/partials/heading', {
       'modifier': 'heading-net-dokidoki',
-      'texts': mix('/assets/images/dokidoki/pickup.png'),
+      'text': mix('/assets/images/dokidoki/pickup.png'),
       'alt': 'recommendation',
-      'altSubtexts': '',
-      'subtexts': 'pickup'
+      'altSubtext': '',
+      'subtextvg': 'pickup'
     }) %>
   </div>
 

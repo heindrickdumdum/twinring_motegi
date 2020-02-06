@@ -1,4 +1,4 @@
-.forest-driving-cta {
+.deb-den-cta {
   text-align: center;
   margin: 110px 0 80px;
 
@@ -7,7 +7,7 @@
 
     &:before {
       width: 100%;
-      height: 115%;
+      height: 155%;
       content: "";
       position: absolute;
       background-color: #f9f9f9;
@@ -18,7 +18,7 @@
   }
 }
 
-.forest-driving-cta-wrapper {
+.deb-den-cta-wrapper {
   padding: 0 100px;
 
   @include max-screen($breakpoint-mobile) {
@@ -26,7 +26,7 @@
   }
 }
 
-.heading-net-forest-driving {
+.heading-net-deb-den {
   .heading-text {
     max-width: 421px;
     width: 100%;
@@ -38,7 +38,7 @@
   }
 }
 
-.forest-driving-cta-inner {
+.deb-den-cta-inner {
   position: relative;
   padding: 40px;
   
@@ -66,7 +66,7 @@
     bottom: 39px;
   }
 
-  .button-forest-driving {
+  .button-deb-den {
     position: relative;
     z-index: $z-min;
   }
@@ -87,7 +87,7 @@
 
 }
 
-.forest-driving-cta-description-text {
+.deb-den-cta-description-text {
   font-size: 15px;
   line-height: 1.667;
   margin-top: 20px;
@@ -101,36 +101,36 @@
 }
 
 @include max-screen($breakpoint-mobile) {
-  .forest-driving-cta-dot {
+  .deb-den-cta-dot {
     display: none;
   }
 }
 
-.forest-driving-cta-dot {
+.deb-den-cta-dot {
   position: absolute;
 }
 
-.forest-driving-cta-dot-1 {
+.deb-den-cta-dot-1 {
   left: -40px;
   bottom: -30px;
 }
 
-.forest-driving-cta-dot-2 {
+.deb-den-cta-dot-2 {
   top: -19px;
   left: 128px;
 }
 
-.forest-driving-cta-dot-3 {
+.deb-den-cta-dot-3 {
   bottom: -30px;
   right: 135px;
 }
 
-.forest-driving-cta-dot-4 {
+.deb-den-cta-dot-4 {
   top: -28px;
   right: -27px;
 }
 
-.forest-driving-cta-bottom {
+.deb-den-cta-bottom {
   margin: 180px 0;
   position: relative;
   text-align: center;
@@ -152,7 +152,7 @@
   }
 }
 
-.forest-driving-cta-bottom-inner {
+.deb-den-cta-bottom-inner {
   position: relative;
   z-index: $z-max;
 

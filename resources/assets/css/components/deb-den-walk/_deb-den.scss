@@ -1,0 +1,22 @@
+.main-content {
+  .deb-den-title-svg {
+    text-align: center;
+  }
+  
+  .heading {
+    margin: 50px 0;
+    text-align: center;
+  }
+
+  .heading-deb-den {
+    .heading-texts {
+      max-width: 651px;
+      width: 100%;
+      margin: 0 auto;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 489px;
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
-.forest-driving-pick-up {
+.deb-den-pick-up {
   margin-top: 140px;
   margin-bottom: 120px;
 
-  .heading-net-forest-driving {
-    margin-bottom: 40px;
+  .heading-net-deb-den {
+    margin-bottom: 47px;
   }
 
   .heading-subtext {
@@ -28,7 +28,7 @@
 
   @include max-screen($breakpoint-mobile) {
     .feature-item {
-      width: calc((100% / 2) - 20px);
+      width: calc(1300px / 4);
       margin: 0%;
     }
   }

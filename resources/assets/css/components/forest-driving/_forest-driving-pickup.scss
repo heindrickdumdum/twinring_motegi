@@ -28,7 +28,7 @@
 
   @include max-screen($breakpoint-mobile) {
     .feature-item {
-      width: calc(1300px / 4);
+      width: calc((100% / 2) - 20px);
       margin: 0%;
     }
   }

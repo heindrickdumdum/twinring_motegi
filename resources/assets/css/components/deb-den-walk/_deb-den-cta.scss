@@ -1,0 +1,163 @@
+.deb-den-cta {
+  text-align: center;
+  margin: 110px 0 80px;
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+
+    &:before {
+      width: 100%;
+      height: 155%;
+      content: "";
+      position: absolute;
+      background-color: #f9f9f9;
+      left: 0;
+      top: 35%;
+      z-index: 0;
+    }
+  }
+}
+
+.deb-den-cta-wrapper {
+  padding: 0 100px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 0;
+  }
+}
+
+.heading-net-deb-den {
+  .heading-text {
+    max-width: 421px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 321px;
+    }
+  }
+}
+
+.deb-den-cta-inner {
+  position: relative;
+  padding: 40px;
+  
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url(#{$image-path}sumika/frame-sm.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    background-image: url(#{$image-path}sumika/green-dots.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 22px;
+    left: 33px;
+    right: 23px;
+    bottom: 39px;
+  }
+
+  .button-deb-den {
+    position: relative;
+    z-index: $z-min;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    background-color: $color-white;
+
+    &:after {
+      background-image: url(../images/forest-driving/green-dots.png);
+      background-size: 140%;
+      background-position: 50% center;
+    }
+
+    .l-button {
+      margin-top: 35px;
+    }
+  }
+
+}
+
+.deb-den-cta-description-text {
+  font-size: 15px;
+  line-height: 1.667;
+  margin-top: 20px;
+  letter-spacing: 0.16em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 24px;
+    margin-top: 25px;
+    padding: 0 50px;
+  }
+}
+
+@include max-screen($breakpoint-mobile) {
+  .deb-den-cta-dot {
+    display: none;
+  }
+}
+
+.deb-den-cta-dot {
+  position: absolute;
+}
+
+.deb-den-cta-dot-1 {
+  left: -40px;
+  bottom: -30px;
+}
+
+.deb-den-cta-dot-2 {
+  top: -19px;
+  left: 128px;
+}
+
+.deb-den-cta-dot-3 {
+  bottom: -30px;
+  right: 135px;
+}
+
+.deb-den-cta-dot-4 {
+  top: -28px;
+  right: -27px;
+}
+
+.deb-den-cta-bottom {
+  margin: 180px 0;
+  position: relative;
+  text-align: center;
+  z-index: $z-max;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $color-light-gray;
+    top: 99px;
+    left: 0;
+    right: 0;
+    bottom: -126px;
+    z-index: 1;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 101px;
+  }
+}
+
+.deb-den-cta-bottom-inner {
+  position: relative;
+  z-index: $z-max;
+
+  img {
+    max-width: 1020px;
+    width: 100%;
+  }
+}

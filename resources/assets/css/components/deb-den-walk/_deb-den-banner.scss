@@ -1,0 +1,10 @@
+.banner {
+  .banner-container {
+    text-align: center;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-left: -32px;
+    margin-right: -32px;
+  }
+}

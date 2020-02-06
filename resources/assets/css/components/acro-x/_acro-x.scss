@@ -1,5 +1,5 @@
 .main-content {
-  .dokidoki-title-svg {
+  .acro-x-title-svg {
     text-align: center;
   }
   
@@ -8,10 +8,11 @@
     text-align: center;
   }
 
-  .heading-texts {
-    img {
+  .heading-acro-x {
+    .heading-texts {
       max-width: 651px;
       width: 100%;
+      display: inline-block;
     }
   }
 }

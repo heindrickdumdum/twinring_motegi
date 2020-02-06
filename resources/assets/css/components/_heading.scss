@@ -60,12 +60,12 @@
   }
 
   &.heading-dokidoki {
-    .heading-texts {
+    .heading-text {
       margin: 0 auto;
       text-align: center;
     }
 
-    .heading-subtexts {
+    .heading-subtext {
       margin: 24px auto 0;
       text-align: center;
     }
@@ -79,7 +79,7 @@
   &.heading-net-sumika {
     margin-bottom: 40px;
     
-    .heading-texts {
+    .heading-text {
       width: 412px;
       height: 28px;
       margin: 0 auto;
@@ -93,6 +93,15 @@
   }
 
   &.heading-net-dokidoki {
+    margin-bottom: 40px;
+    
+    .heading-text {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &.heading-net-acro-x {
     margin-bottom: 40px;
     
     .heading-texts {

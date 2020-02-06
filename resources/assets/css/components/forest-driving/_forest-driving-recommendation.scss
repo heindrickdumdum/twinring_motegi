@@ -1,7 +1,40 @@
 .forest-driving-recommendation {
   margin-top: 230px;
 
+  .heading-text {
+    width: 100%;
+    margin: 0 auto;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 253px;
+    }
+  }
+
   .heading-subtext {
-    width: 435px;
+    max-width: 435px;
+    width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 633px;
+      height: 49px;
+      margin: 40px 0 0 0;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 247px;
+
+    .feature-list {
+      width: 1980px;
+      margin-top: 81px;
+      flex-wrap: nowrap;
+      transform: translate3d(-315px, 0, 0);
+    }
+
+    .feature-item {
+      &:nth-child(2) {
+        border-bottom: 1px solid #dfdfdf;
+      }
+    }
   }
 }

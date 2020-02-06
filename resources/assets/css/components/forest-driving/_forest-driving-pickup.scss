@@ -1,5 +1,5 @@
 .forest-driving-pick-up {
-  margin-top: 30px;
+  margin-top: 140px;
   margin-bottom: 120px;
 
   .heading-net-forest-driving {
@@ -12,10 +12,24 @@
 
   .feature-list {
     border-bottom: 1px solid #dfdfdf;
+
+    @include max-screen($breakpoint-mobile) {
+      margin: 0%;
+      flex-wrap: wrap;
+      flex-grow: 50%;
+      justify-content: space-between;
+    }
   }
 
   .article-heading,
   .article-period {
     padding-left: 0px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    .feature-item {
+      width: calc(1300px / 4);
+      margin: 0%;
+    }
   }
 }

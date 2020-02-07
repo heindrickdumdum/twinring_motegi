@@ -2,11 +2,13 @@
 
 @import 'setting';
 
+
 @import 'base/sanitize';
 @import 'base/mixin';
 @import "base/placeholders";
 @import 'base/base';
 @import 'base/utility';
+
 
 @import "lib/media-queries";
 @import "lib/clearfix";
@@ -96,7 +98,7 @@
 @import "components/slider";
 @import "components/tsubasa/styles";
 @import "components/car-and-bike/styles";
-@import "components/itadaki/itadaki";
+@import "components/itadaki";
 
 @import 'layout/grid';
 @import "layout/l-container";

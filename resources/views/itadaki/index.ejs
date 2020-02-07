@@ -281,7 +281,7 @@ accordionData = [
       <%- include('/partials/heading', {
         'modifier': 'heading-dokidoki',
         'text': 'How to Enjoy',
-        'alt': 'ITADAKIを楽しむポイント',
+        'alt': 'How to Enjoy',
         'subtextvg': 'enjoy-itadaki-title',
         'altSubtext': '',
       }) %>
@@ -413,8 +413,8 @@ accordionData = [
   <div class="l-section-title l-sumika-video">
     <%- include('/partials/heading', {
       'modifier': 'heading-sumika',
-      'text': 'Sumika Videos',
-      'alt': 'sumika videos',
+      'text': 'ITADAKI Videos',
+      'alt': 'ITADAKI videos',
       'subtextvg': 'itadaki-video-title',
       'altSubtext': '',
     }) %>
@@ -449,7 +449,7 @@ accordionData = [
           'modifier': 'heading-sumika-faq',
           'text': 'FAQ',
           'alt': 'faq',
-          'subtextvg': 'faq-subtext',
+          'subtextvg': 'faq-title',
           'altSubtext': '',
         }) %>
       </div>
@@ -484,7 +484,13 @@ accordionData = [
     <div class="call-to-action-wrapper">
       <div class="call-to-action-inner">
         <h3 class="call-to-action-title">
-          ITADAKIをもっと楽しむ
+          <%- include('/partials/heading', {
+            'modifier': 'heading-sumika',
+            'text': '',
+            'alt': '',
+            'subtextvg': 'itadaki-cta-title',
+            'altSubtext': ''
+          }) %>
         </h3>
         <div class="call-to-action-description">
           <p class="call-to-action-description-text">
@@ -521,7 +527,7 @@ accordionData = [
     <%- include('/partials/heading', {
       'modifier': 'heading-net-dokidoki',
       'text': 'Recommendation',
-      'alt': 'recommendation',
+      'alt': 'Recommendation',
       'altSubtext': '',
       'subtextvg': 'recommendation-subtext'
     }) %>
@@ -548,9 +554,9 @@ accordionData = [
     <%- include('/partials/heading', {
       'modifier': 'heading-net-dokidoki',
       'text': 'Pick Up',
-      'alt': 'recommendation',
+      'alt': 'Pick Up',
       'altSubtext': '',
-      'subtextvg': 'pickup'
+      'subtextvg': 'pickup-event-title'
     }) %>
   </div>
 

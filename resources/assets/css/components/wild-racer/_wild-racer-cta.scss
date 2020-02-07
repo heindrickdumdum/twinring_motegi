@@ -28,7 +28,6 @@
 
 .heading-net-wild-racer {
   .heading-text {
-    max-width: 421px;
     width: 100%;
     margin: 0 auto;
 
@@ -36,12 +35,22 @@
       max-width: 321px;
     }
   }
+
+  .heading-subtext {
+    width: 100%;
+    margin: 0 auto;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 321px;
+    }
+  }
+
 }
 
 .wild-racer-cta-inner {
   position: relative;
   padding: 40px;
-  
+
   &:before {
     position: absolute;
     content: '';
@@ -86,6 +95,28 @@
   }
 
 }
+
+.heading-net-wild-racer-cta {
+  .heading-text {
+    width: 100%;
+    margin: 0 auto;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 321px;
+    }
+  }
+
+  .heading-subtext {
+    width: 100%;
+    margin: 0 auto;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 321px;
+    }
+  }
+
+}
+
 
 .wild-racer-cta-description-text {
   font-size: 15px;

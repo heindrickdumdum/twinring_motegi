@@ -1,12 +1,8 @@
 <div class="post-wrap">
-  <%
-    postContent.forEach(content => {
-  %>
+  <% postContent.forEach(content => {%>
   <ul class="post-list">
 
-    <%
-      content.forEach(item => {
-    %>
+    <% content.forEach(item => { %>
     <li class="post-item">
       <a class="post-link" href="#">
         <p class="post-text">
@@ -19,7 +15,7 @@
 
         <i class="post-link-icon">
           <%- include('/partials/svg', {
-            'name': 'arrow'
+            name: 'arrow'
           }) %>
         </i>
       </a>

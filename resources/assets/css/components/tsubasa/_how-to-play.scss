@@ -66,6 +66,10 @@
 
         img {
           max-width: 300px;
+
+          @include max-screen($breakpoint-mobile) {
+            width: 100%;
+          }
         }
 
         @include max-screen($breakpoint-mobile) {

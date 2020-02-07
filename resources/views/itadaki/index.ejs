@@ -280,7 +280,7 @@ accordionData = [
     <div class="l-section-title">
       <%- include('/partials/heading', {
         'modifier': 'heading-dokidoki',
-        'text': mix('/assets/images/dokidoki/how-to-enjoy.png'),
+        'text': 'How to Enjoy',
         'alt': 'DOKIDOKIを楽しむポイント',
         'subtextvg': 'enjoy-dokidoki',
         'altSubtext': '',
@@ -370,7 +370,7 @@ accordionData = [
     <div class="l-section-title">
       <%- include('/partials/heading', {
         'modifier': 'heading-dokidoki',
-        'text': mix('/assets/images/dokidoki/ways-to-feel.png'),
+        'text': 'Ways to feel the Forest',
         'alt': 'dokidoki forest',
         'subtextvg': 'dokidoki-forest',
         'altSubtext': '',
@@ -414,7 +414,7 @@ accordionData = [
   <div class="l-section-title l-sumika-video">
     <%- include('/partials/heading', {
       'modifier': 'heading-sumika',
-      'text': mix('/assets/images/sumika/sumika_videos.png'),
+      'text': 'Sumika Videos',
       'alt': 'sumika videos',
       'subtextvg': 'video-dokidoki',
       'altSubtext': '',
@@ -448,7 +448,7 @@ accordionData = [
       <div class="l-section-title">
         <%- include('/partials/heading', {
           'modifier': 'heading-sumika-faq',
-          'text': mix('/assets/images/dokidoki/faq-title.png'),
+          'text': 'FAQ',
           'alt': 'faq',
           'subtextvg': 'faq-subtext',
           'altSubtext': '',
@@ -480,51 +480,47 @@ accordionData = [
   </div>
 </section>
 
-<section class="dokidoki-cta">
+<div class="call-to-action">
   <div class="l-container">
-    <div class="dokidoki-cta-wrapper">
-      <div class="dokidoki-cta-inner">
-        <%- include('/partials/heading', {
-          'modifier': 'heading-net-sumika',
-          'text': mix('/assets/images/dokidoki/dokidoki-cta.png'),
-          'alt': 'DOKIDOKIをもっと楽しむ',
-          'altSubtext': '',
-          'subtextvg': ''
-        }) %>
-        <div class="dokidoki-cta-description">
-          <p class="dokidoki-cta-description-text">
-            DOKIDOKIのこだわりポイントや、<br>
-知っているともっと楽しくなる情報を配信中しています。
+    <div class="call-to-action-wrapper">
+      <div class="call-to-action-inner">
+        <h3 class="call-to-action-title">
+          ITADAKIをもっと楽しむ
+        </h3>
+        <div class="call-to-action-description">
+          <p class="call-to-action-description-text">
+            ITADAKIのこだわりポイントや、<br>
+            知っているともっと楽しくなる情報を配信中しています。
           </p>
         </div>
-        <div class="l-button">
+        <div class="l-button l-button-call-to-action">
           <%- include('/partials/button', {
-            'modifier': 'button-dokidoki',
-            'text': 'もっと見る',
-            'link': '#'
+            modifier: 'button-sumika',
+            text: 'もっと見る',
+            link: '#'
           }) %>
         </div>
-        <span class="dokidoki-cta-dot dokidoki-cta-dot-1">
+        <span class="call-to-action-dot call-to-action-dot-1">
           <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
         </span>
-        <span class="dokidoki-cta-dot dokidoki-cta-dot-2">
+        <span class="call-to-action-dot call-to-action-dot-2">
           <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
         </span>
-        <span class="dokidoki-cta-dot dokidoki-cta-dot-3">
+        <span class="call-to-action-dot call-to-action-dot-3">
           <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
         </span>
-        <span class="dokidoki-cta-dot dokidoki-cta-dot-4">
+        <span class="call-to-action-dot call-to-action-dot-4">
           <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
         </span>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<div class="dokidoki-cta-bottom">
+<div class="banner-cta">
   <div class="l-container">
-    <div class="dokidoki-cta-bottom-inner">
-      <img src="<%= mix('https://via.placeholder.com/1020x210') %>">
+    <div class="banner-cta-inner">
+      <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
     </div>
   </div>
 </div>
@@ -533,7 +529,7 @@ accordionData = [
   <div class="l-section-title">
     <%- include('/partials/heading', {
       'modifier': 'heading-net-dokidoki',
-      'text': mix('/assets/images/dokidoki/recommendation.png'),
+      'text': 'Recommendation',
       'alt': 'recommendation',
       'altSubtext': '',
       'subtextvg': 'recommendation-subtext'
@@ -560,7 +556,7 @@ accordionData = [
   <div class="l-section-title">
     <%- include('/partials/heading', {
       'modifier': 'heading-net-dokidoki',
-      'text': mix('/assets/images/dokidoki/pickup.png'),
+      'text': 'Pick Up',
       'alt': 'recommendation',
       'altSubtext': '',
       'subtextvg': 'pickup'

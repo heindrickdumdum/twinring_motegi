@@ -37,6 +37,14 @@
 
 }
 
+.call-to-action-title {
+  display: inline-block;
+  font-size: 31px;
+  background: linear-gradient(to right, #1cc763 0%, #34b0e7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .call-to-action-description-text {
   font-size: 15px;
   line-height: 1.667;

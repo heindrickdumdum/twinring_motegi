@@ -178,15 +178,169 @@
 </div>
 
 <div class="l-section">
-  <section class="mobipark-playground">
+  <section class="mobipark-adventure">
     <div class="l-section-title">
       <%- include('/partials/heading', {
         'modifier': 'heading-mobipark',
         'text': mix('/assets/images/mobipark/adventure.png'),
         'alt': 'アスレチック＆迷路',
-        'altSubtext': 'adventure-subtext',
-        'subtextvg': 'adventure-subtext'
+        'altSubtext': '',
+        'subtextvg': 'adventure'
       }) %>
+    </div>
+  </section>
+</div>
+
+<!--SUMIKA-->
+<div class="l-section">
+  <section class="mobipark-adventure mobipark-adventure-sumika">
+    <div class="l-container">
+      <div class="section-inner ">
+        <div class="section-image" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-sumika.jpg') %>);">
+          <img class="section-image-logo" src="<%= mix('/assets/images/mobipark/sumika-logo.png') %>" alt="adventure sumika">
+        </div>
+
+        <div class="section-contents l-adventure">
+          <h3 class="section-heading">
+            <svg>
+              <title>Sumika</title>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-adventure-sumika') %>"></use>
+            </svg>
+          </h3>
+          <p class="section-contents-copy">
+            SUMIKAは森の生き物たちが隠れるすみかをテーマにした、<br>
+            屋内のネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+          </p>
+          <div class="l-button">
+            <%- include('/partials/button', {
+              'modifier': 'button-sumika',
+              'text': 'もっと見る',
+              'link': '#'
+            }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--DOKIDOKI-->
+<div class="l-section">
+  <section class="mobipark-adventure mobipark-adventure-dokidoki">
+    <div class="l-container">
+      <div class="section-inner ">
+        <div class="section-image" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-dokidoki.jpg') %>);">
+          <img class="section-image-logo" src="<%= mix('/assets/images/mobipark/dokidoki-logo.png') %>" alt="adventure dokidoki">
+        </div>
+
+        <div class="section-contents l-adventure">
+          <h3 class="section-heading">
+            <svg>
+              <title>Sumika</title>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-adventure-dokidoki') %>"></use>
+            </svg>
+          </h3>
+          <p class="section-contents-copy">
+            DOKIDOKIは巨大などんぐりの木のてっぺんを目指す、<br>
+            新感覚の木登り型アスレチック。39のアスレチックが待ち受けています。
+          </p>
+          <div class="l-button">
+            <%- include('/partials/button', {
+              'modifier': 'button-dokidoki',
+              'text': 'もっと見る',
+              'link': '#'
+            }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--ITADAKI-->
+<div class="l-section">
+  <section class="mobipark-adventure mobipark-adventure-itadaki">
+    <div class="l-container">
+      <div class="section-inner ">
+        <div class="section-image" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-itadaki.jpg') %>);">
+          <img class="section-image-logo" src="<%= mix('/assets/images/mobipark/itadaki-logo.png') %>" alt="adventure itadaki">
+        </div>
+
+        <div class="section-contents l-adventure">
+          <h3 class="section-heading">
+            <svg>
+              <title>Sumika</title>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-adventure-itadaki') %>"></use>
+            </svg>
+          </h3>
+          <p class="section-contents-copy">
+            ITADAKIは生態系ピラミッドを表現した5階層の立体迷路。<br>
+            リアルな生き物のオブジェを観察しながら、<br>
+            14箇所の生き物のスタンプを探し集めて、頂上を目指していきます。
+          </p>
+          <div class="l-button">
+            <%- include('/partials/button', {
+              'modifier': 'button-itadaki',
+              'text': 'もっと見る',
+              'link': '#'
+            }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="l-section">
+  <section class="car-bike">
+    <div class="l-container">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-mobipark',
+          'text': mix('/assets/images/mobipark/car-bike.png'),
+          'alt': 'Kids’ Car & Bike  Attraction',
+          'altSubtext': '',
+          'subtextvg': 'carbike'
+        }) %>
+      </div>
+
+      <div class="row">
+        <div class="col-left">
+          <h3 class="contents-heading">
+            <img src="<%= mix('/assets/images/mobipark/carbike-heading.png') %>" alt="ひとりで挑戦、親子で挑戦はじめての「できた！」がいっぱい">
+          </h3>
+          <p class="contents-desc">
+            3歳のお子様から大人までも楽しめる、<br>
+            のりものを”操って”自分ひとりで運転できる車と<br>
+            バイクのアトラクションが体験できます。<br>
+            ツインリンクもてぎだから提供できる、<br>
+            本格的な車とバイクのアトラクションには、<br>
+            いままで体験したことのない「できた」がつまっています。
+          </p>
+          <div class="l-button">
+            <%- include('/partials/button', {
+              'modifier': 'button-car-bike',
+              'text': 'もっと見る',
+              'link': '#'
+            }) %>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="slider-container">
+            <ul class="slider-wrapper">
+              <li class="slider-item">
+                <img src="<%= mix('/assets/images/mobipark/car-bike1.jpg') %>" alt="slide 1">
+              </li>
+            </ul>
+            <ul class="slider-indicator">
+              <li class="indicator-item"></li>
+              <li class="indicator-item"></li>
+              <li class="indicator-item"></li>
+              <li class="indicator-item"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>

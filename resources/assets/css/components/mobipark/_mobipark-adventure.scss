@@ -1,12 +1,49 @@
-.mobipark-playground {
+.mobipark-adventure {
+  .section-image-logo {
+    max-width: 279px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    top: unset;
+    bottom: -152px;
+    z-index: $z-min;
+  }
+
+  .section-heading {
+    max-width: 443px;
+    width: 100%;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: $z-min;
+  }
+
   .heading {
     > * {
       width: 100%;
       margin: 0 auto;
     }
   }
-  
+
   .heading-text {
     max-width: 323.5px;
   }
+
+  .heading-subtext {
+    max-width: 323.5px;
+    margin-top: 23px;
+  }
+
+  .section-contents-copy {
+    margin-top: 31px;
+  }
+}
+
+.l-adventure {
+  max-width: 961px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 155px;
 }

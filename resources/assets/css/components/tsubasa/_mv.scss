@@ -1,11 +1,11 @@
 .mv-tsubasa {
   margin-bottom: 80px;
-
+  position: relative;
   .mv-heading {
     bottom: 45px;
 
     @include max-screen($breakpoint-mobile) {
-      bottom: 0;
+      top: 50%;
       left: 0;
       right: 0;
       padding: 30px;
@@ -24,6 +24,10 @@
     @include max-screen($breakpoint-mobile) {
       width: 100%;
       max-width: 400px;
+      font-size: 26px;
+      color: $color-white;
+      margin: auto;
+      text-align: center;
 
       svg {
         max-width: 400px;

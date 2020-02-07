@@ -9,6 +9,10 @@
       width: calc(100% / 3);
       text-align: center;
       margin-bottom: 80px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
       
       .step-no {
         margin-bottom: 20px;
@@ -50,6 +54,10 @@
           -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
           background: url(/assets/images/tsubasa/step-arrow.png) no-repeat;
+          
+          @include max-screen ($breakpoint-mobile) {
+            display: none;  
+          }
         }
 
         &.goal-bg {
@@ -59,8 +67,29 @@
         img {
           max-width: 300px;
         }
+
+        @include max-screen($breakpoint-mobile) {
+          padding: 5px 14px;
+        }
       }
 
+      &.step-goal::after {
+        display: none;
+      }
+      &::after {
+        @include max-screen ($breakpoint-mobile) {
+          content: " ";
+          width: 60px;
+          height: 50px;
+          position: absolute;
+          background: url(/assets/images/tsubasa/step-arrow-down.png) no-repeat;
+          left: 0;
+          right: 0;
+          margin: auto;
+          margin-top: 30px;
+        }
+      }
+ 
       &:nth-child(3n),&.step-goal {
         .step-image::after {
           display: none;
@@ -69,6 +98,11 @@
 
       &.step-goal {
         width: calc(100% / 3 * 2);
+
+        @include max-screen ($breakpoint-mobile) {
+          width: 100%;
+          margin-bottom: 40px;
+        }
 
         .img-step {
           display: none;
@@ -91,8 +125,18 @@
         }
 
         .step-image {
-          img {max-width: 660px;}
+          img {
+            max-width: 660px;
+            
+            @include max-screen($breakpoint-mobile) {
+              width: 100%;
+            }
+          }
         }
       }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
     }
   }

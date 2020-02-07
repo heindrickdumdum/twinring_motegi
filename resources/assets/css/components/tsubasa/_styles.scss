@@ -12,12 +12,16 @@
   .heading-wrap-comparison,
   .heading-wrap-how-to {
     margin-bottom: 40px;
+
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 80px;
+    }
   }
 
   @import "components/tsubasa/_settings";
   @import "components/tsubasa/_mv";
   @import "components/tsubasa/_video";
-  @import "components/tsubasa/_atttraction-info";
+  @import "components/tsubasa/_attraction-info";
   @import "components/tsubasa/_how-to-play";
   @import "components/tsubasa/_faq";
   @import "components/tsubasa/_enjoy-more";

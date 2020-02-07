@@ -32,9 +32,9 @@
   &::before {
     counter-increment: parkmap_image_list;
     content: '0'#{counter(parkmap_image_list)};
-    position: relative;
+    position: absolute;
     left: 0;
-    top: -33px;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;

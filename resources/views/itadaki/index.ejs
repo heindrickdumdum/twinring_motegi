@@ -1,0 +1,640 @@
+<%
+  var title = 'Twin Ring Motegi'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+%>
+
+<%
+  instaData = [
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    }
+  ]
+%>
+
+<%
+accordionData = [
+      {
+        question: '小さい子どもが遊べますか？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '所要時間は？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '以下に記載している方はご利用をご遠慮ください。',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: 'トイレ・授乳室について ',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '荷物はどこに置けばいいですか？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '飲食物の持ち込みは？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: 'カメラについて',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: 'ベビーカーについて',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      
+    ]
+%>
+
+<%
+  recommend = [
+    {
+      'image': mix('/assets/images/top/how-to/img1.jpg'),
+      'heading': '巨大ネットの森SUMIKA',
+      'buttonLink': '#',
+    },
+    {
+      'image': mix('/assets/images/top/how-to/img2.jpg'),
+      'heading': '森感覚アスレチックDOKIDOKI',
+      'buttonLink': '#',
+    },
+    {
+      'image': mix('/assets/images/top/how-to/img3.jpg'),
+      'heading': '迷宮森殿ITADAKI',
+      'buttonLink': '#',
+    }
+  ]
+%>
+
+<%
+  pickup = [
+    {
+      'image': mix('/assets/images/dokidoki/feature/img1.png'),
+      'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+      },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img2.png'),
+      'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img3.png'),
+      'heading': 'モトレーサー タイムアタック選手権2019予選',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img4.png'),
+      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    }
+  ]
+%>
+
+<%- include('./../partials/head', { title }) -%>
+
+<div class="mv-itadaki">
+  <ul class="mv-list">
+    <li class="mv-item">
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dokidoki/mv-img.png') %>);"></div>
+    </li>
+  </ul>
+
+  <div class="l-container mv-container">
+    <h2 class="mv-heading">
+      <span class="mv-heading-texts">
+        <svg>
+          <title>Dokidoki</title>
+          <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mv-text') %>"></use>
+        </svg>
+      </span>
+      <span class="mv-heading-subtexts">
+        迷宮森殿ITADAKI
+      </span>
+    </h2>
+
+    <div class="mv-today">
+      <div class="mv-today-inner">
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="main-content">
+  <div class="l-container">
+    <div class="heading-wrap heading-dokidoki">
+      <h2 class="heading">
+        <span class="heading-texts">
+          <img src="<%= mix('/assets/images/dokidoki/dokidoki-title.png') %>" alt="dokidoki">
+        </span>
+      </h2>
+    </div>
+
+    <!-- YOUTUBE -->
+    <div class="l-youtube">
+      <section class="youtube">
+        <div class="youtube-iframe-container">
+          <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+    </div>
+
+    <h3 class="attraction-title">
+      <img src="<%- mix('/assets/images/dokidoki/attraction-title.png') %>" alt="title">
+    </h3>
+
+    <p class="attraction-subtext">
+      肉食動物や大きな鳥から小動物まで、あらゆる生きもの達の隠れ家となっている場所、それがすみか。 ネットが張りめぐらされた「巨大ネ
+    </p>
+
+    <table class="table">
+      <tbody>
+        <tr class="table-row">
+          <th class="table-head">場所</th>
+          <td class="table-col">モビパーク内</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">所要時間</th>
+          <td class="table-col">約30分（受付は営業終了10分前まで）
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">雨天の運行</th>
+          <td class="table-col">雨天時は見合せとなります。
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">対象者</th>
+          <td class="table-col">小学生1年生以上
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">身長制限</th>
+          <td class="table-col">なし</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">料金</th>
+          <td class="table-col">
+            モビパークパスポート対象 <br>
+            アトラクションチケット利用：800円
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">ご利用にあたって</th>
+          <td class="table-col">
+            服装について : <br>
+サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。<br>
+小学生未満のお子様の利用について：<br>
+DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="admission">
+  <div class="l-container">
+    <h3 class="admission-title">
+      <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
+    </h3>
+    <p class="admission-subtext">
+      下記の日程は 混雑が予想されるため、 対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
+      期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
+    </p>
+
+    <table class="table">
+      <tbody>
+        <tr class="table-row">
+          <th class="table-head">日程</th>
+          <td class="table-col">
+            9月		15日（日）、16日（月）、29日（日）<br>
+            10月	15日（日）、16日（月）、29日（日）<br>
+            11月	15日（日）、16日（月）、29日（日）
+          </td>
+        </tr>
+          
+        <tr class="table-row">
+          <th class="table-head">対象アトラクション</th>
+          <td class="table-col">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</td>
+        </tr>
+        
+        <tr class="table-row">
+          <th class="table-head">配布場所</th>
+          <td class="table-col">アトラクション前特設テント</td>
+        </tr>
+        
+        <tr class="table-row">
+          <th class="table-head">配布枚数</th>
+          <td class="table-col">各回約200枚配布※1回の所要時間約40分（説明10分、遊べる時間30分、時間入れ替え割）</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">配布にあたって</th>
+          <td class="table-col">
+            ※入場整理券は定員に達し次第、受付を終了いたします。<br>
+            ※別途、モビパークパスポートまたはのりもの券をお買い求めください。<br>
+            ※アトラクションには年齢制限がございます。 >>詳しくはこちら<br>
+            ※混雑状況や天候などより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="how-to-enjoy">
+  <div class="l-container">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-dokidoki',
+        'text': mix('/assets/images/dokidoki/how-to-enjoy.png'),
+        'alt': 'DOKIDOKIを楽しむポイント',
+        'subtextvg': 'enjoy-dokidoki',
+        'altSubtext': '',
+      }) %>
+    </div>
+
+    <div class="how-to-content">
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <h4 class="media-title"><span>ドキドキの連続！39のアスレチック</span></h4>
+          <p class="media-desc">
+            5階建ての建物を“巨大などんぐりの木”に見立てた「森感覚アスレチック DOKIDOKI」には、1階から5階に行くルートには、全部で39のアスレチックがあります。さまざまなアスレチックをクリアしててっぺんをめざしましょう！
+          </p>
+      
+          <div class="media-bottom">
+            <div class="media-note">
+              <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+              <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+              <div class="media-note-text">
+                てっぺんまで登れタネ！
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <h4 class="media-title">
+            <span>体力と勇気が試される！</span><br>
+            <span>選んで進む2つのコース</span>
+          </h4>
+          <p class="media-desc">
+            DOKIDOKIは小学1年生から高学年、そして大人も楽しめるアスレチックです。 コースを進んで行くと、アスレチックの難易度でコースが分かれ、年齢や体力に応じてコースを選ぶことができます。 
+          </p>
+      
+          <div class="media-bottom">
+            <div class="media-note">
+              <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+              <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+              <div class="media-note-text">
+                難しいコースに<br>
+                チャレンジできタネ！
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <h4 class="media-title">
+            <span>小学生未満のお子様はどきどきひろばで</span>
+          </h4>
+          <p class="media-desc">
+            DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。<br/>
+丸太や小さな山の形をしたアスレチックで遊んだり、キッズボルダリングで“プチボルダリング体験”をお楽しみいただけます。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="forest">
+  <div class="l-container">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-dokidoki',
+        'text': mix('/assets/images/dokidoki/ways-to-feel.png'),
+        'alt': 'dokidoki forest',
+        'subtextvg': 'dokidoki-forest',
+        'altSubtext': '',
+      }) %>
+    </div>
+  </div>
+    
+  <div class="dokidoki-wrapper">
+    <ul class="dokidoki-container" style="transform: translate3d(-205px, 0, 0);">
+      <li class="dokidoki-item">
+        <div class="slide-image">
+          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
+        </div>
+        <span class="slide-text">
+          目の前の壁を超えろ！新芽のチャレンジウォール
+        </span>
+      </li>
+      <li class="dokidoki-item">
+        <div class="slide-image">
+          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
+        </div>
+        <span class="slide-text">
+          アカネズミのひみつの場所！どんぐりころころ
+        </span>
+      </li class="dokidoki-item">
+      <li class="dokidoki-item">
+        <div class="slide-image">
+          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
+        </div>
+        <span class="slide-text">
+          丸太の一般橋を渡ろう！
+        </span>
+      </li class="dokidoki-item">
+    </ul>
+  </div>
+</section>
+
+<!-- BOTTOM -->
+
+<section class="sumika-video l-container">
+  <div class="l-section-title l-sumika-video">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-sumika',
+      'text': mix('/assets/images/sumika/sumika_videos.png'),
+      'alt': 'sumika videos',
+      'subtextvg': 'video-dokidoki',
+      'altSubtext': '',
+    }) %>
+  </div>
+  <div class="sumika-video-content">
+    <ul class="sumika-video-list row">
+      <li class="sumika-video-item col-lg-6 col-md-6 col-sm-12">
+        <div class="sumika-video-wrapper">
+          <div class="sumika-video-inner">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cJEgRZ-UMcY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <p class="sumika-video-description">仲間とチャレンジコースに挑戦！</p>
+      </li>
+      <li class="sumika-video-item col-lg-6 col-md-6 col-sm-12">
+        <div class="sumika-video-wrapper">
+          <div class="sumika-video-inner">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <p class="sumika-video-description">DOKIDOKI タイムアタック映像！</p>
+      </li>
+    </ul> 
+  </div>
+</section>
+
+<section class="dokidoki-faq">
+  <div class="l-container">
+    <div class="dokidoki-faq-inner">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-sumika-faq',
+          'text': mix('/assets/images/dokidoki/faq-title.png'),
+          'alt': 'faq',
+          'subtextvg': 'faq-subtext',
+          'altSubtext': '',
+        }) %>
+      </div>
+
+      <% accordionData.forEach(data => { %>
+
+      <div class="accordion">
+        <div class="accordion-inner">
+          <button class="accordion-btn js-accordion-btn" type="button">
+            <span class="accordion-btn-label">
+              <img src="<%= mix('/assets/images/acc-q.png') %>">
+            </span>
+            <span class="accordion-btn-text">
+              <%- data.question %>
+            </span>
+          </button>
+          <div class="accordion-content js-accordion-content" style=" display: none;">
+            <p class="accordion-desc">
+              <%- data.answer %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="dokidoki-cta">
+  <div class="l-container">
+    <div class="dokidoki-cta-wrapper">
+      <div class="dokidoki-cta-inner">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-net-sumika',
+          'text': mix('/assets/images/dokidoki/dokidoki-cta.png'),
+          'alt': 'DOKIDOKIをもっと楽しむ',
+          'altSubtext': '',
+          'subtextvg': ''
+        }) %>
+        <div class="dokidoki-cta-description">
+          <p class="dokidoki-cta-description-text">
+            DOKIDOKIのこだわりポイントや、<br>
+知っているともっと楽しくなる情報を配信中しています。
+          </p>
+        </div>
+        <div class="l-button">
+          <%- include('/partials/button', {
+            'modifier': 'button-dokidoki',
+            'text': 'もっと見る',
+            'link': '#'
+          }) %>
+        </div>
+        <span class="dokidoki-cta-dot dokidoki-cta-dot-1">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+        </span>
+        <span class="dokidoki-cta-dot dokidoki-cta-dot-2">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+        </span>
+        <span class="dokidoki-cta-dot dokidoki-cta-dot-3">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+        </span>
+        <span class="dokidoki-cta-dot dokidoki-cta-dot-4">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="dokidoki-cta-bottom">
+  <div class="l-container">
+    <div class="dokidoki-cta-bottom-inner">
+      <img src="<%= mix('https://via.placeholder.com/1020x210') %>">
+    </div>
+  </div>
+</div>
+
+<section class="dokidoki-recommendation">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-net-dokidoki',
+      'text': mix('/assets/images/dokidoki/recommendation.png'),
+      'alt': 'recommendation',
+      'altSubtext': '',
+      'subtextvg': 'recommendation-subtext'
+    }) %>
+  </div>
+
+  <div class="l-container">
+    <ul class="feature-list feature-list-no-design">
+      <% recommend.forEach(item => { %>
+      <li class="feature-item">
+        <%- include('/partials/article-no-design', {
+          'image': item.image,
+          'heading': item.heading,
+          'buttonLink': item.buttonLink,
+          'buttonText': 'モビパーク'
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
+
+<section class="dokidoki-pick-up">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-net-dokidoki',
+      'text': mix('/assets/images/dokidoki/pickup.png'),
+      'alt': 'recommendation',
+      'altSubtext': '',
+      'subtextvg': 'pickup'
+    }) %>
+  </div>
+
+  <div class="l-container">
+    <ul class="feature-list">
+      <% pickup.forEach(item => { %>
+      <li class="feature-item">
+        <%- include('/partials/article', {
+          'category': item.category,
+          'image': item.image,
+          'heading': item.heading,
+          'date': item.date,
+          'link': item.link
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
+<!-- END BOTTOM -->
+
+<%- include('./../partials/footer') -%>

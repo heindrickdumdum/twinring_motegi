@@ -4,7 +4,6 @@ export default function slider() {
   let mySwiper = new Swiper('.swiper-container', {  
     speed: 1500,
     initialSlide: 2,
-    slidesPerGroup: 3,
     centeredSlides: false,
 
     breakpoints: {
@@ -13,6 +12,7 @@ export default function slider() {
             spaceBetween: 50,
             loopedSlides: 0,
             initialSlide: 1,
+            slidesPerGroup: 3,
         },
         375: {
             spaceBetween: 10,           

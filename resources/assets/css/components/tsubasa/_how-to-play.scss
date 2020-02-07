@@ -140,9 +140,14 @@
           }
         }
       }
+
     }
 
     @include max-screen($breakpoint-mobile) {
       display: block;
+    }
+
+    .steps-list-media-bottom {
+      margin-top: 30px;
     }
   }

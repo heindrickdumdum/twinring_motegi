@@ -4,7 +4,7 @@
 %>
 
 <%
-  instaData = [
+instagram = [
     {
       'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
       'alt': 'insta thumbnail'
@@ -165,6 +165,34 @@ accordionData = [
       'link': '#',
     }
   ]
+
+  forest = [
+    {
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 1`,
+      desc: `目の前の壁を超えろ！新芽のチャレンジウォール`
+    },
+    {
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 2`,
+      desc: `アカネズミのひみつの場所！どんぐりころころ`
+    },
+    {
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 3`,
+      desc: `丸太の一般橋を渡ろう！`
+    },
+    {
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 3`,
+      desc: `丸太の一般橋を渡ろう！`
+    },
+    {
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 3`,
+      desc: `丸太の一般橋を渡ろう！`
+    }
+  ]
 %>
 
 <%- include('./../partials/head', { title }) -%>
@@ -265,9 +293,9 @@ accordionData = [
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
             服装について : <br>
-サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。<br>
-小学生未満のお子様の利用について：<br>
-DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。
+            サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。<br>
+            小学生未満のお子様の利用について：<br>
+            DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。
 
           </td>
         </tr>
@@ -417,7 +445,7 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
   </div>
 </section>
 
-<section class="forest">
+<section class="dokidoki forest">
   <div class="l-container">
     <div class="l-section-title">
       <%- include('/partials/heading', {
@@ -430,32 +458,20 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
     </div>
   </div>
     
-  <div class="dokidoki-wrapper">
-    <ul class="dokidoki-container" style="transform: translate3d(-205px, 0, 0);">
-      <li class="dokidoki-item">
+  <div class="swiper-container slider">
+    <ul class="swiper-wrapper swiper-wrapper-dokidoki-forest">
+      <%
+        forest.forEach(item => {
+      %>
+      <li class="swiper-slide slider-item">
         <div class="slide-image">
-          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
+          <img src="<%- item.src -%>" alt="<%- item.alt -%>">
         </div>
         <span class="slide-text">
-          目の前の壁を超えろ！新芽のチャレンジウォール
+          <%- item.desc -%>
         </span>
       </li>
-      <li class="dokidoki-item">
-        <div class="slide-image">
-          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
-        </div>
-        <span class="slide-text">
-          アカネズミのひみつの場所！どんぐりころころ
-        </span>
-      </li class="dokidoki-item">
-      <li class="dokidoki-item">
-        <div class="slide-image">
-          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
-        </div>
-        <span class="slide-text">
-          丸太の一般橋を渡ろう！
-        </span>
-      </li class="dokidoki-item">
+      <% } ) %>
     </ul>
   </div>
 </section>

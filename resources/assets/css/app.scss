@@ -2,11 +2,13 @@
 
 @import 'setting';
 
+
 @import 'base/sanitize';
 @import 'base/mixin';
 @import "base/placeholders";
 @import 'base/base';
 @import 'base/utility';
+
 
 @import "lib/media-queries";
 @import "lib/clearfix";
@@ -83,6 +85,14 @@
 @import "components/wild-racer/wild-racer-recommendation";
 @import "components/wild-racer/wild-racer-pickup";
 
+@import "components/mobipark/mobipark";
+@import "components/mobipark/mobipark-mv";
+@import "components/mobipark/mobipark-info";
+@import "components/mobipark/mobipark-challenge";
+@import "components/mobipark/mobipark-map";
+@import "components/mobipark/mobipark-adventure";
+@import "components/mobipark/mobipark-carbike";
+
 @import "components/block-image";
 @import "components/image-border";
 @import "components/how-to";
@@ -96,6 +106,7 @@
 @import "components/slider";
 @import "components/tsubasa/styles";
 @import "components/car-and-bike/styles";
+@import "components/itadaki";
 
 @import 'layout/grid';
 @import "layout/l-container";

@@ -91,7 +91,10 @@
 }
 
 .mv-heading-text {
-  width: 252px;
+  font-family: $font-holland;
+  font-size: 36px;
+  color: $color-seaweed;
+  letter-spacing: 0.06em;
 }
 
 .mv-heading-subtext {

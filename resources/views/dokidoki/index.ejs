@@ -4,167 +4,6 @@
 %>
 
 <%
-instagram = [
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    }
-  ]
-%>
-
-<%
-accordionData = [
-      {
-        question: '小さい子どもが遊べますか？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '所要時間は？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '以下に記載している方はご利用をご遠慮ください。',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'トイレ・授乳室について ',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '荷物はどこに置けばいいですか？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '飲食物の持ち込みは？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'カメラについて',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'ベビーカーについて',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      
-    ]
-%>
-
-<%
-  recommend = [
-    {
-      'image': mix('/assets/images/top/how-to/img1.jpg'),
-      'heading': '巨大ネットの森SUMIKA',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img2.jpg'),
-      'heading': '森感覚アスレチックDOKIDOKI',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img3.jpg'),
-      'heading': '迷宮森殿ITADAKI',
-      'buttonLink': '#',
-    }
-  ]
-%>
-
-<%
-  pickup = [
-    {
-      'image': mix('/assets/images/dokidoki/feature/img1.png'),
-      'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-      },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img2.png'),
-      'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img3.png'),
-      'heading': 'モトレーサー タイムアタック選手権2019予選',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img4.png'),
-      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    }
-  ]
 
   forest = [
     {
@@ -195,6 +34,7 @@ accordionData = [
   ]
 %>
 
+<% include('./../partials/data/index') %>
 <%- include('./../partials/head', { title }) -%>
 
 <div class="mv-dokidoki">
@@ -305,7 +145,7 @@ accordionData = [
   </div>
 </section>
 
-<section class="admission">
+<section class="admission dokidoki">
   <div class="l-container">
     <h3 class="admission-title">
       <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
@@ -355,13 +195,13 @@ accordionData = [
   </div>
 </section>
 
-<section class="how-to-enjoy">
+<section class="dokidoki">
   <div class="l-container">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-dokidoki',
-        'text': mix('/assets/images/dokidoki/how-to-enjoy.png'),
-        'alt': 'DOKIDOKIを楽しむポイント',
+        'modifier': 'heading-dokidoki heading-dokidoki-enjoy',
+        'text': 'How to Enjoy',
+        'alt': '',
         'subtextvg': 'enjoy-dokidoki',
         'altSubtext': '',
       }) %>
@@ -449,11 +289,10 @@ accordionData = [
   <div class="l-container">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-dokidoki',
-        'text': mix('/assets/images/dokidoki/ways-to-feel.png'),
-        'alt': 'dokidoki forest',
+        'modifier': 'heading-dokidoki-forest',
+        text: 'Ways to feel the Forest',
         'subtextvg': 'dokidoki-forest',
-        'altSubtext': '',
+        'altSubtext': ''
       }) %>
     </div>
   </div>
@@ -478,11 +317,11 @@ accordionData = [
 
 <!-- BOTTOM -->
 
-<section class="sumika-video l-container">
+<section class="sumika-video dokidoki l-container">
   <div class="l-section-title l-sumika-video">
     <%- include('/partials/heading', {
-      'modifier': 'heading-sumika',
-      'text': mix('/assets/images/sumika/sumika_videos.png'),
+      'modifier': 'heading-sumika heading-dokidoki',
+      'text': 'Sumika Videos',
       'alt': 'sumika videos',
       'subtextvg': 'video-dokidoki',
       'altSubtext': '',
@@ -510,24 +349,22 @@ accordionData = [
   </div>
 </section>
 
-<section class="dokidoki-instagram">
-  <div class="dokidoki-wrapper l-container">
-    <div class="dokidoki-inner">
-      <div class="dokidoki-inner-content">
-        <div class="l-section-title">
-          <%- include('/partials/heading', {
-            'modifier': 'heading-net-dokidoki',
-            'text': mix('/assets/images/dokidoki/insta-title.png'),
-            'alt': '#森感覚アスレチックDOKIDOKI',
-            'altSubtext': '',
-            'subtextvg': ''
-          }) %>
-        </div>
-        <div class="dokidoki-instagram-content">
-          <ul class="dokidoki-instagram-list">
+<section class="sumika-instagram dokidoki">
+  <div class="sumika-wrapper l-container">
+    <div class="sumika-inner">
+      <div class="sumika-inner-content">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-net-dokidoki',
+          'text': '#森感覚アスレチックDOKIDOKI',
+          'alt': '#森感覚アスレチックDOKIDOKI',
+          'altSubtext': '',
+          'subtextvg': ''
+        }) %>
+        <div class="sumika-instagram-content">
+          <ul class="sumika-instagram-list">
             <% instagram.forEach(item => { %>
-            <li class="dokidoki-instagram-list-item">
-              <div class="dokidoki-instagram-list-item-image">
+            <li class="sumika-instagram-list-item">
+              <div class="sumika-instagram-list-item-image">
                 <img src="<%- item.image %>" alt="<%- item.alt %>">
               </div>
             </li>
@@ -536,12 +373,12 @@ accordionData = [
         </div>
         <div class="l-button">
           <%- include('/partials/button', {
-            'modifier': 'button-sumika',
-            'text': 'インスタグラムでもっと見る',
-            'link': '#'
+            modifier: 'button-dokidoki',
+            text: 'インスタグラムでもっと見る',
+            link: '#'
           }) %>
         </div>
-        <div class="dokidoki-instagram-banner">
+        <div class="sumika-instagram-banner">
           <a href="#">
             <img src="<%- mix('https://via.placeholder.com/1019x228')%> ">
           </a>
@@ -551,21 +388,19 @@ accordionData = [
   </div>
 </section>
 
-<section class="dokidoki-faq">
+<section class="sumika-faq dokidoki">
   <div class="l-container">
-    <div class="dokidoki-faq-inner">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
-          'modifier': 'heading-sumika-faq',
-          'text': mix('/assets/images/dokidoki/faq-title.png'),
-          'alt': 'faq',
-          'subtextvg': 'faq-subtext',
-          'altSubtext': '',
-        }) %>
-      </div>
+    <div class="sumika-faq-inner">
 
-      <% accordionData.forEach(data => { %>
+      <%- include('/partials/heading', {
+        modifier: 'heading-dokidoki-faq',
+        text: 'FAQ',
+        alt: 'faq',
+        subtextvg: 'faq-subtext',
+        altSubtext: ''
+      }) %>
 
+      <% getData().data.accordionData.forEach(data => { %>
       <div class="accordion">
         <div class="accordion-inner">
           <button class="accordion-btn js-accordion-btn" type="button">
@@ -583,109 +418,107 @@ accordionData = [
           </div>
         </div>
       </div>
-
       <% }) %>
     </div>
   </div>
 </section>
 
-<section class="dokidoki-cta">
+<div class="call-to-action dokidoki">
   <div class="l-container">
-    <div class="dokidoki-cta-wrapper">
-      <div class="dokidoki-cta-inner">
+    <div class="call-to-action-wrapper">
+      <div class="call-to-action-inner">
         <%- include('/partials/heading', {
-          'modifier': 'heading-net-sumika',
-          'text': mix('/assets/images/dokidoki/dokidoki-cta.png'),
-          'alt': 'DOKIDOKIをもっと楽しむ',
-          'altSubtext': '',
-          'subtextvg': ''
+          modifier: 'heading-net-dokidoki',
+          text: 'DOKIDOKIをもっと楽しむ',
+          alt: 'DOKIDOKIをもっと楽しむ',
+          altSubtext: '',
+          'subtext': ''
         }) %>
-        <div class="dokidoki-cta-description">
-          <p class="dokidoki-cta-description-text">
+        <div class="call-to-action-description">
+          <p class="call-to-action-description-text">
             DOKIDOKIのこだわりポイントや、<br>
-知っているともっと楽しくなる情報を配信中しています。
+            知っているともっと楽しくなる情報を配信中しています。
           </p>
         </div>
-        <div class="l-button">
+        <div class="l-button l-button-call-to-action">
           <%- include('/partials/button', {
-            'modifier': 'button-dokidoki',
-            'text': 'もっと見る',
-            'link': '#'
+            modifier: 'button-dokidoki',
+            text: 'もっと見る',
+            link: '#'
           }) %>
         </div>
-        <span class="dokidoki-cta-dot dokidoki-cta-dot-1">
+        <span class="call-to-action-dot call-to-action-dot-1">
           <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
         </span>
-        <span class="dokidoki-cta-dot dokidoki-cta-dot-2">
+        <span class="call-to-action-dot call-to-action-dot-2">
           <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
         </span>
-        <span class="dokidoki-cta-dot dokidoki-cta-dot-3">
+        <span class="call-to-action-dot call-to-action-dot-3">
           <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
         </span>
-        <span class="dokidoki-cta-dot dokidoki-cta-dot-4">
+        <span class="call-to-action-dot call-to-action-dot-4">
           <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
         </span>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<div class="dokidoki-cta-bottom">
+<div class="banner-cta dokidoki-cta">
   <div class="l-container">
-    <div class="dokidoki-cta-bottom-inner">
-      <img src="<%= mix('https://via.placeholder.com/1020x210') %>">
+    <div class="banner-cta-bottom-inner">
+      <img src="<%- mix('https://via.placeholder.com/1020x210')%> ">
     </div>
   </div>
 </div>
 
-<section class="dokidoki-recommendation">
+<section class="sumika-recommendation dokidoki">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-dokidoki',
-      'text': mix('/assets/images/dokidoki/recommendation.png'),
-      'alt': 'recommendation',
-      'altSubtext': '',
-      'subtextvg': 'recommendation-subtext'
+      modifier: 'heading-net-sumika heading-dokidoki',
+      text: 'Recommendation',
+      alt: '',
+      altSubtext: '',
+      subtextvg: 'recommend'
     }) %>
   </div>
-
-  <div class="l-container">
-    <ul class="feature-list feature-list-no-design">
-      <% recommend.forEach(item => { %>
-      <li class="feature-item">
-        <%- include('/partials/article-no-design', {
-          'image': item.image,
-          'heading': item.heading,
-          'buttonLink': item.buttonLink,
-          'buttonText': 'モビパーク'
-        }) %>
-      </li>
-      <% }) %>
-    </ul>
-  </div>
+    <div class="swiper-container slider">
+      <ul class="swiper-wrapper slider-wrapper">
+        <% getData().data.recommend.forEach(item => { %>
+        <li class="swiper-slide slider-item">
+          <%- include('/partials/article-no-design', {
+            image: item.image,
+            heading: item.heading,
+            buttonLink: item.buttonLink,
+            buttonText: 'モビパーク'
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
 </section>
 
-<section class="dokidoki-pick-up">
+<section class="sumika-pick-up dokidoki">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-dokidoki',
-      'text': mix('/assets/images/dokidoki/pickup.png'),
-      'alt': 'recommendation',
-      'altSubtext': '',
-      'subtextvg': 'pickup'
+      modifier: 'heading-net-sumika heading-dokidoki',
+      text: 'Pick Up',
+      alt: '',
+      altSubtext: '',
+      subtextvg: 'pickup'
     }) %>
   </div>
-
   <div class="l-container">
     <ul class="feature-list">
-      <% pickup.forEach(item => { %>
+      <% getData().data.pickup.forEach(item => { %>
       <li class="feature-item">
         <%- include('/partials/article', {
-          'category': item.category,
-          'image': item.image,
-          'heading': item.heading,
-          'date': item.date,
-          'link': item.link
+          category: item.category,
+          image: item.image,
+          heading: item.heading,
+          date: item.date,
+          link: item.link,
+          modifier: 'sumika-recommendation-article'
         }) %>
       </li>
       <% }) %>

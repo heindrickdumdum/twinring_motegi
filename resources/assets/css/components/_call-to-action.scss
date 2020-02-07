@@ -66,3 +66,11 @@
   top: -28px;
   right: -27px;
 }
+
+//MODIFIER DOKIDOKI
+.dokidoki-cta {
+  .banner-cta-bottom-inner {
+    position: relative;
+    z-index: $z-min;
+  }
+}

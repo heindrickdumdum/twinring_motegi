@@ -125,3 +125,48 @@
     }
   }
 }
+
+//MODIFIER DOKIDOKI
+.dokidoki {
+  .heading-dokidoki {
+    .heading-text {
+      width: auto !important;
+      height: auto !important;
+      font-size: 36px;
+      letter-spacing: 0.16em;     
+    }
+  }
+
+  .heading-net-dokidoki {
+    .heading-text {
+      width: auto !important;
+      height: auto !important;
+      font-size: 32.456px;
+      font-family: $base-font-family;
+      letter-spacing: 0.16em;   
+      font-weight: 300;        
+    }
+  }
+
+  .heading-dokidoki-faq {
+    .heading-text {
+      text-align: center;
+    }
+
+    .heading-subtext {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  .heading-dokidoki-enjoy {
+    .heading-subtext {
+      max-width: 556px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+}

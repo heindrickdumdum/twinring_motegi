@@ -181,6 +181,16 @@ accordionData = [
       src: mix('https://via.placeholder.com/576x407'),
       alt: `dokidoki slide 3`,
       desc: `丸太の一般橋を渡ろう！`
+    },
+    {
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 3`,
+      desc: `丸太の一般橋を渡ろう！`
+    },
+    {
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 3`,
+      desc: `丸太の一般橋を渡ろう！`
     }
   ]
 %>
@@ -283,9 +293,9 @@ accordionData = [
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
             服装について : <br>
-サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。<br>
-小学生未満のお子様の利用について：<br>
-DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。
+            サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。<br>
+            小学生未満のお子様の利用について：<br>
+            DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。
 
           </td>
         </tr>
@@ -435,7 +445,7 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
   </div>
 </section>
 
-<section class="forest">
+<section class="dokidoki forest">
   <div class="l-container">
     <div class="l-section-title">
       <%- include('/partials/heading', {
@@ -448,12 +458,12 @@ DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません
     </div>
   </div>
     
-  <div class="swiper-container slider dokidoki-wrapper">
-    <ul class="swiper-wrapper slider-wrapper dokidoki-container">
+  <div class="swiper-container slider">
+    <ul class="swiper-wrapper swiper-wrapper-dokidoki-forest">
       <%
         forest.forEach(item => {
       %>
-      <li class="swiper-slide slider-item dokidoki-item">
+      <li class="swiper-slide slider-item">
         <div class="slide-image">
           <img src="<%- item.src -%>" alt="<%- item.alt -%>">
         </div>

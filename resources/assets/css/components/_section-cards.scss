@@ -2,10 +2,13 @@
   list-style: none;
   display: flex;
   margin: 42px -10px 0;
+  position: relative;
+  z-index: $z-min;
 }
 
 .section-cards-image-wrap {
   position: relative;
+  display: block;
 }
 
 .section-cards-item {

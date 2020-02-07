@@ -4,17 +4,20 @@
       'category': 'ATHLETIC',
       'image': mix('/assets/images/top/mobi-park/img1.jpg'),
       'title': '巨大ネットの森 SUMIKA',
+      'url': '#'
     },
     {
       'category': 'ATHLETIC',
       'image': mix('/assets/images/top/mobi-park/img2.jpg'),
       'title': '森感覚アスレチック DOKIDOKI',
+      'url': '#'
     },
     {
       'category': 'CAR & BIKE',
       'image': mix('/assets/images/top/mobi-park/img3.jpg'),
       'title': 'クルマ＆バイクのアトラクション',
-    },
+      'url': '#'
+    }
   ]
 %>
 <div class="section-inner">
@@ -30,11 +33,13 @@
           sectionMobiParkCards.forEach( card => {
         %>
         <li class="section-cards-item">
-          <div class="section-cards-image-wrap image-border">
-            <span class="section-cards-category"><%- card.category %></span>
-            <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
-          </div>
-          <p class="section-cards-title"><%- card.title %></p>
+          <a href="<%- card.url %>" class="section-card-link">
+            <div class="section-cards-image-wrap image-border">
+              <span class="section-cards-category"><%- card.category %></span>
+              <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+            </div>
+            <p class="section-cards-title"><%- card.title %></p>
+          </a>
         </li>
         <%
           })

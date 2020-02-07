@@ -167,6 +167,21 @@ recommend = [
   'heading': '迷宮森殿ITADAKI',
   'buttonLink': '#',
 },
+{
+  'image': mix('/assets/images/top/how-to/img2.jpg'),
+  'heading': '森感覚アスレチックDOKIDOKI',
+  'buttonLink': '#',
+},
+{
+  'image': mix('/assets/images/top/how-to/img3.jpg'),
+  'heading': '迷宮森殿ITADAKI',
+  'buttonLink': '#',
+},
+{
+  'image': mix('/assets/images/top/how-to/img1.jpg'),
+  'heading': '巨大ネットの森SUMIKA',
+  'buttonLink': '#',
+},
 ]
 %>
 
@@ -550,20 +565,20 @@ recommend = [
       'subtextvg': 'recommend'
     }) %>
   </div>
-  <div class="l-container">
-    <ul class="feature-list feature-list-no-design">
-      <% recommend.forEach(item => { %>
-      <li class="feature-item">
-        <%- include('/partials/article-no-design', {
-          'image': item.image,
-          'heading': item.heading,
-          'buttonLink': item.buttonLink,
-          'buttonText': 'モビパーク'
-        }) %>
-      </li>
-      <% }) %>
-    </ul>
-  </div>
+    <div class="swiper-container slider">
+      <ul class="swiper-wrapper slider-wrapper">
+        <% recommend.forEach(item => { %>
+        <li class="swiper-slide slider-item">
+          <%- include('/partials/article-no-design', {
+            'image': item.image,
+            'heading': item.heading,
+            'buttonLink': item.buttonLink,
+            'buttonText': 'モビパーク'
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
 </section>
 
 <section class="sumika-pick-up">

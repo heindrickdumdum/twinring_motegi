@@ -1,20 +1,23 @@
 <%
   sectionMotoSportsCards = [
     {
-      'category': 'ATHLETIC',
+      'category': 'WATCHING',
       'image': mix('/assets/images/top/motosports/img1.jpg'),
       'title': 'MotoGPTM',
+      'url': '#'
     },
     {
-      'category': 'ATHLETIC',
+      'category': 'DRIVING',
       'image': mix('/assets/images/top/motosports/img2.jpg'),
       'title': 'CIRCUIT RUN',
+      'url': '#'
     },
     {
-      'category': 'CAR & BIKE',
+      'category': 'DRIVING',
       'image': mix('/assets/images/top/motosports/img3.jpg'),
       'title': 'ファミリーで楽しむ',
-    },
+      'url': '#'
+    }
   ]
 %>
 
@@ -31,11 +34,13 @@
           sectionMotoSportsCards.forEach( card => {
         %>
         <li class="section-cards-item">
-          <div class="section-cards-image-wrap image-border">
-            <span class="section-cards-category"><%- card.category %></span>
-            <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
-          </div>
-          <p class="section-cards-title"><%- card.title %></p>
+          <a href="<%- card.url %>" class="section-card-link">
+            <div class="section-cards-image-wrap image-border">
+              <span class="section-cards-category"><%- card.category %></span>
+              <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+            </div>
+            <p class="section-cards-title"><%- card.title %></p>
+          </a>
         </li>
         <%
           })

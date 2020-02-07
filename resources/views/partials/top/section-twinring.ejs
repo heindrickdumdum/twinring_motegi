@@ -4,17 +4,20 @@
       'category': 'STAY',
       'image': mix('/assets/images/top/mobi-park/img1.jpg'),
       'title': 'グランピング',
+      'url': '#'
     },
     {
       'category': 'BBQ',
       'image': mix('/assets/images/top/mobi-park/img2.jpg'),
       'title': 'ホテルシェフこだわり食材のBBQ',
+      'url': '#'
     },
     {
       'category': 'ACTIVITY',
       'image': mix('/assets/images/top/mobi-park/img3.jpg'),
       'title': '星空観望',
-    },
+      'url': '#'
+    }
   ]
 %>
 
@@ -31,11 +34,13 @@
           sectionTwinringCards.forEach( card => {
         %>
         <li class="section-cards-item">
-          <div class="section-cards-image-wrap image-border">
-            <span class="section-cards-category"><%- card.category %></span>
-            <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
-          </div>
-          <p class="section-cards-title"><%- card.title %></p>
+          <a href="<%- card.url %>" class="section-card-link">
+            <div class="section-cards-image-wrap image-border">
+              <span class="section-cards-category"><%- card.category %></span>
+              <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+            </div>
+            <p class="section-cards-title"><%- card.title %></p>
+          </a>
         </li>
         <%
           })

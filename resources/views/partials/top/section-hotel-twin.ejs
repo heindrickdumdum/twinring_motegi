@@ -38,64 +38,62 @@
   ]
 %>
 
-<section class="section">
-  <div class="section-inner">
-    <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/hotel-twin/bg.jpg') %>);">
-      <img class="section-image-logo section-image-logo-hotel-twin" src="<%= mix('/assets/images/top/hotel-twin/logo.png') %>" alt="twin Ring">
-    </div>
-    <div class="l-container">
-      <div class="section-contents">
-        <p class="section-contents-copy">満天の星空のもとでバーベキュー、鳥のさえずりを聞きながら朝を迎える。<br>心地よい森の中で極上のアウトドア体験をお楽しみください。</p>
-
-        <ul class="section-cards">
-          <%
-            sectionHotelTwinCards.forEach( card => {
-          %>
-          <li class="section-cards-item">
-            <div class="section-cards-image-wrap image-border">
-              <span class="section-cards-category"><%- card.category %></span>
-              <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
-            </div>
-            <p class="section-cards-title"><%- card.title %></p>
-          </li>
-          <%
-            })
-          %>
-        </ul>
-
-        <div class="section-button">
-          <%- include('/partials/button', {
-            'modifier': '',
-            'text': 'もっと見る',
-            'link': '#'
-          }) %>
-        </div>
-      </div>
-    </div>
+<div class="section-inner">
+  <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/hotel-twin/bg.jpg') %>);">
+    <img class="section-image-logo section-image-logo-hotel-twin" src="<%= mix('/assets/images/top/hotel-twin/logo.png') %>" alt="twin Ring">
   </div>
+  <div class="l-container">
+    <div class="section-contents">
+      <p class="section-contents-copy">満天の星空のもとでバーベキュー、鳥のさえずりを聞きながら朝を迎える。<br>心地よい森の中で極上のアウトドア体験をお楽しみください。</p>
 
-  <div class="block-image">
-    <div class="l-container">
-      <ul class="block-image-list">
+      <ul class="section-cards">
         <%
-          hotelTwinBlockImage.forEach( block => {
+          sectionHotelTwinCards.forEach( card => {
         %>
-        <li class="block-image-item image-border <%- block.modifier %>">
-          <a href="<%- block.url %>" class="block-image-item-link">
-            <div class="block-image-inner" style="background-image: url(<%- block.bg %>);">
-              <div class="block-image-text-wrap">
-                <p class="block-image-text">
-                  <img src="<%- block.title %>" alt="<%- block.title %>">
-                  <span class="block-image-subtext"><%- block.subtext %></span>
-                </p>
-              </div>
-            </div>
-          </a>
+        <li class="section-cards-item">
+          <div class="section-cards-image-wrap image-border">
+            <span class="section-cards-category"><%- card.category %></span>
+            <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+          </div>
+          <p class="section-cards-title"><%- card.title %></p>
         </li>
         <%
           })
         %>
       </ul>
+
+      <div class="section-button">
+        <%- include('/partials/button', {
+          'modifier': '',
+          'text': 'もっと見る',
+          'link': '#'
+        }) %>
+      </div>
     </div>
   </div>
-</section>
+</div>
+
+<div class="block-image">
+  <div class="l-container">
+    <ul class="block-image-list">
+      <%
+        hotelTwinBlockImage.forEach( block => {
+      %>
+      <li class="block-image-item image-border <%- block.modifier %>">
+        <a href="<%- block.url %>" class="block-image-item-link">
+          <div class="block-image-inner" style="background-image: url(<%- block.bg %>);">
+            <div class="block-image-text-wrap">
+              <p class="block-image-text">
+                <img src="<%- block.title %>" alt="<%- block.title %>">
+                <span class="block-image-subtext"><%- block.subtext %></span>
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <%
+        })
+      %>
+    </ul>
+  </div>
+</div>

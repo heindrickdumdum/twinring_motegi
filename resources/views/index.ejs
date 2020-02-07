@@ -79,7 +79,7 @@
   ]
 
   informationContent = [
-    content1 = [
+    [
       {
         'text': '9月の「森あそび」・「ものづくり」プログラムを更新',
         'category': 'アトラクション・アクティビティ',
@@ -101,7 +101,7 @@
         'time': '2019.01.10',
       }
     ],
-    content2 = [
+    [
       {
         'text': '新アトラクション「巨大ネットの森 SUMIKA」オープン！',
         'category': 'アトラクション・アクティビティ',
@@ -153,7 +153,7 @@
   <div class="l-container mv-container">
     <h2 class="mv-heading">
       <span class="mv-heading-text">
-        <img src="<%= mix('/assets/images/mv-twinring-motegi.png') %>" alt="Twinring Motegi">
+        Twin ring Motegi
       </span>
       <span class="mv-heading-subtext">
         <img src="<%= mix('/assets/images/mv-heading.svg') %>" alt="家族にちょうどいい冒険を">
@@ -202,7 +202,7 @@
 </div>
 
 <div class="l-parkmap">
-  <section class="parkmap">
+  <div class="parkmap">
     <div class="l-container parkmap-container">
       <%- include('/partials/heading', {
         'modifier': 'heading-wrap-parkmap',
@@ -251,31 +251,31 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 
-<div class="l-section">
+<section class="l-section">
   <%- include('/partials/top/section-activity') -%>
-</div>
+</section>
 
-<div class="l-section">
+<section class="l-section">
   <%- include('/partials/top/section-mobi-park') -%>
-</div>
+</section>
 
-<div class="l-section">
+<section class="l-section">
   <%- include('/partials/top/section-motosports') -%>
-</div>
+</section>
 
-<div class="l-section">
+<section class="l-section">
   <%- include('/partials/top/section-twinring') -%>
-</div>
+</section>
 
-<div class="l-section">
+<section class="l-section">
   <%- include('/partials/top/section-hotel-twin') -%>
-</div>
+</section>
 
-<div class="l-how-to l-container">
-  <section class="how-to">
+<section class="l-how-to l-container">
+  <div class="how-to">
     <%- include('/partials/heading', {
       'modifier': 'heading-wrap-how-to heading-wrap-center',
       'text': mix('/assets/images/top/how-to/how-to-enjoy.png'),
@@ -298,8 +298,8 @@
       </li>
       <% }) %>
     </ul>
-  </section>
-</div>
+  </div>
+</section>
 
 <section class="information">
   <div class="l-container information-container">

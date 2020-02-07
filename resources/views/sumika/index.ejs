@@ -1,190 +1,8 @@
-
 <%
   var title = 'Twin Ring Motegi'
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
-
-
-
-<% 
-
-
-    pickup = [
-      {
-        'image': mix('/assets/images/top/feature/img1.jpg'),
-        'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
-        'date': '2019.11.02 〜 2019.11.03',
-        'link': '#',
-        },
-      {
-        'image': mix('/assets/images/top/feature/img2.jpg'),
-        'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
-        'date': '2019.11.02 〜 2019.11.03',
-        'link': '#',
-      },
-      {
-        'image': mix('/assets/images/top/feature/img3.jpg'),
-        'heading': 'モトレーサー タイムアタック選手権2019予選',
-        'date': '2019.11.02 〜 2019.11.03',
-        'link': '#',
-      },
-      {
-        'image': mix('/assets/images/top/feature/img3.jpg'),
-        'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
-        'date': '2019.11.02 〜 2019.11.03',
-        'link': '#',
-      }
-    
-    ]
-
-    instagram = [
-      {
-        'image': mix('/assets/images/sumika/net-sumika/insta-1.png'),
-        'alt' : ''
-      },
-      {
-        'image': mix('/assets/images/sumika/net-sumika/insta-2.jpg'),
-        'alt' : ''
-      },
-      {
-        'image': mix('/assets/images/sumika/net-sumika/insta-3.jpg'),
-        'alt' : ''
-      },
-      {
-        'image': mix('/assets/images/sumika/net-sumika/insta-4.jpg'),
-        'alt' : ''
-      },
-      {
-        'image': mix('/assets/images/sumika/net-sumika/insta-5.jpg'),
-        'alt' : ''
-      },
-      {
-        'image': mix('/assets/images/sumika/net-sumika/insta-6.jpg'),
-        'alt' : ''
-      },
-      {
-        'image': mix('/assets/images/sumika/net-sumika/insta-7.jpg'),
-        'alt' : ''
-      },
-      {
-        'image': mix('/assets/images/sumika/net-sumika/insta-8.jpg'),
-        'alt' : ''
-      },
-      {
-        'image': mix('/assets/images/sumika/net-sumika/insta-9.jpg'),
-        'alt' : ''
-      },
-      {
-        'image': mix('/assets/images/sumika/net-sumika/insta-10.jpg'),
-        'alt' : ''
-      }
-    ] 
-%>
-<%
-accordionData = [
-      {
-        question: '小さい子どもが遊べますか？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '所要時間は？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '以下に記載している方はご利用をご遠慮ください。',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'トイレ・授乳室について ',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '荷物はどこに置けばいいですか？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '飲食物の持ち込みは？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'カメラについて',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'ベビーカーについて',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      
-    ]
-%>
-
-<% 
-recommend = [
-{
-  'image': mix('/assets/images/top/how-to/img1.jpg'),
-  'heading': '巨大ネットの森SUMIKA',
-  'buttonLink': '#',
-},
-{
-  'image': mix('/assets/images/top/how-to/img2.jpg'),
-  'heading': '森感覚アスレチックDOKIDOKI',
-  'buttonLink': '#',
-},
-{
-  'image': mix('/assets/images/top/how-to/img3.jpg'),
-  'heading': '迷宮森殿ITADAKI',
-  'buttonLink': '#',
-},
-{
-  'image': mix('/assets/images/top/how-to/img2.jpg'),
-  'heading': '森感覚アスレチックDOKIDOKI',
-  'buttonLink': '#',
-},
-{
-  'image': mix('/assets/images/top/how-to/img3.jpg'),
-  'heading': '迷宮森殿ITADAKI',
-  'buttonLink': '#',
-},
-{
-  'image': mix('/assets/images/top/how-to/img1.jpg'),
-  'heading': '巨大ネットの森SUMIKA',
-  'buttonLink': '#',
-},
-]
-%>
-
+<% include('./../partials/data/index') %>
 <%- include('./../partials/head', { title }) -%>
 
 <div class="mv-sumika">
@@ -405,11 +223,11 @@ recommend = [
  <section class="sumika-video l-container">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-sumika',
-      'text': mix('/assets/images/sumika/sumika_videos.png'),
-      'alt': 'sumika videos',
-      'subtextvg': 'video-sumika',
-      'altSubtext': '',
+      modifier: 'heading-sumika',
+      text: mix('/assets/images/sumika/sumika_videos.png'),
+      alt: 'sumika videos',
+      subtextvg: 'video-sumika',
+      altSubtext: '',
     }) %>
   </div>
   <div class="sumika-video-content">
@@ -439,11 +257,11 @@ recommend = [
     <div class="sumika-inner">
       <div class="sumika-inner-content">
         <%- include('/partials/heading', {
-          'modifier': 'heading-net-sumika',
-          'text': mix('/assets/images/sumika/net-sumika.png'),
-          'alt': '巨大ネットの森SUMIKA',
-          'altSubtext': '',
-          'subtextvg': ''
+          modifier: 'heading-net-sumika',
+          text: mix('/assets/images/sumika/net-sumika.png'),
+          alt: '巨大ネットの森SUMIKA',
+          altSubtext: '',
+          subtextvg: ''
         }) %>
         <div class="sumika-instagram-content">
           <ul class="sumika-instagram-list">
@@ -458,9 +276,9 @@ recommend = [
         </div>
         <div class="l-button">
           <%- include('/partials/button', {
-            'modifier': 'button-sumika',
-            'text': 'インスタグラムでもっと見る',
-            'link': '#'
+            modifier: 'button-sumika',
+            text: 'インスタグラムでもっと見る',
+            link: '#'
           }) %>
         </div>
         <div class="sumika-instagram-banner">
@@ -476,14 +294,16 @@ recommend = [
 <section class="sumika-faq">
   <div class="l-container">
     <div class="sumika-faq-inner">
+
       <%- include('/partials/heading', {
-        'modifier': 'heading-sumika-faq',
-        'text': mix('/assets/images/sumika/faq.png'),
-        'alt': 'faq',
-        'subtextvg': 'faq',
-        'altSubtext': '',
+        modifier: 'heading-sumika-faq',
+        text: mix('/assets/images/sumika/faq.png'),
+        alt: 'faq',
+        subtextvg: 'faq',
+        altSubtext: ''
       }) %>
-      <% accordionData.forEach(data => { %>
+
+      <% getData().data.accordionData.forEach(data => { %>
       <div class="accordion">
         <div class="accordion-inner">
           <button class="accordion-btn js-accordion-btn" type="button">
@@ -511,10 +331,10 @@ recommend = [
     <div class="call-to-action-wrapper">
       <div class="call-to-action-inner">
         <%- include('/partials/heading', {
-          'modifier': 'heading-net-sumika',
-          'text': mix('/assets/images/sumika/sumika-cta.png'),
-          'alt': 'SUMIKAをもっと楽しむ',
-          'altSubtext': '',
+          modifier: 'heading-net-sumika',
+          text: mix('/assets/images/sumika/sumika-cta.png'),
+          alt: 'SUMIKAをもっと楽しむ',
+          altSubtext: '',
           'subtext': ''
         }) %>
         <div class="call-to-action-description">
@@ -525,9 +345,9 @@ recommend = [
         </div>
         <div class="l-button l-button-call-to-action">
           <%- include('/partials/button', {
-            'modifier': 'button-sumika',
-            'text': 'もっと見る',
-            'link': '#'
+            modifier: 'button-sumika',
+            text: 'もっと見る',
+            link: '#'
           }) %>
         </div>
         <span class="call-to-action-dot call-to-action-dot-1">
@@ -549,7 +369,7 @@ recommend = [
 
 <div class="banner-cta">
   <div class="l-container">
-    <div class="banner-cta-inner">
+    <div class="banner-cta-bottom-inner">
       <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
     </div>
   </div>
@@ -558,22 +378,22 @@ recommend = [
 <section class="sumika-recommendation">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-sumika',
-      'text': mix('/assets/images/sumika/recommendation.png'),
-      'alt': 'recommendation',
-      'altSubtext': '',
-      'subtextvg': 'recommend'
+      modifier: 'heading-net-sumika',
+      text: mix('/assets/images/sumika/recommendation.png'),
+      alt: 'recommendation',
+      altSubtext: '',
+      subtextvg: 'recommend'
     }) %>
   </div>
     <div class="swiper-container slider">
       <ul class="swiper-wrapper slider-wrapper">
-        <% recommend.forEach(item => { %>
+        <% getData().data.recommend.forEach(item => { %>
         <li class="swiper-slide slider-item">
           <%- include('/partials/article-no-design', {
-            'image': item.image,
-            'heading': item.heading,
-            'buttonLink': item.buttonLink,
-            'buttonText': 'モビパーク'
+            image: item.image,
+            heading: item.heading,
+            buttonLink: item.buttonLink,
+            buttonText: 'モビパーク'
           }) %>
         </li>
         <% }) %>
@@ -584,24 +404,24 @@ recommend = [
 <section class="sumika-pick-up">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-sumika',
-      'text': mix('/assets/images/sumika/pickup.png'),
-      'alt': 'recommendation',
-      'altSubtext': '',
-      'subtextvg': 'pickup'
+      modifier: 'heading-net-sumika',
+      text: mix('/assets/images/sumika/pickup.png'),
+      alt: 'recommendation',
+      altSubtext: '',
+      subtextvg: 'pickup'
     }) %>
   </div>
   <div class="l-container">
     <ul class="feature-list">
-      <% pickup.forEach(item => { %>
+      <% getData().data.pickup.forEach(item => { %>
       <li class="feature-item">
         <%- include('/partials/article', {
-          'category': item.category,
-          'image': item.image,
-          'heading': item.heading,
-          'date': item.date,
-          'link': item.link,
-          'modifier': 'sumika-recommendation-article'
+          category: item.category,
+          image: item.image,
+          heading: item.heading,
+          date: item.date,
+          link: item.link,
+          modifier: 'sumika-recommendation-article'
         }) %>
       </li>
       <% }) %>

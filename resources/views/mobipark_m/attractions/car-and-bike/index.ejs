@@ -1,0 +1,521 @@
+<%
+dataCategory = [
+{
+  'image': mix('/assets/images/car-and-bike/category-car.png'),
+  'heading': '0歳〜6歳のお子様とのお楽しみ方',
+  'buttonText': '',
+  'buttonLink': '',
+},
+{
+  'image': mix('/assets/images/car-and-bike/category-bike.png'),
+  'heading': '小学校低学年のお子様とのお楽しみ方',
+  'buttonText': '',
+  'buttonLink': '',
+},
+{
+  'image': mix('/assets/images/car-and-bike/category-workshop.png'),
+  'heading': '小学校高学年のお子様とのお楽しみ方',
+  'buttonText': '',
+  'buttonLink': '',
+},
+];
+
+dataCars = [
+  {
+    'image': mix('/assets/images/car-and-bike/car-1.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'アクロエックス',
+    'rowHead': '保護者と',
+    'rowData': '2歳から',
+    'rowHead2': '一人で',
+    'rowData2': '小学3年生以上',
+    'imageTagBg': 'bg-green'
+  },
+  {
+    'image': mix('/assets/images/car-and-bike/car-2.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'おさんぽでんでん',
+    'rowHead': '保護者と',
+    'rowData': 'ひとり座りできる0歳以上',
+    'rowHead2': '一人で',
+    'rowData2': '3歳以上',
+    'imageTagBg': 'bg-green'
+  },
+  {
+    'image': mix('/assets/images/car-and-bike/car-3.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'ワイルドレーサー',
+    'rowHead': '保護者と',
+    'rowData': '3歳以上',
+    'rowHead2': '一人で',
+    'rowData2': '小学1年生以上',
+    'imageTagBg': 'bg-green-2'
+
+  },
+  {
+    'image': mix('/assets/images/car-and-bike/car-4.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': '森の教習所',
+    'rowHead': '保護者と',
+    'rowData': 'ひとり座りできる0歳以上',
+    'rowHead2': '一人で',
+    'rowData2': '5歳以上',
+    'imageTagBg': 'bg-green-2'
+
+  },
+  {
+    'image': mix('/assets/images/car-and-bike/car-5.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'ドリフトS',
+    'rowHead': '一人で',
+    'rowData': '身長135cm以上利用可',
+    'rowHead2': '',
+    'rowData2': '',
+    'imageTagBg': 'bg-green-2'
+  },
+  {
+    'image': mix('/assets/images/car-and-bike/car-6.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'ドリームカート',
+    'rowHead': '一人で',
+    'rowData': '身長135cm以上利用可',
+    'rowHead2': '',
+    'rowData2': '',
+    'imageTagBg': 'bg-green-2'
+  },
+  {
+    'image': mix('/assets/images/car-and-bike/car-7.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'チャレンジカート',
+    'rowHead': '一人で',
+    'rowData': '身長140cm以上の小学4年生で<br/>ライセンス取得可',
+    'rowHead2': '',
+    'rowData2': '',
+    'imageTagBg': 'bg-green-3'
+  },
+  {
+    'image': mix('/assets/images/car-and-bike/car-8.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'アクロエックス',
+    'rowHead': '保護者と',
+    'rowData': '2歳から',
+    'rowHead2': '',
+    'rowData2': '',
+    'imageTagBg': 'bg-green-3'
+  }
+]
+
+
+dataBike = [
+  {
+    'image': mix('/assets/images/car-and-bike/bike-1.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'ぶんぶんスクーター',
+    'rowHead': '一人で',
+    'rowData': '3歳以上',
+    'rowHead2': '',
+    'rowData2': '',
+    'imageTagBg': 'bg-green-4'
+  },
+  {
+    'image': mix('/assets/images/car-and-bike/bike-2.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'モーターサイクルトレーニング',
+    'rowHead': '一人で',
+    'rowData': '3歳以上の補助輪なしで自転車に乗れる方',
+    'rowHead2': '',
+    'rowData2': '',
+    'imageTagBg': 'bg-green-4'
+  },
+  {
+    'image': mix('/assets/images/car-and-bike/bike-3.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'モトツーリング',
+    'rowHead': '一人で',
+    'rowData': '小学3年生以上、もしくはモーターサイクルトレーニングでBライセンス取得の3歳以上',
+    'rowHead2': '',
+    'rowData2': '',
+    'imageTagBg': 'bg-green-4'
+  },
+  {
+    'image': mix('/assets/images/car-and-bike/bike-4.jpg'),
+    'imageTag': 'モトレーサー',
+    'itemName': 'ぶんぶんスクーター',
+    'rowHead': '一人で',
+    'rowData': '小学3年生以上、もしくはモトツーリングでAライセンス取得の小学1年生以上',
+    'rowHead2': '',
+    'rowData2': '',
+    'imageTagBg': 'bg-green-4'
+  }
+]
+
+dataWorkshop = [
+  {
+    'image': mix('/assets/images/car-and-bike/workshop-1.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'ピット工房組み立て',
+    'rowHead': '一人で',
+    'rowData': '全年齢対象※走行は身長100cm以上から可',
+    'rowHead2': '',
+    'rowData2': '',
+    'imageTagBg': 'bg-green-5'
+  },
+  {
+    'image': mix('/assets/images/car-and-bike/workshop-2.jpg'),
+    'imageTag': 'モビパークパスポート対象',
+    'itemName': 'NANONANOアクセサリー',
+    'rowHead': '一人で',
+    'rowData': '要確認',
+    'rowHead2': '',
+    'rowData2': '',
+    'imageTagBg': 'bg-green-5'
+  }
+]
+
+dataRecommendation = [
+{
+  'image': mix('http://via.placeholder.com/480x280'),
+  'heading': '巨大ネットの森SUMIKA',
+  'buttonText': 'モデルコース',
+  'buttonLink': '#',
+},
+{
+  'image': mix('http://via.placeholder.com/480x280'),
+  'heading': '森感覚アスレチックDOKIDOKI',
+  'buttonText': 'モデルコース',
+  'buttonLink': '#',
+},
+{
+  'image': mix('http://via.placeholder.com/480x280'),
+  'heading': '迷宮森殿ITADAKI',
+  'buttonText': 'モデルコース',
+  'buttonLink': '#',
+},
+]
+
+
+
+
+%>
+<%- include('/partials/head', { title }) -%>
+
+
+<div class="car-and-bike">
+  <div class="mv-car-and-bike">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="u-show-pc mv-image" style="background-image:url(<%= mix('http://via.placeholder.com/1440x650') %>);"></div>
+        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/car-and-bike/sp-mv.png') %>);"></div>
+      </li>
+    </ul>
+
+    <div class="l-container mv-container">
+      <h2 class="mv-heading">
+        <span class="mv-heading-texts">
+          <svg>
+            <title>Car</title>
+            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-text') %>"></use>
+          </svg>
+        </span>
+        <span class="mv-heading-subtexts">
+          <svg>
+            <title>Car</title>
+            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-subtext') %>"></use>
+          </svg>
+        </span>
+      </h2>
+
+      <div class="u-show-pc mv-today mv-logo">
+        <div class="mv-l-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="how-to-enjoy">
+    <div class="l-container">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-dokidoki',
+          'text': mix('/assets/images/car-and-bike/how-to-enjoy.png'),
+          'alt': '',
+          'subtext': '',
+          'altSubtext': ''
+        }) %>
+      </div>
+
+      <div class="how-to-content">
+        <div class="media u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-1.png') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              <span>のりもののアトラクション</span><br>
+              <span>でも「森」をイメージ</span>
+            </h4>
+            <p class="media-desc">
+              森をイメージしているアトラクションは、SUMIKA・DOKIDOKI・ITADAKIだけではありません。車やバイクののりもののアトラクションでも森をイメージしています。森のやさしく、あたたかい雰囲気のながで楽しくのびのび遊べます。
+            </p>
+
+          </div>
+        </div>
+        <div class="media u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-2.png') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              <span>3歳からひとりで運転できる</span><br>
+              <span>操る喜びを実感できるアトラクション</span>
+            </h4>
+            <p class="media-desc">
+              ツインリンクもてぎには、3歳のお子様でもひとりで運転できるようなアトラクションがたくさんあります。<br>
+  お子様にとってはこれまで体験したことがない、はじめての「操る喜び」を実感できます。
+            </p>
+        
+          </div>
+        </div>
+        <div class="media u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-3.png') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              <span>何度でも挑戦したくなるしくみや仕掛け</span>
+            </h4>
+            <p class="media-desc">
+              いくつかのアトラクションには、点数や走行タイム、順位でランクがつく仕掛けを用意しています。ランクアップを目指して何度も遊びたくたくなるのが、ツインリンクもてぎのアトラクションの魅力です。
+  アトラクションが終わった後には、自分の写真入りのライセンスカードをつくることができます。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="attaction-category l-how-to l-container">
+    <section class="">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'text': mix('/assets/images/car-and-bike/attraction-category.png'),
+        'alt': 'How to Enjoy',
+        'subtextvg': 'car-and-bike-attraction-categories',
+        'altSubtext': '',
+      }) %>
+
+      <ul class="feature-list feature-list-no-design">
+        <%
+          dataCategory.forEach(item => {
+        %>
+        <li class="feature-item">
+          <article class="article article-no-design">
+            <div class="article-image-wrap">
+              <div class="article-image"
+                  style="background-image: url(<% if(item.image != '') { %>
+                    <%- item.image %>
+                    <% } else { %><%= mix('/assets/images/noimage.jpg') %>
+                    <% } %>)"></div>
+            </div>
+          </article>
+        </li>
+        <% }) %>
+      </ul>
+    </section>
+  </div>
+
+  <div class="car-attractions attractions-list l-how-to l-container">
+    <section class="">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'text': mix('/assets/images/car-and-bike/cars-attraction.png'),
+        'alt': 'Cars Category',
+        'subtextvg': '',
+        'altSubtext': '',
+      }) %>
+
+      <ul class="feature-list feature-list-no-design">
+        <%
+        dataCars.forEach(item => {
+        %>
+        <li class="feature-item">
+          <article class="article article-no-design">
+            <div class="article-image-wrap">
+              <div class="article-image"
+                  style="background-image: url(<% if(item.image != '') { %>
+                    <%- item.image %>
+                    <% } else { %><%= mix('/assets/images/noimage.jpg') %>
+                    <% } %>)"></div>
+              <div class="image-tag <%- item.imageTagBg %>"><%- item.imageTag %></div>
+            </div>
+            <div class="item-name"><%- item.itemName %></div>
+            <table class="table">
+              <tbody>
+                <tr class="table-row">
+                  <th class="table-head"><%- item.rowHead %></th>
+                  <td class="table-col">
+                    <%- item.rowData %>
+                  </td>
+                </tr>
+                <% if(item.rowHead2 != '') { %>  
+                <tr class="table-row">
+                  <th class="table-head"><%- item.rowHead2 %></th>
+                  <td class="table-col">
+                    <%- item.rowData2 %>
+                  </td>
+                </tr>
+                <% } %>
+      
+              </tbody>
+            </table>
+          </article>
+        </li>
+        <% }) %>
+      </ul>
+    </section>
+  </div>
+
+  <div class="bike-attractions attractions-list l-how-to l-container">
+    <section class="">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'text': mix('/assets/images/car-and-bike/bike-attraction.png'),
+        'alt': 'Cars Category',
+        'subtextvg': '',
+        'altSubtext': '',
+      }) %>
+
+      <ul class="feature-list feature-list-no-design">
+        <%
+        dataBike.forEach(item => {
+        %>
+        <li class="feature-item">
+          <article class="article article-no-design">
+            <div class="article-image-wrap">
+              <div class="article-image"
+                  style="background-image: url(<% if(item.image != '') { %>
+                    <%- item.image %>
+                    <% } else { %><%= mix('/assets/images/noimage.jpg') %>
+                    <% } %>)"></div>
+              <div class="image-tag <%- item.imageTagBg %>"><%- item.imageTag %></div>
+            </div>
+            <div class="item-name"><%- item.itemName %></div>
+            <table class="table">
+              <tbody>
+                <tr class="table-row">
+                  <th class="table-head"><%- item.rowHead %></th>
+                  <td class="table-col">
+                    <%- item.rowData %>
+                  </td>
+                </tr>
+                <% if(item.rowHead2 != '') { %>  
+                <tr class="table-row">
+                  <th class="table-head"><%- item.rowHead2 %></th>
+                  <td class="table-col">
+                    <%- item.rowData2 %>
+                  </td>
+                </tr>
+                <% } %>
+      
+              </tbody>
+            </table>
+          </article>
+        </li>
+        <% }) %>
+      </ul>
+    </section>
+  </div>
+
+  <div class="workshop-attractions attractions-list l-how-to l-container">
+    <section class="">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'text': mix('/assets/images/car-and-bike/workshop-attraction.png'),
+        'alt': 'Cars Category',
+        'subtextvg': '',
+        'altSubtext': '',
+      }) %>
+
+      <ul class="feature-list feature-list-no-design">
+        <%
+        dataWorkshop.forEach(item => {
+        %>
+        <li class="feature-item">
+          <article class="article article-no-design">
+            <div class="article-image-wrap">
+              <div class="article-image"
+                  style="background-image: url(<% if(item.image != '') { %>
+                    <%- item.image %>
+                    <% } else { %><%= mix('/assets/images/noimage.jpg') %>
+                    <% } %>)"></div>
+              <div class="image-tag <%- item.imageTagBg %>"><%- item.imageTag %></div>
+            </div>
+            <div class="item-name"><%- item.itemName %></div>
+            <table class="table">
+              <tbody>
+                <tr class="table-row">
+                  <th class="table-head"><%- item.rowHead %></th>
+                  <td class="table-col">
+                    <%- item.rowData %>
+                  </td>
+                </tr>
+                <% if(item.rowHead2 != '') { %>  
+                <tr class="table-row">
+                  <th class="table-head"><%- item.rowHead2 %></th>
+                  <td class="table-col">
+                    <%- item.rowData2 %>
+                  </td>
+                </tr>
+                <% } %>
+      
+              </tbody>
+            </table>
+          </article>
+        </li>
+        <% }) %>
+      </ul>
+    </section>
+  </div>
+
+  <div class="recommendation l-how-to l-container">
+    <section class="how-to">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'text': mix('/assets/images/tsubasa/Recommendation.png'),
+        'alt': 'How to Enjoy',
+        'subtextvg': 'how-to-subtext',
+        'altSubtext': '',
+      }) %>
+
+      <ul class="feature-list feature-list-no-design">
+        <%
+        dataRecommendation.forEach(item => {
+        %>
+        <li class="feature-item">
+          <%- include('/partials/article-no-design', {
+            'image': item.image,
+            'heading': item.heading,
+            'buttonText': item.buttonText,
+            'buttonLink': item.buttonLink,
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </section>
+  </div>
+
+</div>
+<%- include('/partials/footer') -%>

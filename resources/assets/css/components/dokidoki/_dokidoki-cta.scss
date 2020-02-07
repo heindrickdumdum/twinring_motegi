@@ -1,0 +1,91 @@
+.dokidoki-cta {
+  text-align: center;
+  margin: 110px 0 80px;
+}
+
+.dokidoki-cta-wrapper {
+  padding: 0 100px;
+}
+
+.dokidoki-cta-inner {
+  position: relative;
+  padding: 40px;
+  
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url(#{$image-path}sumika/frame-sm.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    background-image: url(#{$image-path}sumika/green-dots.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 22px;
+    left: 33px;
+    right: 23px;
+    bottom: 39px;
+  }
+
+}
+
+.dokidoki-cta-description-text {
+  font-size: 15px;
+  line-height: 1.667;
+  margin-top: 20px;
+}
+
+.dokidoki-cta-dot {
+  position: absolute;
+}
+
+.dokidoki-cta-dot-1 {
+  left: -40px;
+  bottom: -30px;
+}
+
+.dokidoki-cta-dot-2 {
+  top: -19px;
+  left: 128px;
+}
+
+.dokidoki-cta-dot-3 {
+  bottom: -30px;
+  right: 135px;
+}
+
+.dokidoki-cta-dot-4 {
+  top: -28px;
+  right: -27px;
+}
+
+.dokidoki-cta-bottom {
+  margin: 180px 0;
+  position: relative;
+  text-align: center;
+  z-index: $z-max;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $color-light-gray;
+    top: 99px;
+    left: 0;
+    right: 0;
+    bottom: -126px;
+    z-index: 1;
+  }
+}
+
+.dokidoki-cta-bottom-inner {
+  position: relative;
+  z-index: $z-max;
+}

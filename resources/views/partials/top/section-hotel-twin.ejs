@@ -24,7 +24,7 @@
       'bg': mix('/assets/images/top/hotel-twin/block-img1.jpg'),
       'title': mix('/assets/images/top/hotel-twin/restaurant.png'),
       'alt': 'Restaurant',
-      'subtexts': 'レストラン',
+      'subtext': 'レストラン',
       'url': '#',
     },
     {
@@ -32,7 +32,7 @@
       'bg': mix('/assets/images/top/hotel-twin/block-img2.jpg'),
       'title': mix('/assets/images/top/hotel-twin/goods-shop.png'),
       'alt': 'Goods & Shop',
-      'subtexts': 'グッズ & ショップ',
+      'subtext': 'グッズ & ショップ',
       'url': '#',
     }
   ]
@@ -66,7 +66,7 @@
         <div class="section-button">
           <%- include('/partials/button', {
             'modifier': '',
-            'texts': 'もっと見る',
+            'text': 'もっと見る',
             'link': '#'
           }) %>
         </div>
@@ -83,10 +83,10 @@
         <li class="block-image-item image-border <%- block.modifier %>">
           <a href="<%- block.url %>" class="block-image-item-link">
             <div class="block-image-inner" style="background-image: url(<%- block.bg %>);">
-              <div class="block-image-texts-wrap">
-                <p class="block-image-texts">
+              <div class="block-image-text-wrap">
+                <p class="block-image-text">
                   <img src="<%- block.title %>" alt="<%- block.title %>">
-                  <span class="block-image-subtexts"><%- block.subtexts %></span>
+                  <span class="block-image-subtext"><%- block.subtext %></span>
                 </p>
               </div>
             </div>

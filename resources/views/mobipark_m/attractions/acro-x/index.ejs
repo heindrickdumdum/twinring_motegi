@@ -1,0 +1,447 @@
+<%
+  var title = 'Twin Ring Motegi'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+%>
+
+<%
+  instaData = [
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    },
+    {
+      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
+      'alt': 'insta thumbnail'
+    }
+  ]
+%>
+
+<%
+accordionData = [
+      {
+        question: '小さい子どもが遊べますか？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '所要時間は？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '以下に記載している方はご利用をご遠慮ください。',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: 'トイレ・授乳室について ',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '荷物はどこに置けばいいですか？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: '飲食物の持ち込みは？',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: 'カメラについて',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      {
+        question: 'ベビーカーについて',
+        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
+                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
+                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
+                    は3～6歳のお子様限定のエリアです。<br>
+                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
+      },
+      
+    ]
+%>
+
+<%
+  recommend = [
+    {
+      'image': mix('/assets/images/top/how-to/img1.jpg'),
+      'heading': '巨大ネットの森SUMIKA',
+      'buttonLink': '#',
+    },
+    {
+      'image': mix('/assets/images/top/how-to/img2.jpg'),
+      'heading': '森感覚アスレチックDOKIDOKI',
+      'buttonLink': '#',
+    },
+    {
+      'image': mix('/assets/images/top/how-to/img3.jpg'),
+      'heading': '迷宮森殿ITADAKI',
+      'buttonLink': '#',
+    }
+  ]
+%>
+
+<%
+  pickup = [
+    {
+      'image': mix('/assets/images/dokidoki/feature/img1.png'),
+      'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+      },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img2.png'),
+      'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img3.png'),
+      'heading': 'モトレーサー タイムアタック選手権2019予選',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    },
+    {
+      'image': mix('/assets/images/dokidoki/feature/img4.png'),
+      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
+      'date': '2019.11.02 〜 2019.11.03',
+      'link': '#',
+    }
+  ]
+%>
+
+<%- include('/partials/head', { title }) -%>
+
+<div class="mv-acro-x">
+  <ul class="mv-list">
+    <li class="mv-item">
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/acro-x/mv-img.png') %>);"></div>
+    </li>
+  </ul>
+</div>
+
+<section class="main-content">
+  <div class="l-container">
+    <div class="heading-wrap heading-acro-x">
+      <h2 class="heading">
+        <span class="heading-texts">
+          <img src="<%= mix('/assets/images/acro-x/acro-x-title.png') %>" alt="acro-x">
+        </span>
+      </h2>
+    </div>
+
+    <!-- YOUTUBE -->
+    <div class="l-youtube">
+      <section class="youtube">
+        <div class="youtube-iframe-container">
+          <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+    </div>
+
+    <h3 class="attraction-title">
+      <img src="<%- mix('/assets/images/acro-x/attraction-title.png') %>" alt="acro-x">
+    </h3>
+
+    <p class="attraction-subtext">
+      凸凹道、坂道、水の中など、どんな道も走行できるハイパワーマシンをみんなで協力しながら運転して100点満点を目指そう！
+    </p>
+
+    <table class="table">
+      <tbody>
+        <tr class="table-row">
+          <th class="table-head">場所</th>
+          <td class="table-col">モビパーク内</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">所要時間</th>
+          <td class="table-col">約5分
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">雨天の運行</th>
+          <td class="table-col">雨天でも営業いたしております。
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">対象者</th>
+          <td class="table-col">2歳以上※1
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">身長制限</th>
+          <td class="table-col">なし</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">料金</th>
+          <td class="table-col">
+            モビパークパスポート対象<br>
+アトラクションチケット利用：500円
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">ご利用にあたって</th>
+          <td class="table-col">
+            ※1 2歳から小学校2年生までの方：<br>
+2歳から小学校2年生までのお子さまは、中学生以上の付き添いで乗車が可能です。小学校3年生以上のお子さまから、お一人で運転していただけます。
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="how-to-enjoy">
+  <div class="l-container">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-acro-x',
+        'text': mix('/assets/images/acro-x/how-to-enjoy.png'),
+        'alt': 'アクロエックスを楽しむポイント',
+        'subtextvg': 'acro-x-enjoy',
+        'altSubtext': '',
+      }) %>
+    </div>
+
+    <div class="how-to-content">
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <h4 class="media-title"><span>ハイパワーマシンを操って障害物コースを走破！</span></h4>
+          <p class="media-desc">
+            凸凹道や坂道、水の中など全９種類の障害物をハンドル操作とア<br>クセル、ブレーキで上手に走破しよう！
+          </p>
+        </div>
+      </div>
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <h4 class="media-title">
+            <span>
+              運転テクニックを磨いて高得点を目指せ！
+            </span>
+          </h4>
+          <p class="media-desc">
+            障害物をクリアするたびに得点がアップ。スタートからゴ<br>
+            ールまで正確に運転して100点満点を目指そう！
+          </p>
+      
+          <div class="media-bottom">
+            <div class="media-note">
+              <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+              <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+              <div class="media-note-text">
+                どんな道でも <br>
+                上手に乗りこなせタネ！
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="media u-clear">
+        <div class="media-left">
+          <div class="media-bg">
+            <div class="media-thumb">
+              <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="media-right">
+          <h4 class="media-title">
+            気分は探検隊！家族を乗せてみんなで出発
+          </h4>
+          <p class="media-desc">
+            子どもの気分は探検隊のリーダー。家族みんなでワクワク、<br>
+            ドキドキのドライブに出発しよう！
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM -->
+
+<section class="acro-x-cta">
+  <div class="l-container">
+    <div class="acro-x-cta-wrapper">
+      <div class="acro-x-cta-inner">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-net-acro-x',
+          'text': mix('/assets/images/acro-x/acro-x-cta.png'),
+          'alt': 'アクロエックスをもっと楽しむ',
+          'altSubtext': '',
+          'subtextvg': ''
+        }) %>
+        <div class="acro-x-cta-description">
+          <p class="acro-x-cta-description-text">
+            アクロエックスのこだわりポイントや、知っているともっ <br>
+            と楽しくなる情報を配信中しています。
+          </p>
+        </div>
+        <div class="l-button">
+          <%- include('/partials/button', {
+            'modifier': 'button-acro-x',
+            'text': 'もっと見る',
+            'link': '#'
+          }) %>
+        </div>
+        <span class="acro-x-cta-dot acro-x-cta-dot-1">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+        </span>
+        <span class="acro-x-cta-dot acro-x-cta-dot-2">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+        </span>
+        <span class="acro-x-cta-dot acro-x-cta-dot-3">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+        </span>
+        <span class="acro-x-cta-dot acro-x-cta-dot-4">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="acro-x-cta-bottom">
+  <div class="l-container">
+    <div class="acro-x-cta-bottom-inner">
+      <img src="<%= mix('/assets/images/acro-x/cta-bottom.jpg') %>">
+    </div>
+  </div>
+</div>
+
+<section class="acro-x-recommendation">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-net-acro-x',
+      'text': mix('/assets/images/recommendation.png'),
+      'alt': 'recommendation',
+      'altSubtext': '',
+      'subtextvg': 'recommendation-subtext'
+    }) %>
+  </div>
+
+  <div class="l-container">
+    <ul class="feature-list feature-list-no-design">
+      <% recommend.forEach(item => { %>
+      <li class="feature-item">
+        <%- include('/partials/article-no-design', {
+          'image': item.image,
+          'heading': item.heading,
+          'buttonLink': item.buttonLink,
+          'buttonText': 'モビパーク'
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
+
+<section class="acro-x-pick-up">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-net-acro-x',
+      'text': mix('/assets/images/pickup.png'),
+      'alt': 'pickup',
+      'altSubtext': '',
+      'subtextvg': 'pickup'
+    }) %>
+  </div>
+
+  <div class="l-container">
+    <ul class="feature-list">
+      <% pickup.forEach(item => { %>
+      <li class="feature-item">
+        <%- include('/partials/article', {
+          'category': item.category,
+          'image': item.image,
+          'heading': item.heading,
+          'date': item.date,
+          'link': item.link
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>
+<!-- END BOTTOM -->
+
+<%- include('/partials/footer') -%>

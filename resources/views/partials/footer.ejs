@@ -1,27 +1,27 @@
 <%
   footerTopNav = [
     {
-      texts: '営業時間',
+      text: '営業時間',
       link: '#',
       image: mix('/assets/images/icon-time.svg'),
     },
     {
-      texts: '料金・チケット',
+      text: '料金・チケット',
       link: '#',
       image: mix('/assets/images/icon-ticket.svg'),
     },
     {
-      texts: 'よくあるご質問',
+      text: 'よくあるご質問',
       link: '#',
       image: mix('/assets/images/icon-qa.svg'),
     },
     {
-      texts: 'アトラクションの<br>ご利用基準',
+      text: 'アトラクションの<br>ご利用基準',
       link: '#',
       image: mix('/assets/images/icon-tall.svg'),
     },
     {
-      texts: '交通アクセス',
+      text: '交通アクセス',
       link: '#',
       image: mix('/assets/images/icon-car.svg'),
     },
@@ -29,35 +29,35 @@
 
   footerBottomNav = [
     {
-      texts: '会社情報',
+      text: '会社情報',
       link: '#',
     },
     {
-      texts: '広報',
+      text: '広報',
       link: '#',
     },
     {
-      texts: '採用情報',
+      text: '採用情報',
       link: '#',
     },
     {
-      texts: '企業の方へ',
+      text: '企業の方へ',
       link: '#',
     },
     {
-      texts: 'プライバシー',
+      text: 'プライバシー',
       link: '#',
     },
     {
-      texts: 'リーガル',
+      text: 'リーガル',
       link: '#',
     },
     {
-      texts: 'お問い合わせ',
+      text: 'お問い合わせ',
       link: '#',
     },
     {
-      texts: 'アンケート',
+      text: 'アンケート',
       link: '#',
     },
   ]
@@ -74,7 +74,7 @@
           <span class="footer-top-nav-icon">
             <img class="footer-bottom-item-image" src="<%- topLink.image %>" alt="time">
           </span>
-          <span class="footer-top-nav-texts"><%- topLink.texts %></span>
+          <span class="footer-top-nav-text"><%- topLink.text %></span>
         </a>
       </li>
       <% }) %>
@@ -104,7 +104,7 @@
             footerBottomNav.forEach( bottomLink => {
           %>
           <li class="footer-bottom-item">
-            <a class="footer-bottom-link" href="<%- bottomLink.link %>"><%- bottomLink.texts %></a>
+            <a class="footer-bottom-link" href="<%- bottomLink.link %>"><%- bottomLink.text %></a>
           </li>
           <% }) %>
         </ul>
@@ -129,6 +129,8 @@
   </div>
 
   </footer>
+
+  </div> <!-- end of wrap -->
 
   <script src="<%= mix('/assets/js/app.js') %>" async></script>
 </body>

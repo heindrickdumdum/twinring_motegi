@@ -1,0 +1,25 @@
+<% include('./_accordionData') %>
+<% include('./_featureContent') %>
+<% include('./_howTo') %>
+<% include('./_information') %>
+<% include('./_instagram') %>
+<% include('./_parkMap') %>
+<% include('./_pickup') %>
+<% include('./_recommend') %>
+
+<%
+  getData = () => {
+    return {
+      data: {
+        accordionData,
+        featureContent,
+        howTo,
+        information,
+        instagram,
+        parkMap,
+        pickup,
+        recommend
+      }
+    }
+  }
+%>

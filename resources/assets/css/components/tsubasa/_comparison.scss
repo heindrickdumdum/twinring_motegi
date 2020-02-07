@@ -1,0 +1,44 @@
+.comparison {
+  .heading-wrap-comparison {
+    margin-bottom: 45px;
+  }
+  
+  .table-row {
+    border-bottom: 1px solid $color-border-grey;
+
+    &:first-child {border-top: 1px solid $color-border-grey;}
+    .table-head {
+      text-align: center;
+      &:before,&:after {background-image: none;}
+      svg, img {margin-top: 40px;}
+    }
+    .highlighted {
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      color: $color-white;
+
+      &.green {
+        background-color: $color-green;
+      }
+      &.grey {
+        background-color: $color-grey;
+      }
+    }
+  }
+
+  .table-col {
+    vertical-align: middle;
+    &:before {background-image: none;}
+    &:first-child {background-color: $color-light-blue;}
+    &:nth-child(2) {text-align: center;}
+    &:nth-child(3) {background-color: $color-light-green;}
+  }
+  
+  .section-button {
+    .button {
+      float: right;
+    }
+  }
+  
+}

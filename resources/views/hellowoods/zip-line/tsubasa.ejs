@@ -28,12 +28,35 @@
 
 <%- include('/partials/head', { title }) -%>
 <div class="tsubasa-wrapper">
-  <div class="mv ">
+  <div class="mv-tsubasa">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/tsubasa/mv-img.png') %>);"></div>
+        <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/tsubasa/mv-img.png') %>);"></div>
+        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/tsubasa/mv-img.png') %>);"></div>
       </li>
     </ul>
+
+    <div class="l-container mv-container">
+      <h2 class="u-show-sp mv-heading">
+        <span class="mv-heading-texts">
+          <svg>
+            <title>Car</title>
+            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-text') %>"></use>
+          </svg>
+        </span>
+        <span class="mv-heading-subtexts">
+          <svg>
+            <title>Car</title>
+            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-subtext') %>"></use>
+          </svg>
+        </span>
+      </h2>
+
+      <div class="u-show-pc mv-today mv-logo">
+        <div class="mv-l-inner">
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="l-section">
@@ -47,6 +70,8 @@
           </span>
         </h2>
       </div>
+
+
     </div>
   </div>
 
@@ -154,21 +179,13 @@
 
   <section class="how-to-play l-section">
     <div class="l-container">
-      <div class="heading-wrap heading-wrap-center heading-wrap-steps">
-        <h2 class="heading">
-          <span class="heading-texts">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="247" height="47" viewBox="0 0 247 47">
-              <image id="Flow_to_Play" data-name="Flow to Play" width="247" height="47" xlink:href="data:img/png;base64,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"/>
-            </svg>
-          </span>
-          <span class="heading-subtexts"> 
-            <svg>
-              <title>How To Play</title>
-              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-tsubasa-howtoplay') %>"></use>
-            </svg>
-          </span>
-        </h2> 
-      </div>
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'text': mix('/assets/images/tsubasa/how-to-play.png'),
+        'alt': 'How to Play',
+        'subtextvg': 'tsubasa-howtoplay',
+        'altSubtext': '',
+      }) %>
       <div class="steps-list-wrapper">
         <%- include('/partials/tsubasa/section-steps') -%>
       </div>
@@ -177,21 +194,13 @@
 
   <section class="faq l-section">
     <div class="l-container">
-      <div class="heading-wrap heading-wrap-center heading-wrap-faq">
-        <h2 class="heading">
-          <span class="heading-texts">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="104" height="43" viewBox="0 0 104 43">
-              <image id="FAQ" width="104" height="43" xlink:href="data:img/png;base64,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"/>
-            </svg>
-          </span>
-          <span class="heading-subtexts"> 
-            <svg>
-              <title>Faq</title>
-              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-tsubasa-faq') %>"></use>
-            </svg>
-          </span>
-        </h2>
-      </div>
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'text': mix('/assets/images/tsubasa/FAQ.png'),
+        'alt': 'How to Play',
+        'subtextvg': 'faq',
+        'altSubtext': '',
+      }) %>
       <div class="accordion">
         <div class="accordion-inner">
           <button class="accordion-btn js-accordion-btn is-collapsed" type="button">
@@ -433,21 +442,13 @@
 
   <section class="comparison l-section">
     <div class="l-container">
-      <div class="heading-wrap heading-wrap-center heading-wrap-comparison">
-        <h2 class="heading">
-          <span class="heading-texts">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="196" height="34" viewBox="0 0 196 34">
-              <image id="Comparison" width="196" height="34" xlink:href="data:img/png;base64,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"/>
-            </svg>
-          </span>
-          <span class="heading-subtexts"> 
-            <svg>
-              <title>Faq</title>
-              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-tsubasa-comparison') %>"></use>
-            </svg>
-          </span>
-        </h2>    
-      </div>
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'text': mix('/assets/images/tsubasa/comparison.png'),
+        'alt': 'How to Play',
+        'subtextvg': 'tsubasa-comparison',
+        'altSubtext': '',
+      }) %>
       <table class="table">
         <tbody>
           <tr class="table-row">
@@ -553,10 +554,9 @@
         'modifier': 'heading-wrap-how-to heading-wrap-center',
         'text': mix('/assets/images/tsubasa/Recommendation.png'),
         'alt': 'Recommendation',
-        'subtext': 'tsubasa-recommended',
+        'subtextvg': 'tsubasa-recommendation-sub',
         'altSubtext': '',
       }) %>
-  
       <ul class="feature-list feature-list-no-design">
         <%
           howToContent.forEach(item => {

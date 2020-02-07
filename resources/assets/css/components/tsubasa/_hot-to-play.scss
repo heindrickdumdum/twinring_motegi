@@ -1,0 +1,98 @@
+
+  .steps-list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    justify-content: center;
+    
+    .steps-list-item {
+      width: calc(100% / 3);
+      text-align: center;
+      margin-bottom: 80px;
+      
+      .step-no {
+        margin-bottom: 20px;
+      }
+
+      .step-title {
+        color: $color-green;
+      }
+
+      .step-subtitle {
+        font-weight: bold;
+      }
+
+      .step-desc {
+        max-width: 300px;
+        margin: auto;
+      }
+
+      .sub-image {
+        margin-top: 30px;     
+      }
+      
+      .step-image {
+        display: inline-block;
+        margin-bottom: 30px;
+        padding: 5px 14px;
+        background-image: url("/assets/images/tsubasa/step-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: relative;
+
+        &::after {
+          content: " ";
+          width: 20px;
+          height: 50px;
+          position: absolute;
+          top: 50%;
+          right: -50px;
+          -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+          background: url(/assets/images/tsubasa/step-arrow.png) no-repeat;
+        }
+
+        &.goal-bg {
+          background-image: url("/assets/images/tsubasa/goal-bg.png");
+        }
+
+        img {
+          max-width: 300px;
+        }
+      }
+
+      &:nth-child(3n),&.step-goal {
+        .step-image::after {
+          display: none;
+        }
+      }
+
+      &.step-goal {
+        width: calc(100% / 3 * 2);
+
+        .img-step {
+          display: none;
+        }
+
+        .step-no {
+          margin: auto;
+          height: 45px;
+          position: relative;
+          font-size: 18px;
+          color: $color-green;
+
+          img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            margin: auto;
+          }
+        }
+
+        .step-image {
+          img {max-width: 660px;}
+        }
+      }
+    }
+  }

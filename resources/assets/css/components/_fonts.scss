@@ -21,7 +21,7 @@
 }
 
 @font-face {
-  font-family: $font-holland;
+  font-family: $font-hiragino-w3;
   src: url('#{$font-path}HiraKakuPro-W3/HiraKakuPro-W3-AlphaNum.eot?#iefix') format('embedded-opentype'),
 	     url('#{$font-path}HiraKakuPro-W3/HiraKakuPro-W3-AlphaNum.woff') format('woff'),
 	     url('#{$font-path}HiraKakuPro-W3/HiraKakuPro-W3-AlphaNum.woff2') format('woff2'),
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: $font-holland;
+  font-family: $font-notosans;
   src: url('#{$font-path}Notosans/NotoSansCJKjp-Regular.eot?#iefix') format('embedded-opentype'),
        url('#{$font-path}Notosans/NotoSansCJKjp-Regular.otf') format('opentype'),
 	     url('#{$font-path}Notosans/NotoSansCJKjp-Regular.woff') format('woff'),

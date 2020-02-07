@@ -4,51 +4,6 @@
 %>
 
 <%
-instagram = [
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    },
-    {
-      'src': mix('/assets/images/dokidoki/insta-thumbnail.jpg'),
-      'alt': 'insta thumbnail'
-    }
-  ]
-%>
-
-<%
 accordionData = [
       {
         question: '小さい子どもが遊べますか？',
@@ -165,55 +120,24 @@ accordionData = [
       'link': '#',
     }
   ]
-
-  forest = [
-    {
-      src: mix('https://via.placeholder.com/576x407'),
-      alt: `dokidoki slide 1`,
-      desc: `目の前の壁を超えろ！新芽のチャレンジウォール`
-    },
-    {
-      src: mix('https://via.placeholder.com/576x407'),
-      alt: `dokidoki slide 2`,
-      desc: `アカネズミのひみつの場所！どんぐりころころ`
-    },
-    {
-      src: mix('https://via.placeholder.com/576x407'),
-      alt: `dokidoki slide 3`,
-      desc: `丸太の一般橋を渡ろう！`
-    },
-    {
-      src: mix('https://via.placeholder.com/576x407'),
-      alt: `dokidoki slide 3`,
-      desc: `丸太の一般橋を渡ろう！`
-    },
-    {
-      src: mix('https://via.placeholder.com/576x407'),
-      alt: `dokidoki slide 3`,
-      desc: `丸太の一般橋を渡ろう！`
-    }
-  ]
 %>
 
 <%- include('./../partials/head', { title }) -%>
 
-<div class="mv-dokidoki">
+<div class="mv mv-itadaki">
   <ul class="mv-list">
     <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dokidoki/mv-img.png') %>);"></div>
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-background-grey.jpg')%>);"></div>
     </li>
   </ul>
 
   <div class="l-container mv-container">
     <h2 class="mv-heading">
       <span class="mv-heading-texts">
-        <svg>
-          <title>Dokidoki</title>
-          <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mv-text') %>"></use>
-        </svg>
+        Forest Labyrinth
       </span>
       <span class="mv-heading-subtexts">
-        森感覚アスレチックDOKIDOKI
+        迷宮森殿ITADAKI
       </span>
     </h2>
 
@@ -226,7 +150,7 @@ accordionData = [
 
 <section class="main-content">
   <div class="l-container">
-    <div class="heading-wrap heading-dokidoki">
+    <div class="heading-wrap itadaki-heading">
       <h2 class="heading">
         <span class="heading-texts">
           <img src="<%= mix('/assets/images/dokidoki/dokidoki-title.png') %>" alt="dokidoki">
@@ -248,7 +172,7 @@ accordionData = [
     </h3>
 
     <p class="attraction-subtext">
-      肉食動物や大きな鳥から小動物まで、あらゆる生きもの達の隠れ家となっている場所、それがすみか。 ネットが張りめぐらされた「巨大ネ
+      5層階に分かれ、その全てで森の生態系を体感できる、生態系ピラミッドの立体図鑑が『迷宮森殿 ITADAKI』です。1階から5階まで全部で14か所の生き物にスタンプがあり、さらに途中2か所にクイズポイントがあります。
     </p>
 
     <table class="table">
@@ -272,8 +196,7 @@ accordionData = [
 
         <tr class="table-row">
           <th class="table-head">対象者</th>
-          <td class="table-col">小学生1年生以上
-          </td>
+          <td class="table-col">3歳以上※1</td>
         </tr>
 
         <tr class="table-row">
@@ -292,11 +215,8 @@ accordionData = [
         <tr class="table-row">
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
-            服装について : <br>
-            サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。<br>
-            小学生未満のお子様の利用について：<br>
-            DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。
-
+            ※１小学生未満のお子様の利用について : <br>
+            小学生未満のお子さまは中学生以上の同伴者の付添い（有料）が必要になります。
           </td>
         </tr>
 
@@ -445,7 +365,7 @@ accordionData = [
   </div>
 </section>
 
-<section class="dokidoki forest">
+<section class="forest">
   <div class="l-container">
     <div class="l-section-title">
       <%- include('/partials/heading', {
@@ -458,20 +378,32 @@ accordionData = [
     </div>
   </div>
     
-  <div class="swiper-container slider">
-    <ul class="swiper-wrapper swiper-wrapper-dokidoki-forest">
-      <%
-        forest.forEach(item => {
-      %>
-      <li class="swiper-slide slider-item">
+  <div class="dokidoki-wrapper">
+    <ul class="dokidoki-container" style="transform: translate3d(-205px, 0, 0);">
+      <li class="dokidoki-item">
         <div class="slide-image">
-          <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
         </div>
         <span class="slide-text">
-          <%- item.desc -%>
+          目の前の壁を超えろ！新芽のチャレンジウォール
         </span>
       </li>
-      <% } ) %>
+      <li class="dokidoki-item">
+        <div class="slide-image">
+          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
+        </div>
+        <span class="slide-text">
+          アカネズミのひみつの場所！どんぐりころころ
+        </span>
+      </li class="dokidoki-item">
+      <li class="dokidoki-item">
+        <div class="slide-image">
+          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
+        </div>
+        <span class="slide-text">
+          丸太の一般橋を渡ろう！
+        </span>
+      </li class="dokidoki-item">
     </ul>
   </div>
 </section>
@@ -507,47 +439,6 @@ accordionData = [
         <p class="sumika-video-description">DOKIDOKI タイムアタック映像！</p>
       </li>
     </ul> 
-  </div>
-</section>
-
-<section class="dokidoki-instagram">
-  <div class="dokidoki-wrapper l-container">
-    <div class="dokidoki-inner">
-      <div class="dokidoki-inner-content">
-        <div class="l-section-title">
-          <%- include('/partials/heading', {
-            'modifier': 'heading-net-dokidoki',
-            'text': mix('/assets/images/dokidoki/insta-title.png'),
-            'alt': '#森感覚アスレチックDOKIDOKI',
-            'altSubtext': '',
-            'subtextvg': ''
-          }) %>
-        </div>
-        <div class="dokidoki-instagram-content">
-          <ul class="dokidoki-instagram-list">
-            <% instagram.forEach(item => { %>
-            <li class="dokidoki-instagram-list-item">
-              <div class="dokidoki-instagram-list-item-image">
-                <img src="<%- item.image %>" alt="<%- item.alt %>">
-              </div>
-            </li>
-            <% }) %>
-          </ul>
-        </div>
-        <div class="l-button">
-          <%- include('/partials/button', {
-            'modifier': 'button-sumika',
-            'text': 'インスタグラムでもっと見る',
-            'link': '#'
-          }) %>
-        </div>
-        <div class="dokidoki-instagram-banner">
-          <a href="#">
-            <img src="<%- mix('https://via.placeholder.com/1019x228')%> ">
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 

@@ -217,16 +217,12 @@
         <div class="parkmap-image">
           <ul class="parkmap-image-list">
             <%
-              for(x=1; x <= 7; x++) {
-            %>
-            <%
               parkmapButtons.forEach( button => {
             %>
             <li class="parkmap-image-item js-parkmap-number">
               <a href="<%- button.link %>"></a>
             </li>
             <% }) %>
-            <% } %>
           </ul>
         </div>
         <div class="parkmap-right">

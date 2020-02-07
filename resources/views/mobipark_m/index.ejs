@@ -345,6 +345,50 @@
   </section>
 </div>
 
+<div class="l-section">
+  <section class="mobipark kart">
+    <div class="l-container">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-mobipark-kart',
+          'text': mix('/assets/images/mobipark/racing-kart-title.png'),
+          'alt': 'Racing Kart',
+          'altSubtext': '',
+          'subtextvg': 'racing-kart-subtext'
+        }) %>
+      </div>
+    </div>
+
+    <div class="section-inner section-inner-mobipark-kart">
+      <div class="section-image" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-itadaki.jpg') %>);"></div>
+
+      <div class="section-contents l-adventure section-contents-mobipark-cart">
+        <img class="section-image-logo section-image-logo-mobipark-kart" src="<%= mix('/assets/images/mobipark/kart.png') %>" alt="adventure itadaki">
+
+        <p class="media-title media-title-mobipark">
+          <span>ビギナーから本格的に走りたい方まで</span><br>
+          <span>レーサー気分で楽しめる</span>
+        </p>
+
+        <p class="section-contents-copy section-contents-copy-mobipark-kart">
+          右足アクセル・左足ブレーキ・ハンドル操作だけで簡単に走行できるので<br>
+          ビギナーでも気軽に楽しむことができる最も身近なモータースポーツです。<br>
+          カートでのドライビング、レーサー気分でタイムアタック、仲間とともに競い合う。<br>
+          ここまで、とことん走り込めるのはツインリンクもてぎだけ！
+        </p>
+
+        <div class="l-button">
+          <%- include('/partials/button', {
+            'modifier': 'button-mobipark',
+            'text': 'もっと見る',
+            'link': '#'
+          }) %>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- BOTTOM -->
 
 <div class="dokidoki-cta-bottom">

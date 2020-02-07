@@ -7,13 +7,15 @@
   }
 
   .heading-subtext {
-    max-width: 462px;
+    max-width: 707px;
     width: 100%;
+    margin-top: 27px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .row {
+    margin-top: 62px;
     display: flex;
 
     > * {
@@ -91,16 +93,64 @@
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      background-color: #cccccc;
+      background-color: $color-gray;
       display: inline-block;
 
       &.is-active {
-        background-color: #00a040;
+        background-color: $color-green;
       }
 
       &:last-child {
         margin-right: 0;
       }
     }
+  }
+}
+
+//MODIFIER
+.mobipark {
+  .section-image-logo-mobipark-kart {
+    position: relative;
+    top: 0px;
+    left: 0;
+  }
+
+  .media-title-mobipark {
+    margin-top: 35px;
+    display: block;
+  }
+
+  .heading-mobipark-kart {
+    .heading-text {
+      max-width: 207px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .heading-subtext {
+      max-width: 303px;
+      width: 100%;
+      margin-top: 23px;
+    }
+  }
+
+  .section-inner-mobipark-kart {
+    margin-top: 46px;
+  }
+
+  .section-contents-mobipark-cart {
+    padding-top: 40px;
+  }
+
+  .section-contents-copy-mobipark-kart {
+    margin-top: 27px;
+    font-size: 15px;
+    line-height: 2; 
+    letter-spacing: 0.16em;   
+  }
+
+  .button-mobipark {
+    margin-top: -7px;
   }
 }

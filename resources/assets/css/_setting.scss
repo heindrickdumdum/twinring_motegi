@@ -5,6 +5,7 @@ $font-smoothing: antialiased;
 $text-rendering: auto;
 
 $font-hiragino: 'HiraKakuPro-W6-AlphaNum';
+$font-holland: 'Holland';
 
 $base-font-family: $font-hiragino, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 $base-font-size: 14px;
@@ -33,8 +34,8 @@ $breakpoint-mobile: 749px;
 $container: 1220px;
 
 //path
-$font-path: "../lib/fonts/";
-$image-path: "../images/";
+$font-path: "/assets/lib/fonts/";
+$image-path: "/assets/images/";
 
 $ease-in-out: ease-in-out;
 $ease-animation: cubic-bezier(1, 0, 0, 1);

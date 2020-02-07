@@ -1,13 +1,13 @@
-.sumika-cta {
+.call-to-action {
   text-align: center;
   margin: 80px 0;
 }
 
-.sumika-cta-wrapper {
+.call-to-action-wrapper {
   padding: 0 100px;
 }
 
-.sumika-cta-inner {
+.call-to-action-inner {
   position: relative;
   padding: 28px 0 31px;
   
@@ -37,55 +37,32 @@
 
 }
 
-.sumika-cta-description-text {
+.call-to-action-description-text {
   font-size: 15px;
   line-height: 1.667;
   margin-top: 20px;
 }
 
-.sumika-cta-dot {
+.call-to-action-dot {
   position: absolute;
 }
 
-.sumika-cta-dot-1 {
+.call-to-action-dot-1 {
   left: -40px;
   bottom: -30px;
 }
 
-.sumika-cta-dot-2 {
+.call-to-action-dot-2 {
   top: -19px;
   left: 128px;
 }
 
-.sumika-cta-dot-3 {
+.call-to-action-dot-3 {
   bottom: -30px;
   right: 135px;
 }
 
-.sumika-cta-dot-4 {
+.call-to-action-dot-4 {
   top: -28px;
   right: -27px;
-}
-
-.sumika-cta-bottom {
-  margin: 180px 0;
-  position: relative;
-  text-align: center;
-  z-index: $z-max;
-
-  &:before {
-    position: absolute;
-    content: '';
-    background-color: $color-light-gray;
-    top: 99px;
-    left: 0;
-    right: 0;
-    bottom: -126px;
-    z-index: 1;
-  }
-}
-
-.sumika-cta-bottom-inner {
-  position: relative;
-  z-index: $z-max;
 }

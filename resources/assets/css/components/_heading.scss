@@ -1,5 +1,11 @@
 .heading-text {
   display: block;
+  font-family: $font-holland;
+  font-size: 31px;
+
+  background: linear-gradient(to right, #1cc763 0%, #34b0e7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .heading-subtext {
@@ -28,20 +34,12 @@
   }
 
   &.heading-wrap-parkmap {
-    .heading-text {
-      width: 144px;
-    }
-
     .heading-subtext {
       width: 750px;
     }
   }
 
   &.heading-wrap-activity {
-    .heading-text {
-      width: 258px;
-    }
-
     .heading-subtext {
       width: 800px;
     }
@@ -78,7 +76,7 @@
 
   &.heading-net-sumika {
     margin-bottom: 40px;
-    
+
     .heading-text {
       width: 412px;
       height: 28px;
@@ -94,7 +92,7 @@
 
   &.heading-net-dokidoki {
     margin-bottom: 40px;
-    
+
     .heading-text {
       margin: 0 auto;
       text-align: center;
@@ -103,7 +101,7 @@
 
   &.heading-net-acro-x {
     margin-bottom: 40px;
-    
+
     .heading-texts {
       margin: 0 auto;
       text-align: center;
@@ -124,12 +122,6 @@
       width: 104px;
       height: 43px;
       margin: 0 auto 24px;
-    }
-  }
-  
-  &.heading-wrap-information {
-    .heading-text {
-      width: 149px;
     }
   }
 }

@@ -15,4 +15,13 @@
   .swiper-wrapper-dokidoki-forest {
     margin-top: 54px;
   }
+
+  .slide-text {
+    margin-top: 15px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: $font-hiragino;
+    color: $color-black;  
+    letter-spacing: 0.06em;  
+  }
 }

@@ -1,10 +1,9 @@
 import Swiper from 'swiper';
 
 export default function dokidokiSlider() {
-  let mySwiper = new Swiper('.dokidoki .swiper-container', {  
+  let dokidokiSwiper = new Swiper('.dokidoki .swiper-container', {  
     speed: 1500,
     initialSlide: 2,
-    centeredSlides: true,
 
     breakpoints: {
         1280: {
@@ -25,7 +24,7 @@ export default function dokidokiSlider() {
     }
 });
 
-mySwiper.on('resize', function () {
+dokidokiSwiper.on('resize', function () {
     this.reInit();
 });
 

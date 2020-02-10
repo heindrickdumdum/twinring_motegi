@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 
 export default function slider() {
-  let mySwiper = new Swiper('.swiper-container', {  
+  let mySwiper = new Swiper('[class^="-recommendation"] .swiper-container', {  
     speed: 1500,
     initialSlide: 2,
     centeredSlides: false,

@@ -1,0 +1,97 @@
+<%- include('/partials/head', { title }) -%>
+
+<div class="hellowoods-wrapper">
+  <div class="mv-hellowoods">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/mv-img.png') %>);"></div>
+        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/mv-img-sp.png') %>);"></div>
+        <h2 class="u-show-sp mv-heading">
+          <span class="mv-heading-texts">
+            メガジップライン つばさ
+          </span>
+        </h2>
+      </li>
+    </ul>
+
+    <div class="l-container mv-container">
+      <h2 class="mv-heading hellowoods-mv-heading">
+        <%- include('/partials/heading', {
+          'modifier': '',
+          'text': 'Hello Woods',
+          'alt': '',
+          'subtextvg': 'hellowoods-mv-subtext',
+          'altSubtext': ''
+        }) %>
+      </h2>
+
+      <div class="u-show-pc mv-today mv-log mv-hellowoods-logo">
+        <div class="mv-l-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="information">
+    <div class="l-container information-container">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'text': 'Information',
+        'alt': '',
+        'subtextvg': 'hellowoods-info-subtext',
+        'altSubtext': '',
+      }) %>
+      <div class="steps-list-wrapper">
+        <ul class="info-list">
+          <li class="info-list-item">2020.1.31　2月の「森あそび」・「ものづくり」プログラムを更新</li>
+          <li class="info-list-item">2020.1.17　2020年4月の予約制プログラムの予約受付開始</li>
+          <li class="info-list-item">12月～2020年3月開催「森のプログラムパンフレット」を掲載</li>
+          <li class="info-list-item">メガジップライン つばさ　森からサーキットの大空への空中散歩！</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="life-overflowing">
+    <div class="l-container life-contents">
+      <div class="col-texts">
+        <div class="heading-wrap heading-wrap-life-overflowing">
+          <div class="heading">
+            <p class="heading-text">
+              身近な自然に <br>「溢れる生命（いのち）」<br>を見つけよう
+            </p>
+          </div>
+        </div> 
+        <p class="life-desc">
+          森は教材であり、教室です。樹も虫も動物たちも本物であり、その本物たちの生命が関わり合うリアルな世界がそこには存在します。<br>
+          自然の中で遊ぶことや生命（いのち）の気配に触れることで、五感（見る・聞く・嗅ぐ・味わう・触れる）も研ぎ澄まされていきます。<br>
+          <br>
+          ハローウッズには、本来人間が持つ本能や感性を引き出し、一人ひとりの感動や知恵といった宝物を発見していく<br>
+          「仕組み」があります。
+        </p>
+      </div> 
+      <div class="col-images">
+        <img class="life-image life-img-1" src="<%= mix('/assets/images/hellowoods/overflow-img-1.png') %>" alt="Owl">
+        <img class="life-image life-img-2" src="<%= mix('/assets/images/hellowoods/overflow-img-2.png') %>" alt="Kids">
+        <img class="life-image life-img-3" src="<%= mix('/assets/images/hellowoods/overflow-img-3.png') %>" alt="Racoon">
+      </div>
+
+  
+    </div>
+  </section>
+
+  <section class="field-introduction">
+    <div class="l-container field-introduction-container">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'text': 'Field Introduction',
+        'alt': '',
+        'subtextvg': '',
+        'altSubtext': 'フィールド紹介'
+      }) %>
+      <div class="map-wrapper">
+        <img class="map-image" src="<%= mix('/assets/images/hellowoods/field-intro-map.png') %>" alt="Map">
+      </div>
+    </div>
+  </section>
+</div>

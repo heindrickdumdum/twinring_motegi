@@ -4,6 +4,10 @@
 
   .tsubasa-cta-wrapper {
     padding: 0 100px;
+
+    @include max-screen ($breakpoint-mobile) {
+      padding: 0;
+    }
   }
 
   .tsubasa-cta-inner {
@@ -34,6 +38,20 @@
       bottom: 39px;
     }
 
+    @include max-screen ($breakpoint-mobile) {
+      .button-tsubasa {
+        width: 100%;
+      }
+
+      &:after {
+        background-image: url(#{$image-path}tsubasa/green-dots-sp.png);
+        top: 0;
+        bottom: 30%;
+        background-position: center;
+        background-size: 140% 100%;
+
+      }
+    }
   }
 
   .heading-net-tsubasa {
@@ -65,6 +83,10 @@
 
   .tsubasa-cta-dot {
     position: absolute;
+
+    @include max-screen ($breakpoint-mobile) {
+      display: none;
+    }
   }
 
   .tsubasa-cta-dot-1 {

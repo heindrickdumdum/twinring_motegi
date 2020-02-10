@@ -1,17 +1,15 @@
 import Swiper from 'swiper';
 
-export default function mobiparkSldier() {
-  let thisSwiper = new Swiper('.mobipark .swiper-container', {  
-    //speed: 500,
-    //initialSlide: 1,
-    //centeredSlides: true,
+export default function mobiparkSlider() {
+  let mobiparkSwiper = new Swiper('.mobipark .swiper-container', {
+    speed: 500,
     pagination: {
-      el: '.swiper-pagination'
+      el: '.mobipark .swiper-pagination',
+      clickable: true
     }
-});
+  });
 
-thisSwiper.on('resize', function () {
-  this.reInit();
-});
-
+  mobiparkSwiper.on('resize', function() {
+    this.reInit();
+  });
 }

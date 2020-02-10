@@ -3,63 +3,13 @@
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
 
-<%
-  recommend = [
-    {
-      'image': mix('/assets/images/forest-driving/recommendation-img1.jpg'),
-      'heading': '巨大ネットの森SUMIKA',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/forest-driving/recommendation-img2.jpg'),
-      'heading': '森感覚アスレチックDOKIDOKI',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/forest-driving/recommendation-img3.jpg'),
-      'heading': '迷宮森殿ITADAKI',
-      'buttonLink': '#',
-    }
-  ]
-%>
-
-<%
-  pickup = [
-    {
-      'image': mix('/assets/images/dokidoki/feature/img1.png'),
-      'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-      },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img2.png'),
-      'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img3.png'),
-      'heading': 'モトレーサー タイムアタック選手権2019予選',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img4.png'),
-      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    }
-  ]
-%>
-
+<%- include('/partials/data/index', { title }) -%>
 <%- include('/partials/head', { title }) -%>
 
-<div class="mv-wild-racer">
+<div class="mv mv-mobipark">
   <ul class="mv-list">
     <li class="mv-item">
       <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.png') %>);"></div>
-
-      <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/forest-driving/mobile-mv-img.png') %>);"></div>
     </li>
   </ul>
 
@@ -73,15 +23,15 @@
 
 </div>
 
-<section class="main-content">
+<section class="main-content mobipark">
   <div class="l-container">
     <div class="l-section-title">
-      <div class="heading-wrap heading-wild-racer">
+      <div class="heading-wrap heading-mobipark heading-main-title">
         <h2 class="heading">
-          <span class="heading-texts u-show-pc">
+          <span class="heading-text u-show-pc">
             <img src="<%= mix('/assets/images/wild-racer/wildracer-title.png') %>" alt="forest-driving">
           </span>
-          <span class="heading-texts u-show-sp">
+          <span class="heading-text u-show-sp">
             <img src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
           </span>
         </h2>
@@ -158,15 +108,15 @@
   </div>
 </section>
 
-<section class="how-to-enjoy">
+<section class="how-to-enjoy mobipark">
   <div class="l-container">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-forest-driving',
-        'text': 'How to Enjoy',
-        'alt': 'How to Enjoy',
-        'subtextvg': 'enjoy-wildracer-title',
-        'altSubtext': '',
+        modifier: 'heading-enjoy',
+        text: 'How to Enjoy',
+        alt: 'How to Enjoy',
+        subtextvg: 'enjoy-wildracer-title',
+        altSubtext: '',
       }) %>
     </div>
 
@@ -235,88 +185,73 @@
 
 <!-- BOTTOM -->
 
-<section class="wild-racer-cta">
+<div class="call-to-action mobipark">
   <div class="l-container">
-    <div class="wild-racer-cta-wrapper">
-      <div class="wild-racer-cta-inner">
-        <div class="l-section-title u-show-pc">
-          <%- include('/partials/heading', {
-            'modifier': 'heading-net-wild-racer-cta',
-            'text': '',
-            'alt': '',
-            'subtextvg': 'wildracer-cta-title',
-            'altSubtext': ''
-          }) %>
-        </div>
-
-        <div class="l-section-title u-show-sp">
-          <%- include('/partials/heading', {
-            'modifier': 'heading-net-wild-racer-cta',
-            'text': '',
-            'alt': '',
-            'subtextvg': 'wildracer-cta-title',
-            'altSubtext': ''
-          }) %>
-        </div>
-
-
-        <div class="deb-den-cta-description">
-          <p class="deb-den-cta-description-text">
+    <div class="call-to-action-wrapper">
+      <div class="call-to-action-inner">
+        <%- include('/partials/heading', {
+          modifier: 'heading-net-mobipark',
+          text: 'ワイルドレーサーをもっと楽しむ',
+          alt: '',
+          subtextvg: '',
+          altSubtext: ''
+        }) %>
+        <div class="call-to-action-description">
+          <p class="call-to-action-description-text">
             ワイルドレーサーのこだわりポイントや、知っているとも<br>っと楽しくなる情報を配信中しています。
           </p>
         </div>
-        <div class="l-button">
+        <div class="l-button l-button-call-to-action">
           <%- include('/partials/button', {
-            'modifier': 'button-wild-racer',
-            'text': 'もっと見る',
-            'link': '#'
+            modifier: 'button-mobipark',
+            text: 'もっと見る',
+            link: '#'
           }) %>
         </div>
-        <span class="wild-racer-cta-dot wild-racer-cta-dot-1">
-          <img src="<%- mix('/assets/images/forest-driving/cta-img1.png')%> ">
+        <span class="call-to-action-dot call-to-action-dot-1">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
         </span>
-        <span class="wild-racer-cta-dot wild-racer-cta-dot-2">
-          <img src="<%- mix('/assets/images/forest-driving/cta-img2.png')%> ">
+        <span class="call-to-action-dot call-to-action-dot-2">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
         </span>
-        <span class="wild-racer-cta-dot wild-racer-cta-dot-3">
-          <img src="<%- mix('/assets/images/forest-driving/cta-img4.png')%> ">
+        <span class="call-to-action-dot call-to-action-dot-3">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
         </span>
-        <span class="wild-racer-cta-dot wild-racer-cta-dot-4">
-          <img src="<%- mix('/assets/images/forest-driving/cta-img3.png')%> ">
+        <span class="call-to-action-dot call-to-action-dot-4">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
         </span>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<div class="wild-racer-cta-bottom">
+<div class="banner-cta mobipark-cta">
   <div class="l-container">
-    <div class="wild-racer-cta-bottom-inner">
-      <img src="<%= mix('/assets/images/forest-driving/cta-bottom.jpg') %>">
+    <div class="banner-cta-bottom-inner">
+      <img src="<%- mix('/assets/images/acro-x/cta-bottom.jpg')%> ">
     </div>
   </div>
 </div>
 
-<section class="wild-racer-recommendation">
+<section class="sumika-recommendation dokidoki">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-wild-racer',
-      'text': 'Recommendation',
-      'alt': 'Recommendation',
-      'altSubtext': '',
-      'subtextvg': 'recommendation-subtext'
+      modifier: 'heading-net-sumika heading-mobipark',
+      text: 'Recommendation',
+      alt: '',
+      altSubtext: '',
+      subtextvg: 'recommend'
     }) %>
   </div>
-
-  <div class="l-container">
-    <ul class="feature-list feature-list-no-design">
-      <% recommend.forEach(item => { %>
-      <li class="feature-item">
+  <div class="swiper-container slider">
+    <ul class="swiper-wrapper slider-wrapper">
+      <% getData().data.recommend.forEach(item => { %>
+      <li class="swiper-slide slider-item">
         <%- include('/partials/article-no-design', {
-          'image': item.image,
-          'heading': item.heading,
-          'buttonLink': item.buttonLink,
-          'buttonText': 'モビパーク'
+          image: item.image,
+          heading: item.heading,
+          buttonLink: item.buttonLink,
+          buttonText: 'モビパーク'
         }) %>
       </li>
       <% }) %>
@@ -324,27 +259,27 @@
   </div>
 </section>
 
-<section class="wild-racer-pick-up">
+<section class="sumika-pick-up mobipark">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-wild-racer',
-      'text': 'Pickup',
-      'alt': 'Pickup',
-      'altSubtext': '',
-      'subtextvg': 'pickup-event-title'
+      modifier: 'heading-net-sumika heading-mobipark',
+      text: 'Pick Up',
+      alt: '',
+      altSubtext: '',
+      subtextvg: 'pickup'
     }) %>
   </div>
-
   <div class="l-container">
     <ul class="feature-list">
-      <% pickup.forEach(item => { %>
+      <% getData().data.pickup.forEach(item => { %>
       <li class="feature-item">
         <%- include('/partials/article', {
-          'category': item.category,
-          'image': item.image,
-          'heading': item.heading,
-          'date': item.date,
-          'link': item.link
+          category: item.category,
+          image: item.image,
+          heading: item.heading,
+          date: item.date,
+          link: item.link,
+          modifier: 'sumika-recommendation-article'
         }) %>
       </li>
       <% }) %>

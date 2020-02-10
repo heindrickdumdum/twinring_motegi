@@ -5,7 +5,7 @@
   &::after {
     content: '';
     position: absolute;
-    bottom: -72px;
+    bottom: -60px;
     left: 0;
     width: 100%;
     height: 100px;
@@ -172,35 +172,97 @@
 //MODIFIER
 .mv-dokidoki,
 .mv-mobipark {
-  overflow-y: hidden;
+  overflow-y: hidden;  
+  // itadaki mv 
+  .mv-itadaki {
   .mv-heading {
     bottom: 45px;
   }
+  
+.mv-heading-text {
+  font-size: 45px;
+  font-family: $font-holland;
+  color: $color-white;
+  letter-spacing: 0.08em;
+}
 
-  .mv-heading-text {
-    font-size: 45px;
-    font-family: $font-holland;
+.mv-heading-subtext {
+  margin-top: -10px;
+  font-size: 54px;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
+}
+
+.mv-mobipark-subtext {
+  max-width: 356px;
+  width: 100%;
+}
+
+.mv-today {
+  width: 268px;
+  height: 266px;
+  background-image: url(../images/dokidoki/dokidoki-logo.png);
+  bottom: -60px;
+}
+}
+  .mv-heading-subtexts {
+    font-size: 47px;
+    margin-top: 26px;
     color: $color-white;
-    letter-spacing: 0.08em;
-  }
-
-  .mv-heading-subtext {
-    margin-top: -10px;
-    font-size: 54px;
-    color: rgb(255, 255, 255);
-    text-align: left;
+    letter-spacing: 0.06em;
     text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
   }
 
-  .mv-mobipark-subtext {
-    max-width: 356px;
-    width: 100%;
+  .mv-heading-texts {
+    font-family: $font-holland;
+    color: $color-white;
+    font-size: 32px;
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    width: auto;
+    text-align: center;
   }
 
   .mv-today {
     width: 268px;
     height: 266px;
-    background-image: url(../images/dokidoki/dokidoki-logo.png);
-    bottom: -60px;
+    background-image: url(../images/itadaki/today.png);
+    bottom: -45px;
   }
 }
+
+// END itadaki mv 
+
+
+// sumika mv 
+.mv-sumika {
+  .mv-today {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/sumika/sumika-logo.png);
+    bottom: -45px;
+  }
+
+  .mv-heading {
+    bottom: 45px;
+  }
+
+  .mv-heading-subtexts {
+    font-size: 47px;
+    // margin-top: 26px;
+    color: $color-white;
+    letter-spacing: 0.06em;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
+  }
+
+  .mv-heading-texts {
+    font-family: $font-holland;
+    color: $color-white;
+    font-size: 32px;
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    width: auto;
+  }
+}
+// END sumika mv 

@@ -12,8 +12,7 @@ if (typeof modifier === 'undefined') {
       <div class="article-image"
            style="background-image: url(
             <% if(image != '') { %><%- image %>
-            <% } else { %><%- mix('/assets/images/noimage.jpg') %>
-            <% } %>)"></div>
+            <% } else { %><%- mix('/assets/images/noimage.jpg') %><% } %>)"></div>
     </div>
     <h3 class="article-heading"><%- heading %></h3>
     <p class="article-period">

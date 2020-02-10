@@ -150,7 +150,7 @@ accordionData = [
 
 <section class="main-content">
   <div class="l-container">
-    <div class="heading-wrap itadaki-heading">
+    <div class="heading-wrap l-heading">
       <h2 class="heading">
         <span class="heading-texts">
           <img src="<%= mix('/assets/images/itadaki/itadaki-main-title.png') %>" alt="itadaki">
@@ -376,36 +376,22 @@ accordionData = [
       }) %>
     </div>
   </div>
-
-  <div class="dokidoki-wrapper">
-    <ul class="dokidoki-container" style="transform: translate3d(-205px, 0, 0);">
-      <li class="dokidoki-item">
-        <div class="slide-image">
-          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
-        </div>
-        <span class="slide-text">
-          生態系の頂点に君臨するのがオオタカだ！
-        </span>
-      </li>
-      <li class="dokidoki-item">
-        <div class="slide-image">
-          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
-        </div>
-        <span class="slide-text">
-          土の中には、ダンゴムシ、ミミズがうにょよ
-        </span>
-      </li class="dokidoki-item">
-      <li class="dokidoki-item">
-        <div class="slide-image">
-          <img src="<%- mix('https://via.placeholder.com/576x407') %>" alt="">
-        </div>
-        <span class="slide-text">
-          森の地表には、マツボックリ、ドングリ
-        </span>
-      </li class="dokidoki-item">
-    </ul>
-  </div>
-</section>
+  
+    <div class="swiper-container slider">
+      <ul class="swiper-wrapper swiper-wrapper-dokidoki-forest">
+        <% forest.forEach(item => { %>
+        <li class="swiper-slide slider-item">
+          <div class="slide-image">
+            <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+          </div>
+          <span class="slide-text">
+            <%- item.desc -%>
+          </span>
+        </li>
+        <% } ) %>
+      </ul>
+    </div>
+  </section>
 
 <!-- BOTTOM -->
 
@@ -413,7 +399,7 @@ accordionData = [
   <div class="l-section-title l-sumika-video">
     <%- include('/partials/heading', {
       'modifier': 'heading-sumika',
-      'text': 'ITADAKI Videos',
+      'text': '<span class="heading-normal">ITADAKI</span> Videos',
       'alt': 'ITADAKI videos',
       'subtextvg': 'itadaki-video-title',
       'altSubtext': '',

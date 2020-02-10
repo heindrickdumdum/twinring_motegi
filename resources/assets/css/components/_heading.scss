@@ -1,3 +1,7 @@
+.heading {
+  margin: 40px 0;
+}
+
 .heading-text {
   display: block;
   font-family: $font-holland;
@@ -9,7 +13,7 @@
 
 .heading-subtext {
   display: inline-block;
-  margin: 17px 0 0 10px;
+  // margin: 17px 0 0 10px;
   height: 36px;
 
   svg {
@@ -45,18 +49,6 @@
     }
   }
 
-  &.heading-sumika {
-    .heading-text {
-      width: 216px;
-      margin: 0 auto;
-    }
-
-    .heading-subtext {
-      width: 404px;
-      margin: 24px auto 0;
-    }
-  }
-
   &.heading-dokidoki {
     .heading-text {
       margin: 0 auto;
@@ -71,16 +63,6 @@
     svg {
       width: 100%;
       height: 100%;
-    }
-  }
-
-  &.heading-net-sumika {
-    margin-bottom: 40px;
-
-    .heading-text {
-      width: 412px;
-      height: 28px;
-      margin: 0 auto;
     }
   }
 
@@ -102,20 +84,11 @@
     }
   }
 
-  &.heading-sumika-faq {
-    margin-bottom: 40px;
-    text-align: center;
-
-    .heading-subtext {
-      width: 284px;
-      height: 34px;
-      margin: 0 auto;
-    }
+  &.heading-sumika {
 
     .heading-text {
-      width: 104px;
-      height: 43px;
-      margin: 0 auto 24px;
+      margin: 0 auto;
+      font-size: 50px;
     }
   }
 }

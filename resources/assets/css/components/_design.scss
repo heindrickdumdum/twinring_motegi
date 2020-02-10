@@ -1,0 +1,88 @@
+.design-petals,
+.design-circle,
+.design-mount {
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.design-circle {
+  position: relative;
+
+  &::before {
+    width: 204px;
+    height: 205px;
+    left: -11px;
+    bottom: 105px;
+    background-image: url(#{$image-path}design-circle.png);
+    opacity: .3;
+  }
+
+  &::after {
+    width: 115px;
+    height: 123px;
+    right: 51px;
+    bottom: 124px;
+    background-image: url(#{$image-path}design-petals1.png);
+  }
+}
+
+.design-mount {
+  position: relative;
+
+  &::before {
+    width: 228px;
+    height: 183px;
+    left: -11px;
+    bottom: 343px;
+    background-image: url(#{$image-path}design-mount.png);
+    opacity: .3;
+  }
+
+  &::after {
+    width: 132px;
+    height: 106px;
+    right: 80px;
+    bottom: 118px;
+    background-image: url(#{$image-path}design-petals2.png);
+  }
+}
+
+.design-petal {
+  position: absolute;
+  width: 39px;
+  height: 38px;
+  left: 41px;
+  bottom: 40px;
+  background-image: url(#{$image-path}design-petal1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.design-petals {
+  position: relative;
+
+  &::before {
+    width: 95px;
+    height: 133px;
+    left: 62px;
+    bottom: 30px;
+    background-image: url(#{$image-path}design-petals3.png);
+    opacity: .3;
+  }
+
+  &::after {
+    width: 37px;
+    height: 36px;
+    right: 120px;
+    bottom: 123px;
+    background-image: url(#{$image-path}design-petal2.png);
+  }
+}

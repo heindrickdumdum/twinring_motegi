@@ -5,7 +5,7 @@ stepsData = [
     'image': '/assets/images/tsubasa/step_01.jpg',
     'heading': '装備装着',
     'subHeading': '安全ベルト「ハーネス」初体験',
-    'subText': 'まずは安全ベルト「ハーネス」を装着。これで空を飛ぶ準備は万端だ！'
+    'subText': 'まずは安全ベルト「ハーネス」を装着。\n\nこれで空を飛ぶ準備は万端だ！'
   },
   {
     'step': '2',
@@ -103,7 +103,7 @@ stepsData = [
     </p>
 
     <%if (item.step == 'goal') { %>
-      <div class="media-bottom">
+      <div class="media-bottom steps-list-media-bottom">
         <div class="media-note">
           <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
           <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
@@ -114,7 +114,7 @@ stepsData = [
         </div>
       </div>
     <% } %>
-    
+
   </li>
   <% }) %>
 </ul>

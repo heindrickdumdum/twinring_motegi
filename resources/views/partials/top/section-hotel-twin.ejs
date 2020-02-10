@@ -4,17 +4,20 @@
       'category': 'STAY',
       'image': mix('/assets/images/top/hotel-twin/img1.jpg'),
       'title': 'スーペリアファミリールーム',
+      'url': '#'
     },
     {
       'category': 'RESTAURANT',
       'image': mix('/assets/images/top/hotel-twin/img2.jpg'),
       'title': '森のレストラン MARCHERANT',
+      'url': '#'
     },
     {
       'category': 'RESTAURANT',
       'image': mix('/assets/images/top/hotel-twin/img3.jpg'),
       'title': '里山懐石 登谷',
-    },
+      'url': '#'
+    }
   ]
 
 
@@ -25,7 +28,7 @@
       'title': mix('/assets/images/top/hotel-twin/restaurant.png'),
       'alt': 'Restaurant',
       'subtext': 'レストラン',
-      'url': '#',
+      'url': '#'
     },
     {
       'modifier': 'block-image-item-last',
@@ -33,7 +36,7 @@
       'title': mix('/assets/images/top/hotel-twin/goods-shop.png'),
       'alt': 'Goods & Shop',
       'subtext': 'グッズ & ショップ',
-      'url': '#',
+      'url': '#'
     }
   ]
 %>
@@ -51,11 +54,13 @@
           sectionHotelTwinCards.forEach( card => {
         %>
         <li class="section-cards-item">
-          <div class="section-cards-image-wrap image-border">
-            <span class="section-cards-category"><%- card.category %></span>
-            <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
-          </div>
-          <p class="section-cards-title"><%- card.title %></p>
+          <a href="<%- card.url %>" class="section-card-link">
+            <div class="section-cards-image-wrap image-border">
+              <span class="section-cards-category"><%- card.category %></span>
+              <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+            </div>
+            <p class="section-cards-title"><%- card.title %></p>
+          </a>
         </li>
         <%
           })

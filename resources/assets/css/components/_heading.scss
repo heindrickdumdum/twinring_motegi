@@ -2,7 +2,6 @@
   display: block;
   font-family: $font-holland;
   font-size: 31px;
-
   background: linear-gradient(to right, #1cc763 0%, #34b0e7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -26,10 +25,11 @@
     .heading-text,
     .heading-subtext {
       margin: 0 auto;
+      letter-spacing: 0.03em;
     }
 
     .heading-subtext {
-      margin: 17px auto 0;
+      margin: 25px auto 0;
     }
   }
 
@@ -84,12 +84,6 @@
     }
   }
 
-  &.heading-wrap-how-to {
-    .heading-text {
-      width: 189px;
-    }
-  }
-
   &.heading-net-dokidoki {
     margin-bottom: 40px;
 
@@ -122,6 +116,52 @@
       width: 104px;
       height: 43px;
       margin: 0 auto 24px;
+    }
+  }
+}
+
+//MODIFIER DOKIDOKI
+.dokidoki {
+  .heading-dokidoki {
+    .heading-text {
+      width: auto !important;
+      height: auto !important;
+      font-size: 36px;
+      letter-spacing: 0.16em;
+      font-family: $base-font-family;
+    }
+  }
+
+  .heading-net-dokidoki {
+    .heading-text {
+      width: auto !important;
+      height: auto !important;
+      font-size: 32.456px;
+      font-family: $base-font-family;
+      letter-spacing: 0.16em;
+      font-weight: 300;
+    }
+  }
+
+  .heading-dokidoki-faq {
+    .heading-text {
+      text-align: center;
+    }
+
+    .heading-subtext {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  .heading-dokidoki-enjoy {
+    .heading-subtext {
+      max-width: 556px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
     }
   }
 }

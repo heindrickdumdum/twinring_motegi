@@ -2,9 +2,9 @@
   .steps-list {
     display: flex;
     align-items: flex-start;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
-    
+
     .steps-list-item {
       width: calc(100% / 3);
       text-align: center;
@@ -13,12 +13,14 @@
       @include max-screen($breakpoint-mobile) {
         width: 100%;
       }
-      
+
       .step-no {
         margin-bottom: 20px;
       }
 
       .step-title {
+        font-size: 21px;
+        font-weight: bold;
         color: $color-green;
       }
 
@@ -32,9 +34,9 @@
       }
 
       .sub-image {
-        margin-top: 30px;     
+        margin-top: 30px;
       }
-      
+
       .step-image {
         display: inline-block;
         margin-bottom: 30px;
@@ -54,9 +56,9 @@
           -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
           background: url(/assets/images/tsubasa/step-arrow.png) no-repeat;
-          
+
           @include max-screen ($breakpoint-mobile) {
-            display: none;  
+            display: none;
           }
         }
 
@@ -93,7 +95,7 @@
           margin-top: 30px;
         }
       }
- 
+
       &:nth-child(3n),&.step-goal {
         .step-image::after {
           display: none;
@@ -131,16 +133,21 @@
         .step-image {
           img {
             max-width: 660px;
-            
+
             @include max-screen($breakpoint-mobile) {
               width: 100%;
             }
           }
         }
       }
+
     }
 
     @include max-screen($breakpoint-mobile) {
       display: block;
+    }
+
+    .steps-list-media-bottom {
+      margin-top: 30px;
     }
   }

@@ -32,15 +32,26 @@
 .section-contents {
   margin-top: -41px;
   padding: 33px 0;
-  background-color: $color-white;
   position: relative;
   text-align: center;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 50px;
+    background-color: $color-white;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .section-contents-copy {
   font-size: 15px;
   line-height: 2;
   letter-spacing: 0.19em;
+  position: relative;
+  z-index: $z-min;
 }
 
 .section-button {

@@ -1,84 +1,15 @@
-<%
-  headerImageList = [
-    [
-      {
-        'image': mix('/assets/images/header/activity-img1.jpg'),
-        'text': '巨大ネットの森SUMIKA'
-      },
-      {
-        'image': mix('/assets/images/header/activity-img2.jpg'),
-        'text': '森感覚アスレチックDOKIDOKI'
-      },
-      {
-        'image': mix('/assets/images/header/activity-img3.jpg'),
-        'text': '迷宮森殿ITADAKI'
-      }
-    ],
-    [
-      {
-        'image': mix('/assets/images/header/activity-img4.jpg'),
-        'text': 'お子様のクルマ＆バイク<br>のアトラクション'
-      },
-      {
-        'image': '',
-        'text': '大人も楽しめる本格<br>レーシングカート'
-      },
-      {
-        'image': '',
-        'text': 'クルマのワークショップ（ピット工房）'
-      },
-      {
-        'image': '',
-        'text': 'メガジップラインつばさ'
-      }
-    ],
-    [
-      {
-        'image': mix('/assets/images/header/activity-img5.jpg'),
-        'text': '森のジップラインムササビ'
-      },
-      {
-        'image': mix('/assets/images/header/activity-img6.jpg'),
-        'text': '森の散策プログラム'
-      },
-      {
-        'image': '',
-        'text': '森の研究室'
-      },
-      {
-        'image': '',
-        'text': '森の体験プログラム'
-      }
-    ]
-  ]
-
-
-  headerRightLinks = [
-    { 'text': '最近情報', 'link': '#' },
-    { 'text': '営業時間', 'link': '#' },
-    { 'text': '料金・チケット', 'link': '#' },
-    { 'text': 'ご利用基準', 'link': '#' }
-  ]
-
-
-  headerBottomLinks = [
-    { 'text': '森のクラフト体験', 'link': '#' },
-    { 'text': '全日本カート選手権', 'link': '#' },
-  ]
-%>
-
 <div class="header-sub-content-inner js-header-sub-content-inner" id="header-sub-attraction">
 
   <a class="header-sub-top-button" href="#">
     <i class="header-sub-top-button-icon">
       <%- include('/partials/svg', {
-        'name': 'activity'
+        name: 'activity'
       }) %>
     </i>
     アトラクション・アクティビティTOP
     <i class="header-sub-top-button-arrow">
       <%- include('/partials/svg', {
-        'name': 'arrow'
+        name: 'arrow'
       }) %>
     </i>
   </a>
@@ -86,7 +17,7 @@
   <div class="header-sub-inner">
     <div class="header-sub-inner-block">
       <div class="header-sub-image-list-wrap">
-        <% headerImageList.forEach( list => { %>
+        <% getData().data.headerAttractionImageList.forEach( list => { %>
           <ul class="header-sub-image-list">
             <% list.forEach( item => { %>
             <li class="header-sub-image-item">
@@ -102,13 +33,13 @@
     </div>
     <div class="header-sub-inner-block header-sub-inner-block-right">
       <ul class="header-sub-button-list">
-        <% headerRightLinks.forEach( item => { %>
+        <% getData().data.headerAttractionRightLinks.forEach( item => { %>
         <li class="header-sub-button-item">
           <a class="header-sub-button-link" href="<%- item.link %>">
             <%- item.text %>
             <i class="header-sub-button-link-icon">
               <%- include('/partials/svg', {
-                'name': 'arrow'
+                name: 'arrow'
               }) %>
             </i>
           </a>
@@ -119,7 +50,7 @@
   </div>
   <div class="header-sub-bottom">
     <ul class="header-sub-bottom-list">
-      <% headerBottomLinks.forEach( item => { %>
+      <% getData().data.headerAttractionBottomLinks.forEach( item => { %>
       <li>
         <a href="<%- item.link %>"><%- item.text %></a>
       </li>

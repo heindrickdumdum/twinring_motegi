@@ -1,72 +1,4 @@
-<%
-  topNav = [
-    {
-      text: 'もてぎの楽しみ方',
-      link: '#'
-    },
-    {
-      text: 'ニュース・イベント',
-      link: '#'
-    },
-    {
-      text: '営業時間',
-      link: '#'
-    },
-    {
-      text: '料金・チケット',
-      link: '#'
-    },
-    {
-      text: 'よくあるご質問',
-      link: '#'
-    },
-    {
-      text: 'アクセス',
-      link: '#'
-    }
-  ]
-
-
-  bottomNav = [
-    {
-      modifier: 'header-bottom-item-location',
-      text: 'エリア・施設',
-      link: '#header-sub-access',
-      icon: 'location'
-    },
-    {
-      modifier: 'header-bottom-item-activity',
-      text: 'アトラクション・<br>アクティビティ',
-      link: '#header-sub-attraction',
-      icon: 'activity'
-    },
-    {
-      modifier: 'header-bottom-item-motorsports',
-      text: 'モーター<br>スポーツ',
-      link: '#header-sub-motorsports',
-      icon: 'motorsports'
-    },
-    {
-      modifier: 'header-bottom-item-camp',
-      text: 'ホテル・<br>キャンプ',
-      link: '#',
-      icon: 'camp'
-    },
-    {
-      modifier: 'header-bottom-item-restaurant',
-      text: 'レストラン',
-      link: '#',
-      icon: 'restaurant'
-    },
-    {
-      modifier: 'header-bottom-item-shop',
-      text: 'グッズ＆<br>ショップ',
-      link: '#',
-      icon: 'shop'
-    }
-  ]
-%>
-
+<% include('/partials/data/index') %>
 
 <div class="l-header">
   <div class="l-container">
@@ -99,7 +31,7 @@
           </ul>
           <nav class="header-top-nav">
             <%
-              topNav.forEach( topNavItem => {
+              getData().data.headerTopNav.forEach( topNavItem => {
             %>
             <li class="header-top-nav-item">
               <a class="header-top-nav-link" href="<%- topNavItem.link %>"><%- topNavItem.text %></a>
@@ -113,14 +45,14 @@
         <nav>
           <ul class="header-bottom-list">
             <%
-              bottomNav.forEach( bottomNavItem => {
+              getData().data.headerBottomNav.forEach( bottomNavItem => {
             %>
             <li class="header-bottom-item<%- ' '+bottomNavItem.modifier %>">
               <a class="header-bottom-link js-header-button" href="<%- bottomNavItem.link %>">
                 <span class="header-bottom-link-text"><%- bottomNavItem.text %></span>
                 <i class="header-bottom-icon">
                   <%- include('/partials/svg', {
-                    'name': bottomNavItem.icon
+                    name: bottomNavItem.icon
                   }) %>
                 </i>
               </a>

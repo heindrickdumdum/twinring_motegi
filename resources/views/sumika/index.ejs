@@ -18,7 +18,11 @@
         Sumika Giant Net
       </span>
       <span class="mv-heading-subtexts">
-        巨大ネットの森SUMIKA
+        <svg>
+          <title>巨大ネットの森SUMIKA</title>
+          <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-sumika-main-title') %>"></use>
+        </svg>
+      </h2>
       </span>
     </h2>
 
@@ -166,10 +170,10 @@
   <div class="l-container">
     <div class="sumika-heading l-heading">
       <%- include('/partials/heading', {
-        modifier: 'heading-sumika',
+        modifier: 'heading-enjoy',
         text: 'How to Enjoy',
         alt: 'How to Enjoy',
-        subtextvg: 'Sumika Videos',
+        subtextvg: 'sumika-point-title',
         altSubtext: '',
       }) %>
     </div>  
@@ -254,10 +258,10 @@
   <div class="l-container">
     <div class="sumika-heading l-heading">
       <%- include('/partials/heading', {
-        modifier: 'heading-sumika',
+        modifier: 'heading-forest',
         text: 'Ways to feel the Forest',
         alt: 'Ways to feel the Forest',
-        subtextvg: '',
+        subtextvg: 'ways-forest-title',
         altSubtext: '',
       }) %>
     </div>  
@@ -270,17 +274,6 @@
 </section>
 
 <section class="dokidoki forest">
-  <div class="l-container">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        'modifier': 'heading-dokidoki-forest',
-        text: 'Ways to feel the Forest',
-        'subtextvg': 'dokidoki-forest',
-        'altSubtext': ''
-      }) %>
-    </div>
-  </div>
-
   <div class="swiper-container slider">
     <ul class="swiper-wrapper swiper-wrapper-dokidoki-forest">
       <%
@@ -304,10 +297,10 @@
  <section class="sumika-video l-container">
   <div class="sumika-heading l-section-title">
     <%- include('/partials/heading', {
-      modifier: 'heading-sumika',
+      modifier: 'heading-video',
       text: 'Sumika Videos',
       alt: 'sumika videos',
-      subtextvg: 'video-sumika',
+      subtextvg: 'sumika-videos-title',
       altSubtext: '',
     }) %>
   </div>
@@ -378,7 +371,7 @@
         modifier: 'heading-sumika',
         text: 'FAQ',
         alt: 'faq',
-        subtextvg: '',
+        subtextvg: 'faq-title',
         altSubtext: ''
       }) %>
      </div>
@@ -457,9 +450,8 @@
     <%- include('/partials/heading', {
       modifier: 'heading-sumika',
       text: 'Recommendation',
-      alt: 'recommendation',
       altSubtext: '',
-      subtextvg: 'recommend'
+      subtextvg: 'recommendation-title'
     }) %>
   </div>
     <div class="swiper-container slider">
@@ -483,9 +475,8 @@
     <%- include('/partials/heading', {
       modifier: 'heading-sumika',
       text: 'Pick Up',
-      alt: 'recommendation',
       altSubtext: '',
-      subtextvg: 'pickup'
+      subtextvg: 'pickup-event'
     }) %>
   </div>
   <div class="l-container">
@@ -498,7 +489,7 @@
           heading: item.heading,
           date: item.date,
           link: item.link,
-          modifier: 'sumika-recommendation-article'
+          modifier: 'pickup-article'
         }) %>
       </li>
       <% }) %>

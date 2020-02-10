@@ -5,10 +5,11 @@
 .heading-text {
   display: block;
   font-family: $font-holland;
-  font-size: 31px;
   background: linear-gradient(to right, #1cc763 0%, #34b0e7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 0.1em;
+  font-size: 36px;
 }
 
 .heading-subtext {
@@ -17,6 +18,7 @@
   height: 36px;
 
   svg {
+    margin-top: 15px;
     width: 100%;
     height: 100%;
   }
@@ -84,11 +86,28 @@
     }
   }
 
-  &.heading-sumika {
+  &.heading-enjoy {
+    svg {
+      width: 525px;
+      height: 39px;
+    }
 
     .heading-text {
-      margin: 0 auto;
-      font-size: 50px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &.heading-forest {
+    svg {
+      width: 520px;
+      height: 36px;
+    }
+  }
+
+  &.heading-video {
+    svg {
+      width: 520px;
+      height: 36px;
     }
   }
 }

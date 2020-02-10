@@ -1,3 +1,4 @@
+
 .article-image-wrap {
   padding: 15px;
   position: relative;
@@ -101,9 +102,22 @@
     }
   }
 
-  &.sumika-recommendation-article {
+  &.pickup-article {
     .article-heading {
       min-height: 93px;
+    }
+
+    .article-image-wrap {
+      &:before,
+      &:after {
+        content: none;
+      }
+    }
+
+    .article-image {
+      &:before {
+        content: none;
+      }
     }
   }
 }

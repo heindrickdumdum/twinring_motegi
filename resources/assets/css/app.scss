@@ -30,6 +30,7 @@
 @import "components/sumika-video";
 @import "components/sumika-instagram";
 @import "components/sumika-faq";
+@import "components/sumika";
 @import "components/call-to-action";
 @import "components/table";
 @import "components/media";
@@ -108,11 +109,11 @@
 @import "components/slider";
 @import "components/tsubasa/styles";
 @import "components/car-and-bike/styles";
-@import "components/itadaki";
 
 @import 'layout/grid';
 @import "layout/l-container";
 @import "layout/l-header";
+@import "layout/l-heading";
 @import "layout/l-feature";
 @import "layout/l-parkmap";
 @import "layout/l-section";

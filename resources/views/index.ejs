@@ -7,53 +7,53 @@
       'image': mix('/assets/images/top/feature/img1.jpg'),
       'heading': '「わくわくの森 春フェスタ」3/20～開催',
       'date': '2020.3.20～2020.4.5',
-      'link': '#',
+      'link': '#'
     },
     {
       'category': 'NEWS',
       'image': mix('/assets/images/top/feature/img2.jpg'),
       'heading': '家族みんなで団らん「スーペリアファミリールーム」新登場',
       'date': '2020.3.13~',
-      'link': '#',
+      'link': '#'
     },
     {
       'category': 'NEWS',
       'image': mix('/assets/images/top/feature/img3.jpg'),
       'heading': '体験！×発見！×絶景！「森のファミリーウォーク TEKUTEKU」新登場',
       'date': '2020.3.7 オープン',
-      'link': '#',
+      'link': '#'
     }
   ]
 
   parkmapButtons = [
     {
       'text': 'ハローウッズ',
-      'link': '#',
+      'link': '#'
     },
     {
       'text': 'モビパーク',
-      'link': '#',
+      'link': '#'
     },
     {
       'text': '森と星空のキャンプヴィレッジ',
-      'link': '#',
+      'link': '#'
     },
     {
       'text': 'ホテルツインリンク',
-      'link': '#',
+      'link': '#'
     },
     {
       'text': 'モータースポーツ',
-      'link': '#',
+      'link': '#'
     },
     {
       'text': 'ホンダコレクションホール',
-      'link': '#',
+      'link': '#'
     },
     {
       'text': '安全運転スクール',
-      'link': '#',
-    },
+      'link': '#'
+    }
   ]
 
 
@@ -62,65 +62,65 @@
       'image': mix('/assets/images/top/how-to/img1.jpg'),
       'heading': '0歳〜6歳のお子様とのお楽しみ方',
       'buttonText': 'モデルコース',
-      'buttonLink': '#',
+      'buttonLink': '#'
     },
     {
       'image': mix('/assets/images/top/how-to/img2.jpg'),
       'heading': '小学校低学年のお子様とのお楽しみ方',
       'buttonText': 'モデルコース',
-      'buttonLink': '#',
+      'buttonLink': '#'
     },
     {
       'image': mix('/assets/images/top/how-to/img3.jpg'),
       'heading': '小学校高学年のお子様とのお楽しみ方',
       'buttonText': 'モデルコース',
-      'buttonLink': '#',
-    },
+      'buttonLink': '#'
+    }
   ]
 
   informationContent = [
-    content1 = [
+    [
       {
         'text': '9月の「森あそび」・「ものづくり」プログラムを更新',
         'category': 'アトラクション・アクティビティ',
-        'time': '2019.01.10',
+        'time': '2019.01.10'
       },
       {
         'text': '夏のおすすめグッズ情報を更新しました',
         'category': 'グッズ＆ショップ',
-        'time': '2019.01.10',
+        'time': '2019.01.10'
       },
       {
         'text': '夏季期間（7/1〜8/31）の営業時間について',
         'category': 'お知らせ',
-        'time': '2019.01.10',
+        'time': '2019.01.10'
       },
       {
         'text': 'モトレーサー タイムアタック選手権2019開催！',
         'category': 'モータースポーツ',
-        'time': '2019.01.10',
+        'time': '2019.01.10'
       }
     ],
-    content2 = [
+    [
       {
         'text': '新アトラクション「巨大ネットの森 SUMIKA」オープン！',
         'category': 'アトラクション・アクティビティ',
-        'time': '2019.01.10',
+        'time': '2019.01.10'
       },
       {
         'text': 'HELLO WOODSのフォトギャラリー更新',
         'category': 'お知らせ',
-        'time': '2019.01.10',
+        'time': '2019.01.10'
       },
       {
         'text': 'ディナーセットメニューがリニューアル！',
         'category': 'レストラン',
-        'time': '2019.01.10',
+        'time': '2019.01.10'
       },
       {
         'text': 'ツインリンクもてぎ 花火の祭典“冬”のご予約開始',
         'category': 'ホテル・キャンプ',
-        'time': '2019.01.10',
+        'time': '2019.01.10'
       }
     ]
   ]
@@ -153,7 +153,7 @@
   <div class="l-container mv-container">
     <h2 class="mv-heading">
       <span class="mv-heading-text">
-        <img src="<%= mix('/assets/images/mv-twinring-motegi.png') %>" alt="Twinring Motegi">
+        Twin ring Motegi
       </span>
       <span class="mv-heading-subtext">
         <img src="<%= mix('/assets/images/mv-heading.svg') %>" alt="家族にちょうどいい冒険を">
@@ -202,12 +202,11 @@
 </div>
 
 <div class="l-parkmap">
-  <section class="parkmap">
+  <div class="parkmap">
     <div class="l-container parkmap-container">
       <%- include('/partials/heading', {
         'modifier': 'heading-wrap-parkmap',
-        'text': mix('/assets/images/top/parkmap/parkmap.png'),
-        'alt': 'Park Map',
+        'text': 'Park Map',
         'subtextvg': 'parkmap-subtext',
         'altSubtext': '',
       }) %>
@@ -251,35 +250,36 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 
-<div class="l-section">
+<section class="l-section">
   <%- include('/partials/top/section-activity') -%>
-</div>
+</section>
 
-<div class="l-section">
+<section class="l-section design-circle">
   <%- include('/partials/top/section-mobi-park') -%>
-</div>
+</section>
 
-<div class="l-section">
+<section class="l-section design-mount">
   <%- include('/partials/top/section-motosports') -%>
-</div>
 
-<div class="l-section">
+  <div class="design-petal"></div>
+</section>
+
+<section class="l-section design-petals">
   <%- include('/partials/top/section-twinring') -%>
-</div>
+</section>
 
-<div class="l-section">
+<section class="l-section l-section-hotel-twin">
   <%- include('/partials/top/section-hotel-twin') -%>
-</div>
+</section>
 
-<div class="l-how-to l-container">
-  <section class="how-to">
+<section class="l-how-to l-container">
+  <div class="how-to">
     <%- include('/partials/heading', {
       'modifier': 'heading-wrap-how-to heading-wrap-center',
-      'text': mix('/assets/images/top/how-to/how-to-enjoy.png'),
-      'alt': 'How to Enjoy',
+      'text': 'How to Enjoy',
       'subtextvg': 'how-to-subtext',
       'altSubtext': '',
     }) %>
@@ -298,15 +298,14 @@
       </li>
       <% }) %>
     </ul>
-  </section>
-</div>
+  </div>
+</section>
 
 <section class="information">
   <div class="l-container information-container">
     <%- include('/partials/heading', {
-      'modifier': 'heading-wrap-information',
-      'text': mix('/assets/images/top/information/information.png'),
-      'alt': 'Information',
+      'modifier': '',
+      'text': 'Information',
       'subtextvg': 'information-subtext',
       'altSubtext': '',
     }) %>

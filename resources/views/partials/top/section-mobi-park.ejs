@@ -4,53 +4,55 @@
       'category': 'ATHLETIC',
       'image': mix('/assets/images/top/mobi-park/img1.jpg'),
       'title': '巨大ネットの森 SUMIKA',
+      'url': '#'
     },
     {
       'category': 'ATHLETIC',
       'image': mix('/assets/images/top/mobi-park/img2.jpg'),
       'title': '森感覚アスレチック DOKIDOKI',
+      'url': '#'
     },
     {
       'category': 'CAR & BIKE',
       'image': mix('/assets/images/top/mobi-park/img3.jpg'),
       'title': 'クルマ＆バイクのアトラクション',
-    },
+      'url': '#'
+    }
   ]
 %>
+<div class="section-inner">
+  <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/mobi-park/bg.jpg') %>);">
+    <img class="section-image-logo" src="<%= mix('/assets/images/top/mobi-park/logo.jpg') %>" alt="Mobi Park">
+  </div>
+  <div class="l-container">
+    <div class="section-contents">
+      <p class="section-contents-copy">はじめての挑戦と「できた」の喜びに、子どもは夢中になる。<br>親子でチャレンジすれば忘れらない思い出になります。</p>
 
-<section class="section">
-  <div class="section-inner">
-    <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/mobi-park/bg.jpg') %>);">
-      <img class="section-image-logo" src="<%= mix('/assets/images/top/mobi-park/logo.jpg') %>" alt="Mobi Park">
-    </div>
-    <div class="l-container">
-      <div class="section-contents">
-        <p class="section-contents-copy">はじめての挑戦と「できた」の喜びに、子どもは夢中になる。<br>親子でチャレンジすれば忘れらない思い出になります。</p>
-
-        <ul class="section-cards">
-          <%
-            sectionMobiParkCards.forEach( card => {
-          %>
-          <li class="section-cards-item">
+      <ul class="section-cards">
+        <%
+          sectionMobiParkCards.forEach( card => {
+        %>
+        <li class="section-cards-item">
+          <a href="<%- card.url %>" class="section-card-link">
             <div class="section-cards-image-wrap image-border">
               <span class="section-cards-category"><%- card.category %></span>
               <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
             </div>
             <p class="section-cards-title"><%- card.title %></p>
-          </li>
-          <%
-            })
-          %>
-        </ul>
+          </a>
+        </li>
+        <%
+          })
+        %>
+      </ul>
 
-        <div class="section-button">
-          <%- include('/partials/button', {
-            'modifier': '',
-            'text': 'もっと見る',
-            'link': '#'
-          }) %>
-        </div>
+      <div class="section-button">
+        <%- include('/partials/button', {
+          'modifier': '',
+          'text': 'もっと見る',
+          'link': '#'
+        }) %>
       </div>
     </div>
   </div>
-</section>
+</div>

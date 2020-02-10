@@ -4,66 +4,63 @@
       'category': 'ACTIVITY',
       'image': mix('/assets/images/top/activity/img1.jpg'),
       'title': 'ジップラインつばさ・ムササビ',
-      'url' : '#',
+      'url': '#'
     },
     {
       'category': 'PROGRAM',
       'image': mix('/assets/images/top/activity/img2.jpg'),
       'title': '森のファミリーウォーク',
-      'url' : '#',
+      'url': '#'
     },
     {
       'category': 'WORKSHOP',
       'image': mix('/assets/images/top/activity/img3.jpg'),
       'title': 'クラフト体験',
-      'url' : '#',
-    },
+      'url': '#'
+    }
   ]
 %>
 
-<section class="section">
-    <%- include('/partials/heading', {
-      'modifier': 'heading-wrap-center heading-wrap-activity',
-      'text': mix('/assets/images/top/activity/attraction-activity.png'),
-      'alt': 'Attraction & Activity',
-      'subtext': mix('/assets/images/top/activity/subtext.png'),
-      'altSubtext': 'ツインリンクもてぎの楽しさをエリア別に紹介',
-    }) %>
+  <%- include('/partials/heading', {
+    'modifier': 'heading-wrap-center heading-wrap-activity',
+    'text': 'Attraction & Activity',
+    'subtext': mix('/assets/images/top/activity/subtext.png'),
+    'altSubtext': 'ツインリンクもてぎの楽しさをエリア別に紹介'
+  }) %>
 
-    <div class="section-inner">
-      <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/activity/bg.jpg') %>);">
-        <img class="section-image-logo" src="<%= mix('/assets/images/top/activity/logo.png') %>" alt="Hello Woods">
-      </div>
-      <div class="l-container">
-        <div class="section-contents">
-          <p class="section-contents-copy">森の中で「溢れる生命（いのち）」を見つけよう。<br>自然とふれあいながら、遊び・学べる体験型アトラクション・プログラムが満載です。</p>
+  <div class="section-inner">
+    <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/activity/bg.jpg') %>);">
+      <img class="section-image-logo" src="<%= mix('/assets/images/top/activity/logo.png') %>" alt="Hello Woods">
+    </div>
+    <div class="l-container">
+      <div class="section-contents">
+        <p class="section-contents-copy">森の中で「溢れる生命（いのち）」を見つけよう。<br>自然とふれあいながら、遊び・学べる体験型アトラクション・プログラムが満載です。</p>
 
-          <ul class="section-cards">
-            <%
-              sectionActivityCards.forEach( card => {
-            %>
-            <li class="section-cards-item">
-              <a href="<%- card.url %>" class="section-card-link">
-                <div class="section-cards-image-wrap image-border">
-                  <span class="section-cards-category"><%- card.category %></span>
-                  <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
-                </div>
-                <p class="section-cards-title"><%- card.title %></p>
-              </a>
-            </li>
-            <%
-              })
-            %>
-          </ul>
+        <ul class="section-cards">
+          <%
+            sectionActivityCards.forEach( card => {
+          %>
+          <li class="section-cards-item">
+            <a href="<%- card.url %>" class="section-card-link">
+              <div class="section-cards-image-wrap image-border">
+                <span class="section-cards-category"><%- card.category %></span>
+                <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+              </div>
+              <p class="section-cards-title"><%- card.title %></p>
+            </a>
+          </li>
+          <%
+            })
+          %>
+        </ul>
 
-          <div class="section-button">
-            <%- include('/partials/button', {
-              'modifier': '',
-              'text': 'もっと見る',
-              'link': '#'
-            }) %>
-          </div>
+        <div class="section-button">
+          <%- include('/partials/button', {
+            'modifier': '',
+            'text': 'もっと見る',
+            'link': '#'
+          }) %>
         </div>
       </div>
     </div>
-</section>
+  </div>

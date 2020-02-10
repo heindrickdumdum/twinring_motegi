@@ -73,55 +73,36 @@ accordionData = [
     ]
 %>
 
-<%
-  recommend = [
+  forest = [
     {
-      'image': mix('/assets/images/top/how-to/img1.jpg'),
-      'heading': '巨大ネットの森SUMIKA',
-      'buttonLink': '#',
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 1`,
+      desc: `目の前の壁を超えろ！新芽のチャレンジウォール`
     },
     {
-      'image': mix('/assets/images/top/how-to/img2.jpg'),
-      'heading': '森感覚アスレチックDOKIDOKI',
-      'buttonLink': '#',
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 2`,
+      desc: `アカネズミのひみつの場所！どんぐりころころ`
     },
     {
-      'image': mix('/assets/images/top/how-to/img3.jpg'),
-      'heading': '迷宮森殿ITADAKI',
-      'buttonLink': '#',
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 3`,
+      desc: `丸太の一般橋を渡ろう！`
+    },
+    {
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 3`,
+      desc: `丸太の一般橋を渡ろう！`
+    },
+    {
+      src: mix('https://via.placeholder.com/576x407'),
+      alt: `dokidoki slide 3`,
+      desc: `丸太の一般橋を渡ろう！`
     }
   ]
 %>
 
-<%
-  pickup = [
-    {
-      'image': mix('/assets/images/dokidoki/feature/img1.png'),
-      'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-      },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img2.png'),
-      'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img3.png'),
-      'heading': 'モトレーサー タイムアタック選手権2019予選',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img4.png'),
-      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    }
-  ]
-%>
-
+<% include('./../partials/data/index') %>
 <%- include('./../partials/head', { title }) -%>
 
 <div class="subpage subpage-withbottombanner">
@@ -215,7 +196,11 @@ accordionData = [
         <tr class="table-row">
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
-            服装について : <br>サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。<br>小学生未満のお子様の利用について：<br>DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。
+            服装について : <br>
+            サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。<br>
+            小学生未満のお子様の利用について：<br>
+            DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。
+
           </td>
         </tr>
 
@@ -273,7 +258,7 @@ accordionData = [
       <div class="l-section-title">
         <%- include('/partials/heading', {
           'modifier': 'heading-dokidoki',
-          'text': mix('/assets/images/dokidoki/how-to-enjoy.png'),
+          'text': 'How to Enjoy',
           'alt': 'DOKIDOKIを楽しむポイント',
           'subtextvg': 'enjoy-dokidoki',
           'altSubtext': '',

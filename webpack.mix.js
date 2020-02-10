@@ -65,6 +65,11 @@ mix
     `${distRelativePath}/assets/svg`,
     { base: `${srcRelativePath}/assets/svg` }
   )
+  .copyWatched(
+    `${srcRelativePath}/assets/lib/fonts`,
+    `${distRelativePath}/assets/lib/fonts`,
+    { base: `${srcRelativePath}/assets/lib/fonts` }
+  )
   .browserSync({
     open: true,
     host: process.env.MIX_BROWSER_SYNC_HOST || 'localhost',

@@ -1,5 +1,10 @@
 .heading-text {
   display: block;
+  font-family: $font-holland;
+  font-size: 31px;
+  background: linear-gradient(to right, #1cc763 0%, #34b0e7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .heading-subtext {
@@ -20,28 +25,21 @@
     .heading-text,
     .heading-subtext {
       margin: 0 auto;
+      letter-spacing: 0.03em;
     }
 
     .heading-subtext {
-      margin: 17px auto 0;
+      margin: 25px auto 0;
     }
   }
 
   &.heading-wrap-parkmap {
-    .heading-text {
-      width: 144px;
-    }
-
     .heading-subtext {
       width: 750px;
     }
   }
 
   &.heading-wrap-activity {
-    .heading-text {
-      width: 258px;
-    }
-
     .heading-subtext {
       width: 800px;
     }
@@ -60,8 +58,6 @@
   }
 
   &.heading-dokidoki {
-    margin-bottom: 50px;
-
     .heading-text {
       margin: 0 auto;
       text-align: center;
@@ -70,19 +66,6 @@
     .heading-subtext {
       margin: 24px auto 0;
       text-align: center;
-    }
-
-    .heading-texts {
-      img {
-
-        margin: auto;
-      }
-    }
-
-    .heading {
-      max-width: 651px;
-      width: 100%;
-      margin: 0 auto;
     }
 
     svg {
@@ -101,50 +84,19 @@
     }
   }
 
-  &.heading-wrap-how-to {
-    .heading-text {
-      width: auto;
-      max-width: 320px;
-    }
-
-    .heading-subtext {
-      max-width: 490px;
-      margin-top: 22px;
-      width: 100%;
-    }
-  }
-
-  &.heading-bike-attraction {
-    margin-bottom: 85px;
-    .heading-text {
-      width: 100%;
-      margin: 0 auto;
-      max-width: 497px;
-    }
-  }
-
-  &.heading-car-attraction {
-    margin-bottom: 85px;
-    .heading-text {
-      width: 100%;
-      margin: 0 auto;
-      max-width: 405px;
-    }
-  }
-
-  &.heading-workshop-attraction {
-    margin-bottom: 85px;
-    .heading-text {
-      width: 100%;
-      margin: 0 auto;
-      max-width: 407px;
-    }
-  }
-
   &.heading-net-dokidoki {
-    margin-bottom: 65px;
+    margin-bottom: 40px;
 
     .heading-text {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &.heading-net-acro-x {
+    margin-bottom: 40px;
+
+    .heading-texts {
       margin: 0 auto;
       text-align: center;
     }
@@ -166,83 +118,50 @@
       margin: 0 auto 24px;
     }
   }
+}
 
-  &.heading-wrap-information {
+//MODIFIER DOKIDOKI
+.dokidoki {
+  .heading-dokidoki {
     .heading-text {
-      width: 149px;
+      width: auto !important;
+      height: auto !important;
+      font-size: 36px;
+      letter-spacing: 0.16em;
+      font-family: $base-font-family;
     }
   }
 
-  &.heading-enjoy-bunbun {
-    margin-bottom: 35px;
-
-    .heading-subtext {
-      max-width: 560px;
-      width: 100%;
-    }
-
-  }
-
-  &.heading-bunbun {
-    margin: 22px 0;
-
+  .heading-net-dokidoki {
     .heading-text {
-      max-width: 563px;
-      margin: 0 auto;
-      position: relative;
-      left: 26px;
-      width: 100%;
+      width: auto !important;
+      height: auto !important;
+      font-size: 32.456px;
+      font-family: $base-font-family;
+      letter-spacing: 0.16em;
+      font-weight: 300;
     }
   }
 
-  &.heading-wrap-subpage  {
-    margin: 0 auto 83px;
-  }
-
-  &.heading-wrap-acro-x {
-    max-width: 651px;
-  }
-
-  &.heading-points-acro-x {
-    .heading-subtext {
-      max-width: 628px;
-      margin-bottom: 35px;
-      width: 100%;
-    }
-  }
-
-  &.heading-recommendation,
-  &.heading-pickup {
-    margin-bottom: 40px;
-  }
-
-  &.heading-recommendation {
-    .heading-subtext {
-      margin-top: 10px;
-      max-width: 435px;
-      width: 100%;
-    }
-  }
-
-  &.heading-pickup {
-    .heading-subtext {
-      margin-top: 15px;
-      max-width: 367px;
-      width: 100%;
-    }
-  }
-
-  &.heading-deb-den {
-    margin-bottom: 55px;
-    .heading {
-      max-width: 651px;
-      width: 100%;
+  .heading-dokidoki-faq {
+    .heading-text {
       text-align: center;
-      margin: 0 auto;
+    }
 
-      @include max-screen($breakpoint-mobile) {
-        max-width: 489px;
-      }
+    .heading-subtext {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  .heading-dokidoki-enjoy {
+    .heading-subtext {
+      max-width: 556px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
     }
   }
 }

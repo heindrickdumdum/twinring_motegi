@@ -1,6 +1,6 @@
 <%
 if (typeof modifier === 'undefined') {
-var modifier = '';
+  var modifier = '';
 }
 %>
 <article class="article <%- modifier %>">
@@ -15,7 +15,7 @@ var modifier = '';
             <% } else { %><%- mix('/assets/images/noimage.jpg') %>
             <% } %>)"></div>
     </div>
-    <p class="article-heading"><%- heading %></p>
+    <h3 class="article-heading"><%- heading %></h3>
     <p class="article-period">
       開催期間：<span class="article-period-date"><%- date %></span>
     </p>

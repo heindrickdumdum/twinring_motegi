@@ -2,11 +2,13 @@
 
 @import 'setting';
 
+
 @import 'base/sanitize';
 @import 'base/mixin';
 @import "base/placeholders";
 @import 'base/base';
 @import 'base/utility';
+
 
 @import "lib/media-queries";
 @import "lib/clearfix";
@@ -33,6 +35,7 @@
 @import "components/table";
 @import "components/media";
 @import "components/accordion";
+@import "components/design";
 
 @import "components/block-image";
 @import "components/image-border";
@@ -50,7 +53,7 @@
 @import "components/car-bike";
 // @import "components/tsubasa/styles";
 // @import "components/car-and-bike/styles";
-
+@import "components/itadaki";
 @import 'layout/grid';
 @import "layout/l-container";
 @import "layout/l-header";

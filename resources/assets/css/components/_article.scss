@@ -83,27 +83,27 @@
         }
       }
     }
+
+    .article-image-wrap {
+      padding: 0;
+      height: auto;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      .article-image {
+        &::before {
+          display: none;
+        }
+      }
+    }
   }
 
   &.sumika-recommendation-article {
     .article-heading {
       min-height: 93px;
-    }
-  }
-
-  .article-image-wrap {
-    padding: 0;
-    height: auto;
-
-    &::before,
-    &::after {
-      display: none;
-    }
-
-    .article-image {
-      &::before {
-        display: none;
-      }
     }
   }
 }

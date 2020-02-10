@@ -2,7 +2,6 @@
   display: block;
   font-family: $font-holland;
   font-size: 31px;
-
   background: linear-gradient(to right, #1cc763 0%, #34b0e7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -26,10 +25,11 @@
     .heading-text,
     .heading-subtext {
       margin: 0 auto;
+      letter-spacing: 0.03em;
     }
 
     .heading-subtext {
-      margin: 17px auto 0;
+      margin: 25px auto 0;
     }
   }
 
@@ -84,12 +84,6 @@
     }
   }
 
-  &.heading-wrap-how-to {
-    .heading-text {
-      width: 189px;
-    }
-  }
-
   &.heading-net-dokidoki {
     margin-bottom: 40px;
 
@@ -133,7 +127,8 @@
       width: auto !important;
       height: auto !important;
       font-size: 36px;
-      letter-spacing: 0.16em;     
+      letter-spacing: 0.16em;
+      font-family: $base-font-family;
     }
 
     .heading-subtext {
@@ -147,8 +142,8 @@
       height: auto !important;
       font-size: 32.456px;
       font-family: $base-font-family;
-      letter-spacing: 0.16em;   
-      font-weight: 300;        
+      letter-spacing: 0.16em;
+      font-weight: 300;
     }
   }
 

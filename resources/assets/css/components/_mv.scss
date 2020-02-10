@@ -168,3 +168,34 @@
 .mv-today-celcius-value {
   margin: 0 -7px;
 }
+
+//MODIFIER
+.mv-dokidoki,
+.mv-mobipark {
+  overflow-y: hidden;
+  .mv-heading {
+    bottom: 45px;
+  }
+
+  .mv-heading-texts {
+    font-size: 45px;
+    font-family: $font-holland;
+    color: $color-white;
+    letter-spacing: 0.08em;
+  }
+
+  .mv-heading-subtexts {
+    margin-top: -10px;
+    font-size: 54px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
+  }
+
+  .mv-today {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/dokidoki/dokidoki-logo.png);
+    bottom: -60px;
+  }
+}

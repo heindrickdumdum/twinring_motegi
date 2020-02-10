@@ -1,56 +1,22 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi | DOKIDOKI'
   SPRITE_SVG = '/assets/svg/sprite.svg';
-%>
-
-<%
-
-  forest = [
-    {
-      src: mix('https://via.placeholder.com/576x407'),
-      alt: `dokidoki slide 1`,
-      desc: `目の前の壁を超えろ！新芽のチャレンジウォール`
-    },
-    {
-      src: mix('https://via.placeholder.com/576x407'),
-      alt: `dokidoki slide 2`,
-      desc: `アカネズミのひみつの場所！どんぐりころころ`
-    },
-    {
-      src: mix('https://via.placeholder.com/576x407'),
-      alt: `dokidoki slide 3`,
-      desc: `丸太の一般橋を渡ろう！`
-    },
-    {
-      src: mix('https://via.placeholder.com/576x407'),
-      alt: `dokidoki slide 3`,
-      desc: `丸太の一般橋を渡ろう！`
-    },
-    {
-      src: mix('https://via.placeholder.com/576x407'),
-      alt: `dokidoki slide 3`,
-      desc: `丸太の一般橋を渡ろう！`
-    }
-  ]
 %>
 
 <% include('./../partials/data/index') %>
 <%- include('./../partials/head', { title }) -%>
 
-<div class="mv-dokidoki">
+<div class="mv mv-dokidoki">
   <ul class="mv-list">
     <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dokidoki/mv-img.png') %>);"></div>
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.jpg') %>);"></div>
     </li>
   </ul>
 
   <div class="l-container mv-container">
     <h2 class="mv-heading">
       <span class="mv-heading-texts">
-        <svg>
-          <title>Dokidoki</title>
-          <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mv-text') %>"></use>
-        </svg>
+        Forest Obstacle Course
       </span>
       <span class="mv-heading-subtexts">
         森感覚アスレチックDOKIDOKI
@@ -64,14 +30,16 @@
   </div>
 </div>
 
-<section class="main-content">
+<section class="main-content dokidoki">
   <div class="l-container">
-    <div class="heading-wrap heading-dokidoki">
-      <h2 class="heading">
-        <span class="heading-texts">
-          <img src="<%= mix('/assets/images/dokidoki/dokidoki-title.png') %>" alt="dokidoki">
-        </span>
-      </h2>
+    <div class="l-seciton-title">
+      <div class="heading-wrap heading-dokidoki heading-main-title">
+        <h2 class="heading">
+          <span class="heading-text">
+            <img src="<%= mix('/assets/images/dokidoki/dokidoki-title.png') %>" alt="dokidoki">
+          </span>
+        </h2>
+      </div>
     </div>
 
     <!-- YOUTUBE -->
@@ -88,7 +56,7 @@
     </h3>
 
     <p class="attraction-subtext">
-      肉食動物や大きな鳥から小動物まで、あらゆる生きもの達の隠れ家となっている場所、それがすみか。 ネットが張りめぐらされた「巨大ネ
+      巨大などんぐりの木に隠された多くの難関を乗り越えて木のてっぺんを目指す、これまでにない新感覚の「木登り型アスレチック」です。
     </p>
 
     <table class="table">
@@ -142,15 +110,12 @@
 
       </tbody>
     </table>
-  </div>
-</section>
 
-<section class="admission dokidoki">
-  <div class="l-container">
-    <h3 class="admission-title">
+    <h3 class="attraction-title">
       <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
     </h3>
-    <p class="admission-subtext">
+
+    <p class="attraction-subtext">
       下記の日程は 混雑が予想されるため、 対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
       期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
     </p>
@@ -199,7 +164,7 @@
   <div class="l-container">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-dokidoki heading-dokidoki-enjoy',
+        'modifier': 'heading-enjoy',
         'text': 'How to Enjoy',
         'alt': '',
         'subtextvg': 'enjoy-dokidoki',
@@ -289,7 +254,7 @@
   <div class="l-container">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-dokidoki',
+        'modifier': 'heading-forest',
         text: 'Ways to feel the Forest',
         'subtextvg': 'dokidoki-forest',
         'altSubtext': ''
@@ -317,7 +282,7 @@
 
 <!-- BOTTOM -->
 
-<section class="sumika-video dokidoki l-container">
+<section class="sumika-video l-container dokidoki dokidoki-video">
   <div class="l-section-title l-sumika-video">
     <%- include('/partials/heading', {
       'modifier': 'heading-sumika heading-dokidoki',
@@ -393,7 +358,7 @@
     <div class="sumika-faq-inner">
 
       <%- include('/partials/heading', {
-        modifier: 'heading-dokidoki-faq',
+        modifier: 'heading-faq',
         text: 'FAQ',
         alt: 'faq',
         subtextvg: 'faq-subtext',
@@ -467,7 +432,7 @@
 <div class="banner-cta dokidoki-cta">
   <div class="l-container">
     <div class="banner-cta-bottom-inner">
-      <img src="<%- mix('https://via.placeholder.com/1020x210')%> ">
+      <img src="<%- mix('/assets/images/acro-x/cta-bottom.jpg')%> ">
     </div>
   </div>
 </div>

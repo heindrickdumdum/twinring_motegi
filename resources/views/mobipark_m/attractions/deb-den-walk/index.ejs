@@ -3,58 +3,10 @@
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
 
-<%
-  recommend = [
-    {
-      'image': mix('/assets/images/forest-driving/recommendation-img1.jpg'),
-      'heading': '巨大ネットの森SUMIKA',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/forest-driving/recommendation-img2.jpg'),
-      'heading': '森感覚アスレチックDOKIDOKI',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/forest-driving/recommendation-img3.jpg'),
-      'heading': '迷宮森殿ITADAKI',
-      'buttonLink': '#',
-    }
-  ]
-%>
-
-<%
-  pickup = [
-    {
-      'image': mix('/assets/images/dokidoki/feature/img1.png'),
-      'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-      },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img2.png'),
-      'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img3.png'),
-      'heading': 'モトレーサー タイムアタック選手権2019予選',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img4.png'),
-      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    }
-  ]
-%>
-
+<%- include('/partials/data/index', { title }) -%>
 <%- include('/partials/head', { title }) -%>
 
-<div class="mv-deb-den">
+<div class="mv mv-mobipark">
   <ul class="mv-list">
     <li class="mv-item">
       <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.png') %>);"></div>
@@ -73,16 +25,13 @@
 
 </div>
 
-<section class="main-content">
+<section class="main-content mobipark">
   <div class="l-container">
     <div class="l-section-title">
-      <div class="heading-wrap heading-deb-den">
+      <div class="heading-wrap heading-mobipark heading-main-title">
         <h2 class="heading">
-          <span class="heading-texts u-show-pc">
+          <span class="heading-text u-show-pc">
             <img src="<%= mix('/assets/images/forest-driving/forest-driving-title.png') %>" alt="forest-driving">
-          </span>
-          <span class="heading-texts u-show-sp">
-            <img src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
           </span>
         </h2>
       </div>
@@ -158,12 +107,12 @@
   </div>
 </section>
 
-<section class="how-to-enjoy">
+<section class="how-to-enjoy mobipark">
   <div class="l-container">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-forest-driving',
-        'text': mix('/assets/images/how-to-enjoy.png'),
+        'modifier': 'heading-enjoy',
+        'text': 'How to Enjoy',
         'alt': 'おさんぽでんでんを楽しむポイント',
         'subtextvg': 'deb-den-subtext',
         'altSubtext': '',
@@ -241,88 +190,73 @@
 
 <!-- BOTTOM -->
 
-<section class="deb-den-cta">
+<div class="call-to-action dokidoki mobipark">
   <div class="l-container">
-    <div class="deb-den-cta-wrapper">
-      <div class="deb-den-cta-inner">
-        <div class="l-section-title u-show-pc">
-          <%- include('/partials/heading', {
-            'modifier': 'heading-net-deb-den',
-            'text': mix('/assets/images/forest-driving/forest-driving-cta.png'),
-            'alt': 'アクロエックスをもっと楽しむ',
-            'altSubtext': '',
-            'subtextvg': ''
-          }) %>
-        </div>
-
-        <div class="l-section-title u-show-sp">
-          <%- include('/partials/heading', {
-            'modifier': 'heading-net-deb-den',
-            'text': mix('/assets/images/forest-driving/sp-forest-driving-cta.png'),
-            'alt': 'アクロエックスをもっと楽しむ',
-            'altSubtext': '',
-            'subtextvg': ''
-          }) %>
-        </div>
-        
-
-        <div class="deb-den-cta-description">
-          <p class="deb-den-cta-description-text">
+    <div class="call-to-action-wrapper">
+      <div class="call-to-action-inner">
+        <%- include('/partials/heading', {
+          modifier: 'heading-net-dokidoki',
+          text: 'アクロエックスをもっと楽しむ',
+          alt: '',
+          altSubtext: '',
+          'subtext': ''
+        }) %>
+        <div class="call-to-action-description">
+          <p class="call-to-action-description-text">
             おさんぽでんでんのこだわりポイントや、知っているとも<br>っと楽しくなる情報を配信中しています。
           </p>
         </div>
-        <div class="l-button">
+        <div class="l-button l-button-call-to-action">
           <%- include('/partials/button', {
-            'modifier': 'button-deb-den',
-            'text': 'もっと見る',
-            'link': '#'
+            modifier: 'button-dokidoki button-mobipark',
+            text: 'もっと見る',
+            link: '#'
           }) %>
         </div>
-        <span class="deb-den-cta-dot deb-den-cta-dot-1">
-          <img src="<%- mix('/assets/images/forest-driving/cta-img1.png')%> ">
+        <span class="call-to-action-dot call-to-action-dot-1">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
         </span>
-        <span class="deb-den-cta-dot deb-den-cta-dot-2">
-          <img src="<%- mix('/assets/images/forest-driving/cta-img2.png')%> ">
+        <span class="call-to-action-dot call-to-action-dot-2">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
         </span>
-        <span class="deb-den-cta-dot deb-den-cta-dot-3">
-          <img src="<%- mix('/assets/images/forest-driving/cta-img4.png')%> ">
+        <span class="call-to-action-dot call-to-action-dot-3">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
         </span>
-        <span class="deb-den-cta-dot deb-den-cta-dot-4">
-          <img src="<%- mix('/assets/images/forest-driving/cta-img3.png')%> ">
+        <span class="call-to-action-dot call-to-action-dot-4">
+          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
         </span>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<div class="deb-den-cta-bottom">
+<div class="banner-cta mobipark-cta">
   <div class="l-container">
-    <div class="deb-den-cta-bottom-inner">
-      <img src="<%= mix('/assets/images/forest-driving/cta-bottom.jpg') %>">
+    <div class="banner-cta-bottom-inner">
+      <img src="<%- mix('/assets/images/acro-x/cta-bottom.jpg')%> ">
     </div>
   </div>
 </div>
 
-<section class="deb-den-recommendation">
+<section class="sumika-recommendation dokidoki">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-deb-den',
-      'text': mix('/assets/images/recommendation.png'),
-      'alt': 'recommendation',
-      'altSubtext': '',
-      'subtextvg': 'recommendation-subtext'
+      modifier: 'heading-net-sumika heading-mobipark',
+      text: 'Recommendation',
+      alt: '',
+      altSubtext: '',
+      subtextvg: 'recommend'
     }) %>
   </div>
-
-  <div class="l-container">
-    <ul class="feature-list feature-list-no-design">
-      <% recommend.forEach(item => { %>
-      <li class="feature-item">
+  <div class="swiper-container slider">
+    <ul class="swiper-wrapper slider-wrapper">
+      <% getData().data.recommend.forEach(item => { %>
+      <li class="swiper-slide slider-item">
         <%- include('/partials/article-no-design', {
-          'image': item.image,
-          'heading': item.heading,
-          'buttonLink': item.buttonLink,
-          'buttonText': 'モビパーク'
+          image: item.image,
+          heading: item.heading,
+          buttonLink: item.buttonLink,
+          buttonText: 'モビパーク'
         }) %>
       </li>
       <% }) %>
@@ -330,27 +264,27 @@
   </div>
 </section>
 
-<section class="deb-den-pick-up">
+<section class="sumika-pick-up dokidoki">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-deb-den',
-      'text': mix('/assets/images/pickup.png'),
-      'alt': 'pickup',
-      'altSubtext': '',
-      'subtextvg': 'pickup'
+      modifier: 'heading-net-sumika heading-mobipark',
+      text: 'Pick Up',
+      alt: '',
+      altSubtext: '',
+      subtextvg: 'pickup'
     }) %>
   </div>
-
   <div class="l-container">
     <ul class="feature-list">
-      <% pickup.forEach(item => { %>
+      <% getData().data.pickup.forEach(item => { %>
       <li class="feature-item">
         <%- include('/partials/article', {
-          'category': item.category,
-          'image': item.image,
-          'heading': item.heading,
-          'date': item.date,
-          'link': item.link
+          category: item.category,
+          image: item.image,
+          heading: item.heading,
+          date: item.date,
+          link: item.link,
+          modifier: 'sumika-recommendation-article'
         }) %>
       </li>
       <% }) %>

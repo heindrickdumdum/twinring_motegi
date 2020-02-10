@@ -1,21 +1,10 @@
-.main-content {
-  table {
-    td,
-    th {
-      @include max-screen($breakpoint-mobile) {
-        font-size: 35.575px;        
-      }
-    }
-  }
-}
-
 .attraction-title {
   margin-top: 30px;
   margin-bottom: 15px;
 }
 
 .attraction-subtext {
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   font-size: 15px;
   color: $base-font-color;
   line-height: 2;

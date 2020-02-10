@@ -1,6 +1,37 @@
 <%
   var title = 'Twin Ring Motegi';
 %>
+<%
+
+  fields = [
+    {
+      src: mix('/assets/images/hellowoods/field-slide-1.jpg'),
+      alt: `Field`,
+      desc: `家族みんなが夢中になる！森の鬼ごっこ＆かくれんぼ`
+    },
+    {
+      src: mix('/assets/images/hellowoods/field-slide-2.jpg'),
+      alt: `Field`,
+      desc: `じゃぶじゃぶ池`
+    },
+    {
+      src: mix('/assets/images/hellowoods/field-slide-3.jpg'),
+      alt: `Field`,
+      desc: `冒険の塔`
+    },
+    {
+      src: mix('/assets/images/hellowoods/field-slide-1.jpg'),
+      alt: `Field`,
+      desc: `冒険の塔`
+    },
+    {
+      src: mix('/assets/images/hellowoods/field-slide-2.jpg'),
+      alt: `Field`,
+      desc: `じゃぶじゃぶ池`
+    }
+  ]
+%>
+
 
 <%- include('/partials/head', { title }) -%>
 
@@ -88,16 +119,46 @@
   <section class="field-introduction">
     <div class="l-container field-introduction-container">
       <%- include('/partials/heading', {
-        'modifier': 'heading-wrap-how-to heading-wrap-center',
-        'text': 'Field Introduction',
-        'alt': '',
-        'subtextvg': '',
-        'altSubtext': 'フィールド紹介'
+        modifier: 'heading-wrap-how-to heading-wrap-center',
+        text: 'Field Introduction',
+        alt: '',
+        subtextvg: 'hellowoods-field-intro-subtext',
+        altSubtext: ''
       }) %>
       <div class="map-wrapper">
         <img class="map-image" src="<%= mix('/assets/images/hellowoods/field-intro-map.png') %>" alt="Map">
       </div>
+      <div class="section-contents">
+        <p class="section-contents-copy">
+          ハローウッズは42ha、なんと東京ドーム9個分の広さがあります。<br>森全体にウッドチップ（くだいた木材）を敷いた全長3kmの遊歩道が整備されているので、<br>家族で森林浴を楽しむことができます。
+        </p>
+      </div>
     </div>
+    <div class="swiper-container slider">
+      <ul class="swiper-wrapper">
+        <% fields.forEach(item => { %>
+        <li class="swiper-slide slider-item">
+          <div class="slide-image">
+            <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+          </div>
+          <span class="slide-text">
+            <%- item.desc -%>
+          </span>
+        </li>
+        <% } ) %>
+      </ul>
+    </div>
+  </section>
+
+  <section class="l-section">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-wrap-center heading-wrap-activity',
+      'text': 'Explore',
+      'subtext': mix('/assets/images/top/activity/subtext.png'),
+      'altSubtext': 'ツインリンクもてぎの楽しさをエリア別に紹介'
+    }) %>
+
+    <%- include('/partials/hellowoods/section-forest-zipline') -%>
   </section>
 </div>
 

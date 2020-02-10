@@ -3,6 +3,12 @@
   width: 100%;
   font-size: 0;
   letter-spacing: 0;
+
+  &:not(:last-child) {
+    &.table-subpage {
+      margin-bottom: 55px;
+    }
+  }
 }
 
 .table-row {
@@ -32,7 +38,7 @@
   text-align: left;
   padding: 17px 40px;
   vertical-align: top;
-  
+
   &:before {
     position: absolute;
     content: '';

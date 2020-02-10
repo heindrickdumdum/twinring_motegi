@@ -1,0 +1,96 @@
+.subpage {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 105px;
+
+  > * {
+    position: relative;
+  }
+
+  &::after {
+    background: #dfdfdf;
+    content: '';
+    display: block;
+    height: 1px;
+    max-width: 1298px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  &::before {
+    background-image: url('../images/subpage-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.subpage-inner {
+  position: relative;
+  max-width: 1060px;
+  margin: 0 auto 120px;
+  width: 100%;
+
+  > p {
+    font-size: 15px;
+    color: $base-font-color;
+    line-height: 2;
+    text-align: left;
+    letter-spacing: 0.16em;
+    margin-bottom: 33px;
+  }
+}
+
+.subpage-title {
+  font-size: 24px;
+  letter-spacing: 0.11em;
+  margin-bottom: 8px;
+
+  span {
+    background: linear-gradient(to right, #027cc3 0%, #09a046 100%);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+
+  }
+}
+.subpage-youtube {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.subpage-banner {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.subpage-how-to-enjoy {
+  margin-bottom: 103px;
+}
+
+.subpage-how-to-enjoy-inner {
+  max-width: 1045px;
+  margin: 0 auto;
+}
+
+
+.subpage-recommendation {
+  margin-bottom: 65px;
+}
+
+//modifier
+.subpage-withbanner {
+  .subpage-recommendation {
+    margin-top: 240px;
+  }
+}

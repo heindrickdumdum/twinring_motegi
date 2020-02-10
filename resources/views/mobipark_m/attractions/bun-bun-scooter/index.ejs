@@ -54,40 +54,36 @@
 
 <%- include('/partials/head', { title }) -%>
 
-<div class="mv-bun-bun">
-  <ul class="mv-list">
-    <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/bun-bun-scooter/mv-img.png') %>);"></div>
-    </li>
-  </ul>
-</div>
+<div class="subpage subpage-withbottombanner subpage-acro-x">
+  <div class="mv mv-subpage">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/bun-bun-scooter/mv-img.png') %>);"></div>
+      </li>
+    </ul>
+  </div>
 
-<section class="main-content">
-  <div class="l-container">
-    <div class="heading-wrap heading-acro-x">
+  <div class="subpage-inner l-container">
+    <div class="heading-wrap heading-wrap-subpage heading-wrap-acro-x">
       <h2 class="heading">
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/acro-x/acro-x-title.png') %>" alt="acro-x">
+          <img src="<%= mix('/assets/images/bun-bun-scooter/subpage-title.png') %>" alt="">
         </span>
       </h2>
     </div>
 
     <!-- YOUTUBE -->
-    <div class="l-youtube">
-      <section class="youtube">
-        <div class="youtube-iframe-container">
-          <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </section>
+    <div class="subpage-youtube">
+      <div class="youtube-iframe-container">
+        <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
 
-    <h3 class="attraction-title">
-      <img src="<%- mix('/assets/images/acro-x/attraction-title.png') %>" alt="acro-x">
+    <h3 class="subpage-title">
+      <span>アトラクション情報</span>
     </h3>
 
-    <p class="attraction-subtext">
-      転倒しない自立式バイクで初めての運転操作にチャレンジ。かわいいみつばちと一緒に音楽を聞きながらお散歩しよう。
-    </p>
+    <p>転倒しない自立式バイクで初めての運転操作にチャレンジ。かわいいみつばちと一緒に音楽を聞きながら<br />お散歩しよう。</p>
 
     <table class="table">
       <tbody>
@@ -136,179 +132,176 @@
       </tbody>
     </table>
   </div>
-</section>
 
-<section class="how-to-enjoy">
-  <div class="l-container">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        'modifier': 'heading-acro-x',
-        'text': mix('/assets/images/acro-x/how-to-enjoy.png'),
-        'alt': 'ぶんぶんスクーターを楽しむポイント',
-        'subtextvg': 'bun-bun-scooter-subtext',
-        'altSubtext': '',
-      }) %>
-    </div>
+  <section class="subpage-how-to-enjoy">
+    <div class="subpage-how-to-enjoy-inner">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-enjoy-bunbun',
+          'text': mix('/assets/images/how-to-enjoy.png'),
+          'alt': 'ぶんぶんスクーターを楽しむポイント',
+          'subtextvg': 'bun-bun-scooter-subtext',
+          'altSubtext': '',
+        }) %>
+      </div>
 
-    <div class="how-to-content">
-      <div class="media u-clear">
-        <div class="media-left">
-          <div class="media-bg">
-            <div class="media-thumb">
-              <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+      <div class="how-to-content">
+        <div class="media media-subpage media-subpage-bunbun u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="media-right">
-          <h4 class="media-title"><span>転倒しないスクーターで乗り物デビュー！</span></h4>
-          <p class="media-desc">
-            スクーターのように手でアクセルとブレーキを操作。転倒しない<br />から自転車に乗れない子どもでも安心して楽しめます。
-          </p>
+          <div class="media-right">
+            <h4 class="media-title"><span>転倒しないスクーターで乗り物デビュー！</span></h4>
+            <p class="media-desc">
+              スクーターのように手でアクセルとブレーキを操作。転倒しない<br>から自転車に乗れない子どもでも安心して楽しめます。
+            </p>
 
-          <div class="media-bottom">
-            <div class="media-note">
-              <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-              <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-              <div class="media-note-text">
-                どんな道でも <br>
-                上手に乗りこなせタネ！
+            <div class="media-bottom">
+              <div class="media-note">
+                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                <div class="media-note-text">
+                  乗り物デビューできタネ！
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="media u-clear">
-        <div class="media-left">
-          <div class="media-bg">
-            <div class="media-thumb">
-              <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+        <div class="media media-subpage media-subpage-bunbun u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="media-right">
-          <h4 class="media-title">
-            <span>
-              みつばちに乗ってお花畑を散歩！
-            </span>
-          </h4>
-          <p class="media-desc">
-            みつばちにデザインされたスクーターでお花畑をぐるっと<br>
-            1周。写真スポットにぴったり！
-          </p>
-
-
+          <div class="media-right">
+            <h4 class="media-title">
+              <span>
+                みつばちに乗ってお花畑を散歩！
+              </span>
+            </h4>
+            <p class="media-desc">
+              みつばちにデザインされたスクーターでお花畑をぐるっと<br>
+              1周。写真スポットにぴったり！
+            </p>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- BOTTOM -->
+  <!-- BOTTOM -->
 
-<section class="acro-x-cta">
-  <div class="l-container">
-    <div class="acro-x-cta-wrapper">
-      <div class="acro-x-cta-inner">
-        <%- include('/partials/heading', {
-          'modifier': 'heading-net-acro-x',
-          'text': mix('/assets/images/acro-x/acro-x-cta.png'),
-          'alt': 'アクロエックスをもっと楽しむ',
-          'altSubtext': '',
-          'subtextvg': ''
-        }) %>
-        <div class="acro-x-cta-description">
-          <p class="acro-x-cta-description-text">
-            アクロエックスのこだわりポイントや、知っているともっ <br>
-            と楽しくなる情報を配信中しています。
-          </p>
-        </div>
-        <div class="l-button">
-          <%- include('/partials/button', {
-            'modifier': 'button-acro-x',
-            'text': 'もっと見る',
-            'link': '#'
+  <div class="call-to-action">
+    <div class="l-container">
+      <div class="call-to-action-wrapper">
+        <div class="call-to-action-inner">
+          <%- include('/partials/heading', {
+            'modifier': 'heading-bunbun',
+            'text': mix('/assets/images/bun-bun-scooter/cta-heading.png'),
+            'alt': 'ぶんぶんスクーターをもっと楽しむ',
+            'altSubtext': '',
+            'subtext': ''
           }) %>
+          <div class="call-to-action-description">
+            <p class="call-to-action-description-text">
+              ぶんぶんスクーターのこだわりポイントや、知っていると<br>
+              もっと楽しくなる情報を配信中しています。
+            </p>
+          </div>
+          <div class="l-button l-button-call-to-action">
+            <%- include('/partials/button', {
+              'modifier': 'button-sumika',
+              'text': 'もっと見る',
+              'link': '#'
+            }) %>
+          </div>
+          <span class="call-to-action-dot call-to-action-dot-1">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-2">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-3">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-4">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+          </span>
         </div>
-        <span class="acro-x-cta-dot acro-x-cta-dot-1">
-          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
-        </span>
-        <span class="acro-x-cta-dot acro-x-cta-dot-2">
-          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
-        </span>
-        <span class="acro-x-cta-dot acro-x-cta-dot-3">
-          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
-        </span>
-        <span class="acro-x-cta-dot acro-x-cta-dot-4">
-          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
-        </span>
       </div>
     </div>
   </div>
-</section>
 
-<div class="acro-x-cta-bottom">
-  <div class="l-container">
-    <div class="acro-x-cta-bottom-inner">
-      <img src="<%= mix('/assets/images/acro-x/cta-bottom.jpg') %>">
+  <div class="banner-cta">
+    <div class="l-container">
+      <div class="banner-cta-bottom-inner">
+        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
+      </div>
     </div>
   </div>
+
+  <section class="subpage-recommendation">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-recommendation',
+        'text': mix('/assets/images/recommendation.png'),
+        'alt': 'recommendation',
+        'altSubtext': '',
+        'subtextvg': 'recommendation-subtext'
+      }) %>
+    </div>
+
+    <div class="l-container">
+      <ul class="feature-list feature-list-no-design">
+        <% recommend.forEach(item => { %>
+        <li class="feature-item">
+          <%- include('/partials/article-no-design', {
+            'image': item.image,
+            'heading': item.heading,
+            'buttonLink': item.buttonLink,
+            'buttonText': 'モビパーク'
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </section>
+
+  <section class="subpage-pickup">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-pickup',
+        'text': mix('/assets/images/pickup.png'),
+        'alt': 'pickup',
+        'altSubtext': '',
+        'subtextvg': 'pickup'
+      }) %>
+    </div>
+
+    <div class="l-container">
+      <ul class="feature-list">
+        <% pickup.forEach(item => { %>
+        <li class="feature-item">
+          <%- include('/partials/article', {
+            'category': item.category,
+            'image': item.image,
+            'heading': item.heading,
+            'date': item.date,
+            'link': item.link
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </section>
+
+  <!-- END BOTTOM -->
 </div>
-
-<section class="acro-x-recommendation">
-  <div class="l-section-title">
-    <%- include('/partials/heading', {
-      'modifier': 'heading-net-acro-x',
-      'text': mix('/assets/images/recommendation.png'),
-      'alt': 'recommendation',
-      'altSubtext': '',
-      'subtextvg': 'recommendation-subtext'
-    }) %>
-  </div>
-
-  <div class="l-container">
-    <ul class="feature-list feature-list-no-design">
-      <% recommend.forEach(item => { %>
-      <li class="feature-item">
-        <%- include('/partials/article-no-design', {
-          'image': item.image,
-          'heading': item.heading,
-          'buttonLink': item.buttonLink,
-          'buttonText': 'モビパーク'
-        }) %>
-      </li>
-      <% }) %>
-    </ul>
-  </div>
-</section>
-
-<section class="acro-x-pick-up">
-  <div class="l-section-title">
-    <%- include('/partials/heading', {
-      'modifier': 'heading-net-acro-x',
-      'text': mix('/assets/images/pickup.png'),
-      'alt': 'pickup',
-      'altSubtext': '',
-      'subtextvg': 'pickup'
-    }) %>
-  </div>
-
-  <div class="l-container">
-    <ul class="feature-list">
-      <% pickup.forEach(item => { %>
-      <li class="feature-item">
-        <%- include('/partials/article', {
-          'category': item.category,
-          'image': item.image,
-          'heading': item.heading,
-          'date': item.date,
-          'link': item.link
-        }) %>
-      </li>
-      <% }) %>
-    </ul>
-  </div>
-</section>
-<!-- END BOTTOM -->
 
 <%- include('/partials/footer') -%>

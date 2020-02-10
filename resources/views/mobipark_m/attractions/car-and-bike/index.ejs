@@ -192,16 +192,11 @@ dataRecommendation = [
   'buttonLink': '#',
 },
 ]
-
-
-
-
 %>
 <%- include('/partials/head', { title }) -%>
 
-
-<div class="car-and-bike">
-  <div class="mv-car-and-bike">
+<div class="subpage car-bike">
+  <div class="mv mv-subpage mv-car-and-bike">
     <ul class="mv-list">
       <li class="mv-item">
         <div class="u-show-pc mv-image" style="background-image:url(<%= mix('http://via.placeholder.com/1440x650') %>);"></div>
@@ -232,8 +227,8 @@ dataRecommendation = [
     </div>
   </div>
 
-  <section class="how-to-enjoy">
-    <div class="l-container">
+  <section class="subpage-how-to-enjoy">
+    <div class="subpage-how-to-enjoy-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
           'modifier': 'heading-dokidoki',
@@ -278,10 +273,9 @@ dataRecommendation = [
               <span>操る喜びを実感できるアトラクション</span>
             </h4>
             <p class="media-desc">
-              ツインリンクもてぎには、3歳のお子様でもひとりで運転できるようなアトラクションがたくさんあります。<br>
-  お子様にとってはこれまで体験したことがない、はじめての「操る喜び」を実感できます。
+              ツインリンクもてぎには、3歳のお子様でもひとりで運転できるようなアトラクションがたくさんあります。<br>お子様にとってはこれまで体験したことがない、はじめての「操る喜び」を実感できます。
             </p>
-        
+
           </div>
         </div>
         <div class="media u-clear">
@@ -297,18 +291,16 @@ dataRecommendation = [
               <span>何度でも挑戦したくなるしくみや仕掛け</span>
             </h4>
             <p class="media-desc">
-              いくつかのアトラクションには、点数や走行タイム、順位でランクがつく仕掛けを用意しています。ランクアップを目指して何度も遊びたくたくなるのが、ツインリンクもてぎのアトラクションの魅力です。
-  アトラクションが終わった後には、自分の写真入りのライセンスカードをつくることができます。
+              いくつかのアトラクションには、点数や走行タイム、順位でランクがつく仕掛けを用意しています。ランクアップを目指して何度も遊びたくたくなるのが、ツインリンクもてぎのアトラクションの魅力です。<br />アトラクションが終わった後には、自分の写真入りのライセンスカードをつくることができます。
             </p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <div class="attaction-category l-how-to l-container">
-    <section class="">
+  <section class="car-bike-attraction-cat">
+    <div class="l-section-title">
       <%- include('/partials/heading', {
         'modifier': 'heading-wrap-how-to heading-wrap-center',
         'text': mix('/assets/images/car-and-bike/attraction-category.png'),
@@ -316,206 +308,238 @@ dataRecommendation = [
         'subtextvg': 'car-and-bike-attraction-categories',
         'altSubtext': '',
       }) %>
+    </div>
 
-      <ul class="feature-list feature-list-no-design">
-        <%
-          dataCategory.forEach(item => {
-        %>
-        <li class="feature-item">
-          <article class="article article-no-design">
-            <div class="article-image-wrap">
-              <div class="article-image"
-                  style="background-image: url(<% if(item.image != '') { %>
-                    <%- item.image %>
-                    <% } else { %><%= mix('/assets/images/noimage.jpg') %>
-                    <% } %>)"></div>
-            </div>
-          </article>
-        </li>
-        <% }) %>
-      </ul>
-    </section>
-  </div>
+    <ul class="feature-list feature-list-attraction-cat">
+      <%
+        dataCategory.forEach(item => {
+      %>
+      <li class="feature-item">
+        <article class="article article-no-design">
+          <div class="article-image-wrap">
+            <div class="article-image"
+                style="background-image: url(<% if(item.image != '') { %>
+                  <%- item.image %>
+                  <% } else { %><%= mix('/assets/images/noimage.jpg') %>
+                  <% } %>)"></div>
+          </div>
+        </article>
+      </li>
+      <% }) %>
+    </ul>
 
-  <div class="car-attractions attractions-list l-how-to l-container">
-    <section class="">
+
+  </section>
+
+  <section class="car-bike-attraction-car">
+    <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'modifier': 'heading-car-attraction',
         'text': mix('/assets/images/car-and-bike/cars-attraction.png'),
         'alt': 'Cars Category',
         'subtextvg': '',
         'altSubtext': '',
       }) %>
+    </div>
 
-      <ul class="feature-list feature-list-no-design">
-        <%
-        dataCars.forEach(item => {
-        %>
-        <li class="feature-item">
-          <article class="article article-no-design">
-            <div class="article-image-wrap">
-              <div class="article-image"
-                  style="background-image: url(<% if(item.image != '') { %>
-                    <%- item.image %>
-                    <% } else { %><%= mix('/assets/images/noimage.jpg') %>
-                    <% } %>)"></div>
-              <div class="image-tag <%- item.imageTagBg %>"><%- item.imageTag %></div>
-            </div>
-            <div class="item-name"><%- item.itemName %></div>
-            <table class="table">
-              <tbody>
-                <tr class="table-row">
-                  <th class="table-head"><%- item.rowHead %></th>
-                  <td class="table-col">
-                    <%- item.rowData %>
-                  </td>
-                </tr>
-                <% if(item.rowHead2 != '') { %>  
-                <tr class="table-row">
-                  <th class="table-head"><%- item.rowHead2 %></th>
-                  <td class="table-col">
-                    <%- item.rowData2 %>
-                  </td>
-                </tr>
-                <% } %>
-      
-              </tbody>
-            </table>
-          </article>
-        </li>
-        <% }) %>
-      </ul>
-    </section>
-  </div>
+    <ul class="feature-list feature-list-car-bike">
+      <%
+      dataCars.forEach(item => {
+      %>
+      <li class="feature-item">
+        <article class="article article-no-design">
+          <div class="article-image-wrap">
+            <div class="article-image"
+                style="background-image: url(<% if(item.image != '') { %>
+                  <%- item.image %>
+                  <% } else { %><%= mix('/assets/images/noimage.jpg') %>
+                  <% } %>)"></div>
+            <div class="article-tag article-<%- item.imageTagBg %>"><%- item.imageTag %></div>
+          </div>
+          <div class="article-name"><%- item.itemName %></div>
+          <table class="table">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head"><%- item.rowHead %></th>
+                <td class="table-col">
+                  <%- item.rowData %>
+                </td>
+              </tr>
+              <% if(item.rowHead2 != '') { %>
+              <tr class="table-row">
+                <th class="table-head"><%- item.rowHead2 %></th>
+                <td class="table-col">
+                  <%- item.rowData2 %>
+                </td>
+              </tr>
+              <% } %>
 
-  <div class="bike-attractions attractions-list l-how-to l-container">
-    <section class="">
+            </tbody>
+          </table>
+        </article>
+      </li>
+      <% }) %>
+    </ul>
+  </section>
+
+  <section class="car-bike-attraction-bike">
+    <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'modifier': 'heading-bike-attraction',
         'text': mix('/assets/images/car-and-bike/bike-attraction.png'),
         'alt': 'Cars Category',
         'subtextvg': '',
         'altSubtext': '',
       }) %>
+    </div>
 
-      <ul class="feature-list feature-list-no-design">
-        <%
-        dataBike.forEach(item => {
-        %>
-        <li class="feature-item">
-          <article class="article article-no-design">
-            <div class="article-image-wrap">
-              <div class="article-image"
-                  style="background-image: url(<% if(item.image != '') { %>
-                    <%- item.image %>
-                    <% } else { %><%= mix('/assets/images/noimage.jpg') %>
-                    <% } %>)"></div>
-              <div class="image-tag <%- item.imageTagBg %>"><%- item.imageTag %></div>
-            </div>
-            <div class="item-name"><%- item.itemName %></div>
-            <table class="table">
-              <tbody>
-                <tr class="table-row">
-                  <th class="table-head"><%- item.rowHead %></th>
-                  <td class="table-col">
-                    <%- item.rowData %>
-                  </td>
-                </tr>
-                <% if(item.rowHead2 != '') { %>  
-                <tr class="table-row">
-                  <th class="table-head"><%- item.rowHead2 %></th>
-                  <td class="table-col">
-                    <%- item.rowData2 %>
-                  </td>
-                </tr>
-                <% } %>
-      
-              </tbody>
-            </table>
-          </article>
-        </li>
-        <% }) %>
-      </ul>
-    </section>
-  </div>
+    <ul class="feature-list feature-list-car-bike">
+      <%
+      dataBike.forEach(item => {
+      %>
+      <li class="feature-item">
+        <article class="article article-no-design">
+          <div class="article-image-wrap">
+            <div class="article-image"
+                style="background-image: url(<% if(item.image != '') { %>
+                  <%- item.image %>
+                  <% } else { %><%= mix('/assets/images/noimage.jpg') %>
+                  <% } %>)"></div>
+            <div class="article-tag article-<%- item.imageTagBg %>"><%- item.imageTag %></div>
+          </div>
+          <div class="article-name"><%- item.itemName %></div>
+          <table class="table">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head"><%- item.rowHead %></th>
+                <td class="table-col">
+                  <%- item.rowData %>
+                </td>
+              </tr>
+              <% if(item.rowHead2 != '') { %>
+              <tr class="table-row">
+                <th class="table-head"><%- item.rowHead2 %></th>
+                <td class="table-col">
+                  <%- item.rowData2 %>
+                </td>
+              </tr>
+              <% } %>
 
-  <div class="workshop-attractions attractions-list l-how-to l-container">
-    <section class="">
+            </tbody>
+          </table>
+        </article>
+      </li>
+      <% }) %>
+    </ul>
+  </section>
+
+  <section class="car-bike-attraction-workshop">
+    <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-wrap-how-to heading-wrap-center',
+        'modifier': 'heading-workshop-attraction',
         'text': mix('/assets/images/car-and-bike/workshop-attraction.png'),
         'alt': 'Cars Category',
         'subtextvg': '',
         'altSubtext': '',
       }) %>
+    </div>
 
-      <ul class="feature-list feature-list-no-design">
-        <%
-        dataWorkshop.forEach(item => {
-        %>
-        <li class="feature-item">
-          <article class="article article-no-design">
-            <div class="article-image-wrap">
-              <div class="article-image"
-                  style="background-image: url(<% if(item.image != '') { %>
-                    <%- item.image %>
-                    <% } else { %><%= mix('/assets/images/noimage.jpg') %>
-                    <% } %>)"></div>
-              <div class="image-tag <%- item.imageTagBg %>"><%- item.imageTag %></div>
-            </div>
-            <div class="item-name"><%- item.itemName %></div>
-            <table class="table">
-              <tbody>
-                <tr class="table-row">
-                  <th class="table-head"><%- item.rowHead %></th>
-                  <td class="table-col">
-                    <%- item.rowData %>
-                  </td>
-                </tr>
-                <% if(item.rowHead2 != '') { %>  
-                <tr class="table-row">
-                  <th class="table-head"><%- item.rowHead2 %></th>
-                  <td class="table-col">
-                    <%- item.rowData2 %>
-                  </td>
-                </tr>
-                <% } %>
-      
-              </tbody>
-            </table>
-          </article>
-        </li>
-        <% }) %>
-      </ul>
-    </section>
-  </div>
+    <ul class="feature-list feature-list-car-bike">
+      <%
+      dataWorkshop.forEach(item => {
+      %>
+      <li class="feature-item">
+        <article class="article article-no-design">
+          <div class="article-image-wrap">
+            <div class="article-image"
+                style="background-image: url(<% if(item.image != '') { %>
+                  <%- item.image %>
+                  <% } else { %><%= mix('/assets/images/noimage.jpg') %>
+                  <% } %>)"></div>
+            <div class="article-tag article-<%- item.imageTagBg %>"><%- item.imageTag %></div>
+          </div>
+          <div class="article-name"><%- item.itemName %></div>
+          <table class="table">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head"><%- item.rowHead %></th>
+                <td class="table-col">
+                  <%- item.rowData %>
+                </td>
+              </tr>
+              <% if(item.rowHead2 != '') { %>
+              <tr class="table-row">
+                <th class="table-head"><%- item.rowHead2 %></th>
+                <td class="table-col">
+                  <%- item.rowData2 %>
+                </td>
+              </tr>
+              <% } %>
 
-  <div class="recommendation l-how-to l-container">
-    <section class="how-to">
+            </tbody>
+          </table>
+        </article>
+      </li>
+      <% }) %>
+    </ul>
+
+  </section>
+
+  <section class="subpage-recommendation">
+    <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-wrap-how-to heading-wrap-center',
-        'text': mix('/assets/images/tsubasa/Recommendation.png'),
-        'alt': 'How to Enjoy',
-        'subtextvg': 'how-to-subtext',
+        'modifier': 'heading-recommendation',
+        'text': mix('/assets/images/recommendation.png'),
+        'alt': 'recommendation',
         'altSubtext': '',
+        'subtextvg': 'recommendation-subtext'
       }) %>
+    </div>
 
+    <div class="l-container">
       <ul class="feature-list feature-list-no-design">
-        <%
-        dataRecommendation.forEach(item => {
-        %>
+        <% recommend.forEach(item => { %>
         <li class="feature-item">
           <%- include('/partials/article-no-design', {
             'image': item.image,
             'heading': item.heading,
-            'buttonText': item.buttonText,
             'buttonLink': item.buttonLink,
+            'buttonText': 'モビパーク'
           }) %>
         </li>
         <% }) %>
       </ul>
-    </section>
-  </div>
+    </div>
+  </section>
 
+  <section class="subpage-pickup">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-pickup',
+        'text': mix('/assets/images/pickup.png'),
+        'alt': 'pickup',
+        'altSubtext': '',
+        'subtextvg': 'pickup'
+      }) %>
+    </div>
+
+    <div class="l-container">
+      <ul class="feature-list">
+        <% pickup.forEach(item => { %>
+        <li class="feature-item">
+          <%- include('/partials/article', {
+            'category': item.category,
+            'image': item.image,
+            'heading': item.heading,
+            'date': item.date,
+            'link': item.link
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </section>
 </div>
+
+
 <%- include('/partials/footer') -%>

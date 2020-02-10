@@ -1,0 +1,68 @@
+.preload-image {
+  background: transparent url($image-path+'tsubasa/zipline-2.png') no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.preload-text {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  left: 50%;
+  z-index: 1;
+  transition: top 3s ease-in-out, opacity 2s ease-in-out;
+  transition-delay: 900ms;
+  opacity: 0;
+  width: 500px;
+}
+
+.preload {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 3s ease-in-out;
+
+  &:before {
+    content: '';
+    background-color: $color-white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  &.is-entrance {
+    &:before {
+      opacity: 0;
+    }
+
+    .preload-text {
+      top: 45%;
+      opacity: 1;
+    }
+  }
+
+  &.is-exit {
+    opacity: 0;
+
+    .preload-text {
+      top: 40%;
+      transition: top 2s ease-in-out;
+    }
+  }
+
+  &.is-hide {
+    display: none;
+  }
+}

@@ -177,19 +177,24 @@
     bottom: 45px;
   }
 
-  .mv-heading-texts {
+  .mv-heading-text {
     font-size: 45px;
     font-family: $font-holland;
     color: $color-white;
     letter-spacing: 0.08em;
   }
 
-  .mv-heading-subtexts {
+  .mv-heading-subtext {
     margin-top: -10px;
     font-size: 54px;
     color: rgb(255, 255, 255);
     text-align: left;
     text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
+  }
+
+  .mv-mobipark-subtext {
+    max-width: 356px;
+    width: 100%;
   }
 
   .mv-today {

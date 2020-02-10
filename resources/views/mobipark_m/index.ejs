@@ -1,96 +1,25 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi | モビパーク'
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
 
-<%
-  recommend = [
-    {
-      'image': mix('/assets/images/top/how-to/img1.jpg'),
-      'heading': '巨大ネットの森SUMIKA',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img2.jpg'),
-      'heading': '森感覚アスレチックDOKIDOKI',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img3.jpg'),
-      'heading': '迷宮森殿ITADAKI',
-      'buttonLink': '#',
-    }
-  ]
-%>
-
-<%
-  pickup = [
-    {
-      'image': mix('/assets/images/dokidoki/feature/img1.png'),
-      'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-      },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img2.png'),
-      'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img3.png'),
-      'heading': 'モトレーサー タイムアタック選手権2019予選',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img4.png'),
-      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    }
-  ]
-%>
-
-<%
-    info = [
-      {
-        'desc': '冬季限定！冬のレーシングカートキャンペーン'
-      },
-      {
-        'desc': 'TRMC-S会員限定！タイムアタックランキング開催！'
-      },
-      {
-        'desc': 'レーシングカート体験走行後、ワンポイントアドバイス実施中！レーシングカートBが割引価格で利用できる特典付き！'
-      },
-      {
-        'desc': '運転免許を取得して1年以内の方限定！ レーシングカート体験走行割引開始'
-      }
-    ]
-%>
-
+<%- include('./../partials/data/index') -%>
 <%- include('./../partials/head', { title }) -%>
 
-<div class="mv-mobipark">
+<div class="mv mv-mobipark">
   <ul class="mv-list">
     <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dokidoki/mv-img.png') %>);"></div>
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mobipark/mv-img.jpg') %>);"></div>
     </li>
   </ul>
 
   <div class="l-container mv-container">
     <h2 class="mv-heading">
       <span class="mv-heading-text">
-        <svg>
-          <title>Mobipark</title>
-          <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mobipark') %>"></use>
-        </svg>
+        Mobipark
       </span>
-      <span class="mv-heading-subtext">
-        <svg>
-          <title>Mobipark</title>
-          <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mobipark-subtext') %>"></use>
-        </svg>
+      <span class="mv-heading-subtext mv-mobipark-subtext">
+        <img src="<%= mix('/assets/images/mobipark/mv-subtext.png') %>" alt="mobipark">
       </span>
     </h2>
 
@@ -105,19 +34,17 @@
   <section class="mobipark-info">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-mobipark',
-          'text': mix('/assets/images/information.png'),
-          'alt': 'information',
-          'altSubtext': '',
-          'subtextvg': 'info-subtext'
+          modifier: 'heading-mobipark',
+          text: 'Information',
+          alt: 'information',
+          altSubtext: '',
+          subtextvg: 'info-subtext'
         }) %>
       </div>
 
       <div class="l-container">
         <ul class="info-list">
-          <%
-            info.forEach(item => {
-          %>
+          <% mobiparkData.forEach(item => { %>
 
           <li class="info-item"><%= item.desc %></li>
 
@@ -130,28 +57,30 @@
 <div class="l-section">
   <div class="mobipark-challenge">
     <div class="l-container">
-      <div class="challenge-left">
-        <h2 class="heading-text">
-          <img src="/assets/images/mobipark/challenge.png" alt="はじめての挑戦と、できたの喜びに子どもたちが夢中になる">
-        </h2>
-        <p class="desc">
-          モビパークは、子どもたちが自ら”操れる”のりものと、<br>
-          チャレンジの要素がつまった迷路・アスレチックで、<br>
-          思いっきり遊ぶことができる<br>
-          森のアトラクションテーマパークです。<br>
-          色んなことに興味を持ち、なんでもやってみたいと<br>
-          挑戦するのが子ども達。<br>
-          「モビパーク」はそんな子ども達がモビリティを通して、<br>
-          新しい自分に出会う「きっかけ」を提供します。<br>
-        </p>
-      </div>
-      <div class="challenge-right">
-        <div class="challenge-img">
-          <div class="challenge-img1">
-            <img src="/assets/images/mobipark/challenge-img1.png">
-          </div>
-          <div class="challenge-img2">
-            <img src="/assets/images/mobipark/challenge-img2.png">
+      <div class="mobipark-container">
+        <div class="challenge-left">
+          <h2 class="heading-text">
+            <img src="/assets/images/mobipark/challenge.png" alt="はじめての挑戦と、できたの喜びに子どもたちが夢中になる">
+          </h2>
+          <p class="desc">
+            モビパークは、子どもたちが自ら”操れる”のりものと、<br>
+            チャレンジの要素がつまった迷路・アスレチックで、<br>
+            思いっきり遊ぶことができる<br>
+            森のアトラクションテーマパークです。<br>
+            色んなことに興味を持ち、なんでもやってみたいと<br>
+            挑戦するのが子ども達。<br>
+            「モビパーク」はそんな子ども達がモビリティを通して、<br>
+            新しい自分に出会う「きっかけ」を提供します。<br>
+          </p>
+        </div>
+        <div class="challenge-right">
+          <div class="challenge-img">
+            <div class="challenge-img1">
+              <img src="/assets/images/mobipark/challenge-img1.png">
+            </div>
+            <div class="challenge-img2">
+              <img src="/assets/images/mobipark/challenge-img2.png">
+            </div>
           </div>
         </div>
       </div>
@@ -159,40 +88,42 @@
   </div>
 </div>
 
-<div class="l-section">
+<div class="l-section mobipark">
   <section class="mobipark-map">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-mobipark',
-        'text': mix('/assets/images/mobipark/map-title.png'),
-        'alt': 'map',
-        'altSubtext': '',
-        'subtextvg': 'map-subtext'
+        modifier: 'heading-mobipark',
+        text: 'Mobipark Map',
+        alt: 'map',
+        altSubtext: '',
+        subtextvg: 'map-subtext'
       }) %>
     </div>
 
-    <div class="map-img">
-      <img src="/assets/images/mobipark/map.png" alt="map">
+    <div class="l-container">
+      <div class="map-img">
+        <img src="/assets/images/mobipark/map.png" alt="map">
+      </div>
     </div>
   </section>
 </div>
 
-<div class="l-section">
+<div class="l-section mobipark">
   <section class="mobipark-adventure">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-mobipark',
-        'text': mix('/assets/images/mobipark/adventure.png'),
-        'alt': 'アスレチック＆迷路',
-        'altSubtext': '',
-        'subtextvg': 'adventure'
+        modifier: 'heading-mobipark',
+        text: 'Adventure Playground',
+        alt: 'アスレチック＆迷路',
+        altSubtext: '',
+        subtextvg: 'adventure'
       }) %>
     </div>
   </section>
 </div>
 
 <!--SUMIKA-->
-<div class="l-section">
+<div class="l-section mobipark">
   <section class="mobipark-adventure mobipark-adventure-sumika">
     <div class="l-container">
       <div class="section-inner ">
@@ -213,9 +144,9 @@
           </p>
           <div class="l-button">
             <%- include('/partials/button', {
-              'modifier': 'button-sumika',
-              'text': 'もっと見る',
-              'link': '#'
+              modifier: 'button-mobipark',
+              text: 'もっと見る',
+              link: '#'
             }) %>
           </div>
         </div>
@@ -246,9 +177,9 @@
           </p>
           <div class="l-button">
             <%- include('/partials/button', {
-              'modifier': 'button-dokidoki',
-              'text': 'もっと見る',
-              'link': '#'
+              modifier: 'button-mobipark',
+              text: 'もっと見る',
+              link: '#'
             }) %>
           </div>
         </div>
@@ -280,9 +211,9 @@
           </p>
           <div class="l-button">
             <%- include('/partials/button', {
-              'modifier': 'button-itadaki',
-              'text': 'もっと見る',
-              'link': '#'
+              modifier: 'button-mobipark',
+              text: 'もっと見る',
+              link: '#'
             }) %>
           </div>
         </div>
@@ -296,11 +227,11 @@
     <div class="l-container">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-mobipark',
-          'text': mix('/assets/images/mobipark/car-bike.png'),
-          'alt': 'Kids’ Car & Bike  Attraction',
-          'altSubtext': '',
-          'subtextvg': 'carbike'
+          modifier: 'heading-mobipark',
+          text: 'Kids’ Car & Bike  Attraction',
+          alt: '',
+          altSubtext: '',
+          subtextvg: 'carbike'
         }) %>
       </div>
 
@@ -319,9 +250,9 @@
           </p>
           <div class="l-button">
             <%- include('/partials/button', {
-              'modifier': 'button-car-bike',
-              'text': 'もっと見る',
-              'link': '#'
+              modifier: 'button-mobipark',
+              text: 'もっと見る',
+              link: '#'
             }) %>
           </div>
         </div>
@@ -350,11 +281,11 @@
     <div class="l-container">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-mobipark-kart',
-          'text': mix('/assets/images/mobipark/racing-kart-title.png'),
-          'alt': 'Racing Kart',
-          'altSubtext': '',
-          'subtextvg': 'racing-kart-subtext'
+          modifier: 'heading-mobipark',
+          text: 'Racing Kart',
+          alt: '',
+          altSubtext: '',
+          subtextvg: 'racing-kart-subtext'
         }) %>
       </div>
     </div>
@@ -379,9 +310,9 @@
 
         <div class="l-button">
           <%- include('/partials/button', {
-            'modifier': 'button-mobipark',
-            'text': 'もっと見る',
-            'link': '#'
+            modifier: 'button-mobipark',
+            text: 'もっと見る',
+            link: '#'
           }) %>
         </div>
       </div>
@@ -399,14 +330,14 @@
   </div>
 </div>
 
-<section class="dokidoki-recommendation">
+<section class="sumika-recommendation mobipark">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-dokidoki',
-      'text': mix('/assets/images/dokidoki/recommendation.png'),
-      'alt': 'recommendation',
-      'altSubtext': '',
-      'subtextvg': 'recommendation-subtext'
+      modifier: 'heading-net-dokidoki',
+      text: 'Recommendation',
+      alt: '',
+      altSubtext: '',
+      subtextvg: 'recommendation-subtext'
     }) %>
   </div>
 
@@ -415,10 +346,10 @@
       <% recommend.forEach(item => { %>
       <li class="feature-item">
         <%- include('/partials/article-no-design', {
-          'image': item.image,
-          'heading': item.heading,
-          'buttonLink': item.buttonLink,
-          'buttonText': 'モビパーク'
+          image: item.image,
+          heading: item.heading,
+          buttonLink: item.buttonLink,
+          buttonText: 'モビパーク'
         }) %>
       </li>
       <% }) %>
@@ -426,14 +357,14 @@
   </div>
 </section>
 
-<section class="dokidoki-pick-up">
+<section class="sumika-pick-up mobipark">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-dokidoki',
-      'text': mix('/assets/images/dokidoki/pickup.png'),
-      'alt': 'recommendation',
-      'altSubtext': '',
-      'subtextvg': 'pickup'
+      modifier: 'heading-net-dokidoki',
+      text: 'Pick Up',
+      alt: '',
+      altSubtext: '',
+      subtextvg: 'pickup'
     }) %>
   </div>
 
@@ -442,11 +373,11 @@
       <% pickup.forEach(item => { %>
       <li class="feature-item">
         <%- include('/partials/article', {
-          'category': item.category,
-          'image': item.image,
-          'heading': item.heading,
-          'date': item.date,
-          'link': item.link
+          category: item.category,
+          image: item.image,
+          heading: item.heading,
+          date: item.date,
+          link: item.link
         }) %>
       </li>
       <% }) %>

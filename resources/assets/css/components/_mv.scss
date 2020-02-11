@@ -12,7 +12,15 @@
     background: url(#{$image-path}mv-curve.png) no-repeat center top;
     background-size: cover;
   }
+
+  &.mv-subpage {
+    margin-bottom: 50px;
+    &::after {
+      bottom: -50px;
+    }
+  }
 }
+
 
 .mv-container {
   position: relative;
@@ -87,7 +95,7 @@
 
   &.hellowoods-mv-heading {
     bottom: 50px;
-    
+
     .heading-text {
       font-size: 50px;
       -webkit-text-fill-color: $color-white;
@@ -187,18 +195,64 @@
   margin: 0 -7px;
 }
 
-.mv-heading-subtexts {
-  svg {
-    fill: $color-white;
-    width:  654px;
-    height: 90px;
+
+// modifier
+.mv-car-and-bike {
+  .mv-heading {
+    bottom: 45px;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px;
+    }
+  }
+
+  .mv-heading-texts{
+    width: 448px;
+    height: 50px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      max-width: 400px;
+
+      svg {
+        max-width: 400px;
+      }
+    }
+  }
+
+  .mv-heading-subtexts {
+    margin-top: -10px;
+    font-size: 54px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .mv-logo {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/car-and-bike/mv-logo.png);
+    bottom: -60px;
   }
 }
 
-// modifier dokidoki, mobipark
+// modifier dokidoki
 .mv-dokidoki {
-  overflow-y: hidden; 
-  
+  overflow-y: hidden;
+
   .mv-heading {
     left: 0px;
     bottom: 65px;
@@ -207,7 +261,7 @@
   .mv-mobipark-text {
     font-size: 45px;
     color: $color-white;
-    letter-spacing: 0.08em;    
+    letter-spacing: 0.08em;
   }
 
   .mv-mobipark-subtext {
@@ -223,6 +277,7 @@
     font-size: 50px;
     letter-spacing: 0.06em;
     text-align: left;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
   }
 
   .mv-heading-subtext {
@@ -273,18 +328,17 @@
 }
 // end modifier mobipark
 
-// itadaki mv 
 .mv-itadaki {
   .mv-heading {
     bottom: 45px;
   }
-  
+
   .mv-heading-subtexts {
     font-size: 47px;
     margin-top: 26px;
     color: $color-white;
     letter-spacing: 0.06em;
-    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
   }
 
   .mv-heading-texts {
@@ -305,10 +359,103 @@
   }
 }
 
-// END itadaki mv 
+.mv-forest-driving {
+  position: relative;
 
+  .mv-container {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-// sumika mv 
+  .mv-heading {
+    position: relative;
+    bottom: initial;
+    left: initial;
+    text-align: center;
+    width: 100%;
+  }
+
+  .mv-heading-text {
+    font-size: 34.449px;
+    color: $color-white;
+    display: inline-block;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 46px;
+      color: $color-white;
+      text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+    }
+  }
+}
+
+.mv-tsubasa {
+  margin-bottom: 80px;
+  position: relative;
+  .mv-heading {
+    bottom: 45px;
+
+    @include max-screen($breakpoint-mobile) {
+      top: 50%;
+      left: 0;
+      right: 0;
+      padding: 30px;
+    }
+  }
+
+  .mv-heading-texts{
+    width: 448px;
+    height: 50px;
+
+    font-family: $font-holland;
+    color: $color-white;
+    font-size: 32px;
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      max-width: 400px;
+      font-size: 26px;
+      color: $color-white;
+      margin: auto;
+      text-align: center;
+
+      svg {
+        max-width: 400px;
+      }
+    }
+  }
+
+  .mv-heading-subtexts {
+    font-size: 47px;
+    margin-top: 26px;
+    color: $color-white;
+    letter-spacing: 0.06em;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .mv-logo {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/tsubasa/mv-logo.png);
+    bottom: -60px;
+  }
+}
+
 .mv-sumika {
   .mv-today {
     width: 268px;
@@ -326,7 +473,7 @@
     // margin-top: 26px;
     color: $color-white;
     letter-spacing: 0.06em;
-    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
   }
 
   .mv-heading-texts {
@@ -338,6 +485,7 @@
     width: auto;
   }
 }
+
 // END sumika mv 
 
 // modifier forest driving school

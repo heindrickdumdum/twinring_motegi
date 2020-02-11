@@ -1,17 +1,21 @@
 .banner-cta {
-  margin: 99px 0 217px;
+  margin: 180px 0 86px;
   position: relative;
   text-align: center;
   z-index: $z-max;
 
-  &:before {
-    position: absolute;
+  &:after {
+    display: block;
+    position: relative;
     content: '';
     background-color: $color-light-gray;
-    top: 99px;
-    left: 0;
-    right: 0;
-    bottom: -126px;
+    // top: 99px;
+    // left: 0;
+    // right: 0;
+    // bottom: -126px;
+    height: 240px;
+    margin-top: -100px;
+    width: 100%;
     z-index: 1;
   }
 
@@ -24,4 +28,9 @@
 .banner-cta-inner {
   position: relative;
   z-index: $z-max;
+}
+
+.banner-cta-bottom-inner {
+  position: relative;
+  z-index: 2;
 }

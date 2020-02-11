@@ -1,0 +1,287 @@
+<%
+  var title = 'Twin Ring Motegi'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+%>
+
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { title }) -%>
+
+<div class="subpage subpage-bunbun">
+  <div class="mv mv-subpage">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/motor-cycle-training/mv-img.png') %>);"></div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="subpage-inner">
+    <div class="heading-wrap heading-main heading-main-bunbun">
+      <h2 class="heading">
+        <span class="heading-texts">
+          <img src="<%= mix('/assets/images/motor-cycle-training/subpage-title.png') %>" alt="">
+        </span>
+      </h2>
+    </div>
+
+    <!-- YOUTUBE -->
+    <div class="subpage-banner">
+      <div class="subpage-banner-inner">
+        <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <h3 class="subpage-title">
+      <span>アトラクション情報</span>
+    </h3>
+
+    <p>森の中で挑戦するはじめてのバイク。森のトレーニングコースでバイクの乗り方、アクセル・ブレーキの<br />ハンドル操作を練習しよう。</p>
+
+    <table class="table">
+      <tbody>
+        <tr class="table-row">
+          <th class="table-head">場所</th>
+          <td class="table-col">モビパーク内</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">所要時間</th>
+          <td class="table-col">約20分（装備の装着、説明、一人ずつ練習、本番、装備外し）</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">雨天の運行</th>
+          <td class="table-col">雨天でも営業いたしていますが、荒天時などコースコンディションが悪化した場合には営業を中断します。</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">対象者</th>
+          <td class="table-col">3歳以上で補助輪なしの自転車に乗れる方
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">身長制限</th>
+          <td class="table-col">なし</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">料金</th>
+          <td class="table-col">
+            モビパークパスポート対象<br>アトラクションチケット利用：500円
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">ご利用にあたって</th>
+          <td class="table-col">
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <section class="subpage-section subpage-section-howto">
+    <div class="subpage-section-howto-inner">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          'modifier': 'heading-gradient-tobottom',
+          'text': 'How to Enjoy',
+          'alt': 'ぶんぶんスクーターを楽しむポイント',
+          'subtextvg': 'bun-bun-scooter-subtext',
+          'altSubtext': '',
+        }) %>
+      </div>
+
+      <div class="how-to-content">
+        <div class="media media-subpage media-subpage-motorcycle u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title"><span>3歳からはじめてのバイクに挑戦！</span></h4>
+            <p class="media-desc">
+              はじめてのバイクにチャレンジ。ヘルメット、グローブを身につ<br>けた子どもの姿にパパとママもドキドキ！
+            </p>
+
+            <div class="media-bottom">
+              <div class="media-note">
+                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                <div class="media-note-text">
+                  はじめてのバイクに<br />チャレンジできタネ！
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="media media-subpage media-subpage-motorcycle u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              <span>
+                一人で乗れるようになるまで、スタッフが応援！
+              </span>
+            </h4>
+            <p class="media-desc">
+              一人で乗れるようにスタッフが丁寧にコーチング。みんなに応援されてバイクに乗れた瞬間の感動は一生の思い出！
+            </p>
+
+            <div class="media-bottom">
+              <div class="media-note">
+                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                <div class="media-note-text">
+                  ひとりでバイクに乗れタネ！
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="media media-subpage media-subpage-motorcycle u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              <span>
+                子どもの成長にパパとママも感動！
+              </span>
+            </h4>
+            <p class="media-desc">
+              乗り場にはパパとママは入れません。<br />
+              子どもは一人きりでバイクに挑戦<br />
+              何度も転びながら起き上がる姿は感動そのもの！
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM -->
+
+  <div class="call-to-action">
+    <div class="l-container">
+      <div class="call-to-action-wrapper">
+        <div class="call-to-action-inner">
+          <%- include('/partials/heading', {
+            'modifier': 'heading-bunbun',
+            'text': 'モーターサイクルトレーニング<br />をもっと楽しむ',
+            'alt': '',
+            'altSubtext': '',
+            'subtext': ''
+          }) %>
+          <div class="call-to-action-description">
+            <p class="call-to-action-description-text">
+              モーターサイクルトレーニングのこだわりポイントや、知<br>
+              っているともっと楽しくなる情報を配信中しています。
+            </p>
+          </div>
+          <div class="l-button l-button-call-to-action">
+            <%- include('/partials/button', {
+              'modifier': 'button-sumika',
+              'text': 'もっと見る',
+              'link': '#'
+            }) %>
+          </div>
+          <span class="call-to-action-dot call-to-action-dot-1">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-2">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-3">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-4">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner-cta">
+    <div class="l-container">
+      <div class="banner-cta-bottom-inner">
+        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
+      </div>
+    </div>
+  </div>
+
+  <section class="subpage-section subpage-section-recommendation">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-gradient-tobottom heading-recommendation',
+        'text': 'Recommendation',
+        'alt': 'recommendation',
+        'altSubtext': '',
+        'subtextvg': 'recommendation-subtext'
+      }) %>
+    </div>
+
+    <div class="swiper-container slider">
+      <ul class="swiper-wrapper slider-wrapper">
+        <% getData().data.recommend.forEach(item => { %>
+        <li class="swiper-slide slider-item">
+          <%- include('/partials/article-no-design', {
+            image: item.image,
+            heading: item.heading,
+            buttonLink: item.buttonLink,
+            buttonText: 'モビパーク'
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </section>
+
+  <section class="subpage-section subpage-section-pickup">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        'modifier': 'heading-gradient-tobottom heading-pickup',
+        'text': 'PickUp',
+        'alt': 'pickup',
+        'altSubtext': '',
+        'subtextvg': 'pickup'
+      }) %>
+    </div>
+
+    <div class="l-container">
+      <ul class="feature-list">
+        <% pickup.forEach(item => { %>
+        <li class="feature-item">
+          <%- include('/partials/article', {
+            'category': item.category,
+            'image': item.image,
+            'heading': item.heading,
+            'date': item.date,
+            'link': item.link
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </section>
+
+  <!-- END BOTTOM -->
+</div>
+
+<%- include('/partials/footer') -%>

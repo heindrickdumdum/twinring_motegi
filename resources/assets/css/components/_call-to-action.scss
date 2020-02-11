@@ -9,8 +9,8 @@
 
 .call-to-action-inner {
   position: relative;
-  padding: 49px 0 37px;
-  
+  padding: 28px 0 31px;
+
   &:before {
     position: absolute;
     content: '';
@@ -21,6 +21,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    pointer-events: none;
   }
 
   &:after {
@@ -33,6 +34,7 @@
     left: 33px;
     right: 23px;
     bottom: 39px;
+    pointer-events: none;
   }
 
 }
@@ -78,11 +80,17 @@
 }
 
 //MODIFIER DOKIDOKI
-.dokidoki-cta,
-.mobipark-cta {
-  .banner-cta-bottom-inner {
-    position: relative;
-    z-index: $z-min;
+// .dokidoki-cta,
+// .mobipark-cta {
+//   .banner-cta-bottom-inner {
+//     position: relative;
+//     z-index: $z-min;
+//   }
+// }
+
+.call-to-action-bunbun {
+  .call-to-action-description-text {
+    letter-spacing: 0.16em;
   }
 }
 

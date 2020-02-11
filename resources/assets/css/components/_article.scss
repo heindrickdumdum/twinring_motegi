@@ -154,3 +154,24 @@
   color: $color-seaweed;
   letter-spacing: 0.06em;
 }
+
+.article-name {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 17px 0;
+  text-align: left;
+}
+
+.article-tag {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 15px;
+  color: $color-white;
+
+  &.article-bg-green {background-color: $color-green}
+  &.article-bg-green-2 {background-color: $color-green-2}
+  &.article-bg-green-3 {background-color: $color-green-3}
+  &.article-bg-green-4 {background-color: $color-green-4}
+  &.article-bg-green-5 {background-color: $color-green-5}
+}

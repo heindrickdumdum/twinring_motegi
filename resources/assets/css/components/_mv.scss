@@ -85,6 +85,18 @@
   bottom: -92px;
   left: 35px;
 
+  &.hellowoods-mv-heading {
+    bottom: 50px;
+    
+    .heading-text {
+      font-size: 50px;
+      -webkit-text-fill-color: $color-white;
+    }
+    .heading-subtext {
+      height: 50px;
+    }
+  }
+
   span {
     display: block;
   }
@@ -115,6 +127,12 @@
   text-align: center;
   background: url(#{$image-path}mv-today-bg.png) no-repeat;
   background-size: contain;
+
+  &.mv-hellowoods-logo {
+    background: url(#{$image-path}hellowoods/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 270px;
+  }
 }
 
 .mv-today-text {
@@ -167,6 +185,14 @@
 
 .mv-today-celcius-value {
   margin: 0 -7px;
+}
+
+.mv-heading-subtexts {
+  svg {
+    fill: $color-white;
+    width:  654px;
+    height: 90px;
+  }
 }
 
 //MODIFIER

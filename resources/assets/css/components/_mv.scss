@@ -12,7 +12,15 @@
     background: url(#{$image-path}mv-curve.png) no-repeat center top;
     background-size: cover;
   }
+
+  &.mv-subpage {
+    margin-bottom: 50px;
+    &::after {
+      bottom: -50px;
+    }
+  }
 }
+
 
 .mv-container {
   position: relative;
@@ -41,7 +49,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  z-index: $z-min2;
+  z-index: $z-max;
 }
 
 .mv-buttons-list {
@@ -87,7 +95,7 @@
 
   &.hellowoods-mv-heading {
     bottom: 50px;
-    
+
     .heading-text {
       font-size: 50px;
       -webkit-text-fill-color: $color-white;
@@ -112,6 +120,8 @@
 .mv-heading-subtext {
   margin-top: 13px;
   width: 887px;
+
+  
 }
 
 .mv-today {
@@ -187,27 +197,73 @@
   margin: 0 -7px;
 }
 
-.mv-heading-subtexts {
-  svg {
-    fill: $color-white;
-    width:  654px;
-    height: 90px;
+
+// modifier
+.mv-car-and-bike {
+  .mv-heading {
+    bottom: 45px;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px;
+    }
+  }
+
+  .mv-heading-texts{
+    width: 448px;
+    height: 50px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      max-width: 400px;
+
+      svg {
+        max-width: 400px;
+      }
+    }
+  }
+
+  .mv-heading-subtexts {
+    margin-top: -10px;
+    font-size: 54px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .mv-logo {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/car-and-bike/mv-logo.png);
+    bottom: -60px;
   }
 }
 
-//MODIFIER
-.mv-dokidoki,
-.mv-mobipark {
-  overflow-y: hidden; 
-  
+// modifier dokidoki
+.mv-dokidoki {
+  overflow-y: hidden;
+
   .mv-heading {
+    left: 0px;
     bottom: 65px;
   }
 
   .mv-mobipark-text {
     font-size: 45px;
     color: $color-white;
-    letter-spacing: 0.08em;    
+    letter-spacing: 0.08em;
   }
 
   .mv-mobipark-subtext {
@@ -215,22 +271,23 @@
     width: 100%;
   }
 
-  .mv-heading-subtexts {
-    font-size: 47px;
-    margin-top: 26px;
-    color: $color-white;
-    letter-spacing: 0.06em;
-    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
-  }
-
-  .mv-heading-texts {
+  .mv-heading-text {
+    width: auto;
     font-family: $font-holland;
     color: $color-white;
     font-size: 32px;
     font-size: 50px;
     letter-spacing: 0.06em;
-    width: auto;
-    text-align: center;
+    text-align: left;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+  }
+
+  .mv-heading-subtext {
+    margin-top: -15px;
+    font-size: 47px;
+    color: $color-white;
+    letter-spacing: 0.06em;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
   }
 
   .mv-today {
@@ -239,24 +296,51 @@
     background-image: url(../images/dokidoki/dokidoki-logo.png);
     bottom: -60px;
   }
+}
+// end modifier dokidoki, mobipark
+
+// modifier mobipark
+.mv-mobipark {
+  overflow-y: hidden; 
+  
+  .mv-heading {
+    left: 0px;
+    bottom: 65px;
+  }
+
+  .mv-heading-text-mobipark {
+    font-size: 45px;
+    color: $color-white;
+    letter-spacing: 0.08em;    
+  }
+
+  .mv-heading-subtext-mobipark {
+    max-width: 356px;
+    width: 100%;
+    margin-top: 3px;
+  }
 
   .mv-today-mobipark {
+    max-width: 247px;
+    width: 100%;
+    height: 247px;
+    bottom: -37px;
     background-image: url(../images/mobipark/mobipark-logo.png);
   }
 }
+// end modifier mobipark
 
-// itadaki mv 
 .mv-itadaki {
   .mv-heading {
     bottom: 45px;
   }
-  
+
   .mv-heading-subtexts {
     font-size: 47px;
     margin-top: 26px;
     color: $color-white;
     letter-spacing: 0.06em;
-    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
   }
 
   .mv-heading-texts {
@@ -277,11 +361,86 @@
   }
 }
 
-// END itadaki mv 
+// modifier mv
+.mv-forest-driving {
+  position: relative;
+
+  .mv-container {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.mv-tsubasa {
+  margin-bottom: 80px;
+  position: relative;
+  .mv-heading {
+    bottom: 45px;
+
+    @include max-screen($breakpoint-mobile) {
+      top: 50%;
+      left: 0;
+      right: 0;
+      padding: 30px;
+    }
+  }
+
+  .mv-heading-texts{
+    width: 448px;
+    height: 50px;
+
+    font-family: $font-holland;
+    color: $color-white;
+    font-size: 32px;
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      max-width: 400px;
+      font-size: 26px;
+      color: $color-white;
+      margin: auto;
+      text-align: center;
+
+      svg {
+        max-width: 400px;
+      }
+    }
+  }
+
+  .mv-heading-subtexts {
+    font-size: 47px;
+    margin-top: 26px;
+    color: $color-white;
+    letter-spacing: 0.06em;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .mv-logo {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/tsubasa/mv-logo.png);
+    bottom: -60px;
+  }
+}
 
 
-// sumika mv 
-.mv-sumika {
+.mv-inner {
   .mv-today {
     width: 268px;
     height: 266px;
@@ -294,11 +453,12 @@
   }
 
   .mv-heading-subtexts {
-    font-size: 47px;
-    // margin-top: 26px;
-    color: $color-white;
-    letter-spacing: 0.06em;
-    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
+    
+    svg {
+      fill: $color-white;
+      width: 520px;
+      height: 74px;
+    }
   }
 
   .mv-heading-texts {
@@ -309,5 +469,43 @@
     letter-spacing: 0.06em;
     width: auto;
   }
+
+  // itadaki mv
+
+  &.itadaki-mv {
+    .mv-today {
+      background-image: url(../images/itadaki/today.png);
+    }
+  }
 }
+
 // END sumika mv 
+
+// modifier forest driving school
+.mv-mobipark.mv-forest-driving {
+  .mv-container {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .mv-heading {
+    position: relative;
+    left: unset;
+    bottom: unset;
+    display: inline-block;
+
+    .mv-heading-texts.forest-driving {
+      font-size: 45px;
+      font-family: $font-hiragino;
+      color: $color-white;
+      letter-spacing: 0.1em;
+      text-shadow: 0px 8px 11px rgba(0, 0, 0, 0.35);      
+    }
+  }
+  
+}
+// end modifier forest driving school

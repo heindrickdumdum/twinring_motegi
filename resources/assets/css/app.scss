@@ -16,32 +16,34 @@
 
 @import "components/attraction";
 @import "components/fonts";
+
 @import "components/wrap";
 @import "components/heading";
 @import "components/header";
 @import "components/header-sub";
+@import "components/header-top-nav";
 @import "components/mv";
 @import "components/article";
 @import "components/feature";
 @import "components/parkmap";
 @import "components/button";
+@import "components/mv";
 @import "components/button-gradient";
 @import "components/section";
 @import "components/section-cards";
-@import "components/sumika-video";
-@import "components/sumika-instagram";
-@import "components/sumika-faq";
-@import "components/sumika";
+@import "components/youtube-video";
+@import "components/instagram";
+@import "components/faq";
 @import "components/call-to-action";
 @import "components/table";
 @import "components/media";
+@import "components/pickup";
 @import "components/accordion";
 @import "components/design";
-@import "components/mobipark-information";
-@import "components/mobipark-challenge";
-@import "components/mobipark-adventure";
-@import "components/mobipark-carbike";
-@import "components/mobipark-map";
+@import "components/info-list";
+@import "components/challenge";
+@import "components/adventure";
+@import "components/kids-carbike-attraction";
 @import "components/block-image";
 @import "components/image-border";
 @import "components/how-to";
@@ -53,9 +55,14 @@
 @import "components/footer-bottom";
 @import "components/sns";
 @import "components/slider";
-@import "components/tsubasa/styles";
-@import "components/car-and-bike/styles";
+@import "components/top-slider";
 @import "components/hellowoods";
+@import "components/note";
+@import "components/hellowoods-information";
+@import "components/alternate-feature";
+@import "components/steps";
+@import "components/comparison";
+@import "components/subpage";
 
 @import 'layout/grid';
 @import "layout/l-container";
@@ -66,6 +73,9 @@
 @import "layout/l-section";
 @import "layout/l-section-title";
 @import "layout/l-button";
+@import "layout/l-adventure";
+@import "layout/l-racing-kart";
+@import "layout/l-note";
 
 // Required
 .svg-sprite {

@@ -1,5 +1,9 @@
 .media {
   padding: 20px;
+
+  &.media-subpage {
+    margin-bottom: 20px;
+  }
 }
 
 .media-left {
@@ -20,7 +24,7 @@
 .media-bg {
   position: relative;
   margin-left: 68px;
-  
+
   &:after {
     position: absolute;
     content: url(/assets/images/img-frame-bg.png);
@@ -82,10 +86,29 @@
   }
 }
 
+.media-title-nohighlight {
+  span {
+    font-weight: normal;
+    &:before {
+      display: none;
+    }
+  }
+}
+
 .media-desc {
   font-size: 15px;
   padding-top: 10px;
   line-height: 2;
+
+
+  .media-subpage & {
+    // margin-bottom: 23px;
+    letter-spacing: 0.16em;
+  }
+
+  .media-subpage-bunbun & {
+    margin-bottom: 23px;
+  }
 }
 
 .media-bottom {
@@ -93,44 +116,49 @@
   width: 100%;
   margin: 0 auto;
   text-align: center;
-}
 
-.media-note {
-  position: relative;
-  display: inline-block;
-  width: 318px;
-  text-align: left;
-  margin-top: 25px;
-}
-
-.media-note-flag, .media-note-acorn {
-  position: absolute;
-}
-
-.media-note-flag {
-  top: -24px;
-  left: -3px;
-}
-
-.media-note-acorn {
-  top: -33px;
-  right: -42px;
-}
-
-.media-note-text {
-  width: 100%;
-  padding: 23px 32px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #8daf86;
-  border-radius: 4px;
-}
-
-//MODIFIER
-.dokidoki,
-.mobipark {
-  .media-bottom {
-    margin-left: 27px;
+  .media-subpage & {
     text-align: left;
+    padding-left: 20px;
   }
+
+}
+
+
+// .media-note {
+//   position: relative;
+//   display: inline-block;
+//   width: 318px;
+//   text-align: left;
+//   margin-top: 25px;
+
+// }
+
+// .media-note-flag, .media-note-acorn {
+//   position: absolute;
+// }
+
+// .media-note-flag {
+//   top: -24px;
+//   left: -3px;
+// }
+
+// .media-note-acorn {
+//   top: -33px;
+//   right: -42px;
+// }
+
+// .media-note-text {
+//   width: 100%;
+//   padding: 23px 32px 20px;
+//   font-size: 16px;
+//   color: #fff;
+//   background-color: #8daf86;
+//   border-radius: 4px;
+// }
+
+// modifier
+.media-title-racing-kart {
+  text-align: center;
+  font-size: 26px;
 }

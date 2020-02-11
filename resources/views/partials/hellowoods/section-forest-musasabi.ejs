@@ -1,0 +1,29 @@
+  <div class="l-section mobipark hellowoods">
+    <div class="mobipark-adventure mobipark-adventure-sumika hellowoods-musasabi">
+      <div class="l-container">
+        <div class="section-inner ">
+          <div class="section-image" style="background-image: url(<%= mix('/assets/images/hellowoods/explore-bg-1.png') %>);">
+            <img class="section-image-logo" src="<%= mix('/assets/images/hellowoods/musasabi-logo.png') %>" alt="Musasabi">
+          </div>
+
+          <div class="section-contents l-adventure">
+            <span class="text-ribbon bg-gray">モビパークパスポート対象外</span>
+            <h3 class="section-heading">
+              森のジップライン ムササビ
+            </h3>
+            <p>対象：小学４年生以上で、身長135cm以上、体重100kg以下の方</p>
+            <p class="section-contents-copy">
+              森の中で「溢れる生命（いのち）」を見つけよう。<br>自然とふれあいながら、遊び・学べる体験型アトラクション・プログラムが満載です。
+            </p>
+            <div class="l-button">
+              <%- include('/partials/button', {
+                modifier: 'button-mobipark',
+                text: 'もっと見る',
+                link: '#'
+              }) %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

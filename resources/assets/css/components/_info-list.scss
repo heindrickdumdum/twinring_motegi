@@ -1,0 +1,40 @@
+.info-container {
+  margin-top: 80px ;
+
+  .info-list {
+    max-width: 1021px;
+    width: 100%;
+    max-height: 320px;
+    margin: 37px auto 0;
+    overflow-y: scroll;
+
+    .info-item {
+      padding-left: 50px;
+      padding-right: 20px;
+      font-size: 18px;   
+      letter-spacing: 0.16em;
+      font-weight: 600;
+      position: relative;
+      border-bottom: 1px dashed $color-black;
+
+      &:before {
+        width: 11px;
+        height: 11px;
+        background-image: url(../images/list-dot.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: left center;
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 7px;
+      }
+
+      span {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: block;
+      }
+    }
+  }
+}

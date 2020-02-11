@@ -16,15 +16,16 @@
 
 @import "components/attraction";
 @import "components/fonts";
+
 @import "components/wrap";
 @import "components/heading";
 @import "components/header";
 @import "components/header-sub";
-@import "components/mv";
 @import "components/article";
 @import "components/feature";
 @import "components/parkmap";
 @import "components/button";
+@import "components/mv";
 @import "components/button-gradient";
 @import "components/section";
 @import "components/section-cards";
@@ -53,11 +54,18 @@
 @import "components/footer-bottom";
 @import "components/sns";
 @import "components/slider";
-@import "components/tsubasa/styles";
-@import "components/car-and-bike/styles";
+
+// @import "components/tsubasa/styles";
+// @import "components/car-and-bike/styles";
 @import "components/hellowoods";
 @import "components/hellowoods-information";
 @import "components/alternate-feature";
+@import "components/steps";
+@import "components/comparison";
+
+@import "components/subpage";
+// @import "components/tsubasa/styles";
+// @import "components/car-and-bike/styles";
 
 @import 'layout/grid';
 @import "layout/l-container";

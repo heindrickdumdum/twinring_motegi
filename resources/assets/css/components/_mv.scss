@@ -245,43 +245,9 @@
   }
 }
 
-// itadaki mv 
-.mv-itadaki {
-  .mv-heading {
-    bottom: 45px;
-  }
-  
-  .mv-heading-subtexts {
-    font-size: 47px;
-    margin-top: 26px;
-    color: $color-white;
-    letter-spacing: 0.06em;
-    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
-  }
-
-  .mv-heading-texts {
-    font-family: $font-holland;
-    color: $color-white;
-    font-size: 32px;
-    font-size: 50px;
-    letter-spacing: 0.06em;
-    width: auto;
-    text-align: center;
-  }
-
-  .mv-today {
-    width: 268px;
-    height: 266px;
-    background-image: url(../images/itadaki/today.png);
-    bottom: -45px;
-  }
-}
-
-// END itadaki mv 
 
 
-// sumika mv 
-.mv-sumika {
+.mv-inner {
   .mv-today {
     width: 268px;
     height: 266px;
@@ -309,5 +275,12 @@
     letter-spacing: 0.06em;
     width: auto;
   }
+
+  // itadaki mv
+
+  &.itadaki-mv {
+    .mv-today {
+      background-image: url(../images/itadaki/today.png);
+    }
+  }
 }
-// END sumika mv 

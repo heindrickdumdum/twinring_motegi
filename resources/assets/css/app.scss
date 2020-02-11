@@ -28,13 +28,13 @@
 @import "components/button-gradient";
 @import "components/section";
 @import "components/section-cards";
-@import "components/sumika-video";
-@import "components/sumika-instagram";
-@import "components/sumika-faq";
-@import "components/sumika";
+@import "components/youtube-video";
+@import "components/instagram";
+@import "components/faq";
 @import "components/call-to-action";
 @import "components/table";
 @import "components/media";
+@import "components/pickup";
 @import "components/accordion";
 @import "components/design";
 @import "components/mobipark-information";
@@ -53,9 +53,11 @@
 @import "components/footer-bottom";
 @import "components/sns";
 @import "components/slider";
+@import "components/top-slider";
 @import "components/tsubasa/styles";
 @import "components/car-and-bike/styles";
 @import "components/hellowoods";
+@import "components/note";
 
 @import 'layout/grid';
 @import "layout/l-container";
@@ -66,6 +68,7 @@
 @import "layout/l-section";
 @import "layout/l-section-title";
 @import "layout/l-button";
+@import "layout/l-note";
 
 // Required
 .svg-sprite {

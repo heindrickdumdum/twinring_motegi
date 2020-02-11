@@ -7,5 +7,5 @@ import headerMenu from "./components/header-menu";
 parkmapButton();
 headerMenu();
 mobiparkSlider();
-slider();
 dokidokiSlider();
+slider();

@@ -196,8 +196,7 @@
 }
 
 // modifier dokidoki, mobipark
-.mv-dokidoki,
-.mv-mobipark {
+.mv-dokidoki {
   overflow-y: hidden; 
   
   .mv-heading {
@@ -240,12 +239,39 @@
     background-image: url(../images/dokidoki/dokidoki-logo.png);
     bottom: -60px;
   }
+}
+// end modifier dokidoki, mobipark
+
+// modifier mobipark
+.mv-mobipark {
+  overflow-y: hidden; 
+  
+  .mv-heading {
+    left: 0px;
+    bottom: 65px;
+  }
+
+  .mv-heading-text-mobipark {
+    font-size: 45px;
+    color: $color-white;
+    letter-spacing: 0.08em;    
+  }
+
+  .mv-heading-subtext-mobipark {
+    max-width: 356px;
+    width: 100%;
+    margin-top: 3px;
+  }
 
   .mv-today-mobipark {
+    max-width: 247px;
+    width: 100%;
+    height: 247px;
+    bottom: -37px;
     background-image: url(../images/mobipark/mobipark-logo.png);
   }
 }
-// end modifier dokidoki, mobipark
+// end modifier mobipark
 
 // itadaki mv 
 .mv-itadaki {
@@ -313,3 +339,32 @@
   }
 }
 // END sumika mv 
+
+// modifier forest driving school
+.mv-mobipark.mv-forest-driving {
+  .mv-container {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .mv-heading {
+    position: relative;
+    left: unset;
+    bottom: unset;
+    display: inline-block;
+
+    .mv-heading-texts.forest-driving {
+      font-size: 45px;
+      font-family: $font-hiragino;
+      color: $color-white;
+      letter-spacing: 0.1em;
+      text-shadow: 0px 8px 11px rgba(0, 0, 0, 0.35);      
+    }
+  }
+  
+}
+// end modifier forest driving school

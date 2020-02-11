@@ -15,10 +15,10 @@
 
   <div class="l-container mv-container">
     <h2 class="mv-heading">
-      <span class="mv-heading-text mv-mobipark-text">
+      <span class="mv-heading-text mv-heading-text-mobipark">
         Mobipark
       </span>
-      <span class="mv-heading-subtext mv-mobipark-subtext">
+      <span class="mv-heading-subtext mv-heading-subtext-mobipark">
         <img src="<%= mix('/assets/images/mobipark/mv-subtext.png') %>" alt="mobipark">
       </span>
     </h2>
@@ -34,7 +34,7 @@
   <section class="mobipark mobipark-info">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-mobipark',
+          modifier: 'heading-mobipark heading-mobipark-info',
           text: 'Information',
           alt: 'information',
           altSubtext: '',
@@ -45,7 +45,9 @@
       <div class="l-container">
         <ul class="info-list">
           <% mobiparkData.forEach(item => { %>
-          <li class="info-item"><%= item.desc %></li>
+          <li class="info-item">
+            <span><%= item.desc %></span>
+          </li>
           <% }) %>
         </ul>
       </div>
@@ -253,8 +255,8 @@
           </div>
         </div>
         <div class="col-right">
-          <div class="slide-container .mobipark">
-            <div class="swiper-container">
+          <div class="slide-container">
+            <div class="swiper-container swiper-container-mobipark">
               <ul class="swiper-wrapper">
                 <% mobiparkSlides.forEach( item => { %>
                 <li class="swiper-slide slider-item">
@@ -325,14 +327,13 @@
   </div>
 </div>
 
-<section class="sumika-recommendation dokidoki">
+<section class="sumika-recommendation">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      modifier: 'heading-net-sumika heading-mobipark',
+      modifier: 'heading-recommend',
       text: 'Recommendation',
-      alt: '',
       altSubtext: '',
-      subtextvg: 'recommend'
+      subtextvg: 'recommendation-title'
     }) %>
   </div>
   <div class="swiper-container slider">
@@ -351,14 +352,13 @@
   </div>
 </section>
 
-<section class="sumika-pick-up mobipark">
+<section class="sumika-pick-up">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      modifier: 'heading-net-sumika heading-mobipark',
+      modifier: 'heading-pickup',
       text: 'Pick Up',
-      alt: '',
       altSubtext: '',
-      subtextvg: 'pickup'
+      subtextvg: 'pickup-event'
     }) %>
   </div>
   <div class="l-container">
@@ -371,7 +371,7 @@
           heading: item.heading,
           date: item.date,
           link: item.link,
-          modifier: 'sumika-recommendation-article'
+          modifier: 'pickup-article'
         }) %>
       </li>
       <% }) %>

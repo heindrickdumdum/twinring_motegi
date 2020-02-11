@@ -1,5 +1,5 @@
 .banner-cta {
-  margin: 180px 0;
+  margin: 99px 0 217px;
   position: relative;
   text-align: center;
   z-index: $z-max;
@@ -13,6 +13,11 @@
     right: 0;
     bottom: -126px;
     z-index: 1;
+  }
+
+  .banner-cta-bottom-inner {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 

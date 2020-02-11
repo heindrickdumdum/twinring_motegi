@@ -440,37 +440,35 @@
 <section class="sumika-recommendation dokidoki">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      modifier: 'heading-net-sumika heading-dokidoki',
+      modifier: 'heading-recommend heading-dokidoki',
       text: 'Recommendation',
-      alt: '',
       altSubtext: '',
-      subtextvg: 'recommend'
+      subtextvg: 'recommendation-title'
     }) %>
   </div>
-    <div class="swiper-container slider">
-      <ul class="swiper-wrapper slider-wrapper">
-        <% getData().data.recommend.forEach(item => { %>
-        <li class="swiper-slide slider-item">
-          <%- include('/partials/article-no-design', {
-            image: item.image,
-            heading: item.heading,
-            buttonLink: item.buttonLink,
-            buttonText: 'モビパーク'
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
+  <div class="swiper-container slider">
+    <ul class="swiper-wrapper slider-wrapper">
+      <% getData().data.recommend.forEach(item => { %>
+      <li class="swiper-slide slider-item">
+        <%- include('/partials/article-no-design', {
+          image: item.image,
+          heading: item.heading,
+          buttonLink: item.buttonLink,
+          buttonText: 'モビパーク'
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
 </section>
 
 <section class="sumika-pick-up dokidoki">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      modifier: 'heading-net-sumika heading-dokidoki',
+      modifier: 'heading-pickup heading-dokidoki',
       text: 'Pick Up',
-      alt: '',
       altSubtext: '',
-      subtextvg: 'pickup'
+      subtextvg: 'pickup-event'
     }) %>
   </div>
   <div class="l-container">
@@ -483,7 +481,7 @@
           heading: item.heading,
           date: item.date,
           link: item.link,
-          modifier: 'sumika-recommendation-article'
+          modifier: 'pickup-article'
         }) %>
       </li>
       <% }) %>

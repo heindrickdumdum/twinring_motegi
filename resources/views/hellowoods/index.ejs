@@ -121,16 +121,73 @@
 
   <section class="l-section explore">
     <%- include('/partials/heading', {
-      'modifier': 'heading-wrap-center heading-wrap-activity',
-      'text': 'Explore',
-      'subtext': mix('/assets/images/top/activity/subtext.png'),
-      'altSubtext': 'ツインリンクもてぎの楽しさをエリア別に紹介'
+      modifier: 'heading-wrap-center',
+      text: 'Explore',
+      alt: '',
+      altSubtext: '',
+      subtextvg: 'hellowoods-explore-sub'
     }) %>
 
     <%- include('/partials/hellowoods/section-forest-musasabi') -%>
     <%- include('/partials/hellowoods/section-forest-tsubasa') -%>
   </section>
-  
+
+  <section class="alternate-feature">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: '',
+        text: 'Experience',
+        alt: '',
+        altSubtext: '',
+        subtextvg: 'hellowoods-experience-sub'
+      }) %>
+    </div>
+
+    <div class="l-container">
+      <%- include('/partials/hellowoods/section-alt-features-exp') -%>
+    </div>
+  </section>
+
+  <section class="alternate-feature">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: '',
+        text: 'Learn',
+        alt: '',
+        altSubtext: '',
+        subtextvg: 'hellowoods-learn-sub'
+      }) %>
+    </div>
+
+    <div class="l-container">
+      <%- include('/partials/hellowoods/section-alt-features-learn') -%>
+    </div>
+  </section>
+
+  <div class="block-image">
+    <div class="l-container">
+      <ul class="block-image-list">
+        <%
+          hellowoodsGallery.forEach( block => {
+        %>
+        <li class="block-image-item image-border <%- block.modifier %>">
+          <a href="<%- block.url %>" class="block-image-item-link">
+            <div class="block-image-inner" style="background-image: url(<%- block.bg %>);">
+              <div class="block-image-text-wrap">
+                <p class="block-image-text">
+                  <span class="heading-text"><%- block.title %></span>
+                  <span class="block-image-subtext"><%- block.subtext %></span>
+                </p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <%
+          })
+        %>
+      </ul>
+    </div>
+  </div>
   
 </div>
 

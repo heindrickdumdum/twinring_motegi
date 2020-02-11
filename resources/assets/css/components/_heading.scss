@@ -14,11 +14,11 @@
 
 .heading-subtext {
   display: inline-block;
+  margin-top: 15px;
   // margin: 17px 0 0 10px;
   height: 36px;
 
   svg {
-    margin-top: 15px;
     width: 100%;
     height: 100%;
   }
@@ -58,6 +58,25 @@
 
     .heading-subtext {
       margin: 25px auto 0;
+    }
+  }
+
+  &.heading-banner-more {
+    .heading {
+      margin: 20px 0 0;
+    }
+
+    .heading-text {
+      line-height: 1;
+      letter-spacing: 0.16em;
+      font-size: 31px;
+      position: relative;
+    }
+  }
+
+  &.heading-banner-more-bunbun {
+    .heading-text {
+      left: 26px;
     }
   }
 
@@ -330,6 +349,51 @@
     margin-bottom: 35px;
     .heading-subtext {
       max-width: 626px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-motorcycle {
+    margin-bottom: 35px;
+
+    .heading-subtext {
+      max-width: 925px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-mototouring {
+    margin-bottom: 35px;
+
+    .heading-subtext {
+      max-width: 625px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-motoracer {
+    margin-bottom: 35px;
+
+    .heading-subtext {
+      max-width: 583px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-dream {
+    margin-bottom: 35px;
+
+    .heading-subtext {
+      max-width: 616px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-drift {
+    margin-bottom: 35px;
+
+    .heading-subtext {
+      max-width: 515px;
       width: 100%;
     }
   }

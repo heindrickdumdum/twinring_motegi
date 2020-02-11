@@ -10,7 +10,7 @@
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dream/mv-img.jpg') %>);"></div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/drift/mv-img.jpg') %>);"></div>
       </li>
     </ul>
   </div>
@@ -19,7 +19,7 @@
     <div class="heading-wrap heading-main heading-main-bunbun">
       <h2 class="heading">
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/dream/subpage-title.png') %>" alt="">
+          <img src="<%= mix('/assets/images/bun-bun-scooter/subpage-title.png') %>" alt="">
         </span>
       </h2>
     </div>
@@ -35,7 +35,7 @@
       <span>アトラクション情報</span>
     </h3>
 
-    <p>初めてのカートにチャレンジ。最高速度20km/hのエンジンで動く本格カートで走行して爽快感を味わってみよう。<br />全長210mのコースをを約3分間走行します。</p>
+    <p>最高速度20km/hのエンジンで動くドリフト専用マシンに乗って、左カーブのハンドル操作で本格的なドリフト走行を気軽に楽しもう。全長140mのコースを約3分間走行します。</p>
 
     <table class="table">
       <tbody>
@@ -77,7 +77,6 @@
         <tr class="table-row">
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
-            服装について：<br />半そで・半ズボンの場合は腕カバー・貸し出し用ズボンを装着していただきます。
           </td>
         </tr>
 
@@ -89,10 +88,10 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom heading-howto-dream',
+          'modifier': 'heading-gradient-tobottom heading-howto-drift',
           'text': 'How to Enjoy',
-          'alt': 'ぶんぶんスクーターを楽しむポイント',
-          'subtextvg': 'dream-subtext',
+          'alt': '',
+          'subtextvg': 'drift-subtext',
           'altSubtext': '',
         }) %>
       </div>
@@ -107,10 +106,19 @@
             </div>
           </div>
           <div class="media-right">
-            <h4 class="media-title"><span>初めてのカートに挑戦！風をきってコースを疾走！</span></h4>
+            <h4 class="media-title"><span>ハイパワーエンジンでドリフトバトル！</span></h4>
             <p class="media-desc">
-              レース専用タイヤを装着した本格的なカートアトラクション。ホールド感のあるレーシングシートに座ると気分も最高！
+              ハイパワーエンジンの音と振動を感じながら、アクセル全開でドリフト走行にチャレンジしよう！
             </p>
+            <div class="media-bottom">
+              <div class="media-note">
+                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                <div class="media-note-text">
+                  こわがらずに<br />ドリフトできタネ！
+                </div>
+              </div>
+            </div>
 
 
           </div>
@@ -126,22 +134,14 @@
           <div class="media-right">
             <h4 class="media-title">
               <span>
-                運転テクニックを磨いてコースを攻略！
+                レースは迫力の一斉スタート
               </span>
             </h4>
             <p class="media-desc">
-              何度か走行してマシンに慣れたら、一番速く走行できるベストラインにチャレンジしてコースを攻略しよう！
+              最大6台のマシンがグリーンフラッグを合図に一斉スタート。大きなエンジン音とともに走り出すシーンは迫力満点！
             </p>
 
-            <div class="media-bottom">
-              <div class="media-note">
-                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                <div class="media-note-text">
-                  はじめてのカートに<br />チャレンジできタネ！
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
         <div class="media media-subpage u-clear">
@@ -153,9 +153,9 @@
             </div>
           </div>
           <div class="media-right">
-            <h4 class="media-title media-title-nohighlight"><span>より本格的なカートへステップアップ！</span></h4>
+            <h4 class="media-title media-title-nohighlight"><span>家族みんなでレース対決！</span></h4>
             <p class="media-desc">
-              ドリームカートでライセンスをゲットして、<br />さらにハイスピードのチャレンジカートにステップアップしよう！
+              大きなマシンに乗ってみんなでレース対決。<br />家族のナンバー１を目指して思いっきり走ろう！
             </p>
 
 
@@ -173,14 +173,14 @@
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
             'modifier': 'heading-banner-more',
-            'text': 'ドリームカートをもっと楽しむ',
+            'text': 'ドリフトSをもっと楽しむ',
             'alt': '',
             'altSubtext': '',
             'subtext': ''
           }) %>
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
-              ドリームカートのこだわりポイントや、知っているともっ<br />と楽しくなる情報を配信中しています。
+              ドリフトSのこだわりポイントや、知っているともっと楽<br />しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action">

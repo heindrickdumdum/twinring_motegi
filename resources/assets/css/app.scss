@@ -29,13 +29,13 @@
 @import "components/button-gradient";
 @import "components/section";
 @import "components/section-cards";
-@import "components/sumika-video";
-@import "components/sumika-instagram";
-@import "components/sumika-faq";
-@import "components/sumika";
+@import "components/youtube-video";
+@import "components/instagram";
+@import "components/faq";
 @import "components/call-to-action";
 @import "components/table";
 @import "components/media";
+@import "components/pickup";
 @import "components/accordion";
 @import "components/design";
 @import "components/info-list";
@@ -53,18 +53,14 @@
 @import "components/footer-bottom";
 @import "components/sns";
 @import "components/slider";
-
-// @import "components/tsubasa/styles";
-// @import "components/car-and-bike/styles";
+@import "components/top-slider";
 @import "components/hellowoods";
+@import "components/note";
 @import "components/hellowoods-information";
 @import "components/alternate-feature";
 @import "components/steps";
 @import "components/comparison";
-
 @import "components/subpage";
-// @import "components/tsubasa/styles";
-// @import "components/car-and-bike/styles";
 
 @import 'layout/grid';
 @import "layout/l-container";
@@ -75,8 +71,12 @@
 @import "layout/l-section";
 @import "layout/l-section-title";
 @import "layout/l-button";
+<<<<<<< HEAD
 @import "layout/l-adventure";
 @import "layout/l-racing-kart";
+=======
+@import "layout/l-note";
+>>>>>>> f14aac21ed0486561155f4791451ce7c8e572142
 
 // Required
 .svg-sprite {

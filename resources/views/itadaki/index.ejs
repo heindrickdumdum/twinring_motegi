@@ -124,7 +124,7 @@ accordionData = [
 
 <%- include('./../partials/head', { title }) -%>
 
-<div class="mv mv-itadaki">
+<div class="mv mv-inner itadaki-mv">
   <ul class="mv-list">
     <li class="mv-item">
       <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-background-grey.jpg')%>);"></div>
@@ -137,7 +137,10 @@ accordionData = [
         Forest Labyrinth
       </span>
       <span class="mv-heading-subtexts">
-        迷宮森殿ITADAKI
+        <svg>
+          <title>迷宮森殿ITADAKI</title>
+          <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-itadaki-main-title') %>"></use>
+        </svg>
       </span>
     </h2>
 
@@ -148,9 +151,9 @@ accordionData = [
   </div>
 </div>
 
-<section class="main-content">
+<section class="main-content l-section">
   <div class="l-container">
-    <div class="heading-wrap l-heading">
+    <div class="heading-wrap l-heading-main">
       <h2 class="heading">
         <span class="heading-texts">
           <img src="<%= mix('/assets/images/itadaki/itadaki-main-title.png') %>" alt="itadaki">
@@ -167,11 +170,11 @@ accordionData = [
       </section>
     </div>
 
-    <h3 class="attraction-title">
+    <h3 class="table-heading">
       <img src="<%- mix('/assets/images/dokidoki/attraction-title.png') %>" alt="title">
     </h3>
 
-    <p class="attraction-subtext">
+    <p class="table-subheading">
       5層階に分かれ、その全てで森の生態系を体感できる、生態系ピラミッドの立体図鑑が『迷宮森殿 ITADAKI』です。1階から5階まで全部で14か所の生き物にスタンプがあり、さらに途中2か所にクイズポイントがあります。
     </p>
 
@@ -222,15 +225,11 @@ accordionData = [
 
       </tbody>
     </table>
-  </div>
-</section>
 
-<section class="admission">
-  <div class="l-container">
-    <h3 class="admission-title">
+    <h3 class="table-heading">
       <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
     </h3>
-    <p class="admission-subtext">
+    <p class="table-subheading">
       下記の日程は 混雑が予想されるため、 対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
       期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
     </p>
@@ -279,11 +278,11 @@ accordionData = [
   <div class="l-container">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-dokidoki',
-        'text': 'How to Enjoy',
-        'alt': 'How to Enjoy',
-        'subtextvg': 'enjoy-itadaki-title',
-        'altSubtext': '',
+        modifier: 'heading-enjoy',
+        text: 'How to Enjoy',
+        alt: 'How to Enjoy',
+        subtextvg: 'itadaki-cta-title',
+        altSubtext: '',
       }) %>
     </div>
 
@@ -299,18 +298,21 @@ accordionData = [
         <div class="media-right">
           <h4 class="media-title"><span>森の生き物の巨大オブジェ＆アスレチック</span></h4>
           <p class="media-desc">
-            「迷宮神殿ITADAKI」の中には、巨大で迫力満点のリアルな生き物や植物のオブジェがいっぱいです。自然が作り出す様々な障害物やバランスボール、ネット登りで楽しみながら進みましょう！
+            「迷宮森殿ITADAKI」の中には、巨大で迫力満点のリアル
+            な生き物や植物のオブジェがいっぱいです。自然界が作り
+            出す様々な障害物やバランスボール、ネット登りで楽しみ
+            ながら進みましょう！
           </p>
-
-          <div class="media-bottom">
-            <div class="media-note">
-              <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-              <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-              <div class="media-note-text">
-                最後まであきらめずにゴールできタネ！
-              </div>
+          
+          <div class="note">
+            <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+            <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+            <div class="note-text">
+              最後まであきらめずに<br>
+              ゴールできタネ！
             </div>
           </div>
+   
         </div>
       </div>
       <div class="media u-clear">
@@ -326,18 +328,18 @@ accordionData = [
             <span>1階から5階に隠された14箇所のスタンプ</span>
           </h4>
           <p class="media-desc">
-            <span>1階から5階まで全部で14箇所</span>の生き物のスタンプが隠されています。<br/>
-            さらに途中2箇所にクイズポイントがあります。できるだけ多くのスタンプを集め、2つのクイズに正解し、迷路を制覇して5階までたどり着けば「迷宮森殿　ITADAKI」クリアです。
+            1階から5階まで全部で14箇所の生き物のスタンプが隠されています。
+            さらに途中2箇所にクイズポイントがあります。できるだ
+            け多くのスタンプを集め、2つのクイズに正解し、迷路を
+            制覇して5階までたどり着ければ「迷宮森殿 ITADAKI」
+            クリアです。
           </p>
-
-          <div class="media-bottom">
-            <div class="media-note">
-              <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-              <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-              <div class="media-note-text">
-                難しいコースでもこわがらずに<br>
-                チャレンジできタネ！
-              </div>
+          <div class="note">
+            <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+            <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+            <div class="note-text">
+              難しいコースでもこわがらずに<br>
+              チャレンジできタネ！
             </div>
           </div>
         </div>
@@ -355,7 +357,11 @@ accordionData = [
             <span>森の生態系ピラミッドの立体図巻</span>
           </h4>
           <p class="media-desc">
-            森の生き物たちを、食物連鎖の順番に並べていくと生態系ピラミッドができあがります。5階層にわかれた「迷宮森殿　ITADAKI」は、迷路全体で森の生態系そのものを表現しています。遊びの中で、階層の登るにつれて変わる、森の生き物や植物をみつけることができます。
+            森の生き物たちを、食物連鎖の順番に並べていくと生態系
+            ピラミッドができあがります。5階層にわかれた「迷宮森
+            殿 ITADAKI」は、迷路全体で森の生態系そのものを表現
+            しています。遊びの中で、階層の登るにつれて変わる、森
+            の生き物や植物をみつけることができます。
           </p>
         </div>
       </div>
@@ -368,80 +374,77 @@ accordionData = [
   <div class="l-container">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-dokidoki',
-        'text': 'Ways to feel the Forest',
-        'alt': 'itadaki forest',
-        'subtextvg': 'itadaki-forest-title',
-        'altSubtext': '',
+        modifier: 'heading-forest',
+        text: 'Ways to feel the Forest',
+        alt: 'Ways to feel the Forest',
+        subtextvg: 'itadaki-forest-title',
+        altSubtext: '',
       }) %>
     </div>
   </div>
-  
-    <div class="swiper-container slider">
-      <ul class="swiper-wrapper swiper-wrapper-dokidoki-forest">
-        <% forest.forEach(item => { %>
-        <li class="swiper-slide slider-item">
-          <div class="slide-image">
-            <img src="<%- item.src -%>" alt="<%- item.alt -%>">
-          </div>
-          <span class="slide-text">
-            <%- item.desc -%>
-          </span>
-        </li>
-        <% } ) %>
-      </ul>
-    </div>
-  </section>
-
-<!-- BOTTOM -->
-
-<section class="sumika-video l-container">
-  <div class="l-section-title l-sumika-video">
-    <%- include('/partials/heading', {
-      'modifier': 'heading-sumika',
-      'text': '<span class="heading-normal">ITADAKI</span> Videos',
-      'alt': 'ITADAKI videos',
-      'subtextvg': 'itadaki-video-title',
-      'altSubtext': '',
-    }) %>
-  </div>
-  <div class="sumika-video-content">
-    <ul class="sumika-video-list row">
-      <li class="sumika-video-item col-lg-6 col-md-6 col-sm-12">
-        <div class="sumika-video-wrapper">
-          <div class="sumika-video-inner">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/QwxqqkbxhiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+  <div class="swiper-container slider">
+    <ul class="swiper-wrapper top-slide">
+      <% forest.forEach(item => { %>
+      <li class="swiper-slide slider-item">
+        <div class="top-slider-image">
+          <img src="<%- item.src -%>" alt="<%- item.alt -%>">
         </div>
-        <p class="sumika-video-description">120秒でわかるITADAKIの中</p>
+        <span class="top-slider-text">
+          <%- item.desc -%>
+        </span>
       </li>
-      <li class="sumika-video-item col-lg-6 col-md-6 col-sm-12">
-        <div class="sumika-video-wrapper">
-          <div class="sumika-video-inner">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/D8-Z6rgRe1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-        <p class="sumika-video-description">「迷宮森殿ITADAKI」体験シーン</p>
-      </li>
+      <% } ) %>
     </ul>
   </div>
 </section>
 
-<section class="dokidoki-faq">
-  <div class="l-container">
-    <div class="dokidoki-faq-inner">
+<section class="youtube-video l-section">
+    <div class="l-container">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-sumika-faq',
-          'text': 'FAQ',
-          'alt': 'faq',
-          'subtextvg': 'faq-title',
-          'altSubtext': '',
+          modifier: 'heading-video',
+          text: 'Itadaki Videos',
+          alt: 'sumika videos',
+          subtextvg: 'itadaki-video-title',
+          altSubtext: '',
         }) %>
       </div>
+      <div class="youtube-video-content">
+        <ul class="youtube-video-list row">
+          <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
+            <div class="youtube-video-wrapper">
+              <div class="youtube-video-inner">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QwxqqkbxhiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <p class="youtube-video-description">仲間とチャレンジコースに挑戦！</p>
+          </li>
+          <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
+            <div class="youtube-video-wrapper">
+              <div class="youtube-video-inner">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/D8-Z6rgRe1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <p class="youtube-video-description">DOKIDOKI タイムアタック映像！</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+</section>
 
-      <% accordionData.forEach(data => { %>
-
+<section class="faq l-section">
+  <div class="l-container">
+    <div class="faq-inner">
+     <div class="l-heading">
+      <%- include('/partials/heading', {
+        modifier: 'heading-sumika',
+        text: 'FAQ',
+        alt: 'faq',
+        subtextvg: 'faq-title',
+        altSubtext: ''
+      }) %>
+     </div>
+      <% getData().data.accordionData.forEach(data => { %>
       <div class="accordion">
         <div class="accordion-inner">
           <button class="accordion-btn js-accordion-btn" type="button">
@@ -459,7 +462,6 @@ accordionData = [
           </div>
         </div>
       </div>
-
       <% }) %>
     </div>
   </div>
@@ -469,15 +471,11 @@ accordionData = [
   <div class="l-container">
     <div class="call-to-action-wrapper">
       <div class="call-to-action-inner">
-        <h3 class="call-to-action-title">
-          <%- include('/partials/heading', {
-            'modifier': 'heading-sumika',
-            'text': '',
-            'alt': '',
-            'subtextvg': 'itadaki-cta-title',
-            'altSubtext': ''
-          }) %>
-        </h3>
+        <h2 class="heading">
+          <span class="heading-texts">
+            <img src="<%= mix('/assets/images/sumika/sumika-cta-2.png') %>" alt="sumika">
+          </span>
+        </h2>
         <div class="call-to-action-description">
           <p class="call-to-action-description-text">
             ITADAKIのこだわりポイントや、<br>
@@ -508,60 +506,58 @@ accordionData = [
   </div>
 </div>
 
-<section class="dokidoki-recommendation">
+<section class="recommendation">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-dokidoki',
-      'text': 'Recommendation',
-      'alt': 'Recommendation',
-      'altSubtext': '',
-      'subtextvg': 'recommendation-subtext'
+      modifier: 'heading-recommend',
+      text: 'Recommendation',
+      altSubtext: '',
+      subtextvg: 'recommendation-title'
     }) %>
   </div>
-
-  <div class="l-container">
-    <ul class="feature-list feature-list-no-design">
-      <% recommend.forEach(item => { %>
-      <li class="feature-item">
-        <%- include('/partials/article-no-design', {
-          'image': item.image,
-          'heading': item.heading,
-          'buttonLink': item.buttonLink,
-          'buttonText': 'モビパーク'
-        }) %>
-      </li>
-      <% }) %>
-    </ul>
-  </div>
+    <div class="swiper-container slider">
+      <ul class="swiper-wrapper slider-wrapper">
+        <% getData().data.recommend.forEach(item => { %>
+        <li class="swiper-slide slider-item">
+          <%- include('/partials/article-no-design', {
+            image: item.image,
+            heading: item.heading,
+            buttonLink: item.buttonLink,
+            buttonText: 'モビパーク'
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
 </section>
 
-<section class="dokidoki-pick-up">
+<section class="pick-up">
   <div class="l-section-title">
     <%- include('/partials/heading', {
-      'modifier': 'heading-net-dokidoki',
-      'text': 'Pick Up',
-      'alt': 'Pick Up',
-      'altSubtext': '',
-      'subtextvg': 'pickup-event-title'
+      modifier: 'heading-pickup',
+      text: 'Pick Up',
+      altSubtext: '',
+      subtextvg: 'pickup-event'
     }) %>
   </div>
-
   <div class="l-container">
-    <ul class="feature-list">
-      <% pickup.forEach(item => { %>
-      <li class="feature-item">
-        <%- include('/partials/article', {
-          'category': item.category,
-          'image': item.image,
-          'heading': item.heading,
-          'date': item.date,
-          'link': item.link
-        }) %>
-      </li>
-      <% }) %>
-    </ul>
+    <div class="pick-inner">
+      <ul class="pickup-list row">
+        <% getData().data.pickup.forEach(item => { %>
+        <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
+          <%- include('/partials/article', {
+            category: item.category,
+            image: item.image,
+            heading: item.heading,
+            date: item.date,
+            link: item.link,
+            modifier: 'pickup-article'
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
   </div>
 </section>
-<!-- END BOTTOM -->
 
 <%- include('./../partials/footer') -%>

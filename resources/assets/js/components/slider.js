@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 
 export default function slider() {
-  let mySwiper = new Swiper('.swiper-container', {  
+  let mySwiper = new Swiper('.slider', {  
     speed: 1500,
     initialSlide: 2,
     centeredSlides: false,
@@ -31,7 +31,7 @@ export default function slider() {
     }
 });
 
-mySwiper.on('resize', function () {
+mySwiper.addEventListener('resize', function () {
     this.reInit();
 });
 

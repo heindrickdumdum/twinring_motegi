@@ -5,12 +5,7 @@
 .heading-text {
   display: block;
   font-family: $font-holland;
-<<<<<<< HEAD
-  font-size: 31px;
   background: linear-gradient(to right, #027cc3 10%, #099f48 100%);
-=======
-  background: linear-gradient(to right, #1cc763 0%, #34b0e7 100%);
->>>>>>> 134db47d1a6519ab33059070c967d05ab833d3af
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.1em;
@@ -104,7 +99,6 @@
     }
   }
 
-<<<<<<< HEAD
   &.heading-sumika-faq {
     margin-bottom: 40px;
     text-align: center;
@@ -113,21 +107,7 @@
       width: 284px;
       height: 34px;
       margin: 0 auto;
-=======
-  &.heading-net-acro-x {
-    margin-bottom: 40px;
 
-    .heading-texts {
-      margin: 0 auto;
-      text-align: center;
-    }
-  }
-
-  &.heading-enjoy {
-    svg {
-      width: 525px;
-      height: 39px;
->>>>>>> 134db47d1a6519ab33059070c967d05ab833d3af
     }
 
     .heading-text {
@@ -150,12 +130,6 @@
   }
 
   &.heading-recommend {
-    svg {
-      width: 513px;
-      height: 34px;
-    }
-  }
-  &.heading-pickup {
     svg {
       width: 513px;
       height: 34px;
@@ -190,6 +164,11 @@
       margin-top: 10px;
       max-width: 367px;
       width: 100%;
+    }
+
+    svg {
+      width: 513px;
+      height: 34px;
     }
   }
 

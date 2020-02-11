@@ -14,6 +14,7 @@
 @import "lib/clearfix";
 @import "lib/swiper";
 
+@import "components/attraction";
 @import "components/fonts";
 
 @import "components/wrap";
@@ -31,12 +32,17 @@
 @import "components/sumika-video";
 @import "components/sumika-instagram";
 @import "components/sumika-faq";
+@import "components/sumika";
 @import "components/call-to-action";
 @import "components/table";
 @import "components/media";
 @import "components/accordion";
 @import "components/design";
-
+@import "components/mobipark-information";
+@import "components/mobipark-challenge";
+@import "components/mobipark-adventure";
+@import "components/mobipark-carbike";
+@import "components/mobipark-map";
 @import "components/block-image";
 @import "components/image-border";
 @import "components/how-to";
@@ -48,6 +54,10 @@
 @import "components/footer-bottom";
 @import "components/sns";
 @import "components/slider";
+
+// @import "components/tsubasa/styles";
+// @import "components/car-and-bike/styles";
+@import "components/hellowoods";
 @import "components/steps";
 @import "components/comparison";
 
@@ -58,6 +68,7 @@
 @import 'layout/grid';
 @import "layout/l-container";
 @import "layout/l-header";
+@import "layout/l-heading";
 @import "layout/l-feature";
 @import "layout/l-parkmap";
 @import "layout/l-section";

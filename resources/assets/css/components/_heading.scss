@@ -1,18 +1,29 @@
+.heading {
+  margin: 40px 0;
+}
+
 .heading-text {
   display: block;
   font-family: $font-holland;
+<<<<<<< HEAD
   font-size: 31px;
   background: linear-gradient(to right, #027cc3 10%, #099f48 100%);
+=======
+  background: linear-gradient(to right, #1cc763 0%, #34b0e7 100%);
+>>>>>>> 134db47d1a6519ab33059070c967d05ab833d3af
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 0.1em;
+  font-size: 36px;
 }
 
 .heading-subtext {
   display: inline-block;
-  margin: 17px 0 0 10px;
+  // margin: 17px 0 0 10px;
   height: 36px;
 
   svg {
+    margin-top: 15px;
     width: 100%;
     height: 100%;
   }
@@ -67,18 +78,6 @@
     }
   }
 
-  &.heading-sumika {
-    .heading-text {
-      width: 216px;
-      margin: 0 auto;
-    }
-
-    .heading-subtext {
-      width: 404px;
-      margin: 24px auto 0;
-    }
-  }
-
   &.heading-dokidoki {
     .heading-text {
       margin: 0 auto;
@@ -96,16 +95,6 @@
     }
   }
 
-  &.heading-net-sumika {
-    margin-bottom: 40px;
-
-    .heading-text {
-      width: 412px;
-      height: 28px;
-      margin: 0 auto;
-    }
-  }
-
   &.heading-net-dokidoki {
     margin-bottom: 40px;
 
@@ -115,6 +104,7 @@
     }
   }
 
+<<<<<<< HEAD
   &.heading-sumika-faq {
     margin-bottom: 40px;
     text-align: center;
@@ -123,12 +113,52 @@
       width: 284px;
       height: 34px;
       margin: 0 auto;
+=======
+  &.heading-net-acro-x {
+    margin-bottom: 40px;
+
+    .heading-texts {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &.heading-enjoy {
+    svg {
+      width: 525px;
+      height: 39px;
+>>>>>>> 134db47d1a6519ab33059070c967d05ab833d3af
     }
 
     .heading-text {
-      width: 104px;
-      height: 43px;
-      margin: 0 auto 24px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &.heading-forest {
+    svg {
+      width: 520px;
+      height: 36px;
+    }
+  }
+
+  &.heading-video {
+    svg {
+      width: 520px;
+      height: 36px;
+    }
+  }
+
+  &.heading-recommend {
+    svg {
+      width: 513px;
+      height: 34px;
+    }
+  }
+  &.heading-pickup {
+    svg {
+      width: 513px;
+      height: 34px;
     }
   }
 
@@ -327,29 +357,87 @@
 }
 
 //MODIFIER DOKIDOKI
-.dokidoki {
-  .heading-dokidoki {
+.dokidoki,
+.mobipark {
+  .heading-main-title {
+    .heading-text {
+      max-width: 497px;
+      margin-top: 68px;
+      margin-bottom: 79px;
+    }
+  }
+
+  .heading-dokidoki,
+  .heading-mobipark {
+    .heading-text {
+      width: auto !important;
+      height: auto !important;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 36px;
+      letter-spacing: 0.06em;
+      font-family: $font-holland;
+    }
+
+    .heading-subtext {
+      width: 100%;
+    }
+  }
+
+  .heading-enjoy {
+    .heading {
+      margin-top: 103px;
+      margin-bottom: 37px;
+    }
+
     .heading-text {
       width: auto !important;
       height: auto !important;
       font-size: 36px;
-      letter-spacing: 0.16em;
-      font-family: $base-font-family;
+      letter-spacing: 0.06em;
+      font-family: $font-holland;
+      font-weight: 600;
+    }
+
+    .heading-subtext {
+      width: 100%;
     }
   }
 
-  .heading-net-dokidoki {
+  .heading-forest {
+    .heading {
+      margin-top: 25px;
+      margin-bottom: -1px;
+    }
+
+    .heading-text {
+      width: auto !important;
+      height: auto !important;
+      font-size: 36px;
+      letter-spacing: 0.06em;
+      font-family: $font-holland;
+      font-weight: 600;
+    }
+
+    .heading-subtext {
+      width: 100%;
+      margin-top: 39px;
+    }
+  }
+
+  .heading-net-dokidoki,
+  .heading-net-mobipark {
     .heading-text {
       width: auto !important;
       height: auto !important;
       font-size: 32.456px;
       font-family: $base-font-family;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.06em;
       font-weight: 300;
     }
   }
 
-  .heading-dokidoki-faq {
+  .heading-faq {
     .heading-text {
       text-align: center;
     }
@@ -360,14 +448,25 @@
       display: block;
     }
   }
+}
 
-  .heading-dokidoki-enjoy {
+.mobipark {
+  .heading-main-title {
+    .heading-text {
+      max-width: 651px;
+    }
+  }
+}
+
+.dokidoki-video,
+.mobipark-video {
+  .heading-dokidoki {
+    .heading-text {
+      margin-top: 122px;
+    }
+
     .heading-subtext {
-      max-width: 556px;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
+      margin-top: 20px;
     }
   }
 }

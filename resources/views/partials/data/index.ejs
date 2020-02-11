@@ -1,24 +1,50 @@
+<% include('./_header') %>
+<% include('./_header-content-access') %>
+<% include('./_header-content-attraction') %>
+<% include('./_header-content-motor') %>
 <% include('./_accordionData') %>
-<% include('./_featureContent') %>
-<% include('./_howTo') %>
-<% include('./_information') %>
+<% include('./_forest') %>
 <% include('./_instagram') %>
-<% include('./_parkMap') %>
+<% include('./_mobiparkData') %>
+<% include('./_mobiparkSlides') %>
+<% include('./_feature-content') %>
+<% include('./_how-to-content') %>
+<% include('./_information-content') %>
+<% include('./_instagram') %>
+<% include('./_parkmap-buttons') %>
 <% include('./_pickup') %>
 <% include('./_recommend') %>
+<% include('./_footer-top') %>
 
 <%
   getData = () => {
     return {
       data: {
+        headerTopNav,
+        headerBottomNav,
+        headerAccessImageList,
+        headerAttractionImageList,
+        headerAttractionRightLinks,
+        headerAttractionBottomLinks,
+        headerMotorImageList,
+        headerMotorRightLinks,
+        headerMotorImageBottomList,
+        headerMotorBottomLinks,
         accordionData,
         featureContent,
-        howTo,
-        information,
+        forest,
+        howToContent,
         instagram,
-        parkMap,
+        mobiparkData,
+        mobiparkSlides,
+        parkmapButtons,
+        informationContent,
+        instagram,
         pickup,
-        recommend
+        recommend,
+        footerTopList,
+        footerTopNav,
+        footerBottomNav
       }
     }
   }

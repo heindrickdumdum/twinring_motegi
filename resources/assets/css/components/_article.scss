@@ -1,3 +1,4 @@
+
 .article-image-wrap {
   padding: 15px;
   position: relative;
@@ -72,6 +73,25 @@
   padding-bottom: 36px;
   height: 100%;
 
+  &.pickup-article {
+    .article-heading {
+      min-height: 93px;
+    }
+
+    .article-image-wrap {
+      &:before,
+      &:after {
+        content: none;
+      }
+    }
+
+    .article-image {
+      &:before {
+        content: none;
+      }
+    }
+  }
+
   &.article-no-design {
     .article-heading {
       color: $color-mineshaft;
@@ -83,26 +103,20 @@
         }
       }
     }
-  }
 
-  &.sumika-recommendation-article {
-    .article-heading {
-      min-height: 93px;
-    }
-  }
+    .article-image-wrap {
+      padding: 0;
+      height: auto;
 
-  .article-image-wrap {
-    padding: 0;
-    height: auto;
-
-    &::before,
-    &::after {
-      display: none;
-    }
-
-    .article-image {
-      &::before {
+      &::before,
+      &::after {
         display: none;
+      }
+
+      .article-image {
+        &::before {
+          display: none;
+        }
       }
     }
   }

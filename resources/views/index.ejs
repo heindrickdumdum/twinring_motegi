@@ -1,132 +1,7 @@
 <%
-  title = 'Twin Ring Motegi'
-
-  featureContent = [
-    {
-      'category': 'EVENT',
-      'image': mix('/assets/images/top/feature/img1.jpg'),
-      'heading': '「わくわくの森 春フェスタ」3/20～開催',
-      'date': '2020.3.20～2020.4.5',
-      'link': '#'
-    },
-    {
-      'category': 'NEWS',
-      'image': mix('/assets/images/top/feature/img2.jpg'),
-      'heading': '家族みんなで団らん「スーペリアファミリールーム」新登場',
-      'date': '2020.3.13~',
-      'link': '#'
-    },
-    {
-      'category': 'NEWS',
-      'image': mix('/assets/images/top/feature/img3.jpg'),
-      'heading': '体験！×発見！×絶景！「森のファミリーウォーク TEKUTEKU」新登場',
-      'date': '2020.3.7 オープン',
-      'link': '#'
-    }
-  ]
-
-  parkmapButtons = [
-    {
-      'text': 'ハローウッズ',
-      'link': '#'
-    },
-    {
-      'text': 'モビパーク',
-      'link': '#'
-    },
-    {
-      'text': '森と星空のキャンプヴィレッジ',
-      'link': '#'
-    },
-    {
-      'text': 'ホテルツインリンク',
-      'link': '#'
-    },
-    {
-      'text': 'モータースポーツ',
-      'link': '#'
-    },
-    {
-      'text': 'ホンダコレクションホール',
-      'link': '#'
-    },
-    {
-      'text': '安全運転スクール',
-      'link': '#'
-    }
-  ]
-
-
-  howToContent = [
-    {
-      'image': mix('/assets/images/top/how-to/img1.jpg'),
-      'heading': '0歳〜6歳のお子様とのお楽しみ方',
-      'buttonText': 'モデルコース',
-      'buttonLink': '#'
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img2.jpg'),
-      'heading': '小学校低学年のお子様とのお楽しみ方',
-      'buttonText': 'モデルコース',
-      'buttonLink': '#'
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img3.jpg'),
-      'heading': '小学校高学年のお子様とのお楽しみ方',
-      'buttonText': 'モデルコース',
-      'buttonLink': '#'
-    }
-  ]
-
-  informationContent = [
-    [
-      {
-        'text': '9月の「森あそび」・「ものづくり」プログラムを更新',
-        'category': 'アトラクション・アクティビティ',
-        'time': '2019.01.10'
-      },
-      {
-        'text': '夏のおすすめグッズ情報を更新しました',
-        'category': 'グッズ＆ショップ',
-        'time': '2019.01.10'
-      },
-      {
-        'text': '夏季期間（7/1〜8/31）の営業時間について',
-        'category': 'お知らせ',
-        'time': '2019.01.10'
-      },
-      {
-        'text': 'モトレーサー タイムアタック選手権2019開催！',
-        'category': 'モータースポーツ',
-        'time': '2019.01.10'
-      }
-    ],
-    [
-      {
-        'text': '新アトラクション「巨大ネットの森 SUMIKA」オープン！',
-        'category': 'アトラクション・アクティビティ',
-        'time': '2019.01.10'
-      },
-      {
-        'text': 'HELLO WOODSのフォトギャラリー更新',
-        'category': 'お知らせ',
-        'time': '2019.01.10'
-      },
-      {
-        'text': 'ディナーセットメニューがリニューアル！',
-        'category': 'レストラン',
-        'time': '2019.01.10'
-      },
-      {
-        'text': 'ツインリンクもてぎ 花火の祭典“冬”のご予約開始',
-        'category': 'ホテル・キャンプ',
-        'time': '2019.01.10'
-      }
-    ]
-  ]
-
+  var title = 'Twin Ring Motegi';
 %>
-
+<% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
 <div class="mv">
@@ -184,15 +59,15 @@
     <div class="l-container">
       <ul class="feature-list">
         <%
-          featureContent.forEach(item => {
+          getData().data.featureContent.forEach( featureItem => {
         %>
         <li class="feature-item">
           <%- include('/partials/article', {
-            'category': item.category,
-            'image': item.image,
-            'heading': item.heading,
-            'date': item.date,
-            'link': item.link
+            category: featureItem.category,
+            image: featureItem.image,
+            heading: featureItem.heading,
+            date: featureItem.date,
+            link: featureItem.link
           }) %>
         </li>
         <% }) %>
@@ -205,10 +80,10 @@
   <div class="parkmap">
     <div class="l-container parkmap-container">
       <%- include('/partials/heading', {
-        'modifier': 'heading-wrap-parkmap',
-        'text': 'Park Map',
-        'subtextvg': 'parkmap-subtext',
-        'altSubtext': '',
+        modifier: 'heading-wrap-parkmap',
+        text: 'Park Map',
+        subtextvg: 'parkmap-subtext',
+        altSubtext: '',
       }) %>
 
 
@@ -216,7 +91,7 @@
         <div class="parkmap-image">
           <ul class="parkmap-image-list">
             <%
-              parkmapButtons.forEach( button => {
+              getData().data.parkmapButtons.forEach( button => {
             %>
             <li class="parkmap-image-item js-parkmap-number">
               <a href="<%- button.link %>"></a>
@@ -227,7 +102,7 @@
         <div class="parkmap-right">
           <ul class="parkmap-list">
             <%
-              parkmapButtons.forEach( button => {
+              getData().data.parkmapButtons.forEach( button => {
             %>
             <li class="parkmap-item js-parkmap-button">
               <a class="parkmap-link" href="<%- button.link %>"><%- button.text %>
@@ -241,9 +116,9 @@
             <% }) %>
             <li class="parkmap-item parkmap-item-last">
               <%- include('/partials/button', {
-                'modifier': 'button-parkmap',
-                'text': 'エリア・施設一覧を見る',
-                'link': '#'
+                modifier: 'button-parkmap',
+                text: 'エリア・施設一覧を見る',
+                link: '#'
               }) %>
             </li>
           </ul>
@@ -278,22 +153,22 @@
 <section class="l-how-to l-container">
   <div class="how-to">
     <%- include('/partials/heading', {
-      'modifier': 'heading-wrap-how-to heading-wrap-center',
-      'text': 'How to Enjoy',
-      'subtextvg': 'how-to-subtext',
-      'altSubtext': '',
+      modifier: 'heading-wrap-how-to heading-wrap-center',
+      text: 'How to Enjoy',
+      subtextvg: 'how-to-subtext',
+      altSubtext: '',
     }) %>
 
     <ul class="feature-list feature-list-no-design">
       <%
-        howToContent.forEach(item => {
+        getData().data.howToContent.forEach( howToItem => {
       %>
       <li class="feature-item">
         <%- include('/partials/article-no-design', {
-          'image': item.image,
-          'heading': item.heading,
-          'buttonText': item.buttonText,
-          'buttonLink': item.buttonLink,
+          image: howToItem.image,
+          heading: howToItem.heading,
+          buttonText: howToItem.buttonText,
+          buttonLink: howToItem.buttonLink,
         }) %>
       </li>
       <% }) %>
@@ -304,21 +179,21 @@
 <section class="information">
   <div class="l-container information-container">
     <%- include('/partials/heading', {
-      'modifier': '',
-      'text': 'Information',
-      'subtextvg': 'information-subtext',
-      'altSubtext': '',
+      modifier: '',
+      text: 'Information',
+      subtextvg: 'information-subtext',
+      altSubtext: '',
     }) %>
 
     <%- include('/partials/post', {
-      'postContent': informationContent,
+      postContent: getData().data.informationContent,
     }) -%>
 
     <div class="information-button">
       <%- include('/partials/button', {
-        'modifier': '',
-        'text': 'もっと見る',
-        'link': '#'
+        modifier: '',
+        text: 'もっと見る',
+        link: '#'
       }) %>
     </div>
   </div>

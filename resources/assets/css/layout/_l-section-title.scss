@@ -1,3 +1,8 @@
 .l-section-title {
   text-align: center;
 }
+
+.l-section-title-adventure {
+  position: relative;
+  z-index: $z-min + 2;
+}

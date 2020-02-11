@@ -1,26 +1,26 @@
-.sumika-video {
+.youtube-video {
   text-align: center;
 }
 
-.sumika-video-content {
+.youtube-video-content {
   margin: 0 -25px;
 }
 
-.sumika-video-list {
+.youtube-video-list {
   margin-top: 47px;
 }
 
-.sumika-video-item {
+.youtube-video-item {
   padding: 0 20px;
 }
 
-.sumika-video-wrapper {
+.youtube-video-wrapper {
   background: url(#{$image-path}frame.png) no-repeat center top;
   background-size: 100% 100%;
   padding: 15px;
 }
 
-.sumika-video-inner {
+.youtube-video-inner {
   position: relative;
   height: 0;
   padding-bottom: 49.25%; /* 16:9 */
@@ -37,7 +37,7 @@
   }
 }
 
-.sumika-video-description {
+.youtube-video-description {
   display: block;
   font-size: 20px;
   line-height: 1.731;

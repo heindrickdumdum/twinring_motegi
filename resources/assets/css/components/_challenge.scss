@@ -1,18 +1,13 @@
-.mobipark-challenge {
+.challenge {
   margin-top: 53px;
   background-image: url(../images/mobipark/challenge-bg.png);
   background-repeat: no-repeat;
   background-position: right center;
   background-size: contain;
 
-  .mobipark-container {
+  .row {
     display: flex;
     flex-wrap: nowrap;
-  }
-
-  .heading-text {
-    max-width: 584px;
-    width: 100%;
   }
 
   .desc {

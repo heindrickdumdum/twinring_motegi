@@ -58,36 +58,3 @@
   margin-top: 34px;
 }
 
-
-//HELLOWOODS MODIFIER
-.hellowoods-wrapper {
-  .section-image {
-    &::after {
-      content: "";
-      width: 330px;
-      height: 282px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -100px;
-      background: url(#{$image-path}hellowoods/explore-logo-bg.png) no-repeat;
-      background-size: contain;
-      margin: auto;
-    }
-    
-    
-  }
-  .section-contents {
-    &::before {
-      max-width: 80%;
-      right: 0;
-      margin: auto;
-    }
-
-    .section-image-logo {
-      position: relative;
-      margin-top: -30px;
-      top: auto;
-    }
-  }
-}

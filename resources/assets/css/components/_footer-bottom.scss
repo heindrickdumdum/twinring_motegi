@@ -35,12 +35,21 @@
   display: flex;
   justify-content: space-between;
   margin-top: 31px;
+
+  @include max-screen($breakpoint-mobile) {
+    flex-direction: column-reverse;
+  }
 }
 
 .footer-bottom-copyright {
   font-size: 15px;
   line-height: 1.7;
   letter-spacing: 0.087em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+    letter-spacing: 0.11em;
+  }
 }
 
 .footer-bottom-logos {

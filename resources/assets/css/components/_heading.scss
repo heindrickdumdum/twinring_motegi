@@ -125,7 +125,7 @@
   }
 }
 
-//MODIFIER DOKIDOKI
+// modifier dokidoki mobipark
 .dokidoki, 
 .mobipark {
   .heading-main-title {
@@ -146,6 +146,7 @@
       font-size: 36px;
       letter-spacing: 0.06em;
       font-family: $font-holland;
+      font-weight: bold;
     }
 
     .heading-subtext {
@@ -166,6 +167,7 @@
       letter-spacing: 0.06em;
       font-family: $font-holland;
       font-weight: 600;
+      font-weight: bold;
     }
   
     .heading-subtext {
@@ -185,7 +187,7 @@
       font-size: 36px;
       letter-spacing: 0.06em;
       font-family: $font-holland;
-      font-weight: 600;
+      font-weight: bold;
     }
   
     .heading-subtext {
@@ -239,3 +241,4 @@
     }
   }
 }
+// end modifier dokidoki mobipark

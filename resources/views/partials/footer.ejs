@@ -1,6 +1,6 @@
 <footer class="footer">
 
-  <nav class="l-container">
+  <nav class="l-container footer-bottom-nav">
     <ul class="footer-top-nav-list">
       <%
         getData().data.footerTopNav.forEach( topLink => {
@@ -17,7 +17,7 @@
     </ul>
   </nav>
 
-  <div class="footer-top-links">
+  <div class="footer-top-links u-show-pc">
     <div class="l-container">
       <%- include('/partials/footer-top-links') -%>
     </div>
@@ -51,6 +51,9 @@
           <small>(c) Mobilityland Corporation All Rights Reserved.
                 <br>Kochira (Kochira family) is an original character of MOBILITYLAND designed by Mr. Osamu Tezuka. (c)TEZUKA PRODUCTIONS</small>
         </p>
+        <div class="footer-bottom-name u-show-sp">
+          <img class="footer-bottom-name-text" src="<%= mix('/assets/images/footer-name-sp.png') %>" alt="">
+        </div>
         <ul class="footer-bottom-logos">
           <li>
             <img src="<%= mix('/assets/images/suzuka-logo.png') %>" alt="Suzuka">

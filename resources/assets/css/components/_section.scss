@@ -8,6 +8,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    // height: 204px;
+    // padding-top: 43%;
+    padding-top: 32%;
+    height: auto;
+  }
 }
 
 .section-image-logo {
@@ -18,14 +25,29 @@
   left: 0;
   right: 0;
 
+  @include max-screen($breakpoint-mobile) {
+    top: -51px;
+    width: 128px;
+  }
+
   &.section-image-logo-twinring {
     width: 314px;
     top: 50%;
     transform: translateY(-50%);
+
+    @include max-screen($breakpoint-mobile) {
+      width: 166px;
+      top: 45%;
+    }
   }
 
   &.section-image-logo-hotel-twin {
     top: 76px;
+
+    @include max-screen($breakpoint-mobile) {
+      top: 29px;
+      width: 164px;
+    }
   }
 }
 
@@ -34,6 +56,11 @@
   padding: 33px 0;
   position: relative;
   text-align: center;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 24px 0;
+    margin-top: -21px;
+  }
 
   &:before {
     content: '';
@@ -52,6 +79,12 @@
   letter-spacing: 0.19em;
   position: relative;
   z-index: $z-min;
+
+  @include max-screen($breakpoint-mobile) {
+    text-align: left;
+    font-size: 12px;
+    padding: 0 28px;
+  }
 }
 
 .section-button {
@@ -74,8 +107,8 @@
       background-size: contain;
       margin: auto;
     }
-    
-    
+
+
   }
   .section-contents {
     &::before {

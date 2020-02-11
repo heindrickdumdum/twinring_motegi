@@ -44,6 +44,10 @@
   color: $color-seaweed;
   line-height: 1.67;
   letter-spacing: 0.03em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 13px;
+  }
 }
 
 .article-image {

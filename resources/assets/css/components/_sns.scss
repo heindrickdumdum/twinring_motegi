@@ -9,6 +9,11 @@
   height: 24px;
   margin: 0 23px;
 
+  @include max-screen($breakpoint-mobile) {
+    width: 35px;
+    margin: 0 16px;
+  }
+
   svg {
     width: 100%;
     height: 100%;
@@ -17,9 +22,19 @@
   &.sns-item-twitter {
     width: 42px;
     height: 39px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 43px;
+      height: 43px;
+    }
   }
 
   &.sns-item-youtube {
     height: 26px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 31px;
+      height: 32px;
+    }
   }
 }

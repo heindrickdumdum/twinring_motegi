@@ -1,5 +1,9 @@
 .heading {
   margin: 40px 0;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 24px 0;
+  }
 }
 
 .heading-text {
@@ -10,12 +14,26 @@
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.1em;
   font-size: 36px;
+
+  @include max-screen($breakpoint-mobile) {
+    letter-spacing: 0.01em;
+    font-size: 24px;
+    text-align: center;
+    background: linear-gradient(to bottom, #027cc4 0%, #09a045 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .heading-subtext {
   display: inline-block;
   // margin: 17px 0 0 10px;
   height: 36px;
+
+  @include max-screen($breakpoint-mobile) {
+    height: 22px;
+    display: block;
+  }
 
   svg {
     margin-top: 15px;
@@ -126,7 +144,7 @@
 }
 
 //MODIFIER DOKIDOKI
-.dokidoki, 
+.dokidoki,
 .mobipark {
   .heading-main-title {
     .heading-text {
@@ -167,7 +185,7 @@
       font-family: $font-holland;
       font-weight: 600;
     }
-  
+
     .heading-subtext {
       width: 100%;
     }
@@ -187,7 +205,7 @@
       font-family: $font-holland;
       font-weight: 600;
     }
-  
+
     .heading-subtext {
       width: 100%;
       margin-top: 39px;
@@ -239,5 +257,3 @@
     }
   }
 }
-
-

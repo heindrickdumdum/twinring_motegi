@@ -172,27 +172,8 @@ dataWorkshop = [
   }
 ]
 
-dataRecommendation = [
-{
-  'image': mix('http://via.placeholder.com/480x280'),
-  'heading': '巨大ネットの森SUMIKA',
-  'buttonText': 'モデルコース',
-  'buttonLink': '#',
-},
-{
-  'image': mix('http://via.placeholder.com/480x280'),
-  'heading': '森感覚アスレチックDOKIDOKI',
-  'buttonText': 'モデルコース',
-  'buttonLink': '#',
-},
-{
-  'image': mix('http://via.placeholder.com/480x280'),
-  'heading': '迷宮森殿ITADAKI',
-  'buttonText': 'モデルコース',
-  'buttonLink': '#',
-},
-]
 %>
+<% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
 <div class="subpage car-bike">
@@ -227,16 +208,14 @@ dataRecommendation = [
     </div>
   </div>
 
-  <section class="subpage-how-to-enjoy">
-    <div class="subpage-how-to-enjoy-inner">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
-          'modifier': 'heading-dokidoki',
-          'text': mix('/assets/images/car-and-bike/how-to-enjoy.png'),
-          'alt': '',
-          'subtext': '',
-          'altSubtext': ''
-        }) %>
+  <section class="subpage-section subpage-section-howto">
+    <div class="subpage-section-howto-inner">
+      <div class="heading-wrap heading-main heading-main-carbike">
+        <h2 class="heading">
+          <span class="heading-texts">
+            <img src="<%= mix('/assets/images/car-and-bike/how-to-enjoy.png') %>" alt="acro-x">
+          </span>
+        </h2>
       </div>
 
       <div class="how-to-content">
@@ -299,12 +278,12 @@ dataRecommendation = [
     </div>
   </section>
 
-  <section class="car-bike-attraction-cat">
+  <section class="subpage-section subpage-section-cat-attraction">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-wrap-how-to heading-wrap-center',
-        'text': mix('/assets/images/car-and-bike/attraction-category.png'),
-        'alt': 'How to Enjoy',
+        'modifier': 'heading-gradient-tobottom heading-attraction',
+        'text': ' Attraction’s Category',
+        'alt' : '',
         'subtextvg': 'car-and-bike-attraction-categories',
         'altSubtext': '',
       }) %>
@@ -331,13 +310,13 @@ dataRecommendation = [
 
   </section>
 
-  <section class="car-bike-attraction-car">
+  <section class="subpage-section subpage-section-carbike">
     <div class="l-section-title">
       <%- include('/partials/heading', {
         'modifier': 'heading-car-attraction',
-        'text': mix('/assets/images/car-and-bike/cars-attraction.png'),
-        'alt': 'Cars Category',
-        'subtextvg': '',
+        'text': '',
+        'alt': '',
+        'subtextvg': 'car-and-bike-car-title',
         'altSubtext': '',
       }) %>
     </div>
@@ -382,13 +361,13 @@ dataRecommendation = [
     </ul>
   </section>
 
-  <section class="car-bike-attraction-bike">
+  <section class="subpage-section subpage-section-carbike">
     <div class="l-section-title">
       <%- include('/partials/heading', {
         'modifier': 'heading-bike-attraction',
-        'text': mix('/assets/images/car-and-bike/bike-attraction.png'),
-        'alt': 'Cars Category',
-        'subtextvg': '',
+        'text': '',
+        'alt': '',
+        'subtextvg': 'car-and-bike-bike-title',
         'altSubtext': '',
       }) %>
     </div>
@@ -433,13 +412,13 @@ dataRecommendation = [
     </ul>
   </section>
 
-  <section class="car-bike-attraction-workshop">
+  <section class="subpage-section subpage-section-carbike">
     <div class="l-section-title">
       <%- include('/partials/heading', {
         'modifier': 'heading-workshop-attraction',
-        'text': mix('/assets/images/car-and-bike/workshop-attraction.png'),
-        'alt': 'Cars Category',
-        'subtextvg': '',
+        'text': '',
+        'alt': '',
+        'subtextvg': 'car-and-bike-carworkshop-title',
         'altSubtext': '',
       }) %>
     </div>
@@ -485,26 +464,26 @@ dataRecommendation = [
 
   </section>
 
-  <section class="subpage-recommendation">
+  <section class="subpage-section subpage-recommendation">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-recommendation',
-        'text': mix('/assets/images/recommendation.png'),
-        'alt': 'recommendation',
+        'modifier': 'heading-gradient-tobottom heading-recommendation',
+        'text': 'Recommendation',
+        'alt': '',
         'altSubtext': '',
         'subtextvg': 'recommendation-subtext'
       }) %>
     </div>
 
-    <div class="l-container">
-      <ul class="feature-list feature-list-no-design">
-        <% recommend.forEach(item => { %>
-        <li class="feature-item">
+    <div class="swiper-container slider">
+      <ul class="swiper-wrapper slider-wrapper">
+        <% getData().data.recommend.forEach(item => { %>
+        <li class="swiper-slide slider-item">
           <%- include('/partials/article-no-design', {
-            'image': item.image,
-            'heading': item.heading,
-            'buttonLink': item.buttonLink,
-            'buttonText': 'モビパーク'
+            image: item.image,
+            heading: item.heading,
+            buttonLink: item.buttonLink,
+            buttonText: 'モビパーク'
           }) %>
         </li>
         <% }) %>
@@ -512,11 +491,11 @@ dataRecommendation = [
     </div>
   </section>
 
-  <section class="subpage-pickup">
+  <section class="subpage-section subpage-pickup">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-pickup',
-        'text': mix('/assets/images/pickup.png'),
+        'modifier': 'heading-gradient-tobottom heading-pickup',
+        'text': 'PickUp',
         'alt': 'pickup',
         'altSubtext': '',
         'subtextvg': 'pickup'

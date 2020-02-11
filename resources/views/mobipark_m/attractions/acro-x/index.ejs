@@ -3,58 +3,10 @@
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
 
-<%
-  recommend = [
-    {
-      'image': mix('/assets/images/top/how-to/img1.jpg'),
-      'heading': '巨大ネットの森SUMIKA',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img2.jpg'),
-      'heading': '森感覚アスレチックDOKIDOKI',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img3.jpg'),
-      'heading': '迷宮森殿ITADAKI',
-      'buttonLink': '#',
-    }
-  ]
-%>
-
-<%
-  pickup = [
-    {
-      'image': mix('/assets/images/dokidoki/feature/img1.png'),
-      'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-      },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img2.png'),
-      'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img3.png'),
-      'heading': 'モトレーサー タイムアタック選手権2019予選',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img4.png'),
-      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
-      'date': '2019.11.02 〜 2019.11.03',
-      'link': '#',
-    }
-  ]
-%>
-
+<% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
-<div class="subpage subpage-withbottombanner subpage-acro-x">
+<div class="subpage subpage-acro-x">
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
@@ -64,7 +16,7 @@
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-wrap-subpage heading-wrap-acro-x">
+    <div class="heading-wrap heading-main heading-main-acro-x">
       <h2 class="heading">
         <span class="heading-texts">
           <img src="<%= mix('/assets/images/acro-x/acro-x-title.png') %>" alt="acro-x">
@@ -133,13 +85,13 @@
     </table>
   </div>
 
-  <section class="subpage-how-to-enjoy">
-    <div class="subpage-how-to-enjoy-inner">
+  <section class="subpage-section subpage-section-howto">
+    <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-points-acro-x',
-          'text': mix('/assets/images/acro-x/how-to-enjoy.png'),
-          'alt': 'アクロエックスを楽しむポイント',
+          'modifier': 'heading-gradient-tobottom heading-howto-acrox',
+          'text': 'How to Enjoy',
+          'alt': '',
           'subtextvg': 'acro-x-enjoy',
           'altSubtext': '',
         }) %>
@@ -223,7 +175,7 @@
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
             'modifier': 'heading-net-acro-x',
-            'text': mix('/assets/images/acro-x/acro-x-cta.png'),
+            'text': 'アクロエックスをもっと楽しむ',
             'alt': 'アクロエックスをもっと楽しむ',
             'altSubtext': '',
             'subtextvg': ''
@@ -266,26 +218,26 @@
     </div>
   </div>
 
-  <section class="subpage-recommendation">
+  <section class="subpage-section subpage-section-recommendation">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-recommendation',
-        'text': mix('/assets/images/recommendation.png'),
+        'modifier': 'heading-gradient-tobottom heading-recommendation',
+        'text': 'Recommendation',
         'alt': 'recommendation',
         'altSubtext': '',
         'subtextvg': 'recommendation-subtext'
       }) %>
     </div>
 
-    <div class="l-container">
-      <ul class="feature-list feature-list-no-design">
-        <% recommend.forEach(item => { %>
-        <li class="feature-item">
+    <div class="swiper-container slider">
+      <ul class="swiper-wrapper slider-wrapper">
+        <% getData().data.recommend.forEach(item => { %>
+        <li class="swiper-slide slider-item">
           <%- include('/partials/article-no-design', {
-            'image': item.image,
-            'heading': item.heading,
-            'buttonLink': item.buttonLink,
-            'buttonText': 'モビパーク'
+            image: item.image,
+            heading: item.heading,
+            buttonLink: item.buttonLink,
+            buttonText: 'モビパーク'
           }) %>
         </li>
         <% }) %>
@@ -293,11 +245,11 @@
     </div>
   </section>
 
-  <section class="subpage-pickup">
+  <section class="subpage-section subpage-section-pickup">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-pickup',
-        'text': mix('/assets/images/pickup.png'),
+        'modifier': 'heading-gradient-tobottom heading-pickup',
+        'text': 'PickUp',
         'alt': 'pickup',
         'altSubtext': '',
         'subtextvg': 'pickup'

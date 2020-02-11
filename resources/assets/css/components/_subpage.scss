@@ -40,6 +40,7 @@
   position: relative;
   max-width: 1060px;
   margin: 0 auto 120px;
+  padding: 0 20px;
   width: 100%;
 
   > p {
@@ -72,25 +73,73 @@
 .subpage-banner {
   width: 100%;
   margin-bottom: 40px;
+
+  iframe {
+    width: 100%;
+  }
 }
 
-.subpage-how-to-enjoy {
+.subpage-section {
+  position: relative;
+  width: 100%;
+}
+
+.subpage-section-inner {
+  position: relative;
+  max-width: 1060px;
+  margin: 0 auto 120px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.subpage-button {
+  max-width: 669px;
+  height: 137px;
+  margin: -20px auto 135px;
+}
+
+.subpage-button-link {
+  color: #fff;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  span {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+}
+
+
+//modifier
+
+.subpage-section-howto {
   margin-bottom: 103px;
 }
 
-.subpage-how-to-enjoy-inner {
+.subpage-section-howto-inner {
   max-width: 1045px;
   margin: 0 auto;
 }
 
-
-.subpage-recommendation {
+.subpage-section-recommendation {
   margin-bottom: 65px;
 }
 
-//modifier
-.subpage-withbanner {
-  .subpage-recommendation {
-    margin-top: 240px;
-  }
+.subpage-section-cat-attraction {
+  max-width: 905px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.subpage-section-carbike {
+  max-width: 1060px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 20px;
 }

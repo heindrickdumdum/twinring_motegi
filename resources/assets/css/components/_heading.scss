@@ -2,7 +2,7 @@
   display: block;
   font-family: $font-holland;
   font-size: 31px;
-  background: linear-gradient(to right, #1cc763 0%, #34b0e7 100%);
+  background: linear-gradient(to right, #027cc3 10%, #099f48 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -19,6 +19,28 @@
 }
 
 .heading-wrap {
+  &.heading-gradient-tobottom {
+    .heading-text {
+      background: linear-gradient(to bottom, #027cc3 35%, #099f48 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &.heading-gradient-toright {
+    .heading-text {
+      background: linear-gradient(to right, #027cc3 0%, #099f48 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+    }
+  }
+
   &.heading-wrap-center {
     text-align: center;
 
@@ -93,15 +115,6 @@
     }
   }
 
-  &.heading-net-acro-x {
-    margin-bottom: 40px;
-
-    .heading-texts {
-      margin: 0 auto;
-      text-align: center;
-    }
-  }
-
   &.heading-sumika-faq {
     margin-bottom: 40px;
     text-align: center;
@@ -116,6 +129,199 @@
       width: 104px;
       height: 43px;
       margin: 0 auto 24px;
+    }
+  }
+
+  &.heading-attraction {
+    .heading-subtext {
+      margin-top: 10px;
+      max-width: 489px;
+      width: 100%;
+    }
+  }
+
+  &.heading-recommendation {
+    margin-bottom: 37px;
+
+    .heading-subtext {
+      margin-top: 10px;
+      max-width: 435px;
+      width: 100%;
+    }
+  }
+
+  &.heading-pickup {
+    margin-bottom: 37px;
+    .heading-text {
+      letter-spacing: 0.05em;
+    }
+
+    .heading-subtext {
+      margin-top: 10px;
+      max-width: 367px;
+      width: 100%;
+    }
+  }
+
+  &.heading-main {
+    margin-bottom: 83px;
+
+    .heading {
+      max-width: 651px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &.heading-howto-acrox {
+    .heading-subtext {
+      max-width: 628px;
+      margin-bottom: 35px;
+      width: 100%;
+    }
+  }
+
+  &.heading-net-acro-x {
+    margin-top: 15px;
+    margin-bottom: 0;
+
+    .heading-text {
+      position: relative;
+      left: 6px;
+      letter-spacing: 0.16em;
+    }
+  }
+
+  &.heading-howto-bunbun {
+    margin-bottom: 35px;
+    .heading-subtext {
+      max-width: 560px;
+      width: 100%;
+    }
+  }
+
+  &.heading-main-carbike {
+
+    .heading {
+      margin-bottom: 65px;
+      max-width: 531px;
+    }
+  }
+
+  &.heading-car-attraction {
+    margin-bottom: 85px;
+
+    .heading-subtext {
+      max-width: 405px;
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  &.heading-bike-attraction {
+    margin-bottom: 85px;
+
+    .heading-subtext {
+      max-width: 497px;
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  &.heading-workshop-attraction {
+    margin-bottom: 85px;
+
+    .heading-subtext {
+      max-width: 407px;
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  &.heading-howto-debden {
+    margin-bottom: 35px;
+    .heading-subtext {
+      max-width: 669px;
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  &.heading-main-dokidoki {
+    .heading {
+      max-width: 497px;
+      margin: 0 auto;
+    }
+  }
+
+  &.heading-howto-dokidoki {
+    margin-bottom: 40px;
+
+    .heading-subtext {
+      max-width: 545px;
+      width: 100%;
+    }
+  }
+
+  &.heading-dokidoki-forest {
+    margin-bottom: 55px;
+
+    .heading-subtext {
+      max-width: 659px;
+      margin-top: 35px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-forest-driving {
+    margin-bottom: 35px;
+    .heading-subtext {
+      max-width: 539px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-tsubasa {
+    margin-bottom: 50px;
+    .heading-subtext {
+      max-width: 206px;
+      margin-top: 23px;
+      width: 100%;
+    }
+  }
+
+  &.heading-faq-tsubasa {
+    margin-bottom: 30px;
+    text-align: center;
+
+    .heading-subtext {
+      margin-top: 23px;
+      max-width: 284px;
+      width: 100%;
+    }
+  }
+
+  &.heading-comparison {
+    text-align: center;
+
+    .heading-subtext {
+      max-width: 487px;
+      width: 100%;
+    }
+  }
+
+  &.heading-main-wild-racer {
+    .heading-text {
+      max-width: 505px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-wildracer {
+    margin-bottom: 35px;
+    .heading-subtext {
+      max-width: 626px;
+      width: 100%;
     }
   }
 }

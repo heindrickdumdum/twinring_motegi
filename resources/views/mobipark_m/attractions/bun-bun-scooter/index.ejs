@@ -198,60 +198,7 @@
     </div>
   </div>
 
-  <section class="subpage-section subpage-section-recommendation">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        'modifier': 'heading-gradient-tobottom heading-recommendation',
-        'text': 'Recommendation',
-        'alt': 'recommendation',
-        'altSubtext': '',
-        'subtextvg': 'recommendation-subtext'
-      }) %>
-    </div>
-
-    <div class="swiper-container slider">
-      <ul class="swiper-wrapper slider-wrapper">
-        <% getData().data.recommend.forEach(item => { %>
-        <li class="swiper-slide slider-item">
-          <%- include('/partials/article-no-design', {
-            image: item.image,
-            heading: item.heading,
-            buttonLink: item.buttonLink,
-            buttonText: 'モビパーク'
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
-  </section>
-
-  <section class="subpage-section subpage-section-pickup">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        'modifier': 'heading-gradient-tobottom heading-pickup',
-        'text': 'PickUp',
-        'alt': 'pickup',
-        'altSubtext': '',
-        'subtextvg': 'pickup'
-      }) %>
-    </div>
-
-    <div class="l-container">
-      <ul class="feature-list">
-        <% pickup.forEach(item => { %>
-        <li class="feature-item">
-          <%- include('/partials/article', {
-            'category': item.category,
-            'image': item.image,
-            'heading': item.heading,
-            'date': item.date,
-            'link': item.link
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
-  </section>
+  <!-- will add later -->
 
   <!-- END BOTTOM -->
 </div>

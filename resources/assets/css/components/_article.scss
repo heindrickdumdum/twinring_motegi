@@ -57,6 +57,10 @@
   background-size: cover;
   position: relative;
 
+  @include max-screen($breakpoint-mobile) {
+    height: 177px;
+  }
+
   &::before {
     content: '';
     background-image: url(#{$image-path}article/bg.png);
@@ -145,6 +149,10 @@
   background-size: contain;
   color: $color-crusoe;
   z-index: $z-min;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 14px;
+  }
 
   &.article-category-news {
     background-image: url(#{$image-path}article/category-bg2.png);

@@ -107,6 +107,15 @@
   &.heading-wrap-parkmap {
     .heading-subtext {
       width: 750px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 400px;
+        height: 70px;
+        display: inline-block;
+        text-align: left;
+        margin-left: -9px;
+        margin-top: 11px;
+      }
     }
   }
 

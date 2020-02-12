@@ -4,6 +4,14 @@
   font-size: 0;
   letter-spacing: 0;
 
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 15px;
+  }
+
   &:not(:last-child) {
     &.table-subpage {
       margin-bottom: 55px;
@@ -13,27 +21,38 @@
 
 .table-head {
   background-color: #f7f7f7;
-  width: 220px;
+  width: 93px;
   padding-top: 21px;
   padding-bottom: 21px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    width: 220px;
+  }
 }
 
 .table-col {
-  width: calc(100% - 220px);
-  line-height: 2.15;
+  width: calc(100% - 93px);
+
+
   letter-spacing: 0.18em;
   padding-top: 15px;
   padding-bottom: 15px;
-}
 
+  @include min-screen($breakpoint-mobile + 1) {
+    width: calc(100% - 220px);
+  }
+}
 
 .table-head, .table-col {
   position: relative;
-  font-size: 15px;
-  font-weight: 700;
-  text-align: left;
-  padding: 17px 40px;
+  padding: 10px 13px;
   vertical-align: top;
+  min-height: 32px;
+  line-height: 2.15;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 17px 40px;
+  }
 
   &:before {
     position: absolute;
@@ -58,7 +77,6 @@
     width: calc(100% - 220px);
   }
 }
-
 
 .table-row {
   width: 100%;
@@ -92,13 +110,12 @@
   font-size: 15px;
   color: $base-font-color;
   line-height: 2;
-  text-align: left;  
+  text-align: left;
   letter-spacing: 0.160em;
 
   @include max-screen($breakpoint-mobile) {
     margin-bottom: 30px;
     font-size: 24px;
-    color: rgb(51, 51, 51);  
+    color: rgb(51, 51, 51);
   }
 }
-

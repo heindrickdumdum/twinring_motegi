@@ -57,26 +57,37 @@
 
 .call-to-action-dot {
   position: absolute;
+  img {
+    width: 100%;
+  }
 }
 
 .call-to-action-dot-1 {
   left: -40px;
   bottom: -30px;
+  max-width: 192px;
+  width: 100%;
 }
 
 .call-to-action-dot-2 {
   top: -19px;
   left: 128px;
+  max-width: 116px;
+  width: 100%;
 }
 
 .call-to-action-dot-3 {
   bottom: -30px;
   right: 135px;
+  max-width: 116px;
+  width: 100%;
 }
 
 .call-to-action-dot-4 {
   top: -28px;
   right: -27px;
+  max-width: 192px;
+  width: 100%;
 }
 
 //MODIFIER DOKIDOKI

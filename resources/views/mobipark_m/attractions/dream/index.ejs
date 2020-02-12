@@ -6,20 +6,26 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
-<div class="subpage subpage-bunbun">
+<div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
         <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dream/mv-img.jpg') %>);"></div>
       </li>
     </ul>
+
+    <h2 class="mv-heading mv-heading-subpage">
+      <span class="mv-heading-text">
+        ドリームカート
+      </span>
+    </h2>
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-bunbun">
+    <div class="heading-wrap heading-main heading-main-dream">
       <h2 class="heading">
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/dream/subpage-title.png') %>" alt="">
+          <img src="<%= mix('/assets/images/dream/dream-color-title.png') %>" alt="">
         </span>
       </h2>
     </div>
@@ -89,11 +95,11 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom heading-howto-dream',
-          'text': 'How to Enjoy',
-          'alt': 'ぶんぶんスクーターを楽しむポイント',
-          'subtextvg': 'dream-subtext',
-          'altSubtext': '',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-dream',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'dream-enjoy-point-title',
+          altSubtext: '',
         }) %>
       </div>
 
@@ -172,11 +178,10 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            'modifier': 'heading-banner-more',
-            'text': 'ドリームカートをもっと楽しむ',
-            'alt': '',
-            'altSubtext': '',
-            'subtext': ''
+            modifier: 'heading-banner-more',
+            imgPath: mix('/assets/images/dream/dream-enjoy-more-title.png'),
+            alt: 'ドリームカートをもっと楽しむ',
+            altSubtext: ''
           }) %>
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
@@ -185,8 +190,8 @@
           </div>
           <div class="l-button l-button-call-to-action">
             <%- include('/partials/button', {
-              'modifier': 'button-sumika',
-              'text': 'もっと見る',
+              modifier: 'button-sumika',
+              text: 'もっと見る',
               'link': '#'
             }) %>
           </div>
@@ -214,6 +219,10 @@
       </div>
     </div>
   </div>
+
+  <%- include('/partials/recommendation') -%>
+
+  <%- include('/partials/pickup') -%>
 
   <!-- END BOTTOM -->
 </div>

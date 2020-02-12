@@ -9,21 +9,21 @@
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.png') %>);"></div>
+        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.png') %>);"></div>
 
-        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/forest-driving/mobile-mv-img.png') %>);"></div>
+        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.png') %>);"></div>
       </li>
     </ul>
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-debden">
+    <div class="heading-wrap heading-main heading-main-subpage">
       <h2 class="heading">
         <span class="heading-texts u-show-pc">
-          <img src="<%= mix('/assets/images/forest-driving/forest-driving-title.png') %>" alt="forest-driving">
+          <img src="<%= mix('/assets/images/deb-den/osanpo-color-title.png') %>" alt="deb den">
         </span>
         <span class="heading-texts u-show-sp">
-          <img src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
+          <img src="<%= mix('/assets/images/deb-den/osanpo-color-title.png') %>" alt="deb den">
         </span>
       </h2>
     </div>
@@ -99,7 +99,7 @@
           'modifier': 'heading-gradient-tobottom heading-howto-debden',
           'text': 'How to Enjoy',
           'alt': 'おさんぽでんでんを楽しむポイント',
-          'subtextvg': 'deb-den-subtext',
+          'subtextvg': 'osanpo-enjpy-point-title',
           'altSubtext': '',
         }) %>
       </div>
@@ -180,7 +180,7 @@
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
             'modifier': 'heading-net-deb-den',
-            'text': 'おさんぽでんでんをもっと楽しむ',
+            'text': '<img src='+ mix('/assets/images/deb-den/osanpo-enjoy-more-title.png') +' alt="enjoy more">',
             'alt': 'アクロエックスをもっと楽しむ',
             'altSubtext': '',
             'subtextvg': ''
@@ -223,7 +223,60 @@
     </div>
   </div>
 
-  <!-- will add later -->
+  <section class="recommendation">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-recommend',
+        text: 'Recommendation',
+        altSubtext: '',
+        subtextvg: 'recommendation-title'
+      }) %>
+    </div>
+      <div class="swiper-container slider">
+        <ul class="swiper-wrapper slider-wrapper">
+          <% getData().data.recommend.forEach(item => { %>
+          <li class="swiper-slide slider-item">
+            <%- include('/partials/article-no-design', {
+              image: item.image,
+              heading: item.heading,
+              buttonLink: item.buttonLink,
+              buttonText: 'モビパーク'
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+  </section>
+  
+  <section class="pick-up">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-pickup',
+        text: 'Pick Up',
+        altSubtext: '',
+        subtextvg: 'pickup-event'
+      }) %>
+    </div>
+    
+    <div class="l-container">
+      <div class="pick-inner">
+        <ul class="pickup-list row">
+          <% getData().data.pickup.forEach(item => { %>
+          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
+            <%- include('/partials/article', {
+              category: item.category,
+              image: item.image,
+              heading: item.heading,
+              date: item.date,
+              link: item.link,
+              modifier: 'pickup-article'
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- END BOTTOM -->
 

@@ -26,13 +26,9 @@ export default function slider() {
 
     on: {
         resize: function() {
-            this.reInit();
+            this.params.observer = true;
         }
     }
-});
-
-mySwiper.addEventListener('resize', function () {
-    this.reInit();
 });
 
 }

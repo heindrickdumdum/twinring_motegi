@@ -5,6 +5,6 @@
 
   @include query($breakpoint-mobile) {
     width: 100%;
+    padding: 0 20px;
   }
 }
-

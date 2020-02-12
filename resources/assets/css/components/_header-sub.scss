@@ -25,16 +25,13 @@
 }
 
 .header-sub-content {
-  padding: 27px 38px 26px;
   width: calc(100% - 64px);
   position: absolute;
-  height: calc(100% - 68px);
+  height: calc(100% - 60px);
   left: 0;
   top: 2px;
   right: 0;
   margin: 0 auto;
-  background-color: $color-white;
-  border-radius: 0 0 10px 10px;
   overflow: auto;
   z-index: $z-min2;
 }
@@ -73,12 +70,18 @@
 
 }
 
+.header-sub-content-inner-wrap {
+  padding: 27px 38px 10px;
+  background-color: $color-white;
+  overflow: hidden;
+}
+
 .header-sub-inner {
   display: flex;
-  margin-top: 32px;
   margin-bottom: 30px;
 
-  &.header-sub-inner-attraction {
+  &.header-sub-inner-attraction,
+  &.header-sub-inner-restaurant {
     margin-bottom: -16px;
     position: relative;
   }
@@ -161,10 +164,21 @@
 
   &.header-sub-inner-block-right {
     flex-basis: 29.5%;
-    padding-left: 37px;
-    padding-right: 28px;
+    padding-left: 30px;
+    padding-right: 0;
     border-left: 1px solid rgba($color-mineshaft, .5);
     position: relative;
+  }
+
+  &.header-sub-inner-block-col2 {
+    flex-basis: 50%;
+    padding-left: 0;
+    padding-right: 30px;
+
+    &:last-of-type {
+      padding-left: 30px;
+      padding-right: 0;
+    }
   }
 }
 
@@ -195,6 +209,7 @@
 
 .header-sub-top-button {
   display: inline-block;
+  margin-bottom: 24px;
   padding: 0 34px 0 21px;
   font-size: 15px;
   font-weight: bold;
@@ -223,11 +238,6 @@
         transform: translateX(5px);
       }
     }
-  }
-
-  &.header-sub-top-button-right {
-    position: absolute;
-    top: -54px;
   }
 }
 
@@ -273,7 +283,7 @@
 
 .header-sub-image-item {
   flex: 1;
-  margin: 0 10px 27px;
+  margin: 0 10px 25px;
 }
 
 .header-sub-image {
@@ -299,6 +309,17 @@
     padding-right: 64px;
   }
 
+  &.header-sub-image-list-col2 {
+    .header-sub-image-item {
+      flex: none;
+      width: calc((100% / 2) - 20px);
+    }
+
+    .header-sub-image {
+      padding: 27.88% 0;
+    }
+  }
+
   &.header-sub-image-list-col5 {
     .header-sub-image-item {
       flex: none;
@@ -317,6 +338,16 @@
 
     &:not(:first-child) {
       padding-right: 163px;
+    }
+  }
+
+  &.header-sub-image-list-restaurant {
+    .header-sub-image {
+      padding: 17.5% 0;
+
+      &.header-sub-image-small {
+        padding: 29.5% 0;
+      }
     }
   }
 }
@@ -380,8 +411,8 @@
       flex-basis: 48.5%;
 
       .header-sub-image {
-        margin-bottom: 25px;
-        padding: 23% 0;
+        margin-bottom: 19px;
+        padding: 18% 0;
       }
     }
 

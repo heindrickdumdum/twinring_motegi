@@ -4,483 +4,486 @@
 %>
 <% include('./../partials/data/index') %>
 <%- include('./../partials/head', { title }) -%>
+<% pageId = 'sumika'; %>
 
-<div class="mv mv-inner">
-  <ul class="mv-list">
-    <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/sumika/sumika-mv.jpg')%>);"></div>
-    </li>
-  </ul>
-
-  <div class="l-container mv-container">
-    <h2 class="mv-heading">
-      <span class="mv-heading-texts">
-        Sumika Giant Net
-      </span>
-      <span class="mv-heading-subtexts">
-        <svg>
-          <title>巨大ネットの森SUMIKA</title>
-          <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-sumika-main-title') %>"></use>
-        </svg>
-      </span>
-    </h2>
-
-    <div class="mv-today">
-      <div class="mv-today-inner"></div>       
-      </div>
-    </div>
-  </div>
-</div>
-
-<section class="video-mv l-section">
-  <div class="l-container">
-      <div class="heading-wrap l-heading-main">
-        <h2 class="heading">
-          <span class="heading-texts">
-            <img src="<%= mix('/assets/images/sumika/samukia-heading.png') %>" alt="sumika">
-          </span>
-        </h2>
-      </div>
-
-    <!-- YOUTUBE -->
-    <div class="l-youtube">
-      <section class="youtube">
-        <div class="youtube-iframe-container">
-          <iframe width="100%" height="587" src="https://www.youtube.com/embed/6GUbJzXAcmA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </section>
-    </div>
-
-
-    <h3 class="table-heading">
-      <img src="<%- mix('/assets/images/dokidoki/attraction-title.png') %>" alt="title">
-    </h3>
-
-    <p class="table-subheading">
-      肉食動物や大きな鳥から小動物まで、あらゆる生きもの達の隠れ家となっている場所、それがすみか。<br>
-      ネットが張りめぐらされた「巨大ネットの森 SUMIKA」で逃げて、隠れて、生き延びよう！
-    </p>
-
-    <table class="table">
-      <tbody>
-        <tr class="table-row">
-          <th class="table-head">場所</th>
-          <td class="table-col">モビパーク内</td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">所要時間</th>
-          <td class="table-col">説明10分、遊ぶ時間30分の計40分（受付終了時間は営業終了の約1時間前）</td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">雨天の運行</th>
-          <td class="table-col">屋内施設となりますので、雨天時でもお楽しみいただけます。</td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">対象者</th>
-          <td class="table-col">3歳以上※1</td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">身長制限</th>
-          <td class="table-col">なし</td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">料金</th>
-          <td class="table-col">
-            モビパークパスポート対象
-            アトラクションチケット利用：800円
-          </td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">ご利用にあたって</th>
-          <td class="table-col">
-            服装について : <br>
-            靴を脱いでのご利用となります。 必ず靴下を履いてご利用ください。なお、指先が分かれたタイプの靴下、たび、ストッキング、タイツはご利用いただけません。もし、ご準備ない場合は、SUMIKA内に、靴下の自動販売機がございますのでご利用ください。
-            <br>
-            ※１小学生未満のお子様の利用について : <br>
-            小学生未満のお子さまは中学生以上の同伴者の付添い（有料）が必要になります。
-            <br>
-            0歳〜2歳のお子様の利用について : <br>
-            0歳〜2歳のお子様は遊具では遊ぶことはできません。保護者様同伴（有料）にてSUMIKA内の芝生のレストエリアをご利用いただけます。
-          </td>
-        </tr>
-
-      </tbody>
-    </table>
-  
-    <h3 class="table-heading">
-      <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
-    </h3>
-    <p class="table-subheading">
-      下記の日程は 混雑が予想されるため、 対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
-      期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
-    </p>
-
-    <table class="table">
-      <tbody>
-        <tr class="table-row">
-          <th class="table-head">日程</th>
-          <td class="table-col">
-            9月		15日（日）、16日（月）、29日（日）<br>
-            10月	15日（日）、16日（月）、29日（日）<br>
-            11月	15日（日）、16日（月）、29日（日）
-          </td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">対象アトラクション</th>
-          <td class="table-col">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">配布場所</th>
-          <td class="table-col">アトラクション前特設テント</td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">配布枚数</th>
-          <td class="table-col">各回約200枚配布※1回の所要時間約40分（説明10分、遊べる時間30分、時間入れ替え割）</td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">配布にあたって</th>
-          <td class="table-col">
-            ※入場整理券は定員に達し次第、受付を終了いたします。
-            ※別途、モビパークパスポートまたはのりもの券をお買い求めください。
-            ※アトラクションには年齢制限がございます。 >>詳しくはこちら
-            ※混雑状況や天候などより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="l-section">
-  <div class="l-container">
-    <div class="sumika-heading l-heading">
-      <%- include('/partials/heading', {
-        modifier: 'heading-enjoy',
-        text: 'How to Enjoy',
-        alt: 'How to Enjoy',
-        subtextvg: 'sumika-point-title',
-        altSubtext: '',
-      }) %>
-    </div>  
-
-    <div class="-content">
-      <div class="media u-clear">
-        <div class="media-left">
-          <div class="media-bg">
-            <div class="media-thumb">
-              <div style="background-image: url(<%= mix('/assets/images/sumika/media-1.jpg')%>);"></div>
-            </div>
-          </div>
-        </div>
-        <div class="media-right">
-          <h4 class="media-title"><span>舞台は森の生きもの達のすみか！</span></h4>
-          <p class="media-desc">
-            夜明け直後は多くの森の生きものが活動を始める賑やかな時間となり、昼間は強い生きものが中心に活動し、夜になると夜行性の生きものが闇に隠れて動き始めます。「巨大ネットの森「SUMIKA」では、そんなリアルな森の雰囲気を音で再現します。
-          </p>
-        </div>
-      </div>
-      <div class="media u-clear">
-        <div class="media-left">
-          <div class="media-bg">
-            <div class="media-thumb">
-              <div style="background-image: url(<%= mix('/assets/images/sumika/media-2.jpg')%>);"></div>
-            </div>
-          </div>
-        </div>
-        <div class="media-right">
-          <h4 class="media-title">
-            <span>朝から夜まで森の24時間を再現。</span><br>
-            <span>昼と夜で雰囲気が逆転！</span>
-          </h4>
-          <p class="media-desc">
-            昼間はオオタカが飛び回っていた空が、夜には満点の星空に。光の演出で森の24時間を再現しています。
-            巨大ネットを広葉樹に見立て、四季折々で変化する木々を再現します。また、夏は昼間が長く、冬は夜が長くなるように光の演出は細部にまでこだわっています。
-          </p>
-        </div>
-      </div>
-      <div class="media u-clear">
-        <div class="media-left">
-          <div class="media-bg">
-            <div class="media-thumb">
-              <div style="background-image: url(<%= mix('/assets/images/sumika/media-3.jpg')%>);"></div>
-            </div>
-          </div>
-        </div>
-        <div class="media-right">
-          <h4 class="media-title"><span>国内最大面積の巨大ネットアスレチック</span></h4>
-          <p class="media-desc">
-            SUMIKAは、最大高さ約11m 、ネット面積：約1000㎡の巨大ネットアスレチック。屋内では日本最大面積（※当社調べ）となっており、これまでにないスケールの空間の中で、身体を動かして遊べます。
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="l-section">
-  <div class="l-container">
-    <div class="l-heading">
-      <%- include('/partials/heading', {
-        modifier: 'heading-forest',
-        text: 'Ways to feel the Forest',
-        alt: 'Ways to feel the Forest',
-        subtextvg: 'ways-forest-title',
-        altSubtext: '',
-      }) %>
-    </div>  
-
-    <div class="l-section-inner">
-      <img src="<%= mix('/assets/images/sumika-img.jpg') %>" alt="">
-    </div>
-  </div>
-</section>
-
-<section class="top-slide l-section">
-  <div class="swiper-container slider">
-    <ul class="swiper-wrapper top-slide">
-      <% forest.forEach(item => { %>
-      <li class="swiper-slide slider-item">
-        <div class="top-slider-image">
-          <img src="<%- item.src -%>" alt="<%- item.alt -%>">
-        </div>
-        <span class="top-slider-text">
-          <%- item.desc -%>
-        </span>
+<div class="subpage">
+  <div class="mv mv-inner">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/sumika/sumika-mv.jpg')%>);"></div>
       </li>
-      <% } ) %>
     </ul>
-  </div>
-  <div class="l-container">
-    <div class="l-note">
-      <div class="note">
-        <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-        <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-        <div class="note-text">
-          昼と夜や季節ごとの<br>
-          森の変化を知ることができタネ！
-        </div>
+
+    <div class="l-container mv-container">
+      <h2 class="mv-heading">
+        <span class="mv-heading-texts">
+          Sumika Giant Net
+        </span>
+        <span class="mv-heading-subtexts">
+          <svg>
+            <title>巨大ネットの森SUMIKA</title>
+            <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-sumika-main-title') %>"></use>
+          </svg>
+        </span>
+      </h2>
+
+      <div class="mv-today">
+        <div class="mv-today-inner"></div>
       </div>
     </div>
   </div>
-</section>
 
- <section class="youtube-video l-section">
-  <div class="l-container">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-video',
-        text: 'Sumika Videos',
-        subtextvg: 'sumika-videos-title',
-        altSubtext: '',
-      }) %>
-    </div>
-    <div class="youtube-video-content">
-      <ul class="youtube-video-list row">
-        <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
-          <div class="youtube-video-wrapper">
-            <div class="youtube-video-inner">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
-          <p class="youtube-video-description">仲間とチャレンジコースに挑戦！</p>
-        </li>
-        <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
-          <div class="youtube-video-wrapper">
-            <div class="youtube-video-inner">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
-          <p class="youtube-video-description">DOKIDOKI タイムアタック映像！</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="instagram l-section">
-  <div class="instagram-wrapper l-container">
-    <div class="instagram-inner">
-      <div class="instagram-inner-content">
-          <h2 class="heading l-heading-inner">
+  <section class="video-mv l-section">
+    <div class="l-container">
+        <div class="heading-wrap l-heading-main">
+          <h2 class="heading">
             <span class="heading-texts">
-              <img src="<%= mix('/assets/images/sumika/hashtag.png') %>" alt="sumika">
+              <img src="<%= mix('/assets/images/sumika/samukia-heading.png') %>" alt="sumika">
             </span>
           </h2>
-        <div class="instagram-content">
-          <ul class="instagram-list">
-            <% instagram.forEach(item => { %>
-            <li class="instagram-list-item">
-              <div class="instagram-list-item-image">
-                <img src="<%- item.image %>" alt="<%- item.alt %>">
-              </div>
-            </li>
-            <% }) %>
-          </ul>
         </div>
-        <div class="l-button">
-          <%- include('/partials/button', {
-            modifier: 'button-sumika',
-            text: 'インスタグラムでもっと見る',
-            link: '#'
-          }) %>
-        </div>
-        <div class="instagram-banner">
-          <a href="#">
-            <img src="<%- mix('/assets/images/sumika/net-sumika/instagram-banner.jpg')%> ">
-          </a>
+
+      <!-- YOUTUBE -->
+      <div class="l-youtube">
+        <div class="youtube">
+          <div class="youtube-iframe-container">
+            <iframe width="100%" height="587" src="https://www.youtube.com/embed/6GUbJzXAcmA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<section class="faq l-section">
-  <div class="l-container">
-    <div class="faq-inner">
-     <div class="l-heading">
-      <%- include('/partials/heading', {
-        modifier: 'heading-sumika',
-        text: 'FAQ',
-        alt: 'faq',
-        subtextvg: 'faq-title',
-        altSubtext: ''
-      }) %>
-     </div>
-      <% getData().data.accordionData.forEach(data => { %>
-      <div class="accordion">
-        <div class="accordion-inner">
-          <button class="accordion-btn js-accordion-btn" type="button">
-            <span class="accordion-btn-label">
-              <img src="<%= mix('/assets/images/acc-q.png') %>">
-            </span>
-            <span class="accordion-btn-text">
-              <%- data.question %>
-            </span>
-          </button>
-          <div class="accordion-content js-accordion-content" style=" display: none;">
-            <p class="accordion-desc">
-              <%- data.answer %>
+
+      <h3 class="table-heading">
+        <img src="<%- mix('/assets/images/dokidoki/attraction-title.png') %>" alt="title">
+      </h3>
+
+      <p class="table-subheading">
+        肉食動物や大きな鳥から小動物まで、あらゆる生きもの達の隠れ家となっている場所、それがすみか。<br>
+        ネットが張りめぐらされた「巨大ネットの森 SUMIKA」で逃げて、隠れて、生き延びよう！
+      </p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">場所</th>
+            <td class="table-col">モビパーク内</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">所要時間</th>
+            <td class="table-col">説明10分、遊ぶ時間30分の計40分（受付終了時間は営業終了の約1時間前）</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">雨天の運行</th>
+            <td class="table-col">屋内施設となりますので、雨天時でもお楽しみいただけます。</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象者</th>
+            <td class="table-col">3歳以上※1</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">身長制限</th>
+            <td class="table-col">なし</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">料金</th>
+            <td class="table-col">
+              モビパークパスポート対象
+              アトラクションチケット利用：800円
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">ご利用にあたって</th>
+            <td class="table-col">
+              服装について : <br>
+              靴を脱いでのご利用となります。 必ず靴下を履いてご利用ください。なお、指先が分かれたタイプの靴下、たび、ストッキング、タイツはご利用いただけません。もし、ご準備ない場合は、SUMIKA内に、靴下の自動販売機がございますのでご利用ください。
+              <br>
+              ※１小学生未満のお子様の利用について : <br>
+              小学生未満のお子さまは中学生以上の同伴者の付添い（有料）が必要になります。
+              <br>
+              0歳〜2歳のお子様の利用について : <br>
+              0歳〜2歳のお子様は遊具では遊ぶことはできません。保護者様同伴（有料）にてSUMIKA内の芝生のレストエリアをご利用いただけます。
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    
+      <h3 class="table-heading">
+        <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
+      </h3>
+
+      <p class="table-subheading">
+        下記の日程は 混雑が予想されるため、 対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
+        期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
+      </p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">日程</th>
+            <td class="table-col">
+              9月		15日（日）、16日（月）、29日（日）<br>
+              10月	15日（日）、16日（月）、29日（日）<br>
+              11月	15日（日）、16日（月）、29日（日）
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象アトラクション</th>
+            <td class="table-col">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">配布場所</th>
+            <td class="table-col">アトラクション前特設テント</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">配布枚数</th>
+            <td class="table-col">各回約200枚配布※1回の所要時間約40分（説明10分、遊べる時間30分、時間入れ替え割）</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">配布にあたって</th>
+            <td class="table-col">
+              ※入場整理券は定員に達し次第、受付を終了いたします。
+              ※別途、モビパークパスポートまたはのりもの券をお買い求めください。
+              ※アトラクションには年齢制限がございます。 >>詳しくはこちら
+              ※混雑状況や天候などより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="l-section">
+    <div class="l-container">
+      <div class="sumika-heading l-heading">
+        <%- include('/partials/heading', {
+          modifier: 'heading-enjoy',
+          text: 'How to Enjoy',
+          alt: 'How to Enjoy',
+          subtextvg: 'sumika-point-title',
+          altSubtext: '',
+        }) %>
+      </div>  
+
+      <div class="l-content">
+        <div class="media u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/sumika/media-1.jpg')%>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title"><span>舞台は森の生きもの達のすみか！</span></h4>
+            <p class="media-desc">
+              夜明け直後は多くの森の生きものが活動を始める賑やかな時間となり、昼間は強い生きものが中心に活動し、夜になると夜行性の生きものが闇に隠れて動き始めます。「巨大ネットの森「SUMIKA」では、そんなリアルな森の雰囲気を音で再現します。
             </p>
           </div>
         </div>
-      </div>
-      <% }) %>
-    </div>
-  </div>
-</section>
+        <div class="media u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/sumika/media-2.jpg')%>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              <span>朝から夜まで森の24時間を再現。</span><br>
+              <span>昼と夜で雰囲気が逆転！</span>
+            </h4>
+            <p class="media-desc">
+              昼間はオオタカが飛び回っていた空が、夜には満点の星空に。光の演出で森の24時間を再現しています。
+              巨大ネットを広葉樹に見立て、四季折々で変化する木々を再現します。また、夏は昼間が長く、冬は夜が長くなるように光の演出は細部にまでこだわっています。
+            </p>
+          </div>
+        </div>
+        <div class="media u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/sumika/media-3.jpg')%>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title"><span>国内最大面積の巨大ネットアスレチック</span></h4>
+            <p class="media-desc">
+              SUMIKAは、最大高さ約11m 、ネット面積：約1000㎡の巨大ネットアスレチック。屋内では日本最大面積（※当社調べ）となっており、これまでにないスケールの空間の中で、身体を動かして遊べます。
+            </p>
+          </div>
+        </div>
 
-<div class="call-to-action">
-  <div class="l-container">
-    <div class="call-to-action-wrapper">
-      <div class="call-to-action-inner">
-        <h2 class="heading">
-          <span class="heading-texts">
-            <img src="<%= mix('/assets/images/sumika/sumika-cta-2.png') %>" alt="sumika">
-          </span>
-        </h2>
-        <div class="call-to-action-description">
-          <p class="call-to-action-description-text">
-            SUMIKAのこだわりポイントや、<br>
-            知っているともっと楽しくなる情報を配信中しています。
-          </p>
-        </div>
-        <div class="l-button l-button-call-to-action">
-          <%- include('/partials/button', {
-            modifier: 'button-sumika',
-            text: 'もっと見る',
-            link: '#'
-          }) %>
-        </div>
-        <span class="call-to-action-dot call-to-action-dot-1">
-          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
-        </span>
-        <span class="call-to-action-dot call-to-action-dot-2">
-          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
-        </span>
-        <span class="call-to-action-dot call-to-action-dot-3">
-          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
-        </span>
-        <span class="call-to-action-dot call-to-action-dot-4">
-          <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
-        </span>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<div class="banner-cta">
-  <div class="l-container">
-    <div class="banner-cta-inner">
-      <a href="#">
-        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
-      </a>
+  <section class="l-section">
+    <div class="l-container">
+      <div class="l-heading">
+        <%- include('/partials/heading', {
+          modifier: 'heading-forest',
+          text: 'Ways to feel the Forest',
+          alt: 'Ways to feel the Forest',
+          subtextvg: 'ways-forest-title',
+          altSubtext: '',
+        }) %>
+      </div>  
+
+      <div class="l-section-inner">
+        <img src="<%= mix('/assets/images/sumika-img.jpg') %>" alt="">
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<section class="recommendation">
-  <div class="l-section-title">
-    <%- include('/partials/heading', {
-      modifier: 'heading-recommend',
-      text: 'Recommendation',
-      altSubtext: '',
-      subtextvg: 'recommendation-title'
-    }) %>
-  </div>
-    <div class="swiper-container slider">
-      <ul class="swiper-wrapper slider-wrapper">
-        <% getData().data.recommend.forEach(item => { %>
+  <section class="top-slide l-section">
+    <div class="swiper-container slider js-slider">
+      <ul class="swiper-wrapper top-slide">
+        <% forest.forEach(item => { %>
         <li class="swiper-slide slider-item">
-          <%- include('/partials/article-no-design', {
-            image: item.image,
-            heading: item.heading,
-            buttonLink: item.buttonLink,
-            buttonText: 'モビパーク'
-          }) %>
+          <div class="top-slider-image">
+            <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+          </div>
+          <span class="top-slider-text">
+            <%- item.desc -%>
+          </span>
         </li>
-        <% }) %>
+        <% } ) %>
       </ul>
     </div>
-</section>
+    <div class="l-container">
+      <div class="l-note">
+        <div class="note">
+          <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+          <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+          <div class="note-text">
+            昼と夜や季節ごとの<br>
+            森の変化を知ることができタネ！
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="pick-up">
-  <div class="l-section-title">
-    <%- include('/partials/heading', {
-      modifier: 'heading-pickup',
-      text: 'Pick Up',
-      altSubtext: '',
-      subtextvg: 'pickup-event'
-    }) %>
-  </div>
-  <div class="l-container">
-    <div class="pick-inner">
-      <ul class="pickup-list row">
-        <% getData().data.pickup.forEach(item => { %>
-        <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
-          <%- include('/partials/article', {
-            category: item.category,
-            image: item.image,
-            heading: item.heading,
-            date: item.date,
-            link: item.link,
-            modifier: 'pickup-article'
-          }) %>
-        </li>
+  <section class="youtube-video l-section">
+    <div class="l-container">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-video',
+          text: 'Sumika Videos',
+          subtextvg: 'sumika-videos-title',
+          altSubtext: '',
+        }) %>
+      </div>
+      <div class="youtube-video-content">
+        <ul class="youtube-video-list row">
+          <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
+            <div class="youtube-video-wrapper">
+              <div class="youtube-video-inner">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <p class="youtube-video-description">仲間とチャレンジコースに挑戦！</p>
+          </li>
+          <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
+            <div class="youtube-video-wrapper">
+              <div class="youtube-video-inner">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <p class="youtube-video-description">DOKIDOKI タイムアタック映像！</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="instagram l-section">
+    <div class="instagram-wrapper l-container">
+      <div class="instagram-inner">
+        <div class="instagram-inner-content">
+            <h2 class="heading l-heading-inner">
+              <span class="heading-texts">
+                <img src="<%= mix('/assets/images/sumika/hashtag.png') %>" alt="sumika">
+              </span>
+            </h2>
+          <div class="instagram-content">
+            <ul class="instagram-list">
+              <% instagram.forEach(item => { %>
+              <li class="instagram-list-item">
+                <div class="instagram-list-item-image">
+                  <img src="<%- item.image %>" alt="<%- item.alt %>">
+                </div>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+          <div class="l-button">
+            <%- include('/partials/button', {
+              modifier: 'button-sumika',
+              text: 'インスタグラムでもっと見る',
+              link: '#'
+            }) %>
+          </div>
+          <div class="instagram-banner">
+            <a href="#">
+              <img src="<%- mix('/assets/images/sumika/net-sumika/instagram-banner.jpg')%> ">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq l-section">
+    <div class="l-container">
+      <div class="faq-inner">
+      <div class="l-heading">
+        <%- include('/partials/heading', {
+          modifier: 'heading-sumika',
+          text: 'FAQ',
+          alt: 'faq',
+          subtextvg: 'faq-title',
+          altSubtext: ''
+        }) %>
+      </div>
+        <% getData().data.accordionData.forEach(data => { %>
+        <div class="accordion">
+          <div class="accordion-inner">
+            <button class="accordion-btn js-accordion-btn" type="button">
+              <span class="accordion-btn-label">
+                <img src="<%= mix('/assets/images/acc-q.png') %>">
+              </span>
+              <span class="accordion-btn-text">
+                <%- data.question %>
+              </span>
+            </button>
+            <div class="accordion-content js-accordion-content" style=" display: none;">
+              <p class="accordion-desc">
+                <%- data.answer %>
+              </p>
+            </div>
+          </div>
+        </div>
         <% }) %>
-      </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="call-to-action">
+    <div class="l-container">
+      <div class="call-to-action-wrapper">
+        <div class="call-to-action-inner">
+          <h2 class="heading">
+            <span class="heading-texts">
+              <img src="<%= mix('/assets/images/sumika/sumika-cta-2.png') %>" alt="sumika">
+            </span>
+          </h2>
+          <div class="call-to-action-description">
+            <p class="call-to-action-description-text">
+              SUMIKAのこだわりポイントや、<br>
+              知っているともっと楽しくなる情報を配信中しています。
+            </p>
+          </div>
+          <div class="l-button l-button-call-to-action">
+            <%- include('/partials/button', {
+              modifier: 'button-sumika',
+              text: 'もっと見る',
+              link: '#'
+            }) %>
+          </div>
+          <span class="call-to-action-dot call-to-action-dot-1">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-2">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-3">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-4">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+          </span>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
-<%- include('./../partials/footer') -%>
+  <div class="banner-cta">
+    <div class="l-container">
+      <div class="banner-cta-inner">
+        <a href="#">
+          <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section class="recommendation l-section">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-recommend',
+        text: 'Recommendation',
+        altSubtext: '',
+        subtextvg: 'recommendation-title'
+      }) %>
+    </div>
+      <div class="swiper-container slider js-slider-bottom">
+        <ul class="swiper-wrapper slider-wrapper">
+          <% getData().data.recommend.forEach(item => { %>
+          <li class="swiper-slide slider-item">
+            <%- include('/partials/article-no-design', {
+              image: item.image,
+              heading: item.heading,
+              buttonLink: item.buttonLink,
+              buttonText: 'モビパーク'
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+  </section>
+
+  <section class="pick-up l-section">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-pickup',
+        text: 'Pick Up',
+        altSubtext: '',
+        subtextvg: 'pickup-event'
+      }) %>
+    </div>
+    <div class="l-container">
+      <div class="pick-inner">
+        <ul class="pickup-list row">
+          <% getData().data.pickup.forEach(item => { %>
+          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
+            <%- include('/partials/article', {
+              category: item.category,
+              image: item.image,
+              heading: item.heading,
+              date: item.date,
+              link: item.link,
+              modifier: 'pickup-article'
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </section>
+  </div>
+
+<%- include('./../partials/footer', {pageId} ) -%>

@@ -21,6 +21,10 @@
   color: $base-font-color;
   position: relative;
 
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+  }
+
   // &:hover {
   //   @include query($breakpoint-mobile, min) {
   //     .button-gradient-icon {

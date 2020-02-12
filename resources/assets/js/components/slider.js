@@ -28,13 +28,12 @@ export default function slider(params) {
     },
 
     on: {
-        resize: function() {
-            this.params.observer = true;
-        }
+      resize: function() {
+        this.params.observer = true;
+      }
     }
-  
   }
-  
+
   const config = !params.options ? defaultOptions : params.options;
   params.id = new Swiper(params.target, config);
 }

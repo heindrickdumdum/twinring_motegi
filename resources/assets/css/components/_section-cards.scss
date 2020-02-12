@@ -47,6 +47,10 @@
   transform-origin: left;
   z-index: $z-min;
 
+  @include max-screen($breakpoint-mobile) {
+    font-size: 10px;
+  }
+
   &::before {
     content: '';
     margin: 0 auto;
@@ -75,6 +79,10 @@
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.1em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 13px;
+  }
 }
 
 .section-card-link {

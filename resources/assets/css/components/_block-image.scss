@@ -19,11 +19,21 @@
   margin: 0 -8px;
   position: relative;
   z-index: $z-min;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 0;
+    flex-direction: column;
+  }
 }
 
 .block-image-text {
   img {
     width: 134px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 92px;
+      margin-bottom: 3px;
+    }
   }
 }
 
@@ -31,10 +41,19 @@
   margin: 0 8px;
   width: calc(100% / 2);
 
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    margin: 0 0 24px;
+  }
+
   &.block-image-item-last {
     .block-image-text {
       img {
         width: 156px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 105px;
+        }
       }
     }
   }
@@ -48,6 +67,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @include max-screen($breakpoint-mobile) {
+    height: auto;
+    padding: 10% 0;
+  }
 }
 
 
@@ -58,6 +82,11 @@
   width: 216px;
   height: 136px;
   background-color: rgba($color-white, .89);
+
+  @include max-screen($breakpoint-mobile) {
+    width: 141px;
+    height: 76px;
+  }
 }
 
 .block-image-subtext {
@@ -65,4 +94,8 @@
   font-size: 15px;
   color: $color-mineshaft;
   text-align: center;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 10px;
+  }
 }

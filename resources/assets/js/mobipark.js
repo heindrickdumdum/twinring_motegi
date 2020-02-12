@@ -11,6 +11,5 @@ slider({
       clickable: true
     }
   } // OPTIONAL
-})
+});
 
-console.log('this page is mobipark');

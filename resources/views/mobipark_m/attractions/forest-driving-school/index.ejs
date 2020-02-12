@@ -10,9 +10,9 @@
   <div class="mv mv-subpage mv-forest-driving">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.jpg') %>);"></div>
+        <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.jpg') %>);"></div>
 
-        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/forest-driving/mobile-mv-img.png') %>);"></div>
+        <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/forest-driving/mobile-mv-img.png') %>);"></div>
       </li>
     </ul>
 
@@ -168,8 +168,8 @@
 
             <div class="media-bottom">
               <div class="media-note">
-                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="image flag">
+                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="image acorn">
                 <div class="media-note-text">
                   100点取れたら… <br>
                   交通ルールを守れタネ！
@@ -188,10 +188,10 @@
   <div class="call-to-action">
     <div class="l-container">
       <div class="call-to-action-wrapper">
-        <div class="call-to-action-inner">
+        <div class="call-to-action-inner call-to-action-inner-subpage">
           <%- include('/partials/heading', {
             'modifier': 'heading-net-acro-x heading-net-forest-driving',
-            'text': '<img src='+ mix('/assets/images/forest-driving/forest-enjoy-more.png') +'>',
+            'text': '<img src='+ mix('/assets/images/forest-driving/forest-enjoy-more.png') +' alt="forest driving">',
             'alt': '森の教習所をもっと楽しむ',
             'altSubtext': '',
             'subtextvg': ''
@@ -201,7 +201,7 @@
               森の教習所のこだわりポイントや、<br>  知っているともっと楽しくなる情報を配信中しています。
             </p>
           </div>
-          <div class="l-button l-button-call-to-action">
+          <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
             <%- include('/partials/button', {
               'modifier': 'button-acro-x',
               'text': 'もっと見る',
@@ -209,16 +209,16 @@
             }) %>
           </div>
           <span class="call-to-action-dot call-to-action-dot-1">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img1.png')%> ">
+            <img src="<%- mix('/assets/images/forest-driving/cta-img1.png')%> " alt="image cta">
           </span>
           <span class="call-to-action-dot call-to-action-dot-2">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img2.png')%> ">
+            <img src="<%- mix('/assets/images/forest-driving/cta-img2.png')%> " alt="image cta">
           </span>
           <span class="call-to-action-dot call-to-action-dot-3">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img4.png')%> ">
+            <img src="<%- mix('/assets/images/forest-driving/cta-img4.png')%> " alt="image cta">
           </span>
           <span class="call-to-action-dot call-to-action-dot-4">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img3.png')%> ">
+            <img src="<%- mix('/assets/images/forest-driving/cta-img3.png')%> " alt="image cta">
           </span>
         </div>
       </div>
@@ -228,7 +228,7 @@
   <div class="banner-cta">
     <div class="l-container">
       <div class="banner-cta-bottom-inner">
-        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
+        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> " alt="banner-logo">
       </div>
     </div>
   </div>

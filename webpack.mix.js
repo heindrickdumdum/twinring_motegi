@@ -26,7 +26,11 @@ mix
   .polyfill()
   .js(
     `${srcRelativePath}/assets/js/app.js`,
-    `${distRelativePath}/assets/js`
+    `${distRelativePath}/assets/js`,
+  )
+  .js(
+    `${srcRelativePath}/assets/js/mobipark.js`,
+    `${distRelativePath}/assets/js`,
   )
   .eslint()
   .sass(

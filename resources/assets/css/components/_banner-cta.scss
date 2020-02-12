@@ -29,5 +29,16 @@
     padding-right: 100px;
     position: relative;
     z-index: 2;
+
+    //SP
+    @include max-screen($breakpoint-mobile) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  // SP
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 50px;
   }
 }

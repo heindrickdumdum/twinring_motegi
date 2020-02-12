@@ -54,159 +54,163 @@
   </div>
 </div>
 
-<div class="l-feature">
-  <section class="feature">
-    <div class="l-container">
-      <ul class="feature-list">
+<main>
+  <div class="l-feature">
+    <section class="feature">
+      <div class="l-container">
+        <ul class="feature-list">
+          <%
+            getData().data.featureContent.forEach( featureItem => {
+          %>
+          <li class="feature-item">
+            <%- include('/partials/article', {
+              category: featureItem.category,
+              image: featureItem.image,
+              heading: featureItem.heading,
+              date: featureItem.date,
+              link: featureItem.link
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="l-parkmap">
+    <div class="parkmap">
+      <div class="l-container parkmap-container">
+
+        <div class="u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-parkmap',
+            text: 'Park Map',
+            subtextvg: 'parkmap-subtext',
+            altSubtext: '',
+          }) %>
+        </div>
+
+        <div class="u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-parkmap',
+            text: 'Park Map',
+            subtextvg: 'parkmap-subtext-sp',
+            altSubtext: '',
+          }) %>
+        </div>
+
+
+        <div class="parkmap-inner">
+          <div class="parkmap-image">
+            <ul class="parkmap-image-list">
+              <%
+                getData().data.parkmapButtons.forEach( button => {
+              %>
+              <li class="parkmap-image-item js-parkmap-number">
+                <a href="<%- button.link %>"></a>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+          <div class="parkmap-right">
+            <ul class="parkmap-list">
+              <%
+                getData().data.parkmapButtons.forEach( button => {
+              %>
+              <li class="parkmap-item js-parkmap-button">
+                <a class="parkmap-link" href="<%- button.link %>"><%- button.text %>
+                  <i class="parkmap-link-icon">
+                    <%- include('/partials/svg', {
+                      'name': 'arrow'
+                    }) %>
+                  </i>
+                </a>
+              </li>
+              <% }) %>
+              <li class="parkmap-item parkmap-item-last">
+                <%- include('/partials/button', {
+                  modifier: 'button-parkmap',
+                  text: 'エリア・施設一覧を見る',
+                  link: '#'
+                }) %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="l-section">
+    <%- include('/partials/top/section-activity') -%>
+  </section>
+
+  <section class="l-section design-circle">
+    <%- include('/partials/top/section-mobi-park') -%>
+  </section>
+
+  <section class="l-section design-mount">
+    <%- include('/partials/top/section-motosports') -%>
+
+    <div class="design-petal"></div>
+  </section>
+
+  <section class="l-section design-petals">
+    <%- include('/partials/top/section-twinring') -%>
+  </section>
+
+  <section class="l-section l-section-hotel-twin">
+    <%- include('/partials/top/section-hotel-twin') -%>
+  </section>
+
+  <section class="l-how-to l-container">
+    <div class="how-to">
+      <%- include('/partials/heading', {
+        modifier: 'heading-wrap-how-to heading-wrap-center',
+        text: 'How to Enjoy',
+        subtextvg: 'how-to-subtext',
+        altSubtext: '',
+      }) %>
+
+      <ul class="feature-list feature-list-no-design">
         <%
-          getData().data.featureContent.forEach( featureItem => {
+          getData().data.howToContent.forEach( howToItem => {
         %>
         <li class="feature-item">
-          <%- include('/partials/article', {
-            category: featureItem.category,
-            image: featureItem.image,
-            heading: featureItem.heading,
-            date: featureItem.date,
-            link: featureItem.link
+          <%- include('/partials/article-no-design', {
+            image: howToItem.image,
+            heading: howToItem.heading,
+            buttonText: howToItem.buttonText,
+            buttonLink: howToItem.buttonLink,
           }) %>
         </li>
         <% }) %>
       </ul>
     </div>
   </section>
-</div>
 
-<div class="l-parkmap">
-  <div class="parkmap">
-    <div class="l-container parkmap-container">
-      <div class="u-show-pc">
-        <%- include('/partials/heading', {
-          modifier: 'heading-wrap-parkmap',
-          text: 'Park Map',
-          subtextvg: 'parkmap-subtext',
-          altSubtext: '',
-        }) %>
-      </div>
-
-      <div class="u-show-sp">
-        <%- include('/partials/heading', {
-          modifier: 'heading-wrap-parkmap',
-          text: 'Park Map',
-          subtextvg: 'parkmap-subtext-sp',
-          altSubtext: '',
-        }) %>
-      </div>
-
-      <div class="parkmap-inner">
-        <div class="parkmap-image">
-          <ul class="parkmap-image-list">
-            <%
-              getData().data.parkmapButtons.forEach( button => {
-            %>
-            <li class="parkmap-image-item js-parkmap-number">
-              <a href="<%- button.link %>"></a>
-            </li>
-            <% }) %>
-          </ul>
-        </div>
-        <div class="parkmap-right">
-          <ul class="parkmap-list">
-            <%
-              getData().data.parkmapButtons.forEach( button => {
-            %>
-            <li class="parkmap-item js-parkmap-button">
-              <a class="parkmap-link" href="<%- button.link %>"><%- button.text %>
-                <i class="parkmap-link-icon">
-                  <%- include('/partials/svg', {
-                    'name': 'arrow'
-                  }) %>
-                </i>
-              </a>
-            </li>
-            <% }) %>
-            <li class="parkmap-item parkmap-item-last">
-              <%- include('/partials/button', {
-                modifier: 'button-parkmap',
-                text: 'エリア・施設一覧を見る',
-                link: '#'
-              }) %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section class="l-section">
-  <%- include('/partials/top/section-activity') -%>
-</section>
-
-<section class="l-section design-circle">
-  <%- include('/partials/top/section-mobi-park') -%>
-</section>
-
-<section class="l-section design-mount">
-  <%- include('/partials/top/section-motosports') -%>
-
-  <div class="design-petal"></div>
-</section>
-
-<section class="l-section design-petals">
-  <%- include('/partials/top/section-twinring') -%>
-</section>
-
-<section class="l-section l-section-hotel-twin">
-  <%- include('/partials/top/section-hotel-twin') -%>
-</section>
-
-<section class="l-how-to l-container">
-  <div class="how-to">
-    <%- include('/partials/heading', {
-      modifier: 'heading-wrap-how-to heading-wrap-center',
-      text: 'How to Enjoy',
-      subtextvg: 'how-to-subtext',
-      altSubtext: '',
-    }) %>
-
-    <ul class="feature-list feature-list-no-design">
-      <%
-        getData().data.howToContent.forEach( howToItem => {
-      %>
-      <li class="feature-item">
-        <%- include('/partials/article-no-design', {
-          image: howToItem.image,
-          heading: howToItem.heading,
-          buttonText: howToItem.buttonText,
-          buttonLink: howToItem.buttonLink,
-        }) %>
-      </li>
-      <% }) %>
-    </ul>
-  </div>
-</section>
-
-<section class="information">
-  <div class="l-container information-container">
-    <%- include('/partials/heading', {
-      modifier: '',
-      text: 'Information',
-      subtextvg: 'information-subtext',
-      altSubtext: '',
-    }) %>
-
-    <%- include('/partials/post', {
-      postContent: getData().data.informationContent,
-    }) -%>
-
-    <div class="information-button">
-      <%- include('/partials/button', {
+  <section class="information">
+    <div class="l-container information-container">
+      <%- include('/partials/heading', {
         modifier: '',
-        text: 'もっと見る',
-        link: '#'
+        text: 'Information',
+        subtextvg: 'information-subtext',
+        altSubtext: '',
       }) %>
+
+      <%- include('/partials/post', {
+        postContent: getData().data.informationContent,
+      }) -%>
+
+      <div class="information-button">
+        <%- include('/partials/button', {
+          modifier: '',
+          text: 'もっと見る',
+          link: '#'
+        }) %>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <%- include('/partials/footer') -%>

@@ -80,12 +80,24 @@
   <div class="l-parkmap">
     <div class="parkmap">
       <div class="l-container parkmap-container">
-        <%- include('/partials/heading', {
-          modifier: 'heading-wrap-parkmap',
-          text: 'Park Map',
-          subtextvg: 'parkmap-subtext',
-          altSubtext: '',
-        }) %>
+
+        <div class="u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-parkmap',
+            text: 'Park Map',
+            subtextvg: 'parkmap-subtext',
+            altSubtext: '',
+          }) %>
+        </div>
+
+        <div class="u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-parkmap',
+            text: 'Park Map',
+            subtextvg: 'parkmap-subtext-sp',
+            altSubtext: '',
+          }) %>
+        </div>
 
 
         <div class="parkmap-inner">

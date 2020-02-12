@@ -5,9 +5,18 @@
   background-position: right center;
   background-size: contain;
 
+  @include max-screen($breakpoint-mobile) {
+    background-image: none;
+  }
+
   .row {
     display: flex;
     flex-wrap: nowrap;
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+      position: relative;
+    }
   }
 
   .desc {
@@ -16,6 +25,12 @@
     font-size: 20px;  
     letter-spacing: 0.16em;
     line-height: 2.25;
+
+    @include max-screen($breakpoint-mobile) {
+      line-height: 1.5;
+      margin: 0;
+      margin-top: 30px;
+    }
   }
 
   .challenge-img {
@@ -36,5 +51,33 @@
     position: relative;
     left: 129px;
     top: -140px;
+  }
+
+  .challenge-img3 {
+    max-width: 192px;
+    position: relative;
+    left: 24px;
+    top: -220px;
+  }
+
+  &.hellowoods-life-overflowing {
+    .desc {
+      max-width: 584px;
+    }
+
+    .challenge-img {max-height: 500px;}
+    .challenge-img1 {
+      max-width: 230px;
+      left: 30px;
+    }
+    .challenge-img2 {
+      max-width: 600px;
+      left: 110px;
+      top: -110px;
+    }
+    .challenge-img3 {
+      max-width: 193px;
+      left: -20px;
+    }
   }
 }

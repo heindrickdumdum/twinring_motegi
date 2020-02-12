@@ -12,3 +12,4 @@ slider({
     }
   } // OPTIONAL
 });
+

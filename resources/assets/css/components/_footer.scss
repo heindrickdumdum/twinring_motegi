@@ -6,8 +6,19 @@
   height: 524px;
   background: url(#{$image-path}footer-twinring.png) no-repeat center 55%, url(#{$image-path}footer-bg.jpg) no-repeat center top;
   background-size: 387px auto, cover;
+
+  @include max-screen($breakpoint-mobile) {
+    height: auto;
+    background-size: 250px auto, cover;
+    background-position: center 52%, center top;
+    padding: 34.7% 0;
+  }
 }
 
 .footer-sns {
   margin-top: -30px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 20px;
+  }
 }

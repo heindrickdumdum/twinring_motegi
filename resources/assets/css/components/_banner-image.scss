@@ -1,0 +1,12 @@
+.banner-image {
+  .banner-image-wrap {
+    border: 1px solid #878787;
+    background-image: url(../images/hellowoods/blog-banner.png);
+    text-align: center;
+    padding: 30px;
+    
+    .banner-image-subtext {
+      color: $color-black;
+    }
+  }
+}

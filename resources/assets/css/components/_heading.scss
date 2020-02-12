@@ -1,3 +1,11 @@
+.heading {
+  margin: 40px 0;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 24px 0;
+  }
+}
+
 .heading-text {
   display: block;
   font-family: $font-holland;
@@ -6,12 +14,32 @@
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.1em;
   font-size: 36px;
+
+  @include max-screen($breakpoint-mobile) {
+    letter-spacing: 0.01em;
+    font-size: 24px;
+    text-align: center;
+    background: linear-gradient(to bottom, #027cc4 0%, #09a045 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .heading-wrap-parkmap & {
+    @include max-screen($breakpoint-mobile) {
+      text-align: left;
+    }
+  }
 }
 
 .heading-subtext {
   display: inline-block;
   margin-top: 20px;
   height: 36px;
+
+  @include max-screen($breakpoint-mobile) {
+    height: 22px;
+    display: block;
+  }
 
   svg {
     width: 100%;
@@ -116,6 +144,15 @@
   &.heading-wrap-parkmap {
     .heading-subtext {
       width: 750px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 400px;
+        height: 70px;
+        display: inline-block;
+        text-align: left;
+        margin-left: -9px;
+        margin-top: 11px;
+      }
     }
   }
 

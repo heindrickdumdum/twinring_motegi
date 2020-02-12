@@ -44,6 +44,10 @@
   color: $color-seaweed;
   line-height: 1.67;
   letter-spacing: 0.03em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 13px;
+  }
 }
 
 .article-image {
@@ -52,6 +56,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    height: 177px;
+  }
 
   &::before {
     content: '';
@@ -141,6 +149,10 @@
   background-size: contain;
   color: $color-crusoe;
   z-index: $z-min;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 14px;
+  }
 
   &.article-category-news {
     background-image: url(#{$image-path}article/category-bg2.png);

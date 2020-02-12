@@ -23,6 +23,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .heading-wrap-parkmap & {
+    @include max-screen($breakpoint-mobile) {
+      text-align: left;
+    }
+  }
 }
 
 .heading-subtext {

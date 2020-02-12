@@ -6,6 +6,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include max-screen($breakpoint-mobile) {
+    flex-wrap: wrap;
+  }
 }
 
 .footer-bottom-item {
@@ -14,10 +18,22 @@
   flex-grow: 1;
   text-align: center;
 
+  @include max-screen($breakpoint-mobile) {
+    font-size: 10px;
+    width: calc(100% / 4);
+    text-align: center;
+    margin-bottom: 21px;
+    padding: 0 10px;
+  }
+
   &:first-child {
     padding-left: 0;
     text-align: left;
     flex-grow: .78;
+
+    @include max-screen($breakpoint-mobile) {
+      display: none;
+    }
   }
 }
 
@@ -40,19 +56,52 @@
   display: flex;
   justify-content: space-between;
   margin-top: 31px;
+
+  @include max-screen($breakpoint-mobile) {
+    flex-direction: column-reverse;
+    margin-top: 19px;
+  }
 }
 
 .footer-bottom-copyright {
   font-size: 15px;
   line-height: 1.7;
   letter-spacing: 0.087em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+    letter-spacing: 0.11em;
+  }
 }
 
 .footer-bottom-logos {
   display: flex;
 
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 36px;
+    justify-content: center;
+  }
+
   li {
     margin-left: 21px;
     width: 123px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin: 0 9px;
+    }
+  }
+}
+
+.footer-bottom-name {
+  margin-bottom: 12px;
+}
+
+.footer-bottom-name-text {
+  max-width: 165px;
+}
+
+.footer-bottom-nav {
+  @include max-screen($breakpoint-mobile) {
+    background-color: $color-light-gray;
   }
 }

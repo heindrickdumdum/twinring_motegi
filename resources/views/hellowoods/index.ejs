@@ -6,7 +6,7 @@
 
 
 <div class="hellowoods-wrapper">
-  <div class="mv-hellowoods">
+  <div class="mv mv-hellowoods">
     <ul class="mv-list">
       <li class="mv-item">
         <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/mv-img.png') %>);"></div>
@@ -63,7 +63,7 @@
         <div class="heading-wrap heading-wrap-life-overflowing">
           <div class="heading">
             <p class="heading-text">
-              身近な自然に <br>「溢れる生命（いのち）」<br>を見つけよう
+              <img class="" src="<%= mix('/assets/images/hellowoods/life-overflow-heading.png') %>" alt="Life Overflowing">
             </p>
           </div>
         </div> 
@@ -132,7 +132,7 @@
     <%- include('/partials/hellowoods/section-forest-tsubasa') -%>
   </section>
 
-  <section class="alternate-feature">
+  <section class="l-section alternate-feature">
     <div class="l-section-title">
       <%- include('/partials/heading', {
         modifier: '',
@@ -148,7 +148,7 @@
     </div>
   </section>
 
-  <section class="alternate-feature">
+  <section class="l-section alternate-feature">
     <div class="l-section-title">
       <%- include('/partials/heading', {
         modifier: '',
@@ -164,7 +164,7 @@
     </div>
   </section>
 
-  <div class="block-image">
+  <div class="l-section block-image">
     <div class="l-container">
       <ul class="block-image-list">
         <%
@@ -186,6 +186,15 @@
           })
         %>
       </ul>
+    </div>
+  </div>
+
+  <div class="l-section blog-banner">
+    <div class="l-container">
+      <p class="blog-banner-text">
+        <span class="heading-text">Blog</span>
+        <span class="blog-banner-subtext">ハローウッズの森だよりブログ </span>
+      </p>
     </div>
   </div>
   

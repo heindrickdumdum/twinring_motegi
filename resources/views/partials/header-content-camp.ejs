@@ -1,0 +1,44 @@
+<div class="header-sub-content-inner js-header-sub-content-inner" id="header-sub-camp">
+
+
+  <div class="header-sub-inner">
+    <div class="header-sub-inner-block header-sub-inner-block-col2">
+      <a class="header-sub-top-button" href="#">森と星空のキャンプヴィレッジTOP</a>
+      <div class="header-sub-image-list-wrap">
+        <% getData().data.headerCampImageList.forEach( list => { %>
+          <ul class="header-sub-image-list header-sub-image-list-col2">
+            <% list.forEach( item => { %>
+            <li class="header-sub-image-item">
+              <a class="header-sub-image-link" href="#">
+                <div class="header-sub-image" style="background-image: url(<%- item.image %>);"></div>
+                <span class="header-sub-image-text"><%- item.text %></span>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+        <% }) %>
+      </div>
+    </div>
+    <div class="header-sub-inner-block header-sub-inner-block-right header-sub-inner-block-col2">
+      <a class="header-sub-top-button" href="#">
+        ホテルツインリンクTOP
+      </a>
+
+      <div class="header-sub-image-list-wrap">
+        <% getData().data.headerCampImageList2.forEach( list => { %>
+          <ul class="header-sub-image-list header-sub-image-list-col2">
+            <% list.forEach( item => { %>
+            <li class="header-sub-image-item">
+              <a class="header-sub-image-link" href="#">
+                <div class="header-sub-image" style="background-image: url(<%- item.image %>);"></div>
+                <span class="header-sub-image-text"><%- item.text %></span>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+
+</div>

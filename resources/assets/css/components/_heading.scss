@@ -11,12 +11,49 @@
 .heading-subtext {
   display: inline-block;
   margin-top: 20px;
-  // margin: 17px 0 0 10px;
   height: 36px;
 
   svg {
     width: 100%;
     height: 100%;
+  }
+}
+
+// modifier challenge
+.challenge {
+  .heading-text {
+    max-width: 584px;
+    width: 100%;
+  }
+}
+
+//modifier subpage cta heading text
+.heading-net-subpage {
+  .heading-text {
+    font-size: 30px;
+  }
+}
+
+//modifier mobipark heading
+.heading-mobipark {
+  .heading {
+    margin-bottom: 53px;
+  }
+
+  .heading-subtext {
+    max-width: 161px;
+    width: 100%;
+  }
+}
+
+.heading-main-subpage {
+  .heading {
+    max-width: 100% !important;
+    text-align: center;
+
+    span {
+      display: inline-block;
+    }
   }
 }
 
@@ -409,28 +446,15 @@
   }
 }
 
-//modifier mobipark heading
-.heading-mobipark {
-  .heading {
-    margin-bottom: 53px;
-  }
-
-  .heading-subtext {
-    max-width: 161px;
-    width: 100%;
-  }
-}
-
 //modifier kids carbike attraction
 .kids-carbike-attraction {
   .content-heading {
-    // font-size: 26px;
     font-family: $font-hiragino;
     font-size: 28px;
-    line-height: 1.462; 
+    line-height: 1.462;
     background: linear-gradient(to right, #027cc3 10%, #099f48 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;   
+    -webkit-text-fill-color: transparent;
   }
 
   .heading-kids-carbike-attraction {
@@ -472,205 +496,119 @@
   }
 }
 
-// modifier challenge
-.challenge {
-  .heading-text {
-    max-width: 584px;
+// modifier dokidoki mobipark
+.dokidoki,
+.mobipark {
+  .heading-main-title {
+    .heading-text {
+      max-width: 497px;
+      margin-top: 68px;
+      margin-bottom: 79px;
+    }
+  }
+
+  .heading-dokidoki,
+  .heading-mobipark {
+    .heading-text {
+      width: auto !important;
+      height: auto !important;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 36px;
+      letter-spacing: 0.06em;
+      font-family: $font-holland;
+      font-weight: bold;
+    }
+
+    .heading-subtext {
+      width: 100%;
+    }
+  }
+
+  .heading-enjoy {
+
+    .heading {
+      margin-top: 103px;
+      margin-bottom: 37px;
+    }
+
+    .heading-text {
+      width: auto !important;
+      height: auto !important;
+      font-size: 36px;
+      letter-spacing: 0.06em;
+      font-family: $font-holland;
+      font-weight: 600;
+      font-weight: bold;
+    }
+
+    .heading-subtext {
+      width: 100%;
+      margin-top: 0px;
+    }
+  }
+
+  .heading-forest {
+    .heading {
+      margin-top: 25px;
+      margin-bottom: -1px;
+    }
+
+    .heading-text {
+      width: auto !important;
+      height: auto !important;
+      font-size: 36px;
+      letter-spacing: 0.06em;
+      font-family: $font-holland;
+      font-weight: bold;
+    }
+
+    .heading-subtext {
+      width: 100%;
+      margin-top: 39px;
+    }
+  }
+
+  .heading-net-dokidoki,
+  .heading-net-mobipark {
+    .heading-text {
+      width: auto !important;
+      height: auto !important;
+      font-size: 32.456px;
+      font-family: $base-font-family;
+      letter-spacing: 0.06em;
+      font-weight: 300;
+    }
+  }
+
+  .heading-faq {
+    .heading-text {
+      text-align: center;
+    }
+
+    .heading-subtext {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+}
+
+//modifier forest driving cta heading image
+.heading-net-forest-driving {
+  img {
+    max-width: 419px;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-// modifier dokidoki mobipark
-.dokidoki,
-.mobipark {
-  .heading-main-title {
-    .heading-text {
-      max-width: 497px;
-      margin-top: 68px;
-      margin-bottom: 79px;
-    }
-  }
-
-  .heading-dokidoki,
-  .heading-mobipark {
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 36px;
-      letter-spacing: 0.06em;
-      font-family: $font-holland;
-      font-weight: bold;
-    }
-
-    .heading-subtext {
-      width: 100%;
-    }
-  }
-
-  .heading-enjoy {
-
-    .heading {
-      margin-top: 103px;
-      margin-bottom: 37px;
-    }
-
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      font-size: 36px;
-      letter-spacing: 0.06em;
-      font-family: $font-holland;
-      font-weight: 600;
-      font-weight: bold;
-    }
-
-    .heading-subtext {
-      width: 100%;
-      margin-top: 0px;
-    }
-  }
-
-  .heading-forest {
-    .heading {
-      margin-top: 25px;
-      margin-bottom: -1px;
-    }
-
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      font-size: 36px;
-      letter-spacing: 0.06em;
-      font-family: $font-holland;
-      font-weight: bold;
-    }
-
-    .heading-subtext {
-      width: 100%;
-      margin-top: 39px;
-    }
-  }
-
-  .heading-net-dokidoki,
-  .heading-net-mobipark {
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      font-size: 32.456px;
-      font-family: $base-font-family;
-      letter-spacing: 0.06em;
-      font-weight: 300;
-    }
-  }
-
-  .heading-faq {
-    .heading-text {
-      text-align: center;
-    }
-
-    .heading-subtext {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-    }
-  }
-}
-// modifier dokidoki mobipark
-.dokidoki,
-.mobipark {
-  .heading-main-title {
-    .heading-text {
-      max-width: 497px;
-      margin-top: 68px;
-      margin-bottom: 79px;
-    }
-  }
-
-  .heading-dokidoki,
-  .heading-mobipark {
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 36px;
-      letter-spacing: 0.06em;
-      font-family: $font-holland;
-      font-weight: bold;
-    }
-
-    .heading-subtext {
-      width: 100%;
-    }
-  }
-
-  .heading-enjoy {
-    .heading {
-      margin-top: 103px;
-      margin-bottom: 37px;
-    }
-
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      font-size: 36px;
-      letter-spacing: 0.06em;
-      font-family: $font-holland;
-      font-weight: 600;
-      font-weight: bold;
-    }
-
-    .heading-subtext {
-      width: 100%;
-      margin-top: 0px;
-    }
-  }
-
-  .heading-forest {
-    .heading {
-      margin-top: 25px;
-      margin-bottom: -1px;
-    }
-
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      font-size: 36px;
-      letter-spacing: 0.06em;
-      font-family: $font-holland;
-      font-weight: bold;
-    }
-
-    .heading-subtext {
-      width: 100%;
-      margin-top: 39px;
-    }
-  }
-
-  .heading-net-dokidoki,
-  .heading-net-mobipark {
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      font-size: 32.456px;
-      font-family: $base-font-family;
-      letter-spacing: 0.06em;
-      font-weight: 300;
-    }
-  }
-
-  .heading-faq {
-    .heading-text {
-      text-align: center;
-    }
-
-    .heading-subtext {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-    }
+// modifier heading main subpage forest driving
+.heading-main-forest-driving {
+  img {
+    max-width: 651px;
+    width: 100%;
   }
 }
 
@@ -695,39 +633,3 @@
   }
 }
 // end modifier dokidoki mobipark
-
-//modifier forest driving cta heading image
-.heading-net-forest-driving {
-  img {
-    max-width: 419px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-//modifier subpage cta heading text 
-.heading-net-subpage {
-  .heading-text {
-    font-size: 30px; 
-  }
-}
-
-.heading-main-subpage {
-  .heading {
-    max-width: 100% !important;
-    text-align: center;
-
-    span {
-      display: inline-block;
-    }
-  }
-}
-
-// modifier heading main subpage forest driving
-.heading-main-forest-driving {
-  img {
-    max-width: 651px;
-    width: 100%;
-  }
-}

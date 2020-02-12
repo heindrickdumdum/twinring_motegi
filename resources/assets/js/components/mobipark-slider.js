@@ -1,14 +1,14 @@
 import Swiper from 'swiper';
 
 export default function mobiparkSlider() {
-  let mobiparkSwiper = new Swiper('.slider-container', {
+  let mobiparkSwiper = new Swiper('.slider-container-mobipark', {
     init: true,
     speed: 500,
     pagination: {
-      el: '.slider-pagination',
+      el: '.swiper-pagination',
       clickable: true
     }
   });
 
-  mobiparkSwiper.reInit();
+  mobiparkSwiper.params.observer = true;
 }

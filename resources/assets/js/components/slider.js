@@ -32,7 +32,6 @@ export default function slider(params) {
         this.params.observer = true;
       }
     }
-  
   }
 
   const config = !params.options ? defaultOptions : params.options;

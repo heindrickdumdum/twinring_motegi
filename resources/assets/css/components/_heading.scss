@@ -11,12 +11,31 @@
 .heading-subtext {
   display: inline-block;
   margin-top: 15px;
-  // margin: 17px 0 0 10px;
   height: 36px;
 
   svg {
     width: 100%;
     height: 100%;
+  }
+}
+
+// modifier challenge
+.challenge {
+  .heading-text {
+    max-width: 584px;
+    width: 100%;
+  }
+}
+
+//modifier mobipark heading
+.heading-mobipark {
+  .heading {
+    margin-bottom: 53px;
+  }
+
+  .heading-subtext {
+    max-width: 161px;
+    width: 100%;
   }
 }
 
@@ -398,13 +417,12 @@
 //modifier kids carbike attraction
 .kids-carbike-attraction {
   .content-heading {
-    font-size: 26px;
     font-family: $font-hiragino;
     font-size: 28px;
-    line-height: 1.462; 
+    line-height: 1.462;
     background: linear-gradient(to right, #027cc3 10%, #099f48 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;   
+    -webkit-text-fill-color: transparent;
   }
 
   .heading-kids-carbike-attraction {
@@ -443,26 +461,6 @@
     .heading-subtext {
       max-width: 443px;
     }
-  }
-}
-
-// modifier challenge
-.challenge {
-  .heading-text {
-    max-width: 584px;
-    width: 100%;
-  }
-}
-
-//modifier mobipark heading
-.heading-mobipark {
-  .heading {
-    margin-bottom: 53px;
-  }
-
-  .heading-subtext {
-    max-width: 161px;
-    width: 100%;
   }
 }
 

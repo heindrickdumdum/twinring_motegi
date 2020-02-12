@@ -9,7 +9,7 @@
     <li class="footer-top-links-item">
       <span class="footer-top-links-text"><%- item.text %></span>
 
-       <% if(item.sub != '') { %>
+       <% if(typeof item.sub == 'object') { %>
         <ul class="footer-top-links-sub">
           <%
             item.sub.forEach( sub => {

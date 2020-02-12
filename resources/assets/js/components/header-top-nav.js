@@ -1,9 +1,7 @@
 import CONST from './../constants';
 
 export default function headerTopNav() {
-  const headerTopButton = document.querySelectorAll('.js-top-nav-button'),
-        headerTopSub = document.querySelectorAll('.header-top-nav-sub'),
-        headerButtonLang = document.querySelector('.js-button-lang'),
+  const headerButtonLang = document.querySelector('.js-button-lang'),
         headerLang = document.querySelector('.js-header-lang');
 
   let mediaQuery = window.matchMedia('(max-width: 749px)');

@@ -608,12 +608,26 @@
   }
 }
 
-//modifier forest driving
+//modifier forest driving cta heading image
 .heading-net-forest-driving {
   img {
     max-width: 419px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+//modifier subpage cta heading text 
+.heading-net-subpage {
+  .heading-text {
+    font-size: 30px; 
+  }
+}
+
+.heading-main-subpage {
+  .heading {
+    max-width: auto;
+    text-align: center;
   }
 }

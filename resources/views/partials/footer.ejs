@@ -1,23 +1,28 @@
+<% if(typeof pageId === 'undefined') { var pageId = ''; } %>
+<% if(typeof page === 'undefined') { var page = ''; } %>
+
 <footer class="footer">
 
-  <nav class="l-container">
-    <ul class="footer-top-nav-list">
-      <%
-        getData().data.footerTopNav.forEach( topLink => {
-      %>
-      <li class="footer-top-nav-item">
-        <a class="footer-top-nav-link" href="<%- topLink.link %>">
-          <span class="footer-top-nav-icon">
-            <img class="footer-bottom-item-image" src="<%- topLink.image %>" alt="time">
-          </span>
-          <span class="footer-top-nav-text"><%- topLink.text %></span>
-        </a>
-      </li>
-      <% }) %>
-    </ul>
+  <nav class="footer-top-nav-list-wrap">
+    <div class="l-container">
+      <ul class="footer-top-nav-list">
+        <%
+          getData().data.footerTopNav.forEach( topLink => {
+        %>
+        <li class="footer-top-nav-item">
+          <a class="footer-top-nav-link" href="<%- topLink.link %>">
+            <span class="footer-top-nav-icon">
+              <img class="footer-bottom-item-image" src="<%- topLink.image %>" alt="time">
+            </span>
+            <span class="footer-top-nav-text"><%- topLink.text %></span>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
   </nav>
 
-  <div class="footer-top-links">
+  <div class="footer-top-links u-show-pc">
     <div class="l-container">
       <%- include('/partials/footer-top-links') -%>
     </div>
@@ -51,6 +56,9 @@
           <small>(c) Mobilityland Corporation All Rights Reserved.
                 <br>Kochira (Kochira family) is an original character of MOBILITYLAND designed by Mr. Osamu Tezuka. (c)TEZUKA PRODUCTIONS</small>
         </p>
+        <div class="footer-bottom-name u-show-sp">
+          <img class="footer-bottom-name-text" src="<%= mix('/assets/images/footer-name-sp.png') %>" alt="">
+        </div>
         <ul class="footer-bottom-logos">
           <li>
             <img src="<%= mix('/assets/images/suzuka-logo.png') %>" alt="Suzuka">
@@ -69,5 +77,14 @@
   </div> <!-- end of wrap -->
 
   <script src="<%= mix('/assets/js/app.js') %>" async></script>
+  <script src="<%= mix('/assets/js/recommendation.js') %>" async></script>
+
+  <% if(pageId == 'mobipark') { %>
+    <script src="<%= mix('/assets/js/mobipark.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'sumika' || pageId == 'itadaki' || pageId == 'dokidoki' ) { %>
+  <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
+  <% } %>
 </body>
 </html>

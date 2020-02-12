@@ -1,3 +1,11 @@
+.heading {
+  margin: 40px 0;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 24px 0;
+  }
+}
+
 .heading-text {
   display: block;
   font-family: $font-holland;
@@ -6,17 +14,74 @@
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.1em;
   font-size: 36px;
+
+  @include max-screen($breakpoint-mobile) {
+    letter-spacing: 0.01em;
+    font-size: 24px;
+    text-align: center;
+    background: linear-gradient(to bottom, #027cc4 0%, #09a045 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .heading-wrap-parkmap & {
+    @include max-screen($breakpoint-mobile) {
+      text-align: left;
+    }
+  }
 }
 
 .heading-subtext {
   display: inline-block;
-  margin-top: 15px;
-  // margin: 17px 0 0 10px;
+  margin-top: 20px;
   height: 36px;
+
+  @include max-screen($breakpoint-mobile) {
+    height: 22px;
+    display: block;
+  }
 
   svg {
     width: 100%;
     height: 100%;
+  }
+}
+
+// modifier challenge
+.challenge {
+  .heading-text {
+    max-width: 584px;
+    width: 100%;
+  }
+}
+
+//modifier subpage cta heading text
+.heading-net-subpage {
+  .heading-text {
+    font-size: 30px;
+  }
+}
+
+//modifier mobipark heading
+.heading-mobipark {
+  .heading {
+    margin-bottom: 53px;
+  }
+
+  .heading-subtext {
+    max-width: 161px;
+    width: 100%;
+  }
+}
+
+.heading-main-subpage {
+  .heading {
+    max-width: 100% !important;
+    text-align: center;
+
+    span {
+      display: inline-block;
+    }
   }
 }
 
@@ -70,6 +135,15 @@
   &.heading-wrap-parkmap {
     .heading-subtext {
       width: 750px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 400px;
+        height: 70px;
+        display: inline-block;
+        text-align: left;
+        margin-left: -9px;
+        margin-top: 11px;
+      }
     }
   }
 
@@ -113,15 +187,24 @@
       width: 284px;
       height: 34px;
       margin: 0 auto;
-
     }
 
     .heading-text {
       letter-spacing: 0.1em;
     }
   }
+// sumika/itadaki/dokidoki
+
+  &.heading-enjoy {
+    margin-bottom: 40px;
+    svg {
+      width: 520px;
+      height: 36px;
+    }
+  }
 
   &.heading-forest {
+    margin-bottom: 40px;
     svg {
       width: 520px;
       height: 36px;
@@ -129,6 +212,7 @@
   }
 
   &.heading-video {
+    margin-bottom: 40px;
     svg {
       width: 520px;
       height: 36px;
@@ -136,6 +220,7 @@
   }
 
   &.heading-recommend {
+    margin-bottom: 40px;
     svg {
       width: 513px;
       height: 34px;
@@ -173,13 +258,11 @@
     }
 
     svg {
-      width: 513px;
+      width: 389px;
       height: 34px;
     }
+
   }
-
-
-
 
   &.heading-net-acro-x {
     margin-top: 15px;
@@ -466,7 +549,6 @@
 //modifier kids carbike attraction
 .kids-carbike-attraction {
   .content-heading {
-    font-size: 26px;
     font-family: $font-hiragino;
     font-size: 28px;
     line-height: 1.462;
@@ -501,6 +583,12 @@
     margin-left: auto;
     margin-right: auto;
 
+    &.hellowoods {
+      font-size: 39px;
+      height: auto;
+      max-width: none;
+    }
+
     svg {
       width: 100%;
       height: 100%;
@@ -511,26 +599,6 @@
     .heading-subtext {
       max-width: 443px;
     }
-  }
-}
-
-// modifier challenge
-.challenge {
-  .heading-text {
-    max-width: 584px;
-    width: 100%;
-  }
-}
-
-//modifier mobipark heading
-.heading-mobipark {
-  .heading {
-    margin-bottom: 53px;
-  }
-
-  .heading-subtext {
-    max-width: 161px;
-    width: 100%;
   }
 }
 
@@ -564,6 +632,7 @@
   }
 
   .heading-enjoy {
+
     .heading {
       margin-top: 103px;
       margin-bottom: 37px;
@@ -628,6 +697,24 @@
       margin-right: auto;
       display: block;
     }
+  }
+}
+
+//modifier forest driving cta heading image
+.heading-net-forest-driving {
+  img {
+    max-width: 419px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// modifier heading main subpage forest driving
+.heading-main-forest-driving {
+  img {
+    max-width: 651px;
+    width: 100%;
   }
 }
 

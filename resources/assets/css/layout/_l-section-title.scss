@@ -6,3 +6,16 @@
   position: relative;
   z-index: $z-min + 2;
 }
+
+/*Modifier*/
+.alternate-feature {
+  .heading-wrap  {
+    margin-bottom: 65px;
+  }
+}
+
+.faq-file-dl {
+  .heading-wrap  {
+    margin-bottom: 50px;
+  }
+}

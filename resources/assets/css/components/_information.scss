@@ -1,6 +1,10 @@
 .information {
   padding: 95px 0 120px;
   position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-bottom: 50px;
+  }
 }
 
 .information-container {
@@ -11,4 +15,11 @@
   position: absolute;
   right: 34px;
   top: 29px;
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+    right: 0;
+    top: auto;
+    margin-top: 43px;
+  }
 }

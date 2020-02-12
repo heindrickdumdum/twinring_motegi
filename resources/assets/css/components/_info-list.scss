@@ -8,6 +8,11 @@
     margin: 37px auto 0;
     overflow-y: scroll;
 
+    @include max-screen($breakpoint-mobile) {
+      margin: 0;
+      max-height: 300px;
+    }
+
     .info-item {
       padding-left: 50px;
       padding-right: 20px;

@@ -1,24 +1,13 @@
 <div class="header-sub-content-inner header-sub-content-inner-motorsports js-header-sub-content-inner" id="header-sub-motorsports">
 
-  <a class="header-sub-top-button" href="#">
-    <i class="header-sub-top-button-icon">
-      <%- include('/partials/svg', {
-        name: 'motorsports'
-      }) %>
-    </i>
-    モータースポーツTOP
-    <i class="header-sub-top-button-arrow">
-      <%- include('/partials/svg', {
-        name: 'arrow'
-      }) %>
-    </i>
-  </a>
 
   <div class="header-sub-inner">
     <div class="header-sub-inner-block">
+      <a class="header-sub-top-button" href="#">モータースポーツTOP</a>
+      
       <div class="header-sub-image-list-wrap">
         <% getData().data.headerMotorImageList.forEach( list => { %>
-          <ul class="header-sub-image-list">
+          <ul class="header-sub-image-list header-sub-image-list-padding">
             <% list.forEach( item => { %>
             <li class="header-sub-image-item">
               <a class="header-sub-image-link" href="#">
@@ -30,7 +19,7 @@
           </ul>
         <% }) %>
 
-        <ul class="header-sub-bottom-list">
+        <ul class="header-sub-bottom-list header-sub-bottom-list-upper">
           <% getData().data.headerMotorImageBottomList.forEach( item => { %>
           <li>
             <a href="<%- item.link %>"><%- item.text %></a>
@@ -40,13 +29,8 @@
       </div>
     </div>
     <div class="header-sub-inner-block header-sub-inner-block-right">
-      <a class="header-sub-top-button header-sub-top-button-right" href="#">
+      <a class="header-sub-top-button" href="#">
         サーキットを走るTOP
-        <i class="header-sub-top-button-arrow">
-          <%- include('/partials/svg', {
-            name: 'arrow'
-          }) %>
-        </i>
       </a>
 
       <div class="header-sub-image" style="background-image: url(<%= mix('/assets/images/header/motor-img7.jpg') %>);"></div>

@@ -5,6 +5,10 @@
 
 .adventure-list {
   margin-bottom: 104px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .adventure-bg {

@@ -96,6 +96,13 @@
   iframe {
     width: 100%;
   }
+
+  //modifier SP
+  @include max-screen($breakpoint-mobile) {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }
 
 .subpage-section {

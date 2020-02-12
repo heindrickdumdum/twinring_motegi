@@ -31,6 +31,15 @@
     top: -5px;
     left: -18px;
     z-index: 0;
+
+    @include max-screen($breakpoint-mobile) {
+      content: url(/assets/images/sp-img-frame-bg.png);
+    }
+  }
+
+  //modifier SP
+  @include max-screen($breakpoint-mobile) {
+    margin-left: 0px;
   }
 }
 
@@ -53,6 +62,11 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 20px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -84,6 +98,11 @@
       z-index: -1;
     }
   }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 15px;
+    font-size: 24px;
+  }
 }
 
 .media-title-nohighlight {
@@ -108,6 +127,10 @@
   .media-subpage-bunbun & {
     margin-bottom: 23px;
   }
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 22px;
+  }
 }
 
 .media-bottom {
@@ -121,43 +144,65 @@
     padding-left: 20px;
   }
 
+  @include max-screen($breakpoint-mobile) {
+    text-align: center !important;
+    padding-left: 0px !important;
+  }
 }
 
+.media-note {
+  position: relative;
+  display: inline-block;
+  width: 318px;
+  text-align: left;
+  margin-top: 25px;
+}
 
-// .media-note {
-//   position: relative;
-//   display: inline-block;
-//   width: 318px;
-//   text-align: left;
-//   margin-top: 25px;
+.media-note-flag, .media-note-acorn {
+  position: absolute;
+}
 
-// }
+.media-note-flag {
+  top: -24px;
+  left: -3px;
+}
 
-// .media-note-flag, .media-note-acorn {
-//   position: absolute;
-// }
+.media-note-acorn {
+  top: -33px;
+  right: -42px;
+}
 
-// .media-note-flag {
-//   top: -24px;
-//   left: -3px;
-// }
-
-// .media-note-acorn {
-//   top: -33px;
-//   right: -42px;
-// }
-
-// .media-note-text {
-//   width: 100%;
-//   padding: 23px 32px 20px;
-//   font-size: 16px;
-//   color: #fff;
-//   background-color: #8daf86;
-//   border-radius: 4px;
-// }
+.media-note-text {
+  width: 100%;
+  padding: 23px 32px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #8daf86;
+  border-radius: 4px;
+}
 
 // modifier
 .media-title-racing-kart {
   text-align: center;
   font-size: 26px;
+}
+
+//modifier SP
+@include max-screen($breakpoint-mobile) {
+  .how-to-content {
+    max-width: 510px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .media-left,
+  .media-right {
+    float: none;
+    width: 100%;
+  }
+
+  .media-right {
+    padding-left: 0px;
+  }
 }

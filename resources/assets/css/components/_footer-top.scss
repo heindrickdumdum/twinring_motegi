@@ -1,19 +1,45 @@
+.footer-top-nav-list-wrap {
+  background-color: $color-light-gray;
+  margin-bottom: 45px;
+  padding: 17px 0;
+}
+
 .footer-top-nav-list {
-  margin-bottom: 50px;
   display: flex;
   align-items: center;
   width: 100%;
+
+  @include max-screen($breakpoint-mobile) {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 41px;
+    margin-bottom: 45px;
+  }
 }
 
 .footer-top-nav-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  flex-grow: 1;
   border-right: 1px solid $color-primary;
+
+  @include max-screen($breakpoint-mobile) {
+    flex: auto;
+    border: 0;
+    padding: 0 10px;
+    width: calc(100% / 3);
+    margin-bottom: 37px;
+  }
 
   &:first-child {
     border-left: 1px solid $color-primary;
+    flex-grow: 1.25;
+
+    @include max-screen($breakpoint-mobile) {
+      border: 0;
+    }
   }
 }
 
@@ -21,6 +47,10 @@
   font-size: 15px;
   color: $color-primary;
   transition: color $duration $ease-in-out;
+
+  @include max-screen($breakpoint-mobile) {
+    text-align: center;
+  }
 
   &:hover {
     color: $color-green;
@@ -30,6 +60,12 @@
 .footer-top-nav-text {
   display: inline-block;
   vertical-align: middle;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+  }
 }
 
 .footer-top-nav-icon {
@@ -37,6 +73,13 @@
   vertical-align: middle;
   margin-right: 17px;
   width: 36px;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+    text-align: center;
+    margin: 0 auto 7px;
+    width: 26px;
+  }
 }
 
 .footer-top-links {
@@ -44,30 +87,35 @@
 }
 
 .footer-top-links-list {
-  flex: 1;
+  flex-grow: 1;
 }
 
 .footer-top-links-item {
   display: block;
-  margin-bottom: 45px;
+  margin-bottom: 41px;
   font-size: 15px;
+  letter-spacing: 0.03em;
 }
 
 .footer-top-links-text {
-  display: inline-block;
-  margin-bottom: 5px;
+  display: block;
+  margin-bottom: 17px;
 }
 
 .footer-top-links-sub {
   li {
     display: block;
-    margin-top: 16px;
+    margin-bottom: 10px;
     font-size: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   a {
     display: inline-block;
-    padding-left: 25px;
+    padding-left: 30px;
     font-size: 14px;
     color: $color-primary;
     transition: color $duration $ease-in-out;

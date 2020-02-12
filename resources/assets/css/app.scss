@@ -21,11 +21,13 @@
 @import "components/heading";
 @import "components/header";
 @import "components/header-sub";
+@import "components/header-top-nav";
+@import "components/mv";
 @import "components/article";
 @import "components/feature";
+@import "components/file-download";
 @import "components/parkmap";
 @import "components/button";
-@import "components/mv";
 @import "components/button-gradient";
 @import "components/section";
 @import "components/section-cards";
@@ -48,11 +50,13 @@
 @import "components/information";
 @import "components/post";
 @import "components/banner-cta";
+@import "components/banner-image";
 @import "components/footer";
 @import "components/footer-top";
 @import "components/footer-bottom";
 @import "components/sns";
 @import "components/slider";
+@import "components/sponsors";
 @import "components/top-slider";
 @import "components/hellowoods";
 @import "components/note";
@@ -76,7 +80,3 @@
 @import "layout/l-racing-kart";
 @import "layout/l-note";
 
-// Required
-.svg-sprite {
-  display: none;
-}

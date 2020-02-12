@@ -477,6 +477,14 @@
       background-image: url(../images/itadaki/today.png);
     }
   }
+
+  // dokidoki
+
+  &.dokidoki-mv {
+    .mv-today {
+      background-image: url(../images/dokidoki/dokidoki-logo.png);
+    }
+  }
 }
 
 // END sumika mv 

@@ -130,7 +130,16 @@
     }
   }
 
+  &.heading-enjoy {
+    margin-bottom: 40px;
+    svg {
+      width: 520px;
+      height: 36px;
+    }
+  }
+
   &.heading-forest {
+    margin-bottom: 40px;
     svg {
       width: 520px;
       height: 36px;
@@ -145,6 +154,7 @@
   }
 
   &.heading-recommend {
+    margin-bottom: 40px;
     svg {
       width: 513px;
       height: 34px;
@@ -182,7 +192,7 @@
     }
 
     svg {
-      width: 513px;
+      width: 389px;
       height: 34px;
     }
   }
@@ -496,6 +506,7 @@
   }
 
   .heading-enjoy {
+
     .heading {
       margin-top: 103px;
       margin-bottom: 37px;

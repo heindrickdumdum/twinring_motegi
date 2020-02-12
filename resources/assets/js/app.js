@@ -9,4 +9,4 @@ headerMenu();
 //headerTopNav();
 mobiparkSlider();
 slider();
-dokidokiSlider();
+topSlider();

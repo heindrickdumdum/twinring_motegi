@@ -31,8 +31,4 @@ export default function slider() {
     }
 });
 
-// mySwiper.addEventListener('resize', function () {
-//     this.reInit();
-// });
-
 }

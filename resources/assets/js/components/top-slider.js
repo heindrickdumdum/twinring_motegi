@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 
 export default function topSlider() {
-  let mySwiper = new Swiper('.top-slider', {  
+  let topSwiper = new Swiper('.top-slider', {  
     speed: 1500,
     initialSlide: 1,
 
@@ -22,11 +22,16 @@ export default function topSlider() {
             loopedSlides: 0,
             loop: true
         }
+    },
+    on: {
+        resize: function() {
+            this.params.observer = true;
+        }
     }
 });
 
-mySwiper.addEventListener('resize', function () {
-    this.reInit();
-});
+// mySwiper.addEventListener('resize', function () {
+//     this.reInit();
+// });
 
 }

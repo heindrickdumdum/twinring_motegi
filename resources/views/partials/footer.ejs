@@ -1,10 +1,10 @@
+<% if(typeof pageId === 'undefined') { var pageId = ''; } %>
+
 <footer class="footer">
 
   <nav class="l-container footer-bottom-nav">
     <ul class="footer-top-nav-list">
-      <%
-        getData().data.footerTopNav.forEach( topLink => {
-      %>
+      <% getData().data.footerTopNav.forEach( topLink => { %>
       <li class="footer-top-nav-item">
         <a class="footer-top-nav-link" href="<%- topLink.link %>">
           <span class="footer-top-nav-icon">
@@ -72,5 +72,8 @@
   </div> <!-- end of wrap -->
 
   <script src="<%= mix('/assets/js/app.js') %>" async></script>
+  <% if(pageId == 'mobipark') { %>
+    <script src="<%= mix('/assets/js/mobipark.js') %>" async></script>
+  <% } %>
 </body>
 </html>

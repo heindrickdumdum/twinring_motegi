@@ -33,7 +33,7 @@
 
 .heading-subtext {
   display: inline-block;
-  margin-top: 15px;
+  margin-top: 20px;
   // margin: 17px 0 0 10px;
   height: 36px;
 
@@ -218,10 +218,10 @@
       width: 100%;
     }
 
-    svg {
-      width: 513px;
-      height: 34px;
-    }
+    // svg {
+    //   width: 513px;
+    //   height: 34px;
+    // }
   }
 
   &.heading-main {
@@ -503,155 +503,145 @@
   }
 }
 
-// modifier dokidoki mobipark
+// // modifier dokidoki mobipark
+// .dokidoki,
+// .mobipark {
+//   .heading-main-title {
+//     .heading-text {
+//       max-width: 497px;
+//       margin-top: 68px;
+//       margin-bottom: 79px;
+//     }
+//   }
 
-.dokidoki,
-.mobipark {
-  .heading-main-title {
-    .heading-text {
-      max-width: 497px;
-      margin-top: 68px;
-      margin-bottom: 79px;
-    }
-  }
+//   .heading-dokidoki,
+//   .heading-mobipark {
+//     .heading-text {
+//       width: auto !important;
+//       height: auto !important;
+//       margin-left: auto;
+//       margin-right: auto;
+//       font-size: 36px;
+//       letter-spacing: 0.06em;
+//       font-family: $font-holland;
+//       font-weight: bold;
+//     }
 
-  .heading-dokidoki,
-  .heading-mobipark {
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 36px;
-      letter-spacing: 0.06em;
-      font-family: $font-holland;
-      font-weight: bold;
-    }
+//     .heading-subtext {
+//       width: 100%;
+//     }
+//   }
 
-    .heading-subtext {
-      width: 100%;
-    }
-  }
+//   .heading-enjoy {
+//     .heading {
+//       margin-top: 103px;
+//       margin-bottom: 37px;
+//     }
 
-  .heading-enjoy {
-    .heading {
-      margin-top: 103px;
-      margin-bottom: 37px;
-    }
+//     .heading-text {
+//       width: auto !important;
+//       height: auto !important;
+//       font-size: 36px;
+//       letter-spacing: 0.06em;
+//       font-family: $font-holland;
+//       font-weight: 600;
+//       font-weight: bold;
+//     }
 
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      font-size: 36px;
-      letter-spacing: 0.06em;
-      font-family: $font-holland;
-      font-weight: 600;
-      font-weight: bold;
-    }
+//     .heading-subtext {
+//       width: 100%;
+//       margin-top: 0px;
+//     }
+//   }
 
-    .heading-subtext {
-      width: 100%;
-      margin-top: 0px;
-    }
-  }
+//   .heading-forest {
+//     .heading {
+//       margin-top: 25px;
+//       margin-bottom: -1px;
+//     }
 
-  .heading-forest {
-    .heading {
-      margin-top: 25px;
-      margin-bottom: -1px;
-    }
+//     .heading-text {
+//       width: auto !important;
+//       height: auto !important;
+//       font-size: 36px;
+//       letter-spacing: 0.06em;
+//       font-family: $font-holland;
+//       font-weight: bold;
+//     }
 
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      font-size: 36px;
-      letter-spacing: 0.06em;
-      font-family: $font-holland;
-      font-weight: bold;
-    }
+//     .heading-subtext {
+//       width: 100%;
+//       margin-top: 39px;
+//     }
+//   }
 
-    .heading-subtext {
-      width: 100%;
-      margin-top: 39px;
-    }
-  }
+//   .heading-net-dokidoki,
+//   .heading-net-mobipark {
+//     .heading-text {
+//       width: auto !important;
+//       height: auto !important;
+//       font-size: 32.456px;
+//       font-family: $base-font-family;
+//       letter-spacing: 0.06em;
+//       font-weight: 300;
+//     }
+//   }
 
-  .heading-net-dokidoki,
-  .heading-net-mobipark {
-    .heading-text {
-      width: auto !important;
-      height: auto !important;
-      font-size: 32.456px;
-      font-family: $base-font-family;
-      letter-spacing: 0.06em;
-      font-weight: 300;
-    }
-  }
+//   .heading-faq {
+//     .heading-text {
+//       text-align: center;
+//     }
 
-  .heading-faq {
-    .heading-text {
-      text-align: center;
-    }
+//     .heading-subtext {
+//       margin-left: auto;
+//       margin-right: auto;
+//       display: block;
+//     }
+//   }
+// }
 
-    .heading-subtext {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-    }
-  }
-}
+// .mobipark {
+//   .heading-main-title {
+//     .heading-text {
+//       max-width: 651px;
+//     }
+//   }
+// }
 
-.mobipark {
-  .heading-main-title {
-    .heading-text {
-      max-width: 651px;
-    }
-  }
-}
+// .dokidoki-video,
+// .mobipark-video {
+//   .heading-dokidoki {
+//     .heading-text {
+//       margin-top: 122px;
+//     }
 
-.dokidoki-video,
-.mobipark-video {
-  .heading-dokidoki {
-    .heading-text {
-      margin-top: 122px;
-    }
+//     .heading-subtext {
+//       margin-top: 20px;
+//     }
+//   }
+// }
+// // end modifier dokidoki mobipark
 
-    .heading-subtext {
-      margin-top: 20px;
-    }
-  }
-}
-// end modifier dokidoki mobipark
-
-// modifier mv heading
-.mv-forest-driving {
-  .mv-heading {
-    position: relative;
-    bottom: initial;
-    left: initial;
-    text-align: center;
-    width: 100%;
-  }
-
-  .mv-heading-text {
-    font-size: 45px;
-    color: $color-white;
-    display: inline-block;
-    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
-
-    @include max-screen($breakpoint-mobile) {
-      font-size: 46px;
-      color: $color-white;
-    }
-  }
-}
-
-//modifier forest driving
+//modifier forest driving cta heading image
 .heading-net-forest-driving {
   img {
-    max-width: 534px;
+    max-width: 419px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+//modifier subpage cta heading text
+.heading-net-subpage {
+  .heading-text {
+    font-size: 30px;
+  }
+}
+
+.heading-main-subpage {
+  .heading {
+    max-width: 100% !important;
+    text-align: center;
   }
 }

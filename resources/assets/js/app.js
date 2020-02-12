@@ -8,6 +8,5 @@ parkmapButton();
 headerMenu();
 //headerTopNav();
 mobiparkSlider();
-dokidokiSlider();
 slider();
 dokidokiSlider();

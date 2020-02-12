@@ -1,13 +1,15 @@
 
 .alt-feature {
   align-items: center;
+  margin-bottom: 130px;
 
   .alt-feature-image-wrapper {
     text-align: center;
   }
 
   .alt-feature-desc {
-    padding: 20px 0px;
+    max-width: 464px;
+    margin: auto;
 
     .alt-feature-desc-wrapper {
       background: url('/assets/images/frame-v2.png') no-repeat;
@@ -34,5 +36,9 @@
         }
       }
     }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }

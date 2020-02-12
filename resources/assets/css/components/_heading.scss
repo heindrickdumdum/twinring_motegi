@@ -393,6 +393,17 @@
       width: 100%;
     }
   }
+
+  &.heading-life-overflowing {
+    margin-bottom: 70px;
+  }
+
+  &.sponsors {
+    margin-bottom: 55px;
+  }
+
+
+
 }
 
 //modifier kids carbike attraction
@@ -432,6 +443,12 @@
     height: 35px;
     margin-left: auto;
     margin-right: auto;
+
+    &.hellowoods {
+      font-size: 39px;
+      height: auto;
+      max-width: none;  
+    }
 
     svg {
       width: 100%;

@@ -16,11 +16,25 @@
   }
    
   .field-introduction {
+    .field-introduction-container {
+      padding: 0;
+    }
     .map-wrapper {
-      background-image: url(../images/hellowoods/life-overflow-bg.png);
+      background-image: url(../images/hellowoods/field-intro-bg.png);
       text-align: center;
       background-repeat: no-repeat;
       background-position: center;
+      padding-top: 75px;
+
+      @include max-screen ($breakpoint-mobile) {
+        background-size: cover;
+        padding-top: 0;
+
+        .section-contents,
+        .map-image {
+          padding: 0 32px;
+        }
+      }
     }
   }
   

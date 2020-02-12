@@ -38,30 +38,38 @@
   </div>
 
   <main>
-    <section class="l-section mobipark hellowoods-info">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: 'hellowoods-heading',
-          text: 'Information',
-          alt: 'information',
-          altSubtext: '',
-          subtextvg: 'info-subtext'
-        }) %>
-      </div>
-
-      <div class="l-container">
-        <ul class="info-list">
-          <% hellowoodsInfo.forEach(item => { %>
-          <li class="info-item"><%= item.desc %></li>
-          <% }) %>
-        </ul>
-      </div>
-    </section>
+    <div class="l-section">
+      <section class="info-container">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-mobipark',
+              text: 'Information',
+              alt: 'information',
+              altSubtext: '',
+              subtextvg: 'info-subtext'
+            }) %>
+          </div>
+    
+          <div class="l-container">
+            <ul class="info-list">
+              <% hellowoodsInfo.forEach(item => { %>
+              <li class="info-item">
+                <span><%= item.desc %></span>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+      </section>
+    </div>
+    
 
     <div class="l-section">
       <div class="challenge hellowoods-life-overflowing">
         <div class="l-container">
           <div class="row">
+            <div class="u-show-sp challenge-images-sp">
+              <img src="/assets/images/hellowoods/life-overflow-images-sp.png" alt="Life Overflowing">
+            </div>
             <div class="challenge-left">
               <h2 class="heading-text">
                 <img src="/assets/images/hellowoods/life-overflow-heading.png" alt="Life Overflowing">
@@ -74,7 +82,7 @@
                 「仕組み」があります。
               </p>
             </div>
-            <div class="challenge-right">
+            <div class="u-show-pc challenge-right">
               <div class="challenge-img">
                 <div class="challenge-img1">
                   <img src="/assets/images/hellowoods/overflow-img-1.png">
@@ -93,7 +101,7 @@
     </div>
 
     <section class="field-introduction">
-      <div class="l-container-m field-introduction-container">
+      <div class="l-container field-introduction-container">
         <%- include('/partials/heading', {
           modifier: 'heading-wrap-how-to heading-wrap-center',
           text: 'Field Introduction',
@@ -110,20 +118,25 @@
           </p>
         </div>
       </div>
-      <div class="swiper-container slider">
-        <ul class="swiper-wrapper">
-          <% hellowoodsFields.forEach(item => { %>
-          <li class="swiper-slide slider-item">
-            <div class="slide-image">
-              <img src="<%- item.src -%>" alt="<%- item.alt -%>">
-            </div>
-            <span class="slide-text">
-              <%- item.desc -%>
-            </span>
-          </li>
-          <% } ) %>
-        </ul>
-      </div>
+
+      <section class="subpage-section">
+        <div class="swiper-container slider slider-dokidoki">
+          <ul class="swiper-wrapper swiper-wrapper-dokidoki-forest">
+            <%
+            hellowoodsFields.forEach(item => {
+            %>
+            <li class="swiper-slide slider-item">
+              <div class="slide-image">
+                <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+              </div>
+              <span class="slide-text">
+                <%- item.desc -%>
+              </span>
+            </li>
+            <% } ) %>
+          </ul>
+        </div>
+      </section>
     </section>
 
     <div class="l-section">
@@ -297,6 +310,60 @@
             </li>
             <% } ) %>
         </ul>
+      </div>
+    </section>
+
+    <section class="recommendation">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-recommend',
+          text: 'Recommendation',
+          altSubtext: '',
+          subtextvg: 'recommendation-title'
+        }) %>
+      </div>
+        <div class="swiper-container slider">
+          <ul class="swiper-wrapper slider-wrapper">
+            <% getData().data.recommend.forEach(item => { %>
+            <li class="swiper-slide slider-item">
+              <%- include('/partials/article-no-design', {
+                image: item.image,
+                heading: item.heading,
+                buttonLink: item.buttonLink,
+                buttonText: 'モビパーク'
+              }) %>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+    </section>
+
+    <section class="pick-up">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-pickup',
+          text: 'Pick Up',
+          altSubtext: '',
+          subtextvg: 'pickup-event'
+        }) %>
+      </div>
+      <div class="l-container">
+        <div class="pick-inner">
+          <ul class="pickup-list row">
+            <% getData().data.pickup.forEach(item => { %>
+            <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
+              <%- include('/partials/article', {
+                category: item.category,
+                image: item.image,
+                heading: item.heading,
+                date: item.date,
+                link: item.link,
+                modifier: 'pickup-article'
+              }) %>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
       </div>
     </section>
   </main>

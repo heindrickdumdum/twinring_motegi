@@ -10,7 +10,7 @@
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/bun-bun-scooter/mv-img.png') %>);"></div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dream/mv-img.jpg') %>);"></div>
       </li>
     </ul>
   </div>
@@ -19,7 +19,7 @@
     <div class="heading-wrap heading-main heading-main-bunbun">
       <h2 class="heading">
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/bun-bun-scooter/subpage-title.png') %>" alt="">
+          <img src="<%= mix('/assets/images/dream/subpage-title.png') %>" alt="">
         </span>
       </h2>
     </div>
@@ -35,7 +35,7 @@
       <span>アトラクション情報</span>
     </h3>
 
-    <p>転倒しない自立式バイクで初めての運転操作にチャレンジ。かわいいみつばちと一緒に音楽を聞きながら<br />お散歩しよう。</p>
+    <p>初めてのカートにチャレンジ。最高速度20km/hのエンジンで動く本格カートで走行して爽快感を味わってみよう。<br />全長210mのコースをを約3分間走行します。</p>
 
     <table class="table">
       <tbody>
@@ -46,38 +46,38 @@
 
         <tr class="table-row">
           <th class="table-head">所要時間</th>
-          <td class="table-col">約5分
+          <td class="table-col">約5分（走行時間3分）
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">雨天の運行</th>
-          <td class="table-col">雨天でも営業いたしております。
+          <td class="table-col">雨天などにより、コースコンディション悪化の場合、営業見合わせとなる場合がございます。
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">対象者</th>
-          <td class="table-col">3歳以上
+          <td class="table-col">年齢制限なし
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">身長制限</th>
-          <td class="table-col">なし</td>
+          <td class="table-col">身長135cm以上</td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">料金</th>
           <td class="table-col">
-            モビパークパスポート対象<br>アトラクションチケット利用：500円
+            モビパークパスポート対象<br />アトラクションチケット利用：600円
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
-
+            服装について：<br />半そで・半ズボンの場合は腕カバー・貸し出し用ズボンを装着していただきます。
           </td>
         </tr>
 
@@ -89,16 +89,16 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom',
+          'modifier': 'heading-gradient-tobottom heading-howto-dream',
           'text': 'How to Enjoy',
           'alt': 'ぶんぶんスクーターを楽しむポイント',
-          'subtextvg': 'bun-bun-scooter-subtext',
+          'subtextvg': 'dream-subtext',
           'altSubtext': '',
         }) %>
       </div>
 
       <div class="how-to-content">
-        <div class="media media-subpage media-subpage-bunbun u-clear">
+        <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
@@ -107,23 +107,15 @@
             </div>
           </div>
           <div class="media-right">
-            <h4 class="media-title"><span>転倒しないスクーターで乗り物デビュー！</span></h4>
+            <h4 class="media-title"><span>初めてのカートに挑戦！風をきってコースを疾走！</span></h4>
             <p class="media-desc">
-              スクーターのように手でアクセルとブレーキを操作。転倒しない<br>から自転車に乗れない子どもでも安心して楽しめます。
+              レース専用タイヤを装着した本格的なカートアトラクション。ホールド感のあるレーシングシートに座ると気分も最高！
             </p>
 
-            <div class="media-bottom">
-              <div class="media-note">
-                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                <div class="media-note-text">
-                  乗り物デビューできタネ！
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
-        <div class="media media-subpage media-subpage-bunbun u-clear">
+        <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
@@ -134,13 +126,39 @@
           <div class="media-right">
             <h4 class="media-title">
               <span>
-                みつばちに乗ってお花畑を散歩！
+                運転テクニックを磨いてコースを攻略！
               </span>
             </h4>
             <p class="media-desc">
-              みつばちにデザインされたスクーターでお花畑をぐるっと<br>
-              1周。写真スポットにぴったり！
+              何度か走行してマシンに慣れたら、一番速く走行できるベストラインにチャレンジしてコースを攻略しよう！
             </p>
+
+            <div class="media-bottom">
+              <div class="media-note">
+                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                <div class="media-note-text">
+                  はじめてのカートに<br />チャレンジできタネ！
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="media media-subpage u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title media-title-nohighlight"><span>より本格的なカートへステップアップ！</span></h4>
+            <p class="media-desc">
+              ドリームカートでライセンスをゲットして、<br />さらにハイスピードのチャレンジカートにステップアップしよう！
+            </p>
+
+
           </div>
         </div>
       </div>
@@ -154,16 +172,15 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            'modifier': 'heading-bunbun',
-            'text': 'ぶんぶんスクーターをもっと楽しむ',
+            'modifier': 'heading-banner-more',
+            'text': 'ドリームカートをもっと楽しむ',
             'alt': '',
             'altSubtext': '',
             'subtext': ''
           }) %>
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
-              ぶんぶんスクーターのこだわりポイントや、知っていると<br>
-              もっと楽しくなる情報を配信中しています。
+              ドリームカートのこだわりポイントや、知っているともっ<br />と楽しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action">
@@ -197,61 +214,6 @@
       </div>
     </div>
   </div>
-
-  <section class="subpage-section subpage-section-recommendation">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        'modifier': 'heading-gradient-tobottom heading-recommendation',
-        'text': 'Recommendation',
-        'alt': 'recommendation',
-        'altSubtext': '',
-        'subtextvg': 'recommendation-subtext'
-      }) %>
-    </div>
-
-    <div class="swiper-container slider">
-      <ul class="swiper-wrapper slider-wrapper">
-        <% getData().data.recommend.forEach(item => { %>
-        <li class="swiper-slide slider-item">
-          <%- include('/partials/article-no-design', {
-            image: item.image,
-            heading: item.heading,
-            buttonLink: item.buttonLink,
-            buttonText: 'モビパーク'
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
-  </section>
-
-  <section class="subpage-section subpage-section-pickup">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        'modifier': 'heading-gradient-tobottom heading-pickup',
-        'text': 'PickUp',
-        'alt': 'pickup',
-        'altSubtext': '',
-        'subtextvg': 'pickup'
-      }) %>
-    </div>
-
-    <div class="l-container">
-      <ul class="feature-list">
-        <% pickup.forEach(item => { %>
-        <li class="feature-item">
-          <%- include('/partials/article', {
-            'category': item.category,
-            'image': item.image,
-            'heading': item.heading,
-            'date': item.date,
-            'link': item.link
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
-  </section>
 
   <!-- END BOTTOM -->
 </div>

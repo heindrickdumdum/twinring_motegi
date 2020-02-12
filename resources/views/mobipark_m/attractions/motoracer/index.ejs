@@ -10,7 +10,7 @@
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/bun-bun-scooter/mv-img.png') %>);"></div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/motoracer/mv-img.jpg') %>);"></div>
       </li>
     </ul>
   </div>
@@ -19,7 +19,7 @@
     <div class="heading-wrap heading-main heading-main-bunbun">
       <h2 class="heading">
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/bun-bun-scooter/subpage-title.png') %>" alt="">
+          <img src="<%= mix('/assets/images/motoracer/subpage-title.png') %>" alt="">
         </span>
       </h2>
     </div>
@@ -35,7 +35,7 @@
       <span>アトラクション情報</span>
     </h3>
 
-    <p>転倒しない自立式バイクで初めての運転操作にチャレンジ。かわいいみつばちと一緒に音楽を聞きながら<br />お散歩しよう。</p>
+    <p>レーサー気分でEVバイクで早さを競おう。アクセル操作・スピードコントロール・コーナリングにチャレンジしてタイムを縮めよう。全長200mのコースを3周します。</p>
 
     <table class="table">
       <tbody>
@@ -46,19 +46,23 @@
 
         <tr class="table-row">
           <th class="table-head">所要時間</th>
-          <td class="table-col">約5分
+          <td class="table-col">
+            約15分（装備の装着、説明、一人ずつ練習、本番、装備外し）
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">雨天の運行</th>
-          <td class="table-col">雨天でも営業いたしております。
+          <td class="table-col">
+            雨天でも営業いたしていますが、荒天時などコースコンディションが悪化した場合には営業を中断します。
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">対象者</th>
-          <td class="table-col">3歳以上
+          <td class="table-col">
+            小学3年生以上で補助輪なし自転車に乗れる、<br />
+            もしくはモトライセンスA取得の小学1年生以上※1
           </td>
         </tr>
 
@@ -70,14 +74,16 @@
         <tr class="table-row">
           <th class="table-head">料金</th>
           <td class="table-col">
-            モビパークパスポート対象<br>アトラクションチケット利用：500円
+            モビパークパスポート対象<br />
+            アトラクションチケット利用：600円
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
-
+            ※1 対象者について：<br />小学3年生以上で補助輪なし自転車に乗れるお子さまは最初からモトレーサーにチャレンジしていただけます。モトライセンスAをお持ちであれば、小学1・2年生のお子さまもお楽しみいただけます。<br />
+            モトライセンスAは、モトツーリングにてルールを守って、足をつかずに完走できたお子さまにプレゼントいたします
           </td>
         </tr>
 
@@ -89,16 +95,16 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom',
+          'modifier': 'heading-gradient-tobottom heading-howto heading-howto-motoracer',
           'text': 'How to Enjoy',
-          'alt': 'ぶんぶんスクーターを楽しむポイント',
-          'subtextvg': 'bun-bun-scooter-subtext',
+          'alt': '',
+          'subtextvg': 'motoracer-subtext',
           'altSubtext': '',
         }) %>
       </div>
 
       <div class="how-to-content">
-        <div class="media media-subpage media-subpage-bunbun u-clear">
+        <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
@@ -107,9 +113,9 @@
             </div>
           </div>
           <div class="media-right">
-            <h4 class="media-title"><span>転倒しないスクーターで乗り物デビュー！</span></h4>
+            <h4 class="media-title"><span>MotoGPTMライダー気分を体感！</span></h4>
             <p class="media-desc">
-              スクーターのように手でアクセルとブレーキを操作。転倒しない<br>から自転車に乗れない子どもでも安心して楽しめます。
+              日本で唯一、MotoGPTM世界選手権を開催しているツインリンクもてぎならではの本格的バイクアトラクションを体感しよう！
             </p>
 
             <div class="media-bottom">
@@ -117,13 +123,13 @@
                 <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
                 <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
                 <div class="media-note-text">
-                  乗り物デビューできタネ！
+                  勇気を出して<br />タイムアタックにチャレンジできタネ！
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="media media-subpage media-subpage-bunbun u-clear">
+        <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
@@ -134,12 +140,32 @@
           <div class="media-right">
             <h4 class="media-title">
               <span>
-                みつばちに乗ってお花畑を散歩！
+                リアルなバイクを乗りこなそう！
               </span>
             </h4>
             <p class="media-desc">
-              みつばちにデザインされたスクーターでお花畑をぐるっと<br>
-              1周。写真スポットにぴったり！
+              アクセルとブレーキ、そして上手にバランスを取ってバイクを傾け、コーナーを乗りこなすテクニックをマスターしよう！
+            </p>
+          </div>
+        </div>
+        <div class="media media-subpage u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title media-title-nohighlight">
+              <span>
+                タイムアタックで記録にチャレンジ！
+              </span>
+            </h4>
+            <p class="media-desc">
+              タイムアタックは1000分の1秒まで計測。<br />
+              たくさん練習して、何度転んでもチャレンジ<br />
+              したくなるのがモトレーサー！
             </p>
           </div>
         </div>
@@ -154,16 +180,16 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            'modifier': 'heading-bunbun',
-            'text': 'ぶんぶんスクーターをもっと楽しむ',
+            'modifier': 'heading-banner-more',
+            'text': 'モトレーサーをもっと楽しむ',
             'alt': '',
             'altSubtext': '',
             'subtext': ''
           }) %>
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
-              ぶんぶんスクーターのこだわりポイントや、知っていると<br>
-              もっと楽しくなる情報を配信中しています。
+              モトレーサーのこだわりポイントや、知っているともっと<br>
+              楽しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action">

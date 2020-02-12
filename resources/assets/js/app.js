@@ -7,9 +7,9 @@ parkmapButton();
 headerMenu();
 //headerTopNav();
 
-mobiparkSlider();
-slider();
-topSlider();
+// mobiparkSlider();
+// slider();
+// topSlider();
 
 //mobiparkSlider();
 //dokidokiSlider();

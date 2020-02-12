@@ -35,6 +35,7 @@
 %>
 <% include('./../partials/data/index') %>
 <%- include('./../partials/head', { title }) -%>
+<% pageId = 'dokidoki'; %>
 
 <div class="subpage">
   <div class="mv mv-inner dokidoki-mv">
@@ -288,7 +289,7 @@
       }) %>
     </div>  
 
-    <div class="swiper-container slider">
+    <div class="swiper-container slider js-slider">
       <ul class="swiper-wrapper top-slide">
         <% forest.forEach(item => { %>
         <li class="swiper-slide slider-item">
@@ -467,7 +468,7 @@
         subtextvg: 'recommendation-title'
       }) %>
     </div>
-      <div class="swiper-container slider">
+      <div class="swiper-container slider js-slider-bottom">
         <ul class="swiper-wrapper slider-wrapper">
           <% getData().data.recommend.forEach(item => { %>
           <li class="swiper-slide slider-item">
@@ -514,4 +515,4 @@
 
 </div>
 
-<%- include('./../partials/footer') -%>
+<%- include('./../partials/footer', {pageId} ) -%>

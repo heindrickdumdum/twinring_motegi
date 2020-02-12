@@ -12,5 +12,3 @@ slider({
     }
   } // OPTIONAL
 })
-
-console.log('this page is mobipark');

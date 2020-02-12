@@ -7,7 +7,7 @@
 .sns-item {
   width: 24px;
   height: 24px;
-  margin: 0 23px;
+  margin: 0 20px;
 
   svg {
     width: 100%;
@@ -15,11 +15,21 @@
   }
 
   &.sns-item-twitter {
-    width: 42px;
-    height: 39px;
+    margin-left: 9px;
+    width: 45px;
+    height: 42px;
   }
 
   &.sns-item-youtube {
-    height: 26px;
+    margin-left: 7px;
+    width: 36px;
+    height: 29px;
+  }
+
+  &.sns-item-rider {
+    padding-left: 40px;
+    width: calc(139px + 44px);
+    height: auto;
+    border-left: 1px solid rgba($color-mineshaft, .2);
   }
 }

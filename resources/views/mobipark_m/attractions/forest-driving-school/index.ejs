@@ -26,7 +26,7 @@
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-forest-driving">
+    <div class="heading-wrap heading-main heading-main-forest-driving heading-main-subpage">
       <h2 class="heading">
         <span class="heading-texts u-show-pc">
           <img src="<%= mix('/assets/images/forest-driving/forest-driving-title.png') %>" alt="forest-driving">
@@ -242,7 +242,7 @@
         subtextvg: 'recommendation-title'
       }) %>
     </div>
-      <div class="swiper-container slider">
+      <div class="swiper-container slider" id="js-recommendation-slider">
         <ul class="swiper-wrapper slider-wrapper">
           <% getData().data.recommend.forEach(item => { %>
           <li class="swiper-slide slider-item">

@@ -2,47 +2,26 @@ import CONST from './../constants';
 
 export default function headerTopNav() {
   const headerTopButton = document.querySelectorAll('.js-top-nav-button'),
-        headerTopSub = document.querySelectorAll('.header-top-nav-sub');
+        headerTopSub = document.querySelectorAll('.header-top-nav-sub'),
+        headerButtonLang = document.querySelector('.js-button-lang'),
+        headerLang = document.querySelector('.js-header-lang');
 
   let mediaQuery = window.matchMedia('(max-width: 749px)');
 
-  headerMenuController(mediaQuery);
-  mediaQuery.addListener(headerMenuController);
+  headerTopNavController(mediaQuery);
+  mediaQuery.addListener(headerTopNavController);
 
-  function headerMenuController({ matches }) {
+  function headerTopNavController({ matches }) {
       if ( !matches ) {
 
-      headerTopSub.forEach( function(el) {
-        el.addEventListener( 'mouseenter', function() {
+      headerButtonLang.addEventListener('click', (e) => {
+        e.preventDefault();
+        let buttonThis = e.currentTarget;
 
-          el.classList.add(CONST.VISIBLE_CLASS)
+        buttonThis.classList.toggle(CONST.IS_ACTIVE);
+        headerLang.classList.toggle(CONST.IS_ACTIVE);
+      })
 
-        });
-      });
-
-      headerTopButton.forEach( function(el) {
-
-        el.addEventListener( 'click', function(e) {
-          e.preventDefault();
-        });
-
-        el.addEventListener( 'mouseenter', function() {
-
-          if (el.children[1] != null) {
-            el.children[1].classList.add(CONST.VISIBLE_CLASS)
-          }
-
-        });
-
-        el.addEventListener( 'mouseleave', function() {
-
-          if (el.children[1] != null) {
-            el.children[1].classList.remove(CONST.VISIBLE_CLASS)
-          }
-
-        });
-
-      });
     }
   }
 }

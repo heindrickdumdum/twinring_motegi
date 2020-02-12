@@ -17,7 +17,7 @@
                 </a>
               </li>
               <li class="header-top-others-item">
-                <a class="header-top-others-link" href="#">
+                <a class="header-top-others-link js-button-lang" href="#">
                   <span class="header-top-others-lang-text">LANGUAGE
                     <i class="header-top-others-lang-icon">
                       <svg>
@@ -27,6 +27,17 @@
                     </i>
                   </span>
                 </a>
+                <ul class="header-lang js-header-lang">
+                  <li class="header-lang-item">
+                    <a class="is-active" href="#">JP</a>
+                  </li>
+                  <li class="header-lang-item">
+                    <a href="#">EN</a>
+                  </li>
+                  <li class="header-lang-item">
+                    <a href="#">CH</a>
+                  </li>
+                </ul>
               </li>
             </ul>
             <nav class="header-top-nav">
@@ -75,11 +86,15 @@
     <div class="header-sub-content-wrap" id="js-header-sub">
       <div class="l-container header-sub-container">
         <div class="header-sub-content">
-          <span class="header-sub-close" id="js-header-close">CLOSE</span>
+          <div class="header-sub-content-inner-wrap">
+            <span class="header-sub-close" id="js-header-close">CLOSE</span>
 
-          <%- include('/partials/header-content-access') %>
-          <%- include('/partials/header-content-attraction') %>
-          <%- include('/partials/header-content-motorsports') %>
+            <%- include('/partials/header-content-access') %>
+            <%- include('/partials/header-content-attraction') %>
+            <%- include('/partials/header-content-motorsports') %>
+            <%- include('/partials/header-content-camp') %>
+            <%- include('/partials/header-content-restaurant') %>
+          </div>
         </div>
       </div>
     </div>

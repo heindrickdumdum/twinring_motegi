@@ -1,16 +1,5 @@
-.mobipark-info {
-  margin-top: 80px  ;
-
-  .heading-text {
-    max-width: 167px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .heading-subtext {
-    max-width: 161px;
-    width: 100%;
-  }
+.info-container {
+  margin-top: 80px ;
 
   .info-list {
     max-width: 1021px;
@@ -20,7 +9,8 @@
     overflow-y: scroll;
 
     .info-item {
-      padding: 20px 20px 20px 50px;
+      padding-left: 50px;
+      padding-right: 20px;
       font-size: 18px;   
       letter-spacing: 0.16em;
       font-weight: 600;
@@ -37,8 +27,13 @@
         content: "";
         position: absolute;
         left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 7px;
+      }
+
+      span {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: block;
       }
     }
   }

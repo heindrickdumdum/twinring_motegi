@@ -18,14 +18,16 @@
     width: 100%;
     z-index: 1;
   }
-}
 
-.banner-cta-inner {
-  position: relative;
-  z-index: $z-max;
-}
+  .banner-cta-inner {
+    position: relative;
+    z-index: $z-max;
+  }
 
-.banner-cta-bottom-inner {
-  position: relative;
-  z-index: 2;
+  .banner-cta-bottom-inner {
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative;
+    z-index: 2;
+  }
 }

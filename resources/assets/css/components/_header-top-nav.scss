@@ -1,0 +1,119 @@
+.header-top-nav {
+  margin-top: 23px;
+}
+
+.header-top-nav-sub {
+  display: flex;
+  width: 347px;
+  padding: 20px 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: $color-white;
+  border-radius: 5px;
+  text-align: left;
+  border: 1px solid $color-green;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity $duration $ease-in-out;
+
+  &.is-visible {
+    opacity: 1;
+    z-index: $z-max;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 58px;
+    top: -7px;
+    width: 12px;
+    height: 12px;
+    background-color: $color-white;
+    border-top: 1px solid $color-green;
+    border-right: 1px solid $color-green;
+    transform: rotate(-45deg);
+  }
+
+  ul {
+    display: block;
+    padding: 0 20px;
+
+    &:last-child {
+      padding-left: 30px;
+      border-left: 1px solid #eaeaea;
+      width: calc(100% - 150px);
+    }
+  }
+}
+
+.header-top-nav-item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 25px;
+  padding-bottom: 16px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+
+  &:hover {
+    .header-top-nav-sub {
+      opacity: 1;
+      z-index: $z-max;
+    }
+  }
+}
+
+.header-top-nav-link {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-mineshaft;
+  transition: color $duration $ease-in-out;
+
+  &:hover {
+    @include query($breakpoint-mobile, min) {
+      color: $color-green;
+    }
+  }
+}
+
+.header-top-nav-sub-item {
+  display: block;
+  margin-bottom: 21px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.header-top-nav-sub-link {
+  padding-left: 15px;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-mineshaft;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  position: relative;
+  transition: color $duration $ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 1px;
+    background-color: $color-green;
+  }
+
+  &:hover {
+    @include query($breakpoint-mobile, min) {
+      color: $color-green;
+    }
+  }
+}

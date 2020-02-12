@@ -1,17 +1,18 @@
 import Swiper from 'swiper';
 
-export default function dokidokiSlider() {
-  let dokidokiSwiper = new Swiper('.dokidoki .swiper-container', {  
+export default function topSlider() {
+  let mySwiper = new Swiper('.top-slider', {  
     speed: 1500,
-    initialSlide: 2,
+    initialSlide: 1,
 
     breakpoints: {
         1280: {
-            slidesPerView: 3.5,
-            spaceBetween: 50,
-            loopedSlides: 0,
+            slidesPerView: 1.5,
+            spaceBetween: 10,
             initialSlide: 1,
             slidesPerGroup: 3,
+            loop: true,
+            centeredSlides: true
         },
         375: {
             spaceBetween: 10,           
@@ -24,7 +25,7 @@ export default function dokidokiSlider() {
     }
 });
 
-dokidokiSwiper.on('resize', function () {
+mySwiper.addEventListener('resize', function () {
     this.reInit();
 });
 

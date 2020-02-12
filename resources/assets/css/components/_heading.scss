@@ -606,5 +606,17 @@
   .heading {
     max-width: 100% !important;
     text-align: center;
+
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+// modifier heading main subpage forest driving
+.heading-main-forest-driving {
+  img {
+    max-width: 651px;
+    width: 100%;
   }
 }

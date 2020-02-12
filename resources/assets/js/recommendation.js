@@ -1,10 +1,9 @@
-import Swiper from 'swiper';
+import slider from './components/slider';
 
-export default function slider(params) {
-  if (!params.id) return;
-  if (!params.target) return;
-  
-  const defaultOptions = {
+slider({
+  id: 'recommendationSlider', // REQUIRED
+  target: '#js-recommendation-slider', // REQUIRED
+  options: {
     speed: 1500,
     initialSlide: 2,
     centeredSlides: false,
@@ -32,9 +31,7 @@ export default function slider(params) {
         this.params.observer = true;
       }
     }
-  
-  }
+  } // OPTIONAL
+})
 
-  const config = !params.options ? defaultOptions : params.options;
-  params.id = new Swiper(params.target, config);
-}
+console.log('this page is mobipark');

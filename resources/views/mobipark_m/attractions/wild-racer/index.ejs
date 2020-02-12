@@ -10,9 +10,9 @@
   <div class="mv mv-subpage mv-wild-racer">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.jpg') %>);"></div>
+        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/wild-racer/mv-img.png') %>);"></div>
 
-        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/forest-driving/mobile-mv-img.png') %>);"></div>
+        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/wild-racer/mv-img.png') %>);"></div>
       </li>
     </ul>
 
@@ -27,7 +27,7 @@
 
   <div class="subpage-inner">
     <div class="l-section-title">
-      <div class="heading-wrap heading-main heading-main-wild-racer">
+      <div class="heading-wrap heading-main heading-main-wild-racer heading-main-subpage">
         <h2 class="heading">
           <span class="heading-text u-show-pc">
             <img src="<%= mix('/assets/images/wild-racer/wildracer-title.png') %>" alt="forest-driving">
@@ -108,7 +108,7 @@
           'modifier': 'heading-gradient-tobottom heading-howto-wildracer',
           'text': 'How to Enjoy',
           'alt': '',
-          'subtextvg': 'enjoy-wildracer-title',
+          'subtextvg': 'wildracer-enjoy-point-title',
           'altSubtext': '',
         }) %>
       </div>
@@ -183,8 +183,8 @@
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
             'modifier': 'heading-net-acro-x',
-            'text': 'ワイルドレーサーをもっと楽しむ',
-            'alt': '',
+            'text': '<img src='+ mix('/assets/images/wild-racer/wildracer-enjoy-more-title.png') +' alt="ワイルドレーサーをもっと楽しむ">',
+            'alt': 'ワイルドレーサーをもっと楽しむ',
             'altSubtext': '',
             'subtextvg': ''
           }) %>
@@ -194,7 +194,7 @@
               っと楽しくなる情報を配信中しています。
             </p>
           </div>
-          <div class="l-button l-button-call-to-action">
+          <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
             <%- include('/partials/button', {
               'modifier': 'button-acro-x',
               'text': 'もっと見る',
@@ -226,7 +226,60 @@
     </div>
   </div>
 
-  <!-- will add later -->
+  <section class="recommendation">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-recommend',
+        text: 'Recommendation',
+        altSubtext: '',
+        subtextvg: 'recommendation-title'
+      }) %>
+    </div>
+      <div class="swiper-container slider">
+        <ul class="swiper-wrapper slider-wrapper">
+          <% getData().data.recommend.forEach(item => { %>
+          <li class="swiper-slide slider-item">
+            <%- include('/partials/article-no-design', {
+              image: item.image,
+              heading: item.heading,
+              buttonLink: item.buttonLink,
+              buttonText: 'モビパーク'
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+  </section>
+  
+  <section class="pick-up">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-pickup',
+        text: 'Pick Up',
+        altSubtext: '',
+        subtextvg: 'pickup-event'
+      }) %>
+    </div>
+    
+    <div class="l-container">
+      <div class="pick-inner">
+        <ul class="pickup-list row">
+          <% getData().data.pickup.forEach(item => { %>
+          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
+            <%- include('/partials/article', {
+              category: item.category,
+              image: item.image,
+              heading: item.heading,
+              date: item.date,
+              link: item.link,
+              modifier: 'pickup-article'
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- END BOTTOM -->
 </div>

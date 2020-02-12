@@ -1,3 +1,5 @@
+<% if(typeof pageId === 'undefined') { var pageId = ''; } %>
+
 <footer class="footer">
 
   <nav class="footer-top-nav-list-wrap">
@@ -71,5 +73,10 @@
   </div> <!-- end of wrap -->
 
   <script src="<%= mix('/assets/js/app.js') %>" async></script>
+  <script src="<%= mix('/assets/js/recommendation.js') %>" async></script>
+
+  <% if(pageId == 'mobipark') { %>
+    <script src="<%= mix('/assets/js/mobipark.js') %>" async></script>
+  <% } %>
 </body>
 </html>

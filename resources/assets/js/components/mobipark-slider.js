@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 
 export default function mobiparkSlider() {
-  let mobiparkSwiper = new Swiper('.slider-container', {
+  let mobiparkSwiper = new Swiper('.slider-container-mobipark', {
     init: true,
     speed: 500,
     pagination: {

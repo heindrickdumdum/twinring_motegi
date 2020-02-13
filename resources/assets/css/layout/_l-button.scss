@@ -20,3 +20,12 @@
 .l-button-call-to-action-subpage {
   margin-top: 25px;
 }
+
+//modifier SP
+@include max-screen($breakpoint-mobile) {
+  .l-button-kids-carbike {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -611,3 +611,10 @@
 .mv-image-subpage {
   background-position-y: 25%;
 }
+
+//modifier for SP
+@include max-screen($breakpoint-mobile) {
+  .mv-today-mobipark {
+    display: none;
+  }
+}

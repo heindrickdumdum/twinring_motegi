@@ -595,8 +595,9 @@
 .map {
   .heading-wrap {
     .heading-subtext {
-      max-width: 319px;
-      margin-top: 0px;
+      // max-width: 319px;
+      // margin-top: 0px;
+      display: block;
     }
   }
 }
@@ -628,7 +629,8 @@
 
   .heading-title-adventure {
     .heading-subtext {
-      max-width: 443px;
+      // max-width: 443px;
+      display: block;
     }
   }
 }
@@ -781,3 +783,31 @@
   }
 }
 
+//modifier for SP
+@include max-screen($breakpoint-mobile) {
+  .subpage-mobipark {
+    .heading-text {
+      font-size: 45px;
+    }
+
+    .heading-subtext {
+      min-height: 47px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .heading-info {
+      .heading-subtext {
+        min-height: 47px;
+      }
+    }
+
+    .heading-kids-carbike-attraction {
+      .heading-subtext {
+        min-height: 111px;
+      }
+    }
+  }
+}

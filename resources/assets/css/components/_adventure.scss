@@ -16,6 +16,10 @@
   height: 460px;
   position: relative;
   background-size: cover;
+
+  @include max-screen ($breakpoint-mobile) {
+    height: 200px;
+  }
 }
 
 .adventure-image-logo {
@@ -26,6 +30,17 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: $z-min + 1;
+
+  @include max-screen($breakpoint-mobile) {
+    max-width: 200px;
+  }
+
+  &.hellowoods {
+    bottom: -100px;
+    @include max-screen($breakpoint-mobile) {
+      bottom: -60px;
+    }
+  }
 }
 
 .adventure-content-copy {

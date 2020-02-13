@@ -4,6 +4,7 @@
 <%- include('./../partials/data/index') -%>
 <%- include('/partials/head', { title }) -%>
 
+<% pageId = 'hellowoods'; %>
 
 <div class="hellowoods-wrapper">
   <div class="mv mv-hellowoods">
@@ -11,11 +12,6 @@
       <li class="mv-item">
         <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/mv-img.png') %>);"></div>
         <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/mv-img-sp.png') %>);"></div>
-        <h2 class="u-show-sp mv-heading">
-          <span class="mv-heading-texts">
-            メガジップライン つばさ
-          </span>
-        </h2>
       </li>
     </ul>
 
@@ -42,7 +38,7 @@
       <section class="info-container">
           <div class="l-section-title">
             <%- include('/partials/heading', {
-              modifier: 'heading-mobipark',
+              modifier: 'heading-wrap-center heading-mobipark',
               text: 'Information',
               alt: 'information',
               altSubtext: '',
@@ -119,26 +115,26 @@
         </div>
       </div>
 
-      <section class="subpage-section">
-        <div class="swiper-container slider slider-dokidoki">
-          <ul class="swiper-wrapper swiper-wrapper-dokidoki-forest">
-            <%
-            hellowoodsFields.forEach(item => {
-            %>
-            <li class="swiper-slide slider-item">
-              <div class="slide-image">
-                <img src="<%- item.src -%>" alt="<%- item.alt -%>">
-              </div>
-              <span class="slide-text">
-                <%- item.desc -%>
-              </span>
-            </li>
-            <% } ) %>
-          </ul>
-        </div>
-      </section>
+
     </section>
 
+    <section class="top-slide l-section">
+      <div class="swiper-container slider js-slider">
+        <ul class="swiper-wrapper top-slide">
+          <% hellowoodsFields.forEach(item => { %>
+          <li class="swiper-slide slider-item">
+            <div class="top-slider-image">
+              <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+            </div>
+            <span class="top-slider-text">
+              <%- item.desc -%>
+            </span>
+          </li>
+          <% } ) %>
+        </ul>
+      </div>
+    </section>
+    
     <div class="l-section">
       <section class="adventure">
         <div class="l-section-title">
@@ -190,7 +186,7 @@
       </div>
     </section>
 
-    <div class="l-section block-image">
+    <div class=" block-image">
       <div class="l-container">
         <ul class="block-image-list">
           <%
@@ -228,7 +224,7 @@
       </div>
     </div>
 
-    <section class="l-section faq-file-dl">
+    <section class=" faq-file-dl">
       <div class="l-section-title">
         <%- include('/partials/heading', {
           modifier: '',
@@ -253,7 +249,7 @@
 
 
 
-    <div class="l-section call-to-action">
+    <div class="call-to-action">
       <div class="l-container">
         <div class="call-to-action-wrapper">
           <div class="call-to-action-inner">
@@ -372,4 +368,4 @@
 
 
 
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId}) -%>

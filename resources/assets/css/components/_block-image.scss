@@ -12,6 +12,11 @@
     height: 284px;
     background-color: $color-light;
   }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
 }
 
 .block-image-list {

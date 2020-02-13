@@ -418,6 +418,9 @@
     svg {
       width: 520px;
       height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
     }
   }
 
@@ -426,6 +429,9 @@
     svg {
       width: 520px;
       height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
     }
   }
 
@@ -434,6 +440,9 @@
     svg {
       width: 520px;
       height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
     }
   }
 
@@ -442,6 +451,9 @@
     svg {
       width: 513px;
       height: 34px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
     }
   }
 
@@ -460,6 +472,9 @@
       margin-top: 10px;
       max-width: 435px;
       width: 100%;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
     }
   }
 
@@ -478,6 +493,9 @@
     svg {
       width: 389px;
       height: 34px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
     }
 
   }

@@ -1,6 +1,10 @@
 .l-section {
   padding-bottom: 95px;
 
+  @include max-screen($breakpoint-mobile) {
+    padding-bottom: 0;
+  }
+
   &.l-section-hotel-twin {
     padding-bottom: 70px;
   }
@@ -8,4 +12,7 @@
 
 .l-section-inner {
   padding: 0 90px;
+  @include max-screen($breakpoint-mobile) {
+    padding: 0 0 40px;
+  }
 }

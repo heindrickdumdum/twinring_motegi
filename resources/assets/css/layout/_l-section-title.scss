@@ -5,6 +5,10 @@
 .l-section-title-adventure {
   position: relative;
   z-index: $z-min + 2;
+
+  &.hellowoods {
+    position: initial;
+  }
 }
 
 /*Modifier*/

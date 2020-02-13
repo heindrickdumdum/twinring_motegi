@@ -17,6 +17,10 @@
     margin-top: -100px;
     width: 100%;
     z-index: 1;
+
+    @include max-screen($breakpoint-mobile) {
+      height: 190px;
+    }
   }
 
   .banner-cta-inner {

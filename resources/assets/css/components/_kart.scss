@@ -35,7 +35,7 @@
   }
 
   @include max-screen($breakpoint-mobile) {
-    margin-bottom: 18px;
+    margin: 0 auto 18px;
   }
 
 

@@ -553,40 +553,7 @@
 // END sumika mv
 
 // modifier mv heading forest driving
-.mv-forest-driving {
-  position: relative;
 
-  .mv-container {
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .mv-heading {
-    position: relative;
-    bottom: initial;
-    left: initial;
-    text-align: center;
-    width: 100%;
-  }
-
-  .mv-heading-text {
-    font-size: 45px;
-    color: $color-white;
-    display: inline-block;
-    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
-
-    @include max-screen($breakpoint-mobile) {
-      font-size: 46px;
-      color: $color-white;
-      letter-spacing: 0.1em;
-      text-shadow: 0px 8px 11px rgba(0, 0, 0, 0.35);
-    }
-  }
-
-}
 // end modifier forest driving school
 
 .mv-subpage {
@@ -613,7 +580,7 @@
 
     span {
       color: $color-white;
-      text-shadow: 0 2px 8px $color-black;
+      text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
       font-size: 23px;
       font-weight: 300;
 

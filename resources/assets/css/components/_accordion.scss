@@ -51,6 +51,10 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 2;
+  
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+  }
 }
 
 .accordion-content {

@@ -1,6 +1,6 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" id="js-viewport">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta property="og:locale" content="ja_JP">
 <meta property="fb:admins" content="">
@@ -14,5 +14,28 @@
 <link rel="shortcut icon" href="assets/images/common/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="assets/images/common/apple-touch-icon-precomposed.png">
 <link rel="stylesheet" href="<%= mix('/assets/css/app.css') %>">
+
+<script>
+  if (window.screen.width < 375) {
+    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
+  } else if (window.screen.width >= 375) {
+    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=1, user-scalable=yes');
+  }
+</script>
+
+<!-- resize for tab -->
+<script>
+  (function () {
+    var ua = navigator.userAgent;
+    var isIpad = (ua.indexOf('iPad') > 0);
+    var isAndroidTab = (ua.indexOf('Android') > 0 && ua.match(/Mobile/i) == null);
+    var tab = isIpad || isAndroidTab;
+    var minWidth = tab ? 1240 : 'device-width';
+    var initialScale = tab ? window.parent.screen.width / minWidth : 1;
+    if (tab) {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="viewport" content="width=' + minWidth + ',initial-scale=' + initialScale + '">');
+    }
+  })()
+</script>
 
 <script> document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>

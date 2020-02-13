@@ -20,6 +20,7 @@
 @import "components/wrap";
 @import "components/heading";
 @import "components/header";
+@import "components/header-sp";
 @import "components/header-sub";
 @import "components/header-top-nav";
 @import "components/mv";
@@ -63,10 +64,13 @@
 @import "components/hellowoods-information";
 @import "components/alternate-feature";
 @import "components/steps";
+@import "components/step-item";
 @import "components/comparison";
 @import "components/kart";
+@import "components/youtube";
 @import "components/subpage";
 @import "components/column-anchor";
+@import "components/craft-menu";
 
 @import 'layout/grid';
 @import "layout/l-container";
@@ -80,5 +84,5 @@
 @import "layout/l-adventure";
 @import "layout/l-racing-kart";
 @import "layout/l-note";
+@import "layout/l-youtube";
 @import "layout/l-column-anchor";
-

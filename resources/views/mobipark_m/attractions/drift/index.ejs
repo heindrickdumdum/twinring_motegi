@@ -6,20 +6,26 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
-<div class="subpage subpage-bunbun">
+<div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
         <div class="mv-image" style="background-image:url(<%= mix('/assets/images/drift/mv-img.jpg') %>);"></div>
       </li>
     </ul>
+
+    <h2 class="mv-heading mv-heading-subpage">
+      <span class="mv-heading-text">
+        ドリフトS
+      </span>
+    </h2>
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-bunbun">
+    <div class="heading-wrap heading-main heading-main-drift">
       <h2 class="heading">
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/drift/subpage-title.png') %>" alt="">
+          <img src="<%= mix('/assets/images/drift/drfit-color-title.png') %>" alt="">
         </span>
       </h2>
     </div>
@@ -88,11 +94,11 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom heading-howto-drift',
-          'text': 'How to Enjoy',
-          'alt': '',
-          'subtextvg': 'drift-subtext',
-          'altSubtext': '',
+          modifier: 'heading-gradient-tobottom heading-howto-drift',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'drift-enjoy-point-title',
+          altSubtext: '',
         }) %>
       </div>
 
@@ -172,11 +178,11 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            'modifier': 'heading-banner-more',
-            'text': 'ドリフトSをもっと楽しむ',
-            'alt': '',
-            'altSubtext': '',
-            'subtext': ''
+            modifier: 'heading-banner-more',
+            imgPath: mix('/assets/images/drift/drift-enjoy-more-title.png'),
+            text: '',
+            alt: 'ドリフトSをもっと楽しむ',
+            altSubtext: ''
           }) %>
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
@@ -185,9 +191,9 @@
           </div>
           <div class="l-button l-button-call-to-action">
             <%- include('/partials/button', {
-              'modifier': 'button-sumika',
-              'text': 'もっと見る',
-              'link': '#'
+              modifier: 'button-sumika',
+              text: 'もっと見る',
+              link: '#'
             }) %>
           </div>
           <span class="call-to-action-dot call-to-action-dot-1">
@@ -214,6 +220,10 @@
       </div>
     </div>
   </div>
+
+  <%- include('/partials/recommendation') -%>
+
+  <%- include('/partials/pickup') -%>
 
   <!-- END BOTTOM -->
 </div>

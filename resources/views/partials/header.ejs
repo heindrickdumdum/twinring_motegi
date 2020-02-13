@@ -6,7 +6,7 @@
         <div class="l-header-top">
           <h1 class="l-header-top-logo">
             <a class="header-logo" href="/">
-              <img src="<%= mix('/assets/images/logo.svg') %>" alt="Twin Ring Motegi">
+              <img src="<%= mix('/assets/images/logo.svg') %>" alt="森の中のモビリティテーマパークツインリンクもてぎ">
             </a>
           </h1>
           <div class="l-header-top-right">
@@ -20,10 +20,9 @@
                 <a class="header-top-others-link js-button-lang" href="#">
                   <span class="header-top-others-lang-text">LANGUAGE
                     <i class="header-top-others-lang-icon">
-                      <svg>
-                        <title>arrow-down</title>
-                        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-arrow-down') %>"></use>
-                      </svg>
+                      <%- include('/partials/svg', {
+                        name: 'arrow-down'
+                      }) %>
                     </i>
                   </span>
                 </a>

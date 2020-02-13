@@ -1,4 +1,5 @@
 .hellowoods-wrapper {
+  .l-container-m {max-width: 1021px;margin: 0 auto;}
   .bg-green {background-color: #4fae32;}
   .bg-gray {background-color: #9c9c9c;}
 
@@ -13,66 +14,30 @@
       }
     }
   }
-  
-  .life-overflowing {
-    background-image: url(../images/hellowoods/life-overflow-bg.png);
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: 100% 10%;
-
-    .life-contents {
-      position: relative;
-      display: flex;
-      min-height: 700px;
-      align-items: center;
-      line-height: 2;
-  
-  
-      .col-texts {
-        width: 100%;
-        max-width: 750px;
-
-        .life-desc {
-          font-size: 20px;
-        }
-      }
-  
-      .col-images {
-  
-        .life-image {
-          position: absolute;
-    
-          &.life-img-1 {
-            max-width: 150px;
-            top: 0;
-          }
-          
-          &.life-img-2 {
-            max-width: 400px;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);      
-          }
-    
-          &.life-img-3 {
-            max-width: 150px;
-            bottom: 0;
-          }
-        }
-      }
-      
-    }
-  }
-  
+   
   .field-introduction {
+    .field-introduction-container {
+      padding: 0;
+    }
     .map-wrapper {
-      background-image: url(../images/hellowoods/life-overflow-bg.png);
+      background-image: url(../images/hellowoods/field-intro-bg.png);
       text-align: center;
       background-repeat: no-repeat;
-      padding: 50px;
       background-position: center;
+      padding-top: 75px;
+
+      @include max-screen ($breakpoint-mobile) {
+        background-size: cover;
+        padding-top: 0;
+
+        .section-contents,
+        .map-image {
+          padding: 0 32px;
+        }
+      }
     }
   }
+  
   .text-ribbon {
     position: absolute;
     top: 30px;

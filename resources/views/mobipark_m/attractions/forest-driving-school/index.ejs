@@ -6,6 +6,8 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
+<% pageId = 'mobipark-subpage' %>
+
 <div class="subpage">
   <div class="mv mv-subpage mv-forest-driving">
     <ul class="mv-list">
@@ -242,7 +244,7 @@
         subtextvg: 'recommendation-title'
       }) %>
     </div>
-      <div class="swiper-container slider" id="js-recommendation-slider">
+      <div class="swiper-container slider js-slider-bottom">
         <ul class="swiper-wrapper slider-wrapper">
           <% getData().data.recommend.forEach(item => { %>
           <li class="swiper-slide slider-item">
@@ -291,4 +293,4 @@
   <!-- END BOTTOM -->
 </div>
 
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId}) -%>

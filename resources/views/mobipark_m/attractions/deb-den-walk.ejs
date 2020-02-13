@@ -5,6 +5,9 @@
 
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
+
+<% pageId = 'mobipark-subpage'; %>
+
 <div class="subpage subpage-acro-x">
   <div class="mv mv-subpage">
     <ul class="mv-list">
@@ -96,11 +99,11 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom heading-howto-debden',
-          'text': 'How to Enjoy',
-          'alt': 'おさんぽでんでんを楽しむポイント',
-          'subtextvg': 'osanpo-enjpy-point-title',
-          'altSubtext': '',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-debden',
+          text: 'How to Enjoy',
+          alt: 'おさんぽでんでんを楽しむポイント',
+          subtextvg: 'osanpo-enjpy-point-title',
+          altSubtext: '',
         }) %>
       </div>
 
@@ -179,11 +182,11 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            'modifier': 'heading-net-deb-den',
-            'text': '<img src='+ mix('/assets/images/deb-den/osanpo-enjoy-more-title.png') +' alt="enjoy more">',
-            'alt': 'アクロエックスをもっと楽しむ',
-            'altSubtext': '',
-            'subtextvg': ''
+            modifier: 'heading-net-subpage heading-banner-more heading-net-deb-den',
+            alt: 'アクロエックスをもっと楽しむ',
+            subtext: mix('/assets/images/deb-den/osanpo-enjoy-more-title.png'),
+            altSubtext: 'アクロエックスをもっと楽しむ',
+            subtextvg: ''
           }) %>
 
           <div class="call-to-action-description">
@@ -193,9 +196,9 @@
           </div>
           <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
             <%- include('/partials/button', {
-              'modifier': 'button-deb-den',
-              'text': 'もっと見る',
-              'link': '#'
+              modifier: 'button-deb-den',
+              text: 'もっと見る',
+              link: '#'
             }) %>
           </div>
           <span class="call-to-action-dot call-to-action-dot-1">
@@ -223,63 +226,14 @@
     </div>
   </div>
 
-  <section class="recommendation">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-recommend',
-        text: 'Recommendation',
-        altSubtext: '',
-        subtextvg: 'recommendation-title'
-      }) %>
-    </div>
-      <div class="swiper-container slider">
-        <ul class="swiper-wrapper slider-wrapper">
-          <% getData().data.recommend.forEach(item => { %>
-          <li class="swiper-slide slider-item">
-            <%- include('/partials/article-no-design', {
-              image: item.image,
-              heading: item.heading,
-              buttonLink: item.buttonLink,
-              buttonText: 'モビパーク'
-            }) %>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
-  </section>
-  
-  <section class="pick-up">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-pickup',
-        text: 'Pick Up',
-        altSubtext: '',
-        subtextvg: 'pickup-event'
-      }) %>
-    </div>
-    
-    <div class="l-container">
-      <div class="pick-inner">
-        <ul class="pickup-list row">
-          <% getData().data.pickup.forEach(item => { %>
-          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
-            <%- include('/partials/article', {
-              category: item.category,
-              image: item.image,
-              heading: item.heading,
-              date: item.date,
-              link: item.link,
-              modifier: 'pickup-article'
-            }) %>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <!-- recommendation module -->
+  <%- include('/partials/recommendation') -%>
+
+  <!-- pick up module -->
+  <%- include('/partials/pickup') -%>
 
   <!-- END BOTTOM -->
 
 </div>
 
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId}) -%>

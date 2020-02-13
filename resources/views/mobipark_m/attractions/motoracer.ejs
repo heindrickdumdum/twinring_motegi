@@ -6,26 +6,29 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
-<div class="subpag">
+<% pageId = 'mobipark-subpage'; %>
+
+<div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/moto-touring/mv-img.jpg') %>);"></div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/motoracer/mv-img.jpg') %>);"></div>
       </li>
     </ul>
 
-    <h2 class="mv-heading mv-heading-subpage">
+    <h1 class="mv-heading mv-heading-subpage">
       <span class="mv-heading-text">
-        モトツーリング
+        モトレーサー
       </span>
-    </h2>
+    </h1>
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-moto-touring">
+    <div class="heading-wrap heading-main heading-main-racer">
       <h2 class="heading">
+        <span class="u-title-hidden">Motor Racer</span>
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/moto-touring/moto-color-title.png') %>" alt="">
+          <img src="<%= mix('/assets/images/motoracer/motor-color-title.png') %>" alt="">
         </span>
       </h2>
     </div>
@@ -33,7 +36,7 @@
     <!-- YOUTUBE -->
     <div class="subpage-banner">
       <div class="subpage-banner-inner">
-        <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img class="" src="<%= mix('https://via.placeholder.com/2042x946') %>" alt="">
       </div>
     </div>
 
@@ -41,7 +44,7 @@
       <span>アトラクション情報</span>
     </h3>
 
-    <p>初めてのカートにチャレンジ。最高速度20km/hのエンジンで動く本格カートで走行して爽快感を味わってみよう。<br />全長210mのコースをを約3分間走行します。</p>
+    <p>レーサー気分でEVバイクで早さを競おう。アクセル操作・スピードコントロール・コーナリングにチャレンジしてタイムを縮めよう。全長200mのコースを3周します。</p>
 
     <table class="table">
       <tbody>
@@ -53,41 +56,43 @@
         <tr class="table-row">
           <th class="table-head">所要時間</th>
           <td class="table-col">
-            約5分（走行時間3分）
+            約15分（装備の装着、説明、一人ずつ練習、本番、装備外し）
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">雨天の運行</th>
           <td class="table-col">
-            雨天などにより、コースコンディション悪化の場合、営業見合わせとなる場合がございます。
+            雨天でも営業いたしていますが、荒天時などコースコンディションが悪化した場合には営業を中断します。
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">対象者</th>
           <td class="table-col">
-            年齢制限なし
+            小学3年生以上で補助輪なし自転車に乗れる、<br />
+            もしくはモトライセンスA取得の小学1年生以上※1
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">身長制限</th>
-          <td class="table-col">身長135cm以上</td>
+          <td class="table-col">なし</td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">料金</th>
           <td class="table-col">
-            モビパークパスポート対象<br />アトラクションチケット利用：600円
+            モビパークパスポート対象<br />
+            アトラクションチケット利用：600円
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
-            服装について：<br />
-            半そで・半ズボンの場合は腕カバー・貸し出し用ズボンを装着していただきます。
+            ※1 対象者について：<br />小学3年生以上で補助輪なし自転車に乗れるお子さまは最初からモトレーサーにチャレンジしていただけます。モトライセンスAをお持ちであれば、小学1・2年生のお子さまもお楽しみいただけます。<br />
+            モトライセンスAは、モトツーリングにてルールを守って、足をつかずに完走できたお子さまにプレゼントいたします
           </td>
         </tr>
 
@@ -99,10 +104,10 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-howto heading-howto-mototouring',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-motoracer',
           text: 'How to Enjoy',
           alt: '',
-          subtextvg: 'moto-enjoy-point-title',
+          subtextvg: 'motoracer-enjoy-point-title',
           altSubtext: '',
         }) %>
       </div>
@@ -117,9 +122,9 @@
             </div>
           </div>
           <div class="media-right">
-            <h4 class="media-title"><span>家族で仲良くツーリングを楽しもう！</span></h4>
+            <h4 class="media-title"><span>MotoGPTMライダー気分を体感！</span></h4>
             <p class="media-desc">
-              家族みんなでお揃いのヘルメットをかぶってツーリング。子どもにも大人にもちょうどいいサイズのバイク！
+              日本で唯一、MotoGPTM世界選手権を開催しているツインリンクもてぎならではの本格的バイクアトラクションを体感しよう！
             </p>
 
             <div class="media-bottom">
@@ -127,7 +132,7 @@
                 <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
                 <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
                 <div class="media-note-text">
-                  みんなで<br />ツーリングを楽しめタネ！
+                  勇気を出して<br />タイムアタックにチャレンジできタネ！
                 </div>
               </div>
             </div>
@@ -144,15 +149,14 @@
           <div class="media-right">
             <h4 class="media-title">
               <span>
-                長い道のりにチャレンジ！
+                リアルなバイクを乗りこなそう！
               </span>
             </h4>
             <p class="media-desc">
-              森をイメージしたツーリングコースを５周走行。カーブも多く、やりがいのあるコースを上手に進もう！
+              アクセルとブレーキ、そして上手にバランスを取ってバイクを傾け、コーナーを乗りこなすテクニックをマスターしよう！
             </p>
           </div>
         </div>
-
         <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
@@ -164,11 +168,13 @@
           <div class="media-right">
             <h4 class="media-title media-title-nohighlight">
               <span>
-                より本格的なモトレーサーへステップアップ！
+                タイムアタックで記録にチャレンジ！
               </span>
             </h4>
             <p class="media-desc">
-              モトツーリングでライセンスをゲットしたら、<br />レーサー気分が味わえるモトレーサーにステップアップしよう！
+              タイムアタックは1000分の1秒まで計測。<br />
+              たくさん練習して、何度転んでもチャレンジ<br />
+              したくなるのがモトレーサー！
             </p>
           </div>
         </div>
@@ -183,20 +189,20 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            modifier: 'heading-banner-more',
-            imgPath: mix('/assets/images/moto-touring/moto-enjoy-more-title.png'),
-            alt: 'モトツーリングをもっと楽しむ',
-            altSubtext: '',
+            modifier: 'heading-banner-more heading-banner-more-motoracer',
+            imgPath: mix('/assets/images/motoracer/motor-enjoy-more-title.png'),
+            alt: 'モトレーサーをもっと楽しむ',
+            altSubtext: ''
           }) %>
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
-              モトツーリングのこだわりポイントや、知っているともっ<br>
-              と楽しくなる情報を配信中しています。
+              モトレーサーのこだわりポイントや、知っているともっと<br>
+              楽しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action">
             <%- include('/partials/button', {
-              modifier: 'button-sumika',
+              modifier: 'button-banner-more',
               text: 'もっと見る',
               'link': '#'
             }) %>
@@ -229,8 +235,9 @@
   <%- include('/partials/recommendation') -%>
 
   <%- include('/partials/pickup') -%>
-  
+
+
   <!-- END BOTTOM -->
 </div>
 
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId}) -%>

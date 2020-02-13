@@ -30,9 +30,14 @@
     width: 100%;
     position: relative;
 
+    @include max-screen($breakpoint-mobile) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     &:before {
-      width: 596px;
-      height: 333px;
+      width: calc(100% + 90px);
+      height: 100%;
       content: "";
       position: absolute;
       top: -31px;
@@ -44,8 +49,8 @@
     }
 
     &:after {
-      width: 524px;
-      height: 291px;
+      width: calc(100% + 19px);
+      height: calc(100% - 42px);
       content: "";
       position: absolute;
       top: -8px;

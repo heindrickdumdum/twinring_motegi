@@ -41,9 +41,11 @@
 
   &::before {
     content: '';
-    width: 102.8%;
-    height: 87%;
+    width: calc(100% + 10px);
+    height: calc(100% - 7px);
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     left: -5px;
     right: 0;
     border: 1px dotted $color-primary;
@@ -58,7 +60,7 @@
   }
 
   &.button-sumika {
-    width: 381px;
+    max-width: 381px;
     letter-spacing: 0.112em;
 
     @include max-screen($breakpoint-mobile) {
@@ -74,6 +76,28 @@
   &.button-hellowoods {
     width: 100%;
     max-width: 364px;
-    
+
+  }
+
+  &.button-banner-more {
+    max-width: 381px;
+    letter-spacing: 0.112em;
+
+    @include max-screen($breakpoint-mobile) {
+      width: calc(100% - 76px);
+    }
+
+    .button-icon {
+      right: 26px;
+      width: 20px;
+    }
+  }
+
+  &.button-kart {
+    margin: 35px auto 0;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 58px;
+    }
   }
 }

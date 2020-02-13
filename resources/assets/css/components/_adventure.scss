@@ -1,6 +1,11 @@
 
 .adventure-container {
   margin-top: 64px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }
 
 .adventure-list {
@@ -18,7 +23,7 @@
   background-size: cover;
 
   @include max-screen ($breakpoint-mobile) {
-    height: 200px;
+    height: 316px;
   }
 }
 
@@ -33,6 +38,7 @@
 
   @include max-screen($breakpoint-mobile) {
     max-width: 200px;
+    bottom: -95px;
   }
 
   &.hellowoods {

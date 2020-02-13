@@ -99,7 +99,7 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom heading-howto-debden',
+          'modifier': 'heading-gradient-tobottom heading-howto heading-howto-debden',
           'text': 'How to Enjoy',
           'alt': 'おさんぽでんでんを楽しむポイント',
           'subtextvg': 'osanpo-enjpy-point-title',
@@ -182,7 +182,7 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            'modifier': 'heading-net-deb-den',
+            'modifier': 'heading-net-subpage heading-banner-more heading-net-deb-den',
             'text': '<img src='+ mix('/assets/images/deb-den/osanpo-enjoy-more-title.png') +' alt="enjoy more">',
             'alt': 'アクロエックスをもっと楽しむ',
             'altSubtext': '',
@@ -226,60 +226,11 @@
     </div>
   </div>
 
-  <section class="recommendation">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-recommend',
-        text: 'Recommendation',
-        altSubtext: '',
-        subtextvg: 'recommendation-title'
-      }) %>
-    </div>
-      <div class="swiper-container slider js-slider-bottom">
-        <ul class="swiper-wrapper slider-wrapper">
-          <% getData().data.recommend.forEach(item => { %>
-          <li class="swiper-slide slider-item">
-            <%- include('/partials/article-no-design', {
-              image: item.image,
-              heading: item.heading,
-              buttonLink: item.buttonLink,
-              buttonText: 'モビパーク'
-            }) %>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
-  </section>
-  
-  <section class="pick-up">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-pickup',
-        text: 'Pick Up',
-        altSubtext: '',
-        subtextvg: 'pickup-event'
-      }) %>
-    </div>
-    
-    <div class="l-container">
-      <div class="pick-inner">
-        <ul class="pickup-list row">
-          <% getData().data.pickup.forEach(item => { %>
-          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
-            <%- include('/partials/article', {
-              category: item.category,
-              image: item.image,
-              heading: item.heading,
-              date: item.date,
-              link: item.link,
-              modifier: 'pickup-article'
-            }) %>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <!-- recommendation module -->
+  <%- include('/partials/recommendation') -%>
+
+  <!-- pick up module -->
+  <%- include('/partials/pickup') -%>
 
   <!-- END BOTTOM -->
 

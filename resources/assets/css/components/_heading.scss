@@ -614,6 +614,10 @@
       font-size: 39px;
       height: auto;
       max-width: none;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 20px;
+      }
     }
 
     svg {

@@ -73,27 +73,18 @@
     width: 100%;
   }
 }
+//
+// .heading-main-subpage {
+//   .heading {
+//     max-width: 100% !important;
+//     text-align: center;
+//
+//     span {
+//       display: inline-block;
+//     }
+//   }
+// }
 
-.heading-main-subpage {
-  .heading {
-    max-width: 100% !important;
-    text-align: center;
-
-    span {
-      display: inline-block;
-    }
-  }
-}
-
-//modifier forest driving cta heading image
-.heading-net-forest-driving {
-  img {
-    max-width: 419px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 //banner title image or text
 .heading-banner-more {
@@ -111,6 +102,23 @@
   .heading-subtext {
     position: relative;
     margin-top: 0;
+  }
+
+  &.heading-banner-more-forestdriving {
+    .heading-subtext {
+      max-width: 419px;
+      width: 100%;
+      left: 10px;
+    }
+
+  }
+
+  &.heading-banner-more-deb-den {
+    .heading-subtext {
+      max-width: 528px;
+      width: 100%;
+      left: 10px;
+    }
   }
 
   &.heading-banner-more-challenge {
@@ -464,12 +472,11 @@
 
     .heading-subtext {
       margin-top: 10px;
-      max-width: 367px;
       width: 100%;
     }
 
     svg {
-      width: 389px;
+      max-width: 389px;
       height: 34px;
     }
 

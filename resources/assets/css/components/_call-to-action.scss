@@ -1,7 +1,11 @@
 .call-to-action {
   text-align: center;
-  margin: 80px 0;
+  margin-top: 50px 0;
   position: relative;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin: 80px 0;
+  }
 
   &:after {
     @include max-screen($breakpoint-mobile) {
@@ -71,15 +75,18 @@
 
 .call-to-action-description-text {
   font-family: $font-hiragino-w3;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1.667;
   margin-top: 20px;
   letter-spacing: 0.16em;
 
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 15px;
+  }
+
   @include max-screen($breakpoint-mobile) {
     padding-left: 50px;
     padding-right: 50px;
-    font-size: 24px;
   }
 }
 

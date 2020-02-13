@@ -58,8 +58,12 @@
   }
 
   &.button-sumika {
-    width: 381px;
+    max-width: 381px;
     letter-spacing: 0.112em;
+
+    @include max-screen($breakpoint-mobile) {
+      width: calc(100% - 76px);
+    }
 
     .button-icon {
       right: 26px;
@@ -70,6 +74,15 @@
   &.button-hellowoods {
     width: 100%;
     max-width: 364px;
-    
+
+  }
+}
+
+
+.button-kart {
+  margin: 35px auto 0;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: 58px;
   }
 }

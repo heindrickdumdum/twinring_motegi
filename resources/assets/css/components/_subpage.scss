@@ -77,6 +77,7 @@
 
   }
 }
+
 .subpage-youtube {
   width: 100%;
   margin-bottom: 40px;
@@ -97,12 +98,6 @@
     width: 100%;
   }
 
-  //modifier SP
-  @include max-screen($breakpoint-mobile) {
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    margin-right: -20px;
-  }
 }
 
 .subpage-section {
@@ -113,9 +108,13 @@
 .subpage-section-inner {
   position: relative;
   max-width: 1102px;
-  margin: 0 auto 120px;
+  margin: 0 auto 50px;
   padding: 0 42px;
   width: 100%;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin: 0 auto 120px;
+  }
 }
 
 .subpage-button {
@@ -145,12 +144,20 @@
 //modifier
 
 .subpage-section-howto {
-  margin-bottom: 103px;
+  margin-bottom: 30px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 103px;
+  }
 }
 
 .subpage-section-howto-inner {
   max-width: 1070px;
   margin: 0 auto;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 0 36px;
+  }
 }
 
 .subpage-section-course-inner {

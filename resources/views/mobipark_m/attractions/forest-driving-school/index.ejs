@@ -7,7 +7,7 @@
 <%- include('/partials/head', { title }) -%>
 
 <div class="subpage">
-  <div class="mv mv-subpage mv-forest-driving">
+  <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
         <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.jpg') %>);"></div>
@@ -16,13 +16,11 @@
       </li>
     </ul>
 
-    <div class="l-container mv-container">
-      <h2 class="mv-heading">
-        <span class="mv-heading-text">
-          森の教習所
-        </span>
-      </h2>
-    </div>
+    <h2 class="mv-heading mv-heading-subpage">
+      <span class="mv-heading-text">
+        森の教習所
+      </span>
+    </h2>
   </div>
 
   <div class="subpage-inner">
@@ -103,11 +101,11 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom heading-howto-forest-driving',
-          'text': 'How to Enjoy',
-          'alt': '',
-          'subtextvg': 'forest-enjoy-point',
-          'altSubtext': '',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-forest-driving',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'forest-enjoy-point',
+          altSubtext: '',
         }) %>
       </div>
 
@@ -190,11 +188,11 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner call-to-action-inner-subpage">
           <%- include('/partials/heading', {
-            'modifier': 'heading-net-acro-x heading-net-forest-driving',
-            'text': '<img src='+ mix('/assets/images/forest-driving/forest-enjoy-more.png') +' alt="forest driving">',
-            'alt': '森の教習所をもっと楽しむ',
-            'altSubtext': '',
-            'subtextvg': ''
+            modifier: 'heading-banner-more heading-banner-more-forestdriving',
+            imgPath: mix('/assets/images/forest-driving/forest-enjoy-more.png'),
+            alt: '森の教習所をもっと楽しむ',
+            altSubtext: '',
+            subtextvg: ''
           }) %>
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
@@ -203,8 +201,8 @@
           </div>
           <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
             <%- include('/partials/button', {
-              'modifier': 'button-acro-x',
-              'text': 'もっと見る',
+              modifier: 'button-acro-x',
+              text: 'もっと見る',
               'link': '#'
             }) %>
           </div>
@@ -233,60 +231,11 @@
     </div>
   </div>
 
-  <section class="recommendation">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-recommend',
-        text: 'Recommendation',
-        altSubtext: '',
-        subtextvg: 'recommendation-title'
-      }) %>
-    </div>
-      <div class="swiper-container slider" id="js-recommendation-slider">
-        <ul class="swiper-wrapper slider-wrapper">
-          <% getData().data.recommend.forEach(item => { %>
-          <li class="swiper-slide slider-item">
-            <%- include('/partials/article-no-design', {
-              image: item.image,
-              heading: item.heading,
-              buttonLink: item.buttonLink,
-              buttonText: 'モビパーク'
-            }) %>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
-  </section>
-  
-  <section class="pick-up">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-pickup',
-        text: 'Pick Up',
-        altSubtext: '',
-        subtextvg: 'pickup-event'
-      }) %>
-    </div>
-    
-    <div class="l-container">
-      <div class="pick-inner">
-        <ul class="pickup-list row">
-          <% getData().data.pickup.forEach(item => { %>
-          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
-            <%- include('/partials/article', {
-              category: item.category,
-              image: item.image,
-              heading: item.heading,
-              date: item.date,
-              link: item.link,
-              modifier: 'pickup-article'
-            }) %>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
-    </div>
-  </section>
+
+
+  <%- include('/partials/recommendation') -%>
+
+  <%- include('/partials/pickup') -%>
 
   <!-- END BOTTOM -->
 </div>

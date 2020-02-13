@@ -5,7 +5,11 @@
 
 .l-heading-main {
   margin: 80px 0;
-  text-align: center;
+  text-align: center; 
+  
+  @include max-screen($breakpoint-mobile) {
+    margin: 35px 0;
+  }
 }
 
 .l-heading-inner {

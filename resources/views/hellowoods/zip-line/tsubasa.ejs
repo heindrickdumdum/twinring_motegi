@@ -35,7 +35,7 @@
 
   ]
 %>
-
+<% pageId = 'tsubasa'; %>
 
 <%- include('/partials/head', { title }) -%>
 
@@ -54,7 +54,7 @@
     </ul>
 
     <div class="l-container mv-container">
-      <h2 class="mv-heading">
+      <h2 class="mv-heading u-show-sp">
         <span class="mv-heading-texts">
           Mega Zipline Tsubasa
         </span>
@@ -392,19 +392,15 @@
     </div>
   </section>
 
-  <!-- BOTTOM -->
-
   <div class="call-to-action">
     <div class="l-container">
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
-          <%- include('/partials/heading', {
-            'modifier': 'heading-net-acro-x',
-            'text': 'メガジップラインつばさを<br />もっと楽しむ',
-            'alt': '',
-            'altSubtext': '',
-            'subtextvg': 'tsubasa-bubbles-title'
-          }) %>
+          <h2 class="heading">
+            <span class="heading-texts">
+              <img src="<%= mix('/assets/images/tsubasa/tsubasa-cta.png') %>" alt="sumika">
+            </span>
+          </h2>
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
               メガジップラインつばさのこだわりポイントや、知ってい<br/>
@@ -413,9 +409,9 @@
           </div>
           <div class="l-button l-button-call-to-action">
             <%- include('/partials/button', {
-              'modifier': 'button-acro-x',
-              'text': 'もっと見る',
-              'link': '#'
+              modifier: 'button-sumika',
+              text: 'もっと見る',
+              link: '#'
             }) %>
           </div>
           <span class="call-to-action-dot call-to-action-dot-1">
@@ -576,9 +572,60 @@
     </div>
   </section>
 
-  <!-- will add later -->
+  <section class="recommendation l-section">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-recommend',
+        text: 'Recommendation',
+        altSubtext: '',
+        subtextvg: 'recommendation-title'
+      }) %>
+    </div>
+      <div class="swiper-container slider js-slider-bottom">
+        <ul class="swiper-wrapper slider-wrapper">
+          <% getData().data.recommend.forEach(item => { %>
+          <li class="swiper-slide slider-item">
+            <%- include('/partials/article-no-design', {
+              image: item.image,
+              heading: item.heading,
+              buttonLink: item.buttonLink,
+              buttonText: 'モビパーク'
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+  </section>
 
+  <section class="pick-up l-section">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-pickup',
+        text: 'Pick Up',
+        altSubtext: '',
+        subtextvg: 'pickup-event'
+      }) %>
+    </div>
+    <div class="l-container">
+      <div class="pick-inner">
+        <ul class="pickup-list row">
+          <% getData().data.pickup.forEach(item => { %>
+          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
+            <%- include('/partials/article', {
+              category: item.category,
+              image: item.image,
+              heading: item.heading,
+              date: item.date,
+              link: item.link,
+              modifier: 'pickup-article'
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </section>
   <!-- END BOTTOM -->
 </div>
 
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId} ) -%>

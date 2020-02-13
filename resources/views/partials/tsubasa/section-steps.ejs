@@ -84,37 +84,37 @@ stepsData = [
 
 
 
-<ul class="step-list">
+<ol class="step-list">
   <%
   stepsData.forEach(item => {
   %>
   <li class="step-list-item step-<%= item.step %>">
-    <div class="step-no">
-      <img class="img-step" src="/assets/images/tsubasa/step.png" alt="Goal">
-      <img src="/assets/images/tsubasa/<%= item.step %>.png" alt="Goal">
-    </div>
-    <div class="step-image">
-      <img src="<%= item.image %>" alt="Step 1">
-    </div>
-    <div class="step-title"><%= item.heading %></div>
-    <div class="step-subtitle"><%= item.subHeading %></div>
-    <p class="step-desc">
-      <%= item.subText %>
-    </p>
-
-    <%if (item.step == 'goal') { %>
-      <div class="media-bottom step-list-media-bottom">
-        <div class="media-note">
-          <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-          <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-          <div class="media-note-text">
-            乗れたら… <br>
-            大空には羽ばたけタネ！
+    <div class="step-item">
+      <div class="step-no">
+        <img class="img-step" src="/assets/images/tsubasa/step.png" alt="Goal">
+        <img src="/assets/images/tsubasa/<%= item.step %>.png" alt="Goal">
+      </div>
+      <div class="step-image">
+        <img src="<%= item.image %>" alt="Step 1">
+      </div>
+      <div class="step-title"><%= item.heading %></div>
+      <div class="step-subtitle"><%= item.subHeading %></div>
+      <p class="step-desc">
+        <%= item.subText %>
+      </p>
+      <%if (item.step == 'goal') { %>
+        <div class="media-bottom step-list-media-bottom">
+          <div class="media-note">
+            <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+            <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+            <div class="media-note-text">
+              乗れたら… <br>
+              大空には羽ばたけタネ！
+            </div>
           </div>
         </div>
-      </div>
-    <% } %>
-
+      <% } %>
+    </div>
   </li>
   <% }) %>
-</ul>
+</ol>

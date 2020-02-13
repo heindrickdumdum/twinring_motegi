@@ -45,5 +45,14 @@
     padding: 10px 15px;
     border-radius: 5px;
     color: $color-white;
+
+    @include max-screen($breakpoint-mobile) {
+      position: relative;
+      top: 0;
+      right: 0;
+      display: block;
+      max-width: 320px;
+      margin: 20px auto;  
+    }
   }
 }

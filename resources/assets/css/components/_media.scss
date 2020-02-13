@@ -150,10 +150,6 @@
   .media-subpage & {
     letter-spacing: 0.16em;
   }
-
-  .media-subpage-bunbun & {
-    margin-bottom: 23px;
-  }
 }
 
 .media-bottom {
@@ -179,9 +175,10 @@
   width: 100%;
   max-width: 195px;
   text-align: left;
-  margin-top: 25px;
+  margin-top: 15px;
 
   @include min-screen($breakpoint-mobile + 1) {
+    margin-top: 25px;
     max-width: 318px;
   }
 }

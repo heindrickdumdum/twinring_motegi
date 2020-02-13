@@ -1,181 +1,8 @@
 <%
-
 var title = 'Twin Ring Motegi'
-
-dataCategory = [
-{
-  'image': mix('/assets/images/car-and-bike/category-car.png'),
-  'heading': '0歳〜6歳のお子様とのお楽しみ方',
-  'buttonText': '',
-  'buttonLink': '',
-},
-{
-  'image': mix('/assets/images/car-and-bike/category-bike.png'),
-  'heading': '小学校低学年のお子様とのお楽しみ方',
-  'buttonText': '',
-  'buttonLink': '',
-},
-{
-  'image': mix('/assets/images/car-and-bike/category-workshop.png'),
-  'heading': '小学校高学年のお子様とのお楽しみ方',
-  'buttonText': '',
-  'buttonLink': '',
-},
-]
-
-dataCars = [
-  {
-    'image': mix('/assets/images/car-and-bike/car-1.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'アクロエックス',
-    'rowHead': '保護者と',
-    'rowData': '2歳から',
-    'rowHead2': '一人で',
-    'rowData2': '小学3年生以上',
-    'imageTagBg': 'bg-green'
-  },
-  {
-    'image': mix('/assets/images/car-and-bike/car-2.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'おさんぽでんでん',
-    'rowHead': '保護者と',
-    'rowData': 'ひとり座りできる0歳以上',
-    'rowHead2': '一人で',
-    'rowData2': '3歳以上',
-    'imageTagBg': 'bg-green'
-  },
-  {
-    'image': mix('/assets/images/car-and-bike/car-3.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'ワイルドレーサー',
-    'rowHead': '保護者と',
-    'rowData': '3歳以上',
-    'rowHead2': '一人で',
-    'rowData2': '小学1年生以上',
-    'imageTagBg': 'bg-green-2'
-
-  },
-  {
-    'image': mix('/assets/images/car-and-bike/car-4.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': '森の教習所',
-    'rowHead': '保護者と',
-    'rowData': 'ひとり座りできる0歳以上',
-    'rowHead2': '一人で',
-    'rowData2': '5歳以上',
-    'imageTagBg': 'bg-green-2'
-
-  },
-  {
-    'image': mix('/assets/images/car-and-bike/car-5.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'ドリフトS',
-    'rowHead': '一人で',
-    'rowData': '身長135cm以上利用可',
-    'rowHead2': '',
-    'rowData2': '',
-    'imageTagBg': 'bg-green-2'
-  },
-  {
-    'image': mix('/assets/images/car-and-bike/car-6.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'ドリームカート',
-    'rowHead': '一人で',
-    'rowData': '身長135cm以上利用可',
-    'rowHead2': '',
-    'rowData2': '',
-    'imageTagBg': 'bg-green-2'
-  },
-  {
-    'image': mix('/assets/images/car-and-bike/car-7.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'チャレンジカート',
-    'rowHead': '一人で',
-    'rowData': '身長140cm以上の小学4年生で<br/>ライセンス取得可',
-    'rowHead2': '',
-    'rowData2': '',
-    'imageTagBg': 'bg-green-3'
-  },
-  {
-    'image': mix('/assets/images/car-and-bike/car-8.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'アクロエックス',
-    'rowHead': '保護者と',
-    'rowData': '2歳から',
-    'rowHead2': '',
-    'rowData2': '',
-    'imageTagBg': 'bg-green-3'
-  }
-]
-
-
-dataBike = [
-  {
-    'image': mix('/assets/images/car-and-bike/bike-1.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'ぶんぶんスクーター',
-    'rowHead': '一人で',
-    'rowData': '3歳以上',
-    'rowHead2': '',
-    'rowData2': '',
-    'imageTagBg': 'bg-green-4'
-  },
-  {
-    'image': mix('/assets/images/car-and-bike/bike-2.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'モーターサイクルトレーニング',
-    'rowHead': '一人で',
-    'rowData': '3歳以上の補助輪なしで自転車に乗れる方',
-    'rowHead2': '',
-    'rowData2': '',
-    'imageTagBg': 'bg-green-4'
-  },
-  {
-    'image': mix('/assets/images/car-and-bike/bike-3.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'モトツーリング',
-    'rowHead': '一人で',
-    'rowData': '小学3年生以上、もしくはモーターサイクルトレーニングでBライセンス取得の3歳以上',
-    'rowHead2': '',
-    'rowData2': '',
-    'imageTagBg': 'bg-green-4'
-  },
-  {
-    'image': mix('/assets/images/car-and-bike/bike-4.jpg'),
-    'imageTag': 'モトレーサー',
-    'itemName': 'ぶんぶんスクーター',
-    'rowHead': '一人で',
-    'rowData': '小学3年生以上、もしくはモトツーリングでAライセンス取得の小学1年生以上',
-    'rowHead2': '',
-    'rowData2': '',
-    'imageTagBg': 'bg-green-4'
-  }
-]
-
-dataWorkshop = [
-  {
-    'image': mix('/assets/images/car-and-bike/workshop-1.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'ピット工房組み立て',
-    'rowHead': '一人で',
-    'rowData': '全年齢対象※走行は身長100cm以上から可',
-    'rowHead2': '',
-    'rowData2': '',
-    'imageTagBg': 'bg-green-5'
-  },
-  {
-    'image': mix('/assets/images/car-and-bike/workshop-2.jpg'),
-    'imageTag': 'モビパークパスポート対象',
-    'itemName': 'NANONANOアクセサリー',
-    'rowHead': '一人で',
-    'rowData': '要確認',
-    'rowHead2': '',
-    'rowData2': '',
-    'imageTagBg': 'bg-green-5'
-  }
-]
-
+SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
+
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
@@ -190,7 +17,7 @@ dataWorkshop = [
     </ul>
 
     <div class="l-container mv-container">
-      <h2 class="mv-heading">
+      <h1 class="mv-heading">
         <span class="mv-heading-texts">
           <svg>
             <title>Car</title>
@@ -203,7 +30,7 @@ dataWorkshop = [
             <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-subtext') %>"></use>
           </svg>
         </span>
-      </h2>
+      </h1>
 
       <div class="u-show-pc mv-today mv-logo">
         <div class="mv-l-inner">
@@ -282,193 +109,184 @@ dataWorkshop = [
     </div>
   </section>
 
-  <section class="subpage-section subpage-section-cat-attraction">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        'modifier': 'heading-gradient-tobottom heading-attraction',
-        'text': ' Attraction’s Category',
-        'alt' : '',
-        'subtextvg': 'car-and-bike-attraction-categories',
-        'altSubtext': '',
-      }) %>
-    </div>
-
-    <ul class="feature-list feature-list-attraction-cat">
-      <%
-        dataCategory.forEach(item => {
-      %>
-      <li class="feature-item">
-        <article class="article article-no-design">
-          <div class="article-image-wrap">
-            <div class="article-image"
-                style="background-image: url(<% if(item.image != '') { %>
-                  <%- item.image %>
-                  <% } else { %><%= mix('/assets/images/noimage.jpg') %>
-                  <% } %>)"></div>
-          </div>
-        </article>
-      </li>
-      <% }) %>
-    </ul>
-
-
-  </section>
-
   <section class="subpage-section subpage-section-carbike">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-car-attraction',
-        'text': '',
-        'alt': '',
-        'subtextvg': 'car-and-bike-car-title',
-        'altSubtext': '',
+        modifier: 'heading-gradient-tobottom heading-attraction',
+        text: ' Attraction’s Category',
+        alt : '',
+        subtextvg: 'car-and-bike-attraction-categories',
+        altSubtext: '',
       }) %>
     </div>
 
-    <ul class="feature-list feature-list-car-bike">
-      <%
-      dataCars.forEach(item => {
-      %>
-      <li class="feature-item">
-        <article class="article article-no-design">
-          <div class="article-image-wrap">
-            <div class="article-image"
-                style="background-image: url(<% if(item.image != '') { %>
-                  <%- item.image %>
-                  <% } else { %><%= mix('/assets/images/noimage.jpg') %>
-                  <% } %>)"></div>
-            <div class="article-tag article-<%- item.imageTagBg %>"><%- item.imageTag %></div>
-          </div>
-          <div class="article-name"><%- item.itemName %></div>
-          <table class="table">
-            <tbody>
-              <tr class="table-row">
-                <th class="table-head"><%- item.rowHead %></th>
-                <td class="table-col">
-                  <%- item.rowData %>
-                </td>
-              </tr>
-              <% if(item.rowHead2 != '') { %>
-              <tr class="table-row">
-                <th class="table-head"><%- item.rowHead2 %></th>
-                <td class="table-col">
-                  <%- item.rowData2 %>
-                </td>
-              </tr>
-              <% } %>
-
-            </tbody>
-          </table>
-        </article>
-      </li>
-      <% }) %>
-    </ul>
+    <div class="carbike-menu">
+      <div class="carbike-menu-item">
+        <a class="carbike-menu-link" href="#car">
+          <img src="<%= mix('/assets/images/car-and-bike/category-car.png') %>" alt="">
+        </a>
+      </div>
+      <div class="carbike-menu-item">
+        <a class="carbike-menu-link" href="#bike">
+          <img src="<%= mix('/assets/images/car-and-bike/category-bike.png') %>" alt="">
+        </a>
+      </div>
+      <div class="carbike-menu-item">
+        <a class="carbike-menu-link" href="#workshop">
+          <img src="<%= mix('/assets/images/car-and-bike/category-workshop.png') %>" alt="">
+        </a>
+      </div>
+    </div>
   </section>
 
-  <section class="subpage-section subpage-section-carbike">
+  <section class="subpage-section subpage-section-carbike" id="car">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-bike-attraction',
-        'text': '',
-        'alt': '',
-        'subtextvg': 'car-and-bike-bike-title',
-        'altSubtext': '',
+        modifier: 'heading-carbike heading-carbike-car',
+        text: '',
+        alt : '',
+        subtextvg: 'car-and-bike-car-title',
+        altSubtext: '',
       }) %>
     </div>
 
-    <ul class="feature-list feature-list-car-bike">
-      <%
-      dataBike.forEach(item => {
-      %>
-      <li class="feature-item">
-        <article class="article article-no-design">
-          <div class="article-image-wrap">
-            <div class="article-image"
-                style="background-image: url(<% if(item.image != '') { %>
-                  <%- item.image %>
-                  <% } else { %><%= mix('/assets/images/noimage.jpg') %>
-                  <% } %>)"></div>
-            <div class="article-tag article-<%- item.imageTagBg %>"><%- item.imageTag %></div>
-          </div>
-          <div class="article-name"><%- item.itemName %></div>
-          <table class="table">
-            <tbody>
-              <tr class="table-row">
-                <th class="table-head"><%- item.rowHead %></th>
-                <td class="table-col">
-                  <%- item.rowData %>
-                </td>
-              </tr>
-              <% if(item.rowHead2 != '') { %>
-              <tr class="table-row">
-                <th class="table-head"><%- item.rowHead2 %></th>
-                <td class="table-col">
-                  <%- item.rowData2 %>
-                </td>
-              </tr>
-              <% } %>
+    <ul class="carbike-list">
+      <% getData().data.carList.forEach( item => { %>
+        <li class="carbike-item">
+          <article class="carbike-article">
+            <div class="carbike-article-thumb">
+              <div class="carbike-article-thumb-img"
+                  style="background-image: url(<%- item.imgPath %>)">
+                </div>
+              <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %>">
+                <%- item.category %>
+              </span>
+            </div>
 
-            </tbody>
-          </table>
-        </article>
-      </li>
+            <div class="carbike-article-content">
+              <h3 class="carbike-article-title"><%- item.title %></h3>
+
+              <ul class="carbike-article-list">
+                <% item.dataList.forEach( dataitem => { %>
+                  <li class="carbike-article-list-item">
+                    <span class="carbike-article-list-label"><%= dataitem.label %></span>
+                    <p class="carbike-article-list-desc"><%- dataitem.content %></p>
+                  </li>
+                <% }) %>
+              </ul>
+
+              <div class="carbike-article-more">
+                <a class="carbike-article-more-link" href="#">
+                  <span>詳細はこちら</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
       <% }) %>
     </ul>
   </section>
 
-  <section class="subpage-section subpage-section-carbike">
+  <section class="subpage-section subpage-section-carbike" id="bike">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        'modifier': 'heading-workshop-attraction',
-        'text': '',
-        'alt': '',
-        'subtextvg': 'car-and-bike-carworkshop-title',
-        'altSubtext': '',
+        modifier: 'heading-carbike heading-carbike-bike',
+        text: '',
+        alt : '',
+        subtextvg: 'car-and-bike-bike-title',
+        altSubtext: '',
       }) %>
     </div>
 
-    <ul class="feature-list feature-list-car-bike">
-      <%
-      dataWorkshop.forEach(item => {
-      %>
-      <li class="feature-item">
-        <article class="article article-no-design">
-          <div class="article-image-wrap">
-            <div class="article-image"
-                style="background-image: url(<% if(item.image != '') { %>
-                  <%- item.image %>
-                  <% } else { %><%= mix('/assets/images/noimage.jpg') %>
-                  <% } %>)"></div>
-            <div class="article-tag article-<%- item.imageTagBg %>"><%- item.imageTag %></div>
-          </div>
-          <div class="article-name"><%- item.itemName %></div>
-          <table class="table">
-            <tbody>
-              <tr class="table-row">
-                <th class="table-head"><%- item.rowHead %></th>
-                <td class="table-col">
-                  <%- item.rowData %>
-                </td>
-              </tr>
-              <% if(item.rowHead2 != '') { %>
-              <tr class="table-row">
-                <th class="table-head"><%- item.rowHead2 %></th>
-                <td class="table-col">
-                  <%- item.rowData2 %>
-                </td>
-              </tr>
-              <% } %>
+    <ul class="carbike-list">
+      <% getData().data.bikeList.forEach( item => { %>
+        <li class="carbike-item">
+          <article class="carbike-article">
+            <div class="carbike-article-thumb">
+              <div class="carbike-article-thumb-img"
+                  style="background-image: url(<%- item.imgPath %>)">
+                </div>
+              <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %>">
+                <%- item.category %>
+              </span>
+            </div>
 
-            </tbody>
-          </table>
-        </article>
-      </li>
+            <div class="carbike-article-content">
+              <h3 class="carbike-article-title"><%- item.title %></h3>
+
+              <ul class="carbike-article-list">
+                <% item.dataList.forEach( dataitem => { %>
+                  <li class="carbike-article-list-item">
+                    <span class="carbike-article-list-label"><%= dataitem.label %></span>
+                    <p class="carbike-article-list-desc"><%- dataitem.content %></p>
+                  </li>
+                <% }) %>
+              </ul>
+
+              <div class="carbike-article-more">
+                <a class="carbike-article-more-link" href="#">
+                  <span>詳細はこちら</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
       <% }) %>
     </ul>
-
   </section>
 
-  <!-- will add later -->
+  <section class="subpage-section subpage-section-carbike" id="workshop">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-carbike heading-carbike-workshop',
+        text: '',
+        alt : '',
+        subtextvg: 'car-and-bike-carworkshop-title',
+        altSubtext: '',
+      }) %>
+    </div>
+
+    <ul class="carbike-list">
+      <% getData().data.workshopList.forEach( item => { %>
+        <li class="carbike-item">
+          <article class="carbike-article">
+            <div class="carbike-article-thumb">
+              <div class="carbike-article-thumb-img"
+                  style="background-image: url(<%- item.imgPath %>)">
+                </div>
+              <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %>">
+                <%- item.category %>
+              </span>
+            </div>
+
+            <div class="carbike-article-content">
+              <h3 class="carbike-article-title"><%- item.title %></h3>
+
+              <ul class="carbike-article-list">
+                <% item.dataList.forEach( dataitem => { %>
+                  <li class="carbike-article-list-item">
+                    <span class="carbike-article-list-label"><%= dataitem.label %></span>
+                    <p class="carbike-article-list-desc"><%- dataitem.content %></p>
+                  </li>
+                <% }) %>
+              </ul>
+
+              <div class="carbike-article-more">
+                <a class="carbike-article-more-link" href="#">
+                  <span>詳細はこちら</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
+      <% }) %>
+    </ul>
+  </section>
+
+  <%- include('/partials/recommendation') -%>
+
+  <%- include('/partials/pickup') -%>
+
 </div>
 
 <%- include('/partials/footer', {pageId}) -%>

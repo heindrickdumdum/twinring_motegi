@@ -41,9 +41,11 @@
 
   &::before {
     content: '';
-    width: 102.8%;
-    height: 87%;
+    width: calc(100% + 10px);
+    height: calc(100% - 7px);
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     left: -5px;
     right: 0;
     border: 1px dotted $color-primary;

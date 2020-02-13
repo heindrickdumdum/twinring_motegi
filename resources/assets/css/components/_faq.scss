@@ -4,4 +4,8 @@
 
 .faq-inner {
   padding: 0 157px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 0;
+  }
 }

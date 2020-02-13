@@ -2,6 +2,10 @@
   height: 607px;
   position: relative;
 
+  @include max-screen($breakpoint-mobile) {
+    height: 350px;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -11,6 +15,11 @@
     height: 100px;
     background: url(#{$image-path}mv-curve.png) no-repeat center top;
     background-size: cover;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -30px;
+      height: 50px;
+    }
   }
 }
 
@@ -32,6 +41,10 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @include max-screen($breakpoint-mobile) {
+    height: 378px;
+  }
+  
   .mv-subpage & {
     max-height: 607px;
     height: 0;
@@ -132,8 +145,6 @@
 .mv-heading-subtext {
   margin-top: 13px;
   width: 887px;
-
-
 }
 
 .mv-today {
@@ -154,6 +165,10 @@
     background: url(#{$image-path}hellowoods/mv-today-bg.png) no-repeat;
     background-size: contain;
     max-width: 270px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
   }
 }
 
@@ -358,7 +373,6 @@
   .mv-heading-texts {
     font-family: $font-holland;
     color: $color-white;
-    font-size: 32px;
     font-size: 50px;
     letter-spacing: 0.06em;
     width: auto;
@@ -390,10 +404,8 @@
   .mv-heading-texts{
     width: 448px;
     height: 50px;
-
     font-family: $font-holland;
     color: $color-white;
-    font-size: 32px;
     font-size: 50px;
     letter-spacing: 0.06em;
     text-align: center;
@@ -462,10 +474,13 @@
   .mv-heading-texts {
     font-family: $font-holland;
     color: $color-white;
-    font-size: 32px;
     font-size: 50px;
     letter-spacing: 0.06em;
     width: auto;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 25px;
+    }
   }
 
   // itadaki mv

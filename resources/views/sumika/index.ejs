@@ -322,7 +322,7 @@
           <div class="instagram-content">
             <ul class="instagram-list">
               <% instagram.forEach(item => { %>
-              <li class="instagram-list-item">
+              <li class="instagram-list-item col-sm-4">
                 <div class="instagram-list-item-image">
                   <img src="<%- item.image %>" alt="<%- item.alt %>">
                 </div>
@@ -469,7 +469,7 @@
       <div class="pick-inner">
         <ul class="pickup-list row">
           <% getData().data.pickup.forEach(item => { %>
-          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
+          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-6">
             <%- include('/partials/article', {
               category: item.category,
               image: item.image,

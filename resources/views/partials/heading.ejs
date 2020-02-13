@@ -19,6 +19,10 @@ if (typeof subtextvg === 'undefined'){
   var subtextvg = '';
 }
 
+if (typeof altSubtextvg === 'undefined'){
+  var altSubtextvg = '';
+}
+
 if (typeof subtext === 'undefined'){
     var subtext = '';
 }
@@ -43,9 +47,9 @@ if (typeof heading_level === 'undefined'){
 
     <% if(subtextvg || imgPath) { %>
     <p class="heading-subtext">
-      <% if(subtextvg) { %>
+      <% if(subtextvg || altSubtextvg) { %>
         <svg>
-          <title><%- subtextvg %></title>
+          <title><%- altSubtextvg = altSubtextvg != '' ?  altSubtextvg : subtextvg %></title>
           <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-'+subtextvg) %>"></use>
         </svg>
       <% } %>

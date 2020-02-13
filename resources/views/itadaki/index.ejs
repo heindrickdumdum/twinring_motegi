@@ -467,6 +467,7 @@ accordionData = [
     </div>
   </section>
 
+  
   <div class="call-to-action">
     <div class="l-container">
       <div class="call-to-action-wrapper">
@@ -502,6 +503,16 @@ accordionData = [
             <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
           </span>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner-cta">
+    <div class="l-container">
+      <div class="banner-cta-inner">
+        <a href="#">
+          <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
+        </a>
       </div>
     </div>
   </div>
@@ -544,7 +555,7 @@ accordionData = [
       <div class="pick-inner">
         <ul class="pickup-list row">
           <% getData().data.pickup.forEach(item => { %>
-          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
+          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-6">
             <%- include('/partials/article', {
               category: item.category,
               image: item.image,

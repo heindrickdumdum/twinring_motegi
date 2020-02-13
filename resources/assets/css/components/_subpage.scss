@@ -186,3 +186,29 @@
   margin-bottom: 20px;
   padding: 0 20px;
 }
+
+//modifier hellowoods family walk
+.subpage-button-family-walk {
+  margin-top: 50px;
+}
+
+//modifier hellowoods precuation
+.subpage-inner-precaution {
+  padding: 56px;
+  background-color: $color-green;
+  color: $color-white;
+
+  h4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: $font-hiragino;
+    line-height: 1.417;    
+  }
+
+  ol {
+    font-size: 15px;
+    line-height: 2;
+    text-align: left;
+    letter-spacing: 0.16em;
+  }
+}

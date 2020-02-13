@@ -231,10 +231,23 @@
   }
 }
 
-// modifier
-// .media-title-racing-kart {
-//   text-align: center;
-//   font-size: 26px;
-// }
+.media-labo {
+  padding-top: 50px;
 
-// //modifier SP
+  .media {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .media-left {
+    width: 425px;
+  }
+
+  .media-right {
+    padding-left: 425px;
+  }
+
+  .media-bg {
+    margin-left: 0px;
+  }
+}

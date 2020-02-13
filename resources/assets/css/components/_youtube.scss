@@ -1,0 +1,10 @@
+// .youtube {}
+
+.youtube-iframe-container {
+  iframe {
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      height: 210px;
+    }
+  }
+}

@@ -64,7 +64,7 @@
     letter-spacing: 0.112em;
 
     @include max-screen($breakpoint-mobile) {
-      width: calc(100% - 76px);
+      width: 100%;
     }
 
     .button-icon {

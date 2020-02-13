@@ -7,6 +7,10 @@ if (typeof text === 'undefined'){
   var text = '';
 }
 
+if (typeof imgPath === 'undefined'){
+  var imgPath = '';
+}
+
 if (typeof alt === 'undefined'){
   var alt = '';
 }
@@ -23,21 +27,33 @@ if (typeof altSubtext === 'undefined'){
       var altSubtext = '';
 }
 
+if (typeof heading_level === 'undefined'){
+  var heading_level = 2;
+}
+
 %>
 
 <div class="heading-wrap<%- ' '+modifier %>">
   <div class="heading">
-    <p class="heading-text">
-      <%- text %>
-    </p>
+    <% if(text) { %>
+      <h<%- heading_level %> class="heading-text">
+        <%- text %>
+    </h<%= heading_level %>>
+    <% } %>
 
-    <% if(subtextvg) { %>
-    <h2 class="heading-subtext">
-      <svg>
-        <title><%- subtextvg %></title>
-        <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-'+subtextvg) %>"></use>
-      </svg>
-    </h2>
+    <% if(subtextvg || imgPath) { %>
+    <p class="heading-subtext">
+      <% if(subtextvg) { %>
+        <svg>
+          <title><%- subtextvg %></title>
+          <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-'+subtextvg) %>"></use>
+        </svg>
+      <% } %>
+
+      <% if(imgPath) { %>
+        <img src="<%- imgPath %>" alt="<%- alt %>">
+      <% } %>
+    </p>
     <% } %>
 
     <% if(altSubtext) { %>

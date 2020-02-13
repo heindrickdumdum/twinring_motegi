@@ -6,20 +6,26 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
-<div class="subpage subpage-bunbun">
+<div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
         <div class="mv-image" style="background-image:url(<%= mix('/assets/images/motoracer/mv-img.jpg') %>);"></div>
       </li>
     </ul>
+
+    <h2 class="mv-heading mv-heading-subpage">
+      <span class="mv-heading-text">
+        モトレーサー
+      </span>
+    </h2>
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-bunbun">
+    <div class="heading-wrap heading-main heading-main-racer">
       <h2 class="heading">
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/motoracer/subpage-title.png') %>" alt="">
+          <img src="<%= mix('/assets/images/motoracer/motor-color-title.png') %>" alt="">
         </span>
       </h2>
     </div>
@@ -95,11 +101,11 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom heading-howto heading-howto-motoracer',
-          'text': 'How to Enjoy',
-          'alt': '',
-          'subtextvg': 'motoracer-subtext',
-          'altSubtext': '',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-motoracer',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'motoracer-enjoy-point-title',
+          altSubtext: '',
         }) %>
       </div>
 
@@ -180,11 +186,10 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            'modifier': 'heading-banner-more',
-            'text': 'モトレーサーをもっと楽しむ',
-            'alt': '',
-            'altSubtext': '',
-            'subtext': ''
+            modifier: 'heading-banner-more heading-banner-more-motoracer',
+            imgPath: mix('/assets/images/motoracer/motor-enjoy-more-title.png'),
+            alt: 'モトレーサーをもっと楽しむ',
+            altSubtext: ''
           }) %>
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
@@ -194,8 +199,8 @@
           </div>
           <div class="l-button l-button-call-to-action">
             <%- include('/partials/button', {
-              'modifier': 'button-sumika',
-              'text': 'もっと見る',
+              modifier: 'button-sumika',
+              text: 'もっと見る',
               'link': '#'
             }) %>
           </div>
@@ -224,60 +229,10 @@
     </div>
   </div>
 
-  <section class="subpage-section subpage-section-recommendation">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        'modifier': 'heading-gradient-tobottom heading-recommendation',
-        'text': 'Recommendation',
-        'alt': 'recommendation',
-        'altSubtext': '',
-        'subtextvg': 'recommendation-subtext'
-      }) %>
-    </div>
+  <%- include('/partials/recommendation') -%>
 
-    <div class="swiper-container slider">
-      <ul class="swiper-wrapper slider-wrapper">
-        <% getData().data.recommend.forEach(item => { %>
-        <li class="swiper-slide slider-item">
-          <%- include('/partials/article-no-design', {
-            image: item.image,
-            heading: item.heading,
-            buttonLink: item.buttonLink,
-            buttonText: 'モビパーク'
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
-  </section>
+  <%- include('/partials/pickup') -%>
 
-  <section class="subpage-section subpage-section-pickup">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        'modifier': 'heading-gradient-tobottom heading-pickup',
-        'text': 'PickUp',
-        'alt': 'pickup',
-        'altSubtext': '',
-        'subtextvg': 'pickup'
-      }) %>
-    </div>
-
-    <div class="l-container">
-      <ul class="feature-list">
-        <% pickup.forEach(item => { %>
-        <li class="feature-item">
-          <%- include('/partials/article', {
-            'category': item.category,
-            'image': item.image,
-            'heading': item.heading,
-            'date': item.date,
-            'link': item.link
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
-  </section>
 
   <!-- END BOTTOM -->
 </div>

@@ -12,13 +12,6 @@
     background: url(#{$image-path}mv-curve.png) no-repeat center top;
     background-size: cover;
   }
-
-  &.mv-subpage {
-    margin-bottom: 50px;
-    &::after {
-      bottom: -50px;
-    }
-  }
 }
 
 
@@ -38,6 +31,23 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  .mv-subpage & {
+    max-height: 607px;
+    height: 0;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 607px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 76%;
+    }
+
+    &::after {
+      bottom: -50px;
+    }
+  }
 }
 
 .mv-buttons {
@@ -90,8 +100,14 @@
 
 .mv-heading {
   position: absolute;
-  bottom: -92px;
-  left: 35px;
+  &:not(.mv-heading-subpage) {
+    bottom: -92px;
+    left: 35px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    left: 15px;
+  }
 
   &.hellowoods-mv-heading {
     bottom: 50px;
@@ -115,13 +131,20 @@
   font-size: 36px;
   color: $color-seaweed;
   letter-spacing: 0.06em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 19px;
+  }
 }
 
 .mv-heading-subtext {
   margin-top: 13px;
   width: 887px;
 
-  
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    max-width: 375px;
+  }
 }
 
 .mv-today {
@@ -138,6 +161,12 @@
   background: url(#{$image-path}mv-today-bg.png) no-repeat;
   background-size: contain;
 
+  @include max-screen($breakpoint-mobile) {
+    width: 225px;
+    height: 225px;
+    bottom: -70px;
+  }
+
   &.mv-hellowoods-logo {
     background: url(#{$image-path}hellowoods/mv-today-bg.png) no-repeat;
     background-size: contain;
@@ -151,6 +180,11 @@
   width: 92px;
   height: 47px;
   transform: translateX(-4px);
+
+  @include max-screen($breakpoint-mobile) {
+    width: 56px;
+    height: 25px;
+  }
 }
 
 .mv-today-time {
@@ -162,6 +196,12 @@
   transform: translateX(-6px);
   position: relative;
 
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 7px;
+    font-size: 17px;
+    letter-spacing: 0.03em;
+  }
+
   &::after {
     content: '';
     display: block;
@@ -171,6 +211,10 @@
     height: 3px;
     background: url(#{$image-path}dot.png) no-repeat center;
     background-size: contain;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 63px;
+    }
   }
 }
 
@@ -179,6 +223,11 @@
   margin-left: -23px;
   font-size: 24px;
   font-weight: bold;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 13px;
+    font-weight: normal;
+  }
 }
 
 .mv-today-degree-icon {
@@ -186,6 +235,13 @@
   vertical-align: top;
   width: 30px;
   height: 24px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 15px;
+    height: 15px;
+    margin-right: 1px;
+    margin-top: -1px;
+  }
 
   svg {
     width: 100%;
@@ -195,6 +251,10 @@
 
 .mv-today-celcius-value {
   margin: 0 -7px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 -3px;
+  }
 }
 
 
@@ -287,7 +347,7 @@
     font-size: 47px;
     color: $color-white;
     letter-spacing: 0.06em;
-    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5); 
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
   }
 
   .mv-today {
@@ -301,8 +361,8 @@
 
 // modifier mobipark
 .mv-mobipark {
-  overflow-y: hidden; 
-  
+  overflow-y: hidden;
+
   .mv-heading {
     left: 0px;
     bottom: 65px;
@@ -311,7 +371,7 @@
   .mv-heading-text-mobipark {
     font-size: 45px;
     color: $color-white;
-    letter-spacing: 0.08em;    
+    letter-spacing: 0.08em;
   }
 
   .mv-heading-subtext-mobipark {
@@ -426,7 +486,6 @@
   }
 }
 
-
 .mv-inner {
   .mv-today {
     width: 268px;
@@ -440,7 +499,7 @@
   }
 
   .mv-heading-subtexts {
-    
+
     svg {
       fill: $color-white;
       width: 520px;
@@ -474,7 +533,7 @@
   }
 }
 
-// END sumika mv 
+// END sumika mv
 
 // modifier mv heading forest driving
 .mv-forest-driving {
@@ -505,12 +564,50 @@
     @include max-screen($breakpoint-mobile) {
       font-size: 46px;
       color: $color-white;
+      letter-spacing: 0.1em;
+      text-shadow: 0px 8px 11px rgba(0, 0, 0, 0.35);
     }
   }
-}
-// modifier mv heading forest driving
 
-//modifier mv subpage
+}
+// end modifier forest driving school
+
+.mv-subpage {
+  margin-bottom: 7px;
+  max-height: 607px;
+  height: auto;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    height: 607px;
+    margin-bottom: 50px;
+  }
+
+  &::after {
+    bottom: -50px;
+  }
+
+  .mv-heading-subpage {
+    width: 100%;
+    text-align: center;
+    color: $color-white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    span {
+      color: $color-white;
+      text-shadow: 0 2px 8px $color-black;
+      font-size: 23px;
+      font-weight: 300;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 46px;
+      }
+    }
+  }
+
+}
+
 .mv-image-subpage {
   background-position-y: 25%;
 }

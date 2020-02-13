@@ -39,29 +39,36 @@
 .subpage-inner {
   position: relative;
   max-width: 1060px;
-  margin: 0 auto 106px;
+  margin: 0 auto 60px;
   padding: 0 20px;
   width: 100%;
 
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 120px;
+  }
+
   > p {
-    font-size: 15px;
+    font-size: 12px;
     color: $base-font-color;
     line-height: 2;
     text-align: left;
     letter-spacing: 0.16em;
     margin-bottom: 33px;
 
-    //modifier SP
-    @include max-screen($breakpoint-mobile) {
-      font-size: 24px;
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 15px;
     }
   }
 }
 
 .subpage-title {
-  font-size: 24px;
+  font-size: 13px;
   letter-spacing: 0.11em;
   margin-bottom: 8px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 24px;
+  }
 
   span {
     background: linear-gradient(to right, #027cc3 0%, #09a046 100%);
@@ -76,8 +83,15 @@
 }
 
 .subpage-banner {
-  width: 100%;
-  margin-bottom: 40px;
+  width: calc(100% + 40px);
+  // left: -20px;
+  position: relative;
+  margin-bottom: 20px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 40px;
+    width: 100%;
+  }
 
   iframe {
     width: 100%;
@@ -98,9 +112,9 @@
 
 .subpage-section-inner {
   position: relative;
-  max-width: 1060px;
+  max-width: 1102px;
   margin: 0 auto 120px;
-  padding: 0 20px;
+  padding: 0 42px;
   width: 100%;
 }
 
@@ -135,7 +149,12 @@
 }
 
 .subpage-section-howto-inner {
-  max-width: 1045px;
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
+.subpage-section-course-inner {
+  max-width: 1024px;
   margin: 0 auto;
 }
 

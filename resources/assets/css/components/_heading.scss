@@ -85,15 +85,231 @@
   }
 }
 
+//modifier forest driving cta heading image
+.heading-net-forest-driving {
+  img {
+    max-width: 419px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+//banner title image or text
+.heading-banner-more {
+  .heading {
+    margin: 20px 0 0;
+  }
+
+  .heading-text {
+    line-height: 1;
+    letter-spacing: 0.16em;
+    font-size: 31px;
+    position: relative;
+  }
+
+  .heading-subtext {
+    position: relative;
+    margin-top: 0;
+  }
+
+  &.heading-banner-more-challenge {
+    .heading-subtext {
+      max-width: 528px;
+
+      width: 100%;
+      left: 10px;
+    }
+  }
+
+  &.heading-banner-more-bunbun {
+    .heading-subtext {
+      left: 26px;
+    }
+  }
+
+  &.heading-banner-more-motorcycle {
+    .heading-subtext {
+      left: 9px;
+      height: auto;
+    }
+  }
+}
+
+//main page title
+.heading-main {
+  margin-bottom: 45px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 83px;
+  }
+
+  .heading {
+    // max-width: 651px;
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &.heading-main-carbike {
+    .heading {
+      margin-bottom: 65px;
+      max-width: 531px;
+    }
+  }
+
+  &.heading-main-dokidoki {
+    .heading {
+      max-width: 497px;
+    }
+  }
+
+  &.heading-main-wild-racer {
+    .heading {
+      max-width: 505px;
+    }
+  }
+
+  &.heading-main-bunbun {
+    .heading {
+      max-width: 445px;
+    }
+  }
+
+  &.heading-main-motorcycle {
+    .heading {
+      max-width: 358px;
+    }
+  }
+
+  &.heading-main-forest-driving {
+    img {
+      max-width: 651px;
+      width: 100%;
+    }
+  }
+
+
+
+}
+
+//how to enjoy heading
+.heading-howto {
+  margin-bottom: 35px;
+
+  &.heading-howto-bunbun {
+    .heading-subtext {
+      max-width: 560px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-acrox {
+    .heading-subtext {
+      max-width: 628px;
+      margin-bottom: 35px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-debden {
+    .heading-subtext {
+      max-width: 669px;
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  &.heading-howto-dokidoki {
+    .heading-subtext {
+      max-width: 545px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-forest-driving {
+    .heading-subtext {
+      max-width: 539px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-tsubasa {
+    .heading-subtext {
+      max-width: 206px;
+      margin-top: 23px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-wildracer {
+    .heading-subtext {
+      max-width: 626px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-motorcycle {
+    .heading-subtext {
+      max-width: 925px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-mototouring {
+    .heading-subtext {
+      max-width: 625px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-motoracer {
+    .heading-subtext {
+      max-width: 583px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-dream {
+    .heading-subtext {
+      max-width: 616px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-drift {
+    .heading-subtext {
+      max-width: 515px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-challenge {
+    .heading-subtext {
+      max-width: 669px;
+      width: 100%;
+    }
+  }
+}
+
 .heading-wrap {
   &.heading-gradient-tobottom {
     .heading-text {
       background: linear-gradient(to bottom, #027cc3 35%, #099f48 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 36px;
+      font-size: 22.5px;
       font-weight: bold;
       letter-spacing: 0.1em;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 36px;
+        letter-spacing: 0.1em;
+      }
     }
   }
 
@@ -102,9 +318,14 @@
       background: linear-gradient(to right, #027cc3 0%, #099f48 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 36px;
+      font-size: 23px;
       font-weight: bold;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.03em;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 36px;
+        letter-spacing: 0.1em;
+      }
     }
   }
 
@@ -119,25 +340,6 @@
 
     .heading-subtext {
       margin: 25px auto 0;
-    }
-  }
-
-  &.heading-banner-more {
-    .heading {
-      margin: 20px 0 0;
-    }
-
-    .heading-text {
-      line-height: 1;
-      letter-spacing: 0.16em;
-      font-size: 31px;
-      position: relative;
-    }
-  }
-
-  &.heading-banner-more-bunbun {
-    .heading-text {
-      left: 26px;
     }
   }
 
@@ -273,26 +475,6 @@
 
   }
 
-  &.heading-main {
-    margin-bottom: 83px;
-
-    .heading {
-      max-width: 651px;
-      width: 100%;
-      margin: 0 auto;
-    }
-  }
-
-//END sumika/itadaki/dokidoki
-
-  &.heading-howto-acrox {
-    .heading-subtext {
-      max-width: 628px;
-      margin-bottom: 35px;
-      width: 100%;
-    }
-  }
-
   &.heading-net-acro-x {
     margin-top: 15px;
     margin-bottom: 0;
@@ -304,21 +486,6 @@
     }
   }
 
-  &.heading-howto-bunbun {
-    margin-bottom: 35px;
-    .heading-subtext {
-      max-width: 560px;
-      width: 100%;
-    }
-  }
-
-  &.heading-main-carbike {
-
-    .heading {
-      margin-bottom: 65px;
-      max-width: 531px;
-    }
-  }
 
   &.heading-car-attraction {
     margin-bottom: 85px;
@@ -350,54 +517,12 @@
     }
   }
 
-  &.heading-howto-debden {
-    margin-bottom: 35px;
-    .heading-subtext {
-      max-width: 669px;
-      width: 100%;
-      height: 40px;
-    }
-  }
-
-  &.heading-main-dokidoki {
-    .heading {
-      max-width: 497px;
-      margin: 0 auto;
-    }
-  }
-
-  &.heading-howto-dokidoki {
-    margin-bottom: 40px;
-
-    .heading-subtext {
-      max-width: 545px;
-      width: 100%;
-    }
-  }
-
   &.heading-dokidoki-forest {
     margin-bottom: 55px;
 
     .heading-subtext {
       max-width: 659px;
       margin-top: 35px;
-      width: 100%;
-    }
-  }
-
-  &.heading-howto-forest-driving {
-    margin-bottom: 35px;
-    .heading-subtext {
-      max-width: 539px;
-      width: 100%;
-    }
-  }
-
-  &.heading-howto-tsubasa {
-    margin-bottom: 50px;
-    .heading-subtext {
-      max-width: 206px;
-      margin-top: 23px;
       width: 100%;
     }
   }
@@ -422,76 +547,23 @@
     }
   }
 
-  &.heading-main-wild-racer {
-    .heading-text {
-      max-width: 505px;
-      width: 100%;
-    }
-  }
-
-  &.heading-howto-wildracer {
-    margin-bottom: 35px;
-    .heading-subtext {
-      max-width: 626px;
-      width: 100%;
-    }
-  }
-
-  &.heading-howto-motorcycle {
-    margin-bottom: 35px;
+  &.heading-course-challenge {
+    margin-bottom: 58px;
 
     .heading-subtext {
-      max-width: 925px;
+      max-width: 201px;
       width: 100%;
     }
   }
 
-  &.heading-howto-mototouring {
-    margin-bottom: 35px;
-
+  &.heading-kart-challenge {
+    margin-bottom: 50px;
     .heading-subtext {
-      max-width: 625px;
+      max-width: 959px;
+      margin-top: 0;
       width: 100%;
     }
   }
-
-  &.heading-howto-motoracer {
-    margin-bottom: 35px;
-
-    .heading-subtext {
-      max-width: 583px;
-      width: 100%;
-    }
-  }
-
-  &.heading-howto-dream {
-    margin-bottom: 35px;
-
-    .heading-subtext {
-      max-width: 616px;
-      width: 100%;
-    }
-  }
-
-  &.heading-howto-drift {
-    margin-bottom: 35px;
-
-    .heading-subtext {
-      max-width: 515px;
-      width: 100%;
-    }
-  }
-
-  &.heading-life-overflowing {
-    margin-bottom: 70px;
-  }
-
-  &.sponsors {
-    margin-bottom: 55px;
-  }
-
-
-
 }
 
 //modifier kids carbike attraction
@@ -534,7 +606,7 @@
     &.hellowoods {
       font-size: 39px;
       height: auto;
-      max-width: none;  
+      max-width: none;
     }
 
     svg {
@@ -648,23 +720,10 @@
   }
 }
 
-//modifier forest driving cta heading image
-.heading-net-forest-driving {
-  img {
-    max-width: 419px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+
 
 // modifier heading main subpage forest driving
-.heading-main-forest-driving {
-  img {
-    max-width: 651px;
-    width: 100%;
-  }
-}
+
 
 .mobipark {
   .heading-main-title {
@@ -687,3 +746,26 @@
   }
 }
 // end modifier dokidoki mobipark
+
+// modifier mv heading
+.mv-forest-driving {
+  .mv-heading {
+    position: relative;
+    bottom: initial;
+    left: initial;
+    text-align: center;
+    width: 100%;
+  }
+
+  .mv-heading-text {
+    font-size: 45px;
+    color: $color-white;
+    display: inline-block;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 46px;
+      color: $color-white;
+    }
+  }
+}

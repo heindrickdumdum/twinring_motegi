@@ -81,7 +81,7 @@
   position: relative;
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
 
   span {
     position: relative;
@@ -107,7 +107,6 @@
 
 .media-title-nohighlight {
   span {
-    font-weight: normal;
     &:before {
       display: none;
     }

@@ -4,11 +4,19 @@
   <div class="u-show-pc">
     <div class="l-container">
         <div class="l-header-top">
-          <h1 class="l-header-top-logo">
-            <a class="header-logo" href="/">
-              <img src="<%= mix('/assets/images/logo.svg') %>" alt="森の中のモビリティテーマパークツインリンクもてぎ">
-            </a>
-          </h1>
+          <% if(typeof topHeading === 'undefined') { %>
+            <div class="l-header-top-logo">
+              <a class="header-logo" href="/">
+                <img src="<%= mix('/assets/images/logo.svg') %>" alt="森の中のモビリティテーマパークツインリンクもてぎ">
+              </a>
+            </div>
+          <% } else { %>
+            <h1 class="l-header-top-logo">
+              <a class="header-logo" href="/">
+                <img src="<%= mix('/assets/images/logo.svg') %>" alt="森の中のモビリティテーマパークツインリンクもてぎ">
+              </a>
+            </h1>
+          <% } %>
           <div class="l-header-top-right">
             <ul class="header-top-others">
               <li class="header-top-others-item header-top-others-item-logo">

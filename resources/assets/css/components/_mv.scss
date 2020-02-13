@@ -93,6 +93,10 @@
   bottom: -92px;
   left: 35px;
 
+  @include max-screen($breakpoint-mobile) {
+    left: 15px;
+  }
+
   &.hellowoods-mv-heading {
     bottom: 50px;
 
@@ -115,13 +119,20 @@
   font-size: 36px;
   color: $color-seaweed;
   letter-spacing: 0.06em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 19px;
+  }
 }
 
 .mv-heading-subtext {
   margin-top: 13px;
   width: 887px;
 
-
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    max-width: 375px;
+  }
 }
 
 .mv-today {

@@ -1,44 +1,37 @@
 <%
-  var title = 'Twin Ring Motegi | 森の教習所'
+  var title = 'Twin Ring Motegi | おさんぽでんでん'
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
 
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
-<% pageId = 'mobipark-subpage' %>
+<% pageId = 'mobipark-subpage'; %>
 
-<div class="subpage">
-  <div class="mv mv-subpage mv-forest-driving">
+<div class="subpage subpage-acro-x">
+  <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.jpg') %>);"></div>
+        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.png') %>);"></div>
 
-        <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/forest-driving/mobile-mv-img.png') %>);"></div>
+        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.png') %>);"></div>
       </li>
     </ul>
-
-    <div class="l-container mv-container">
-      <h2 class="mv-heading">
-        <span class="mv-heading-text">
-          森の教習所
-        </span>
-      </h2>
-    </div>
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-forest-driving heading-main-subpage">
+    <div class="heading-wrap heading-main heading-main-subpage">
       <h2 class="heading">
         <span class="heading-texts u-show-pc">
-          <img src="<%= mix('/assets/images/forest-driving/forest-driving-title.png') %>" alt="forest-driving">
+          <img src="<%= mix('/assets/images/deb-den/osanpo-color-title.png') %>" alt="deb den">
         </span>
         <span class="heading-texts u-show-sp">
-          <img src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
+          <img src="<%= mix('/assets/images/deb-den/osanpo-color-title.png') %>" alt="deb den">
         </span>
       </h2>
     </div>
 
+    <!-- banner -->
     <div class="subpage-banner">
       <div class="subpage-banner-inner">
         <img class="u-show-pc" src="<%= mix('/assets/images/forest-driving/banner.jpg') %>" alt="forest forest-driving">
@@ -51,7 +44,7 @@
       <span>アトラクション情報</span>
     </h3>
 
-    <p>信号や横断歩道、道路標識や踏み切りなど森の市街地の中で交通ルールを学びながら優秀運転免許証を<br />取得しよう。</p>
+    <p>かたつむりに乗って葉っぱの上をのんびりお散歩。親子で一緒に乗ることができるのりものです。3歳からはひとりで運転できます。</p>
 
     <table class="table">
       <tbody>
@@ -62,7 +55,7 @@
 
         <tr class="table-row">
           <th class="table-head">所要時間</th>
-          <td class="table-col">約5分
+          <td class="table-col">約2分
           </td>
         </tr>
 
@@ -74,7 +67,7 @@
 
         <tr class="table-row">
           <th class="table-head">対象者</th>
-          <td class="table-col">0歳以上でひとり座りできる方※
+          <td class="table-col">0歳以上でひとり座りできる方※1
           </td>
         </tr>
 
@@ -86,35 +79,36 @@
         <tr class="table-row">
           <th class="table-head">料金</th>
           <td class="table-col">
-            モビパークパスポート対象 <br>アトラクションチケット利用：400円
+            モビパークパスポート対象 <br>アトラクションチケット利用：200円
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
-            5歳未満のお子様について：<br>5歳未満のお子さまは中学生以上の同伴者の付添いが必要になります。
+            ※1 0歳から2歳までの方：<br>0歳から2歳までのお子さまは中学生以上の同伴者の付添いが必要になります。
           </td>
         </tr>
 
       </tbody>
     </table>
+
   </div>
 
   <section class="subpage-section subpage-section-howto">
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom heading-howto heading-howto-forest-driving',
-          'text': 'How to Enjoy',
-          'alt': '',
-          'subtextvg': 'forest-enjoy-point',
-          'altSubtext': '',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-debden',
+          text: 'How to Enjoy',
+          alt: 'おさんぽでんでんを楽しむポイント',
+          subtextvg: 'osanpo-enjpy-point-title',
+          altSubtext: '',
         }) %>
       </div>
 
       <div class="how-to-content">
-        <div class="media media-subpage u-clear">
+        <div class="media media-subpage media-subpage-deb-den-walk u-clear">
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb u-show-pc">
@@ -128,15 +122,25 @@
           </div>
           <div class="media-right">
             <h4 class="media-title">
-              <span>運転しながら交通ルールを学ぼう！</span>
+              <span>3歳から一人で運転！</span>
             </h4>
             <p class="media-desc">
-              子どもが一人で運転できる教習車で挑戦。<br>信号や横断歩道、踏み切りなどが <br>再現された森の教習所で交通ルールを学ぼう！
+              3歳から一人で自由にアクセルとハンドルを操作。0歳から親子で一緒に乗れる、乗り物デビューにぴったりのアトラクション！
             </p>
+
+            <div class="media-bottom">
+              <div class="media-note">
+                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                <div class="media-note-text">
+                  100点取れたら… <br>
+                  交通ルールを守れタネ！
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="media media-subpage u-clear">
+        <div class="media media-subpage media-subpage-deb-den-walk u-clear">
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb u-show-pc">
@@ -148,39 +152,25 @@
               </div>
             </div>
           </div>
-
           <div class="media-right">
             <h4 class="media-title">
               <div class="u-show-pc">
                 <span>
-                  交通ルールを守ってプラチナ免許をゲット！
+                  でんでん虫になった気分でのんびりお散歩！
                 </span>
               </div>
 
               <div class="u-show-sp">
-                <span>交通ルールを守ってプラチナ免許を</span>
-                <span>ゲット！</span>
+                <span>でんでん虫になった気分でのんびりお散歩！</span>
               </div>
 
 
             </h4>
             <p class="media-desc">
-              交通ルールを守って走行できると得点がアップ。<br>90点以上はゴールド免許、 <br>100点満点ならプラチナ免許がゲットできるよ！
+              大きな葉っぱの上がでんでん虫のコース。森と空を眺めながら、でんでん虫になった気分でお散歩しよう！
             </p>
-
-            <div class="media-bottom">
-              <div class="media-note">
-                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="image flag">
-                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="image acorn">
-                <div class="media-note-text">
-                  100点取れたら… <br>
-                  交通ルールを守れタネ！
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -190,37 +180,38 @@
   <div class="call-to-action">
     <div class="l-container">
       <div class="call-to-action-wrapper">
-        <div class="call-to-action-inner call-to-action-inner-subpage">
+        <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            'modifier': 'headin-net-subpage heading-net-forest-driving heading-banner-more',
-            'text': '<img src='+ mix('/assets/images/forest-driving/forest-enjoy-more.png') +' alt="forest driving">',
-            'alt': '森の教習所をもっと楽しむ',
-            'altSubtext': '',
-            'subtextvg': ''
+            modifier: 'heading-net-subpage heading-banner-more heading-net-deb-den',
+            alt: 'アクロエックスをもっと楽しむ',
+            subtext: mix('/assets/images/deb-den/osanpo-enjoy-more-title.png'),
+            altSubtext: 'アクロエックスをもっと楽しむ',
+            subtextvg: ''
           }) %>
+
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
-              森の教習所のこだわりポイントや、<br>  知っているともっと楽しくなる情報を配信中しています。
+              おさんぽでんでんのこだわりポイントや、知っているとも<br>っと楽しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
             <%- include('/partials/button', {
-              'modifier': 'button-acro-x',
-              'text': 'もっと見る',
-              'link': '#'
+              modifier: 'button-deb-den',
+              text: 'もっと見る',
+              link: '#'
             }) %>
           </div>
           <span class="call-to-action-dot call-to-action-dot-1">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img1.png')%> " alt="image cta">
+            <img src="<%- mix('/assets/images/forest-driving/cta-img1.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-2">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img2.png')%> " alt="image cta">
+            <img src="<%- mix('/assets/images/forest-driving/cta-img2.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-3">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img4.png')%> " alt="image cta">
+            <img src="<%- mix('/assets/images/forest-driving/cta-img4.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-4">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img3.png')%> " alt="image cta">
+            <img src="<%- mix('/assets/images/forest-driving/cta-img3.png')%> ">
           </span>
         </div>
       </div>
@@ -230,7 +221,7 @@
   <div class="banner-cta">
     <div class="l-container">
       <div class="banner-cta-bottom-inner">
-        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> " alt="banner-logo">
+        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
       </div>
     </div>
   </div>
@@ -242,6 +233,7 @@
   <%- include('/partials/pickup') -%>
 
   <!-- END BOTTOM -->
+
 </div>
 
 <%- include('/partials/footer', {pageId}) -%>

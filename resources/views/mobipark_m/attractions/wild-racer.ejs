@@ -1,5 +1,5 @@
 <%
-  var title = 'Twin Ring Motegi | おさんぽでんでん'
+  var title = 'Twin Ring Motegi | ワイルドレーサー'
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
 
@@ -8,30 +8,39 @@
 
 <% pageId = 'mobipark-subpage'; %>
 
-<div class="subpage subpage-acro-x">
-  <div class="mv mv-subpage">
+<div class="subpage">
+  <div class="mv mv-subpage mv-wild-racer">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.png') %>);"></div>
+        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/wild-racer/mv-img.png') %>);"></div>
 
-        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.png') %>);"></div>
+        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/wild-racer/mv-img.png') %>);"></div>
       </li>
     </ul>
-  </div>
 
-  <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-subpage">
-      <h2 class="heading">
-        <span class="heading-texts u-show-pc">
-          <img src="<%= mix('/assets/images/deb-den/osanpo-color-title.png') %>" alt="deb den">
-        </span>
-        <span class="heading-texts u-show-sp">
-          <img src="<%= mix('/assets/images/deb-den/osanpo-color-title.png') %>" alt="deb den">
+    <div class="l-container mv-container">
+      <h2 class="mv-heading">
+        <span class="mv-heading-text">
+          <!--おさんぽでんでん-->
         </span>
       </h2>
     </div>
+  </div>
 
-    <!-- banner -->
+  <div class="subpage-inner">
+    <div class="l-section-title">
+      <div class="heading-wrap heading-main heading-main-wild-racer heading-main-subpage">
+        <h2 class="heading">
+          <span class="heading-text u-show-pc">
+            <img src="<%= mix('/assets/images/wild-racer/wildracer-title.png') %>" alt="forest-driving">
+          </span>
+          <span class="heading-text u-show-sp">
+            <img src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
+          </span>
+        </h2>
+      </div>
+    </div>
+
     <div class="subpage-banner">
       <div class="subpage-banner-inner">
         <img class="u-show-pc" src="<%= mix('/assets/images/forest-driving/banner.jpg') %>" alt="forest forest-driving">
@@ -44,7 +53,7 @@
       <span>アトラクション情報</span>
     </h3>
 
-    <p>かたつむりに乗って葉っぱの上をのんびりお散歩。親子で一緒に乗ることができるのりものです。3歳からはひとりで運転できます。</p>
+    <p>ドリフトするようにスライドするマシンを操作して、森のいきものたちが繰り広げるレースで競い合いながら1位を目指そう。</p>
 
     <table class="table">
       <tbody>
@@ -55,7 +64,7 @@
 
         <tr class="table-row">
           <th class="table-head">所要時間</th>
-          <td class="table-col">約2分
+          <td class="table-col">約5分
           </td>
         </tr>
 
@@ -67,7 +76,7 @@
 
         <tr class="table-row">
           <th class="table-head">対象者</th>
-          <td class="table-col">0歳以上でひとり座りできる方※1
+          <td class="table-col">3歳以上※
           </td>
         </tr>
 
@@ -79,36 +88,35 @@
         <tr class="table-row">
           <th class="table-head">料金</th>
           <td class="table-col">
-            モビパークパスポート対象 <br>アトラクションチケット利用：200円
+            モビパークパスポート対象 <br>アトラクションチケット利用：400円
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
-            ※1 0歳から2歳までの方：<br>0歳から2歳までのお子さまは中学生以上の同伴者の付添いが必要になります。
+            ※1 3歳から小学生未満の方：<br>3歳から小学生未満のお子さまは中学生以上の同伴者の付添いが必要になります。
           </td>
         </tr>
 
       </tbody>
     </table>
-
   </div>
 
   <section class="subpage-section subpage-section-howto">
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom heading-howto heading-howto-debden',
-          'text': 'How to Enjoy',
-          'alt': 'おさんぽでんでんを楽しむポイント',
-          'subtextvg': 'osanpo-enjpy-point-title',
-          'altSubtext': '',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-wildracer',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'wildracer-enjoy-point-title',
+          altSubtext: '',
         }) %>
       </div>
 
       <div class="how-to-content">
-        <div class="media media-subpage media-subpage-deb-den-walk u-clear">
+        <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb u-show-pc">
@@ -122,10 +130,10 @@
           </div>
           <div class="media-right">
             <h4 class="media-title">
-              <span>3歳から一人で運転！</span>
+              <span>レーサー気分でワイルドにバトル！</span>
             </h4>
             <p class="media-desc">
-              3歳から一人で自由にアクセルとハンドルを操作。0歳から親子で一緒に乗れる、乗り物デビューにぴったりのアトラクション！
+              一人でも、家族でチームを組んでも、バトルが楽しい。勝利への近道は、カーブで思いっきりハンドルを切るとできるドリフト走行！
             </p>
 
             <div class="media-bottom">
@@ -133,14 +141,14 @@
                 <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
                 <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
                 <div class="media-note-text">
-                  100点取れたら… <br>
-                  交通ルールを守れタネ！
+                  はじめてのドリフトに<br>
+                  挑戦できタネ！
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="media media-subpage media-subpage-deb-den-walk u-clear">
+        <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb u-show-pc">
@@ -156,18 +164,12 @@
             <h4 class="media-title">
               <div class="u-show-pc">
                 <span>
-                  でんでん虫になった気分でのんびりお散歩！
+                  レース実況がバトルを盛り上げる！
                 </span>
               </div>
-
-              <div class="u-show-sp">
-                <span>でんでん虫になった気分でのんびりお散歩！</span>
-              </div>
-
-
             </h4>
             <p class="media-desc">
-              大きな葉っぱの上がでんでん虫のコース。森と空を眺めながら、でんでん虫になった気分でお散歩しよう！
+              ワイルドなレースに合わせて実況もヒートアップ。走っていても、応援していても盛り上がること間違いなし！
             </p>
           </div>
         </div>
@@ -182,36 +184,36 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            'modifier': 'heading-net-subpage heading-banner-more heading-net-deb-den',
-            'text': '<img src='+ mix('/assets/images/deb-den/osanpo-enjoy-more-title.png') +' alt="enjoy more">',
-            'alt': 'アクロエックスをもっと楽しむ',
-            'altSubtext': '',
-            'subtextvg': ''
+            modifier: 'headin-net-subpage heading-banner-more heading-net-wild-racer',
+            text: '<img src='+ mix('/assets/images/wild-racer/wildracer-enjoy-more-title.png') +' alt="ワイルドレーサーをもっと楽しむ">',
+            alt: 'ワイルドレーサーをもっと楽しむ',
+            altSubtext: '',
+            subtextvg: ''
           }) %>
-
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
-              おさんぽでんでんのこだわりポイントや、知っているとも<br>っと楽しくなる情報を配信中しています。
+              ワイルドレーサーのこだわりポイントや、知っているとも<br>
+              っと楽しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
             <%- include('/partials/button', {
-              'modifier': 'button-deb-den',
-              'text': 'もっと見る',
-              'link': '#'
+              modifier: 'button-acro-x',
+              text: 'もっと見る',
+              link: '#'
             }) %>
           </div>
           <span class="call-to-action-dot call-to-action-dot-1">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img1.png')%> ">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-2">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img2.png')%> ">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-3">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img4.png')%> ">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-4">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img3.png')%> ">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
           </span>
         </div>
       </div>
@@ -233,7 +235,6 @@
   <%- include('/partials/pickup') -%>
 
   <!-- END BOTTOM -->
-
 </div>
 
 <%- include('/partials/footer', {pageId}) -%>

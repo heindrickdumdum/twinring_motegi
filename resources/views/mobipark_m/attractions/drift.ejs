@@ -6,6 +6,8 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
+<% pageId = 'mobipark-subpage'; %>
+
 <div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
@@ -14,18 +16,19 @@
       </li>
     </ul>
 
-    <h2 class="mv-heading mv-heading-subpage">
+    <h1 class="mv-heading mv-heading-subpage">
       <span class="mv-heading-text">
         ドリフトS
       </span>
-    </h2>
+    </h1>
   </div>
 
   <div class="subpage-inner">
     <div class="heading-wrap heading-main heading-main-drift">
       <h2 class="heading">
+        <span class="u-title-hidden">Drift</span>
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/drift/drfit-color-title.png') %>" alt="">
+          <img src="<%= mix('/assets/images/drift/drift-color-title.png') %>" alt="">
         </span>
       </h2>
     </div>
@@ -33,7 +36,7 @@
     <!-- YOUTUBE -->
     <div class="subpage-banner">
       <div class="subpage-banner-inner">
-        <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img class="" src="<%= mix('https://via.placeholder.com/2042x946') %>" alt="">
       </div>
     </div>
 
@@ -191,7 +194,7 @@
           </div>
           <div class="l-button l-button-call-to-action">
             <%- include('/partials/button', {
-              modifier: 'button-sumika',
+              modifier: 'button-banner-more',
               text: 'もっと見る',
               link: '#'
             }) %>
@@ -228,4 +231,4 @@
   <!-- END BOTTOM -->
 </div>
 
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId}) -%>

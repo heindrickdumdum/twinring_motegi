@@ -1,0 +1,119 @@
+.header-sp-top {
+  display: flex;
+  height: 57px;
+  border-bottom: 1px solid rgba($color-mineshaft, .12);
+}
+
+.header-sp-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 188px;
+  border-top: 4px solid $color-green;
+  border-right: 1px solid rgba($color-mineshaft, .12);
+}
+
+.header-sp-logo-link {
+  display: block;
+
+  img {
+    width: 145px;
+    height: auto;
+  }
+}
+
+.header-sp-others-link {
+  display: flex;
+  width: 72px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  border-right: 1px solid rgba($color-mineshaft, .12);
+
+  img {
+    display: block;
+    width: 42px;
+  }
+}
+
+.header-sp-burger-text {
+  padding-left: 37px;
+}
+
+.header-sp-burger-open {
+  display: block;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 27px;
+    height: 1px;
+    background-color: $color-darker;
+    transition: transform $duration $ease-in-out,
+                opacity $duration $ease-in-out;
+  }
+}
+
+.header-sp-burger-close {
+  display: none;
+}
+
+.header-sp-burger-wrap {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  background-color: $color-white;
+  margin-bottom: -2px;
+}
+
+.header-sp-burger {
+  display: block;
+  margin-left: 17px;
+  font-size: 12px;
+  font-weight: bold;
+  color: $color-darker;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform-origin: center;
+    width: 27px;
+    height: 1px;
+    background-color: $color-darker;
+    transition: transform $duration $ease-in-out;
+  }
+
+  &::before {
+    margin-top: -6px;
+  }
+
+  &::after {
+    margin-top: 5px;
+  }
+
+  &.is-active {
+    &::before {
+      margin-top: 0;
+      transform: rotate(27deg)
+    }
+
+    &::after {
+      margin-top: 0;
+      transform: rotate(-27deg);
+    }
+
+    .header-sp-burger-open {
+      &::before {
+        opacity: 0;
+        transform: translateX(-5px);
+      }
+    }
+  }
+}

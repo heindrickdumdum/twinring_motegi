@@ -5,8 +5,35 @@
   background-position: right center;
   background-size: contain;
 
+  &-left {
+    order: 2
+  }
+  
+  &-right {
+    order: 1;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 35px;
+      max-width: 612px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      .heading-text {
+        text-align: left;
+      }
+
+      img {
+        max-width: 457px;
+        width: 100%;
+      }
+    }
+  }
+
   @include max-screen($breakpoint-mobile) {
-    background-image: none;
+    // background-image: none;
+    background-size: 100%;
+    background-position: right top;
   }
 
   .row {
@@ -30,6 +57,7 @@
       line-height: 1.5;
       margin: 0;
       margin-top: 30px;
+      font-size: 24px;
     }
   }
 
@@ -81,3 +109,5 @@
     }
   }
 }
+
+//modifier for SP

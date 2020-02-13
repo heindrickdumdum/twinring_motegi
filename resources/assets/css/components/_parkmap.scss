@@ -241,3 +241,10 @@
     height: 12px;
   }
 }
+
+//modifier for SP
+@include max-screen($breakpoint-mobile) {
+  .map-img {
+    margin: 0 -160px;
+  }
+}

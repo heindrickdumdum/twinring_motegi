@@ -2,14 +2,19 @@
   padding: 20px;
 
   &.media-subpage {
-    margin-bottom: 20px;
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 20px;
+    }
   }
 }
 
 .media-left {
-  float: left;
-  width: 490px;
   text-align: center;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    width: 490px;
+    float: left;
+  }
 }
 
 .media-thumb-bg {
@@ -27,14 +32,27 @@
 
   &:after {
     position: absolute;
-    content: url(/assets/images/img-frame-bg.png);
+    content: '';
+    background-image: url('../images/img-frame-bg.png');
+    background-size: cover;
     top: -5px;
-    left: -18px;
+    left: -3.5%;
     z-index: 0;
+    width: 100%;
+    height: 105%;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      max-width: 394px;
+      left: -14px;
+    }
 
     @include max-screen($breakpoint-mobile) {
-      content: url(/assets/images/sp-img-frame-bg.png);
+      width: 106%;
     }
+
+    // @include max-screen($breakpoint-mobile) {
+    //   content: url(/assets/images/sp-img-frame-bg.png);
+    // }
   }
 
   //modifier SP
@@ -73,15 +91,25 @@
 .media-right {
   display: block;
   width: 100%;
-  padding-left: 500px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding-left: 500px;
+  }
 }
 
 .media-title {
   display: inline-block;
   position: relative;
-  font-size: 20px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.16em;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 20px;
+  }
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 15px;
+  }
 
   span {
     position: relative;
@@ -99,10 +127,7 @@
     }
   }
 
-  @include max-screen($breakpoint-mobile) {
-    margin-top: 15px;
-    font-size: 24px;
-  }
+
 }
 
 .media-title-nohighlight {
@@ -114,22 +139,16 @@
 }
 
 .media-desc {
-  font-size: 15px;
+  font-size: 12px;
   padding-top: 10px;
   line-height: 2;
 
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 15px;
+  }
 
   .media-subpage & {
-    // margin-bottom: 23px;
     letter-spacing: 0.16em;
-  }
-
-  .media-subpage-bunbun & {
-    margin-bottom: 23px;
-  }
-
-  @include max-screen($breakpoint-mobile) {
-    font-size: 22px;
   }
 }
 
@@ -153,9 +172,15 @@
 .media-note {
   position: relative;
   display: inline-block;
-  width: 318px;
+  width: 100%;
+  max-width: 195px;
   text-align: left;
-  margin-top: 25px;
+  margin-top: 15px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: 25px;
+    max-width: 318px;
+  }
 }
 
 .media-note-flag, .media-note-acorn {
@@ -163,22 +188,47 @@
 }
 
 .media-note-flag {
-  top: -24px;
-  left: -3px;
+  top: -13px;
+  left: -1px;
+  width: 45px;
+  height: 23.5px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    top: -24px;
+    left: -3px;
+    width: 90px;
+    height: 47px;
+  }
 }
 
 .media-note-acorn {
-  top: -33px;
-  right: -42px;
+  top: -12px;
+  right: -17px;
+  width: 38px;
+  height: 46px;
+
+
+  @include min-screen($breakpoint-mobile + 1) {
+    top: -33px;
+    right: -42px;
+    width: 75px;
+    height: 92px;
+  }
 }
 
 .media-note-text {
   width: 100%;
-  padding: 23px 32px 20px;
-  font-size: 16px;
+  padding: 11px 12px 8px;
+  font-size: 11px;
   color: #fff;
   background-color: #8daf86;
-  border-radius: 4px;
+  border-radius: 2px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    border-radius: 4px;
+    padding: 23px 32px 20px;
+    font-size: 16px;
+  }
 }
 
 // modifier
@@ -196,27 +246,6 @@
   }
 }
 
-//modifier SP
-@include max-screen($breakpoint-mobile) {
-  .how-to-content {
-    max-width: 510px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .media-left,
-  .media-right {
-    float: none;
-    width: 100%;
-  }
-
-  .media-right {
-    padding-left: 0px;
-  }
-}
-
-//modifier labo
 .media-labo {
   padding-top: 50px;
 

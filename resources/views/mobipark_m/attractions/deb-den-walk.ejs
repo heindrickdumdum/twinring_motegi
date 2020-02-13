@@ -8,20 +8,25 @@
 
 <% pageId = 'mobipark-subpage'; %>
 
-<div class="subpage subpage-acro-x">
+<div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.png') %>);"></div>
-
-        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.png') %>);"></div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.jpg') %>);"></div>
       </li>
     </ul>
+
+    <h1 class="mv-heading mv-heading-subpage">
+      <span class="mv-heading-text">
+        おさんぽでんでん
+      </span>
+    </h1>
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-subpage">
+    <div class="heading-wrap heading-main heading-main-debden">
       <h2 class="heading">
+        <span class="Deb den walk"></span>
         <span class="heading-texts u-show-pc">
           <img src="<%= mix('/assets/images/deb-den/osanpo-color-title.png') %>" alt="deb den">
         </span>
@@ -182,10 +187,10 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            modifier: 'heading-net-subpage heading-banner-more heading-net-deb-den',
+            modifier: 'heading-banner-more heading-banner-more-deb-den',
+            imgPath: mix('/assets/images/deb-den/osanpo-enjoy-more-title.png'),
             alt: 'アクロエックスをもっと楽しむ',
-            subtext: mix('/assets/images/deb-den/osanpo-enjoy-more-title.png'),
-            altSubtext: 'アクロエックスをもっと楽しむ',
+            altSubtext: '',
             subtextvg: ''
           }) %>
 
@@ -196,7 +201,7 @@
           </div>
           <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
             <%- include('/partials/button', {
-              modifier: 'button-deb-den',
+              modifier: 'button-banner-more',
               text: 'もっと見る',
               link: '#'
             }) %>

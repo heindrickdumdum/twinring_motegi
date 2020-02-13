@@ -1,4 +1,5 @@
 <% if(typeof pageId === 'undefined') { var pageId = ''; } %>
+<% if(typeof page === 'undefined') { var page = ''; } %>
 
 <footer class="footer">
 
@@ -76,10 +77,13 @@
   </div> <!-- end of wrap -->
 
   <script src="<%= mix('/assets/js/app.js') %>" async></script>
-  <script src="<%= mix('/assets/js/recommendation.js') %>" async></script>
 
   <% if(pageId == 'mobipark') { %>
     <script src="<%= mix('/assets/js/mobipark.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'sumika' || pageId == 'itadaki' || pageId == 'dokidoki' || pageId == 'mobipark' || pageId == 'mobipark-subpage' ) { %>
+  <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
   <% } %>
 </body>
 </html>

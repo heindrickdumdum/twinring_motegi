@@ -1,0 +1,237 @@
+<%
+  var title = 'Twin Ring Motegi | アクロエックス'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+%>
+
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { title }) -%>
+
+<% pageId = 'mobipark-subpage'; %>
+
+<div class="subpage subpage-acro-x">
+  <div class="mv mv-subpage">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/acro-x/mv-img.png') %>);"></div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="subpage-inner">
+    <div class="heading-wrap heading-main heading-main-subpage">
+      <h2 class="heading">
+        <span class="heading-texts">
+          <img src="<%= mix('/assets/images/acro-x/aerox-color-title.png') %>" alt="acro-x">
+        </span>
+      </h2>
+    </div>
+
+    <div class="subpage-banner">
+      <div class="subpage-banner-inner">
+        <img class="u-show-pc" src="<%= mix('https://via.placeholder.com/2042x946') %>" alt="forest forest-driving">
+
+        <img class="u-show-sp" src="<%= mix('https://via.placeholder.com/2042x946') %>" alt="forest-driving">
+      </div>
+    </div>
+
+    <h3 class="subpage-title">
+      <span>アトラクション情報</span>
+    </h3>
+
+    <p>凸凹道、坂道、水の中など、どんな道も走行できるハイパワーマシンをみんなで協力しながら運転して<br />100点満点を目指そう！</p>
+
+    <table class="table">
+      <tbody>
+        <tr class="table-row">
+          <th class="table-head">場所</th>
+          <td class="table-col">モビパーク内</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">所要時間</th>
+          <td class="table-col">約5分
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">雨天の運行</th>
+          <td class="table-col">雨天でも営業いたしております。
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">対象者</th>
+          <td class="table-col">2歳以上※1
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">身長制限</th>
+          <td class="table-col">なし</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">料金</th>
+          <td class="table-col">
+            モビパークパスポート対象<br>アトラクションチケット利用：500円
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">ご利用にあたって</th>
+          <td class="table-col">
+            ※1 2歳から小学校2年生までの方：<br>2歳から小学校2年生までのお子さまは、中学生以上の付き添いで乗車が可能です。小学校3年生以上のお子さまから、お一人で運転していただけます。
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <section class="subpage-section subpage-section-howto">
+    <div class="subpage-section-howto-inner">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-acrox',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'aerox-point-title',
+          altSubtext: '',
+        }) %>
+      </div>
+
+      <div class="how-to-content">
+        <div class="media media-subpage media-subpage-acro-x u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title"><span>ハイパワーマシンを操って障害物コースを走破！</span></h4>
+            <p class="media-desc">
+              凸凹道や坂道、水の中など全９種類の障害物をハンドル操作とア<br>クセル、ブレーキで上手に走破しよう！
+            </p>
+          </div>
+        </div>
+        <div class="media media-subpage media-subpage-acro-x u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              <span>
+                運転テクニックを磨いて高得点を目指せ！
+              </span>
+            </h4>
+            <p class="media-desc">
+              障害物をクリアするたびに得点がアップ。スタートからゴ<br>
+              ールまで正確に運転して100点満点を目指そう！
+            </p>
+
+            <div class="media-bottom">
+              <div class="media-note">
+                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                <div class="media-note-text">
+                  どんな道でも <br>
+                  上手に乗りこなせタネ！
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="media media-subpage media-subpage-acro-x u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              気分は探検隊！家族を乗せてみんなで出発
+            </h4>
+            <p class="media-desc">
+              子どもの気分は探検隊のリーダー。家族みんなでワクワク、<br>
+              ドキドキのドライブに出発しよう！
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM -->
+
+  <div class="call-to-action">
+    <div class="l-container">
+      <div class="call-to-action-wrapper">
+        <div class="call-to-action-inner">
+          <%- include('/partials/heading', {
+            modifier: 'heading-net-subpage heading-banner-more',
+            alt: '',
+            subtext: mix('/assets/images/acro-x/aerox-enjoy-more-title.png'),
+            altSubtext: 'アクロエックスをもっと楽しむ',
+            subtextvg: ''
+          }) %>
+          <div class="call-to-action-description">
+            <p class="call-to-action-description-text">
+              アクロエックスのこだわりポイントや、知っているともっ<br>
+              と楽しくなる情報を配信中しています。
+            </p>
+          </div>
+          <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
+            <%- include('/partials/button', {
+              modifier: 'button-acro-x',
+              text: 'もっと見る',
+              link: '#'
+            }) %>
+          </div>
+          <span class="call-to-action-dot call-to-action-dot-1">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-2">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-3">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-4">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner-cta">
+    <div class="l-container">
+      <div class="banner-cta-bottom-inner">
+        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
+      </div>
+    </div>
+  </div>
+
+  <!-- recommendation module -->
+  <%- include('/partials/recommendation') -%>
+
+  <!-- pick up module -->
+  <%- include('/partials/pickup') -%>
+
+  <!-- END BOTTOM -->
+</div>
+
+
+
+
+
+<%- include('/partials/footer', {pageId}) -%>

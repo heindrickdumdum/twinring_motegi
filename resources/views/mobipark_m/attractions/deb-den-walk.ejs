@@ -6,6 +6,8 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
+<% pageId = 'mobipark-subpage'; %>
+
 <div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
@@ -228,12 +230,14 @@
     </div>
   </div>
 
+  <!-- recommendation module -->
   <%- include('/partials/recommendation') -%>
 
+  <!-- pick up module -->
   <%- include('/partials/pickup') -%>
 
   <!-- END BOTTOM -->
 
 </div>
 
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId}) -%>

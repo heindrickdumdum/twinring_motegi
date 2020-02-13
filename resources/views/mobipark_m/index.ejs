@@ -7,385 +7,340 @@
 <%- include('./../partials/head', { title }) -%>
 
 <% pageId = 'mobipark'; %>
-<div class="mv mv-mobipark">
-  <ul class="mv-list">
-    <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mobipark/mv-img.jpg') %>);"></div>
-    </li>
-  </ul>
 
-  <div class="l-container mv-container">
-    <h2 class="mv-heading">
-      <span class="mv-heading-text mv-heading-text-mobipark">
-        Mobipark
-      </span>
-      <span class="mv-heading-subtext mv-heading-subtext-mobipark">
-        <img src="<%= mix('/assets/images/mobipark/mv-subtext.png') %>" alt="mobipark">
-      </span>
-    </h2>
+<div class="subpage">
+  <div class="mv mv-mobipark">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mobipark/mv-img.jpg') %>);"></div>
+      </li>
+    </ul>
 
-    <div class="mv-today mv-today-mobipark">
-      <div class="mv-today-inner">
+    <div class="l-container mv-container">
+      <h2 class="mv-heading">
+        <span class="mv-heading-text mv-heading-text-mobipark">
+          Mobipark
+        </span>
+        <span class="mv-heading-subtext mv-heading-subtext-mobipark">
+          <img src="<%= mix('/assets/images/mobipark/mv-subtext.png') %>" alt="mobipark">
+        </span>
+      </h2>
+
+      <div class="mv-today mv-today-mobipark">
+        <div class="mv-today-inner">
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="l-section">
-  <section class="info-container">
+  <div class="l-section">
+    <section class="info-container">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-mobipark',
+            text: 'Information',
+            alt: 'information',
+            altSubtext: '',
+            subtextvg: 'info-subtext'
+          }) %>
+        </div>
+
+        <div class="l-container">
+          <ul class="info-list">
+            <% mobiparkData.forEach(item => { %>
+            <li class="info-item">
+              <span><%= item.desc %></span>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+    </section>
+  </div>
+
+  <div class="l-section">
+    <div class="challenge">
+      <div class="l-container">
+        <div class="row">
+          <div class="challenge-left">
+            <h2 class="heading-text">
+              <img src="/assets/images/mobipark/challenge.png" alt="はじめての挑戦と、できたの喜びに子どもたちが夢中になる">
+            </h2>
+            <p class="desc">
+              モビパークは、子どもたちが自ら”操れる”のりものと、<br>
+              チャレンジの要素がつまった迷路・アスレチックで、<br>
+              思いっきり遊ぶことができる<br>
+              森のアトラクションテーマパークです。<br>
+              色んなことに興味を持ち、なんでもやってみたいと<br>
+              挑戦するのが子ども達。<br>
+              「モビパーク」はそんな子ども達がモビリティを通して、<br>
+              新しい自分に出会う「きっかけ」を提供します。<br>
+            </p>
+          </div>
+          <div class="challenge-right">
+            <div class="challenge-img">
+              <div class="challenge-img1">
+                <img src="/assets/images/mobipark/challenge-img1.png">
+              </div>
+              <div class="challenge-img2">
+                <img src="/assets/images/mobipark/challenge-img2.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="l-section">
+    <section class="map">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-mobipark',
-          text: 'Information',
-          alt: 'information',
+          modifier: 'heading-map heading-mobipark',
+          text: 'Mobipark Map',
+          alt: 'map',
           altSubtext: '',
-          subtextvg: 'info-subtext'
+          subtextvg: 'mobipark-map-title'
         }) %>
       </div>
 
       <div class="l-container">
-        <ul class="info-list">
-          <% mobiparkData.forEach(item => { %>
-          <li class="info-item">
-            <span><%= item.desc %></span>
+        <div class="map-img">
+          <img src="/assets/images/mobipark/map.png" alt="map">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="l-section">
+    <section class="adventure">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-title-adventure',
+          text: 'Adventure Playground',
+          alt: 'アスレチック＆迷路',
+          altSubtext: '',
+          subtextvg: 'mobipark-playground-title'
+        }) %>
+      </div>
+
+      <div class="l-container">
+        <ul class="adventure-container">
+          <!-- SUMIKA -->
+          <li class="adventure-list">
+            <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-sumika.jpg') %>);">
+              <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/sumika-logo.png') %>" alt="adventure sumika">
+            </div>
+
+            <div class="l-adventure">
+              <div class="l-section-title l-section-title-adventure">
+                <h3 class="adventure-heading">
+                  <svg>
+                    <title>Sumika</title>
+                    <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mobipark-sumika-title') %>"></use>
+                  </svg>
+                </h3>
+              </div>
+
+              <p class="adventure-content-copy">
+                SUMIKAは森の生き物たちが隠れるすみかをテーマにした、<br>
+                屋内のネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'もっと見る',
+                  link: '#'
+                }) %>
+              </div>
+            </div>
           </li>
-          <% }) %>
+
+          <!-- DOKIDOKI -->
+          <li class="adventure-list">
+            <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-dokidoki.jpg') %>);">
+              <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/dokidoki-logo.png') %>" alt="adventure sumika">
+            </div>
+
+            <div class="l-adventure">
+              <div class="l-section-title l-section-title-adventure">
+                <h3 class="adventure-heading">
+                  <svg>
+                    <title>DOKIDOKI</title>
+                    <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mobipark-dokidoki-title') %>"></use>
+                  </svg>
+                </h3>
+              </div>
+
+              <p class="adventure-content-copy">
+                DOKIDOKIは巨大などんぐりの木のてっぺんを目指す、<br>
+                  新感覚の木登り型アスレチック。39のアスレチックが待ち受けています。
+              </p>
+
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'もっと見る',
+                  link: '#'
+                }) %>
+              </div>
+            </div>
+          </li>
+
+          <!-- ITADAKI -->
+          <li class="adventure-list">
+            <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-itadaki.jpg') %>);">
+              <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/itadaki-logo.png') %>" alt="adventure sumika">
+            </div>
+
+            <div class="l-adventure">
+              <div class="l-section-title l-section-title-adventure">
+                <h3 class="adventure-heading">
+                  <svg>
+                    <title>DOKIDOKI</title>
+                    <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mobipark-itadaki-title') %>"></use>
+                  </svg>
+                </h3>
+              </div>
+
+              <p class="adventure-content-copy">
+                ITADAKIは生態系ピラミッドを表現した5階層の立体迷路。<br>
+                  リアルな生き物のオブジェを観察しながら、<br>
+                  14箇所の生き物のスタンプを探し集めて、頂上を目指していきます。
+              </p>
+
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'もっと見る',
+                  link: '#'
+                }) %>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
-  </section>
-</div>
-
-<div class="l-section">
-  <div class="challenge">
-    <div class="l-container">
-      <div class="row">
-        <div class="challenge-left">
-          <h2 class="heading-text">
-            <img src="/assets/images/mobipark/challenge.png" alt="はじめての挑戦と、できたの喜びに子どもたちが夢中になる">
-          </h2>
-          <p class="desc">
-            モビパークは、子どもたちが自ら”操れる”のりものと、<br>
-            チャレンジの要素がつまった迷路・アスレチックで、<br>
-            思いっきり遊ぶことができる<br>
-            森のアトラクションテーマパークです。<br>
-            色んなことに興味を持ち、なんでもやってみたいと<br>
-            挑戦するのが子ども達。<br>
-            「モビパーク」はそんな子ども達がモビリティを通して、<br>
-            新しい自分に出会う「きっかけ」を提供します。<br>
-          </p>
-        </div>
-        <div class="challenge-right">
-          <div class="challenge-img">
-            <div class="challenge-img1">
-              <img src="/assets/images/mobipark/challenge-img1.png">
-            </div>
-            <div class="challenge-img2">
-              <img src="/assets/images/mobipark/challenge-img2.png">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   </div>
-</div>
 
-<div class="l-section">
-  <section class="map">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-map heading-mobipark',
-        text: 'Mobipark Map',
-        alt: 'map',
-        altSubtext: '',
-        subtextvg: 'mobipark-map-title'
-      }) %>
-    </div>
+  <div class="l-section">
+    <section class="kids-carbike-attraction">
+      <div class="l-container">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-kids-carbike-attraction',
+            text: 'Kids’ Car & Bike  Attraction',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'mobipark-kids-car-title'
+          }) %>
+        </div>
 
-    <div class="l-container">
-      <div class="map-img">
-        <img src="/assets/images/mobipark/map.png" alt="map">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <h3 class="content-heading">
+              ひとりで挑戦、親子で挑戦 <br>
+              はじめての「できた！」がいっぱい
+            </h3>
+            <p class="content-desc">
+              3歳のお子様から大人までも楽しめる、<br>
+              のりものを”操って”自分ひとりで運転できる車と<br>
+              バイクのアトラクションが体験できます。<br>
+              ツインリンクもてぎだから提供できる、<br>
+              本格的な車とバイクのアトラクションには、<br>
+              いままで体験したことのない「できた」がつまっています。
+            </p>
+            <div class="l-button">
+              <%- include('/partials/button', {
+                modifier: 'button-kids-carbike-attraction',
+                text: 'もっと見る',
+                link: '#'
+              }) %>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <div class="slide-container">
+              <div class="swiper-container slider-container-mobipark" id="js-mobipark-slider">
+                <ul class="swiper-wrapper">
+                  <% mobiparkSlides.forEach( item => { %>
+                  <li class="swiper-slide slider-item">
+                    <img src="<%- item.image %>" alt="<%- item.alt %>">
+                  </li>
+                  <% } ) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 
-<div class="l-section">
-  <section class="adventure">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-title-adventure',
-        text: 'Adventure Playground',
-        alt: 'アスレチック＆迷路',
-        altSubtext: '',
-        subtextvg: 'mobipark-playground-title'
-      }) %>
-    </div>
-
-    <div class="l-container">
-      <ul class="adventure-container">
-        <!-- SUMIKA -->
-        <li class="adventure-list">
-          <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-sumika.jpg') %>);">
-            <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/sumika-logo.png') %>" alt="adventure sumika">
-          </div>
-
-          <div class="l-adventure">
-            <div class="l-section-title l-section-title-adventure">
-              <h3 class="adventure-heading">
-                <svg>
-                  <title>Sumika</title>
-                  <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mobipark-sumika-title') %>"></use>
-                </svg>
-              </h3>
-            </div>
-
-            <p class="adventure-content-copy">
-              SUMIKAは森の生き物たちが隠れるすみかをテーマにした、<br>
-              屋内のネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
-            </p>
-
-            <div class="l-button">
-              <%- include('/partials/button', {
-                modifier: 'button-adventure',
-                text: 'もっと見る',
-                link: '#'
-              }) %>
-            </div>
-          </div>
-        </li>
-
-        <!-- DOKIDOKI -->
-        <li class="adventure-list">
-          <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-dokidoki.jpg') %>);">
-            <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/dokidoki-logo.png') %>" alt="adventure sumika">
-          </div>
-
-          <div class="l-adventure">
-            <div class="l-section-title l-section-title-adventure">
-              <h3 class="adventure-heading">
-                <svg>
-                  <title>DOKIDOKI</title>
-                  <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mobipark-dokidoki-title') %>"></use>
-                </svg>
-              </h3>
-            </div>
-
-            <p class="adventure-content-copy">
-              DOKIDOKIは巨大などんぐりの木のてっぺんを目指す、<br>
-                新感覚の木登り型アスレチック。39のアスレチックが待ち受けています。
-            </p>
-
-            <div class="l-button">
-              <%- include('/partials/button', {
-                modifier: 'button-adventure',
-                text: 'もっと見る',
-                link: '#'
-              }) %>
-            </div>
-          </div>
-        </li>
-
-        <!-- ITADAKI -->
-        <li class="adventure-list">
-          <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-itadaki.jpg') %>);">
-            <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/itadaki-logo.png') %>" alt="adventure sumika">
-          </div>
-
-          <div class="l-adventure">
-            <div class="l-section-title l-section-title-adventure">
-              <h3 class="adventure-heading">
-                <svg>
-                  <title>DOKIDOKI</title>
-                  <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mobipark-itadaki-title') %>"></use>
-                </svg>
-              </h3>
-            </div>
-
-            <p class="adventure-content-copy">
-              ITADAKIは生態系ピラミッドを表現した5階層の立体迷路。<br>
-                リアルな生き物のオブジェを観察しながら、<br>
-                14箇所の生き物のスタンプを探し集めて、頂上を目指していきます。
-            </p>
-
-            <div class="l-button">
-              <%- include('/partials/button', {
-                modifier: 'button-adventure',
-                text: 'もっと見る',
-                link: '#'
-              }) %>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-</div>
-
-<div class="l-section">
-  <section class="kids-carbike-attraction">
-    <div class="l-container">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: 'heading-kids-carbike-attraction',
-          text: 'Kids’ Car & Bike  Attraction',
-          alt: '',
-          altSubtext: '',
-          subtextvg: 'mobipark-kids-car-title'
-        }) %>
+  <div class="l-section">
+    <section class="racing-kart">
+      <div class="l-container">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-racing-kart',
+            text: 'Racing Kart',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'mobipark-racing-title'
+          }) %>
+        </div>
       </div>
 
-      <div class="row">
-        <div class="col-lg-6 col-sm-12">
-          <h3 class="content-heading">
-            ひとりで挑戦、親子で挑戦 <br>
-            はじめての「できた！」がいっぱい
-          </h3>
-          <p class="content-desc">
-            3歳のお子様から大人までも楽しめる、<br>
-            のりものを”操って”自分ひとりで運転できる車と<br>
-            バイクのアトラクションが体験できます。<br>
-            ツインリンクもてぎだから提供できる、<br>
-            本格的な車とバイクのアトラクションには、<br>
-            いままで体験したことのない「できた」がつまっています。
+      <div class="adventure-bg adventure-bg-racing-kart" style="background-image: url(<%= mix('/assets/images/mobipark/racing-kart-bg.jpg') %>);">
+      </div>
+
+      <div class="l-adventure l-racing-kart">
+        <div class="l-section-title">
+          <img class="logo-racing-kart" src="<%= mix('/assets/images/mobipark/kart.png') %>" alt="racing kart">
+        </div>
+
+        <div class="l-section-title">
+          <p class="media-title media-title-racing-kart">
+            <span>ビギナーから本格的に走りたい方まで</span><br>
+            <span>レーサー気分で楽しめる</span>
           </p>
-          <div class="l-button">
-            <%- include('/partials/button', {
-              modifier: 'button-kids-carbike-attraction',
-              text: 'もっと見る',
-              link: '#'
-            }) %>
-          </div>
         </div>
-        <div class="col-lg-6 col-sm-12">
-          <div class="slide-container">
-            <div class="swiper-container slider-container-mobipark" id="js-mobipark-slider">
-              <ul class="swiper-wrapper">
-                <% mobiparkSlides.forEach( item => { %>
-                <li class="swiper-slide slider-item">
-                  <img src="<%- item.image %>" alt="<%- item.alt %>">
-                </li>
-                <% } ) %>
-              </ul>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
 
-<div class="l-section">
-  <section class="racing-kart">
-    <div class="l-container">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: 'heading-racing-kart',
-          text: 'Racing Kart',
-          alt: '',
-          altSubtext: '',
-          subtextvg: 'mobipark-racing-title'
-        }) %>
-      </div>
-    </div>
-
-    <div class="adventure-bg adventure-bg-racing-kart" style="background-image: url(<%= mix('/assets/images/mobipark/racing-kart-bg.jpg') %>);">
-    </div>
-
-    <div class="l-adventure l-racing-kart">
-      <div class="l-section-title">
-        <img class="logo-racing-kart" src="<%= mix('/assets/images/mobipark/kart.png') %>" alt="racing kart">
-      </div>
-
-      <div class="l-section-title">
-        <p class="media-title media-title-racing-kart">
-          <span>ビギナーから本格的に走りたい方まで</span><br>
-          <span>レーサー気分で楽しめる</span>
+        <p class="adventure-content-copy">
+          右足アクセル・左足ブレーキ・ハンドル操作だけで簡単に走行できるので<br>
+          ビギナーでも気軽に楽しむことができる最も身近なモータースポーツです。<br>
+          カートでのドライビング、レーサー気分でタイムアタック、仲間とともに競い合う。<br>
+          ここまで、とことん走り込めるのはツインリンクもてぎだけ！
         </p>
-      </div>
 
-      <p class="adventure-content-copy">
-        右足アクセル・左足ブレーキ・ハンドル操作だけで簡単に走行できるので<br>
-        ビギナーでも気軽に楽しむことができる最も身近なモータースポーツです。<br>
-        カートでのドライビング、レーサー気分でタイムアタック、仲間とともに競い合う。<br>
-        ここまで、とことん走り込めるのはツインリンクもてぎだけ！
-      </p>
-
-      <div class="l-button">
-        <%- include('/partials/button', {
-          modifier: 'button-adventure',
-          text: 'もっと見る',
-          link: '#'
-        }) %>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- BOTTOM -->
-
-<div class="banner-cta">
-  <div class="l-container">
-    <div class="banner-cta-bottom-inner">
-      <img src="<%- mix('/assets/images/banner-img.png')%> ">
-    </div>
-  </div>
-</div>
-
-<section class="recommendation">
-  <div class="l-section-title">
-    <%- include('/partials/heading', {
-      modifier: 'heading-recommend',
-      text: 'Recommendation',
-      altSubtext: '',
-      subtextvg: 'recommendation-title'
-    }) %>
-  </div>
-    <div class="swiper-container slider">
-      <ul class="swiper-wrapper slider-wrapper">
-        <% getData().data.recommend.forEach(item => { %>
-        <li class="swiper-slide slider-item">
-          <%- include('/partials/article-no-design', {
-            image: item.image,
-            heading: item.heading,
-            buttonLink: item.buttonLink,
-            buttonText: 'モビパーク'
+        <div class="l-button">
+          <%- include('/partials/button', {
+            modifier: 'button-adventure',
+            text: 'もっと見る',
+            link: '#'
           }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
-</section>
-
-<section class="pick-up">
-  <div class="l-section-title">
-    <%- include('/partials/heading', {
-      modifier: 'heading-pickup',
-      text: 'Pick Up',
-      altSubtext: '',
-      subtextvg: 'pickup-event'
-    }) %>
+        </div>
+      </div>
+    </section>
   </div>
-  <div class="l-container">
-    <div class="pick-inner">
-      <ul class="pickup-list row">
-        <% getData().data.pickup.forEach(item => { %>
-        <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
-          <%- include('/partials/article', {
-            category: item.category,
-            image: item.image,
-            heading: item.heading,
-            date: item.date,
-            link: item.link,
-            modifier: 'pickup-article'
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
+
+  <!-- BOTTOM -->
+
+  <div class="banner-cta">
+    <div class="l-container">
+      <div class="banner-cta-bottom-inner">
+        <img src="<%- mix('/assets/images/banner-img.png')%> ">
+      </div>
     </div>
   </div>
-</section>
 
-<!-- END BOTTOM -->
+  <!-- recommendation module -->
+  <%- include('/partials/recommendation') -%>
+
+  <!-- pick up module -->
+  <%- include('/partials/pickup') -%>
+
+  <!-- END BOTTOM -->
+</div>
 
 <%- include('./../partials/footer', {pageId}) -%>

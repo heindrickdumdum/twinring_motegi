@@ -1,38 +1,40 @@
 <%
-  var title = 'Twin Ring Motegi | 森の教習所'
+  var title = 'Twin Ring Motegi | ワイルドレーサー'
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
 
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
+<% pageId = 'mobipark-subpage'; %>
+
 <div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.jpg') %>);"></div>
-
-        <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/forest-driving/mobile-mv-img.png') %>);"></div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/wild-racer/mv-img.jpg') %>);"></div>
       </li>
     </ul>
 
     <h2 class="mv-heading mv-heading-subpage">
       <span class="mv-heading-text">
-        森の教習所
+        おさんぽでんでん
       </span>
     </h2>
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-forest-driving heading-main-subpage">
-      <h2 class="heading">
-        <span class="heading-texts u-show-pc">
-          <img src="<%= mix('/assets/images/forest-driving/forest-driving-title.png') %>" alt="forest-driving">
-        </span>
-        <span class="heading-texts u-show-sp">
-          <img src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
-        </span>
-      </h2>
+    <div class="l-section-title">
+      <div class="heading-wrap heading-main heading-main-wild-racer heading-main-subpage">
+        <h2 class="heading">
+          <span class="heading-text u-show-pc">
+            <img src="<%= mix('/assets/images/wild-racer/wildracer-title.png') %>" alt="forest-driving">
+          </span>
+          <span class="heading-text u-show-sp">
+            <img src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
+          </span>
+        </h2>
+      </div>
     </div>
 
     <div class="subpage-banner">
@@ -47,7 +49,7 @@
       <span>アトラクション情報</span>
     </h3>
 
-    <p>信号や横断歩道、道路標識や踏み切りなど森の市街地の中で交通ルールを学びながら優秀運転免許証を<br />取得しよう。</p>
+    <p>ドリフトするようにスライドするマシンを操作して、森のいきものたちが繰り広げるレースで競い合いながら1位を目指そう。</p>
 
     <table class="table">
       <tbody>
@@ -70,7 +72,7 @@
 
         <tr class="table-row">
           <th class="table-head">対象者</th>
-          <td class="table-col">0歳以上でひとり座りできる方※
+          <td class="table-col">3歳以上※
           </td>
         </tr>
 
@@ -89,7 +91,7 @@
         <tr class="table-row">
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
-            5歳未満のお子様について：<br>5歳未満のお子さまは中学生以上の同伴者の付添いが必要になります。
+            ※1 3歳から小学生未満の方：<br>3歳から小学生未満のお子さまは中学生以上の同伴者の付添いが必要になります。
           </td>
         </tr>
 
@@ -101,10 +103,10 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-howto heading-howto-forest-driving',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-wildracer',
           text: 'How to Enjoy',
           alt: '',
-          subtextvg: 'forest-enjoy-point',
+          subtextvg: 'wildracer-enjoy-point-title',
           altSubtext: '',
         }) %>
       </div>
@@ -124,14 +126,24 @@
           </div>
           <div class="media-right">
             <h4 class="media-title">
-              <span>運転しながら交通ルールを学ぼう！</span>
+              <span>レーサー気分でワイルドにバトル！</span>
             </h4>
             <p class="media-desc">
-              子どもが一人で運転できる教習車で挑戦。<br>信号や横断歩道、踏み切りなどが <br>再現された森の教習所で交通ルールを学ぼう！
+              一人でも、家族でチームを組んでも、バトルが楽しい。勝利への近道は、カーブで思いっきりハンドルを切るとできるドリフト走行！
             </p>
+
+            <div class="media-bottom">
+              <div class="media-note">
+                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                <div class="media-note-text">
+                  はじめてのドリフトに<br>
+                  挑戦できタネ！
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
         <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
@@ -144,39 +156,19 @@
               </div>
             </div>
           </div>
-
           <div class="media-right">
             <h4 class="media-title">
               <div class="u-show-pc">
                 <span>
-                  交通ルールを守ってプラチナ免許をゲット！
+                  レース実況がバトルを盛り上げる！
                 </span>
               </div>
-
-              <div class="u-show-sp">
-                <span>交通ルールを守ってプラチナ免許を</span>
-                <span>ゲット！</span>
-              </div>
-
-
             </h4>
             <p class="media-desc">
-              交通ルールを守って走行できると得点がアップ。<br>90点以上はゴールド免許、 <br>100点満点ならプラチナ免許がゲットできるよ！
+              ワイルドなレースに合わせて実況もヒートアップ。走っていても、応援していても盛り上がること間違いなし！
             </p>
-
-            <div class="media-bottom">
-              <div class="media-note">
-                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="image flag">
-                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="image acorn">
-                <div class="media-note-text">
-                  100点取れたら… <br>
-                  交通ルールを守れタネ！
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -186,37 +178,38 @@
   <div class="call-to-action">
     <div class="l-container">
       <div class="call-to-action-wrapper">
-        <div class="call-to-action-inner call-to-action-inner-subpage">
+        <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            modifier: 'heading-banner-more heading-banner-more-forestdriving',
-            imgPath: mix('/assets/images/forest-driving/forest-enjoy-more.png'),
-            alt: '森の教習所をもっと楽しむ',
+            modifier: 'heading-banner-more heading-banner-more-wildracer',
+            imgPath: mix('/assets/images/wild-racer/wildracer-enjoy-more-title.png'),
+            alt: 'ワイルドレーサーをもっと楽しむ',
             altSubtext: '',
             subtextvg: ''
           }) %>
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
-              森の教習所のこだわりポイントや、<br>  知っているともっと楽しくなる情報を配信中しています。
+              ワイルドレーサーのこだわりポイントや、知っているとも<br>
+              っと楽しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
             <%- include('/partials/button', {
               modifier: 'button-acro-x',
               text: 'もっと見る',
-              'link': '#'
+              link: '#'
             }) %>
           </div>
           <span class="call-to-action-dot call-to-action-dot-1">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img1.png')%> " alt="image cta">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-2">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img2.png')%> " alt="image cta">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-3">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img4.png')%> " alt="image cta">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-4">
-            <img src="<%- mix('/assets/images/forest-driving/cta-img3.png')%> " alt="image cta">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
           </span>
         </div>
       </div>
@@ -226,12 +219,10 @@
   <div class="banner-cta">
     <div class="l-container">
       <div class="banner-cta-bottom-inner">
-        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> " alt="banner-logo">
+        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
       </div>
     </div>
   </div>
-
-
 
   <%- include('/partials/recommendation') -%>
 
@@ -240,4 +231,4 @@
   <!-- END BOTTOM -->
 </div>
 
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId}) -%>

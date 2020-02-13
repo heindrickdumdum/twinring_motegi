@@ -179,7 +179,8 @@ dataWorkshop = [
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
-<div class="subpage subpage-car-bike">
+<% pageId = 'mobipark-subpage'; %>
+<div class="subpage">
   <div class="mv mv-subpage mv-car-and-bike">
     <ul class="mv-list">
       <li class="mv-item">
@@ -470,5 +471,4 @@ dataWorkshop = [
   <!-- will add later -->
 </div>
 
-
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId}) -%>

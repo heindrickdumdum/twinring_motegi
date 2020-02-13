@@ -39,11 +39,6 @@ mix
     `${distRelativePath}/assets/js`,
   )
 
-  .js(
-    `${srcRelativePath}/assets/js/recommendation.js`,
-    `${distRelativePath}/assets/js`,
-  )
-
   .eslint()
   .sass(
     `${srcRelativePath}/assets/css/app.scss`,

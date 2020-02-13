@@ -76,13 +76,26 @@
     max-width: 364px;
 
   }
-}
 
+  &.button-banner-more {
+    max-width: 381px;
+    letter-spacing: 0.112em;
 
-.button-kart {
-  margin: 35px auto 0;
+    @include max-screen($breakpoint-mobile) {
+      width: calc(100% - 76px);
+    }
 
-  @include min-screen($breakpoint-mobile + 1) {
-    margin-top: 58px;
+    .button-icon {
+      right: 26px;
+      width: 20px;
+    }
+  }
+
+  &.button-kart {
+    margin: 35px auto 0;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 58px;
+    }
   }
 }

@@ -91,6 +91,7 @@
 
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 40px;
+    left: 0;
     width: 100%;
   }
 

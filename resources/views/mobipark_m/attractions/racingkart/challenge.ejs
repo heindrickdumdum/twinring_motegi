@@ -6,7 +6,9 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
-<div class="subpage subpage-bunbun">
+<% pageId = 'mobipark-subpage'; %>
+
+<div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
@@ -397,4 +399,4 @@
   <!-- END BOTTOM -->
 </div>
 
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId}) -%>

@@ -1,41 +1,41 @@
 <%
-  var title = 'Twin Ring Motegi | アクロエックス'
+  var title = 'Twin Ring Motegi'
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
 
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
+<% pageId = 'mobipark-subpage'; %>
+
 <div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/acro-x/mv-img.jpg') %>);"></div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/motoracer/mv-img.jpg') %>);"></div>
       </li>
     </ul>
 
     <h2 class="mv-heading mv-heading-subpage">
       <span class="mv-heading-text">
-        アクロエックス
+        モトレーサー
       </span>
     </h2>
   </div>
 
-
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-acrox">
+    <div class="heading-wrap heading-main heading-main-racer">
       <h2 class="heading">
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/acro-x/acrox-color-title.png') %>" alt="acro-x">
+          <img src="<%= mix('/assets/images/motoracer/motor-color-title.png') %>" alt="">
         </span>
       </h2>
     </div>
 
+    <!-- YOUTUBE -->
     <div class="subpage-banner">
       <div class="subpage-banner-inner">
-        <img class="u-show-pc" src="<%= mix('https://via.placeholder.com/2042x946') %>" alt="">
-
-        <img class="u-show-sp" src="<%= mix('https://via.placeholder.com/2042x946') %>" alt="">
+        <img class="" src="<%= mix('https://via.placeholder.com/2042x946') %>" alt="">
       </div>
     </div>
 
@@ -43,7 +43,7 @@
       <span>アトラクション情報</span>
     </h3>
 
-    <p>凸凹道、坂道、水の中など、どんな道も走行できるハイパワーマシンをみんなで協力しながら運転して<br />100点満点を目指そう！</p>
+    <p>レーサー気分でEVバイクで早さを競おう。アクセル操作・スピードコントロール・コーナリングにチャレンジしてタイムを縮めよう。全長200mのコースを3周します。</p>
 
     <table class="table">
       <tbody>
@@ -54,19 +54,23 @@
 
         <tr class="table-row">
           <th class="table-head">所要時間</th>
-          <td class="table-col">約5分
+          <td class="table-col">
+            約15分（装備の装着、説明、一人ずつ練習、本番、装備外し）
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">雨天の運行</th>
-          <td class="table-col">雨天でも営業いたしております。
+          <td class="table-col">
+            雨天でも営業いたしていますが、荒天時などコースコンディションが悪化した場合には営業を中断します。
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">対象者</th>
-          <td class="table-col">2歳以上※1
+          <td class="table-col">
+            小学3年生以上で補助輪なし自転車に乗れる、<br />
+            もしくはモトライセンスA取得の小学1年生以上※1
           </td>
         </tr>
 
@@ -78,14 +82,16 @@
         <tr class="table-row">
           <th class="table-head">料金</th>
           <td class="table-col">
-            モビパークパスポート対象<br>アトラクションチケット利用：500円
+            モビパークパスポート対象<br />
+            アトラクションチケット利用：600円
           </td>
         </tr>
 
         <tr class="table-row">
           <th class="table-head">ご利用にあたって</th>
           <td class="table-col">
-            ※1 2歳から小学校2年生までの方：<br>2歳から小学校2年生までのお子さまは、中学生以上の付き添いで乗車が可能です。小学校3年生以上のお子さまから、お一人で運転していただけます。
+            ※1 対象者について：<br />小学3年生以上で補助輪なし自転車に乗れるお子さまは最初からモトレーサーにチャレンジしていただけます。モトライセンスAをお持ちであれば、小学1・2年生のお子さまもお楽しみいただけます。<br />
+            モトライセンスAは、モトツーリングにてルールを守って、足をつかずに完走できたお子さまにプレゼントいたします
           </td>
         </tr>
 
@@ -97,16 +103,16 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          'modifier': 'heading-gradient-tobottom heading-howto heading-howto-acrox',
-          'text': 'How to Enjoy',
-          'alt': '',
-          'subtextvg': 'acrox-point-title',
-          'altSubtext': '',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-motoracer',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'motoracer-enjoy-point-title',
+          altSubtext: '',
         }) %>
       </div>
 
       <div class="how-to-content">
-        <div class="media media-subpage media-subpage-acro-x u-clear">
+        <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
@@ -115,13 +121,23 @@
             </div>
           </div>
           <div class="media-right">
-            <h4 class="media-title"><span>ハイパワーマシンを操って障害物コースを走破！</span></h4>
+            <h4 class="media-title"><span>MotoGPTMライダー気分を体感！</span></h4>
             <p class="media-desc">
-              凸凹道や坂道、水の中など全９種類の障害物をハンドル操作とア<br>クセル、ブレーキで上手に走破しよう！
+              日本で唯一、MotoGPTM世界選手権を開催しているツインリンクもてぎならではの本格的バイクアトラクションを体感しよう！
             </p>
+
+            <div class="media-bottom">
+              <div class="media-note">
+                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                <div class="media-note-text">
+                  勇気を出して<br />タイムアタックにチャレンジできタネ！
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="media media-subpage media-subpage-acro-x u-clear">
+        <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
@@ -132,27 +148,15 @@
           <div class="media-right">
             <h4 class="media-title">
               <span>
-                運転テクニックを磨いて高得点を目指せ！
+                リアルなバイクを乗りこなそう！
               </span>
             </h4>
             <p class="media-desc">
-              障害物をクリアするたびに得点がアップ。スタートからゴ<br>
-              ールまで正確に運転して100点満点を目指そう！
+              アクセルとブレーキ、そして上手にバランスを取ってバイクを傾け、コーナーを乗りこなすテクニックをマスターしよう！
             </p>
-
-            <div class="media-bottom">
-              <div class="media-note">
-                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                <div class="media-note-text">
-                  どんな道でも <br>
-                  上手に乗りこなせタネ！
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-        <div class="media media-subpage media-subpage-acro-x u-clear">
+        <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
@@ -161,16 +165,18 @@
             </div>
           </div>
           <div class="media-right">
-            <h4 class="media-title">
-              気分は探検隊！家族を乗せてみんなで出発
+            <h4 class="media-title media-title-nohighlight">
+              <span>
+                タイムアタックで記録にチャレンジ！
+              </span>
             </h4>
             <p class="media-desc">
-              子どもの気分は探検隊のリーダー。家族みんなでワクワク、<br>
-              ドキドキのドライブに出発しよう！
+              タイムアタックは1000分の1秒まで計測。<br />
+              たくさん練習して、何度転んでもチャレンジ<br />
+              したくなるのがモトレーサー！
             </p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -182,22 +188,21 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            modifier: 'heading-banner-more',
-            imgPath: mix('/assets/images/acro-x/acrox-enjoy-more-title.png'),
-            alt: 'アクロエックスをもっと楽しむ',
+            modifier: 'heading-banner-more heading-banner-more-motoracer',
+            imgPath: mix('/assets/images/motoracer/motor-enjoy-more-title.png'),
+            alt: 'モトレーサーをもっと楽しむ',
             altSubtext: ''
           }) %>
-
           <div class="call-to-action-description">
             <p class="call-to-action-description-text">
-              アクロエックスのこだわりポイントや、知っているともっ<br>
-              と楽しくなる情報を配信中しています。
+              モトレーサーのこだわりポイントや、知っているともっと<br>
+              楽しくなる情報を配信中しています。
             </p>
           </div>
-          <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
+          <div class="l-button l-button-call-to-action">
             <%- include('/partials/button', {
-              'modifier': 'button-acro-x',
-              'text': 'もっと見る',
+              modifier: 'button-sumika',
+              text: 'もっと見る',
               'link': '#'
             }) %>
           </div>
@@ -230,11 +235,8 @@
 
   <%- include('/partials/pickup') -%>
 
+
   <!-- END BOTTOM -->
 </div>
 
-
-
-
-
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId}) -%>

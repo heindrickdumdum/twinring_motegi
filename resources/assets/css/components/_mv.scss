@@ -157,6 +157,7 @@
   @include max-screen($breakpoint-mobile) {
     width: 100%;
     max-width: 375px;
+  }
 }
 
 .mv-today {

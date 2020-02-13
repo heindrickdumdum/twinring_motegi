@@ -421,7 +421,8 @@
   }
 }
 
-.mv-tsubasa {
+.mv-tsubasa,
+.mv-musasabi {
   margin-bottom: 80px;
   position: relative;
   .mv-heading {
@@ -483,6 +484,17 @@
     height: 266px;
     background-image: url(../images/tsubasa/mv-logo.png);
     bottom: -60px;
+  }
+}
+
+.mv-musasabi {
+  .mv-heading-texts{
+    width: 100%;
+    text-align: left;
+  }
+
+  .mv-heading-subtexts {
+    font-weight: normal;
   }
 }
 

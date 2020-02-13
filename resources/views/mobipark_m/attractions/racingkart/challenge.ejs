@@ -24,10 +24,13 @@
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-bunbun">
+    <div class="heading-wrap heading-main heading-main-challenge">
       <h2 class="heading">
+        <span class="u-title-hidden">Challenge Cart</span>
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/challenge/subpage-title.png') %>" alt="">
+          <img class="u-show-pc" src="<%= mix('/assets/images/challenge/challenge-color-title.png') %>" alt="">
+
+          <img class="u-show-sp" src="<%= mix('/assets/images/challenge/challenge-color-title-sp.png') %>" alt="">
         </span>
       </h2>
     </div>
@@ -121,10 +124,18 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-howto heading-howto-challenge',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-challenge u-show-pc',
           text: 'How to Enjoy',
           alt: '',
           subtextvg: 'challenge-enjoy-point-title',
+          altSubtext: '',
+        }) %>
+
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-challenge u-show-sp',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'challenge-enjoy-point-title-sp',
           altSubtext: '',
         }) %>
       </div>
@@ -252,10 +263,19 @@
     <div class="subpage-section-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-kart-challenge',
+          modifier: 'heading-gradient-tobottom heading-kart-challenge u-show-pc',
           text: '',
           alt: '',
           subtextvg: 'takuma-kids-title',
+          altSubtext: '',
+        }) %>
+
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-kart-challenge u-show-sp',
+          imgPath: mix('/assets/images/challenge/challenge-takuma-title.png'),
+          text: '',
+          alt: '',
+          subtextvg: '',
           altSubtext: '',
         }) %>
       </div>

@@ -185,18 +185,30 @@
 
   &.heading-main-forest-driving {
     img {
-      max-width: 651px;
+      max-width: 628px;
       width: 100%;
     }
   }
 
+  &.heading-main-challenge {
+    img {
+      max-width: 274px;
+      width: 100%;
 
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 651px;
+      }
+    }
+  }
 
 }
 
 //how to enjoy heading
 .heading-howto {
-  margin-bottom: 35px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 35px;
+  }
 
   &.heading-howto-bunbun {
     .heading-subtext {
@@ -289,6 +301,12 @@
     .heading-subtext {
       max-width: 669px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 256px;
+        height: 56px;
+        margin-top: 15px;
+      }
     }
   }
 }
@@ -566,12 +584,20 @@
   }
 
   &.heading-course-challenge {
-    margin-bottom: 58px;
+    margin-bottom: 35px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 58px;
+    }
 
     .heading-subtext {
-      max-width: 201px;
+      max-width: 139px;
       margin: 0 auto;
       width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 201px;
+      }
     }
   }
 
@@ -581,7 +607,14 @@
       max-width: 959px;
       margin-top: 0;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        max-width: 335px;
+      }
     }
+
+
   }
 }
 

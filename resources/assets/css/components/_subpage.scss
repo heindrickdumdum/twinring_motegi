@@ -165,6 +165,11 @@
   }
 }
 
+.subpage-section-video-inner {
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
 .subpage-section-course-inner {
   max-width: 1024px;
   margin: 0 auto;
@@ -202,7 +207,7 @@
     margin-bottom: 20px;
     font-size: 24px;
     font-family: $font-hiragino;
-    line-height: 1.417;    
+    line-height: 1.417;
   }
 
   ol {
@@ -211,4 +216,12 @@
     text-align: left;
     letter-spacing: 0.16em;
   }
+}
+
+.subpage-section-video {
+  margin-bottom: 158px;
+}
+
+.subpage-section-video-wrapper {
+  text-align: center;
 }

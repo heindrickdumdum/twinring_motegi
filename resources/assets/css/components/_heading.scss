@@ -9,7 +9,7 @@
 .heading-text {
   display: block;
   font-family: $font-holland;
-  background: linear-gradient(to right, #027cc3 10%, #099f48 100%);
+  background: linear-gradient(to right, #34b0e7 0%, #1cc763 25%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.1em;
@@ -20,8 +20,6 @@
     font-size: 24px;
     text-align: center;
     background: linear-gradient(to bottom, #027cc4 0%, #09a045 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .heading-wrap-parkmap & {
@@ -798,4 +796,3 @@
     }
   }
 }
-

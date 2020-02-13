@@ -129,6 +129,30 @@
           </a>
         </div>
       </div>
+
+
+      <div class="header-sp-toggle">
+        <nav class="header-top-nav">
+          <% getData().data.headerTopNav.forEach( topNavItem => { %>
+          <li class="header-top-nav-item js-top-nav-button">
+            <a class="header-top-nav-link" href="<%- topNavItem.link %>"><%- topNavItem.text %></a>
+            <% if(typeof topNavItem.sub === 'object') { %>
+            <div class="header-top-nav-sub">
+              <% topNavItem.sub.forEach( subItem => { %>
+                <ul>
+                <% if(typeof subItem === 'object') {
+                  subItem.forEach( item => { %>
+                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="<%- item.link %>"><%- item.text %></a></li>
+                <% });
+                  } %>
+                </ul>
+              <% }) %>
+            </div>
+            <% } %>
+          </li>
+          <% }) %>
+        </nav>
+      </div>
     </div>
   </div>  <!-- end of header sp -->
 </header>

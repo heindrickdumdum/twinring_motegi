@@ -11,4 +11,7 @@
 
   <div class="wrap" id="js-wrap">
 
-  <%- include('/partials/header') -%>
+  <% var topHeading; %>
+  <%- include('/partials/header', {
+    topHeading: topHeading
+  }) -%>

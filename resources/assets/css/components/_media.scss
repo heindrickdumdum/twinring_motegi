@@ -187,6 +187,15 @@
   font-size: 26px;
 }
 
+/*craft modifier*/
+.craft-media-title {
+  span {
+    &::before {
+      display: none;
+    }
+  }
+}
+
 //modifier SP
 @include max-screen($breakpoint-mobile) {
   .how-to-content {

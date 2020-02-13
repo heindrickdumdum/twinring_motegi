@@ -1,0 +1,30 @@
+.note {
+  position: relative;
+  display: inline-block;
+  width: 318px;
+  text-align: left;
+  margin-top: 25px;
+}
+
+.note-flag, .note-acorn {
+  position: absolute;
+}
+
+.note-flag {
+  top: -24px;
+  left: -3px;
+}
+
+.note-acorn {
+  top: -33px;
+  right: -42px;
+}
+
+.note-text {
+  width: 100%;
+  padding: 23px 32px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #8daf86;
+  border-radius: 4px;
+}

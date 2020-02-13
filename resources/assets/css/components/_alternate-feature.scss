@@ -1,0 +1,45 @@
+
+.alt-feature {
+  align-items: center;
+  margin-bottom: 130px;
+
+  .alt-feature-image-wrapper {
+    text-align: center;
+  }
+
+  .alt-feature-desc {
+    max-width: 464px;
+    margin: auto;
+
+    .alt-feature-desc-wrapper {
+      background: url('/assets/images/frame-v2.png') no-repeat;
+      background-size: 100% 100%;
+      padding: 80px 40px;
+      text-align: center;
+      position: relative;
+
+      img.animal-icon {
+        position: absolute;
+        
+        &.owl {
+          right: -40px;
+          top: -30px;
+        }
+
+        &.rabbit {
+          left: -40px;
+          top: -30px;
+        }
+
+        &.bird {
+          top: -40px;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

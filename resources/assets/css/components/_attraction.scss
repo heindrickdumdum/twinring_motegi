@@ -1,0 +1,19 @@
+.attraction-title {
+  margin-top: 43px;
+  margin-bottom: 15px;
+}
+
+.attraction-subtext {
+  margin-bottom: 31px;
+  font-size: 15px;
+  color: $base-font-color;
+  line-height: 2;
+  text-align: left;  
+  letter-spacing: 0.160em;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: rgb(51, 51, 51);  
+  }
+}

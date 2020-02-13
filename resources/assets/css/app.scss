@@ -14,113 +14,70 @@
 @import "lib/clearfix";
 @import "lib/swiper";
 
+@import "components/attraction";
 @import "components/fonts";
+
 @import "components/wrap";
 @import "components/preload";
 @import "components/heading";
 @import "components/header";
 @import "components/header-sub";
+@import "components/header-top-nav";
 @import "components/mv";
 @import "components/article";
 @import "components/feature";
+@import "components/file-download";
 @import "components/parkmap";
 @import "components/button";
 @import "components/button-gradient";
 @import "components/section";
 @import "components/section-cards";
-@import "components/sumika-video";
-@import "components/sumika-instagram";
-@import "components/sumika-faq";
+@import "components/youtube-video";
+@import "components/instagram";
+@import "components/faq";
 @import "components/call-to-action";
 @import "components/table";
 @import "components/media";
+@import "components/pickup";
 @import "components/accordion";
 @import "components/design";
-
-@import "components/dokidoki/dokidoki";
-@import "components/dokidoki/dokidoki-admission";
-@import "components/dokidoki/dokidoki-attraction";
-@import "components/dokidoki/dokidoki-cta";
-@import "components/dokidoki/dokidoki-enjoy";
-@import "components/dokidoki/dokidoki-faq";
-@import "components/dokidoki/dokidoki-forest";
-@import "components/dokidoki/dokidoki-forest-slider";
-@import "components/dokidoki/dokidoki-instagram";
-@import "components/dokidoki/dokidoki-license";
-@import "components/dokidoki/dokidoki-mv";
-@import "components/dokidoki/dokidoki-recommendation";
-@import "components/dokidoki/dokidoki-pickup";
-@import "components/dokidoki/dokidoki-video";
-@import "components/dokidoki/dokidoki-table";
-
-@import "components/acro-x/acro-x";
-@import "components/acro-x/acro-x-attraction";
-@import "components/acro-x/acro-x-cta";
-@import "components/acro-x/acro-x-enjoy";
-@import "components/acro-x/acro-x-mv";
-@import "components/acro-x/acro-x-recommendation";
-@import "components/acro-x/acro-x-pickup";
-
-@import "components/forest-driving/forest-driving-mv";
-@import "components/forest-driving/forest-driving-banner";
-@import "components/forest-driving/forest-driving";
-@import "components/forest-driving/forest-driving-attraction";
-@import "components/forest-driving/forest-driving-cta";
-@import "components/forest-driving/forest-driving-enjoy";
-@import "components/forest-driving/forest-driving-recommendation";
-@import "components/forest-driving/forest-driving-pickup";
-
-@import "components/deb-den-walk/deb-den-mv";
-@import "components/deb-den-walk/deb-den-banner";
-@import "components/deb-den-walk/deb-den";
-@import "components/deb-den-walk/deb-den-attraction";
-@import "components/deb-den-walk/deb-den-cta";
-@import "components/deb-den-walk/deb-den-enjoy";
-@import "components/deb-den-walk/deb-den-recommendation";
-@import "components/deb-den-walk/deb-den-pickup";
-
-@import "components/wild-racer/wild-racer-mv";
-@import "components/wild-racer/wild-racer-banner";
-@import "components/wild-racer/wild-racer";
-@import "components/wild-racer/wild-racer-attraction";
-@import "components/wild-racer/wild-racer-cta";
-@import "components/wild-racer/wild-racer-enjoy";
-@import "components/wild-racer/wild-racer-recommendation";
-@import "components/wild-racer/wild-racer-pickup";
-
-@import "components/mobipark/mobipark";
-@import "components/mobipark/mobipark-mv";
-@import "components/mobipark/mobipark-info";
-@import "components/mobipark/mobipark-challenge";
-@import "components/mobipark/mobipark-map";
-@import "components/mobipark/mobipark-adventure";
-@import "components/mobipark/mobipark-carbike";
-
+@import "components/info-list";
+@import "components/challenge";
+@import "components/adventure";
+@import "components/kids-carbike-attraction";
 @import "components/block-image";
 @import "components/image-border";
 @import "components/how-to";
 @import "components/information";
 @import "components/post";
 @import "components/banner-cta";
+@import "components/banner-image";
 @import "components/footer";
 @import "components/footer-top";
 @import "components/footer-bottom";
 @import "components/sns";
 @import "components/slider";
-@import "components/tsubasa/styles";
-@import "components/car-and-bike/styles";
-@import "components/itadaki";
+@import "components/sponsors";
+@import "components/top-slider";
+@import "components/hellowoods";
+@import "components/note";
+@import "components/hellowoods-information";
+@import "components/alternate-feature";
+@import "components/steps";
+@import "components/comparison";
+@import "components/kart";
+@import "components/subpage";
 
 @import 'layout/grid';
 @import "layout/l-container";
 @import "layout/l-header";
+@import "layout/l-heading";
 @import "layout/l-feature";
 @import "layout/l-parkmap";
 @import "layout/l-section";
 @import "layout/l-section-title";
 @import "layout/l-button";
+@import "layout/l-adventure";
+@import "layout/l-racing-kart";
+@import "layout/l-note";
 
-// Required
-.svg-sprite {
-  display: none;
-}

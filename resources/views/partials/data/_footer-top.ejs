@@ -1,0 +1,210 @@
+<%
+
+footerTopList = [
+  [
+    {
+      text: 'トップページ',
+      sub: ''
+    },
+    {
+      text: 'もてぎの楽しみ方',
+      sub: ''
+    },
+    {
+      text: 'ニュース・イベント',
+      sub: [
+        { text: 'ニュース一覧', 'link': '#' },
+        { text: 'イベント一覧', 'link': '#' },
+        { text: '春のイベント特集', 'link': '#' },
+        { text: 'GWのイベント特集', 'link': '#' },
+        { text: '夏のイベント特集', 'link': '#' },
+        { text: '冬のイベント特集', 'link': '#' },
+        { text: '花火の祭典　夏/冬', 'link': '#' }
+      ]
+    },
+    {
+      text: 'エリア・施設',
+      sub: [
+        { text: 'ハローウッズ', 'link': '#' },
+        { text: 'モビパーク', 'link': '#' },
+        { text: '森と星空のキャンプヴィレッジ', 'link': '#' },
+        { text: 'ホテルツインリンク', 'link': '#' },
+        { text: 'モータースポーツ', 'link': '#' },
+        { text: 'ホンダコレクションホール', 'link': '#' },
+        { text: '安全運転スクール', 'link': '#' }
+      ]
+    }
+  ],
+  [
+    {
+      text: 'アトラクション・アクティビティ',
+      sub: [
+        { text: '巨大ネットの森SUMIKA', 'link': '#' },
+        { text: '森感覚アスレチックDOKIDOK', 'link': '#' },
+        { text: '迷宮森殿ITADAKI', 'link': '#' }
+      ]
+    },
+    {
+      text: '',
+      sub: [
+        { text: 'お子様のクルマ＆バイクのアトラクション', 'link': '#' },
+        { text: '大人も楽しめる本格レーシングカート', 'link': '#' },
+        { text: 'クルマのワークショップ（ピット工房）', 'link': '#' }
+      ]
+    },
+    {
+      text: '',
+      sub: [
+        { text: 'メガジップラインつばさ', 'link': '#' },
+        { text: '森のジップラインムササビ', 'link': '#' }
+      ]
+    },
+    {
+      text: '',
+      sub: [
+        { text: '森の散策プログラム', 'link': '#' },
+        { text: '森の研究室', 'link': '#' },
+        { text: '森のクラフト体験', 'link': '#' },
+        { text: '森の体験プログラム', 'link': '#' }
+      ]
+    },
+    {
+      text: '',
+      sub: [
+        { text: 'コチラレーシング', 'link': '#' }
+      ]
+    }
+  ],
+  [
+    {
+      text: 'モータースポーツ',
+      sub: [
+        { text: 'MotoGP', 'link': '#' },
+        { text: 'トライアル世界選手権', 'link': '#' },
+        { text: 'SUPER　GT', 'link': '#' },
+        { text: '２＆４レース', 'link': '#' },
+        { text: '全日本ロードレース選手権', 'link': '#' },
+        { text: 'スーパー耐久', 'link': '#' },
+        { text: '全日本トライアル選手権', 'link': '#' },
+        { text: '全日本カート選手権', 'link': '#' }
+      ]
+    },
+    {
+      text: '',
+      sub: [
+        { text: 'サーキットを走るTOP', 'link': '#' }
+      ]
+    },
+    {
+      text: '',
+      sub: [
+        { text: '安全運転スクール', 'link': '#' },
+        { text: 'スクール・走行会　４輪', 'link': '#' },
+        { text: 'スクール・走行会　２輪', 'link': '#' },
+        { text: 'TRMC-S会員', 'link': '#' },
+        { text: 'ツインリンクもてぎエンジェル', 'link': '#' }
+      ]
+    }
+  ],
+  [
+    {
+      text: 'ホテル・キャンプ',
+      sub: [
+        { text: '森と星空のキャンプヴィレッジ', 'link': '#' },
+        { text: 'グランピング', 'link': '#' },
+        { text: 'ログキャビン', 'link': '#' },
+        { text: 'キャンプ', 'link': '#' },
+        { text: 'BBQ', 'link': '#' },
+        { text: '宿泊者限定アクティビティ', 'link': '#' }
+      ]
+    },
+    {
+      text: '',
+      sub: [
+        { text: 'ホテルツインリンク', 'link': '#' },
+        { text: 'スーペリアファミリールーム', 'link': '#' },
+        { text: 'グランルーム', 'link': '#' },
+        { text: 'ゲストルーム', 'link': '#' },
+        { text: 'のぞみの湯', 'link': '#' },
+        { text: 'MARCHERANT', 'link': '#' },
+        { text: '里山懐石 登谷', 'link': '#' }
+      ]
+    },
+    {
+      text: 'レストラン',
+      sub: [
+        { text: 'レストラン一覧', 'link': '#' }
+      ]
+    },
+    {
+      text: 'グッズ＆ショップ',
+      sub: ''
+    }
+  ]
+]
+
+
+footerTopNav = [
+  {
+    text: '営業時間',
+    link: '#',
+    image: mix('/assets/images/icon-time.svg')
+  },
+  {
+    text: '料金・チケット',
+    link: '#',
+    image: mix('/assets/images/icon-ticket.svg')
+  },
+  {
+    text: 'よくあるご質問',
+    link: '#',
+    image: mix('/assets/images/icon-qa.svg')
+  },
+  {
+    text: 'アトラクションの<br>ご利用基準',
+    link: '#',
+    image: mix('/assets/images/icon-tall.svg')
+  },
+  {
+    text: '交通アクセス',
+    link: '#',
+    image: mix('/assets/images/icon-car.svg')
+  }
+]
+
+footerBottomNav = [
+  {
+    text: '会社情報',
+    link: '#'
+  },
+  {
+    text: '広報',
+    link: '#'
+  },
+  {
+    text: '採用情報',
+    link: '#'
+  },
+  {
+    text: '企業の方へ',
+    link: '#'
+  },
+  {
+    text: 'プライバシー',
+    link: '#',
+  },
+  {
+    text: 'リーガル',
+    link: '#'
+  },
+  {
+    text: 'お問い合わせ',
+    link: '#'
+  },
+  {
+    text: 'アンケート',
+    link: '#'
+  }
+]
+
+%>

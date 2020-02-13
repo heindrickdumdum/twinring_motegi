@@ -1,0 +1,49 @@
+
+.adventure-container {
+  margin-top: 64px;
+}
+
+.adventure-list {
+  margin-bottom: 104px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.adventure-bg {
+  width: 100%;
+  height: 460px;
+  position: relative;
+  background-size: cover;
+}
+
+.adventure-image-logo {
+  max-width: 279px;
+  width: 100%;
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: $z-min + 1;
+}
+
+.adventure-content-copy {
+  font-size: 15px;
+  font-family: $font-hiragino-w3;   
+  letter-spacing: 0.16em;
+  line-height: 2;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+//modifier
+.logo-racing-kart {
+  max-width: 320px;
+  margin-bottom: 31px;
+}
+
+.adventure-bg-racing-kart {
+  margin-top: 62px;
+}

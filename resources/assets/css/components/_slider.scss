@@ -11,8 +11,84 @@
 // .slider-item {}
 
 //MODIFIER
-.dokidoki {
-  .swiper-wrapper-dokidoki-forest {
-    margin-top: 54px;
+
+.slider-dokidoki {
+  .slide-text {
+    margin-top: 15px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: $font-hiragino;
+    color: $color-black;
+    letter-spacing: 0.06em;
+  }
+}
+
+//modifier kids carbike attraction
+.kids-carbike-attraction {
+  .slide-container {
+    max-width: 508px;
+    width: 100%;
+    position: relative;
+
+    &:before {
+      width: 596px;
+      height: 333px;
+      content: "";
+      position: absolute;
+      top: -31px;
+      left: -52px;
+      background-image: url(../images/mobipark/slider-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+
+    &:after {
+      width: 524px;
+      height: 291px;
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      background-image: url(../images/mobipark/slider-frame.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 2;
+    }
+  }
+
+  .slider-wrapper {
+    margin-left: 0px;
+    position: relative;
+
+    .slider-item {
+      position: relative;
+      z-index: $z-max;
+    }
+  }
+
+  .swiper-pagination {
+    max-width: 508px;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 38px;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      margin-right: 13px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: $color-gray;
+      display: inline-block;
+
+      &-active {
+        background-color: $color-green;
+      }
+
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+    }
   }
 }

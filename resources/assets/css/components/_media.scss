@@ -1,5 +1,9 @@
 .media {
   padding: 20px;
+
+  &.media-subpage {
+    margin-bottom: 20px;
+  }
 }
 
 .media-left {
@@ -20,13 +24,22 @@
 .media-bg {
   position: relative;
   margin-left: 68px;
-  
+
   &:after {
     position: absolute;
     content: url(/assets/images/img-frame-bg.png);
     top: -5px;
     left: -18px;
     z-index: 0;
+
+    @include max-screen($breakpoint-mobile) {
+      content: url(/assets/images/sp-img-frame-bg.png);
+    }
+  }
+
+  //modifier SP
+  @include max-screen($breakpoint-mobile) {
+    margin-left: 0px;
   }
 }
 
@@ -50,6 +63,11 @@
     background-position: center;
     border-radius: 20px;
   }
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .media-right {
@@ -63,7 +81,7 @@
   position: relative;
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
 
   span {
     position: relative;
@@ -80,12 +98,39 @@
       z-index: -1;
     }
   }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 15px;
+    font-size: 24px;
+  }
+}
+
+.media-title-nohighlight {
+  span {
+    &:before {
+      display: none;
+    }
+  }
 }
 
 .media-desc {
   font-size: 15px;
   padding-top: 10px;
   line-height: 2;
+
+
+  .media-subpage & {
+    // margin-bottom: 23px;
+    letter-spacing: 0.16em;
+  }
+
+  .media-subpage-bunbun & {
+    margin-bottom: 23px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 22px;
+  }
 }
 
 .media-bottom {
@@ -93,6 +138,16 @@
   width: 100%;
   margin: 0 auto;
   text-align: center;
+
+  .media-subpage & {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    text-align: center !important;
+    padding-left: 0px !important;
+  }
 }
 
 .media-note {
@@ -124,4 +179,30 @@
   color: #fff;
   background-color: #8daf86;
   border-radius: 4px;
+}
+
+// modifier
+.media-title-racing-kart {
+  text-align: center;
+  font-size: 26px;
+}
+
+//modifier SP
+@include max-screen($breakpoint-mobile) {
+  .how-to-content {
+    max-width: 510px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .media-left,
+  .media-right {
+    float: none;
+    width: 100%;
+  }
+
+  .media-right {
+    padding-left: 0px;
+  }
 }

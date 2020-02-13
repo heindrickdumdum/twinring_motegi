@@ -1,0 +1,28 @@
+<section class="pick-up">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      modifier: 'heading-pickup',
+      text: 'Pick Up',
+      altSubtext: '',
+      subtextvg: 'pickup-event'
+    }) %>
+  </div>
+  <div class="l-container">
+    <div class="pick-inner">
+      <ul class="pickup-list row">
+        <% getData().data.pickup.forEach(item => { %>
+        <li class="pickup-list-item col-lg-3 col-md-3 col-sm-3">
+          <%- include('/partials/article', {
+            category: item.category,
+            image: item.image,
+            heading: item.heading,
+            date: item.date,
+            link: item.link,
+            modifier: 'pickup-article'
+          }) %>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</section>

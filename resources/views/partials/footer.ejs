@@ -1,87 +1,28 @@
-<%
-  footerTopNav = [
-    {
-      text: '営業時間',
-      link: '#',
-      image: mix('/assets/images/icon-time.svg')
-    },
-    {
-      text: '料金・チケット',
-      link: '#',
-      image: mix('/assets/images/icon-ticket.svg')
-    },
-    {
-      text: 'よくあるご質問',
-      link: '#',
-      image: mix('/assets/images/icon-qa.svg')
-    },
-    {
-      text: 'アトラクションの<br>ご利用基準',
-      link: '#',
-      image: mix('/assets/images/icon-tall.svg')
-    },
-    {
-      text: '交通アクセス',
-      link: '#',
-      image: mix('/assets/images/icon-car.svg')
-    }
-  ]
+<% if(typeof pageId === 'undefined') { var pageId = ''; } %>
+<% if(typeof page === 'undefined') { var page = ''; } %>
 
-  footerBottomNav = [
-    {
-      text: '会社情報',
-      link: '#'
-    },
-    {
-      text: '広報',
-      link: '#'
-    },
-    {
-      text: '採用情報',
-      link: '#'
-    },
-    {
-      text: '企業の方へ',
-      link: '#'
-    },
-    {
-      text: 'プライバシー',
-      link: '#',
-    },
-    {
-      text: 'リーガル',
-      link: '#'
-    },
-    {
-      text: 'お問い合わせ',
-      link: '#'
-    },
-    {
-      text: 'アンケート',
-      link: '#'
-    }
-  ]
-%>
-  <footer class="footer">
+<footer class="footer">
 
-  <nav class="l-container">
-    <ul class="footer-top-nav-list">
-      <%
-        footerTopNav.forEach( topLink => {
-      %>
-      <li class="footer-top-nav-item">
-        <a class="footer-top-nav-link" href="<%- topLink.link %>">
-          <span class="footer-top-nav-icon">
-            <img class="footer-bottom-item-image" src="<%- topLink.image %>" alt="time">
-          </span>
-          <span class="footer-top-nav-text"><%- topLink.text %></span>
-        </a>
-      </li>
-      <% }) %>
-    </ul>
+  <nav class="footer-top-nav-list-wrap">
+    <div class="l-container">
+      <ul class="footer-top-nav-list">
+        <%
+          getData().data.footerTopNav.forEach( topLink => {
+        %>
+        <li class="footer-top-nav-item">
+          <a class="footer-top-nav-link" href="<%- topLink.link %>">
+            <span class="footer-top-nav-icon">
+              <img class="footer-bottom-item-image" src="<%- topLink.image %>" alt="time">
+            </span>
+            <span class="footer-top-nav-text"><%- topLink.text %></span>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
   </nav>
 
-  <div class="footer-top-links">
+  <div class="footer-top-links u-show-pc">
     <div class="l-container">
       <%- include('/partials/footer-top-links') -%>
     </div>
@@ -101,7 +42,7 @@
             <a class="footer-bottom-link" href="#"><img class="footer-bottom-item-image" src="<%= mix('/assets/images/footer-name.png') %>" alt=""></a>
           </li>
           <%
-            footerBottomNav.forEach( bottomLink => {
+            getData().data.footerBottomNav.forEach( bottomLink => {
           %>
           <li class="footer-bottom-item">
             <a class="footer-bottom-link" href="<%- bottomLink.link %>"><%- bottomLink.text %></a>
@@ -115,6 +56,9 @@
           <small>(c) Mobilityland Corporation All Rights Reserved.
                 <br>Kochira (Kochira family) is an original character of MOBILITYLAND designed by Mr. Osamu Tezuka. (c)TEZUKA PRODUCTIONS</small>
         </p>
+        <div class="footer-bottom-name u-show-sp">
+          <img class="footer-bottom-name-text" src="<%= mix('/assets/images/footer-name-sp.png') %>" alt="">
+        </div>
         <ul class="footer-bottom-logos">
           <li>
             <img src="<%= mix('/assets/images/suzuka-logo.png') %>" alt="Suzuka">
@@ -133,5 +77,13 @@
   </div> <!-- end of wrap -->
 
   <script src="<%= mix('/assets/js/app.js') %>" async></script>
+
+  <% if(pageId == 'mobipark') { %>
+    <script src="<%= mix('/assets/js/mobipark.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'sumika' || pageId == 'itadaki' || pageId == 'dokidoki' || pageId == 'mobipark' || pageId == 'mobipark-subpage' ) { %>
+  <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
+  <% } %>
 </body>
 </html>

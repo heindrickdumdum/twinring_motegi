@@ -1,0 +1,61 @@
+<ul class="adventure-container">
+  <!-- Musasabi -->
+  <li class="adventure-list">
+    <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/hellowoods/explore-bg-1.png') %>);">
+      <img class="adventure-image-logo" src="<%= mix('/assets/images/hellowoods/musasabi-logo.png') %>" alt="Musasabi">
+    </div>
+
+    <div class="l-adventure">
+      <span class="text-ribbon bg-gray">モビパークパスポート対象外</span>
+      <div class="l-section-title l-section-title-adventure">
+        
+        <h3 class="adventure-heading hellowoods">
+          森のジップライン ムササビ
+        </h3>
+        <p>対象：小学４年生以上で、身長135cm以上、体重100kg以下の方</p>
+      </div>
+      
+      <p class="adventure-content-copy">
+        森の中で「溢れる生命（いのち）」を見つけよう。<br>自然とふれあいながら、遊び・学べる体験型アトラクション・プログラムが満載です。
+      </p>
+
+      <div class="l-button">
+        <%- include('/partials/button', {
+          modifier: 'button-adventure',
+          text: 'もっと見る',
+          link: '#'
+        }) %>
+      </div>
+    </div>
+  </li>
+
+  <!-- Tsubasa -->
+  <li class="adventure-list">
+    <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/hellowoods/explore-bg-2.jpg') %>);">
+      <img class="adventure-image-logo" src="<%= mix('/assets/images/hellowoods/tsubasa-logo.png') %>" alt="Tsubasa">
+    </div>
+
+    <div class="l-adventure">
+      <span class="text-ribbon bg-gray">モビパークパスポート対象外</span>
+      <div class="l-section-title l-section-title-adventure">
+        
+        <h3 class="adventure-heading hellowoods">
+          メガジップライン つばさ
+        </h3>
+        <p>対象：体重35Kg以上、95Kg以下の方</p>
+      </div>
+      
+      <p class="adventure-content-copy">
+        日本最大級のジップラインで森の中からサーキットに向けて<br>高低差20mを一気に滑るジップラインです。<br>モビパークパスポートで体験できます。<br>
+      </p>
+
+      <div class="l-button">
+        <%- include('/partials/button', {
+          modifier: 'button-adventure',
+          text: 'もっと見る',
+          link: '#'
+        }) %>
+      </div>
+    </div>
+  </li>
+</ul>

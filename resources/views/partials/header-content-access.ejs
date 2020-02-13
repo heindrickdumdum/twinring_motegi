@@ -1,65 +1,12 @@
-<%
-  headerImageList = [
-    [
-      {
-        'image': mix('/assets/images/header/activity-img2.jpg'),
-        'text': 'ハローウッズ'
-      },
-      {
-        'image': '',
-        'text': 'モビパーク'
-      },
-      {
-        'image': mix('/assets/images/header/access-img1.jpg'),
-        'text': '森と星空のキャンプビレッジ'
-      },
-      {
-        'image': mix('/assets/images/header/access-img2.jpg'),
-        'text': 'ホテルツインリング'
-      },
-      {
-        'image': mix('/assets/images/header/access-img3.jpg'),
-        'text': 'モータースポーツ'
-      },
-      {
-        'image': mix('/assets/images/header/access-img4.jpg'),
-        'text': 'ホンダコレクションホール'
-      },
-      {
-        'image': '',
-        'text': '安全運転スクール'
-      },
-      {
-        'image': '',
-        'text': '場内マップ'
-      }
-    ]
-  ]
+<div class="header-sub-content-inner header-sub-content-inner-motorsports js-header-sub-content-inner" id="header-sub-access">
 
-%>
-
-
-<div class="header-sub-content-inner header-sub-content-inner-access js-header-sub-content-inner" id="header-sub-access">
-
-  <a class="header-sub-top-button" href="#">
-    <i class="header-sub-top-button-icon">
-      <%- include('/partials/svg', {
-        'name': 'location'
-      }) %>
-    </i>
-    エリア・施設TOP
-    <i class="header-sub-top-button-arrow">
-      <%- include('/partials/svg', {
-        'name': 'arrow'
-      }) %>
-    </i>
-  </a>
+  <a class="header-sub-top-button" href="#">エリア・施設TOP</a>
 
   <div class="header-sub-inner">
     <div class="header-sub-inner-block">
       <div class="header-sub-image-list-wrap">
-        <% headerImageList.forEach( list => { %>
-          <ul class="header-sub-image-list<% if(list.length > 4) { %> header-sub-image-list-col5<% } %>">
+        <% getData().data.headerAccessImageList.forEach( list => { %>
+          <ul class="header-sub-image-list header-sub-image-list-padding">
             <% list.forEach( item => { %>
             <li class="header-sub-image-item">
               <a class="header-sub-image-link" href="#">
@@ -70,7 +17,23 @@
             <% }) %>
           </ul>
         <% }) %>
+
+        <ul class="header-sub-bottom-list header-sub-bottom-list-upper">
+          <% getData().data.headerAccessImageBottomList.forEach( item => { %>
+          <li>
+            <a href="<%- item.link %>"><%- item.text %></a>
+          </li>
+          <% }) %>
+        </ul>
       </div>
+    </div>
+    <div class="header-sub-inner-block header-sub-inner-block-right header-sub-inner-block-no-border">
+
+      <a class="header-sub-top-button header-sub-top-button-right" href="#">
+        場内マップ
+      </a>
+
+      <div class="header-sub-image-map" style="background-image: url(<%= mix('/assets/images/header/access-map.jpg') %>);"></div>
     </div>
   </div>
 

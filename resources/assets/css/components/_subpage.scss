@@ -1,0 +1,176 @@
+.subpage {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 105px;
+
+  > * {
+    position: relative;
+  }
+
+  &::after {
+    background: #dfdfdf;
+    content: '';
+    display: block;
+    height: 1px;
+    max-width: 1298px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  &::before {
+    background-image: url('../images/subpage-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.subpage-inner {
+  position: relative;
+  max-width: 1060px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  width: 100%;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 120px;
+  }
+
+  > p {
+    font-size: 12px;
+    color: $base-font-color;
+    line-height: 2;
+    text-align: left;
+    letter-spacing: 0.16em;
+    margin-bottom: 33px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 15px;
+    }
+  }
+}
+
+.subpage-title {
+  font-size: 13px;
+  letter-spacing: 0.11em;
+  margin-bottom: 8px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 24px;
+  }
+
+  span {
+    background: linear-gradient(to right, #027cc3 0%, #09a046 100%);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+
+  }
+}
+.subpage-youtube {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.subpage-banner {
+  width: calc(100% + 40px);
+  // left: -20px;
+  position: relative;
+  margin-bottom: 20px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  //modifier SP
+  @include max-screen($breakpoint-mobile) {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.subpage-section {
+  position: relative;
+  width: 100%;
+}
+
+.subpage-section-inner {
+  position: relative;
+  max-width: 1102px;
+  margin: 0 auto 120px;
+  padding: 0 42px;
+  width: 100%;
+}
+
+.subpage-button {
+  max-width: 669px;
+  height: 137px;
+  margin: -20px auto 135px;
+}
+
+.subpage-button-link {
+  color: #fff;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  span {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+}
+
+
+//modifier
+
+.subpage-section-howto {
+  margin-bottom: 103px;
+}
+
+.subpage-section-howto-inner {
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
+.subpage-section-course-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.subpage-section-recommendation {
+  margin-bottom: 65px;
+}
+
+.subpage-section-cat-attraction {
+  max-width: 905px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.subpage-section-carbike {
+  max-width: 1060px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}

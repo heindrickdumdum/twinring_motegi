@@ -44,7 +44,7 @@
   @include max-screen($breakpoint-mobile) {
     height: 378px;
   }
-  
+
   .mv-subpage & {
     max-height: 607px;
     height: 0;
@@ -568,6 +568,10 @@
 
   &::after {
     bottom: -50px;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -25px;
+    }
   }
 
   .mv-heading-subpage {

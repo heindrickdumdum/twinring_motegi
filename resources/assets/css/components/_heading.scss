@@ -78,7 +78,7 @@
 //banner title image or text
 .heading-banner-more {
   .heading {
-    margin: 20px 0 0;
+    margin: 0;
   }
 
   .heading-text {
@@ -90,7 +90,16 @@
 
   .heading-subtext {
     position: relative;
-    margin-top: 0;
+    margin: 0 auto;
+  }
+
+  &.heading-banner-more-acrox {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        max-width: 184px;
+        height: auto;
+      }
+    }
   }
 
   &.heading-banner-more-forestdriving {
@@ -98,15 +107,28 @@
       max-width: 419px;
       width: 100%;
       left: 10px;
+
+      @include max-screen($breakpoint-mobile) {
+        left: 0;
+        max-width: 158px;
+        height: auto;
+      }
     }
 
   }
 
-  &.heading-banner-more-deb-den {
+  &.heading-banner-more-debden {
     .heading-subtext {
       max-width: 528px;
       width: 100%;
       left: 10px;
+
+      @include max-screen($breakpoint-mobile) {
+        left: 0;
+        max-width: 208px;
+        height: 46px;
+      }
+
     }
   }
 
@@ -122,6 +144,12 @@
   &.heading-banner-more-bunbun {
     .heading-subtext {
       left: 26px;
+
+      @include max-screen($breakpoint-mobile) {
+        left: 0;
+        max-width: 232px;
+        height: 46px;
+      }
     }
   }
 
@@ -129,6 +157,44 @@
     .heading-subtext {
       left: 9px;
       height: auto;
+
+      @include max-screen($breakpoint-mobile) {
+        left: 0;
+        max-width: 210px;
+      }
+    }
+  }
+
+  &.heading-banner-more-mototouring {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        max-width: 184px;
+        height: 46px;
+      }
+    }
+  }
+  &.heading-banner-more-motoracer {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        max-width: 161px;
+        height: 46px;
+      }
+    }
+  }
+  &.heading-banner-more-dream {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        max-width: 178px;
+        height: 46px;
+      }
+    }
+  }
+  &.heading-banner-more-wildracer {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        max-width: 206px;
+        height: 46px;
+      }
     }
   }
 }
@@ -168,6 +234,10 @@
   &.heading-main-wild-racer {
     .heading {
       max-width: 505px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 320px;
+      }
     }
   }
 
@@ -180,6 +250,10 @@
   &.heading-main-motorcycle {
     .heading {
       max-width: 358px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 250px;
+      }
     }
   }
 
@@ -187,6 +261,10 @@
     img {
       max-width: 628px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 243px;
+      }
     }
   }
 
@@ -200,28 +278,49 @@
       }
     }
   }
+  &.heading-main-debden {
+    img {
+      max-width: 310px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 651px;
+      }
+    }
+  }
 
 }
 
 //how to enjoy heading
 .heading-howto {
-
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 35px;
   }
 
-  &.heading-howto-bunbun {
+  &.heading-howto-acrox {
     .heading-subtext {
-      max-width: 560px;
+      margin: 10px auto 0;
+      max-width: 628px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 35px;
+        max-width: 228px;
+        height: 57px;
+      }
     }
   }
 
-  &.heading-howto-acrox {
+  &.heading-howto-bunbun {
     .heading-subtext {
-      max-width: 628px;
-      margin-bottom: 35px;
+      margin: 10px auto 0;
+      max-width: 560px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 289px;
+        height: 58px;
+      }
     }
   }
 
@@ -244,6 +343,12 @@
     .heading-subtext {
       max-width: 539px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 196px;
+        height: 57px;
+      }
     }
   }
 
@@ -259,6 +364,12 @@
     .heading-subtext {
       max-width: 626px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 256px;
+        height: 57px;
+      }
     }
   }
 
@@ -266,6 +377,10 @@
     .heading-subtext {
       max-width: 925px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        height: 89px;
+      }
     }
   }
 
@@ -273,6 +388,12 @@
     .heading-subtext {
       max-width: 625px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 228px;
+        height: 58px;
+      }
     }
   }
 
@@ -280,6 +401,12 @@
     .heading-subtext {
       max-width: 583px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 200px;
+        height: 57px;
+      }
     }
   }
 
@@ -287,6 +414,12 @@
     .heading-subtext {
       max-width: 616px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 221px;
+        height: 57px;
+      }
     }
   }
 
@@ -294,6 +427,12 @@
     .heading-subtext {
       max-width: 515px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 197px;
+        height: 57px;
+      }
     }
   }
 

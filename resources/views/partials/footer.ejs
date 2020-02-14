@@ -85,5 +85,9 @@
   <% if(pageId == 'index' || pageId == 'sumika' || pageId == 'itadaki' || pageId == 'dokidoki' || pageId == 'mobipark' || pageId == 'mobipark-subpage' || pageId == 'hellowoods' || pageId == 'hellowoods-subpage' || pageId == 'tsubasa') { %>
   <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
   <% } %>
+  <% if(subpageId == 'subpage-carbike') { %>
+    <script src="<%= mix('/assets/js/carbike.js') %>" async></script>
+  <% } %>
+
 </body>
 </html>

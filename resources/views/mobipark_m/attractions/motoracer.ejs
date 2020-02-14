@@ -104,10 +104,18 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-howto heading-howto-motoracer',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-motoracer u-show-pc',
           text: 'How to Enjoy',
           alt: '',
           subtextvg: 'motoracer-enjoy-point-title',
+          altSubtext: '',
+        }) %>
+
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-motoracer u-show-sp',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'motoracer-enjoy-point-title-sp',
           altSubtext: '',
         }) %>
       </div>
@@ -171,10 +179,13 @@
                 タイムアタックで記録にチャレンジ！
               </span>
             </h4>
-            <p class="media-desc">
+            <p class="media-desc u-show-pc">
               タイムアタックは1000分の1秒まで計測。<br />
               たくさん練習して、何度転んでもチャレンジ<br />
               したくなるのがモトレーサー！
+            </p>
+            <p class="media-desc u-show-sp">
+              タイムアタックは1000分の1秒まで計測。たくさん練習して、何度転んでもチャレンジしたくなるのがモトレーサー！
             </p>
           </div>
         </div>
@@ -189,15 +200,25 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            modifier: 'heading-banner-more heading-banner-more-motoracer',
+            modifier: 'heading-banner-more heading-banner-more-motoracer u-show-pc',
             imgPath: mix('/assets/images/motoracer/motor-enjoy-more-title.png'),
             alt: 'モトレーサーをもっと楽しむ',
             altSubtext: ''
           }) %>
+          <%- include('/partials/heading', {
+            modifier: 'heading-banner-more heading-banner-more-motoracer u-show-sp',
+            imgPath: mix('/assets/images/motoracer/motor-enjoy-more-title-sp.png'),
+            alt: 'モトレーサーをもっと楽しむ',
+            altSubtext: ''
+          }) %>
           <div class="call-to-action-description">
-            <p class="call-to-action-description-text">
+            <p class="call-to-action-description-text u-show-pc">
               モトレーサーのこだわりポイントや、知っているともっと<br>
               楽しくなる情報を配信中しています。
+            </p>
+
+            <p class="call-to-action-description-text u-show-sp">
+              モトレーサーのこだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action">

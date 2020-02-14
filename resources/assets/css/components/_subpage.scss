@@ -152,6 +152,10 @@
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 0.1em;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -219,6 +223,10 @@
     font-size: 24px;
     font-family: $font-hiragino;
     line-height: 1.417;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 13px;
+    }
   }
 
   ol {
@@ -226,6 +234,10 @@
     line-height: 2;
     text-align: left;
     letter-spacing: 0.16em;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 }
 

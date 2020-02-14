@@ -110,7 +110,6 @@
 
   @include max-screen($breakpoint-mobile) {
     margin-top: 15px;
-    font-size: 26px;
   }
 
   span {
@@ -147,10 +146,6 @@
 
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 15px;
-  }
-   
-  @include max-screen($breakpoint-mobile) {
-    font-size: 24px;
   }
 
   .media-subpage & {
@@ -241,6 +236,10 @@
 .media-title-racing-kart {
   text-align: center;
   font-size: 26px;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 13px;
+  }
 }
 
 /*craft modifier*/
@@ -250,6 +249,11 @@
       display: none;
     }
   }
+}
+
+/*Tsubasa*/
+.media-note-tsubasa {
+  max-width: 300px;
 }
 
 .media-labo {

@@ -51,15 +51,11 @@
 }
 
 .article-image {
-  height: 218px;
+  padding-top: 58%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-
-  @include max-screen($breakpoint-mobile) {
-    height: 177px;
-  }
 
   &::before {
     content: '';
@@ -105,7 +101,7 @@
       color: $color-mineshaft;
     }
     &:hover {
-      @include query($breakpoint-mobile, min) {
+      @include min-screen($breakpoint-mobile + 1) {
         .button-gradient-icon {
           transform: translateX(5px);
         }

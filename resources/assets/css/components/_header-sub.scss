@@ -4,7 +4,12 @@
 }
 
 .header-sub-content-inner {
-  display: none;
+  display: block;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 
 .header-sub-content-wrap {
@@ -17,6 +22,11 @@
   height: calc(100vh - 187px);
   z-index: -9;
   transition: opacity $duration $ease-in-out;
+
+  @include max-screen($breakpoint-mobile) {
+    position: absolute;
+    top: 0;
+  }
 
   &.is-visible {
     z-index: $z-max9;
@@ -80,10 +90,18 @@
   display: flex;
   margin-bottom: 30px;
 
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+  }
+
   &.header-sub-inner-attraction,
   &.header-sub-inner-restaurant {
     margin-bottom: -16px;
     position: relative;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -91,6 +109,12 @@
   position: absolute;
   top: 30.5%;
   right: 4px;
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
 }
 
 .header-sub-right-content-item {
@@ -106,8 +130,12 @@
   color: $color-mineshaft;
   transition: color $duration $ease-in-out;
 
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+  }
+
   &:hover {
-    @include query($breakpoint-mobile, min) {
+    @include min-screen($breakpoint-mobile + 1) {
       color: $color-green;
     }
   }
@@ -118,6 +146,10 @@
   padding-top: 25px;
   padding-bottom: 17px;
 
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+  }
+
   li {
     display: block;
     padding: 0 30px 0 26px;
@@ -125,6 +157,19 @@
     line-height: 1;
     letter-spacing: 0.035em;
     border-right: 1px solid rgba($color-mineshaft, .5);
+
+    @include max-screen($breakpoint-mobile) {
+      display: inline-block;
+      vertical-align: top;
+      width: calc( 90% / 2);
+      margin-bottom: 12px;
+      padding: 0;
+
+      &:nth-of-type(even) {
+        padding: 0 5px 0 10px;
+        border-right: 0;
+      }
+    }
 
     &:first-of-type {
       padding-left: 0;
@@ -141,8 +186,12 @@
     color: $color-mineshaft;
     transition: color $duration $ease-in-out;
 
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+    }
+
     &:hover {
-      @include query($breakpoint-mobile, min) {
+      @include min-screen($breakpoint-mobile + 1) {
         color: $color-green;
       }
     }
@@ -168,6 +217,12 @@
     padding-right: 0;
     border-left: 1px solid rgba($color-mineshaft, .5);
     position: relative;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 25px;
+      padding-left: 0;
+      border-left: 0;
+    }
   }
 
   &.header-sub-inner-block-col2 {
@@ -175,9 +230,17 @@
     padding-left: 0;
     padding-right: 30px;
 
+    @include max-screen($breakpoint-mobile) {
+      padding-right: 0;
+    }
+
     &:last-of-type {
       padding-left: 30px;
       padding-right: 0;
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 0;
+      }
     }
   }
 }
@@ -220,6 +283,13 @@
   transition: color $duration $ease-in-out,
               transform $duration $ease-in-out;
 
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 10px;
+    padding: 0 0 0 15px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -228,10 +298,15 @@
     width: 11px;
     height: 2px;
     background-color: $color-green;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 7px;
+      height: 1px;
+    }
   }
 
   &:hover {
-    @include query($breakpoint-mobile, min) {
+    @include min-screen($breakpoint-mobile + 1) {
       color: $color-green;
 
       .header-sub-top-button-arrow {
@@ -270,8 +345,13 @@
   transition: color $duration $ease-in-out,
               transform $duration $ease-in-out;
 
+  @include max-screen($breakpoint-mobile) {
+    padding-right: 0;
+    font-size: 12px;
+  }
+
   &:hover {
-    @include query($breakpoint-mobile, min) {
+    @include min-screen($breakpoint-mobile + 1) {
       color: $color-green;
 
       .header-sub-button-link-icon {
@@ -284,6 +364,10 @@
 .header-sub-image-item {
   flex: 1;
   margin: 0 10px 25px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 0 23px;
+  }
 }
 
 .header-sub-image {
@@ -295,6 +379,10 @@
   background-repeat: no-repeat;
   background-color: $color-dark;
 
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
+
   &.header-sub-image-small {
     padding: 30.5% 0;
   }
@@ -305,14 +393,27 @@
   flex-wrap: wrap;
   margin: 0 -10px;
 
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+    margin: 0;
+  }
+
   &.header-sub-image-list-padding {
     padding-right: 64px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-right: 0;
+    }
   }
 
   &.header-sub-image-list-col2 {
     .header-sub-image-item {
       flex: none;
       width: calc((100% / 2) - 20px);
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
     }
 
     .header-sub-image {
@@ -324,6 +425,10 @@
     .header-sub-image-item {
       flex: none;
       width: calc((100% / 5) - 34px);
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
     }
   }
 
@@ -338,6 +443,10 @@
 
     &:not(:first-child) {
       padding-right: 163px;
+
+      @include max-screen($breakpoint-mobile) {
+        padding-right: 0;
+      }
     }
   }
 
@@ -366,6 +475,10 @@
   position: absolute;
   left: -146px;
   top: -119px;
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .header-sub-image-link {
@@ -379,6 +492,28 @@
   font-size: 15px;
   font-weight: bold;
   letter-spacing: 0.03em;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-left: 15px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 11px;
+      height: 2px;
+      background-color: $color-green;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 7px;
+        height: 1px;
+      }
+    }
+  }
 }
 
 .header-sub-bottom {

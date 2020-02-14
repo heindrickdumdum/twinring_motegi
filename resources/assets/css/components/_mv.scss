@@ -104,6 +104,10 @@
   right: 0;
   top: 0;
   z-index: $z-max;
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .mv-buttons-list {
@@ -582,6 +586,40 @@
     }
   }
 
+
+.mv-heading-sumika {
+  @include max-screen($breakpoint-mobile) {
+   .mv-heading-subtexts {
+    svg {
+      width: 220px;
+      height: 74px;
+    }
+   }
+  }
+}
+
+.mv-heading-itadaki {
+  @include max-screen($breakpoint-mobile) {
+   .mv-heading-subtexts {
+    svg {
+      width: 162px;
+      height: 76px;
+    }
+   }
+  }
+}
+
+.mv-heading-dokidoki {
+  @include max-screen($breakpoint-mobile) {
+   .mv-heading-subtexts {
+    svg {
+      width: 130px;
+      height: 76px;
+    }
+   }
+  }
+}
+
   .mv-heading-texts {
     font-family: $font-holland;
     color: $color-white;
@@ -660,4 +698,3 @@
 .mv-image-subpage {
   background-position-y: 25%;
 }
-//modifier for SP

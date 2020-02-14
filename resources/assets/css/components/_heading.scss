@@ -20,8 +20,6 @@
     font-size: 24px;
     text-align: center;
     background: linear-gradient(to bottom, #027cc4 0%, #09a045 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .heading-wrap-parkmap & {
@@ -302,7 +300,7 @@
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 25px;
     }
-    
+
     .heading {
       // margin-bottom: 65px;
       max-width: 531px;
@@ -375,6 +373,22 @@
 
   &.heading-main-tsubasa {
     margin: 60px 0;
+  }
+
+  &.heading-main-craft {
+    .heading-texts {
+      img {
+        @include max-screen($breakpoint-mobile) {
+          width: 220px;
+        }
+      }
+    }
+
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin: 56px auto 59px;
+      }
+    }
   }
 
 }
@@ -577,6 +591,21 @@
     }
   }
 
+  &.heading-wrap-menu {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        margin: 13px auto 0;
+        height: 26px;
+      }
+    }
+
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin: 24px 0 37px;
+      }
+    }
+  }
+
   &.heading-wrap-parkmap {
     .heading-subtext {
       width: 750px;
@@ -647,6 +676,21 @@
       height: 36px;
       @include max-screen($breakpoint-mobile) {
         width: auto;
+        height: 53px;
+      }
+    }
+  }
+
+  &.heading-wrap-craft {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 11px;
+      }
+    }
+
+    svg {
+      @include max-screen($breakpoint-mobile) {
+        height: 25px;
       }
     }
   }
@@ -658,6 +702,7 @@
       height: 36px;
       @include max-screen($breakpoint-mobile) {
         width: auto;
+        height: 53px;
       }
     }
   }
@@ -669,6 +714,7 @@
       height: 36px;
       @include max-screen($breakpoint-mobile) {
         width: auto;
+        height: 55px;
       }
     }
   }
@@ -813,8 +859,6 @@
         max-width: 335px;
       }
     }
-
-
   }
 }
 
@@ -827,7 +871,7 @@
     background: linear-gradient(to right, #027cc3 10%, #099f48 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+
     @include max-screen($breakpoint-mobile) {
       text-align: center;
       font-size: 13px;
@@ -955,6 +999,27 @@
     .heading-subtext {
       width: 100%;
       margin-top: 39px;
+    }
+  }
+
+  .heading-forest-craft {
+    .heading-wrap {
+      svg {
+        @include max-screen($breakpoint-mobile) {
+          width: 310px;
+        }
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        margin-top: 4px;
+      }
     }
   }
 

@@ -5,4 +5,13 @@
   @include max-screen($breakpoint-mobile) {
     font-size: 12px;
   }
+
+  .forest-craft & {
+  	@include max-screen($breakpoint-mobile) {
+			font-size: 13px;
+			margin-top: 13px;
+			letter-spacing: 0.1em;
+			line-height: 1.65;
+  	}
+  }
 }

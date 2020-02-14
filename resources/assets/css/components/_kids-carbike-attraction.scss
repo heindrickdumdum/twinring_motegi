@@ -32,7 +32,7 @@
     letter-spacing: 0.16em;
 
     @include max-screen($breakpoint-mobile) {
-      font-size: 24px;
+      font-size: 12px;
       text-align: justify;
     }
   }

@@ -46,6 +46,7 @@
           @include max-screen($breakpoint-mobile) {
             padding-left: 5px;
             padding-right: 5px;
+            font-size: 13px;
           }
         }
       }

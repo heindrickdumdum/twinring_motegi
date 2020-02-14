@@ -57,12 +57,15 @@
 .subpage-labo {
   .heading-text {
     @include max-screen($breakpoint-mobile) {
-      font-size: 45px !important;
+      font-size: 22.5px !important;
     }
   }
 
   .heading-subtext {
+    max-width: 250px;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -70,15 +73,15 @@
       margin-top: 90px;
     }
 
-    .subpage-title {
-      font-size: 26px;
-    }
+    // .subpage-title {
+    //   font-size: 26px;
+    // }
 
-    .subpage-inner {
-      > p {
-        font-size: 24px;
-      }
-    }
+    // .subpage-inner {
+    //   > p {
+    //     font-size: 24px;
+    //   }
+    // }
 
     .heading-family-walk {
       .heading-subtext {
@@ -88,13 +91,13 @@
 
     .heading-guide-walk {
       .heading-subtext {
-        height: 108px;
+        height: 71px;
       }
     }
 
     .heading-free-walk {
       .heading-subtext {
-        height: 37px;
+        height: 35px;
       }
     }
 
@@ -124,6 +127,10 @@
   .heading-text {
     max-width: 584px;
     width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 250px;
+    }
   }
 }
 
@@ -820,6 +827,11 @@
     background: linear-gradient(to right, #027cc3 10%, #099f48 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+    @include max-screen($breakpoint-mobile) {
+      text-align: center;
+      font-size: 13px;
+    }
   }
 
   .heading-kids-carbike-attraction {
@@ -1024,10 +1036,6 @@
 //modifier for SP
 @include max-screen($breakpoint-mobile) {
   .subpage-mobipark {
-    .heading-text {
-      font-size: 45px;
-    }
-
     .heading-subtext {
       min-height: 47px;
       margin-left: auto;

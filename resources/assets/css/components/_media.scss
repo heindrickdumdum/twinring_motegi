@@ -236,6 +236,10 @@
 .media-title-racing-kart {
   text-align: center;
   font-size: 26px;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 13px;
+  }
 }
 
 /*craft modifier*/

@@ -285,6 +285,14 @@
   }
 }
 
+//modifier for forest lab
+.subpage-labo {
+  .mv-image {
+    @include max-screen($breakpoint-mobile) {
+      background-position-x: 70%;
+    }
+  }
+}
 
 // modifier
 .mv-car-and-bike {

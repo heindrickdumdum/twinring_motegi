@@ -122,6 +122,7 @@
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 20px;
   }
+
   @include max-screen($breakpoint-mobile) {
     margin-top: 15px;
   }
@@ -254,6 +255,10 @@
 .media-title-racing-kart {
   text-align: center;
   font-size: 26px;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 13px;
+  }
 }
 
 /*craft modifier*/
@@ -263,6 +268,11 @@
       display: none;
     }
   }
+}
+
+/*Tsubasa*/
+.media-note-tsubasa {
+  max-width: 300px;
 }
 
 .media-labo {
@@ -275,10 +285,21 @@
 
   .media-left {
     width: 425px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   .media-right {
     padding-left: 425px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   .media-bg {

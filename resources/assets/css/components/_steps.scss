@@ -64,7 +64,6 @@
     margin-bottom: 80px;
   }
 
-
   &.step-goal {
     width: calc((((100% - 120px) / 3 )* 2) + 60px);
 
@@ -124,6 +123,14 @@
           display: none;
         }
       }
+    }
+  }
+}
+
+.step-goal {
+  .step-item {
+    &::after {
+      display: none;
     }
   }
 }

@@ -18,21 +18,18 @@
 
     <h1 class="mv-heading mv-heading-subpage">
       <span class="mv-heading-text">
-        おさんぽでんでん
+        ワイルドレーサー
       </span>
     </h1>
   </div>
 
   <div class="subpage-inner">
     <div class="l-section-title">
-      <div class="heading-wrap heading-main heading-main-wild-racer heading-main-subpage">
+      <div class="heading-wrap heading-main heading-main-wild-racer">
         <h2 class="heading">
           <span class="u-title-hidden">Wild Racer</span>
-          <span class="heading-text u-show-pc">
-            <img src="<%= mix('/assets/images/wild-racer/wildracer-title.png') %>" alt="forest-driving">
-          </span>
-          <span class="heading-text u-show-sp">
-            <img src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
+          <span class="heading-text">
+            <img src="<%= mix('/assets/images/wild-racer/wildracer-title.png') %>" alt="wild racer">
           </span>
         </h2>
       </div>
@@ -40,9 +37,7 @@
 
     <div class="subpage-banner">
       <div class="subpage-banner-inner">
-        <img class="u-show-pc" src="<%= mix('/assets/images/forest-driving/banner.jpg') %>" alt="forest forest-driving">
-
-        <img class="u-show-sp" src="<%= mix('/assets/images/forest-driving/sp-banner.jpg') %>" alt="forest-driving">
+        <img class="" src="<%= mix('https://via.placeholder.com/2042x946') %>" alt="">
       </div>
     </div>
 
@@ -104,10 +99,18 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-howto heading-howto-wildracer',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-wildracer u-show-pc',
           text: 'How to Enjoy',
           alt: '',
           subtextvg: 'wildracer-enjoy-point-title',
+          altSubtext: '',
+        }) %>
+
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-wildracer u-show-sp',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'wildracer-enjoy-point-title-sp',
           altSubtext: '',
         }) %>
       </div>
@@ -181,16 +184,26 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            modifier: 'heading-banner-more heading-banner-more-wildracer',
+            modifier: 'heading-banner-more heading-banner-more-wildracer u-show-pc',
             imgPath: mix('/assets/images/wild-racer/wildracer-enjoy-more-title.png'),
             alt: 'ワイルドレーサーをもっと楽しむ',
             altSubtext: '',
             subtextvg: ''
           }) %>
+          <%- include('/partials/heading', {
+            modifier: 'heading-banner-more heading-banner-more-wildracer u-show-sp',
+            imgPath: mix('/assets/images/wild-racer/wildracer-enjoy-more-title-sp.png'),
+            alt: 'ワイルドレーサーをもっと楽しむ',
+            altSubtext: '',
+            subtextvg: ''
+          }) %>
           <div class="call-to-action-description">
-            <p class="call-to-action-description-text">
+            <p class="call-to-action-description-text u-show-pc">
               ワイルドレーサーのこだわりポイントや、知っているとも<br>
               っと楽しくなる情報を配信中しています。
+            </p>
+            <p class="call-to-action-description-text u-show-sp">
+              ワイルドレーサーの<br />こだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">

@@ -1,6 +1,20 @@
 <% if(typeof pageId === 'undefined') { var pageId = ''; } %>
 <% if(typeof page === 'undefined') { var page = ''; } %>
 
+
+<%
+  let pages = ['index',
+  'sumika',
+  'itadaki',
+  'dokidoki',
+  'mobipark',
+  'mobipark-subpage',
+  'hellowoods',
+  'hellowoods-subpage',
+  'tsubasa'
+  ]
+%>
+
 <footer class="footer">
 
   <nav class="footer-top-nav-list-wrap">
@@ -86,8 +100,19 @@
     <script src="<%= mix('/assets/js/index.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'index' || pageId == 'sumika' || pageId == 'itadaki' || pageId == 'dokidoki' || pageId == 'mobipark' || pageId == 'mobipark-subpage' || pageId == 'hellowoods' || pageId == 'hellowoods-subpage' || pageId == 'tsubasa' || pageId == 'musasabi') { %>
-  <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
+  <% if(pageId == 'hellowoods' || pageId == 'hellowoods-subpage') { %>
+    <script src="<%= mix('/assets/js/anchor.js') %>" async></script>
   <% } %>
+
+  <% if(subpageId == 'subpage-carbike') { %>
+    <script src="<%= mix('/assets/js/carbike.js') %>" async></script>
+  <% } %>
+
+  <% if(pages.includes(pageId)) { %>
+  <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
+  <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
+  <% } %>
+
+
 </body>
 </html>

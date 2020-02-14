@@ -6,6 +6,8 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title }) -%>
 
+<% pageId = 'mobipark-subpage'; %>
+
 <div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
@@ -96,10 +98,18 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-howto heading-howto-dream',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-dream u-show-pc',
           text: 'How to Enjoy',
           alt: '',
           subtextvg: 'dream-enjoy-point-title',
+          altSubtext: '',
+        }) %>
+
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-dream u-show-sp',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'dream-enjoy-point-title-sp',
           altSubtext: '',
         }) %>
       </div>
@@ -161,8 +171,11 @@
           </div>
           <div class="media-right">
             <h4 class="media-title media-title-nohighlight"><span>より本格的なカートへステップアップ！</span></h4>
-            <p class="media-desc">
+            <p class="media-desc u-show-pc">
               ドリームカートでライセンスをゲットして、<br />さらにハイスピードのチャレンジカートにステップアップしよう！
+            </p>
+            <p class="media-desc u-show-sp">
+              ドリームカートでライセンスをゲットして、さらにハイスピードのチャレンジカートにステップアップしよう！
             </p>
 
 
@@ -179,15 +192,25 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            modifier: 'heading-banner-more',
+            modifier: 'heading-banner-more heading-banner-more-dream u-show-pc',
             imgPath: mix('/assets/images/dream/dream-enjoy-more-title.png'),
             alt: 'ドリームカートをもっと楽しむ',
             altSubtext: ''
           }) %>
+          <%- include('/partials/heading', {
+            modifier: 'heading-banner-more heading-banner-more-dream u-show-sp',
+            imgPath: mix('/assets/images/dream/dream-enjoy-more-title-sp.png'),
+            alt: 'ドリームカートをもっと楽しむ',
+            altSubtext: ''
+          }) %>
           <div class="call-to-action-description">
-            <p class="call-to-action-description-text">
+            <p class="call-to-action-description-text u-show-pc">
               ドリームカートのこだわりポイントや、知っているともっ<br />と楽しくなる情報を配信中しています。
             </p>
+            <p class="call-to-action-description-text u-show-sp">
+              ドリームカートのこだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
+            </p>
+
           </div>
           <div class="l-button l-button-call-to-action">
             <%- include('/partials/button', {

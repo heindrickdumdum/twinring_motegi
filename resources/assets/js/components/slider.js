@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 export default function slider(params) {
   if (!params.id) return;
   if (!params.target) return;
-  
+
   const defaultOptions = {
     speed: 1500,
     initialSlide: 2,
@@ -18,7 +18,7 @@ export default function slider(params) {
         slidesPerGroup: 3,
       },
       375: {
-        spaceBetween: 10,           
+        spaceBetween: 10,
         centeredSlides: true,
         slidesPerView: 1.5,
         initialSlide: 1,

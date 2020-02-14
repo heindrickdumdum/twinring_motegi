@@ -501,6 +501,7 @@
       height: 36px;
       @include max-screen($breakpoint-mobile) {
         width: auto;
+        height: 53px;
       }
     }
   }
@@ -512,6 +513,7 @@
       height: 36px;
       @include max-screen($breakpoint-mobile) {
         width: auto;
+        height: 53px;
       }
     }
   }

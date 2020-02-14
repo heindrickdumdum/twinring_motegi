@@ -18,8 +18,8 @@
         @include max-screen($breakpoint-mobile) {
           order: 2;
           margin-top: 25px;
-          padding-left: 50px;
-          padding-right: 50px;
+          padding-left: 30px;
+          padding-right: 30px;
         }
       }
     }
@@ -42,5 +42,6 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 90px;
   }
 }

@@ -1,0 +1,29 @@
+<div class="l-container">
+  <div class="faq-inner">
+    <div class="l-heading">
+      <%- include('/partials/heading', {
+        modifier: 'heading-sumika',
+        text: 'FAQ',
+        alt: 'faq',
+        subtextvg: 'faq-title',
+        altSubtext: ''
+      }) %>
+    </div>
+      <div class="accordion">
+        <dl class="accordion-inner">
+          <% getData().data.accordionData.forEach(data => { %>     
+            <dt class="accordion-btn js-accordion">
+                <span class="accordion-btn-label">
+                  <img src="<%= mix('/assets/images/acc-q.png') %>">
+                </span>
+                <%- data.question %>
+                <span class="accordion-arrow js-arrow"></span>
+            </dt>
+            <dd class="accordion-description js-description">
+              <p><%- data.answer %></p>
+            </dd>
+          <% }) %>
+        </dl>
+      </div>   
+  </div>
+</div>

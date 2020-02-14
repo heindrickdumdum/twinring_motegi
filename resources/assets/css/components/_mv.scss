@@ -74,6 +74,7 @@
   .mv-subpage & {
     max-height: 607px;
     height: 0;
+    overflow-y: hidden;
 
     @include min-screen($breakpoint-mobile + 1) {
       height: 607px;
@@ -300,6 +301,14 @@
   }
 }
 
+//modifier for forest lab
+.subpage-labo {
+  .mv-image {
+    @include max-screen($breakpoint-mobile) {
+      background-position-x: 70%;
+    }
+  }
+}
 
 // modifier
 .mv-car-and-bike {
@@ -404,11 +413,17 @@
 
 // modifier mobipark
 .mv-mobipark {
-  overflow-y: hidden;
+  max-height: 607px;
+  height: auto;
+  margin-bottom: 7px;
 
   .mv-heading {
     left: 0px;
     bottom: 65px;
+
+    @include max-screen($breakpoint-mobile) {
+      left: 15px;
+    }
   }
 
   .mv-heading-text-mobipark {
@@ -605,7 +620,7 @@
   }
 
   &::after {
-    bottom: -50px;
+    bottom: -30px;
   }
 
   .mv-heading-subpage {

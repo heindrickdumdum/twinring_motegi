@@ -59,6 +59,10 @@
       margin-top: 30px;
       font-size: 24px;
     }
+
+    &.hellowoods {
+      max-width: 600px;
+    }
   }
 
   .challenge-img {
@@ -107,6 +111,10 @@
       max-width: 193px;
       left: -20px;
     }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 90px;
   }
 }
 

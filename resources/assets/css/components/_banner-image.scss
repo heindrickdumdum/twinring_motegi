@@ -8,5 +8,12 @@
     .banner-image-subtext {
       color: $color-black;
     }
+
+    @include max-screen ($breakpoint-mobile) {
+      background-image: url(../images/hellowoods/blog-banner-sp.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: left;  
+    }
   }
 }

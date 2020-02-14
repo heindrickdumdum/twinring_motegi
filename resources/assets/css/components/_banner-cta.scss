@@ -17,6 +17,11 @@
     @include min-screen($breakpoint-mobile + 1) {
       height: 240px;
     }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 0px;
+      top: -45px;
+    }
   }
 
   .banner-cta-inner {

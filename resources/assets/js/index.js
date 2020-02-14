@@ -5,10 +5,10 @@ import slider from './components/slider';
 preload();
 topMvCarousel();
 
-if(window.innerWidth <= 749) {
-	slider({
-		id: 'commonSlider', // REQUIRED
-		target: '.js-slider-sp', // REQUIRED
-	})
-}
+
+slider({
+	id: 'commonSlider', // REQUIRED
+	target: '.js-slider-sp', // REQUIRED
+})
+
 

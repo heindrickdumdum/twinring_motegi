@@ -98,13 +98,15 @@ stepsData = [
         <img src="<%= item.image %>" alt="Step 1">
       </div>
       <div class="step-title"><%= item.heading %></div>
-      <div class="step-subtitle"><%= item.subHeading %></div>
+      <% if (item.subHeading != "") { %>
+        <div class="step-subtitle"><%= item.subHeading %></div>
+      <% } %>
       <p class="step-desc">
         <%= item.subText %>
       </p>
       <%if (item.step == 'goal') { %>
         <div class="media-bottom step-list-media-bottom">
-          <div class="media-note">
+          <div class="media-note media-note-tsubasa">
             <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
             <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
             <div class="media-note-text">

@@ -370,6 +370,10 @@
     }
   }
 
+  &.heading-main-tsubasa {
+    margin: 60px 0;
+  }
+
 }
 
 //how to enjoy heading
@@ -430,14 +434,6 @@
         max-width: 196px;
         height: 57px;
       }
-    }
-  }
-
-  &.heading-howto-tsubasa {
-    .heading-subtext {
-      max-width: 206px;
-      margin-top: 23px;
-      width: 100%;
     }
   }
 
@@ -783,25 +779,6 @@
     }
   }
 
-  &.heading-faq-tsubasa {
-    margin-bottom: 30px;
-    text-align: center;
-
-    .heading-subtext {
-      margin-top: 23px;
-      max-width: 284px;
-      width: 100%;
-    }
-  }
-
-  &.heading-comparison {
-    text-align: center;
-
-    .heading-subtext {
-      max-width: 487px;
-      width: 100%;
-    }
-  }
 
   &.heading-course-challenge {
     margin-bottom: 35px;

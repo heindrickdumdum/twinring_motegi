@@ -132,14 +132,18 @@ accordionData = [
     </ul>
 
     <div class="l-container mv-container">
-      <h2 class="mv-heading">
+      <h2 class="mv-heading mv-heading-itadaki">
         <span class="mv-heading-texts">
           Forest Labyrinth
         </span>
         <span class="mv-heading-subtexts">
-          <svg>
+          <svg class="u-show-pc">
             <title>迷宮森殿ITADAKI</title>
             <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-itadaki-main-title') %>"></use>
+          </svg>
+          <svg class="u-show-sp">
+            <title>迷宮森殿ITADAKI</title>
+            <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-itadaki-main-title-sp') %>"></use>
           </svg>
         </span>
       </h2>
@@ -277,6 +281,7 @@ accordionData = [
   <section class="how-to-enjoy l-section">
     <div class="l-container">
       <div class="l-section-title">
+       <div class="u-show-pc">
         <%- include('/partials/heading', {
           modifier: 'heading-enjoy',
           text: 'How to Enjoy',
@@ -284,6 +289,16 @@ accordionData = [
           subtextvg: 'itadaki-cta-title',
           altSubtext: '',
         }) %>
+       </div>
+       <div class="u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-enjoy',
+          text: 'How to Enjoy',
+          alt: 'How to Enjoy',
+          subtextvg: 'itadaki-enjoy-point-title-sp',
+          altSubtext: '',
+        }) %>
+       </div>
       </div>
 
       <div class="how-to-content">
@@ -373,13 +388,24 @@ accordionData = [
   <section class="forest l-section">
     <div class="l-container">
       <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: 'heading-forest',
-          text: 'Ways to feel the Forest',
-          alt: 'Ways to feel the Forest',
-          subtextvg: 'itadaki-forest-title',
-          altSubtext: '',
-        }) %>
+        <div class="u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-forest',
+            text: 'Ways to feel the Forest',
+            alt: 'Ways to feel the Forest',
+            subtextvg: 'itadaki-forest-title',
+            altSubtext: '',
+          }) %>
+        </div>
+        <div class="u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-forest',
+            text: 'Ways to feel the Forest',
+            alt: 'Ways to feel the Forest',
+            subtextvg: 'itadaki-copy-title-sp',
+            altSubtext: '',
+          }) %>
+        </div>
       </div>
     </div>
     <div class="swiper-container slider js-slider">
@@ -401,13 +427,24 @@ accordionData = [
   <section class="youtube-video l-section">
       <div class="l-container">
         <div class="l-section-title">
+         <div class="u-show-pc">
           <%- include('/partials/heading', {
-            modifier: 'heading-video',
-            text: 'Itadaki Videos',
-            alt: 'sumika videos',
-            subtextvg: 'itadaki-video-title',
+            modifier: 'heading-forest',
+            text: 'Ways to feel the Forest',
+            alt: 'Ways to feel the Forest',
+            subtextvg: 'itadaki-forest-title',
             altSubtext: '',
           }) %>
+         </div>
+         <div class="u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-forest',
+            text: 'Ways to feel the Forest',
+            alt: 'Ways to feel the Forest',
+            subtextvg: 'itadaki-videos-title-sp',
+            altSubtext: '',
+          }) %>
+         </div>
         </div>
         <div class="youtube-video-content">
           <ul class="youtube-video-list row">

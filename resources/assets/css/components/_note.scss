@@ -4,6 +4,15 @@
   width: 318px;
   text-align: left;
   margin-top: 25px;
+
+  .media-craft & {
+    @include max-screen($breakpoint-mobile) {
+      width: 194.5px;
+      margin: 25px auto 7px;
+      transform: translateX(-11px);
+      display: block;
+    }
+  }
 }
 
 .note-flag, .note-acorn {
@@ -13,11 +22,27 @@
 .note-flag {
   top: -24px;
   left: -3px;
+
+  .media-craft & {
+    @include max-screen($breakpoint-mobile) {
+      top: -14px;
+      left: -1px;
+      width: 46px;
+    }
+  }
 }
 
 .note-acorn {
   top: -33px;
   right: -42px;
+
+  .media-craft & {
+    @include max-screen($breakpoint-mobile) {
+      top: -12px;
+      right: -18px;
+      width: 38px;
+    }
+  }
 }
 
 .note-text {
@@ -27,4 +52,13 @@
   color: #fff;
   background-color: #8daf86;
   border-radius: 4px;
+
+  .media-craft & {
+    @include max-screen($breakpoint-mobile) {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      line-height: 1.5;
+      padding: 12px 17px 5px;
+    }
+  }
 }

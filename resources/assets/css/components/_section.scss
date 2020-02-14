@@ -1,5 +1,11 @@
 .section-inner {
   margin-top: 27px;
+
+  &.section-inner-activity {
+    @include max-screen($breakpoint-mobile) {
+      margin: 90px 0;
+    }
+  }
 }
 
 .section-image {
@@ -47,6 +53,13 @@
     @include max-screen($breakpoint-mobile) {
       top: 29px;
       width: 164px;
+    }
+  }
+
+  &.section-image-logo-activity {
+    @include max-screen($breakpoint-mobile) {
+      top: -54px;
+      width: 176px;
     }
   }
 }

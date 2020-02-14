@@ -112,6 +112,10 @@
     letter-spacing: 0.065em;
     position: relative;
   }
+
+  &[data-target="#"] {
+    pointer-events: none;
+  }
 }
 
 .header-bottom-item {

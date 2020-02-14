@@ -1,3 +1,7 @@
 .l-parkmap {
   padding: 100px 0;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 3px 0 100px;
+  }
 }

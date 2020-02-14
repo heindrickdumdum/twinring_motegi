@@ -68,6 +68,13 @@
     top: -31px;
     width: 120%;
     height: 132%;
+
+    @include max-screen($breakpoint-mobile) {
+      left: -19px;
+      top: -21px;
+      width: 130%;
+      height: 131%;
+    }
   }
 }
 
@@ -148,10 +155,18 @@
 
   @include max-screen($breakpoint-mobile) {
     font-size: 14px;
+    top: -19px;
+    right: -11px;
+    width: 78px;
+    height: 79px;
   }
 
   &.article-category-news {
     background-image: url(#{$image-path}article/category-bg2.png);
+
+    @include max-screen($breakpoint-mobile) {
+      z-index: $z-max9;
+    }
   }
 }
 

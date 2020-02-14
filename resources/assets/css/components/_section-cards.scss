@@ -53,6 +53,10 @@
 
   @include max-screen($breakpoint-mobile) {
     font-size: 10px;
+    padding: 4px;
+    width: 85px;
+    left: -36px;
+    top: 28px;
   }
 
   &::before {

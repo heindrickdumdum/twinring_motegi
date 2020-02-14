@@ -10,5 +10,3 @@ slider({
 	id: 'commonSlider', // REQUIRED
 	target: '.js-slider-sp', // REQUIRED
 })
-
-

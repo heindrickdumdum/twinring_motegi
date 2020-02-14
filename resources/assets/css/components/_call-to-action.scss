@@ -71,6 +71,12 @@
     right: 23px;
     bottom: 39px;
     pointer-events: none;
+
+    @include max-screen ($breakpoint-mobile) {
+      background-image: url(#{$image-path}sumika/green-dots-sp.png);
+      background-size: contain;
+      background-position: center;
+    }
   }
 
 }
@@ -176,4 +182,11 @@
 .call-to-action-inner-subpage {
   padding-top: 13px;
   padding-bottom: 37px;
+}
+
+
+.call-to-action-hellowoods {
+  &::after {
+    display: none;
+  }
 }

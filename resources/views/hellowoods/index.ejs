@@ -58,43 +58,46 @@
       </section>
     </div>
     
-
     <div class="l-section">
-      <div class="challenge hellowoods-life-overflowing">
+      <div class="challenge">
         <div class="l-container">
           <div class="row">
-            <div class="u-show-sp challenge-images-sp">
-              <img src="/assets/images/hellowoods/life-overflow-images-sp.png" alt="Life Overflowing">
-            </div>
             <div class="challenge-left">
-              <h2 class="heading-text">
-                <img src="/assets/images/hellowoods/life-overflow-heading.png" alt="Life Overflowing">
-              </h2>
-              <p class="desc">
+              <div class="challenge-img u-show-pc">
+                <div class="challenge-img1">
+                  <img src="<%- mix('/assets/images/hellowoods/overflow-img-1.png') -%>" alt="challenge">
+                </div>
+                <div class="challenge-img2">
+                  <img src="<%- mix('/assets/images/hellowoods/overflow-img-2.png') -%>" alt="challenge">
+                </div>
+                <div class="challenge-img3">
+                  <img src="<%- mix('/assets/images/hellowoods/overflow-img-3.png') -%>" alt="challenge">
+                </div>
+              </div>
+
+              <div class="challenge-img u-show-sp">
+                <img src="<%- mix('/assets/images/hellowoods/life-overflow-images-sp.png') -%>" alt="Challenge">
+              </div>
+
+              
+            </div>
+            <div class="challenge-right">
+              <p class="heading-text">
+                <img src="<%- mix('/assets/images/hellowoods/life-overflow-heading.png') -%>" alt="Life Overflowing">
+              </p>
+              <p class="desc hellowoods">
                 森は教材であり、教室です。樹も虫も動物たちも本物であり、その本物たちの生命が関わり合うリアルな世界がそこには存在します。<br>
                 自然の中で遊ぶことや生命（いのち）の気配に触れることで、五感（見る・聞く・嗅ぐ・味わう・触れる）も研ぎ澄まされていきます。<br>
                 <br>
                 ハローウッズには、本来人間が持つ本能や感性を引き出し、一人ひとりの感動や知恵といった宝物を発見していく<br>
                 「仕組み」があります。
               </p>
-            </div>
-            <div class="u-show-pc challenge-right">
-              <div class="challenge-img">
-                <div class="challenge-img1">
-                  <img src="/assets/images/hellowoods/overflow-img-1.png">
-                </div>
-                <div class="challenge-img2">
-                  <img src="/assets/images/hellowoods/overflow-img-2.png">
-                </div>
-                <div class="challenge-img3">
-                  <img src="/assets/images/hellowoods/overflow-img-3.png">
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
-      </div>
     </div>
+  </div>
 
     <section class="field-introduction">
       <div class="l-container field-introduction-container">
@@ -154,7 +157,7 @@
     </div>
     
 
-    <section class="l-section alternate-feature">
+    <section class="l-section alternate-feature l-section-hellowoods">
       <div class="l-section-title">
         <%- include('/partials/heading', {
           modifier: '',
@@ -170,7 +173,7 @@
       </div>
     </section>
 
-    <section class="l-section alternate-feature">
+    <section class="l-section alternate-feature l-section-hellowoods">
       <div class="l-section-title">
         <%- include('/partials/heading', {
           modifier: '',
@@ -192,7 +195,7 @@
           <%
             hellowoodsGallery.forEach( block => {
           %>
-          <li class="block-image-item image-border <%- block.modifier %>">
+          <li class="block-image-item block-image-item-hellowoods image-border <%- block.modifier %>">
             <a href="<%- block.url %>" class="block-image-item-link">
               <div class="block-image-inner" style="background-image: url(<%- block.bg %>);">
                 <div class="block-image-text-wrap">

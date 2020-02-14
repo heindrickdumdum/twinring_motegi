@@ -34,7 +34,7 @@
   list-style: none;
 }
 
-.mv-list {
+.mv-list-top {
   opacity: 0;
   transition: opacity 1s ease-in;
   transition-delay: 6s;
@@ -54,7 +54,7 @@
   @include max-screen($breakpoint-mobile) {
     height: 378px;
   }
-  
+
   .mv-subpage & {
     max-height: 607px;
     height: 0;

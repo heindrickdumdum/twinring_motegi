@@ -102,4 +102,15 @@
 
 .section-button {
   margin-top: 34px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 249px;
+    margin: 46px auto 0;
+
+    // accessing _button.scsss
+    .button-icon {
+      width: 15px;
+      right: 16px;
+    }
+  }
 }

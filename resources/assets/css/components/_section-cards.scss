@@ -4,6 +4,10 @@
   margin: 42px -10px 0;
   position: relative;
   z-index: $z-min;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 23px;
+  }
 }
 
 .section-cards-image-wrap {
@@ -52,11 +56,12 @@
   z-index: $z-min;
 
   @include max-screen($breakpoint-mobile) {
-    font-size: 10px;
-    padding: 4px;
-    width: 85px;
-    left: -36px;
-    top: 28px;
+    width: 89px;
+    padding-top: 20px;
+    left: -29px;
+    top: 8px;
+    border-radius: 20%;
+    transform: rotate(-45deg) scale(0.8);
   }
 
   &::before {
@@ -72,6 +77,14 @@
     background-size: contain;
     transform: rotate(45deg);
     transform-origin: center;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -42px;
+      left: -10px;
+      right: 0;
+      width: 55px;
+      height: 73px;
+    }
   }
 }
 
@@ -90,6 +103,7 @@
 
   @include max-screen($breakpoint-mobile) {
     font-size: 13px;
+    margin-top: 8px;
   }
 }
 

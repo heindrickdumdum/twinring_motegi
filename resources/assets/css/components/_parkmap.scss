@@ -141,6 +141,11 @@
 
 .parkmap-list {
   counter-reset: parkmap_list;
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+    z-index: $z-min;
+  }
 }
 
 .parkmap-right {
@@ -224,6 +229,11 @@
 
   &.parkmap-item-last {
     margin-top: 20px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 39px;
+      margin-left: -20px;
+    }
   }
 }
 

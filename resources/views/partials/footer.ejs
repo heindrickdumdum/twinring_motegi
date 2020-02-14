@@ -11,7 +11,8 @@
   'mobipark-subpage',
   'hellowoods',
   'hellowoods-subpage',
-  'tsubasa'
+  'tsubasa',
+  'mobipark-subpage-carbike'
   ]
 %>
 
@@ -100,11 +101,7 @@
     <script src="<%= mix('/assets/js/index.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'hellowoods' || pageId == 'hellowoods-subpage') { %>
-    <script src="<%= mix('/assets/js/anchor.js') %>" async></script>
-  <% } %>
-
-  <% if(subpageId == 'subpage-carbike') { %>
+  <% if(pageId == 'mobipark-subpage-carbike') { %>
     <script src="<%= mix('/assets/js/carbike.js') %>" async></script>
   <% } %>
 

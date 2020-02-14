@@ -48,11 +48,6 @@ mix
   )
 
   .js(
-    `${srcRelativePath}/assets/js/anchor.js`,
-    `${distRelativePath}/assets/js`,
-  )
-
-  .js(
     `${srcRelativePath}/assets/js/accordion.js`,
     `${distRelativePath}/assets/js`,
   )

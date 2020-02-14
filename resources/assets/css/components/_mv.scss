@@ -32,6 +32,13 @@
       bottom: -37px;
     }
   }
+  .mv-heading-subtext {
+    @include max-screen($breakpoint-mobile) {
+      left: -16px;
+      position: relative;
+      margin-top: 0px;
+    }
+  }
 }
 
 .mv-container {
@@ -167,6 +174,11 @@
   &:not(.mv-heading-subpage) {
     bottom: -92px;
     left: 35px;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -122px;
+      left: 20px;
+    }
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -239,6 +251,12 @@
 
   @include max-screen($breakpoint-mobile) {
     display: none;
+  }
+}
+
+.mv-today-top {
+  @include max-screen($breakpoint-mobile) {
+    display: flex;
   }
 }
 

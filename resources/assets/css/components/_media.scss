@@ -231,6 +231,21 @@
   }
 }
 
+// modifier
+.media-title-racing-kart {
+  text-align: center;
+  font-size: 26px;
+}
+
+/*craft modifier*/
+.craft-media-title {
+  span {
+    &::before {
+      display: none;
+    }
+  }
+}
+
 .media-labo {
   padding-top: 50px;
 

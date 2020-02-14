@@ -34,6 +34,16 @@
   list-style: none;
 }
 
+.mv-list-top {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition-delay: 6s;
+
+  &.is-show {
+    opacity: 1;
+  }
+}
+
 .mv-image {
   width: 100%;
   height: 607px;
@@ -44,7 +54,7 @@
   @include max-screen($breakpoint-mobile) {
     height: 378px;
   }
-  
+
   .mv-subpage & {
     max-height: 607px;
     height: 0;
@@ -437,7 +447,8 @@
   }
 }
 
-.mv-tsubasa {
+.mv-tsubasa,
+.mv-musasabi {
   margin-bottom: 80px;
   position: relative;
   .mv-heading {
@@ -497,6 +508,17 @@
     height: 266px;
     background-image: url(../images/tsubasa/mv-logo.png);
     bottom: -60px;
+  }
+}
+
+.mv-musasabi {
+  .mv-heading-texts{
+    width: 100%;
+    text-align: left;
+  }
+
+  .mv-heading-subtexts {
+    font-weight: normal;
   }
 }
 

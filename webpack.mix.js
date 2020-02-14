@@ -28,12 +28,15 @@ mix
     `${srcRelativePath}/assets/js/app.js`,
     `${distRelativePath}/assets/js`,
   )
-
+  .js(
+    `${srcRelativePath}/assets/js/index.js`,
+    `${distRelativePath}/assets/js`,
+  )
   .js(
     `${srcRelativePath}/assets/js/mobipark.js`,
     `${distRelativePath}/assets/js`,
   )
-  
+
   .js(
     `${srcRelativePath}/assets/js/common-slider.js`,
     `${distRelativePath}/assets/js`,

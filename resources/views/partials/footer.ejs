@@ -96,6 +96,10 @@
     <script src="<%= mix('/assets/js/mobipark.js') %>" async></script>
   <% } %>
 
+  <% if(pageId == 'index') { %>
+    <script src="<%= mix('/assets/js/index.js') %>" async></script>
+  <% } %>
+
   <% if(pages.includes(pageId)) { %>
   <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
   <script src="<%= mix('/assets/js/accordion.js') %>" async></script>

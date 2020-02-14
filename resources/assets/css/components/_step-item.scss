@@ -1,3 +1,4 @@
+
 .step-item {
   .step-no {
     margin-bottom: 18px;
@@ -18,10 +19,14 @@
       background-image: url("../images/step-bg.png");
       background-repeat: no-repeat;
       background-size: 100%;
-      width: calc(100% + 25px);
-      height: 110%;
       left: -15px;
-      top: -0px;
+      right: -15px;
+      top: -5px;
+      bottom: -15PX;
+
+      @include max-screen ($breakpoint-mobile) {
+        background-size: 98% 101%;
+      }
     }
   
     &.step-goal-bg {
@@ -60,4 +65,16 @@
     margin: auto;
   }
 
+
+  &::after {
+    content: " ";
+    width: 55px;
+    height: 25px;
+    position: absolute;
+    background: url(/assets/images/tsubasa/step-arrow-down.png) no-repeat;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -55px;
+  }
 }

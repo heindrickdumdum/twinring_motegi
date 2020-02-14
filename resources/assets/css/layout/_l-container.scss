@@ -3,7 +3,7 @@
   width: $container + 64;
   margin: 0 auto;
 
-  @include query($breakpoint-mobile) {
+  @include max-screen($breakpoint-mobile) {
     width: 100%;
     padding: 0 20px;
   }

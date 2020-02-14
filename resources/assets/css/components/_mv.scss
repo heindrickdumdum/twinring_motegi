@@ -396,6 +396,10 @@
   .mv-heading {
     left: 0px;
     bottom: 65px;
+
+    @include max-screen($breakpoint-mobile) {
+      left: 15px;
+    }
   }
 
   .mv-heading-text-mobipark {

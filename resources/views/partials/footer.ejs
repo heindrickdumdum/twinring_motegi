@@ -89,5 +89,8 @@
   <% if(pageId == 'index' || pageId == 'sumika' || pageId == 'itadaki' || pageId == 'dokidoki' || pageId == 'mobipark' || pageId == 'mobipark-subpage' || pageId == 'hellowoods' || pageId == 'hellowoods-subpage' || pageId == 'tsubasa' || pageId == 'musasabi') { %>
   <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
   <% } %>
+  <% if(pageId == 'hellowoods') { %>
+    <script src="<%= mix('/assets/js/anchor.js') %>" async></script>
+    <% } %>
 </body>
 </html>

@@ -3,8 +3,8 @@
   SPRITE_SVG = '/assets/svg/sprite.svg';
 %>
 
-<%- include('./../partials/data/index') -%>
-<%- include('./../partials/head', { title }) -%>
+<%- include('/partials/data/index') -%>
+<%- include('/partials/head', { title }) -%>
 
 <% pageId = 'mobipark'; %>
 
@@ -205,7 +205,7 @@
               <div class="l-section-title l-section-title-adventure">
                 <h3 class="adventure-heading">
                   <svg>
-                    <title>DOKIDOKI</title>
+                    <title>ITADAKI</title>
                     <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mobipark-itadaki-title') %>"></use>
                   </svg>
                 </h3>
@@ -364,4 +364,4 @@
   <!-- END BOTTOM -->
 </div>
 
-<%- include('./../partials/footer', {pageId}) -%>
+<%- include('/partials/footer', {pageId}) -%>

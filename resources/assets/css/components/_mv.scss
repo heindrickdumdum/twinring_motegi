@@ -41,6 +41,10 @@
   height: 607px;
   position: relative;
 
+  @include max-screen($breakpoint-mobile) {
+    height: 378px;
+  }
+
   .mv-item {
     position: absolute;
     top: 0;

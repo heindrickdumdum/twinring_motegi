@@ -49,7 +49,7 @@
     <div class="section-contents">
       <p class="section-contents-copy">満天の星空のもとでバーベキュー、鳥のさえずりを聞きながら朝を迎える。<br class="u-show-pc">心地よい森の中で極上のアウトドア体験をお楽しみください。</p>
 
-      <ul class="section-cards">
+      <ul class="section-cards u-show-pc">
         <%
           sectionHotelTwinCards.forEach( card => {
         %>
@@ -66,6 +66,28 @@
           })
         %>
       </ul>
+
+      <div class="swiper-container slider js-slider-sp u-show-sp">
+        <ul class="swiper-wrapper section-cards">
+          <%
+            sectionHotelTwinCards.forEach( card => {
+          %>
+          <li class="swiper-slide">
+            <div class="section-cards-item">
+              <a href="<%- card.url %>" class="section-card-link">
+                <div class="section-cards-image-wrap image-border">
+                  <span class="section-cards-category"><%- card.category %></span>
+                  <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+                </div>
+                <p class="section-cards-title"><%- card.title %></p>
+              </a>
+            </div>
+          </li>
+          <%
+            })
+          %>
+        </ul>
+      </div>
 
       <div class="section-button">
         <%- include('/partials/button', {

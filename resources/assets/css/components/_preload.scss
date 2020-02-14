@@ -17,6 +17,10 @@
   transition-delay: 400ms;
   opacity: 0;
   width: 450px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 325px;
+  }
 }
 
 .preload {

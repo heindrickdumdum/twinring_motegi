@@ -23,24 +23,6 @@
   }
 }
 
-.mv-top {
-  @include max-screen($breakpoint-mobile) {
-    height: 440px;
-  }
-  &:after {
-    @include max-screen($breakpoint-mobile) {
-      bottom: -37px;
-    }
-  }
-  .mv-heading-subtext {
-    @include max-screen($breakpoint-mobile) {
-      left: -16px;
-      position: relative;
-      margin-top: 0px;
-    }
-  }
-}
-
 .mv-container {
   position: relative;
   z-index: $z-min;
@@ -257,6 +239,7 @@
 .mv-today-top {
   @include max-screen($breakpoint-mobile) {
     display: flex;
+    bottom: -91px;
   }
 }
 
@@ -731,4 +714,22 @@
 
 .mv-image-subpage {
   background-position-y: 25%;
+}
+
+.mv-top {
+  @include max-screen($breakpoint-mobile) {
+    height: 440px;
+  }
+  &:after {
+    @include max-screen($breakpoint-mobile) {
+      bottom: -37px;
+    }
+  }
+  .mv-heading-subtext {
+    @include max-screen($breakpoint-mobile) {
+      left: -16px;
+      position: relative;
+      margin-top: 0px;
+    }
+  }
 }

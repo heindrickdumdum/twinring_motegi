@@ -630,6 +630,12 @@
   &.heading-wrap-activity {
     .heading-subtext {
       width: 800px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 311px;
+        margin-top: 11px;
+        height: 68px;
+      }
     }
   }
 

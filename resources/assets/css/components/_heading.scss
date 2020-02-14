@@ -60,10 +60,14 @@
   }
 
   .heading-subtext {
-    max-width: 250px;
+    // max-width: 250px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 250px;
+    }
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -714,7 +718,6 @@
       height: 36px;
       @include max-screen($breakpoint-mobile) {
         width: auto;
-        height: 55px;
       }
     }
   }

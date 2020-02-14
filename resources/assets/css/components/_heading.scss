@@ -97,10 +97,23 @@
         height: 37px;
       }
     }
+
+    .heading-aqua-labo {
+      .heading-subtext {
+        height: 48px;
+      }
+    }
+
+    .heading-mammal-labo {
+      .heading-subtext {
+        height: 55px;
+      }
+    }
   }
 
   @include max-screen($breakpoint-mobile) {
-    .subpage-section-family-walk {
+    .subpage-section-family-walk,
+    .subpage-section-aqua-labo {
       margin-top: 150px;
     }
   }

@@ -22,11 +22,19 @@
   </div>
 
   <div class="subpage-inner">
-    <div class="l-section-title">
+    <div class="l-section-title u-show-pc">
       <%- include('/partials/heading', {
         modifier: 'heading-main heading-main-subpage',
         subtext: mix('/assets/images/hellowoods/research-color-title.png'),
-        altSubtext: 'walk'
+        altSubtext: 'lab'
+      }); -%>
+    </div>
+
+    <div class="l-section-title u-show-sp">
+      <%- include('/partials/heading', {
+        modifier: 'heading-main heading-main-subpage',
+        subtext: mix('/assets/images/hellowoods/lab-color-title.png'),
+        altSubtext: 'lab'
       }); -%>
     </div>
 
@@ -50,12 +58,23 @@
 
   <section class="subpage-section subpage-section-aqua-labo">
     <div class="subpage-inner">
-      <div class="l-section-title">
+      <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-labo',
+          modifier: 'heading-gradient-tobottom heading-labo heading-aqua-labo',
           text: 'Aquatic Labo',
           alt: '',
           subtextvg: 'research-aquatic-title',
+          altSubtextvg: 'Research Aquatic',
+          altSubtext: ''
+        }); -%>
+      </div>
+
+      <div class="l-section-title u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-labo heading-aqua-labo',
+          text: 'Aquatic Labo',
+          alt: '',
+          subtextvg: 'lab-aquarion-title-sp',
           altSubtextvg: 'Research Aquatic',
           altSubtext: ''
         }); -%>
@@ -175,12 +194,23 @@
 
   <section class="subpage-section subpage-section-mammal-labo">
     <div class="subpage-inner">
-      <div class="l-section-title">
+      <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-labo',
+          modifier: 'heading-gradient-tobottom heading-labo heading-mammal-labo',
           text: 'Mammalian Labo',
           alt: '',
           subtextvg: 'research-mammalian-title',
+          altSubtext: '',
+          altSubtextvg: 'Rsearch Mammalian Labo'
+        }); -%>
+      </div>
+
+      <div class="l-section-title u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-labo heading-mammal-labo',
+          text: 'Mammalian Labo',
+          alt: '',
+          subtextvg: 'lab-mammal-title-sp',
           altSubtext: '',
           altSubtextvg: 'Rsearch Mammalian Labo'
         }); -%>

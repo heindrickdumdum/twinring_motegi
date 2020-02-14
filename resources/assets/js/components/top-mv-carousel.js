@@ -19,6 +19,6 @@ export default function topMvCarousel() {
 
       slides[currentIndex].classList.add('is-active');
 
-    }, 4500);
-  }, 3500);
+    }, 4200);
+  }, 4200);
 }

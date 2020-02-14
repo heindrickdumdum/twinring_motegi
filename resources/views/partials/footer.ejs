@@ -104,10 +104,15 @@
     <script src="<%= mix('/assets/js/anchor.js') %>" async></script>
   <% } %>
 
+  <% if(subpageId == 'subpage-carbike') { %>
+    <script src="<%= mix('/assets/js/carbike.js') %>" async></script>
+  <% } %>
+
   <% if(pages.includes(pageId)) { %>
   <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
   <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
   <% } %>
+
 
 </body>
 </html>

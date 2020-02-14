@@ -23,6 +23,16 @@
   }
 }
 
+.mv-top {
+  @include max-screen($breakpoint-mobile) {
+    height: 440px;
+  }
+  &:after {
+    @include max-screen($breakpoint-mobile) {
+      bottom: -37px;
+    }
+  }
+}
 
 .mv-container {
   position: relative;
@@ -32,6 +42,36 @@
 .mv-list,
 .mv-buttons-list {
   list-style: none;
+}
+
+.mv-image {
+  width: 100%;
+  height: 607px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include max-screen($breakpoint-mobile) {
+    height: 378px;
+  }
+
+  .mv-subpage & {
+    max-height: 607px;
+    height: 0;
+    overflow-y: hidden;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 607px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 76%;
+    }
+
+    &::after {
+      bottom: -50px;
+    }
+  }
 }
 
 .mv-list-top {
@@ -62,34 +102,10 @@
   &.is-show {
     opacity: 1;
   }
-}
 
-.mv-image {
-  width: 100%;
-  height: 607px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @include max-screen($breakpoint-mobile) {
-    height: 378px;
-  }
-
-  .mv-subpage & {
-    max-height: 607px;
-    height: 0;
-    overflow-y: hidden;
-
-    @include min-screen($breakpoint-mobile + 1) {
-      height: 607px;
-    }
-
+  .mv-image {
     @include max-screen($breakpoint-mobile) {
-      padding-bottom: 76%;
-    }
-
-    &::after {
-      bottom: -50px;
+      height: 440px;
     }
   }
 }

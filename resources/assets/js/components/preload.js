@@ -17,10 +17,13 @@ export default function preload() {
     }, 500);
 
     setTimeout(() => {
-      preloadWrapper.classList.add('is-exit');
       wrap.classList.add('is-exit');
+    }, 1500);
+
+    setTimeout(() => {
+      preloadWrapper.classList.add('is-exit');
       scrollAble();
-    }, 4000);
+    }, 2500);
 
     setTimeout(() => {
       preloadWrapper.classList.remove('is-entrance');
@@ -28,6 +31,6 @@ export default function preload() {
       preloadWrapper.classList.add(CONST.IS_HIDE);
       wrap.classList.remove('is-entrance');
       wrap.classList.remove('is-exit');
-    }, 12000);
+    }, 4000);
   });
 }

@@ -99,10 +99,18 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-howto heading-howto-acrox',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-acrox u-show-pc',
           text: 'How to Enjoy',
           alt: '',
-          subtextvg: 'acrox-point-title',
+          subtextvg: 'acrox-enjoy-point-title',
+          altSubtext: '',
+        }) %>
+
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-acrox u-show-sp',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'acrox-enjoy-point-title-sp',
           altSubtext: '',
         }) %>
       </div>
@@ -184,16 +192,28 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            modifier: 'heading-banner-more',
+            modifier: 'heading-banner-more heading-banner-more-acrox u-show-pc',
             imgPath: mix('/assets/images/acro-x/acrox-enjoy-more-title.png'),
             alt: 'アクロエックスをもっと楽しむ',
             altSubtext: ''
           }) %>
 
+          <%- include('/partials/heading', {
+            modifier: 'heading-banner-more heading-banner-more-acrox u-show-sp',
+            imgPath: mix('/assets/images/acro-x/acrox-enjoy-more-title -sp.png'),
+            alt: 'アクロエックスをもっと楽しむ',
+            altSubtext: ''
+          }) %>
+
           <div class="call-to-action-description">
-            <p class="call-to-action-description-text">
+            <p class="call-to-action-description-text u-show-pc">
               アクロエックスのこだわりポイントや、知っているともっ<br>
               と楽しくなる情報を配信中しています。
+            </p>
+
+            <p class="call-to-action-description-text u-show-sp">
+              アクロエックスのこだわりポイントや、<br/>知っているともっ
+              と<br/>楽しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">

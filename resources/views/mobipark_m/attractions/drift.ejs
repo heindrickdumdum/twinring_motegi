@@ -97,10 +97,17 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-howto-drift',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-drift u-show-pc',
           text: 'How to Enjoy',
           alt: '',
           subtextvg: 'drift-enjoy-point-title',
+          altSubtext: '',
+        }) %>
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-drift u-show-sp',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'drift-enjoy-point-title-sp',
           altSubtext: '',
         }) %>
       </div>
@@ -163,8 +170,11 @@
           </div>
           <div class="media-right">
             <h4 class="media-title media-title-nohighlight"><span>家族みんなでレース対決！</span></h4>
-            <p class="media-desc">
+            <p class="media-desc u-show-pc">
               大きなマシンに乗ってみんなでレース対決。<br />家族のナンバー１を目指して思いっきり走ろう！
+            </p>
+            <p class="media-desc u-show-sp">
+              大きなマシンに乗ってみんなでレース対決。家族のナンバー１を目指して思いっきり走ろう！
             </p>
 
 
@@ -188,8 +198,11 @@
             altSubtext: ''
           }) %>
           <div class="call-to-action-description">
-            <p class="call-to-action-description-text">
+            <p class="call-to-action-description-text u-show-pc">
               ドリフトSのこだわりポイントや、知っているともっと楽<br />しくなる情報を配信中しています。
+            </p>
+            <p class="call-to-action-description-text u-show-sp">
+              ドリフトSのこだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action">

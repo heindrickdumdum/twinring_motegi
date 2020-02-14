@@ -97,3 +97,22 @@
     }
   }
 }
+
+
+.slider-carbike {
+  .slider-carbike-item {
+    width: 245px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      width: calc((100% - 100px) / 3);
+    }
+
+    &:not(:last-child) {
+      margin-right: 25px;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-right: 50px;
+      }
+    }
+  }
+}

@@ -244,6 +244,10 @@
 
 //modifier for SP
 @include max-screen($breakpoint-mobile) {
+  .map {
+    margin-bottom: 90px;
+  }
+
   .map-img {
     margin: 0 -160px;
   }

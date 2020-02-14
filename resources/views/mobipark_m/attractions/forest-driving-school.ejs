@@ -24,11 +24,12 @@
   </div>
 
   <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-forest-driving heading-main-subpage">
+    <div class="heading-wrap heading-main heading-main-forest-driving">
       <h2 class="heading">
         <span class="u-title-hidden">Forest driving school</span>
         <span class="heading-texts">
-          <img src="<%= mix('/assets/images/forest-driving/forest-driving-title.png') %>" alt="forest-driving">
+          <img class="u-show-pc" src="<%= mix('/assets/images/forest-driving/forest-driving-title.png') %>" alt="forest-driving">
+          <img class="u-show-sp" src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
         </span>
       </h2>
     </div>
@@ -99,10 +100,19 @@
     <div class="subpage-section-howto-inner">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-howto heading-howto-forest-driving',
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-forest-driving u-show-pc',
           text: 'How to Enjoy',
           alt: '',
-          subtextvg: 'forest-enjoy-point',
+          subtextvg: 'forest-enjoy-point-title',
+          altSubtext: '',
+          heading_level: 3
+        }) %>
+
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-forest-driving u-show-sp',
+          text: 'How to Enjoy',
+          alt: '',
+          subtextvg: 'forest-enjoy-point-title-sp',
           altSubtext: '',
           heading_level: 3
         }) %>
@@ -187,15 +197,26 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner call-to-action-inner-subpage">
           <%- include('/partials/heading', {
-            modifier: 'heading-banner-more heading-banner-more-forestdriving',
+            modifier: 'heading-banner-more heading-banner-more-forestdriving u-show-pc',
             imgPath: mix('/assets/images/forest-driving/forest-enjoy-more.png'),
             alt: '森の教習所をもっと楽しむ',
             altSubtext: '',
             subtextvg: ''
           }) %>
+
+          <%- include('/partials/heading', {
+            modifier: 'heading-banner-more heading-banner-more-forestdriving u-show-sp',
+            imgPath: mix('/assets/images/forest-driving/sp-forest-enjoy-more.png'),
+            alt: '森の教習所をもっと楽しむ',
+            altSubtext: '',
+            subtextvg: ''
+          }) %>
           <div class="call-to-action-description">
-            <p class="call-to-action-description-text">
+            <p class="call-to-action-description-text u-show-pc">
               森の教習所のこだわりポイントや、<br>  知っているともっと楽しくなる情報を配信中しています。
+            </p>
+            <p class="call-to-action-description-text u-show-sp">
+              森の教習所のこだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
             </p>
           </div>
           <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">

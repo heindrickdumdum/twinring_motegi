@@ -38,6 +38,11 @@ mix
   )
 
   .js(
+    `${srcRelativePath}/assets/js/carbike.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
     `${srcRelativePath}/assets/js/common-slider.js`,
     `${distRelativePath}/assets/js`,
   )

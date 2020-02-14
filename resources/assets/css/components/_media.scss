@@ -110,7 +110,6 @@
 
   @include max-screen($breakpoint-mobile) {
     margin-top: 15px;
-    font-size: 26px;
   }
 
   span {
@@ -147,10 +146,6 @@
 
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 15px;
-  }
-   
-  @include max-screen($breakpoint-mobile) {
-    font-size: 24px;
   }
 
   .media-subpage & {

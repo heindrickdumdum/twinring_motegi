@@ -448,6 +448,10 @@
     height: 247px;
     bottom: -37px;
     background-image: url(../images/mobipark/mobipark-logo.png);
+
+    @include max-screen($breakpoint-mobile) {
+      display: none;
+    }
   }
 }
 // end modifier mobipark
@@ -624,7 +628,11 @@
   }
 
   &::after {
-    bottom: -30px;
+    bottom: -50px;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -25px;
+    }
   }
 
   .mv-heading-subpage {
@@ -652,10 +660,4 @@
 .mv-image-subpage {
   background-position-y: 25%;
 }
-
 //modifier for SP
-@include max-screen($breakpoint-mobile) {
-  .mv-today-mobipark {
-    display: none;
-  }
-}

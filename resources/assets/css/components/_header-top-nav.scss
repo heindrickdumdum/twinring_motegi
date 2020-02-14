@@ -1,6 +1,10 @@
 .header-top-nav {
   list-style: none;
   margin-top: 23px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 36px;
+  }
 }
 
 .header-top-nav-sub {
@@ -18,9 +22,17 @@
   z-index: -1;
   transition: opacity $duration $ease-in-out;
 
-  &.is-visible {
-    opacity: 1;
-    z-index: $z-max;
+  @include max-screen($breakpoint-mobile) {
+    width: calc(100vw - 45px);
+    left: auto;
+    right: 0;
+  }
+
+  &.is-active {
+    @include max-screen($breakpoint-mobile) {
+      opacity: 1;
+      z-index: $z-max;
+    }
   }
 
   &::before {
@@ -34,16 +46,29 @@
     border-top: 1px solid $color-green;
     border-right: 1px solid $color-green;
     transform: rotate(-45deg);
+
+    @include max-screen($breakpoint-mobile) {
+      left: auto;
+      right: 50px;
+    }
   }
 
   ul {
     display: block;
     padding: 0 20px;
 
+    @include max-screen($breakpoint-mobile) {
+      padding: 0 12px;
+    }
+
     &:last-child {
       padding-left: 30px;
       border-left: 1px solid #eaeaea;
       width: calc(100% - 150px);
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 0 12px;
+      }
     }
   }
 }
@@ -55,15 +80,21 @@
   padding-bottom: 16px;
   position: relative;
 
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 0 13px;
+    width: calc( 97% / 2);
+  }
+
   &:last-child {
     margin-right: 0;
   }
 
-
   &:hover {
-    .header-top-nav-sub {
-      opacity: 1;
-      z-index: $z-max;
+    @include min-screen($breakpoint-mobile + 1) {
+      .header-top-nav-sub {
+        opacity: 1;
+        z-index: $z-max;
+      }
     }
   }
 }
@@ -76,15 +107,23 @@
   transition: color $duration $ease-in-out;
 
   &:hover {
-    @include query($breakpoint-mobile, min) {
+    @include min-screen($breakpoint-mobile + 1) {
       color: $color-green;
     }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    letter-spacing: 0.1em;
   }
 }
 
 .header-top-nav-sub-item {
   display: block;
   margin-bottom: 21px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 7px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -102,6 +141,10 @@
   position: relative;
   transition: color $duration $ease-in-out;
 
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -113,7 +156,7 @@
   }
 
   &:hover {
-    @include query($breakpoint-mobile, min) {
+    @include min-screen($breakpoint-mobile + 1) {
       color: $color-green;
     }
   }

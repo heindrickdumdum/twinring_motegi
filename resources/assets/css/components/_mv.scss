@@ -104,6 +104,10 @@
   right: 0;
   top: 0;
   z-index: $z-max;
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .mv-buttons-list {
@@ -683,4 +687,3 @@
 .mv-image-subpage {
   background-position-y: 25%;
 }
-//modifier for SP

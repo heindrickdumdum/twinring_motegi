@@ -62,7 +62,7 @@
   color: $color-primary;
 
   &:hover {
-    @include query($breakpoint-mobile, min) {
+    @include min-screen($breakpoint-mobile + 1) {
       color: $color-green;
     }
   }
@@ -77,12 +77,41 @@
 .header-bottom-list {
   list-style: none;
   display: flex;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+  }
 }
 
 .header-bottom-icon {
   display: block;
   margin-left: auto;
   margin-right: 32px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-right: 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.header-bottom-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  color: $color-mineshaft;
+  line-height: 1.45;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 20px 20px 18px 43px;
+    font-size: 14px;
+    letter-spacing: 0.065em;
+    position: relative;
+  }
 }
 
 .header-bottom-item {
@@ -92,8 +121,20 @@
   padding-left: 27px;
   border-right: 1px solid rgba($color-primary, .12);
 
+  @include max-screen($breakpoint-mobile) {
+    padding-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba($color-primary, .12);
+  }
+
   &:first-child {
     padding-left: 0;
+
+    @include max-screen($breakpoint-mobile) {
+      .header-bottom-link {
+        padding-left: 0;
+      }
+    }
   }
 
   &:last-child {
@@ -108,6 +149,11 @@
     width: 36px;
     height: 37px;
     fill: $color-light-green;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 23px;
+      height: 26px;
+    }
   }
 
   &.header-bottom-item-activity {
@@ -115,38 +161,48 @@
 
     svg {
       fill: #0ba46d;
+
+      @include max-screen($breakpoint-mobile) {
+        fill: $color-green;
+      }
     }
   }
   &.header-bottom-item-motorsports {
     svg {
       fill: #3db898;
+
+      @include max-screen($breakpoint-mobile) {
+        fill: $color-green;
+      }
     }
   }
   &.header-bottom-item-camp {
     svg {
       fill: #67c8bd;
+
+      @include max-screen($breakpoint-mobile) {
+        fill: $color-green;
+      }
     }
   }
   &.header-bottom-item-restaurant {
     svg {
       fill: #54c3c2;
+
+      @include max-screen($breakpoint-mobile) {
+        fill: $color-green;
+      }
     }
   }
   &.header-bottom-item-shop {
     svg {
       fill: #68cbd4;
+
+      @include max-screen($breakpoint-mobile) {
+        fill: $color-green;
+      }
     }
   }
-}
-
-.header-bottom-link {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  font-size: 15px;
-  font-weight: bold;
-  color: $color-mineshaft;
-  line-height: 1.45;
 }
 
 .header-lang {
@@ -161,6 +217,14 @@
   opacity: 0;
   z-index: -1;
   transition: opacity $duration $ease-in-out;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 5px;
+    position: relative;
+    top: 0;
+    opacity: 1;
+    z-index: $z-min;
+  }
 
   &.is-active {
     opacity: 1;
@@ -180,8 +244,21 @@
     border-right: 1px solid rgba($color-mineshaft, .2);
     color: $color-mineshaft;
 
+    @include max-screen($breakpoint-mobile) {
+      padding: 3px;
+      font-size: 12px;
+      line-height: 0.6;
+      letter-spacing: 0.08em;
+    }
+
     &.is-active {
       color: rgba($color-mineshaft, .2);
+    }
+  }
+
+  &:nth-of-type(2) {
+    @include max-screen($breakpoint-mobile) {
+      flex-grow: 1.1;
     }
   }
 

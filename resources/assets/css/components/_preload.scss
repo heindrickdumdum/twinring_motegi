@@ -9,12 +9,12 @@
 
 .preload-text {
   position: absolute;
-  top: 48%;
+  top: 47%;
   transform: translate(-50%);
   left: 50%;
   z-index: 1;
-  transition: top 2s ease-in-out, opacity 2s ease-in-out;
-  transition-delay: 700ms;
+  transition: top 1.5s ease-in-out, opacity 1s ease-in-out;
+  transition-delay: 400ms;
   opacity: 0;
   width: 450px;
 }
@@ -27,7 +27,7 @@
   z-index: 2;
   text-align: center;
   opacity: 1;
-  transition: opacity 2s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
 
   &:before {
     content: '';
@@ -39,7 +39,7 @@
     opacity: 1;
     left: 0;
     top: 0;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
   }
 
   &.is-entrance {
@@ -58,7 +58,7 @@
 
     .preload-text {
       top: 42%;
-      transition: top 2s ease-in-out;
+      transition: top 1.5s ease-in-out;
     }
   }
 

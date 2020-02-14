@@ -37,7 +37,23 @@
 .mv-list-top {
   opacity: 0;
   transition: opacity 1s ease-in;
-  transition-delay: 6s;
+  transition-delay: 4s;
+  height: 607px;
+  position: relative;
+
+  .mv-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
 
   &.is-show {
     opacity: 1;

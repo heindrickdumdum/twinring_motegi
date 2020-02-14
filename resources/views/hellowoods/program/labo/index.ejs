@@ -1,0 +1,335 @@
+<%
+  var title = 'Twin Ring Motegi | 森の研究室'
+  pageId = 'hellowoods';
+%>
+
+<%- include('/partials/head', { title }) -%>
+
+<div class="subpage subpage-tsubasa">
+  <div class="mv mv-subpage">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/labo-mv.jpg') %>);"></div>
+        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/labo-mv.jpg') %>);"></div>
+      </li>
+    </ul>
+
+    <h1 class="mv-heading mv-heading-subpage">
+      <span class="mv-heading-text">
+        森の研究室
+      </span>
+    </h1>
+  </div>
+
+  <div class="subpage-inner">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-main headin-main-subpage',
+        subtext: mix('/assets/images/hellowoods/research-color-title.png'),
+        altSubtext: 'walk'
+      }); -%>
+    </div>
+
+    <div class="column-link l-column-link column-link-labo">
+      <ul class="link-container">
+        <li class="link-item">
+          <a href="#">
+            <img src="<%- mix('/assets/images/hellowoods/labo-aqua.png') -%>" alt="tekuteku">
+            <span>水生生物研究室</span>
+          </a>
+        </li>
+        <li class="link-item">
+          <a href="#">
+            <img src="<%- mix('/assets/images/hellowoods/labo-mammal.png') -%>" alt="guide">
+            <span>哺乳類研究室</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="subpage-section subpage-section-aqua-labo">
+    <div class="subpage-inner">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-labo',
+          text: 'Aquatic Labo',
+          alt: '',
+          subtextvg: 'research-aquatic-title',
+          altSubtextvg: 'Research Aquatic',
+          altSubtext: ''
+        }); -%>
+      </div>
+
+      <div class="subpage-banner">
+        <div class="subpage-banner-inner">
+          <img src="<%- mix('/assets/images/hellowoods/labo-aqua-banner.jpg') -%>" alt="Aquatic Labo">
+        </div>
+      </div>
+
+      <h3 class="subpage-title">
+        <span>アクティビティ情報</span>
+      </h3>
+
+      <p>
+        ゲンゴロウ・タガメ・ヤゴ・カワニナなど、ハローウッズの水の中に住む生きものたちを紹介！季節ごとに変化する生きものの様子を間近で観察してみよう！
+      </p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">場所</th>
+            <td class="table-col">
+              ハローウッズの森内
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">開催日</th>
+            <td class="table-col">
+              毎日開催
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">所要時間</th>
+            <td class="table-col">
+              自由にお楽しみいただけます。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">雨天の開催</th>
+            <td class="table-col">
+              雨天でも営業いたしております。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象者</th>
+            <td class="table-col">
+              全年齢対象 <br>
+              ※小学生以下は保護者（成人）の同伴が必要です
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">料金</th>
+            <td class="table-col">
+              無料
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">予約受付</th>
+            <td class="table-col">
+              予約や受付は必要ございません。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="media-labo">
+        <h3 class="subpage-title">
+          <span>おすすめ展示物紹介</span>
+        </h3>
+
+        <div class="media media-subpage u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/hellowoods/labo-img.png') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              ゲンゴロウ
+            </h4>
+            <p class="media-desc">
+              ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。
+            </p>
+          </div>
+        </div>
+
+        <div class="media media-subpage u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/hellowoods/labo-img.png') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              タガメ
+            </h4>
+            <p class="media-desc">
+              ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="subpage-section subpage-section-mammal-labo">
+    <div class="subpage-inner">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-labo',
+          text: 'Mammalian Labo',
+          alt: '',
+          subtextvg: 'research-mammalian-title',
+          altSubtext: '',
+          altSubtextvg: 'Rsearch Mammalian Labo'
+        }); -%>
+      </div>
+
+      <div class="subpage-banner">
+        <div class="subpage-banner-inner">
+          <img src="<%- mix('/assets/images/hellowoods/labo-mammal-banner.jpg') -%>" alt="Aquatic Labo">
+        </div>
+      </div>
+
+      <h3 class="subpage-title">
+        <span>アクティビティ情報</span>
+      </h3>
+
+      <p>
+        ムササビや野ネズミなどの森の動物たちの展示がいっぱい！
+        本物の毛皮やホネを観察しているうちに、生きものの暮らしがだんだんと見えてくるぞ！ 
+      </p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">場所</th>
+            <td class="table-col">
+              ハローウッズの森内
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">開催日</th>
+            <td class="table-col">
+              毎日開催
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">所要時間</th>
+            <td class="table-col">
+              自由にお楽しみいただけます。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">雨天の開催</th>
+            <td class="table-col">
+              雨天でも営業いたしております。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象者</th>
+            <td class="table-col">
+              全年齢対象 <br>
+              ※小学生以下は保護者（成人）の同伴が必要です
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">料金</th>
+            <td class="table-col">
+              無料
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">予約受付</th>
+            <td class="table-col">
+              予約や受付は必要ございません。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="media-labo">
+        <h3 class="subpage-title">
+          <span>おすすめ展示物紹介</span>
+        </h3>
+
+        <div class="media media-subpage u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/hellowoods/labo-img.png') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              ムササビ
+            </h4>
+            <p class="media-desc">
+              ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。
+            </p>
+          </div>
+        </div>
+
+        <div class="media media-subpage u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/hellowoods/labo-img.png') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              アカネズミ
+            </h4>
+            <p class="media-desc">
+              ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。
+            </p>
+          </div>
+        </div>
+
+        <div class="media media-subpage u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/hellowoods/labo-img.png') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              森の生き物の本物の「毛皮やホネ」
+            </h4>
+            <p class="media-desc">
+              ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。ここに展示物の紹介文が入ります。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="subpage-button subpage-button-family-walk">
+        <a class="subpage-button-link" href="#">
+          <span>ハローウッズの森で出会える生きものたち　></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- recommendation module -->
+  <%- include('/partials/recommendation') -%>
+
+  <!-- pick up module -->
+  <%- include('/partials/pickup') -%>
+
+  <!-- END BOTTOM -->
+</div>
+
+<%- include('/partials/footer', {pageId}) -%>

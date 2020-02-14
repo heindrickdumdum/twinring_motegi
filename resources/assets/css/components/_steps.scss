@@ -1,74 +1,27 @@
+.step-word-no {
+  font-family: $font-holland;
+  color: #00a040;
+
+  &.craft {
+    margin-top: -20px;
+  }
+
+  .step-word {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .step-no {
+    font-size: 50px;
+  }
+}
+
 .step-list {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-}
-
-.step-image {
-  display: block;
-  margin-bottom: 30px;
-  padding: 5px 0;
-
-  position: relative;
-  width: 100%;
-
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    background-image: url("../images/step-bg.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: calc(100% + 25px);
-    height: 110%;
-    left: -15px;
-    top: -0px;
-  }
-
-  &.step-goal-bg {
-    background-image: url("../images/tsubasa/goal-bg.png");
-  }
-
-  img {
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    border-radius: 10px;
-    overflow: hidden;
-
-    @include max-screen($breakpoint-mobile) {
-      width: 100%;
-    }
-  }
-
-  @include max-screen($breakpoint-mobile) {
-    padding: 5px 14px;
-  }
-}
-
-.step-no {
-  margin-bottom: 18px;
-}
-
-.step-title {
-  font-size: 21px;
-  font-weight: bold;
-  color: $color-green;
-}
-
-.step-subtitle {
-  font-weight: bold;
-}
-
-.step-desc {
-  max-width: 300px;
-  margin: auto;
-}
-
-.sub-image {
-  margin-top: 30px;
 }
 
 .step-list-media-bottom {

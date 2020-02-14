@@ -45,6 +45,18 @@
     width: 100%;
     height: 100%;
   }
+
+  .heading-wrap-video-musasabi & {
+    height: 37px;
+    width: 731px;
+  }
+}
+
+//modifier hellowoods family walk
+.heading-walk {
+  .heading-subtext {
+    display: block;
+  }
 }
 
 // modifier challenge
@@ -55,12 +67,6 @@
   }
 }
 
-//modifier subpage cta heading text
-.heading-net-subpage {
-  .heading-text {
-    font-size: 30px;
-  }
-}
 
 //modifier mobipark heading
 .heading-mobipark {
@@ -71,27 +77,6 @@
   .heading-subtext {
     max-width: 161px;
     width: 100%;
-  }
-}
-
-.heading-main-subpage {
-  .heading {
-    max-width: 100% !important;
-    text-align: center;
-
-    span {
-      display: inline-block;
-    }
-  }
-}
-
-//modifier forest driving cta heading image
-.heading-net-forest-driving {
-  img {
-    max-width: 419px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -111,6 +96,23 @@
   .heading-subtext {
     position: relative;
     margin-top: 0;
+  }
+
+  &.heading-banner-more-forestdriving {
+    .heading-subtext {
+      max-width: 419px;
+      width: 100%;
+      left: 10px;
+    }
+
+  }
+
+  &.heading-banner-more-deb-den {
+    .heading-subtext {
+      max-width: 528px;
+      width: 100%;
+      left: 10px;
+    }
   }
 
   &.heading-banner-more-challenge {
@@ -188,18 +190,30 @@
 
   &.heading-main-forest-driving {
     img {
-      max-width: 651px;
+      max-width: 628px;
       width: 100%;
     }
   }
 
+  &.heading-main-challenge {
+    img {
+      max-width: 274px;
+      width: 100%;
 
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 651px;
+      }
+    }
+  }
 
 }
 
 //how to enjoy heading
 .heading-howto {
-  margin-bottom: 35px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 35px;
+  }
 
   &.heading-howto-bunbun {
     .heading-subtext {
@@ -292,6 +306,12 @@
     .heading-subtext {
       max-width: 669px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 256px;
+        height: 56px;
+        margin-top: 15px;
+      }
     }
   }
 }
@@ -411,6 +431,9 @@
     svg {
       width: 520px;
       height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
     }
   }
 
@@ -419,6 +442,9 @@
     svg {
       width: 520px;
       height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
     }
   }
 
@@ -427,6 +453,9 @@
     svg {
       width: 520px;
       height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
     }
   }
 
@@ -435,6 +464,9 @@
     svg {
       width: 513px;
       height: 34px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
     }
   }
 
@@ -442,16 +474,6 @@
     .heading-subtext {
       margin-top: 10px;
       max-width: 489px;
-      width: 100%;
-    }
-  }
-
-  &.heading-recommendation {
-    margin-bottom: 37px;
-
-    .heading-subtext {
-      margin-top: 10px;
-      max-width: 435px;
       width: 100%;
     }
   }
@@ -464,13 +486,15 @@
 
     .heading-subtext {
       margin-top: 10px;
-      max-width: 367px;
       width: 100%;
     }
 
     svg {
-      width: 389px;
+      max-width: 389px;
       height: 34px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
     }
 
   }
@@ -486,36 +510,53 @@
     }
   }
 
+  &.heading-carbike {
+    text-align: center;
+    margin-bottom: 27px;
 
-  &.heading-car-attraction {
-    margin-bottom: 85px;
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 85px;
+    }
 
     .heading-subtext {
-      max-width: 405px;
-      width: 100%;
       height: 40px;
     }
   }
 
-  &.heading-bike-attraction {
-    margin-bottom: 85px;
-
-    .heading-subtext {
-      max-width: 497px;
+  &.heading-carbike-car {
+    svg {
+      max-width: 259px;
       width: 100%;
-      height: 40px;
+
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 405px;
+      }
     }
   }
 
-  &.heading-workshop-attraction {
-    margin-bottom: 85px;
-
-    .heading-subtext {
-      max-width: 407px;
+  &.heading-carbike-bike {
+    svg {
+      max-width: 318px;
       width: 100%;
-      height: 40px;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 497px;
+      }
     }
   }
+
+  &.heading-carbike-workshop {
+    svg {
+      max-width: 260px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 407px;
+      }
+    }
+  }
+
 
   &.heading-dokidoki-forest {
     margin-bottom: 55px;
@@ -548,11 +589,20 @@
   }
 
   &.heading-course-challenge {
-    margin-bottom: 58px;
+    margin-bottom: 35px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 58px;
+    }
 
     .heading-subtext {
-      max-width: 201px;
+      max-width: 139px;
+      margin: 0 auto;
       width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 201px;
+      }
     }
   }
 
@@ -562,7 +612,14 @@
       max-width: 959px;
       margin-top: 0;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        max-width: 335px;
+      }
     }
+
+
   }
 }
 
@@ -588,8 +645,9 @@
 .map {
   .heading-wrap {
     .heading-subtext {
-      max-width: 319px;
-      margin-top: 0px;
+      // max-width: 319px;
+      // margin-top: 0px;
+      display: block;
     }
   }
 }
@@ -607,6 +665,10 @@
       font-size: 39px;
       height: auto;
       max-width: none;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 20px;
+      }
     }
 
     svg {
@@ -617,7 +679,8 @@
 
   .heading-title-adventure {
     .heading-subtext {
-      max-width: 443px;
+      // max-width: 443px;
+      display: block;
     }
   }
 }
@@ -766,6 +829,35 @@
     @include max-screen($breakpoint-mobile) {
       font-size: 46px;
       color: $color-white;
+    }
+  }
+}
+
+//modifier for SP
+@include max-screen($breakpoint-mobile) {
+  .subpage-mobipark {
+    .heading-text {
+      font-size: 45px;
+    }
+
+    .heading-subtext {
+      min-height: 47px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .heading-info {
+      .heading-subtext {
+        min-height: 47px;
+      }
+    }
+
+    .heading-kids-carbike-attraction {
+      .heading-subtext {
+        min-height: 111px;
+      }
     }
   }
 }

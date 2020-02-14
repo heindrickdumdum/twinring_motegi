@@ -1,6 +1,11 @@
 
 .adventure-container {
   margin-top: 64px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }
 
 .adventure-list {
@@ -16,6 +21,10 @@
   height: 460px;
   position: relative;
   background-size: cover;
+
+  @include max-screen ($breakpoint-mobile) {
+    height: 316px;
+  }
 }
 
 .adventure-image-logo {
@@ -26,6 +35,18 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: $z-min + 1;
+
+  @include max-screen($breakpoint-mobile) {
+    max-width: 200px;
+    bottom: -95px;
+  }
+
+  &.hellowoods {
+    bottom: -100px;
+    @include max-screen($breakpoint-mobile) {
+      bottom: -60px;
+    }
+  }
 }
 
 .adventure-content-copy {

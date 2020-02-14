@@ -9,28 +9,25 @@
 <% pageId = 'mobipark-subpage'; %>
 
 <div class="subpage">
-  <div class="mv mv-subpage mv-wild-racer">
+  <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/wild-racer/mv-img.png') %>);"></div>
-
-        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/wild-racer/mv-img.png') %>);"></div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/wild-racer/mv-img.jpg') %>);"></div>
       </li>
     </ul>
 
-    <div class="l-container mv-container">
-      <h2 class="mv-heading">
-        <span class="mv-heading-text">
-          <!--おさんぽでんでん-->
-        </span>
-      </h2>
-    </div>
+    <h1 class="mv-heading mv-heading-subpage">
+      <span class="mv-heading-text">
+        おさんぽでんでん
+      </span>
+    </h1>
   </div>
 
   <div class="subpage-inner">
     <div class="l-section-title">
       <div class="heading-wrap heading-main heading-main-wild-racer heading-main-subpage">
         <h2 class="heading">
+          <span class="u-title-hidden">Wild Racer</span>
           <span class="heading-text u-show-pc">
             <img src="<%= mix('/assets/images/wild-racer/wildracer-title.png') %>" alt="forest-driving">
           </span>
@@ -184,8 +181,8 @@
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <%- include('/partials/heading', {
-            modifier: 'headin-net-subpage heading-banner-more heading-net-wild-racer',
-            text: '<img src='+ mix('/assets/images/wild-racer/wildracer-enjoy-more-title.png') +' alt="ワイルドレーサーをもっと楽しむ">',
+            modifier: 'heading-banner-more heading-banner-more-wildracer',
+            imgPath: mix('/assets/images/wild-racer/wildracer-enjoy-more-title.png'),
             alt: 'ワイルドレーサーをもっと楽しむ',
             altSubtext: '',
             subtextvg: ''
@@ -198,7 +195,7 @@
           </div>
           <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
             <%- include('/partials/button', {
-              modifier: 'button-acro-x',
+              modifier: 'button-banner-more',
               text: 'もっと見る',
               link: '#'
             }) %>
@@ -228,10 +225,8 @@
     </div>
   </div>
 
-  <!-- recommendation module -->
   <%- include('/partials/recommendation') -%>
 
-  <!-- pick up module -->
   <%- include('/partials/pickup') -%>
 
   <!-- END BOTTOM -->

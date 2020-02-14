@@ -1,0 +1,216 @@
+<%
+  var title = 'Twin Ring Motegi'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+%>
+
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { title }) -%>
+
+<% pageId = 'mobipark-subpage'; %>
+
+<div class="subpage">
+  <div class="mv mv-subpage">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/bun-bun-scooter/mv-img.jpg') %>);"></div>
+      </li>
+    </ul>
+
+    <h1 class="mv-heading mv-heading-subpage">
+      <span class="mv-heading-text">
+        ぶんぶんスクーター
+      </span>
+    </h1>
+  </div>
+
+  <div class="subpage-inner">
+    <div class="heading-wrap heading-main heading-main-bunbun">
+      <h2 class="heading">
+        <span class="u-title-hidden">Bun bun scooter</span>
+        <span class="heading-texts">
+          <img src="<%= mix('/assets/images/bun-bun-scooter/bunbun-color-title.png') %>" alt="">
+        </span>
+      </h2>
+    </div>
+
+    <!-- YOUTUBE -->
+    <div class="subpage-banner">
+      <div class="subpage-banner-inner">
+        <img class="" src="<%= mix('https://via.placeholder.com/2042x946') %>" alt="">
+      </div>
+    </div>
+
+    <h3 class="subpage-title">
+      <span>アトラクション情報</span>
+    </h3>
+
+    <p>転倒しない自立式バイクで初めての運転操作にチャレンジ。かわいいみつばちと一緒に音楽を聞きながら<br />お散歩しよう。</p>
+
+    <table class="table">
+      <tbody>
+        <tr class="table-row">
+          <th class="table-head">場所</th>
+          <td class="table-col">モビパーク内</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">所要時間</th>
+          <td class="table-col">約5分
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">雨天の運行</th>
+          <td class="table-col">雨天でも営業いたしております。
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">対象者</th>
+          <td class="table-col">3歳以上
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">身長制限</th>
+          <td class="table-col">なし</td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">料金</th>
+          <td class="table-col">
+            モビパークパスポート対象<br>アトラクションチケット利用：500円
+          </td>
+        </tr>
+
+        <tr class="table-row">
+          <th class="table-head">ご利用にあたって</th>
+          <td class="table-col">
+
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <section class="subpage-section subpage-section-howto">
+    <div class="subpage-section-howto-inner">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-howto heading-howto-bunbun',
+          text: 'How to Enjoy',
+          alt: 'ぶんぶんスクーターを楽しむポイント',
+          subtextvg: 'bunbun-enjoy-point-title',
+          altSubtext: '',
+        }) %>
+      </div>
+
+      <div class="how-to-content">
+        <div class="media media-subpage media-subpage-bunbun u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title"><span>転倒しないスクーターで乗り物デビュー！</span></h4>
+            <p class="media-desc">
+              スクーターのように手でアクセルとブレーキを操作。転倒しない<br>から自転車に乗れない子どもでも安心して楽しめます。
+            </p>
+
+            <div class="media-bottom">
+              <div class="media-note">
+                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                <div class="media-note-text">
+                  乗り物デビューできタネ！
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="media media-subpage media-subpage-bunbun u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              <span>
+                みつばちに乗ってお花畑を散歩！
+              </span>
+            </h4>
+            <p class="media-desc">
+              みつばちにデザインされたスクーターでお花畑をぐるっと<br>
+              1周。写真スポットにぴったり！
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM -->
+
+  <div class="call-to-action">
+    <div class="l-container">
+      <div class="call-to-action-wrapper">
+        <div class="call-to-action-inner">
+          <%- include('/partials/heading', {
+            modifier: 'heading-banner-more heading-banner-more-bunbun',
+            imgPath: mix('/assets/images/bun-bun-scooter/bunbun-enjoy-more-title.png'),
+            alt: 'ぶんぶんスクーター',
+            altSubtext: '',
+          }) %>
+          <div class="call-to-action-description">
+            <p class="call-to-action-description-text">
+              ぶんぶんスクーターのこだわりポイントや、知っていると<br>
+              もっと楽しくなる情報を配信中しています。
+            </p>
+          </div>
+          <div class="l-button l-button-call-to-action">
+            <%- include('/partials/button', {
+              modifier: 'button-banner-more',
+              text: 'もっと見る',
+              link: '#'
+            }) %>
+          </div>
+          <span class="call-to-action-dot call-to-action-dot-1">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-2">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-3">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-4">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner-cta">
+    <div class="l-container">
+      <div class="banner-cta-bottom-inner">
+        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
+      </div>
+    </div>
+  </div>
+
+  <%- include('/partials/recommendation') -%>
+
+  <%- include('/partials/pickup') -%>
+
+  <!-- END BOTTOM -->
+</div>
+
+<%- include('/partials/footer', {pageId}) -%>

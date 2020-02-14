@@ -7,4 +7,11 @@
   padding-top: 155px;
   background-color: $color-white;
   position: relative;
+
+  @include max-screen ($breakpoint-mobile) {
+    max-width: 612px;
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+  } 
 }

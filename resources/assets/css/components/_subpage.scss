@@ -3,7 +3,11 @@
   position: relative;
   width: 100%;
   height: auto;
-  margin-bottom: 105px;
+  margin-bottom: 50px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 105px;
+  }
 
   > * {
     position: relative;
@@ -19,7 +23,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: calc(100% - 40px);
   }
 
   &::before {
@@ -77,6 +81,7 @@
 
   }
 }
+
 .subpage-youtube {
   width: 100%;
   margin-bottom: 40px;
@@ -84,12 +89,13 @@
 
 .subpage-banner {
   width: calc(100% + 40px);
-  // left: -20px;
+  left: -20px;
   position: relative;
   margin-bottom: 20px;
 
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 40px;
+    left: 0;
     width: 100%;
   }
 
@@ -97,12 +103,6 @@
     width: 100%;
   }
 
-  //modifier SP
-  @include max-screen($breakpoint-mobile) {
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    margin-right: -20px;
-  }
 }
 
 .subpage-section {
@@ -113,9 +113,13 @@
 .subpage-section-inner {
   position: relative;
   max-width: 1102px;
-  margin: 0 auto 120px;
+  margin: 0 auto 50px;
   padding: 0 42px;
   width: 100%;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin: 0 auto 120px;
+  }
 }
 
 .subpage-button {
@@ -145,10 +149,23 @@
 //modifier
 
 .subpage-section-howto {
-  margin-bottom: 103px;
+  margin-bottom: 30px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 103px;
+  }
 }
 
 .subpage-section-howto-inner {
+  max-width: 1070px;
+  margin: 0 auto;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 0 36px;
+  }
+}
+
+.subpage-section-video-inner {
   max-width: 1070px;
   margin: 0 auto;
 }
@@ -173,4 +190,38 @@
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 0 20px;
+}
+
+//modifier hellowoods family walk
+.subpage-button-family-walk {
+  margin-top: 50px;
+}
+
+//modifier hellowoods precuation
+.subpage-inner-precaution {
+  padding: 56px;
+  background-color: $color-green;
+  color: $color-white;
+
+  h4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: $font-hiragino;
+    line-height: 1.417;
+  }
+
+  ol {
+    font-size: 15px;
+    line-height: 2;
+    text-align: left;
+    letter-spacing: 0.16em;
+  }
+}
+
+.subpage-section-video {
+  margin-bottom: 158px;
+}
+
+.subpage-section-video-wrapper {
+  text-align: center;
 }

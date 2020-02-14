@@ -1,0 +1,45 @@
+.column-link {
+  .link-container {
+    display: flex;
+    justify-content: space-between;
+
+    .link-item {
+      a {
+        display: block;
+        text-align: center;
+        color: $color-black;
+        font-size: 17px;
+        font-family: $font-hiragino; 
+        position: relative;
+        
+        &:after {
+          width: 40px;
+          height: 14px;
+          content: url(/assets/images/hellowoods/caret-down.png);
+          position: absolute;
+          left: 50%;
+          bottom: -25px;
+          transform: translateX(-50%);
+          transition: all 0.3s ease;
+          pointer-events: none;
+        }
+
+        &:hover:after {
+          bottom: -35px;
+        }
+        
+        span {
+          display: block;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+//modifier labo
+.column-link-labo {
+  .link-container {
+    justify-content: space-evenly;
+  }
+}

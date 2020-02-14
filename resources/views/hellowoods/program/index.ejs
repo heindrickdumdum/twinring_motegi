@@ -1,0 +1,375 @@
+<%
+  var title = 'Twin Ring Motegi | 森の散策プログラム'
+  pageId = 'hellowoods';
+%>
+
+<%- include('/partials/head', { title }) -%>
+
+<div class="subpage subpage-tsubasa">
+  <div class="mv mv-subpage">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/walk-mv.jpg') %>);"></div>
+        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/walk-mv.jpg') %>);"></div>
+      </li>
+    </ul>
+
+    <h1 class="mv-heading mv-heading-subpage">
+      <span class="mv-heading-text">
+        森の散策プログラム
+      </span>
+    </h1>
+  </div>
+
+  <div class="subpage-inner">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-main headin-main-subpage',
+        subtext: mix('/assets/images/hellowoods/walk-color-title.png'),
+        altSubtext: 'walk'
+      }); -%>
+    </div>
+
+    <div class="column-link l-column-link">
+      <ul class="link-container">
+        <li class="link-item">
+          <a href="#">
+            <img src="<%- mix('/assets/images/hellowoods/walk-link-tekuteku.png') -%>" alt="tekuteku">
+            <span>TEKUTEKU</span>
+          </a>
+        </li>
+        <li class="link-item">
+          <a href="#">
+            <img src="<%- mix('/assets/images/hellowoods/walk-link-guide.png') -%>" alt="guide">
+            <span>どんぐりの森ガイドウォーク</span>
+          </a>
+        </li>
+        <li class="link-item">
+          <a href="#">
+            <img src="<%- mix('/assets/images/hellowoods/walk-link-free.png') -%>" alt="free">
+            <span>森のフリーウォーク</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="subpage-section subpage-section-family-walk">
+    <div class="subpage-inner">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-walk',
+          text: 'Family Walk',
+          alt: '',
+          subtextvg: 'walk-tekuteku-title',
+          altSubtextvg: 'Family Walk',
+          altSubtext: ''
+        }); -%>
+      </div>
+
+      <div class="subpage-banner">
+        <div class="subpage-banner-inner">
+          <img src="<%- mix('/assets/images/hellowoods/walk-banner-img.jpg') -%>" alt="family walk">
+        </div>
+      </div>
+
+      <h3 class="subpage-title">
+        <span>アクティビティ情報</span>
+      </h3>
+
+      <p>
+        家族みんなで森をめぐるドキドキ、ワクワクの新アトラクション！9個の生きものがランダムに描かれたビンゴカードにチャレンジし、「遊ぶ」・「寛ぐ」・「撮る」・「学ぶ」を体験しながら森を巡ろう！
+      </p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">場所</th>
+            <td class="table-col">
+              ハローウッズの森内
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">開催日</th>
+            <td class="table-col">
+              毎日開催
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">所要時間</th>
+            <td class="table-col">
+              約30分～ <br>
+              ※ルートにより所要時間は異なります。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">雨天の開催</th>
+            <td class="table-col">
+              雨天でも営業いたしております。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象者</th>
+            <td class="table-col">
+              3歳以上 <br>
+小学生以下は保護者（成人）の同伴が必要です。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">料金</th>
+            <td class="table-col">
+              モビパークパスポート対象 <br>
+アトラクションチケット利用：500円
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">予約受付</th>
+            <td class="table-col">
+              入山終了60分前までにハローウッズインフォメーションにて受付ください。<br>
+※入山終了時間は日没時間により異なります。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="subpage-button subpage-button-family-walk">
+        <a class="subpage-button-link" href="#">
+          <span>TEKUTEKUについて見る　></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="subpage-section subpage-section-guide-walk">
+    <div class="subpage-inner">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-walk',
+          text: 'Guide Walk',
+          alt: '',
+          subtextvg: 'walk-guide-title',
+          altSubtextvg: 'Guide Walk',
+          altSubtext: ''
+        }); -%>
+      </div>
+
+      <div class="subpage-banner">
+        <div class="subpage-banner-inner">
+          <img src="<%- mix('/assets/images/hellowoods/walk-guide.jpg') -%>" alt="guide walk">
+        </div>
+      </div>
+
+      <h3 class="subpage-title">
+        <span>アクティビティ情報</span>
+      </h3>
+
+      <p>
+        見つけた生きものをじっくり観察したり、手にとって触ってみたり。森で出会う生きものたちと安心して触れあえるのは、キャストと歩くガイドウォークならでは！
+      </p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">場所</th>
+            <td class="table-col">
+              ハローウッズの森内
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">開催日</th>
+            <td class="table-col">
+              毎日開催
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">所要時間</th>
+            <td class="table-col">
+              <p>
+                【10月】<br>
+                土日祝<br>
+                ロングコース（90分）<br>
+                ①10：30～12：00 <br>
+                樹冠タワーガイドウォーク <br>
+                ①11：00～12：00　②13：30～14：30　③15：00～16：00 <br>
+                ショートコース（60分） <br>
+                ①13：00～14：00　②14：30～15：30
+              </p>
+
+              <p>
+                【11月】<br>
+                土日祝<br>
+                ロングコース（90分）<br>
+                ①10：30～12：00 <br>
+                樹冠タワーガイドウォーク（60分）<br>
+                ①13：00～14：00 <br>
+                ショートコース（60分）<br>
+                ①14：30～15：30
+              </p>
+
+              <p>
+                ※予告なく実施時間を変更することがございます。予めご了承ください。<br>
+                ※お客様の年齢などに応じて、ご案内するルートを変更することがございます。
+              </p>
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">雨天の開催</th>
+            <td class="table-col">
+              雨天でも営業いたしております。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象者</th>
+            <td class="table-col">
+              全年齢対象 <br>
+小学生以下は保護者（成人）の同伴が必要です。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">料金</th>
+            <td class="table-col">
+              モビパークパスポート対象外 <br>
+              ロングコース 510円／1名<br>
+              ショートコース　400円／1名 <br>
+              樹冠タワーガイドウォーク 400円／1名<br>
+              ※0～2歳は無料です。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">予約受付</th>
+            <td class="table-col">
+              ハローウッズインフォメーションにて、各回の5分前までにお申し込みください。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="subpage-section subpage-section-free-walk">
+    <div class="subpage-inner">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-walk',
+          text: 'Free Walk',
+          alt: '',
+          subtextvg: 'walk-free-title',
+          altSubtextvg: 'Free Walk',
+          altSubtext: ''
+        }); -%>
+      </div>
+
+      <div class="subpage-banner">
+        <div class="subpage-banner-inner">
+          <img src="<%- mix('/assets/images/hellowoods/walk-free.jpg') -%>" alt="guide walk">
+        </div>
+      </div>
+
+      <h3 class="subpage-title">
+        <span>アクティビティ情報</span>
+      </h3>
+
+      <p>
+        どんぐりの木の葉が青々と茂り、木漏れ日がキラキラ輝く初夏の里山。そんな森の中を、のんびり楽しく、自然を味わいながらお散歩してみませんか。元気いっぱい遊べる場所も盛りだくさんです。
+      </p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">場所</th>
+            <td class="table-col">
+              ハローウッズの森内
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">開催日</th>
+            <td class="table-col">
+              毎日開催
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">所要時間</th>
+            <td class="table-col">
+              自由に森の散策をお楽しみいただけます。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">雨天の開催</th>
+            <td class="table-col">
+              雨天でも営業いたしております。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象者</th>
+            <td class="table-col">
+              全年齢対象 <br>
+              小学生以下は保護者（成人）の同伴が必要です。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">料金</th>
+            <td class="table-col">
+              無料
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">予約受付</th>
+            <td class="table-col">
+              予約や受付は必要ございません。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  <div class="subpage-banner">
+    <div class="subpage-banner-inner">
+      <div class="subpage-inner">
+        <div class="subpage-inner-precaution">
+          <h4>
+            <span>ハローウッズでは、希少な動植物の保全・保護に向けた取り組みを行っています。その一環として、以下のルールを設定させていただきますので、ご了承ください。</span>
+          </h4>
+
+          <ol>
+            <li><span>①水生昆虫など水中に生息する生きものに関して、持ち帰りはご遠慮ください。<br>
+            ただし、その場での観察目的の一時採取は可能です。</span></li>
+            <li><span>②その他の生きものに関して、小学生以下のお子様1名につき2匹まで持ち帰り可能です。<br>
+            ただし、タガメ、ゲンゴロウ、オオムラサキ、ハッチョウトンボなど、希少種についてはお持ち帰りできません。</span></li>
+            <li><span>③外部からの生きものの持ち込みはご遠慮ください。</span></li>
+            <li><span>④カブトムシ・クワガタなどの採取の際は、メスはできるだけ逃がすようお願いします。<br>
+            個体数維持のため、ご協力をお願いいたします。</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- recommendation module -->
+  <%- include('/partials/recommendation') -%>
+
+  <!-- pick up module -->
+  <%- include('/partials/pickup') -%>
+
+  <!-- END BOTTOM -->
+</div>
+
+<%- include('/partials/footer', {pageId}) -%>

@@ -1,8 +1,8 @@
 <%
-  var title = 'Twin Ring Motegi';
+  var title = 'Twin Ring Motegi'
 %>
 <% include('/partials/data/index') %>
-<%- include('/partials/head', { title }) -%>
+<%- include('/partials/head', { title, topHeading: true }) -%>
 
 <div class="mv">
   <div class="mv-buttons">
@@ -64,12 +64,12 @@
 <main>
   <div class="l-feature">
     <section class="feature">
-      <div class="l-container">
-        <ul class="feature-list">
+      <div class="swiper-container slider js-slider-bottom feature-container">
+        <ul class="swiper-wrapper slider-wrapper">
           <%
             getData().data.featureContent.forEach( featureItem => {
           %>
-          <li class="feature-item">
+          <li class="swiper-slide slider-item">
             <%- include('/partials/article', {
               category: featureItem.category,
               image: featureItem.image,
@@ -170,7 +170,7 @@
     <%- include('/partials/top/section-hotel-twin') -%>
   </section>
 
-  <section class="l-how-to l-container">
+  <section class="l-how-to">
     <div class="how-to">
       <%- include('/partials/heading', {
         modifier: 'heading-wrap-how-to heading-wrap-center',
@@ -179,20 +179,24 @@
         altSubtext: '',
       }) %>
 
-      <ul class="feature-list feature-list-no-design">
-        <%
-          getData().data.howToContent.forEach( howToItem => {
-        %>
-        <li class="feature-item">
-          <%- include('/partials/article-no-design', {
-            image: howToItem.image,
-            heading: howToItem.heading,
-            buttonText: howToItem.buttonText,
-            buttonLink: howToItem.buttonLink,
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
+      <div class="swiper-container slider js-slider-bottom">
+        <ul class="swiper-wrapper slider-wrapper">
+          <%
+            getData().data.howToContent.forEach( howToItem => {
+          %>
+          <li class="swiper-slide slider-item">
+            <%- include('/partials/article-no-design', {
+              image: howToItem.image,
+              heading: howToItem.heading,
+              buttonText: howToItem.buttonText,
+              buttonLink: howToItem.buttonLink,
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+
+      <div class="l-container how-to-container"></div>
     </div>
   </section>
 
@@ -220,4 +224,6 @@
   </section>
 </main>
 
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {
+  pageId: 'index'
+}) -%>

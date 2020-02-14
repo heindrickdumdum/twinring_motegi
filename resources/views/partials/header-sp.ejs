@@ -32,7 +32,7 @@
             </li>
             <% getData().data.headerBottomNav.forEach( bottomNavItem => { %>
             <li class="header-bottom-item<%- ' '+bottomNavItem.modifier %>">
-              <a class="header-bottom-link header-sp-bottom-link js-header-button js-header-button-sub" href="<%- bottomNavItem.link %>">
+              <a class="header-bottom-link header-sp-bottom-link js-header-button-sub" data-target="<%- bottomNavItem.link %>" href="<%- bottomNavItem.link %>">
                 <span class="header-bottom-link-text"><%- bottomNavItem.text %></span>
                 <i class="header-bottom-icon">
                   <%- include('/partials/svg', {

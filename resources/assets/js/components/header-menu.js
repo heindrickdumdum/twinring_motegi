@@ -22,7 +22,7 @@ export default function headerMenu() {
       scrollAble();
 
       headerButtonSub.forEach( function(el) {
-        let elAttrib = el.getAttribute('href')
+        let elAttrib = el.getAttribute('data-target')
 
         if(elAttrib != '#') {
           el.classList.add(CONST.IS_ACTIVE);
@@ -30,10 +30,37 @@ export default function headerMenu() {
           el.addEventListener( 'click', function(e) {
             e.preventDefault();
 
-              el.classList.toggle(CONST.VISIBLE_CLASS);
-          });
+            let thisButton = e.currentTarget;
+            thisButton.classList.toggle(CONST.VISIBLE_CLASS);
+
+            document.querySelectorAll('[data-content="'+elAttrib+'"]').forEach( function(content) {
+              if(thisButton.classList.contains(CONST.VISIBLE_CLASS)) {
+                headerSubInner.forEach( function(e) {
+                  e.classList.remove(CONST.IS_ACTIVE);
+                })
+                content.classList.add(CONST.IS_ACTIVE);
+                content.style.top = thisButton.offsetTop + thisButton.offsetHeight +'px';
+
+                headerButtonSub.forEach( function(el) {
+                  el.style.marginBottom = 0;
+                  el.classList.remove(CONST.VISIBLE_CLASS);
+                  thisButton.classList.add(CONST.VISIBLE_CLASS);
+                });
+
+                e.currentTarget.style.marginBottom = content.clientHeight +'px';
+              } else {
+                headerSubInner.forEach( function(e) {
+                  e.classList.remove(CONST.IS_ACTIVE);
+                })
+
+                headerButtonSub.forEach( function(el) {
+                  el.style.marginBottom = 0;
+                });
+              }
+            });
+          })
         }
-      })
+     })
 
       headerBurger.addEventListener( 'click', function(e) {
         e.preventDefault();
@@ -52,30 +79,10 @@ export default function headerMenu() {
       });
 
 
-      headerButton.forEach( function(el) {
-        let elAttrib = el.getAttribute('href')
-
-        el.addEventListener( 'click', function(e) {
-          e.preventDefault();
-
-          if(elAttrib != '#') {
-            console.log(elAttrib);
-
-            headerSubInner.forEach( function(e) {
-              e.classList.remove(CONST.IS_ACTIVE);
-            })
-            
-            document.querySelectorAll(elAttrib).forEach( function(e) {
-              e.classList.add(CONST.IS_ACTIVE);
-            });
-          }
-        });
-      });
-
     } else {
 
       headerButton.forEach( function(el) {
-        let elAttrib = el.getAttribute('href')
+        let elAttrib = el.getAttribute('data-target')
 
         el.addEventListener( 'click', function(e) {
           e.preventDefault();
@@ -83,22 +90,34 @@ export default function headerMenu() {
 
         el.addEventListener( 'mouseenter', function() {
 
-          if(elAttrib != '#') {
-            headerSub.classList.add(CONST.VISIBLE_CLASS)
+          headerSub.classList.add(CONST.VISIBLE_CLASS)
 
+          if(elAttrib != '#') {
             headerSubInner.forEach( function(e) {
               e.style.display = 'none';
             })
-            document.querySelector(elAttrib).style.display = 'block'
+
+            document.querySelectorAll('[data-content="'+elAttrib+'"]').forEach( function(e) {
+              e.style.display = 'block'
+            })
 
             scrollLock()
-          } else {
-            headerSub.classList.remove(CONST.VISIBLE_CLASS)
-            scrollAble()
           }
 
         });
       });
+
+      // prevent element from clicking
+      document.querySelector('.header-sub-content').addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+
+      headerSub.addEventListener('click', function(e) {
+        e.preventDefault();
+        headerSub.classList.remove(CONST.VISIBLE_CLASS);
+
+        scrollAble()
+      })
 
       if(!headerSub.classList.contains(CONST.VISIBLE_CLASS)) {
         scrollAble()

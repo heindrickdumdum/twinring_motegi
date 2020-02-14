@@ -57,7 +57,7 @@
 .subpage-labo {
   .heading-text {
     @include max-screen($breakpoint-mobile) {
-      font-size: 45px !important;
+      font-size: 22.5px !important;
     }
   }
 
@@ -70,15 +70,15 @@
       margin-top: 90px;
     }
 
-    .subpage-title {
-      font-size: 26px;
-    }
+    // .subpage-title {
+    //   font-size: 26px;
+    // }
 
-    .subpage-inner {
-      > p {
-        font-size: 24px;
-      }
-    }
+    // .subpage-inner {
+    //   > p {
+    //     font-size: 24px;
+    //   }
+    // }
 
     .heading-family-walk {
       .heading-subtext {
@@ -88,13 +88,13 @@
 
     .heading-guide-walk {
       .heading-subtext {
-        height: 108px;
+        height: 71px;
       }
     }
 
     .heading-free-walk {
       .heading-subtext {
-        height: 37px;
+        height: 35px;
       }
     }
 

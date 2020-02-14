@@ -5,7 +5,7 @@
 
 <%- include('/partials/head', { title }) -%>
 
-<div class="subpage subpage-tsubasa">
+<div class="subpage subpage-walk">
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
@@ -13,7 +13,7 @@
         <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/walk-mv.jpg') %>);"></div>
       </li>
     </ul>
-
+    
     <h1 class="mv-heading mv-heading-subpage">
       <span class="mv-heading-text">
         森の散策プログラム
@@ -22,10 +22,18 @@
   </div>
 
   <div class="subpage-inner">
-    <div class="l-section-title">
+    <div class="l-section-title u-show-pc">
       <%- include('/partials/heading', {
-        modifier: 'heading-main headin-main-subpage',
+        modifier: 'heading-main heading-main-subpage',
         subtext: mix('/assets/images/hellowoods/walk-color-title.png'),
+        altSubtext: 'walk'
+      }); -%>
+    </div>
+
+    <div class="l-section-title u-show-sp">
+      <%- include('/partials/heading', {
+        modifier: 'heading-main heading-main-subpage',
+        subtext: mix('/assets/images/hellowoods/walk-color-title-sp.png'),
         altSubtext: 'walk'
       }); -%>
     </div>
@@ -56,12 +64,23 @@
 
   <section class="subpage-section subpage-section-family-walk">
     <div class="subpage-inner">
-      <div class="l-section-title">
+      <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-walk',
+          modifier: 'heading-gradient-tobottom heading-walk heading-family-walk',
           text: 'Family Walk',
           alt: '',
           subtextvg: 'walk-tekuteku-title',
+          altSubtextvg: 'Family Walk',
+          altSubtext: ''
+        }); -%>
+      </div>
+
+      <div class="l-section-title u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-walk heading-family-walk',
+          text: 'Family Walk',
+          alt: '',
+          subtextvg: 'walk-tekuteku-title-sp',
           altSubtextvg: 'Family Walk',
           altSubtext: ''
         }); -%>
@@ -148,12 +167,23 @@
 
   <section class="subpage-section subpage-section-guide-walk">
     <div class="subpage-inner">
-      <div class="l-section-title">
+      <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-walk',
+          modifier: 'heading-gradient-tobottom heading-walk heading-guide-walk',
           text: 'Guide Walk',
           alt: '',
           subtextvg: 'walk-guide-title',
+          altSubtextvg: 'Guide Walk',
+          altSubtext: ''
+        }); -%>
+      </div>
+
+      <div class="l-section-title u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-walk heading-guide-walk',
+          text: 'Guide Walk',
+          alt: '',
+          subtextvg: 'walk-donguri-title-sp',
           altSubtextvg: 'Guide Walk',
           altSubtext: ''
         }); -%>
@@ -260,12 +290,23 @@
 
   <section class="subpage-section subpage-section-free-walk">
     <div class="subpage-inner">
-      <div class="l-section-title">
+      <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-walk',
+          modifier: 'heading-gradient-tobottom heading-walk heading-free-walk',
           text: 'Free Walk',
           alt: '',
           subtextvg: 'walk-free-title',
+          altSubtextvg: 'Free Walk',
+          altSubtext: ''
+        }); -%>
+      </div>
+
+      <div class="l-section-title u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-walk heading-free-walk',
+          text: 'Free Walk',
+          alt: '',
+          subtextvg: 'walk-free-title-sp',
           altSubtextvg: 'Free Walk',
           altSubtext: ''
         }); -%>
@@ -341,7 +382,7 @@
     </div>
   </section>
   
-  <div class="subpage-banner">
+  <div class="subpage-banner subpage-banner-precaution">
     <div class="subpage-banner-inner">
       <div class="subpage-inner">
         <div class="subpage-inner-precaution">

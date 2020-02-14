@@ -99,6 +99,14 @@
     width: 100%;
   }
 
+  //modifier for sp
+  @include max-screen($breakpoint-mobile) {
+    &-precaution {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
   iframe {
     width: 100%;
   }
@@ -195,12 +203,13 @@
 //modifier hellowoods family walk
 .subpage-button-family-walk {
   margin-top: 50px;
+  margin-bottom: 0px;
 }
 
 //modifier hellowoods precuation
 .subpage-inner-precaution {
   padding: 56px;
-  background-color: $color-green;
+  background-color: #479d4c;
   color: $color-white;
 
   h4 {

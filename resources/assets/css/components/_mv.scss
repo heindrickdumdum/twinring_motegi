@@ -23,7 +23,6 @@
   }
 }
 
-
 .mv-container {
   position: relative;
   z-index: $z-min;
@@ -32,36 +31,6 @@
 .mv-list,
 .mv-buttons-list {
   list-style: none;
-}
-
-.mv-list-top {
-  opacity: 0;
-  transition: opacity 1s ease-in;
-  transition-delay: 4s;
-  height: 607px;
-  position: relative;
-
-  @include max-screen($breakpoint-mobile) {
-    height: 378px;
-  }
-
-  .mv-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 1s ease-in;
-
-    &.is-active {
-      opacity: 1;
-    }
-  }
-
-  &.is-show {
-    opacity: 1;
-  }
 }
 
 .mv-image {
@@ -90,6 +59,42 @@
 
     &::after {
       bottom: -50px;
+    }
+  }
+}
+
+.mv-list-top {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition-delay: 4s;
+  height: 607px;
+  position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    height: 440px;
+  }
+
+  .mv-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  &.is-show {
+    opacity: 1;
+  }
+
+  .mv-image {
+    @include max-screen($breakpoint-mobile) {
+      height: 440px;
     }
   }
 }
@@ -151,6 +156,11 @@
   &:not(.mv-heading-subpage) {
     bottom: -92px;
     left: 35px;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -122px;
+      left: 20px;
+    }
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -223,6 +233,13 @@
 
   @include max-screen($breakpoint-mobile) {
     display: none;
+  }
+}
+
+.mv-today-top {
+  @include max-screen($breakpoint-mobile) {
+    display: flex;
+    bottom: -91px;
   }
 }
 
@@ -609,6 +626,17 @@
   }
 }
 
+.mv-heading-dokidoki {
+  @include max-screen($breakpoint-mobile) {
+   .mv-heading-subtexts {
+    svg {
+      width: 130px;
+      height: 76px;
+    }
+   }
+  }
+}
+
   .mv-heading-texts {
     font-family: $font-holland;
     color: $color-white;
@@ -686,4 +714,22 @@
 
 .mv-image-subpage {
   background-position-y: 25%;
+}
+
+.mv-top {
+  @include max-screen($breakpoint-mobile) {
+    height: 440px;
+  }
+  &:after {
+    @include max-screen($breakpoint-mobile) {
+      bottom: -37px;
+    }
+  }
+  .mv-heading-subtext {
+    @include max-screen($breakpoint-mobile) {
+      left: -16px;
+      position: relative;
+      margin-top: 0px;
+    }
+  }
 }

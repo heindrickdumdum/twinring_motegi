@@ -20,6 +20,8 @@
     font-size: 24px;
     text-align: center;
     background: linear-gradient(to bottom, #027cc4 0%, #09a045 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .heading-wrap-parkmap & {
@@ -60,10 +62,14 @@
   }
 
   .heading-subtext {
-    max-width: 250px;
+    // max-width: 250px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 250px;
+    }
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -611,12 +617,12 @@
       width: 750px;
 
       @include max-screen($breakpoint-mobile) {
-        width: 400px;
+        width: 335px;
         height: 70px;
         display: inline-block;
         text-align: left;
-        margin-left: -9px;
-        margin-top: 11px;
+        margin-left: 0;
+        margin-top: 4px;
       }
     }
   }
@@ -624,6 +630,12 @@
   &.heading-wrap-activity {
     .heading-subtext {
       width: 800px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 311px;
+        margin-top: 11px;
+        height: 68px;
+      }
     }
   }
 

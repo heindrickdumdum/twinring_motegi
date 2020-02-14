@@ -98,7 +98,9 @@ stepsData = [
         <img src="<%= item.image %>" alt="Step 1">
       </div>
       <div class="step-title"><%= item.heading %></div>
-      <div class="step-subtitle"><%= item.subHeading %></div>
+      <% if (item.subHeading != "") { %>
+        <div class="step-subtitle"><%= item.subHeading %></div>
+      <% } %>
       <p class="step-desc">
         <%= item.subText %>
       </p>

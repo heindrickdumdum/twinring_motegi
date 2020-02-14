@@ -15,14 +15,18 @@
     </ul>
 
     <div class="l-container mv-container">
-      <h2 class="mv-heading">
+      <h2 class="mv-heading mv-heading-sumika">
         <span class="mv-heading-texts">
           Sumika Giant Net
         </span>
         <span class="mv-heading-subtexts">
-          <svg>
+          <svg class="u-show-pc">
             <title>巨大ネットの森SUMIKA</title>
             <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-sumika-main-title') %>"></use>
+          </svg>
+          <svg class="u-show-sp">
+            <title>巨大ネットの森SUMIKA</title>
+            <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-sumika-main-title-sp') %>"></use>
           </svg>
         </span>
       </h2>
@@ -166,6 +170,7 @@
   <section class="l-section">
     <div class="l-container">
       <div class="sumika-heading l-heading">
+       <div class="u-show-pc">
         <%- include('/partials/heading', {
           modifier: 'heading-enjoy',
           text: 'How to Enjoy',
@@ -173,6 +178,16 @@
           subtextvg: 'sumika-point-title',
           altSubtext: '',
         }) %>
+       </div>
+       <div class="u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-enjoy',
+          text: 'How to Enjoy',
+          alt: 'How to Enjoy',
+          subtextvg: 'sumika-enjoy-point-title-sp',
+          altSubtext: '',
+        }) %>
+       </div>
       </div>  
 
       <div class="l-content">
@@ -233,13 +248,24 @@
   <section class="l-section">
     <div class="l-container">
       <div class="l-heading">
-        <%- include('/partials/heading', {
-          modifier: 'heading-forest',
-          text: 'Ways to feel the Forest',
-          alt: 'Ways to feel the Forest',
-          subtextvg: 'ways-forest-title',
-          altSubtext: '',
-        }) %>
+        <div class="u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-forest',
+            text: 'Ways to feel the Forest',
+            alt: 'Ways to feel the Forest',
+            subtextvg: 'ways-forest-title',
+            altSubtext: '',
+          }) %>
+        </div>
+        <div class="u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-forest',
+            text: 'Ways to feel the Forest',
+            alt: 'Ways to feel the Forest',
+            subtextvg: 'sumika-map-title-sp',
+            altSubtext: '',
+          }) %>
+        </div>
       </div>  
 
       <div class="l-section-inner">

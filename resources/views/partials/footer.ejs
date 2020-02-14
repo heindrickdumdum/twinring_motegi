@@ -82,6 +82,10 @@
     <script src="<%= mix('/assets/js/mobipark.js') %>" async></script>
   <% } %>
 
+  <% if(pageId == 'index') { %>
+    <script src="<%= mix('/assets/js/index.js') %>" async></script>
+  <% } %>
+
   <% if(pageId == 'index' || pageId == 'sumika' || pageId == 'itadaki' || pageId == 'dokidoki' || pageId == 'mobipark' || pageId == 'mobipark-subpage' || pageId == 'hellowoods' || pageId == 'hellowoods-subpage' || pageId == 'tsubasa' || pageId == 'musasabi') { %>
   <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
   <% } %>

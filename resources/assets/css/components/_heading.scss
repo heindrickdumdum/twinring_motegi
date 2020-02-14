@@ -124,6 +124,10 @@
   .heading-text {
     max-width: 584px;
     width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 250px;
+    }
   }
 }
 
@@ -843,6 +847,11 @@
     background: linear-gradient(to right, #027cc3 10%, #099f48 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+    @include max-screen($breakpoint-mobile) {
+      text-align: center;
+      font-size: 13px;
+    }
   }
 
   .heading-kids-carbike-attraction {
@@ -1047,10 +1056,6 @@
 //modifier for SP
 @include max-screen($breakpoint-mobile) {
   .subpage-mobipark {
-    .heading-text {
-      font-size: 45px;
-    }
-
     .heading-subtext {
       min-height: 47px;
       margin-left: auto;

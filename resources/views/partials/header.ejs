@@ -75,7 +75,7 @@
             <ul class="header-bottom-list">
               <% getData().data.headerBottomNav.forEach( bottomNavItem => { %>
               <li class="header-bottom-item<%- ' '+bottomNavItem.modifier %>">
-                <a class="header-bottom-link js-header-button" href="<%- bottomNavItem.link %>">
+                <a class="header-bottom-link js-header-button" data-target="<%- bottomNavItem.link %>" href="#">
                   <span class="header-bottom-link-text"><%- bottomNavItem.text %></span>
                   <i class="header-bottom-icon">
                     <%- include('/partials/svg', {

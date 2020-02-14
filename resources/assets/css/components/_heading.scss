@@ -377,6 +377,22 @@
     margin: 60px 0;
   }
 
+  &.heading-main-craft {
+    .heading-texts {
+      img {
+        @include max-screen($breakpoint-mobile) {
+          width: 220px;
+        }
+      }
+    }
+
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin: 56px auto 59px;
+      }
+    }
+  }
+
 }
 
 //how to enjoy heading
@@ -577,6 +593,21 @@
     }
   }
 
+  &.heading-wrap-menu {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        margin: 13px auto 0;
+        height: 26px;
+      }
+    }
+
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin: 24px 0 37px;
+      }
+    }
+  }
+
   &.heading-wrap-parkmap {
     .heading-subtext {
       width: 750px;
@@ -648,6 +679,20 @@
       @include max-screen($breakpoint-mobile) {
         width: auto;
         height: 53px;
+      }
+    }
+  }
+
+  &.heading-wrap-craft {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 11px;
+      }
+    }
+    
+    svg {
+      @include max-screen($breakpoint-mobile) {
+        height: 25px;
       }
     }
   }
@@ -815,8 +860,6 @@
         max-width: 335px;
       }
     }
-
-
   }
 }
 
@@ -957,6 +1000,27 @@
     .heading-subtext {
       width: 100%;
       margin-top: 39px;
+    }
+  }
+
+  .heading-forest-craft {
+    .heading-wrap {
+      svg {
+        @include max-screen($breakpoint-mobile) {
+          width: 310px;
+        }
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        margin-top: 4px;
+      }
     }
   }
 

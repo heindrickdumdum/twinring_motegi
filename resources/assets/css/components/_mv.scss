@@ -598,6 +598,29 @@
     }
   }
 
+
+.mv-heading-sumika {
+  @include max-screen($breakpoint-mobile) {
+   .mv-heading-subtexts {
+    svg {
+      width: 220px;
+      height: 74px;
+    }
+   }
+  }
+}
+
+.mv-heading-itadaki {
+  @include max-screen($breakpoint-mobile) {
+   .mv-heading-subtexts {
+    svg {
+      width: 162px;
+      height: 76px;
+    }
+   }
+  }
+}
+
   .mv-heading-texts {
     font-family: $font-holland;
     color: $color-white;

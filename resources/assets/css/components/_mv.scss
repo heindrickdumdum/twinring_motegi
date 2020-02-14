@@ -625,6 +625,17 @@
   }
 }
 
+.mv-heading-dokidoki {
+  @include max-screen($breakpoint-mobile) {
+   .mv-heading-subtexts {
+    svg {
+      width: 130px;
+      height: 76px;
+    }
+   }
+  }
+}
+
   .mv-heading-texts {
     font-family: $font-holland;
     color: $color-white;

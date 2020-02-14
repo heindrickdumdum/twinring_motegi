@@ -1,6 +1,6 @@
 //show pc
 .u-show-pc {
-  @include query($breakpoint-mobile) {
+  @media screen and (max-width: $breakpoint-mobile) {
     // sass-lint:disable-block no-important
     display: none !important;
   }
@@ -12,16 +12,17 @@
   // sass-lint:disable-block no-important
   display: none !important;
 
-  @include query($breakpoint-mobile) {
+  @media screen and (max-width: $breakpoint-mobile) {
     display: block !important;
   }
 
   &.u-show-sp-flex {
-    @include query($breakpoint-mobile) {
+    @media screen and (max-width: $breakpoint-mobile) {
       display: flex !important;
     }
   }
 }
+
 .u-clear {
 	&:after {
 		content: " ";

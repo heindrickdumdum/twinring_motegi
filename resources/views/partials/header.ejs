@@ -108,51 +108,5 @@
   </div>
 
 
-  <!-- header sp -->
-  <div class="u-show-sp">
-    <div class="header-sp">
-      <div class="header-sp-top">
-        <a class="header-sp-logo">
-          <span class="header-sp-logo-link" href="/">
-            <img src="<%= mix('/assets/images/logo.svg') %>" alt="森の中のモビリティテーマパークツインリンクもてぎ">
-          </span>
-        </a>
-
-        <a class="header-sp-others-link" href="#">
-          <img src="<%= mix('/assets/images/logo-motogp-sp.png') %>" alt="MotoGP">
-        </a>
-
-        <div class="header-sp-burger-wrap">
-          <a class="header-sp-burger" href="#">
-            <span class="header-sp-burger-text header-sp-burger-open">MENU</span>
-            <span class="header-sp-burger-text header-sp-burger-close">CLOSE</span>
-          </a>
-        </div>
-      </div>
-
-
-      <div class="header-sp-toggle">
-        <nav class="header-top-nav">
-          <% getData().data.headerTopNav.forEach( topNavItem => { %>
-          <li class="header-top-nav-item js-top-nav-button">
-            <a class="header-top-nav-link" href="<%- topNavItem.link %>"><%- topNavItem.text %></a>
-            <% if(typeof topNavItem.sub === 'object') { %>
-            <div class="header-top-nav-sub">
-              <% topNavItem.sub.forEach( subItem => { %>
-                <ul>
-                <% if(typeof subItem === 'object') {
-                  subItem.forEach( item => { %>
-                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="<%- item.link %>"><%- item.text %></a></li>
-                <% });
-                  } %>
-                </ul>
-              <% }) %>
-            </div>
-            <% } %>
-          </li>
-          <% }) %>
-        </nav>
-      </div>
-    </div>
-  </div>  <!-- end of header sp -->
+  <%- include('/partials/header-sp') -%>
 </header>

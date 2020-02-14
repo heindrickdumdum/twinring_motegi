@@ -45,7 +45,7 @@
   }
 
   &:hover {
-    @include query($breakpoint-mobile, min) {
+    @include min-screen($breakpoint-mobile + 1) {
       .post-link-icon {
         transform: translateX(5px);
       }

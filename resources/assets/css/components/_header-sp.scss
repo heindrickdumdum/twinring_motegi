@@ -1,3 +1,15 @@
+.header-sp-toggle {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height $duration $ease-in-out;
+}
+
+.header-sp-toggle-inner {
+  padding: 6px 20px 35px;
+  height: calc(100vh - 56px);
+  overflow: auto;
+}
+
 .header-sp-top {
   display: flex;
   height: 57px;
@@ -8,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 188px;
+  width: calc(100% - 185px);
   border-top: 4px solid $color-green;
   border-right: 1px solid rgba($color-mineshaft, .12);
 }
@@ -43,6 +55,7 @@
 .header-sp-burger-open {
   display: block;
   position: relative;
+  transition: opacity $duration $ease-in-out;
 
   &::before {
     content: '';
@@ -58,7 +71,12 @@
 }
 
 .header-sp-burger-close {
-  display: none;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity $duration $ease-in-out;
 }
 
 .header-sp-burger-wrap {
@@ -110,9 +128,46 @@
     }
 
     .header-sp-burger-open {
+      opacity: 0;
+
       &::before {
         opacity: 0;
         transform: translateX(-5px);
+      }
+    }
+
+    .header-sp-burger-close {
+      opacity: 1;
+    }
+  }
+}
+
+.header-sp-bottom-link {
+  &.is-active {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: calc(100% / 2);
+      width: 10px;
+      height: 1px;
+      background-color: $color-mineshaft;
+      transform-origin: center;
+      transition: transform $duration $ease-in-out,
+                  opacity $duration $ease-in-out;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &.is-visible {
+      &::after {
+        transform: rotate(0deg);
+        opacity: 0;
       }
     }
   }

@@ -32,7 +32,7 @@
   }
 
   &:hover {
-    @include query($breakpoint-mobile, min) {
+    @include min-screen($breakpoint-mobile + 1) {
       .button-icon {
         transform: translateX(5px);
       }

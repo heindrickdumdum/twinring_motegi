@@ -9,7 +9,7 @@
 .heading-text {
   display: block;
   font-family: $font-holland;
-  background: linear-gradient(to right, #027cc3 10%, #099f48 100%);
+  background: linear-gradient(to bottom, #027cc3 10%, #099f48 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.1em;
@@ -45,12 +45,77 @@
     width: 100%;
     height: 100%;
   }
+
+  .heading-wrap-video-musasabi & {
+    height: 37px;
+    width: 731px;
+  }
 }
 
-//modifier hellowoods family walk
-.heading-walk {
+//modifier for SP walk program and labo
+.subpage-walk,
+.subpage-labo {
+  .heading-text {
+    @include max-screen($breakpoint-mobile) {
+      font-size: 45px !important;
+    }
+  }
+
   .heading-subtext {
     display: block;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    .heading-main-subpage {
+      margin-top: 90px;
+    }
+
+    .subpage-title {
+      font-size: 26px;
+    }
+
+    .subpage-inner {
+      > p {
+        font-size: 24px;
+      }
+    }
+
+    .heading-family-walk {
+      .heading-subtext {
+        height: 67px;
+      }
+    }
+
+    .heading-guide-walk {
+      .heading-subtext {
+        height: 108px;
+      }
+    }
+
+    .heading-free-walk {
+      .heading-subtext {
+        height: 37px;
+      }
+    }
+
+    .heading-aqua-labo {
+      .heading-subtext {
+        height: 48px;
+      }
+    }
+
+    .heading-mammal-labo {
+      .heading-subtext {
+        height: 55px;
+      }
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    .subpage-section-family-walk,
+    .subpage-section-aqua-labo {
+      margin-top: 150px;
+    }
   }
 }
 
@@ -205,6 +270,14 @@
 
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 83px;
+  }
+
+  @include max-screen($breakpoint-mobile + 1) {
+    &-subpage {
+      .heading-subtext {
+        height: auto;
+      }
+    }
   }
 
   .heading {
@@ -779,8 +852,9 @@
 .map {
   .heading-wrap {
     .heading-subtext {
-      max-width: 319px;
-      margin-top: 0px;
+      // max-width: 319px;
+      // margin-top: 0px;
+      display: block;
     }
   }
 }
@@ -812,7 +886,8 @@
 
   .heading-title-adventure {
     .heading-subtext {
-      max-width: 443px;
+      // max-width: 443px;
+      display: block;
     }
   }
 }
@@ -961,6 +1036,35 @@
     @include max-screen($breakpoint-mobile) {
       font-size: 46px;
       color: $color-white;
+    }
+  }
+}
+
+//modifier for SP
+@include max-screen($breakpoint-mobile) {
+  .subpage-mobipark {
+    .heading-text {
+      font-size: 45px;
+    }
+
+    .heading-subtext {
+      min-height: 47px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .heading-info {
+      .heading-subtext {
+        min-height: 47px;
+      }
+    }
+
+    .heading-kids-carbike-attraction {
+      .heading-subtext {
+        min-height: 111px;
+      }
     }
   }
 }

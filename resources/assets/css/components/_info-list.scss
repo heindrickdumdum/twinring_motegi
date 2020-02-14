@@ -9,7 +9,7 @@
     overflow-y: scroll;
 
     @include max-screen($breakpoint-mobile) {
-      margin: 0;
+      margin: 0 0 85px 0;
       max-height: 300px;
     }
 
@@ -40,6 +40,20 @@
         margin-bottom: 20px;
         display: block;
       }
+    }
+  }
+}
+
+//modifier for SP
+@include max-screen($breakpoint-mobile) {
+  .info-container {
+    .info-list {
+      max-width: 612px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }

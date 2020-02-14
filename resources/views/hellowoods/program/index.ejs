@@ -1,45 +1,59 @@
 <%
-  var title = 'Twin Ring Motegi | "森の散策プログラム Forest Walking Program"'
+  var title = 'Twin Ring Motegi | 森の散策プログラム'
   pageId = 'hellowoods';
 %>
 
 <%- include('/partials/head', { title }) -%>
 
-<div class="subpage subpage-tsubasa">
-  <div class="mv mv-subpage mv-tsubasa">
+<div class="subpage subpage-walk">
+  <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/walk-mv.png') %>);"></div>
-        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/walk-mv.png') %>);"></div>
+        <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/walk-mv.jpg') %>);"></div>
+        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/walk-mv.jpg') %>);"></div>
       </li>
     </ul>
+    
+    <h1 class="mv-heading mv-heading-subpage">
+      <span class="mv-heading-text">
+        森の散策プログラム
+      </span>
+    </h1>
   </div>
 
   <div class="subpage-inner">
-    <div class="l-section-title">
+    <div class="l-section-title u-show-pc">
       <%- include('/partials/heading', {
-        modifier: 'heading-main headin-main-subpage',
+        modifier: 'heading-main heading-main-subpage',
         subtext: mix('/assets/images/hellowoods/walk-color-title.png'),
         altSubtext: 'walk'
       }); -%>
     </div>
 
+    <div class="l-section-title u-show-sp">
+      <%- include('/partials/heading', {
+        modifier: 'heading-main heading-main-subpage',
+        subtext: mix('/assets/images/hellowoods/walk-color-title-sp.png'),
+        altSubtext: 'walk'
+      }); -%>
+    </div>
+
     <div class="column-link l-column-link">
-      <ul class="link-container">
+      <ul class="link-container js-anchor-link">
         <li class="link-item">
-          <a href="#">
+          <a href="#tekuteku">
             <img src="<%- mix('/assets/images/hellowoods/walk-link-tekuteku.png') -%>" alt="tekuteku">
             <span>TEKUTEKU</span>
           </a>
         </li>
         <li class="link-item">
-          <a href="#">
+          <a href="#guide-walk">
             <img src="<%- mix('/assets/images/hellowoods/walk-link-guide.png') -%>" alt="guide">
             <span>どんぐりの森ガイドウォーク</span>
           </a>
         </li>
         <li class="link-item">
-          <a href="#">
+          <a href="#free-walk">
             <img src="<%- mix('/assets/images/hellowoods/walk-link-free.png') -%>" alt="free">
             <span>森のフリーウォーク</span>
           </a>
@@ -48,14 +62,25 @@
     </div>
   </div>
 
-  <section class="subpage-section subpage-section-family-walk">
+  <section class="subpage-section subpage-section-family-walk" id="tekuteku">
     <div class="subpage-inner">
-      <div class="l-section-title">
+      <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-walk',
+          modifier: 'heading-gradient-tobottom heading-walk heading-family-walk',
           text: 'Family Walk',
           alt: '',
           subtextvg: 'walk-tekuteku-title',
+          altSubtextvg: 'Family Walk',
+          altSubtext: ''
+        }); -%>
+      </div>
+
+      <div class="l-section-title u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-walk heading-family-walk',
+          text: 'Family Walk',
+          alt: '',
+          subtextvg: 'walk-tekuteku-title-sp',
           altSubtextvg: 'Family Walk',
           altSubtext: ''
         }); -%>
@@ -140,14 +165,25 @@
     </div>
   </section>
 
-  <section class="subpage-section subpage-section-guide-walk">
+  <section class="subpage-section subpage-section-guide-walk" id="guide-walk">
     <div class="subpage-inner">
-      <div class="l-section-title">
+      <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-walk',
+          modifier: 'heading-gradient-tobottom heading-walk heading-guide-walk',
           text: 'Guide Walk',
           alt: '',
           subtextvg: 'walk-guide-title',
+          altSubtextvg: 'Guide Walk',
+          altSubtext: ''
+        }); -%>
+      </div>
+
+      <div class="l-section-title u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-walk heading-guide-walk',
+          text: 'Guide Walk',
+          alt: '',
+          subtextvg: 'walk-donguri-title-sp',
           altSubtextvg: 'Guide Walk',
           altSubtext: ''
         }); -%>
@@ -252,14 +288,25 @@
     </div>
   </section>
 
-  <section class="subpage-section subpage-section-free-walk">
+  <section class="subpage-section subpage-section-free-walk" id="free-walk">
     <div class="subpage-inner">
-      <div class="l-section-title">
+      <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-walk',
+          modifier: 'heading-gradient-tobottom heading-walk heading-free-walk',
           text: 'Free Walk',
           alt: '',
           subtextvg: 'walk-free-title',
+          altSubtextvg: 'Free Walk',
+          altSubtext: ''
+        }); -%>
+      </div>
+
+      <div class="l-section-title u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-walk heading-free-walk',
+          text: 'Free Walk',
+          alt: '',
+          subtextvg: 'walk-free-title-sp',
           altSubtextvg: 'Free Walk',
           altSubtext: ''
         }); -%>
@@ -335,7 +382,7 @@
     </div>
   </section>
   
-  <div class="subpage-banner">
+  <div class="subpage-banner subpage-banner-precaution">
     <div class="subpage-banner-inner">
       <div class="subpage-inner">
         <div class="subpage-inner-precaution">

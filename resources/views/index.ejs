@@ -1,5 +1,6 @@
 <%
   var title = 'Twin Ring Motegi'
+  pageId = 'index'
 %>
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title, topHeading: true }) -%>
@@ -19,9 +20,18 @@
       </li>
     </ul>
   </div>
-  <ul class="mv-list">
-    <li class="mv-item">
-      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img.jpg') %>);"></div>
+  <ul class="mv-list mv-list-top js-mv-list">
+    <li class="mv-item js-mv-item js-mv-item-first">
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img1.png') %>);"></div>
+    </li>
+    <li class="mv-item js-mv-item">
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img2.png') %>);"></div>
+    </li>
+    <li class="mv-item js-mv-item">
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img3.png') %>);"></div>
+    </li>
+    <li class="mv-item js-mv-item">
+      <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mv-img4.png') %>);"></div>
     </li>
   </ul>
 

@@ -292,8 +292,12 @@
   }
 
   &.heading-main-carbike {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 25px;
+    }
+    
     .heading {
-      margin-bottom: 65px;
+      // margin-bottom: 65px;
       max-width: 531px;
     }
   }

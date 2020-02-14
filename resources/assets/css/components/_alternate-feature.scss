@@ -10,7 +10,7 @@
   @include max-screen ($breakpoint-mobile) {
     max-width: 514px;
     margin: auto;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 
     &.row {
       display: block;
@@ -50,7 +50,7 @@
         
         @include max-screen ($breakpoint-mobile) {
           right: auto !important;
-          left: 0 !Important;
+          left: -30px !Important;
         }
 
         &.owl {

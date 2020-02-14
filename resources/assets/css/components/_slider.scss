@@ -23,6 +23,17 @@
   }
 }
 
+.slider-how-to-enjoy {
+  .slider-item {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in;
+
+    &.swiper-slide-active {
+      opacity: 1;
+    }
+  }
+}
+
 //modifier kids carbike attraction
 .kids-carbike-attraction {
   .slide-container {
@@ -97,7 +108,6 @@
     }
   }
 }
-
 
 .slider-carbike {
   .slider-carbike-item {

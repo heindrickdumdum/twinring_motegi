@@ -15,7 +15,3 @@ headerMenu();
 //dokidokiSlider();
 
 headerTopNav();
-
-// if(document.querySelector('#js-top') != null) {
-//
-// }

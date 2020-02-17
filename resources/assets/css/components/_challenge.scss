@@ -1,5 +1,5 @@
 .challenge {
-  margin-top: 53px;
+  margin-top: 34px;
   background-image: url(../images/mobipark/challenge-bg.png);
   background-repeat: no-repeat;
   background-position: right center;
@@ -49,7 +49,7 @@
   }
 
   .desc {
-    margin-top: 73px;
+    margin-top: 66px;
     margin-left: 4px;
     font-size: 20px;  
     letter-spacing: 0.16em;
@@ -81,17 +81,17 @@
   }
 
   .challenge-img1 {
-    max-width: 292px;
+    max-width: 274px;
     position: relative;
-    top: -51px;
-    left: -13px;
+    top: -46px;
+    left: -32px;
   }
 
   .challenge-img2 {
     max-width: 592px;
     position: relative;
-    left: 129px;
-    top: -140px;
+    left: 95px;
+    top: -134px;
   }
 
   .challenge-img3 {
@@ -122,10 +122,16 @@
     }
   }
 
+  &.hellowoods {
+    max-height: 800px;
+  }
+
   @include max-screen($breakpoint-mobile) {
     margin-bottom: 90px;
     margin-top: -27px;
   }
+
+
 }
 
 //modifier for SP

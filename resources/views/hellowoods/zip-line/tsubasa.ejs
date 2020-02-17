@@ -162,11 +162,14 @@
       <div class="l-container">
         <div class="call-to-action-wrapper">
           <div class="call-to-action-inner">
-            <h2 class="heading">
-              <span class="heading-texts">
-                <img src="<%= mix('/assets/images/tsubasa/tsubasa-cta.png') %>" alt="sumika">
-              </span>
-            </h2>
+            <%- include('/partials/heading', {
+              modifier: 'heading-banner-more heading-banner-more-tsubasa',
+              imgPath: mix('/assets/images/tsubasa/tsubasa-cta.png'),
+              alt: 'tsubasa',
+              altSubtext: '',
+              subtextvg: ''
+            }) %>
+
             <div class="call-to-action-description">
               <p class="call-to-action-description-text">
                 メガジップラインつばさのこだわりポイントや、知ってい<br/>

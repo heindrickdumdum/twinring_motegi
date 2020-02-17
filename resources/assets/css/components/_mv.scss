@@ -177,12 +177,28 @@
   &.hellowoods-mv-heading {
     bottom: 50px;
 
+
+
     .heading-text {
-      font-size: 50px;
+      font-size: 45px;
       -webkit-text-fill-color: $color-white;
     }
     .heading-subtext {
       height: 50px;
+
+      @include max-screen ($breakpoint-mobile) {
+        height: 43px;
+        width: 227px;
+        margin-top: 0;
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      left: 20px;
+
+      .heading {
+        margin-bottom: 12px;
+      }
     }
   }
 
@@ -452,12 +468,15 @@
   overflow-y: hidden;
 
   .mv-heading {
-    bottom: 89px;
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: 89px;
+    }
 
     @include max-screen($breakpoint-mobile) {
       padding-left: 20px;
       padding-right: 20px;
-      bottom: 47px;
+      bottom: 55px;
+      left: 0px;
     }
   }
 
@@ -482,9 +501,10 @@
     height: 62px;
 
     @include max-screen($breakpoint-mobile) {
-      height: 50.5px;
-      margin-top: -20px;
-      margin-left: -31px;
+      height: 52.5px;
+      max-width: 202.5px;
+      margin-top: -25px;
+      margin-left: -2px;
     }
 
     svg {
@@ -638,13 +658,15 @@
 
 
 .mv-heading-sumika {
-  @include max-screen($breakpoint-mobile) {
-   .mv-heading-subtexts {
+  .mv-heading-subtexts {
     svg {
-      width: 220px;
-      height: 74px;
+      width: 653px;
+      height: 81px;
+      @include max-screen($breakpoint-mobile) {
+        width: 220px;
+        height: 74px;
+      }
     }
-   }
   }
 }
 

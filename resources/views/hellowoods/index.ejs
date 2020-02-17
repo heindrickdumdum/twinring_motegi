@@ -18,7 +18,7 @@
     <div class="l-container mv-container">
       <h2 class="mv-heading hellowoods-mv-heading">
         <%- include('/partials/heading', {
-          'modifier': '',
+          'modifier': 'heading-hellowoods',
           'text': 'Hello Woods',
           'alt': '',
           'subtextvg': 'hellowoods-mv-subtext',
@@ -35,7 +35,7 @@
 
   <main>
     <div class="l-section">
-      <section class="info-container">
+      <section class="info-container info-container-hellowoods">
           <div class="l-section-title">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-mobipark',
@@ -59,7 +59,7 @@
     </div>
     
     <div class="l-section">
-      <div class="challenge">
+      <div class="challenge hellowoods">
         <div class="l-container">
           <div class="row">
             <div class="challenge-left">
@@ -109,7 +109,8 @@
           altSubtext: ''
         }) %>
         <div class="map-wrapper">
-          <img class="map-image" src="<%= mix('/assets/images/hellowoods/field-intro-map.png') %>" alt="Map">
+          <img class="map-image u-show-pc" src="<%= mix('/assets/images/hellowoods/field-intro-map.png') %>" alt="Map">
+          <img class="map-image u-show-sp" src="<%= mix('/assets/images/hellowoods/field-intro-map-sp.png') %>" alt="Map">
         </div>
         <div class="section-contents">
           <p class="section-contents-copy">
@@ -238,7 +239,7 @@
         }) %>
       </div>
 
-      <div class="l-container-m file-dl">
+      <div class="l-container file-dl">
         <div class="">
           <div class="file-dl-wrap">
             <a href="http://test.pdf" target="_blank" class="file-link">
@@ -299,10 +300,10 @@
           subtextvg: 'sponsors-subtext'
         }) %>
       </div>
-      <div class="l-container-m">
+      <div class="l-container">
         <ul class="sponsor-list">
           <% sponsorsData.forEach(item => { %>
-            <li class="sponsor-item">
+            <li class="sponsor-item <%- item.alt -%>">
               <img src="<%- item.src -%>" alt="<%- item.alt -%>">
             </li>
             <% } ) %>

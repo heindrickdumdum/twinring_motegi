@@ -155,6 +155,7 @@
   width: 410px;
 
   @include max-screen($breakpoint-mobile) {
+    margin-top: -33px;
     position: relative;
     right: auto;
     left: 23px;

@@ -5,7 +5,7 @@ const constants = {
   IS_FIXED: 'is-fixed',
   VISIBLE_CLASS: 'is-visible',
   DURATION: 300,
-  BREAKPOINT_MOBILE: 767,
+  BREAKPOINT_MOBILE: 749,
   SLIDES_PER_VIEW: 3,
   SLIDES_PER_SHIFT: 1,
   VIEWPORT_WIDTH: window.innerWidth || document.documentElement.clientWidth,

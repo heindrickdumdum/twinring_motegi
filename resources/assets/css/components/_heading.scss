@@ -1239,7 +1239,7 @@
 
     .heading-kids-carbike-attraction {
       .heading-subtext {
-        min-height: 111px;
+        min-height: 56px;
       }
     }
   }
@@ -1255,6 +1255,25 @@
   .adventure-content-copy {
     @include min-screen($breakpoint-mobile + 1) {
       margin-top: 0px;
+    }
+  }
+
+  .heading-racing-kart {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        min-height: 23px;
+        margin-top: 12px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+
+//modifier sp info
+.heading-info {
+  .heading-subtext {
+    @include max-screen($breakpoint-mobile) {
+      min-height: 25px !important;
     }
   }
 }

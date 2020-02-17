@@ -1,5 +1,9 @@
 .info-container {
-  margin-top: 80px ;
+  margin-top: 65px ;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 0px;
+  }
 
   .info-list {
     max-width: 1021px;
@@ -33,12 +37,31 @@
         position: absolute;
         left: 15px;
         top: 7px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 10px;
+          height: 10px;
+          left: 3px;
+          top: 3px;
+        }
       }
 
       span {
         margin-top: 20px;
         margin-bottom: 20px;
         display: block;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: -6px;
+          margin-top: 14px;
+          padding-bottom: 13px;
+        }
+      }
+
+      &:first-child {
+        span {
+          margin-top: 0px;
+        }
       }
     }
   }
@@ -54,9 +77,11 @@
       margin-right: auto;
       padding-left: 20px;
       padding-right: 20px;
+      margin-top: 36px;
 
       .info-item {
         font-size: 12px;
+        padding-left: 23px;
       }
     }
   }

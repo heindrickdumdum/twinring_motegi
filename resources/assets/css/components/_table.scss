@@ -16,6 +16,26 @@
       margin-bottom: 55px;
     }
   }
+
+  &.table-craft {
+    &::before {
+      @include max-screen($breakpoint-mobile) {
+        position: absolute;
+        left: -20px;
+        right: -20px;
+        top: -135px;
+        bottom: -80px;
+        background-image: url('../images/craft/craft-table-bg-sp.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        content: '';
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      position: relative;
+    }
+  }
 }
 
 .table-head {
@@ -31,8 +51,6 @@
 
 .table-col {
   width: calc(100% - 93px);
-
-
   letter-spacing: 0.18em;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -64,6 +82,15 @@
     background-image: url(/assets/images/img-dash.png);
     background-repeat: repeat-x;
     opacity: 0.2;
+  }
+
+  .table-craft & {
+    @include max-screen($breakpoint-mobile) {
+      padding: 12px 13px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      line-height: 1.5;
+    }
   }
 }
 

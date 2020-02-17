@@ -7,15 +7,20 @@
   display: block;
   position: absolute;
   top: 50%;
-  right: 40px;
+  right: 5px;
   transform-origin: center;
   transform: translateY(-50%) rotate(180deg);
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 7px 12.1px 7px;
+  border-width: 0 5.5px 9px 5.5px;
   border-color: transparent transparent #719b68 transparent;
   transition: transform 0.35s ease-in-out;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    right: 40px;
+    border-width: 0 7px 12.1px 7px;
+  }
 
   &.is-active {
     transform: translateY(-50%) rotate(0deg);
@@ -32,7 +37,11 @@
   padding: 28px 95px 28px 44px;
   cursor: pointer;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 22px 95px 20px 44px;
+  }
 
 }
 
@@ -42,6 +51,7 @@
   transition: height .30s ease-out;
   border-bottom: 1px solid #dfdfdf;
   height: 0;
+  border-bottom: 1px solid #dfdfdf;
 
   @include max-screen($breakpoint-mobile) {
     font-size: 12px;
@@ -75,7 +85,7 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 2;
-  
+
   @include max-screen($breakpoint-mobile) {
     font-size: 12px;
   }

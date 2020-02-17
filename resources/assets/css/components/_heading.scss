@@ -77,16 +77,6 @@
       margin-top: 90px;
     }
 
-    // .subpage-title {
-    //   font-size: 26px;
-    // }
-
-    // .subpage-inner {
-    //   > p {
-    //     font-size: 24px;
-    //   }
-    // }
-
     .heading-family-walk {
       .heading-subtext {
         height: 67px;
@@ -366,6 +356,7 @@
       }
     }
   }
+
   &.heading-main-debden {
     img {
       max-width: 310px;
@@ -392,22 +383,39 @@
 
     .heading {
       @include max-screen($breakpoint-mobile) {
-        margin: 56px auto 59px;
+        margin: 0 auto;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      position: relative;
+      margin: 0;
+      padding: 29px 0 60px;
+
+      &::before {
+        background-image: url('../images/craft/craft-heading-wrap-bg-sp.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: -20px;
+        top: -19px;
+        right: -21px;
+        bottom: 0;
+        content: '';
       }
     }
   }
-
 }
 
 //how to enjoy heading
 .heading-howto {
   @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 35px;
+    margin-bottom: 60px;
   }
 
   &.heading-howto-acrox {
     .heading-subtext {
-      margin: 10px auto 0;
+      margin: 17px auto 0;
       max-width: 628px;
       width: 100%;
 
@@ -421,7 +429,7 @@
 
   &.heading-howto-bunbun {
     .heading-subtext {
-      margin: 10px auto 0;
+      margin: 17px auto 0;
       max-width: 560px;
       width: 100%;
 
@@ -434,6 +442,7 @@
 
   &.heading-howto-debden {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 669px;
       width: 100%;
       height: 40px;
@@ -442,6 +451,7 @@
 
   &.heading-howto-dokidoki {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 545px;
       width: 100%;
     }
@@ -449,6 +459,7 @@
 
   &.heading-howto-forest-driving {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 539px;
       width: 100%;
 
@@ -462,6 +473,7 @@
 
   &.heading-howto-wildracer {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 626px;
       width: 100%;
 
@@ -475,6 +487,7 @@
 
   &.heading-howto-motorcycle {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 925px;
       width: 100%;
 
@@ -486,6 +499,7 @@
 
   &.heading-howto-mototouring {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 625px;
       width: 100%;
 
@@ -499,6 +513,7 @@
 
   &.heading-howto-motoracer {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 583px;
       width: 100%;
 
@@ -512,6 +527,7 @@
 
   &.heading-howto-dream {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 616px;
       width: 100%;
 
@@ -525,6 +541,7 @@
 
   &.heading-howto-drift {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 515px;
       width: 100%;
 
@@ -538,13 +555,14 @@
 
   &.heading-howto-challenge {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 669px;
       width: 100%;
 
       @include max-screen($breakpoint-mobile) {
         max-width: 256px;
         height: 56px;
-        margin-top: 15px;
+        margin: 10px auto 0;
       }
     }
   }
@@ -764,6 +782,7 @@
       max-width: 389px;
       height: 34px;
       @include max-screen($breakpoint-mobile) {
+        max-width: 275px;
         width: auto;
       }
     }
@@ -850,25 +869,75 @@
     .heading-subtext {
       max-width: 139px;
       margin: 0 auto;
+      height: 29px;
       width: 100%;
+
 
       @include min-screen($breakpoint-mobile + 1) {
         max-width: 201px;
+        height: 36px;
       }
     }
   }
 
   &.heading-kart-challenge {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 50px;
+    }
+
     .heading-subtext {
       max-width: 959px;
-      margin-top: 0;
+      margin: 0 auto;
       width: 100%;
 
       @include max-screen($breakpoint-mobile) {
         height: auto;
+        width: calc(100% + 40px);
         max-width: 335px;
+        position: relative;
       }
+
+      @include max-screen(375px) {
+        left: -20px;
+      }
+    }
+  }
+
+  &.heading-comparison {
+    text-align: center;
+    .heading-subtext {
+      max-width: 491px;
+      width: 100%;
+    }
+  }
+
+  &.heading-forest-craft {
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0;
+      }
+    }
+
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        height: 43px;
+        display: block;
+        padding: 0 14px 0 8px;
+        margin-top: 3px;
+      }
+    }
+
+    svg {
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        height: 43px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 18px;
     }
   }
 }
@@ -886,6 +955,8 @@
     @include max-screen($breakpoint-mobile) {
       text-align: center;
       font-size: 13px;
+      margin-top: 3px;
+      line-height: 1.5;
     }
   }
 
@@ -900,9 +971,13 @@
 .map {
   .heading-wrap {
     .heading-subtext {
-      // max-width: 319px;
-      // margin-top: 0px;
       display: block;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 0px;
+        max-width: 230px;
+        padding: 0px;
+      }
     }
   }
 }
@@ -934,8 +1009,41 @@
 
   .heading-title-adventure {
     .heading-subtext {
-      // max-width: 443px;
       display: block;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 257px;
+        margin-top: 0;
+        padding: 0;
+      }
+    }
+
+    &-sumika {
+      @include max-screen($breakpoint-mobile) {
+        .heading-subtext {
+          max-width: 225px;
+          padding: 0;
+        }
+      }
+    }
+
+    &-dokidoki {
+      @include max-screen($breakpoint-mobile) {
+        .heading-subtext {
+          max-width: 289px;
+          padding: 0;
+        }
+      }
+    }
+
+    &-itadaki {
+      @include max-screen($breakpoint-mobile) {
+        .heading-subtext {
+          max-width: 174.5px;
+          padding: 0;
+          margin-top: -14px;
+        }
+      }
     }
   }
 }
@@ -1122,13 +1230,24 @@
 
     .heading-info {
       .heading-subtext {
-        min-height: 47px;
+        min-height: 25px;
+        margin-top: 12px;
       }
     }
 
     .heading-kids-carbike-attraction {
       .heading-subtext {
-        min-height: 111px;
+        min-height: 56px;
+        padding: 0px;
+        margin-top: 13px;
+      }
+    }
+
+    .heading-racing-kart {
+      .heading-subtext {
+        max-width: 220px;
+        padding: 0;
+        margin-top: 0px;
       }
     }
   }

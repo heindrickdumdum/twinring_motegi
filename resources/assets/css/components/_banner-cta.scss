@@ -23,7 +23,8 @@
     }
 
     @include max-screen($breakpoint-mobile) {
-      margin-top: -45px;
+      margin-top: -56px;
+      height: 97px;
     }
   }
 
@@ -44,7 +45,13 @@
       padding-right: 0px;
     }
   }
+}
 
-  // SP
-
+// SP
+@include max-screen($breakpoint-mobile) {
+  .subpage-mobipark {
+    .banner-cta {
+      margin-top: 96px;
+    }
+  }
 }

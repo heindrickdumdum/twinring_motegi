@@ -61,6 +61,12 @@
       bottom: -50px;
     }
   }
+
+  .mv-subpage-craft & {
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 71%;
+    }
+  }
 }
 
 .mv-list-top {

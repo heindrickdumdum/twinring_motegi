@@ -366,6 +366,7 @@
       }
     }
   }
+  
   &.heading-main-debden {
     img {
       max-width: 310px;
@@ -392,11 +393,28 @@
 
     .heading {
       @include max-screen($breakpoint-mobile) {
-        margin: 56px auto 59px;
+        margin: 0 auto;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      position: relative;
+      margin: 0;
+      padding: 29px 0 60px;
+
+      &::before {
+        background-image: url('../images/craft/craft-heading-wrap-bg-sp.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: -20px;
+        top: -19px;
+        right: -21px;
+        bottom: 0;
+        content: '';
       }
     }
   }
-
 }
 
 //how to enjoy heading
@@ -869,6 +887,34 @@
         height: auto;
         max-width: 335px;
       }
+    }
+  }
+
+  &.heading-forest-craft {
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0;
+      }
+    }
+    
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        height: 43px;
+        display: block;
+        padding: 0 14px 0 8px;
+        margin-top: 3px;
+      }
+    }
+
+    svg {
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        height: 43px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 18px;
     }
   }
 }

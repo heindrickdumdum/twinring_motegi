@@ -170,7 +170,9 @@
         </div>
 
         <div class="steps-list-wrapper">
-          <%- include('/partials/musasabi/section-steps') -%>
+          <%- include('/partials/steps', {
+            dataSteps: getData().data.stepsMusasabi
+          }) -%>
         </div>
       </div>
 

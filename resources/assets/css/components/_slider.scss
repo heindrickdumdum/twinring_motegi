@@ -89,6 +89,7 @@
     @include max-screen($breakpoint-mobile) {
       margin-left: auto;
       margin-right: auto;
+      max-width: 281px;
     }
 
     &:before {
@@ -102,6 +103,16 @@
       background-repeat: no-repeat;
       background-size: cover;
       z-index: 1;
+
+      @include max-screen($breakpoint-mobile) {
+        background-image: url(../images/mobipark/mobipark-kids-attraction-bg-sp.png);
+        max-width: 335px;
+        height: calc(100% - 0px);
+        background-size: 100%;
+        left: 50%;
+        top: -6%;
+        transform: translateX(-50%);
+      }
     }
 
     &:after {
@@ -115,6 +126,10 @@
       background-repeat: no-repeat;
       background-size: cover;
       z-index: 2;
+
+      @include max-screen($breakpoint-mobile) {
+        display: none;
+      }
     }
   }
 
@@ -135,6 +150,10 @@
     margin-top: 38px;
     text-align: center;
 
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 14px;
+    }
+
     .swiper-pagination-bullet {
       margin-right: 13px;
       width: 14px;
@@ -142,6 +161,12 @@
       border-radius: 50%;
       background-color: $color-gray;
       display: inline-block;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 7px;
+        height: 7px;
+        margin-right: 8px;
+      }
 
       &-active {
         background-color: $color-green;

@@ -356,6 +356,7 @@
       }
     }
   }
+  
   &.heading-main-debden {
     img {
       max-width: 310px;
@@ -382,11 +383,28 @@
 
     .heading {
       @include max-screen($breakpoint-mobile) {
-        margin: 56px auto 59px;
+        margin: 0 auto;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      position: relative;
+      margin: 0;
+      padding: 29px 0 60px;
+
+      &::before {
+        background-image: url('../images/craft/craft-heading-wrap-bg-sp.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: -20px;
+        top: -19px;
+        right: -21px;
+        bottom: 0;
+        content: '';
       }
     }
   }
-
 }
 
 //how to enjoy heading
@@ -893,6 +911,34 @@
       max-width: 491px;
     }
   }
+
+  &.heading-forest-craft {
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0;
+      }
+    }
+    
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        height: 43px;
+        display: block;
+        padding: 0 14px 0 8px;
+        margin-top: 3px;
+      }
+    }
+
+    svg {
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        height: 43px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 18px;
+    }
+  }
 }
 
 //modifier kids carbike attraction
@@ -908,6 +954,8 @@
     @include max-screen($breakpoint-mobile) {
       text-align: center;
       font-size: 13px;
+      margin-top: 3px;
+      line-height: 1.5;
     }
   }
 
@@ -922,9 +970,13 @@
 .map {
   .heading-wrap {
     .heading-subtext {
-      // max-width: 319px;
-      // margin-top: 0px;
       display: block;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 0px;
+        max-width: 230px;
+        padding: 0px;
+      }
     }
   }
 }
@@ -956,8 +1008,41 @@
 
   .heading-title-adventure {
     .heading-subtext {
-      // max-width: 443px;
       display: block;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 257px;
+        margin-top: 0;
+        padding: 0;
+      }
+    }
+
+    &-sumika {
+      @include max-screen($breakpoint-mobile) {
+        .heading-subtext {
+          max-width: 225px;
+          padding: 0;
+        }
+      }
+    }
+
+    &-dokidoki {
+      @include max-screen($breakpoint-mobile) {
+        .heading-subtext {
+          max-width: 289px;
+          padding: 0;
+        }
+      }
+    }
+
+    &-itadaki {
+      @include max-screen($breakpoint-mobile) {
+        .heading-subtext {
+          max-width: 174.5px;
+          padding: 0;
+          margin-top: -14px;
+        }
+      }
     }
   }
 }
@@ -1144,13 +1229,24 @@
 
     .heading-info {
       .heading-subtext {
-        min-height: 47px;
+        min-height: 25px;
+        margin-top: 12px;
       }
     }
 
     .heading-kids-carbike-attraction {
       .heading-subtext {
-        min-height: 111px;
+        min-height: 56px;
+        padding: 0px;
+        margin-top: 13px;
+      }
+    }
+
+    .heading-racing-kart {
+      .heading-subtext {
+        max-width: 220px;
+        padding: 0;
+        margin-top: 0px;
       }
     }
   }

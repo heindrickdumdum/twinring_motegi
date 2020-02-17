@@ -1,6 +1,11 @@
 .design-petals,
 .design-circle,
-.design-mount {
+.design-mount,
+.design-feature,
+.design-parkmap,
+.design-parkmap-inner {
+  position: relative;
+
   &::before,
   &::after {
     content: '';
@@ -12,9 +17,58 @@
   }
 }
 
-.design-circle {
-  position: relative;
+.design-feature {
+  &::before {
+    width: 268px;
+    height: 216px;
+    left: 0;
+    top: 143px;
+    background-image: url(#{$image-path}design-mount1.png);
+  }
+  &::after {
+    width: 57px;
+    height: 95px;
+    right: 58px;
+    top: 46px;
+    background-image: url(#{$image-path}design-leaves1.png);
+  }
+}
 
+.design-parkmap {
+  &::before {
+    width: 39px;
+    height: 37px;
+    left: 45px;
+    top: -58px;
+    background-image: url(#{$image-path}design-leaves2.png);
+  }
+  &::after {
+    width: 78px;
+    height: 59px;
+    right: 379px;
+    top: -31px;
+    background-image: url(#{$image-path}design-leaves3.png);
+  }
+}
+
+.design-parkmap-inner {
+  &::before {
+    width: 358px;
+    height: 343px;
+    right: -23px;
+    top: -64px;
+    background-image: url(#{$image-path}design-leaves4.png);
+  }
+  &::after {
+    width: 208px;
+    height: 328px;
+    left: 0;
+    bottom: -81px;
+    background-image: url(#{$image-path}design-leaves5.png);
+  }
+}
+
+.design-circle {
   &::before {
     width: 204px;
     height: 205px;
@@ -34,8 +88,6 @@
 }
 
 .design-mount {
-  position: relative;
-
   &::before {
     width: 228px;
     height: 183px;
@@ -67,8 +119,6 @@
 }
 
 .design-petals {
-  position: relative;
-
   &::before {
     width: 95px;
     height: 133px;

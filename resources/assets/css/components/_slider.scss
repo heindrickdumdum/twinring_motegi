@@ -142,3 +142,18 @@
     }
   }
 }
+
+.top-slider {
+  .swiper-wrapper {
+    margin: 0 -95px;
+  }
+}
+
+.top-slider-image {
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,7 +1,21 @@
 .menu {
 	@include max-screen($breakpoint-mobile) {
-		margin-top: 113px;
+		margin-top: 96px;
 	}
+
+	&::before {
+    @include max-screen($breakpoint-mobile) {
+      background-image: url("../images/craft/craft-menu-bg-sp.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: 11px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
 }
 
 .menu-list {
@@ -11,6 +25,7 @@
 
 	@include max-screen($breakpoint-mobile) {
 		margin: 0 -3%;
+		position: relative;
 	}
 }
 
@@ -68,5 +83,128 @@
 		font-size: 12px;
 		margin: 0;
 		line-height: 2;
+	}
+}
+
+//modifier
+.craft-recommendation {
+	&::before {
+    @include max-screen($breakpoint-mobile) {
+      background-image: url("../images/craft/craft-recommendation-bg-sp.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: -47px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+
+  .heading-subtext {
+  	@include max-screen($breakpoint-mobile) {
+  		padding: 0 29px 0 28px;
+    	margin-top: 8px;
+    	height: 34px;
+  	}
+  }
+
+  .heading-wrap {
+  	@include max-screen($breakpoint-mobile) {
+			margin-bottom: 36px;
+  	}
+  }
+
+  .heading {
+  	@include max-screen($breakpoint-mobile) {
+			margin-bottom: 0;
+  	}
+
+  	svg {
+	  	@include max-screen($breakpoint-mobile) {
+	  		width: 100%;
+	  	}
+	  }
+  }
+
+  .article-heading {
+  	@include max-screen($breakpoint-mobile) {
+  		margin-top: 14px;
+  		min-height: 52px;
+  	}
+  }
+
+  @include max-screen($breakpoint-mobile) {
+		position: relative;
+		margin-top: 76px;
+		padding-bottom: 80px;
+  }
+}
+
+//modifier
+.craft-pick-up {
+	@include max-screen($breakpoint-mobile) {
+		margin-top: -26px;
+		padding-bottom: 25px;
+	}
+
+	.heading-pickup {
+		@include max-screen($breakpoint-mobile) {
+			margin-bottom: 44px;
+		}
+	}
+
+	.pickup-list {
+		@include max-screen($breakpoint-mobile) {
+			margin: 0 -12.5px;
+			width: auto;
+		}
+	}
+
+	.pickup-list-item {
+		@include max-screen($breakpoint-mobile) {
+			max-width: 100%;
+	    padding: 0 12.5px;
+	    flex: 0 0 50%;
+		}
+	}
+
+	.pickup-article {
+		.article-heading {
+			@include max-screen($breakpoint-mobile) {
+				font-size: 12px;
+				letter-spacing: 0.14em;
+				line-height: 1.67;
+				padding: 0;
+				min-height: 0;
+				margin-bottom: 6px;
+			}
+		}
+
+		.article-period {
+			@include max-screen($breakpoint-mobile) {
+				padding: 0;
+			}
+		}
+
+		@include max-screen($breakpoint-mobile) {
+			padding-bottom: 9px;
+		}
+	}
+
+	.article-image-wrap {
+		@include max-screen($breakpoint-mobile) {
+			padding: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+	.article-image {
+		@include max-screen($breakpoint-mobile) {
+			padding-top: 65%;
+			background-position: -6px -6px;
+			background-size: 109%;
+		}
 	}
 }

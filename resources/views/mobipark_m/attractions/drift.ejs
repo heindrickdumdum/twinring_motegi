@@ -244,4 +244,7 @@
   <!-- END BOTTOM -->
 </div>
 
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsDrift
+}) -%>
 <%- include('/partials/footer', {pageId}) -%>

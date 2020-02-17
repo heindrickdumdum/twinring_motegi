@@ -25,13 +25,29 @@
 
 .slider-how-to-enjoy {
   .slider-item {
-    opacity: 0.5;
-    transition: opacity 0.5s ease-in;
+    //opacity: 0.5;
 
     &.swiper-slide-active {
-      opacity: 1;
+      //opacity: 1;
+      &::before {
+        background-color: transparent;
+        z-index: -1;
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba($color-white, .5);
+      transition: background-color 0.5s ease-in;
+      z-index: $z-min;
     }
   }
+
 }
 
 //modifier kids carbike attraction

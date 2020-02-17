@@ -6,7 +6,7 @@
   margin-bottom: 50px;
 
   @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 105px;
+    margin-bottom: 120px;
   }
 
   > * {
@@ -18,7 +18,7 @@
     content: '';
     display: block;
     height: 1px;
-    max-width: 1298px;
+    max-width: 1220px;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -41,6 +41,14 @@
 
     @include max-screen($breakpoint-mobile) {
       background-position: center 53.1%;
+    }
+  }
+
+  &.subpage-craft {
+    &::before {
+      @include max-screen($breakpoint-mobile) {
+        content: normal;
+      }
     }
   }
 }
@@ -66,6 +74,18 @@
 
     @include min-screen($breakpoint-mobile + 1) {
       font-size: 15px;
+    }
+
+    .subpage-craft & {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 43px;
+      }
+    }
+  }
+
+  .subpage-craft & {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 95px;
     }
   }
 }
@@ -114,6 +134,18 @@
 
   iframe {
     width: 100%;
+  }
+
+  &.subpage-banner-craft {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 20px;
+    }
+
+    .subpage-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 10px;
+      }
+    }
   }
 
 }

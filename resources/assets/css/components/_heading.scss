@@ -366,6 +366,7 @@
       }
     }
   }
+  
   &.heading-main-debden {
     img {
       max-width: 310px;
@@ -392,11 +393,28 @@
 
     .heading {
       @include max-screen($breakpoint-mobile) {
-        margin: 56px auto 59px;
+        margin: 0 auto;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      position: relative;
+      margin: 0;
+      padding: 29px 0 60px;
+
+      &::before {
+        background-image: url('../images/craft/craft-heading-wrap-bg-sp.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: -20px;
+        top: -19px;
+        right: -21px;
+        bottom: 0;
+        content: '';
       }
     }
   }
-
 }
 
 //how to enjoy heading
@@ -544,7 +562,7 @@
       @include max-screen($breakpoint-mobile) {
         max-width: 256px;
         height: 56px;
-        margin-top: 15px;
+        margin: 10px auto 0;
       }
     }
   }
@@ -764,6 +782,7 @@
       max-width: 389px;
       height: 34px;
       @include max-screen($breakpoint-mobile) {
+        max-width: 275px;
         width: auto;
       }
     }
@@ -852,14 +871,21 @@
       margin: 0 auto;
       width: 100%;
 
+
       @include min-screen($breakpoint-mobile + 1) {
         max-width: 201px;
+        height: 29px;
       }
     }
   }
 
   &.heading-kart-challenge {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 50px;
+    }
+
     .heading-subtext {
       max-width: 959px;
       margin-top: 0;
@@ -867,8 +893,39 @@
 
       @include max-screen($breakpoint-mobile) {
         height: auto;
+        left: -20px;
+        width: calc(100% + 40px);
         max-width: 335px;
+        position: relative;
       }
+    }
+  }
+
+  &.heading-forest-craft {
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0;
+      }
+    }
+    
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        height: 43px;
+        display: block;
+        padding: 0 14px 0 8px;
+        margin-top: 3px;
+      }
+    }
+
+    svg {
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        height: 43px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 18px;
     }
   }
 }

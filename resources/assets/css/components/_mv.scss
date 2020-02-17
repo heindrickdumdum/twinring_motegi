@@ -61,6 +61,12 @@
       bottom: -50px;
     }
   }
+
+  .mv-subpage-craft & {
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 71%;
+    }
+  }
 }
 
 .mv-list-top {
@@ -191,7 +197,7 @@
   letter-spacing: 0.06em;
 
   @include max-screen($breakpoint-mobile) {
-    font-size: 19px;
+    font-size: 18px;
   }
 }
 
@@ -222,6 +228,7 @@
   @include max-screen($breakpoint-mobile) {
     width: 225px;
     height: 225px;
+    right: -23px;
     bottom: -70px;
   }
 
@@ -745,6 +752,7 @@
   @include max-screen($breakpoint-mobile) {
     height: 440px;
   }
+
   &:after {
     @include max-screen($breakpoint-mobile) {
       bottom: -37px;
@@ -755,6 +763,12 @@
       left: -16px;
       position: relative;
       margin-top: 0px;
+
+      img {
+        display: block;
+        max-width: 370px;
+        width: auto;
+      }
     }
   }
 }

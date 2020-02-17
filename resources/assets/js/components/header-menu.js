@@ -2,6 +2,7 @@ import CONST from './../constants';
 import {scrollLock, scrollAble} from "./scroll-able-lock";
 
 export default function headerMenu() {
+
   const headerButton = document.querySelectorAll('.js-header-button'),
         headerButtonSub = document.querySelectorAll('.js-header-button-sub'),
         headerSubInner = document.querySelectorAll('.js-header-sub-content-inner'),
@@ -18,8 +19,69 @@ export default function headerMenu() {
 
   function headerMenuController({ matches }) {
     if ( matches ) {
+      headerMenuSP();
+    } else {
+      headerMenuPC();
+    }
+  }
 
-      scrollAble();
+  // function for PC
+  function headerMenuPC() {
+
+  headerButton.forEach( function(el) {
+      let elAttrib = el.getAttribute('data-target')
+
+      el.addEventListener( 'click', function(e) {
+        e.preventDefault();
+      });
+
+      el.addEventListener( 'mouseenter', function() {
+
+        headerSub.classList.add(CONST.VISIBLE_CLASS)
+
+        if(elAttrib != '#') {
+          headerSubInner.forEach( function(e) {
+            e.style.display = 'none';
+          })
+
+          document.querySelectorAll('[data-content="'+elAttrib+'"]').forEach( function(e) {
+            e.style.display = 'block'
+          })
+
+          scrollLock()
+        }
+
+      });
+    });
+
+    // prevent element from clicking
+    document.querySelector('.header-sub-content').addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+
+    headerSub.addEventListener('click', function(e) {
+      e.preventDefault();
+      headerSub.classList.remove(CONST.VISIBLE_CLASS);
+
+      scrollAble()
+    })
+
+    if(!headerSub.classList.contains(CONST.VISIBLE_CLASS)) {
+      scrollAble()
+    }
+
+    headerClose.addEventListener( 'click', function(e) {
+      e.preventDefault()
+
+      headerSub.classList.remove(CONST.VISIBLE_CLASS)
+      scrollAble()
+    });
+
+  } // end of function for PC
+
+   // function for SP
+  function headerMenuSP() {
+      scrollAble()
 
       headerButtonSub.forEach( function(el) {
         let elAttrib = el.getAttribute('data-target')
@@ -62,74 +124,21 @@ export default function headerMenu() {
         }
      })
 
-      headerBurger.addEventListener( 'click', function(e) {
-        e.preventDefault();
-          e.currentTarget.classList.toggle(CONST.IS_ACTIVE);
-          headerToggle.classList.toggle(CONST.IS_ACTIVE);
+    headerBurger.addEventListener( 'click', function(e) {
+      e.preventDefault();
+        e.currentTarget.classList.toggle(CONST.IS_ACTIVE);
+        headerToggle.classList.toggle(CONST.IS_ACTIVE);
 
-          if(headerToggle.classList.contains(CONST.IS_ACTIVE)) {
-            headerToggle.style.maxHeight = headerToggleInner.clientHeight+'px';
+        if(headerToggle.classList.contains(CONST.IS_ACTIVE)) {
+          headerToggle.style.maxHeight = headerToggleInner.clientHeight+'px';
 
-            scrollLock();
-          } else {
-            headerToggle.style.maxHeight = 0;
+          scrollLock();
+        } else {
+          headerToggle.style.maxHeight = 0;
 
-            scrollAble();
-          }
-      });
+          scrollAble();
+        }
+    });
+  }  // end of function for SP
 
-
-    } else {
-
-      headerButton.forEach( function(el) {
-        let elAttrib = el.getAttribute('data-target')
-
-        el.addEventListener( 'click', function(e) {
-          e.preventDefault();
-        });
-
-        el.addEventListener( 'mouseenter', function() {
-
-          headerSub.classList.add(CONST.VISIBLE_CLASS)
-
-          if(elAttrib != '#') {
-            headerSubInner.forEach( function(e) {
-              e.style.display = 'none';
-            })
-
-            document.querySelectorAll('[data-content="'+elAttrib+'"]').forEach( function(e) {
-              e.style.display = 'block'
-            })
-
-            scrollLock()
-          }
-
-        });
-      });
-
-      // prevent element from clicking
-      document.querySelector('.header-sub-content').addEventListener('click', function(e) {
-        e.stopPropagation();
-      });
-
-      headerSub.addEventListener('click', function(e) {
-        e.preventDefault();
-        headerSub.classList.remove(CONST.VISIBLE_CLASS);
-
-        scrollAble()
-      })
-
-      if(!headerSub.classList.contains(CONST.VISIBLE_CLASS)) {
-        scrollAble()
-      }
-
-      headerClose.addEventListener( 'click', function(e) {
-        e.preventDefault()
-
-        headerSub.classList.remove(CONST.VISIBLE_CLASS)
-        scrollAble()
-      });
-    }
-
-  }
 }

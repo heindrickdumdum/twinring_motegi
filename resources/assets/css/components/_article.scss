@@ -14,6 +14,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left top;
+
+    @include max-screen($breakpoint-mobile) {
+      height: 60px;
+    }
   }
 
   &::before {
@@ -24,6 +28,12 @@
     background-position: -44px top;
     overflow: hidden;
     z-index: $z-min;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 187px;
+      left: 21px;
+      top: 0;
+    }
   }
 
   &::after {
@@ -32,6 +42,12 @@
     transform: scaleY(-1);
     background-image: url(#{$image-path}article/leaves2.png);
     width: 156px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 124px;
+      right: 32px;
+      bottom: 12px;
+    }
   }
 }
 
@@ -62,12 +78,19 @@
     background-image: url(#{$image-path}article/bg.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: left top;
+    background-position: center;
     position: absolute;
     left: -26px;
     top: -31px;
     width: 120%;
     height: 132%;
+
+    @include max-screen($breakpoint-mobile) {
+      top: -12%;
+      left: -22px;
+      width: 111%;
+      height: 128%;
+    }
   }
 }
 
@@ -148,10 +171,18 @@
 
   @include max-screen($breakpoint-mobile) {
     font-size: 14px;
+    top: -19px;
+    right: -11px;
+    width: 78px;
+    height: 79px;
   }
 
   &.article-category-news {
     background-image: url(#{$image-path}article/category-bg2.png);
+
+    @include max-screen($breakpoint-mobile) {
+      z-index: $z-max9;
+    }
   }
 }
 
@@ -161,6 +192,10 @@
   font-size: 14px;
   color: $color-seaweed;
   letter-spacing: 0.06em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 11px;
+  }
 }
 
 .article-name {

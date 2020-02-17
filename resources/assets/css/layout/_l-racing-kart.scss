@@ -1,3 +1,7 @@
 .l-racing-kart {
   padding-top: 39px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-top: 23px;
+  }
 }

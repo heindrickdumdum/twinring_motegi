@@ -21,26 +21,37 @@
   ]
 %>
 
-  <%- include('/partials/heading', {
-    'modifier': 'heading-wrap-center heading-wrap-activity',
-    'text': 'Attraction & Activity',
-    'subtext': mix('/assets/images/top/activity/subtext.png'),
-    'altSubtext': 'ツインリンクもてぎの楽しさをエリア別に紹介'
-  }) %>
+  <div class="u-show-pc">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-wrap-center heading-wrap-activity',
+      'text': 'Attraction & Activity',
+      'subtext': mix('/assets/images/top/activity/subtext.png'),
+      'altSubtext': 'ツインリンクもてぎの楽しさをエリア別に紹介'
+    }) %>
+  </div>
 
-  <div class="section-inner">
+  <div class="u-show-sp">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-wrap-center heading-wrap-activity',
+      'text': 'Attraction & Activity',
+      'subtext': mix('/assets/images/top/activity/subtext-sp.png'),
+      'altSubtext': 'ツインリンクもてぎの楽しさをエリア別に紹介'
+    }) %>
+  </div>
+
+  <div class="section-inner section-inner-activity">
     <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/activity/bg.jpg') %>);">
-      <img class="section-image-logo" src="<%= mix('/assets/images/top/activity/logo.png') %>" alt="Hello Woods">
+      <img class="section-image-logo section-image-logo-activity" src="<%= mix('/assets/images/top/activity/logo.png') %>" alt="Hello Woods">
     </div>
     <div class="l-container">
       <div class="section-contents">
-        <p class="section-contents-copy">森の中で「溢れる生命（いのち）」を見つけよう。<br>自然とふれあいながら、遊び・学べる体験型アトラクション・プログラムが満載です。</p>
+        <p class="section-contents-copy">森の中で「溢れる生命（いのち）」を見つけよう。<br class="u-show-pc">自然とふれあいながら、遊び・学べる体験型アトラクション・プログラムが満載です。</p>
 
-        <ul class="section-cards">
+        <ul class="section-cards u-show-pc">
           <%
             sectionActivityCards.forEach( card => {
           %>
-          <li class="section-cards-item">
+          <div class="section-cards-item">
             <a href="<%- card.url %>" class="section-card-link">
               <div class="section-cards-image-wrap image-border">
                 <span class="section-cards-category"><%- card.category %></span>
@@ -48,11 +59,33 @@
               </div>
               <p class="section-cards-title"><%- card.title %></p>
             </a>
-          </li>
+          </div>
           <%
             })
           %>
         </ul>
+
+        <div class="swiper-container slider js-slider-sp u-show-sp">
+          <ul class="swiper-wrapper section-cards">
+            <%
+              sectionActivityCards.forEach( card => {
+            %>
+            <li class="swiper-slide">
+              <div class="section-cards-item">
+                <a href="<%- card.url %>" class="section-card-link">
+                  <div class="section-cards-image-wrap image-border">
+                    <span class="section-cards-category"><%- card.category %></span>
+                    <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+                  </div>
+                  <p class="section-cards-title"><%- card.title %></p>
+                </a>
+              </div>
+            </li>
+            <%
+              })
+            %>
+          </ul>
+        </div>
 
         <div class="section-button">
           <%- include('/partials/button', {

@@ -8,6 +8,7 @@
 
 <% pageId = 'mobipark-subpage'; %>
 
+
 <div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
@@ -280,10 +281,14 @@
         }) %>
       </div>
 
-      <p class="kart-txt">
+      <p class="kart-txt u-show-pc">
         今年もいよいよ「TAKUMA KIDS KART CHALLENGE」が、７月７日(土)より始まります！<br />
         FINAL出場に向けてタイムトライアルにチャレンジしてみませんか？<br />
         12月開催の最終FINALに進めば、佐藤琢磨選手に直接指導を受けられます！
+      </p>
+
+      <p class="kart-txt u-show-sp">
+        今年もいよいよ「TAKUMA KIDS KART CHALLENGE」が、<br />７月７日(土)より始まります！<br />FINAL出場に向けてタイムトライアルに<br />チャレンジしてみませんか？<br />12月開催の最終FINALに進めば、<br />佐藤琢磨選手に直接指導を受けられます！<br />これからカートを始めたいお子様も、<br />経験のあるお子様も、<br />みなさんのチャレンジ待っています！
       </p>
 
       <div class="kart-challenge">
@@ -387,5 +392,9 @@
 
   <!-- END BOTTOM -->
 </div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsChallenge
+}) -%>
 
 <%- include('/partials/footer', {pageId}) -%>

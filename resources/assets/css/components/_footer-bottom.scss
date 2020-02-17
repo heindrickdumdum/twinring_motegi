@@ -26,6 +26,18 @@
     padding: 0 10px;
   }
 
+  &:nth-of-type(2) {
+    @include max-screen($breakpoint-mobile) {
+      border-left: 1px solid $color-primary;
+    }
+  }
+
+  &:nth-of-type(6) {
+    @include max-screen($breakpoint-mobile) {
+      border-left: 1px solid $color-primary;
+    }
+  }
+
   &:first-child {
     padding-left: 0;
     text-align: left;
@@ -88,6 +100,12 @@
 
     @include max-screen($breakpoint-mobile) {
       margin: 0 9px;
+    }
+
+    &:last-of-type {
+      @include max-screen($breakpoint-mobile) {
+        border: 1px solid rgba($color-mineshaft, .25);
+      }
     }
   }
 }

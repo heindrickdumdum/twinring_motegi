@@ -1,6 +1,7 @@
 <%
   var title = 'Twin Ring Motegi | DOKIDOKI'
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'dokidoki'; 
 %>
 
 <%
@@ -33,11 +34,8 @@
     }
   ]
 %>
-<!-- <%# include('./../partials/data/index') %> -->
+<% include('./../partials/data/index') %>
 <%- include('./../partials/head', { title }) -%>
-
-<% pageId = 'dokidoki'; %>
-
 <div class="subpage">
   <div class="mv mv-inner dokidoki-mv">
     <ul class="mv-list">

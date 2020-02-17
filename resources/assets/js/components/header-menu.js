@@ -2,6 +2,7 @@ import CONST from './../constants';
 import {scrollLock, scrollAble} from "./scroll-able-lock";
 
 export default function headerMenu() {
+
   const headerButton = document.querySelectorAll('.js-header-button'),
         headerButtonSub = document.querySelectorAll('.js-header-button-sub'),
         headerSubInner = document.querySelectorAll('.js-header-sub-content-inner'),
@@ -18,11 +19,72 @@ export default function headerMenu() {
 
   function headerMenuController({ matches }) {
     if ( matches ) {
+      headerMenuSP();
+    } else {
+      headerMenuPC();
+    }
+  }
 
-      scrollAble();
+  // function for PC
+  function headerMenuPC() {
+
+  headerButton.forEach( function(el) {
+      let elAttrib = el.getAttribute('data-target')
+
+      el.addEventListener( 'click', function(e) {
+        e.preventDefault();
+      });
+
+      el.addEventListener( 'mouseenter', function() {
+
+        headerSub.classList.add(CONST.VISIBLE_CLASS)
+
+        if(elAttrib != '#') {
+          headerSubInner.forEach( function(e) {
+            e.style.display = 'none';
+          })
+
+          document.querySelectorAll('[data-content="'+elAttrib+'"]').forEach( function(e) {
+            e.style.display = 'block'
+          })
+
+          scrollLock()
+        }
+
+      });
+    });
+
+    // prevent element from clicking
+    document.querySelector('.header-sub-content').addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+
+    headerSub.addEventListener('click', function(e) {
+      e.preventDefault();
+      headerSub.classList.remove(CONST.VISIBLE_CLASS);
+
+      scrollAble()
+    })
+
+    if(!headerSub.classList.contains(CONST.VISIBLE_CLASS)) {
+      scrollAble()
+    }
+
+    headerClose.addEventListener( 'click', function(e) {
+      e.preventDefault()
+
+      headerSub.classList.remove(CONST.VISIBLE_CLASS)
+      scrollAble()
+    });
+
+  } // end of function for PC
+
+   // function for SP
+  function headerMenuSP() {
+      scrollAble()
 
       headerButtonSub.forEach( function(el) {
-        let elAttrib = el.getAttribute('href')
+        let elAttrib = el.getAttribute('data-target')
 
         if(elAttrib != '#') {
           el.classList.add(CONST.IS_ACTIVE);
@@ -30,87 +92,53 @@ export default function headerMenu() {
           el.addEventListener( 'click', function(e) {
             e.preventDefault();
 
-              el.classList.toggle(CONST.VISIBLE_CLASS);
-          });
-        }
-      })
+            let thisButton = e.currentTarget;
+            thisButton.classList.toggle(CONST.VISIBLE_CLASS);
 
-      headerBurger.addEventListener( 'click', function(e) {
-        e.preventDefault();
-          e.currentTarget.classList.toggle(CONST.IS_ACTIVE);
-          headerToggle.classList.toggle(CONST.IS_ACTIVE);
+            document.querySelectorAll('[data-content="'+elAttrib+'"]').forEach( function(content) {
+              if(thisButton.classList.contains(CONST.VISIBLE_CLASS)) {
+                headerSubInner.forEach( function(e) {
+                  e.classList.remove(CONST.IS_ACTIVE);
+                })
+                content.classList.add(CONST.IS_ACTIVE);
+                content.style.top = thisButton.offsetTop + thisButton.offsetHeight +'px';
 
-          if(headerToggle.classList.contains(CONST.IS_ACTIVE)) {
-            headerToggle.style.maxHeight = headerToggleInner.clientHeight+'px';
+                headerButtonSub.forEach( function(el) {
+                  el.style.marginBottom = 0;
+                  el.classList.remove(CONST.VISIBLE_CLASS);
+                  thisButton.classList.add(CONST.VISIBLE_CLASS);
+                });
 
-            scrollLock();
-          } else {
-            headerToggle.style.maxHeight = 0;
+                e.currentTarget.style.marginBottom = content.clientHeight +'px';
+              } else {
+                headerSubInner.forEach( function(e) {
+                  e.classList.remove(CONST.IS_ACTIVE);
+                })
 
-            scrollAble();
-          }
-      });
-
-
-      headerButton.forEach( function(el) {
-        let elAttrib = el.getAttribute('href')
-
-        el.addEventListener( 'click', function(e) {
-          e.preventDefault();
-
-          if(elAttrib != '#') {
-            console.log(elAttrib);
-
-            headerSubInner.forEach( function(e) {
-              e.classList.remove(CONST.IS_ACTIVE);
-            })
-            
-            document.querySelectorAll(elAttrib).forEach( function(e) {
-              e.classList.add(CONST.IS_ACTIVE);
+                headerButtonSub.forEach( function(el) {
+                  el.style.marginBottom = 0;
+                });
+              }
             });
-          }
-        });
-      });
+          })
+        }
+     })
 
-    } else {
+    headerBurger.addEventListener( 'click', function(e) {
+      e.preventDefault();
+        e.currentTarget.classList.toggle(CONST.IS_ACTIVE);
+        headerToggle.classList.toggle(CONST.IS_ACTIVE);
 
-      headerButton.forEach( function(el) {
-        let elAttrib = el.getAttribute('href')
+        if(headerToggle.classList.contains(CONST.IS_ACTIVE)) {
+          headerToggle.style.maxHeight = headerToggleInner.clientHeight+'px';
 
-        el.addEventListener( 'click', function(e) {
-          e.preventDefault();
-        });
+          scrollLock();
+        } else {
+          headerToggle.style.maxHeight = 0;
 
-        el.addEventListener( 'mouseenter', function() {
+          scrollAble();
+        }
+    });
+  }  // end of function for SP
 
-          if(elAttrib != '#') {
-            headerSub.classList.add(CONST.VISIBLE_CLASS)
-
-            headerSubInner.forEach( function(e) {
-              e.style.display = 'none';
-            })
-            document.querySelector(elAttrib).style.display = 'block'
-
-            scrollLock()
-          } else {
-            headerSub.classList.remove(CONST.VISIBLE_CLASS)
-            scrollAble()
-          }
-
-        });
-      });
-
-      if(!headerSub.classList.contains(CONST.VISIBLE_CLASS)) {
-        scrollAble()
-      }
-
-      headerClose.addEventListener( 'click', function(e) {
-        e.preventDefault()
-
-        headerSub.classList.remove(CONST.VISIBLE_CLASS)
-        scrollAble()
-      });
-    }
-
-  }
 }

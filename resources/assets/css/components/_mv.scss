@@ -23,7 +23,6 @@
   }
 }
 
-
 .mv-container {
   position: relative;
   z-index: $z-min;
@@ -32,36 +31,6 @@
 .mv-list,
 .mv-buttons-list {
   list-style: none;
-}
-
-.mv-list-top {
-  opacity: 0;
-  transition: opacity 1s ease-in;
-  transition-delay: 4s;
-  height: 607px;
-  position: relative;
-
-  @include max-screen($breakpoint-mobile) {
-    height: 378px;
-  }
-
-  .mv-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 1s ease-in;
-
-    &.is-active {
-      opacity: 1;
-    }
-  }
-
-  &.is-show {
-    opacity: 1;
-  }
 }
 
 .mv-image {
@@ -90,6 +59,48 @@
 
     &::after {
       bottom: -50px;
+    }
+  }
+
+  .mv-subpage-craft & {
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 71%;
+    }
+  }
+}
+
+.mv-list-top {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition-delay: 4s;
+  height: 607px;
+  position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    height: 440px;
+  }
+
+  .mv-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  &.is-show {
+    opacity: 1;
+  }
+
+  .mv-image {
+    @include max-screen($breakpoint-mobile) {
+      height: 440px;
     }
   }
 }
@@ -151,6 +162,11 @@
   &:not(.mv-heading-subpage) {
     bottom: -92px;
     left: 35px;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -122px;
+      left: 20px;
+    }
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -163,7 +179,7 @@
 
 
     .heading-text {
-      font-size: 50px;
+      font-size: 45px;
       -webkit-text-fill-color: $color-white;
     }
     .heading-subtext {
@@ -197,7 +213,7 @@
   letter-spacing: 0.06em;
 
   @include max-screen($breakpoint-mobile) {
-    font-size: 19px;
+    font-size: 18px;
   }
 }
 
@@ -228,6 +244,7 @@
   @include max-screen($breakpoint-mobile) {
     width: 225px;
     height: 225px;
+    right: -23px;
     bottom: -70px;
   }
 
@@ -239,6 +256,13 @@
 
   @include max-screen($breakpoint-mobile) {
     display: none;
+  }
+}
+
+.mv-today-top {
+  @include max-screen($breakpoint-mobile) {
+    display: flex;
+    bottom: -91px;
   }
 }
 
@@ -440,13 +464,15 @@
   max-height: 607px;
   height: auto;
   margin-bottom: 7px;
+  overflow-y: hidden;
 
   .mv-heading {
-    left: 0px;
-    bottom: 65px;
+    bottom: 89px;
 
     @include max-screen($breakpoint-mobile) {
-      left: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      bottom: 47px;
     }
   }
 
@@ -454,12 +480,34 @@
     font-size: 45px;
     color: $color-white;
     letter-spacing: 0.08em;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 22.5px;
+      letter-spacing: 0.08em;
+    }
   }
 
   .mv-heading-subtext-mobipark {
+    margin-top: -10px;
+    font-size: 54px;
+    color: $color-white;
+    text-align: left;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
     max-width: 356px;
-    width: 100%;
-    margin-top: 3px;
+    height: 62px;
+
+    @include max-screen($breakpoint-mobile) {
+      height: 50.5px;
+      margin-top: -20px;
+      margin-left: -31px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $color-white;
+      text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+    }
   }
 
   .mv-today-mobipark {
@@ -468,6 +516,7 @@
     height: 247px;
     bottom: -37px;
     background-image: url(../images/mobipark/mobipark-logo.png);
+    right: 20px;
 
     @include max-screen($breakpoint-mobile) {
       display: none;
@@ -713,4 +762,29 @@
 
 .mv-image-subpage {
   background-position-y: 25%;
+}
+
+.mv-top {
+  @include max-screen($breakpoint-mobile) {
+    height: 440px;
+  }
+
+  &:after {
+    @include max-screen($breakpoint-mobile) {
+      bottom: -37px;
+    }
+  }
+  .mv-heading-subtext {
+    @include max-screen($breakpoint-mobile) {
+      left: -16px;
+      position: relative;
+      margin-top: 0px;
+
+      img {
+        display: block;
+        max-width: 370px;
+        width: auto;
+      }
+    }
+  }
 }

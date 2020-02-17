@@ -14,6 +14,8 @@
     width: 550px;
     height: 350px;
     left: -117px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -139,6 +141,11 @@
 
 .parkmap-list {
   counter-reset: parkmap_list;
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+    z-index: $z-min;
+  }
 }
 
 .parkmap-right {
@@ -148,6 +155,7 @@
   width: 410px;
 
   @include max-screen($breakpoint-mobile) {
+    margin-top: -33px;
     position: relative;
     right: auto;
     left: 23px;
@@ -222,6 +230,11 @@
 
   &.parkmap-item-last {
     margin-top: 20px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 39px;
+      margin-left: -20px;
+    }
   }
 }
 
@@ -245,10 +258,18 @@
 //modifier for SP
 @include max-screen($breakpoint-mobile) {
   .map {
-    margin-bottom: 90px;
+    margin-bottom: 52px;
+    margin-top: -43px;
   }
 
   .map-img {
     margin: 0 -160px;
+
+    img {
+      max-width: 504px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

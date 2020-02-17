@@ -23,6 +23,10 @@
   @include max-screen ($breakpoint-mobile) {
     &.adventure-list-hellowoods {
       margin-bottom: 95px;
+
+      .adventure-bg {
+        height: 159px;
+      }
     }
   }
 }

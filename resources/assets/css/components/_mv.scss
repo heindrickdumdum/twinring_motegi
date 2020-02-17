@@ -160,12 +160,28 @@
   &.hellowoods-mv-heading {
     bottom: 50px;
 
+
+
     .heading-text {
       font-size: 50px;
       -webkit-text-fill-color: $color-white;
     }
     .heading-subtext {
       height: 50px;
+
+      @include max-screen ($breakpoint-mobile) {
+        height: 43px;
+        width: 227px;
+        margin-top: 0;
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      left: 20px;
+
+      .heading {
+        margin-bottom: 12px;
+      }
     }
   }
 

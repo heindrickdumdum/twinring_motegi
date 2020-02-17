@@ -14,7 +14,6 @@
 
     &.row {
       display: block;
-      width: 80%;
     }
   }
 
@@ -23,9 +22,10 @@
     width: 50%;
 
     @include max-screen ($breakpoint-mobile) {
-      width: 100%;
+      width: calc(100% + 12px);
       max-width: 430px;
       margin: 0 auto;
+      margin-bottom: 8px;
     }
   }
 
@@ -42,7 +42,8 @@
       position: relative;
 
       @include max-screen ($breakpoint-mobile) {
-        padding: 30px;
+        padding: 10px 15px;
+        padding-bottom: 22px;
       }
       
       img.animal-icon {
@@ -50,22 +51,33 @@
         
         @include max-screen ($breakpoint-mobile) {
           right: auto !important;
-          left: -30px !Important;
+          left: -12px !important;
+          max-width: 50px;
         }
 
         &.owl {
           right: -40px;
           top: -30px;
+          @include max-screen ($breakpoint-mobile) {
+            top: -48px;
+          }
         }
 
         &.rabbit {
           left: -40px;
           top: -30px;
+
+          @include max-screen ($breakpoint-mobile) {
+            top: -48px;
+          }
         }
 
         &.bird {
           top: -40px;
           right: 0;
+          @include max-screen ($breakpoint-mobile) {
+            top: -48px;
+          }
         }
 
         
@@ -75,6 +87,7 @@
 
     @include max-screen ($breakpoint-mobile) {
       width: 100%;
+      font-size: 12px;
     }
   }
 

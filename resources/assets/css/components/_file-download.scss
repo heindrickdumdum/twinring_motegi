@@ -8,8 +8,8 @@
     max-height: 170px;
 
     @include max-screen ($breakpoint-mobile) {
-      padding: 50px 20px;
-      font-size: 16px;
+      padding: 28px 0px;
+      font-size: 15px;
     }
 
     .file-link {
@@ -17,6 +17,11 @@
 
       .file-name {
         display: inline-block;
+          @include max-screen ($breakpoint-mobile) {
+            img {
+              width: 20px;
+            }
+          }
       }
     }
   }

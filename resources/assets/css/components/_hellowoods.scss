@@ -1,5 +1,11 @@
 .hellowoods-wrapper {
-  .l-container-m {max-width: 1021px;margin: 0 auto;}
+  .l-container-m {
+    max-width: 1021px;margin: 0 auto;
+  
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 252px;
+    }
+  }
   .bg-green {background-color: #4fae32;}
   .bg-gray {background-color: #9c9c9c;}
 

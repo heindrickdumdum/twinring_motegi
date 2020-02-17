@@ -865,6 +865,22 @@
       }
     }
   }
+
+  &.heading-hellowoods {
+    @include max-screen ($breakpoint-mobile) {
+      .heading {
+        .heading-text {
+          font-size: 22.5px;
+          text-align: left;
+          letter-spacing: 2px;
+        }
+      }
+
+      .heading-subtext {
+        text-align: left;
+      }
+    }
+  }
 }
 
 //modifier kids carbike attraction
@@ -932,6 +948,8 @@
       display: block;
     }
   }
+
+
 }
 
 // modifier dokidoki mobipark

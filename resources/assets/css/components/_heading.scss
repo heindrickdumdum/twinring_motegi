@@ -77,16 +77,6 @@
       margin-top: 90px;
     }
 
-    // .subpage-title {
-    //   font-size: 26px;
-    // }
-
-    // .subpage-inner {
-    //   > p {
-    //     font-size: 24px;
-    //   }
-    // }
-
     .heading-family-walk {
       .heading-subtext {
         height: 67px;
@@ -894,6 +884,13 @@
       @include max-screen(375px) {
         left: -20px;
       }
+    }
+  }
+
+  &.heading-comparison {
+    text-align: center;
+    .heading-subtext {
+      max-width: 491px;
     }
   }
 }

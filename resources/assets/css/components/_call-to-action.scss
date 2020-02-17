@@ -9,6 +9,11 @@
 
   @include max-screen($breakpoint-mobile) {
     margin: 40px 0;
+
+    &.call-to-action-hellowoods {
+      margin-top: 0;
+      margin-bottom: 55px;
+    }
   }
 
   &:after {
@@ -41,10 +46,11 @@
 
 .call-to-action-inner {
   position: relative;
-  padding: 28px 0 31px;
+  max-height: 277px;
+  padding: 47px;
 
 @include max-screen($breakpoint-mobile) {
-  padding: 20px;
+  padding: 27px 31px 10px;
 }
 
   &:before {
@@ -93,7 +99,7 @@
   font-family: $font-hiragino-w3;
   font-size: 12px;
   line-height: 1.667;
-  margin-top: 20px;
+  margin-top: 25px;
   letter-spacing: 0.16em;
 
   @include min-screen($breakpoint-mobile + 1) {
@@ -101,9 +107,9 @@
   }
 
   @include max-screen($breakpoint-mobile) {
-    padding-left: 0;
-    padding-right: 0;
+   
     // font-size: 12px;
+    margin-top: 15px;
   }
 }
 

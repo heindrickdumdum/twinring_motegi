@@ -10,7 +10,32 @@
 
       @include max-screen($breakpoint-mobile) {
         width: 33%;
-        padding: 20px;
+        padding: 0px;
+
+        &.Coleman {
+          padding: 4px 30px 11px 14px;
+        }
+
+        &.Stiihl {
+          padding: 2px 34px 10px 4px;
+        }
+
+        &.Jyaoan {
+          padding: 0px 12px 10px 4px;
+        }
+
+        &.Fumakira {
+          padding: 9px 30px 0px 15px;
+        }
+
+        &.MSAD {
+          padding: 8px 7px 0px 0px;
+        }
+
+        &.Mont-bell {
+          padding: 7px 20px 0px 23px;
+        }
+
       }
     }
 

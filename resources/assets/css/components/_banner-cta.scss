@@ -14,7 +14,7 @@
     content: '';
     background-color: $color-light-gray;
     height: 100px;
-    margin-top: -100px;
+    margin-top: -113px;
     width: 100%;
     z-index: 1;
 
@@ -48,6 +48,19 @@
 }
 
 // SP
+@include min-screen($breakpoint-mobile + 1) {
+  .subpage-mobipark {
+    .banner-cta {
+      margin-top: 84px;
+      margin-bottom: 108px;
+
+      &:after {
+        margin-top: -137px;
+      }
+    }
+  }
+}
+
 @include max-screen($breakpoint-mobile) {
   .subpage-mobipark {
     .banner-cta {

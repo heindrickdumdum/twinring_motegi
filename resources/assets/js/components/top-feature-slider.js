@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 
-export default function slider(params) {
+export default function topFeatureSlider(params) {
   if (!params.id) return;
   if (!params.target) return;
 
@@ -8,6 +8,11 @@ export default function slider(params) {
     speed: 1500,
     initialSlide: 2,
     centeredSlides: false,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
 
     breakpoints: {
       1280: {
@@ -16,7 +21,6 @@ export default function slider(params) {
         loopedSlides: 0,
         initialSlide: 1,
         slidesPerGroup: 3,
-        
       },
       375: {
         spaceBetween: 10,

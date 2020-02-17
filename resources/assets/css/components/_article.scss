@@ -4,12 +4,11 @@
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 
   &::before,
   &::after {
     content: '';
-    height: 72px;
+    height: 75px;
     position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
@@ -21,8 +20,8 @@
   }
 
   &::before {
-    width: 279px;
-    left: 12px;
+    width: 285px;
+    left: 25px;
     top: -12px;
     background-image: url(#{$image-path}article/leaves.png);
     background-position: -44px top;
@@ -37,11 +36,11 @@
   }
 
   &::after {
-    right: 5px;
-    bottom: -2px;
+    right: 17px;
+    bottom: 0;
     transform: scaleY(-1);
     background-image: url(#{$image-path}article/leaves2.png);
-    width: 156px;
+    width: 152px;
 
     @include max-screen($breakpoint-mobile) {
       width: 124px;
@@ -52,14 +51,17 @@
 }
 
 .article-heading {
-  margin-top: 8px;
-  padding-left: 7px;
-  min-height: 68px;
+  margin-top: 4px;
+  padding-left: 23px;
+  width: 100%;
+  min-height: 70px;
   font-size: 18px;
   font-weight: 600;
   color: $color-seaweed;
   line-height: 1.67;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.07em;
+  position: relative;
+  z-index: $z-min;
 
   @include max-screen($breakpoint-mobile) {
     font-size: 13px;
@@ -67,10 +69,10 @@
 }
 
 .article-image {
-  padding-top: 58%;
+  padding-top: 59%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: relative;
 
   &::before {
@@ -80,16 +82,14 @@
     background-size: contain;
     background-position: center;
     position: absolute;
-    left: -26px;
-    top: -31px;
-    width: 120%;
-    height: 132%;
+    left: -4.66%;
+    top: -8%;
+    width: 109%;
+    height: 115%;
 
     @include max-screen($breakpoint-mobile) {
-      top: -12%;
-      left: -22px;
-      width: 111%;
-      height: 128%;
+      // width: 111%;
+      // height: 128%;
     }
   }
 }
@@ -164,12 +164,13 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -38px;
-  right: -18px;
+  top: -32px;
+  right: -40px;
   width: 93px;
   height: 97px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
+  letter-spacing: 0.03em;
   background: url(#{$image-path}article/category-bg.png) no-repeat left top;
   background-size: contain;
   color: $color-crusoe;
@@ -193,11 +194,13 @@
 }
 
 .article-period {
-  padding-left: 7px;
+  padding-left: 23px;
   width: 100%;
   font-size: 14px;
   color: $color-seaweed;
   letter-spacing: 0.06em;
+  position: relative;
+  z-index: $z-min;
 
   @include max-screen($breakpoint-mobile) {
     font-size: 11px;
@@ -218,9 +221,19 @@
   padding: 15px;
   color: $color-white;
 
-  &.article-bg-green {background-color: $color-green}
-  &.article-bg-green-2 {background-color: $color-green-2}
-  &.article-bg-green-3 {background-color: $color-green-3}
-  &.article-bg-green-4 {background-color: $color-green-4}
-  &.article-bg-green-5 {background-color: $color-green-5}
+  &.article-bg-green {
+    background-color: $color-green;
+  }
+  &.article-bg-green-2 {
+    background-color: $color-green-2;
+  }
+  &.article-bg-green-3 {
+    background-color: $color-green-3;
+  }
+  &.article-bg-green-4 {
+    background-color: $color-green-4;
+  }
+  &.article-bg-green-5 {
+    background-color: $color-green-5;
+  }
 }

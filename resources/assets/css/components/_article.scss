@@ -103,9 +103,15 @@
   &.pickup-article {
     .article-heading {
       min-height: 93px;
+      @include max-screen($breakpoint-mobile) {
+        padding: 0;
+      }
     }
 
     .article-image-wrap {
+      @include max-screen($breakpoint-mobile) {
+        padding: 0;
+      }
       &:before,
       &:after {
         content: none;

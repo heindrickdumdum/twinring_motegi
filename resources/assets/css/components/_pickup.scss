@@ -2,13 +2,23 @@
 //   width: 100%;
 // }
 //
-// .pick-inner {
-//
-// }
-//
+.pick-inner {
+  @include max-screen($breakpoint-mobile) {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+}
+
 // .pickup-list {
 // }
 //
 // .pickup-list-item {
 //
 // }
+
+
+.pickup-article {
+  @include max-screen($breakpoint-mobile) {
+    padding: 12.5px;
+  }
+}

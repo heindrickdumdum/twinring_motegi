@@ -47,15 +47,15 @@
   }
 }
 
-.step-list-media-bottom {
+.step-media-bottom {
   margin-top: 30px;
 }
 
-.step-list-item {
+.step-item {
   width: calc((100% - 120px) / 3);
-  text-align: center;
   margin-bottom: 80px;
   position: relative;
+  text-align: center;
 
   @include max-screen($breakpoint-mobile) {
     width: 100%;
@@ -122,6 +122,25 @@
         @include max-screen ($breakpoint-mobile) {
           display: none;
         }
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    &::after {
+      content: " ";
+      width: 28px;
+      height: 12px;
+      position: relative;
+      display: none;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateX(-50%);
+      background: url('/assets/images/tsubasa/step-arrow-down.png') no-repeat;
+      background-size: contain;
+
+      @include max-screen ($breakpoint-mobile) {
+        display: block;
       }
     }
   }

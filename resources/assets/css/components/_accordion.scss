@@ -22,6 +22,10 @@
     border-width: 0 7px 12.1px 7px;
   }
 
+  @include max-screen($breakpoint-mobile) {
+    right: 7px;
+  }
+
   &.is-active {
     transform: translateY(-50%) rotate(0deg);
   }
@@ -34,12 +38,19 @@
   display: block;
   width: 100%;
   text-align: left;
+  padding: 28px 95px 28px 44px;
   cursor: pointer;
-  padding: 22px 40px 20px 44px;
-  // border-bottom: 1px solid #dfdfdf;
+  font-size: 18px;
+  font-weight: 600;
 
-  @include min-screen($breakpoint-mobile + 1) {
-    padding: 22px 95px 20px 44px;
+  // @include min-screen($breakpoint-mobile + 1) {
+  //   padding: 22px 95px 20px 44px;
+  //   font-size: 12px;
+  // }
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+    padding: 10px 27px 12px;
   }
 
 }
@@ -61,7 +72,8 @@
     font-size: 14px;
     padding: 20px;
     line-height: 2;
-    margin: 20px;
+    margin: 0 22px 30px;
+   
     @include max-screen($breakpoint-mobile) {
       font-size: 12px;
     }
@@ -76,6 +88,11 @@
   transform: translateY(-50%);
   img {
     max-width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 15px;
+      height: 10px;
+    }
   }
 }
 

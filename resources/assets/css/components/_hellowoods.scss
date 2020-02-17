@@ -1,5 +1,11 @@
 .hellowoods-wrapper {
-  .l-container-m {max-width: 1021px;margin: 0 auto;}
+  .l-container-m {
+    max-width: 1021px;margin: 0 auto;
+  
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 252px;
+    }
+  }
   .bg-green {background-color: #4fae32;}
   .bg-gray {background-color: #9c9c9c;}
 
@@ -20,11 +26,10 @@
       padding: 0;
     }
     .map-wrapper {
-      background-image: url(../images/hellowoods/field-intro-bg.png);
+      /*background-image: url(../images/hellowoods/field-intro-bg.png);*/
       text-align: center;
       background-repeat: no-repeat;
       background-position: center;
-      padding-top: 75px;
 
       @include max-screen ($breakpoint-mobile) {
         background-size: cover;
@@ -32,7 +37,7 @@
 
         .section-contents,
         .map-image {
-          padding: 0 32px;
+          /*padding: 0 32px;*/
         }
       }
     }
@@ -50,9 +55,12 @@
       position: relative;
       top: 0;
       right: 0;
-      display: block;
-      max-width: 320px;
-      margin: 20px auto;  
+      padding: 5px 11px;
+      font-size: 10px;
+      display: inline-block;
+      border-radius: 3px;
+      margin-top: 15px;
+      margin-bottom: 12px;
     }
   }
 }

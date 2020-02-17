@@ -117,7 +117,7 @@
 
         </tbody>
       </table>
-    
+
       <h3 class="table-heading">
         <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
       </h3>
@@ -188,9 +188,9 @@
           altSubtext: '',
         }) %>
        </div>
-      </div>  
+      </div>
 
-      <div class="l-content">
+      <div class="l-container">
         <div class="media u-clear">
           <div class="media-left">
             <div class="media-bg">
@@ -266,7 +266,7 @@
             altSubtext: '',
           }) %>
         </div>
-      </div>  
+      </div>
 
       <div class="l-section-inner">
         <img src="<%= mix('/assets/images/sumika-img.jpg') %>" alt="">
@@ -373,13 +373,15 @@
     </div>
   </section>
   <section class="faq l-section">
-    <%- include('/partials/accordion') %>
+    <%- include('/partials/accordion', {
+      dataAccordion: getData().data.accordionData
+    }) %>
   </section>
   <div class="call-to-action">
     <div class="l-container">
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
-          <h2 class="heading">
+          <h2>
             <span class="heading-texts">
               <img src="<%= mix('/assets/images/sumika/sumika-cta-2.png') %>" alt="sumika">
             </span>

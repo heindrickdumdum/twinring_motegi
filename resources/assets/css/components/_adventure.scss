@@ -31,6 +31,10 @@
 
     &.adventure-list-hellowoods {
       margin-bottom: 95px;
+
+      .adventure-bg {
+        height: 140px;
+      }
     }
   }
 
@@ -71,7 +75,8 @@
   &.hellowoods {
     bottom: -100px;
     @include max-screen($breakpoint-mobile) {
-      bottom: -60px;
+      bottom: -48px;
+      max-width: 119px;  
     }
   }
 }

@@ -16,6 +16,7 @@ export default function slider(params) {
         loopedSlides: 0,
         initialSlide: 1,
         slidesPerGroup: 3,
+        
       },
       375: {
         spaceBetween: 10,

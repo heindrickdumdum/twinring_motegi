@@ -69,10 +69,10 @@
 </div>
 
 <main>
-  <div class="l-feature">
+  <div class="l-feature design-feature">
     <section class="feature">
-      <div class="swiper-container slider js-slider-bottom feature-container">
-        <ul class="swiper-wrapper slider-wrapper">
+      <div class="swiper-container slider js-feature-slider feature-container">
+        <ul class="swiper-wrapper slider-wrapper slider-wrapper-feature">
           <%
             getData().data.featureContent.forEach( featureItem => {
           %>
@@ -87,12 +87,13 @@
           </li>
           <% }) %>
         </ul>
+        <div class="swiper-pagination swiper-pagination-feature"></div>
       </div>
     </section>
   </div>
 
-  <div class="l-parkmap">
-    <div class="parkmap">
+  <div class="l-parkmap design-parkmap">
+    <div class="parkmap design-parkmap-inner">
       <div class="l-container parkmap-container">
 
         <div class="u-show-pc">

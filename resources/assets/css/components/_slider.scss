@@ -6,11 +6,40 @@
   @include query($breakpoint-mobile){
       margin-left: 0;
   }
+
+  &.slider-wrapper-feature {
+    //margin-left: calc(((100vw - 1220px) / 2) - 19px);
+    margin-left: 92px;
+
+    @include query($breakpoint-mobile){
+      margin-left: 0;
+    }
+  }
 }
 
 // .slider-item {}
 
 //MODIFIER
+
+.swiper-pagination-feature {
+  margin-top: 14px;
+  text-align: center;
+
+  .swiper-pagination-bullet {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+    width: 50px;
+    height: 3px;
+    background-color: $color-gray;
+
+    &.swiper-pagination-bullet-active {
+      background-color: $color-green;
+    }
+  }
+}
+
+
 
 .slider-dokidoki {
   .slide-text {
@@ -169,5 +198,20 @@
         margin-right: 50px;
       }
     }
+  }
+}
+
+.top-slider {
+  .swiper-wrapper {
+    margin: 0 -95px;
+  }
+}
+
+.top-slider-image {
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }

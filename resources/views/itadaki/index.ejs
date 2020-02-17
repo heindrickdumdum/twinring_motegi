@@ -318,7 +318,7 @@ accordionData = [
               出す様々な障害物やバランスボール、ネット登りで楽しみ
               ながら進みましょう！
             </p>
-            
+
             <div class="note">
               <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
               <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
@@ -327,7 +327,7 @@ accordionData = [
                 ゴールできタネ！
               </div>
             </div>
-    
+
           </div>
         </div>
         <div class="media u-clear">
@@ -470,14 +470,16 @@ accordionData = [
   </section>
 
   <section class="faq l-section">
-    <%- include('/partials/accordion') %>
+    <%- include('/partials/accordion', {
+      dataAccordion: getData().data.accordionData
+    }) %>
   </section>
 
   <div class="call-to-action">
     <div class="l-container">
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
-          <h2 class="heading">
+          <h2>
             <span class="heading-texts">
               <img src="<%= mix('/assets/images/itadaki/itadaki-enjoy-more-title.png') %>" alt="sumika">
             </span>

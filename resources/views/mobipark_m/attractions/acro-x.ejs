@@ -257,4 +257,8 @@
   <!-- END BOTTOM -->
 </div>
 
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsAcrox
+}) -%>
 <%- include('/partials/footer', {pageId}) -%>

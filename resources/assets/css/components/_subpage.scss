@@ -6,7 +6,7 @@
   margin-bottom: 50px;
 
   @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 105px;
+    margin-bottom: 120px;
   }
 
   > * {
@@ -18,7 +18,7 @@
     content: '';
     display: block;
     height: 1px;
-    max-width: 1298px;
+    max-width: 1220px;
     position: absolute;
     bottom: 0;
     left: 50%;

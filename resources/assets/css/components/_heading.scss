@@ -544,7 +544,7 @@
       @include max-screen($breakpoint-mobile) {
         max-width: 256px;
         height: 56px;
-        margin-top: 15px;
+        margin: 10px auto 0;
       }
     }
   }
@@ -758,6 +758,7 @@
       max-width: 389px;
       height: 34px;
       @include max-screen($breakpoint-mobile) {
+        max-width: 275px;
         width: auto;
       }
     }
@@ -846,14 +847,21 @@
       margin: 0 auto;
       width: 100%;
 
+
       @include min-screen($breakpoint-mobile + 1) {
         max-width: 201px;
+        height: 29px;
       }
     }
   }
 
   &.heading-kart-challenge {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 50px;
+    }
+
     .heading-subtext {
       max-width: 959px;
       margin-top: 0;
@@ -861,7 +869,10 @@
 
       @include max-screen($breakpoint-mobile) {
         height: auto;
+        left: -20px;
+        width: calc(100% + 40px);
         max-width: 335px;
+        position: relative;
       }
     }
   }

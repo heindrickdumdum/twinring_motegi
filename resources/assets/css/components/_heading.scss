@@ -159,6 +159,12 @@
     margin: 0 auto;
   }
 
+  &.heading-banner-more-tsubasa{
+    .heading-subtext {
+      height: auto;
+    }
+  }
+
   &.heading-banner-more-acrox {
     .heading-subtext {
       @include max-screen($breakpoint-mobile) {
@@ -1010,7 +1016,7 @@
       .heading-subtext {
         @include min-screen($breakpoint-mobile + 1) {
           width: 443px;
-          height: 35px;   
+          height: 35px;
         }
 
         @include max-screen($breakpoint-mobile) {
@@ -1026,7 +1032,7 @@
           width: 578px;
           height: 35px;
         }
-    
+
         @include max-screen($breakpoint-mobile) {
           max-width: 289px;
           padding: 0;
@@ -1038,9 +1044,9 @@
       .heading-subtext {
         @include min-screen($breakpoint-mobile + 1) {
           width: 349px;
-          height: 35px;        
+          height: 35px;
         }
-    
+
         @include max-screen($breakpoint-mobile) {
           max-width: 174.5px;
           padding: 0;

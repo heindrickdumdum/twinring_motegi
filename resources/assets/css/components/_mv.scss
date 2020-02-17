@@ -608,6 +608,13 @@
   .mv-heading-texts{
     width: 100%;
     text-align: left;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 23px;
+      font-weight: normal;
+      transform: translateY(-50%);
+      top: 50%;
+    }
   }
 
   .mv-heading-subtexts {

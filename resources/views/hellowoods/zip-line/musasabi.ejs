@@ -38,22 +38,22 @@
   </div>
 
   <main>
-    <div class="subpage-inner">
-      <div class="heading-wrap heading-main heading-main-tsubasa">
+    <div class="subpage-inner subpage-inner-musasabi">
+      <div class="heading-wrap heading-main heading-main-musasabi">
         <h2 class="heading">
           <span class="heading-texts">
-            <img src="<%= mix('/assets/images/musasabi/musasabi-color-title.png') %>" alt="">
+            <img src="<%= mix('/assets/images/musasabi/musasabi-color-title-sp.png') %>" alt="ガイドと一緒に 森を巡るガイドツアー式 ジップライン">
           </span>
         </h2>
       </div>
 
-      <div class="subpage-banner">
+      <div class="subpage-banner subpage-banner-musasabi">
         <div class="subpage-banner-inner">
           <iframe width="1020" height="573" src="https://www.youtube.com/embed/Jxao8GHXegA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
 
-      <h3 class="subpage-title">
+      <h3 class="subpage-title subpage-title-musasabi">
         <span>アトラクション情報</span>
       </h3>
 
@@ -138,7 +138,7 @@
       </table>
     </div>
 
-    <section class="u-show-pc subpage-section subpage-section-video">
+    <section class="subpage-section subpage-section-video">
       <div class="subpage-section-video-inner">
         <div class="l-section-title">
           <%- include('/partials/heading', {
@@ -147,6 +147,13 @@
             alt: '',
             altSubtext: '',
             subtextvg: 'musasabi-videos-title'
+          }) %>
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-wrap-video-musasabi',
+            text: 'Musasabi Videos',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'musasabi-videos-title-sp'
           }) %>
         </div>
 
@@ -161,7 +168,7 @@
       <div class="subpage-section-howto-inner">
         <div class="l-section-title">
           <%- include('/partials/heading', {
-            modifier: 'heading-gradient-tobottom heading-howto-tsubasa',
+            modifier: 'heading-gradient-tobottom heading-howto-musasabi',
             text: 'Flow to Play',
             alt: '',
             altSubtext: '',

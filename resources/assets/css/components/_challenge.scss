@@ -11,9 +11,11 @@
   
   &-right {
     order: 1;
+    flex-grow: 1;
+    flex-basis: 50%;
 
     @include max-screen($breakpoint-mobile) {
-      margin-top: 35px;
+      margin-top: 13px;
       max-width: 612px;
       margin-left: auto;
       margin-right: auto;
@@ -24,16 +26,16 @@
       }
 
       img {
-        max-width: 457px;
+        max-width: 245px;
         width: 100%;
       }
     }
   }
 
   @include max-screen($breakpoint-mobile) {
-    // background-image: none;
+    background-image: url(../images/mobipark/challenge-bg-sp.png);
     background-size: 100%;
-    background-position: right top;
+    background-position: center top;
   }
 
   .row {
@@ -54,9 +56,9 @@
     line-height: 2.25;
 
     @include max-screen($breakpoint-mobile) {
-      line-height: 1.5;
+      line-height: 1.55;
       margin: 0;
-      margin-top: 30px;
+      margin-top: 22px;
       font-size: 12px;
     }
 
@@ -68,6 +70,13 @@
   .challenge-img {
     > * {
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 310px;
+        margin-left: auto;
+        display: block;
+        padding-top: 15px;
+      }
     }
   }
 
@@ -115,6 +124,7 @@
 
   @include max-screen($breakpoint-mobile) {
     margin-bottom: 90px;
+    margin-top: -27px;
   }
 }
 

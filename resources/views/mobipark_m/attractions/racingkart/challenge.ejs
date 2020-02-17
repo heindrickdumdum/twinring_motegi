@@ -8,6 +8,7 @@
 
 <% pageId = 'mobipark-subpage'; %>
 
+
 <div class="subpage">
   <div class="mv mv-subpage">
     <ul class="mv-list">
@@ -150,10 +151,16 @@
             </div>
           </div>
           <div class="media-right">
-            <h4 class="media-title"><span>本格的なカートアトラクションでステップアップを目指せ！</span></h4>
-            <p class="media-desc">
+            <h4 class="media-title">
+              <span>本格的なカートアトラクションで<br />ステップアップを目指せ！</span>
+            </h4>
+            <p class="media-desc u-show-pc">
+              目指すのはワンランク上にあるレーシングカート。<br />車の免許がなくても１４０ｃｍ以上あればOK！<br />まずは気軽に腕試し！
+            </p>
+            <p class="media-desc u-show-sp">
               目指すのはワンランク上にあるレーシングカート。車の免許がなくても１４０ｃｍ以上あればOK！まずは気軽に腕試し！
             </p>
+
           </div>
         </div>
         <div class="media media-subpage u-clear">
@@ -186,11 +193,16 @@
             </div>
           </div>
           <div class="media-right">
-            <h4 class="media-title media-title-nohighlight"><span>基準タイムをクリアしてステップアップの頂点へ！</span></h4>
-            <p class="media-desc">
+            <h4 class="media-title">
+              <span>基準タイムをクリアして<br />ステップアップの頂点へ！</span>
+            </h4>
+            <p class="media-desc u-show-pc">
               基準タイムをクリアして大人と同じステージへ。<br />
               プロでも乗りこなすのが難しい<br />
               ハイパワーのレーシングカートに挑戦しよう！
+            </p>
+            <p class="media-desc u-show-sp">
+              基準タイムをクリアして大人と同じステージへ。プロでも乗りこなすのが難しいハイパワーのレーシングカートに挑戦しよう！
             </p>
 
 
@@ -280,10 +292,14 @@
         }) %>
       </div>
 
-      <p class="kart-txt">
+      <p class="kart-txt u-show-pc">
         今年もいよいよ「TAKUMA KIDS KART CHALLENGE」が、７月７日(土)より始まります！<br />
         FINAL出場に向けてタイムトライアルにチャレンジしてみませんか？<br />
         12月開催の最終FINALに進めば、佐藤琢磨選手に直接指導を受けられます！
+      </p>
+
+      <p class="kart-txt u-show-sp">
+        今年もいよいよ「TAKUMA KIDS KART CHALLENGE」が、<br />７月７日(土)より始まります！<br />FINAL出場に向けてタイムトライアルに<br />チャレンジしてみませんか？<br />12月開催の最終FINALに進めば、<br />佐藤琢磨選手に直接指導を受けられます！<br />これからカートを始めたいお子様も、<br />経験のあるお子様も、<br />みなさんのチャレンジ待っています！
       </p>
 
       <div class="kart-challenge">
@@ -326,7 +342,9 @@
   </section>
 
   <section class="faq l-section">
-    <%- include('/partials/accordion') -%>
+    <%- include('/partials/accordion', {
+      dataAccordion: getData().data.accordionChallenge
+    }) -%>
   </section>
 
 
@@ -387,5 +405,9 @@
 
   <!-- END BOTTOM -->
 </div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsChallenge
+}) -%>
 
 <%- include('/partials/footer', {pageId}) -%>

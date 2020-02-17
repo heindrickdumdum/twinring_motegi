@@ -1,3 +1,40 @@
 .how-to-container {
   border-bottom: 1px solid $color-gray;
 }
+
+//modifier
+.how-to-craft {
+  &::before {
+    @include max-screen($breakpoint-mobile) {
+      background-image: url("../images/craft/craft-how-to-bg-sp1.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: -20px;
+      top: 34px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+
+  &::after {
+    @include max-screen($breakpoint-mobile) {
+      background-image: url("../images/craft/craft-how-to-bg-sp2.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 90px;
+      content: "";
+      height: 309px;
+    }
+  }
+}
+
+.how-to-craft-container {
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+  }
+}

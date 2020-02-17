@@ -1,4 +1,3 @@
-
 .adventure-container {
   margin-top: 64px;
 
@@ -6,6 +5,7 @@
     margin-left: -20px;
     margin-right: -20px;
     margin-bottom: 90px;
+    margin-top: -6px;
 
     &.adventure-container-hellowoods {
       margin-top: 0;
@@ -21,8 +21,18 @@
   }
 
   @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 48px;
+
     &.adventure-list-hellowoods {
       margin-bottom: 95px;
+    }
+  }
+
+  &-itadaki {
+    @include max-screen($breakpoint-mobile) {
+      .adventure-content-copy {
+        margin-top: 9px;
+      }
     }
   }
 }
@@ -34,7 +44,7 @@
   background-size: cover;
 
   @include max-screen ($breakpoint-mobile) {
-    height: 316px;
+    height: 157px;
   }
 }
 
@@ -48,8 +58,8 @@
   z-index: $z-min + 1;
 
   @include max-screen($breakpoint-mobile) {
-    max-width: 200px;
-    bottom: -95px;
+    max-width: 110px;
+    bottom: -45px;
   }
 
   &.hellowoods {
@@ -71,6 +81,8 @@
   
   @include max-screen($breakpoint-mobile) {
     font-size: 12px;
+    margin-top: 14px;
+    text-align: left;
   }
 }
 
@@ -78,8 +90,17 @@
 .logo-racing-kart {
   max-width: 320px;
   margin-bottom: 31px;
+
+  @include max-screen($breakpoint-mobile) {
+    max-width: 151px;
+    margin-bottom: 16px;
+  }
 }
 
 .adventure-bg-racing-kart {
   margin-top: 62px;
+  
+  @include max-screen($breakpoint-mobile) {
+    margin-top: -8px;
+  }
 }

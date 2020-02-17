@@ -1,5 +1,11 @@
+.adventure {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: -60px;
+  }
+}
+
 .adventure-container {
-  margin-top: 64px;
+  margin-top: 48px;
 
   @include max-screen($breakpoint-mobile) {
     margin-left: -20px;
@@ -14,7 +20,7 @@
 }
 
 .adventure-list {
-  margin-bottom: 104px;
+  margin-bottom: 102px;
 
   &:last-child {
     margin-bottom: 0;
@@ -98,7 +104,7 @@
 }
 
 .adventure-bg-racing-kart {
-  margin-top: 62px;
+  margin-top: 45px;
   
   @include max-screen($breakpoint-mobile) {
     margin-top: -8px;

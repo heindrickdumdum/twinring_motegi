@@ -950,7 +950,9 @@
 
   .heading-kids-carbike-attraction {
     .heading-subtext {
-      width: 100%;
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 716px;
+      }
     }
   }
 }
@@ -960,6 +962,7 @@
   .heading-wrap {
     .heading-subtext {
       display: block;
+      height: 36px;
 
       @include max-screen($breakpoint-mobile) {
         margin-top: 0px;
@@ -973,11 +976,15 @@
 // modifier adventure
 .adventure {
   .adventure-heading {
-    max-width: 443px;
+    // max-width: 443px;
     width: 100%;
     height: 35px;
     margin-left: auto;
     margin-right: auto;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 50px;
+    }
 
     &.hellowoods {
       font-size: 39px;
@@ -998,6 +1005,10 @@
   .heading-title-adventure {
     .heading-subtext {
       display: block;
+      
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 34px;
+      }
 
       @include max-screen($breakpoint-mobile) {
         max-width: 257px;
@@ -1007,8 +1018,13 @@
     }
 
     &-sumika {
-      @include max-screen($breakpoint-mobile) {
-        .heading-subtext {
+      .heading-subtext {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 443px;
+          height: 35px;   
+        }
+
+        @include max-screen($breakpoint-mobile) {
           max-width: 225px;
           padding: 0;
         }
@@ -1016,8 +1032,13 @@
     }
 
     &-dokidoki {
-      @include max-screen($breakpoint-mobile) {
-        .heading-subtext {
+      .heading-subtext {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 578px;
+          height: 35px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
           max-width: 289px;
           padding: 0;
         }
@@ -1025,8 +1046,13 @@
     }
 
     &-itadaki {
-      @include max-screen($breakpoint-mobile) {
-        .heading-subtext {
+      .heading-subtext {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 349px;
+          height: 35px;        
+        }
+
+        @include max-screen($breakpoint-mobile) {
           max-width: 174.5px;
           padding: 0;
           margin-top: -14px;
@@ -1237,6 +1263,20 @@
         padding: 0;
         margin-top: 0px;
       }
+    }
+  }
+}
+
+//modifier map
+.heading-map {
+  position: relative;
+}
+
+//modifier adventure racing kart
+.racing-kart {
+  .adventure-content-copy {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 0px;
     }
   }
 }

@@ -53,8 +53,12 @@
 //modifier kids carbike attraction
 .kids-carbike-attraction {
   .slide-container {
-    max-width: 508px;
-    width: 100%;
+    // max-width: 508px;
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 524px;
+      height: calc(100% - 83px);
+    }
+
     position: relative;
 
     @include max-screen($breakpoint-mobile) {

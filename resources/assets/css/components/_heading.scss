@@ -356,7 +356,7 @@
       }
     }
   }
-  
+
   &.heading-main-debden {
     img {
       max-width: 310px;
@@ -909,6 +909,7 @@
     text-align: center;
     .heading-subtext {
       max-width: 491px;
+      width: 100%;
     }
   }
 
@@ -918,7 +919,7 @@
         margin-bottom: 0;
       }
     }
-    
+
     .heading-subtext {
       @include max-screen($breakpoint-mobile) {
         height: 43px;

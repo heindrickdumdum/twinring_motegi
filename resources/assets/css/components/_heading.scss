@@ -77,16 +77,6 @@
       margin-top: 90px;
     }
 
-    // .subpage-title {
-    //   font-size: 26px;
-    // }
-
-    // .subpage-inner {
-    //   > p {
-    //     font-size: 24px;
-    //   }
-    // }
-
     .heading-family-walk {
       .heading-subtext {
         height: 67px;
@@ -366,6 +356,7 @@
       }
     }
   }
+
   &.heading-main-debden {
     img {
       max-width: 310px;
@@ -402,12 +393,12 @@
 //how to enjoy heading
 .heading-howto {
   @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 35px;
+    margin-bottom: 60px;
   }
 
   &.heading-howto-acrox {
     .heading-subtext {
-      margin: 10px auto 0;
+      margin: 17px auto 0;
       max-width: 628px;
       width: 100%;
 
@@ -421,7 +412,7 @@
 
   &.heading-howto-bunbun {
     .heading-subtext {
-      margin: 10px auto 0;
+      margin: 17px auto 0;
       max-width: 560px;
       width: 100%;
 
@@ -434,6 +425,7 @@
 
   &.heading-howto-debden {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 669px;
       width: 100%;
       height: 40px;
@@ -442,6 +434,7 @@
 
   &.heading-howto-dokidoki {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 545px;
       width: 100%;
     }
@@ -449,6 +442,7 @@
 
   &.heading-howto-forest-driving {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 539px;
       width: 100%;
 
@@ -462,6 +456,7 @@
 
   &.heading-howto-wildracer {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 626px;
       width: 100%;
 
@@ -475,6 +470,7 @@
 
   &.heading-howto-motorcycle {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 925px;
       width: 100%;
 
@@ -486,6 +482,7 @@
 
   &.heading-howto-mototouring {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 625px;
       width: 100%;
 
@@ -499,6 +496,7 @@
 
   &.heading-howto-motoracer {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 583px;
       width: 100%;
 
@@ -512,6 +510,7 @@
 
   &.heading-howto-dream {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 616px;
       width: 100%;
 
@@ -525,6 +524,7 @@
 
   &.heading-howto-drift {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 515px;
       width: 100%;
 
@@ -538,6 +538,7 @@
 
   &.heading-howto-challenge {
     .heading-subtext {
+      margin: 17px auto 0;
       max-width: 669px;
       width: 100%;
 
@@ -844,10 +845,12 @@
     .heading-subtext {
       max-width: 139px;
       margin: 0 auto;
+      height: 29px;
       width: 100%;
 
       @include min-screen($breakpoint-mobile + 1) {
         max-width: 201px;
+        height: 36px;
       }
     }
   }
@@ -856,15 +859,29 @@
     margin-bottom: 50px;
     .heading-subtext {
       max-width: 959px;
-      margin-top: 0;
+      margin: 0 auto;
       width: 100%;
 
       @include max-screen($breakpoint-mobile) {
         height: auto;
+        width: calc(100% + 40px);
         max-width: 335px;
+      }
+
+      @include max-screen(375px) {
+        left: -20px;
       }
     }
   }
+
+  &.heading-comparison {
+    text-align: center;
+    .heading-subtext {
+      max-width: 491px;
+      width: 100%;
+    }
+  }
+
 
   &.heading-hellowoods {
     @include max-screen ($breakpoint-mobile) {
@@ -875,7 +892,24 @@
           letter-spacing: 2px;
         }
       }
+    }
+  }
 
+
+  &.heading-forest-craft {
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0;
+      }
+    }
+
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        height: 43px;
+        display: block;
+        padding: 0 14px 0 8px;
+        margin-top: 3px;
+      }
       .heading-subtext {
         text-align: left;
       }

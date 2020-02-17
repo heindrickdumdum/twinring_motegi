@@ -1,7 +1,7 @@
 <%
   var title = 'Twin Ring Motegi | DOKIDOKI'
   SPRITE_SVG = '/assets/svg/sprite.svg';
-  pageId = 'dokidoki'; 
+  pageId = 'dokidoki';
 %>
 
 <%
@@ -145,11 +145,11 @@
             </tr>
           </tbody>
         </table>
-        
+
         <h3 class="table-heading">
           <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
         </h3>
-        
+
         <p class="table-subheading">
         下記の日程は 混雑が予想されるため、 対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
         期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
@@ -233,7 +233,7 @@
             <p class="media-desc">
               5階建ての建物を“巨大などんぐりの木”に見立てた「森感覚アスレチック DOKIDOKI」には、1階から5階に行くルートには、全部で39のアスレチックがあります。さまざまなアスレチックをクリアしててっぺんをめざしましょう！
             </p>
-            
+
             <div class="note">
               <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
               <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
@@ -241,7 +241,7 @@
                てっぺんまで登れタネ！
               </div>
             </div>
-    
+
           </div>
         </div>
         <div class="media u-clear">
@@ -312,7 +312,7 @@
         altSubtext: '',
       }) %>
      </div>
-    </div>  
+    </div>
 
     <div class="swiper-container slider js-slider">
       <ul class="swiper-wrapper top-slide">
@@ -373,7 +373,7 @@
       </div>
     </div>
   </section>
-  
+
   <section class="instagram l-section">
     <div class="instagram-wrapper l-container">
       <div class="instagram-inner">
@@ -412,7 +412,9 @@
   </section>
 
   <section class="faq l-section">
-    <%- include('/partials/accordion') %>
+    <%- include('/partials/accordion', {
+      dataAccordion: getData().data.accordionData
+    }) %>
   </section>
 
   <div class="call-to-action">

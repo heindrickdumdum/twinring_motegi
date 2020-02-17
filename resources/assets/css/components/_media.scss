@@ -1,9 +1,23 @@
 .media {
-  padding: 20px;
+  margin: 0 auto;
+  max-width: 1015px;
+  display: flex;
+  width: 100%;
 
-  &.media-subpage {
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 0 55px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+
     @include min-screen($breakpoint-mobile + 1) {
-      margin-bottom: 20px;
+      margin-bottom: 55px;
     }
   }
 }
@@ -12,13 +26,14 @@
   text-align: center;
 
   @include min-screen($breakpoint-mobile + 1) {
-    width: 490px;
-    float: left;
+    max-width: 380px;
+    width: 100%;
   }
 }
 
 .media-thumb-bg {
   position: relative;
+  width: 100%;
 
   img {
     position: absolute;
@@ -26,38 +41,27 @@
     z-index: 1;
   }
 }
+
 .media-bg {
   position: relative;
-  margin-left: 68px;
+  padding: 5px;
+  // margin-left: 68px;
 
   &:after {
     position: absolute;
     content: '';
     background-image: url('../images/img-frame-bg.png');
     background-size: cover;
-    top: -5px;
-    left: -3.5%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: -2%;
     z-index: 0;
-    width: 100%;
-    height: 105%;
-
-    @include min-screen($breakpoint-mobile + 1) {
-      max-width: 394px;
-      left: -14px;
-    }
-
-    @include max-screen($breakpoint-mobile) {
-      width: 106%;
-    }
-
-    // @include max-screen($breakpoint-mobile) {
-    //   content: url(/assets/images/sp-img-frame-bg.png);
-    // }
+    width: 104%;
+    height: 104%;
 
     .media-craft & {
       @include max-screen($breakpoint-mobile) {
-        bottom: -10px;
-        height: auto;
+        background-size: cover;
         background-image: url('../images/img-frame-bg-sp.png');
       }
     }
@@ -104,13 +108,14 @@
 }
 
 .media-right {
-  display: block;
   width: 100%;
 
   @include min-screen($breakpoint-mobile + 1) {
-    padding-left: 500px;
+    padding-left: 50px;
+    width: calc(100% - 380px);
   }
 }
+
 
 .media-title {
   display: inline-block;
@@ -131,15 +136,14 @@
     position: relative;
     z-index: 1;
 
-    &:before {
-      position: absolute;
-      content: "";
-      bottom: 5px;
-      left: 0;
-      width: calc(100% - 3px);
-      height: 6px;
-      background-color: #c3e8d8;
-      z-index: -1;
+    @include max-screen($breakpoint-mobile) {
+      background-image: linear-gradient(0deg, #c3e8d8 22.22%, #ffffff 22.22%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 72.22%, #ffffff 72.22%, #ffffff 100%);
+      background-size: 18.00px 18.00px;
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      background-image: linear-gradient(0deg, #c3e8d8 21.43%, #ffffff 21.43%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 71.43%, #ffffff 71.43%, #ffffff 100%);
+      background-size: 28.00px 28.00px;
     }
   }
 
@@ -152,9 +156,7 @@
 
 .media-title-nohighlight {
   span {
-    &:before {
-      display: none;
-    }
+    background: transparent;
   }
 }
 

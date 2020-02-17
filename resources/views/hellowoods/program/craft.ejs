@@ -9,8 +9,8 @@
 <% pageId = 'hellowoods-subpage' %>
 
 
-<div class="subpage">
-  <div class="mv mv-subpage">
+<div class="subpage subpage-craft">
+  <div class="mv mv-subpage mv-subpage-craft">
     <ul class="mv-list">
       <li class="mv-item">
         <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/craft/mv-img.png') %>);"></div>
@@ -39,7 +39,7 @@
       </h2>
     </div>
 
-    <div class="subpage-banner">
+    <div class="subpage-banner subpage-banner-craft">
       <div class="subpage-banner-inner">
         <img class="u-show-pc" src="<%= mix('/assets/images/craft/subpage-banner.jpg') %>" alt="Craft">
         <img class="u-show-sp" src="<%= mix('/assets/images/craft/subpage-banner-sp.jpg') %>" alt="Craft">
@@ -52,7 +52,7 @@
 
     <p>自分の想いをカタチにして、いつの間にか夢中になれるクラフト時間。自然素材を自由に加工して、思い出のお土産を作ろう！</p>
 
-    <table class="table">
+    <table class="table table-craft">
       <tbody>
         <tr class="table-row">
           <th class="table-head">場所</th>
@@ -94,8 +94,8 @@
     </table>
   </div>
 
-  <section class="how-to-enjoy l-section">
-    <div class="l-container">
+  <section class="how-to-enjoy how-to-craft l-section">
+    <div class="l-container how-to-craft-container">
       <div class="l-section-title">
         <%- include('/partials/heading', {
           modifier: 'heading-enjoy heading-wrap-craft',
@@ -246,7 +246,9 @@
   </section>
 
   <!-- recommendation module -->
+  <div class="recommendation-craft">
   <%- include('/partials/recommendation') -%>
+  </div>
 
   <!-- pick up module -->
   <%- include('/partials/pickup') -%>

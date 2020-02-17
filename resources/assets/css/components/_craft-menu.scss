@@ -1,7 +1,21 @@
 .menu {
 	@include max-screen($breakpoint-mobile) {
-		margin-top: 113px;
+		margin-top: 96px;
 	}
+
+	&::before {
+    @include max-screen($breakpoint-mobile) {
+      background-image: url("../images/craft/craft-menu-bg-sp.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: 11px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
 }
 
 .menu-list {
@@ -11,6 +25,7 @@
 
 	@include max-screen($breakpoint-mobile) {
 		margin: 0 -3%;
+		position: relative;
 	}
 }
 

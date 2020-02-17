@@ -15,6 +15,23 @@
 
   &.l-section-hellowoods {
     padding-bottom: 50px;
+
+    @include max-screen ($breakpoint-mobile) {
+      padding-bottom: 68px;
+    }
+  }
+
+  &.sponsors {
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 55px;
+    }
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    &.banner-image {
+      padding-bottom: 60px;
+      background-color: $color-light-gray;
+    }
   }
 }
 

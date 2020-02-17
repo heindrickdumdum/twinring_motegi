@@ -122,10 +122,16 @@
     }
   }
 
+  &.hellowoods {
+    max-height: 800px;
+  }
+
   @include max-screen($breakpoint-mobile) {
     margin-bottom: 90px;
     margin-top: -27px;
   }
+
+
 }
 
 //modifier for SP

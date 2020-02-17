@@ -9,6 +9,11 @@
 
   @include max-screen($breakpoint-mobile) {
     margin: 40px 0;
+
+    &.call-to-action-hellowoods {
+      margin-top: 0;
+      margin-bottom: 55px;
+    }
   }
 
   &:after {

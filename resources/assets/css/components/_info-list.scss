@@ -65,6 +65,12 @@
       }
     }
   }
+
+  &.info-container-hellowoods {
+    @include max-screen ($breakpoint-mobile) {
+      margin-top: 0px;
+    }
+  }
 }
 
 //modifier for SP

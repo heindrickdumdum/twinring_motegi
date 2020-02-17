@@ -28,8 +28,6 @@ export default function headerTopNav() {
         el.addEventListener( 'click', function(e) {
           e.preventDefault();
 
-          console.log(e);
-
           if (el.children[1] != null) {
 
             headerTopSub.forEach( function(e) {

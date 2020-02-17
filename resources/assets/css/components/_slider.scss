@@ -82,8 +82,12 @@
 //modifier kids carbike attraction
 .kids-carbike-attraction {
   .slide-container {
-    max-width: 508px;
-    width: 100%;
+    // max-width: 508px;
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 524px;
+      height: calc(100% - 83px);
+    }
+
     position: relative;
 
     @include max-screen($breakpoint-mobile) {
@@ -179,11 +183,17 @@
   }
 }
 
+.slider-carbike-container {
+  width: 100%;
+}
+
 .slider-carbike {
   .slider-carbike-item {
-    width: 245px;
+    max-width: 245px;
+
 
     @include min-screen($breakpoint-mobile + 1) {
+      max-width: 100%;
       width: calc((100% - 100px) / 3);
     }
 
@@ -194,5 +204,20 @@
         margin-right: 50px;
       }
     }
+  }
+}
+
+.top-slider {
+  .swiper-wrapper {
+    margin: 0 -95px;
+  }
+}
+
+.top-slider-image {
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }

@@ -8,10 +8,17 @@
   max-width: 905px;
   margin: 0 auto;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .carbike-menu-item {
-  width: 100%;
+  // width: 100%;
+
+  width: 245px;
+  //
+  // @include min-screen($breakpoint-mobile + 1) {
+  //   width: calc((100% - 100px) / 3);
+  // }
 }
 
 .carbike-menu-link {

@@ -374,6 +374,7 @@
 
   &.heading-main-craft {
     .heading-texts {
+      display: block;
       img {
         @include max-screen($breakpoint-mobile) {
           width: 220px;

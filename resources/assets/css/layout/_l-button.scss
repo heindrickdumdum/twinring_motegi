@@ -1,8 +1,11 @@
 .l-button {
   margin-top: 50px;
 
-  &.l-button-sumika-cta {
-    margin-top: 30px;
+  &.l-button-call-to-action {
+    margin-top: 25px;
+    @include max-screen($breakpoint-mobile) {
+      margin: 15px;
+    }
   }
 
   //modifier

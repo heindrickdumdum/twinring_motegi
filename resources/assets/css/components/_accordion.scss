@@ -22,6 +22,10 @@
     border-width: 0 7px 12.1px 7px;
   }
 
+  @include max-screen($breakpoint-mobile) {
+    right: 7px;
+  }
+
   &.is-active {
     transform: translateY(-50%) rotate(0deg);
   }
@@ -39,8 +43,14 @@
   font-size: 18px;
   font-weight: 600;
 
-  @include min-screen($breakpoint-mobile + 1) {
-    padding: 22px 95px 20px 44px;
+  // @include min-screen($breakpoint-mobile + 1) {
+  //   padding: 22px 95px 20px 44px;
+  //   font-size: 12px;
+  // }
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+    padding: 10px 27px 12px;
   }
 
 }
@@ -49,7 +59,6 @@
 .accordion-description  {
   overflow: hidden;
   transition: height .30s ease-out;
-  border-bottom: 1px solid #dfdfdf;
   height: 0;
   border-bottom: 1px solid #dfdfdf;
 
@@ -64,6 +73,7 @@
     padding: 20px;
     line-height: 2;
     margin: 0 22px 30px;
+   
     @include max-screen($breakpoint-mobile) {
       font-size: 12px;
     }
@@ -78,6 +88,11 @@
   transform: translateY(-50%);
   img {
     max-width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 15px;
+      height: 10px;
+    }
   }
 }
 

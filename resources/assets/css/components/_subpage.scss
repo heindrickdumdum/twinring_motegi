@@ -185,19 +185,18 @@
 .subpage-section-inner {
   position: relative;
   max-width: 1102px;
-  margin: 0 auto 50px;
+  margin: 0 auto;
   padding: 0 42px;
   width: 100%;
-
-  @include min-screen($breakpoint-mobile + 1) {
-    margin: 0 auto 120px;
-  }
 }
 
 .subpage-button {
   max-width: 669px;
   height: 137px;
   margin: -20px auto 135px;
+  position: relative;
+  z-index: 2;
+  width: calc(100% - 40px);
 
   //sp
   @include max-screen($breakpoint-mobile) {
@@ -349,14 +348,14 @@
       margin-bottom: 23px;
     }
   }
-  
+
   .subpage-inner-walk {
     @include min-screen($breakpoint-mobile + 1) { // min sp
-      margin-bottom: 108px;  
+      margin-bottom: 108px;
     }
-    
+
     @include max-screen($breakpoint-mobile) { // max sp
-      margin-bottom: 81px; 
+      margin-bottom: 81px;
     }
 
     > p {
@@ -509,3 +508,11 @@
   }
 }
 //modifier forest labo end
+
+.subpage-section-course,
+.subpage-section-kart {
+  margin-bottom: 50px;
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 120px;
+  }
+}

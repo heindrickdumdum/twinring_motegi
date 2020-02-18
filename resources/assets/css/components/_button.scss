@@ -54,6 +54,18 @@
   &.button-parkmap {
     width: 98%;
 
+    @include min-screen($breakpoint-mobile + 1) {
+      &:hover {
+        color: $color-green;
+
+        .button-icon {
+          svg {
+            stroke: $color-green;
+          }
+        }
+      }
+    }
+
     .button-icon {
       right: 18px;
     }
@@ -102,6 +114,27 @@
 
     @include max-screen($breakpoint-mobile) {
       max-width: 246px;
+    }
+  }
+
+  &.button-comparison {
+    max-width: 370px;
+    width: 100%;
+
+    br {
+      display: block;
+
+      @include min-screen(526px) {
+        display: none;
+      }
+    }
+
+    .button-icon {
+      @include max-screen(525px) {
+        right: 0;
+        position: relative;
+        margin-left: 20px;
+      }
     }
   }
 }

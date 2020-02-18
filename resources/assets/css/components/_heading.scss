@@ -604,3 +604,57 @@
   }
 }
 //modifier forest walk end
+
+//modifier forest labo
+.subpage-section-aqua-labo {
+  .heading-aqua-labo {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 33px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 11px;
+        margin-left: auto;
+        width: 264px;
+        height: 34px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.subpage-section-mammal-labo {
+  .heading-mammal-labo {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 11px;
+        margin-left: auto;
+        width: 264px;
+        height: 34px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+//modifier forest labo end

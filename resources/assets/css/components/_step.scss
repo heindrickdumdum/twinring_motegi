@@ -69,7 +69,6 @@
 
     @include max-screen ($breakpoint-mobile) {
       width: 100%;
-      margin-bottom: 40px;
     }
 
     .img-step {
@@ -77,15 +76,11 @@
     }
 
     .step-no {
-      margin: 0 auto 5px;
+      margin: 0 auto;
       height: 45px;
       position: relative;
       font-size: 18px;
       color: $color-green;
-
-      @include min-screen($breakpoint-mobile) {
-        margin: 0 auto 10px;
-      }
 
       img {
         position: relative;
@@ -93,6 +88,10 @@
         right: 0;
         z-index: 3;
         margin: auto;
+
+        @include min-screen($breakpoint-mobile + 1) {
+          top: -8px;
+        }
       }
     }
 
@@ -106,6 +105,10 @@
         }
       }
 
+
+    }
+
+    .step-image {
       &:after {
         display: none;
       }
@@ -133,7 +136,6 @@
   }
 
   &:not(:last-child) {
-
     &::after {
       content: " ";
       width: 28px;
@@ -141,8 +143,6 @@
       position: relative;
       display: none;
       margin: 20px auto 0;
-      top: 50%;
-      transform: translateX(-50%);
       background: url('/assets/images/tsubasa/step-arrow-down.png') no-repeat;
       background-size: contain;
 

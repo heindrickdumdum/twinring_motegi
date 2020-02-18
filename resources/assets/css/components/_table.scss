@@ -94,6 +94,14 @@
   }
 }
 
+.table-craft {
+  .table-head {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 214px;
+    }
+  }
+}
+
 .table-dokidoki {
   .table-head {
     background: transparent;

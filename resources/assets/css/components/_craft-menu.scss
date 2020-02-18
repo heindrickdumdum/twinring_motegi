@@ -30,7 +30,7 @@
 }
 
 .menu-list-item {
-	padding: 0 23px 68px;
+	padding: 0 23px 63px;
 
 	@include max-screen($breakpoint-mobile) {
 		padding: 0 3% 34px;
@@ -103,16 +103,28 @@
   }
 
   .heading-subtext {
+  	@include min-screen($breakpoint-mobile + 1) {
+			margin-top: 13px;
+  	}
+
   	@include max-screen($breakpoint-mobile) {
   		padding: 0 29px 0 28px;
     	margin-top: 8px;
     	height: 34px;
   	}
+
+  	svg {
+  		@include min-screen($breakpoint-mobile + 1) {
+  			width: 449px;
+		    height: 33px;
+		    margin-left: 13px;
+  		}
+  	}
   }
 
   .heading-wrap {
   	@include max-screen($breakpoint-mobile) {
-			margin-bottom: 36px;
+			margin-bottom: 32px;
   	}
   }
 
@@ -128,10 +140,30 @@
 	  }
   }
 
+  .heading-text {
+  	@include min-screen($breakpoint-mobile + 1) {
+  		letter-spacing: 0.06em;
+  	}
+  }
+
+  .article {
+  	@include max-screen($breakpoint-mobile) {
+			padding: 0 5px 36px;
+  	}
+  }
+
   .article-heading {
   	@include max-screen($breakpoint-mobile) {
-  		margin-top: 14px;
+  		margin-top: 11px;
   		min-height: 52px;
+  		padding: 0;
+  	}
+  }
+
+  .article-image {
+  	@include max-screen($breakpoint-mobile) {
+			padding-top: 61%;
+			background-size: cover;
   	}
   }
 
@@ -144,29 +176,86 @@
 
 //modifier
 .craft-pick-up {
-	@include max-screen($breakpoint-mobile) {
-		margin-top: -26px;
-		padding-bottom: 25px;
+	@include min-screen($breakpoint-mobile + 1) {
+		margin-top: 51px;
 	}
+	
+	@include max-screen($breakpoint-mobile) {
+		margin-top: -52px;
+		padding-bottom: 25px;
+		position: relative;
+	}
+
+	&::before {
+    @include max-screen($breakpoint-mobile) {
+      background-image: url("../images/craft/craft-pickup-bg-sp.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 0;
+      top: 155px;
+      height: 160px;
+      width: 126px;
+      content: "";
+    }
+  }
 
 	.heading-pickup {
-		@include max-screen($breakpoint-mobile) {
-			margin-bottom: 44px;
-		}
-	}
+		svg {
+			@include min-screen($breakpoint-mobile + 1) {
+				margin-left: 14px;
+				max-width: 389px;
+    		height: 33px;
+			}
 
-	.pickup-list {
+			@include max-screen($breakpoint-mobile) {
+				width: 282px;
+			}
+		}
+
+		.heading-text {
+			@include min-screen($breakpoint-mobile + 1) {
+				letter-spacing: -0.04em;
+			}
+
+			@include max-screen($breakpoint-mobile) {
+				transform: translate(1px, 1px);
+			}
+		}
+
+		.heading {
+			@include min-screen($breakpoint-mobile + 1) {
+				margin-bottom: 30px;
+			}
+		}
+
+		@include min-screen($breakpoint-mobile + 1) {
+			margin-bottom: 0;
+		}
+		
 		@include max-screen($breakpoint-mobile) {
-			margin: 0 -12.5px;
-			width: auto;
+			margin-bottom: 48px;
 		}
 	}
 
 	.pickup-list-item {
 		@include max-screen($breakpoint-mobile) {
 			max-width: 100%;
-	    padding: 0 12.5px;
+	    padding: 0 12.5px 25px;
 	    flex: 0 0 50%;
+		}
+	}
+
+	.pick-inner {
+		@include max-screen($breakpoint-mobile) {
+			width: auto;
+			margin: 0;
+		}
+	}
+
+	.pickup-list {
+		@include max-screen($breakpoint-mobile) {
+			width: auto;
+			margin: 0 -12.5px;
 		}
 	}
 
@@ -178,18 +267,22 @@
 				line-height: 1.67;
 				padding: 0;
 				min-height: 0;
-				margin-bottom: 6px;
+				margin-bottom: 29px;
 			}
 		}
 
 		.article-period {
 			@include max-screen($breakpoint-mobile) {
 				padding: 0;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
 			}
 		}
 
 		@include max-screen($breakpoint-mobile) {
-			padding-bottom: 9px;
+			padding: 0 0 9px;
 		}
 	}
 

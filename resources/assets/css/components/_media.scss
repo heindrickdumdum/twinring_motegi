@@ -146,12 +146,6 @@
       background-size: 28.00px 28.00px;
     }
   }
-
-  .media-craft & {
-    @include max-screen($breakpoint-mobile) {
-      margin-top: 26px;
-    }
-  }
 }
 
 .media-title-nohighlight {
@@ -316,7 +310,65 @@
 
 //modifier
 .media-craft {
+  .media-right {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-left: 55px;
+    }
+  }
+
+  .media-title {
+    span {
+      @include min-screen($breakpoint-mobile + 1) {
+        background-image: none;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 26px;
+    }
+  }
+
+  .media-desc {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 17px;
+    }
+  }
+
+
+
+  .step-word {
+    @include min-screen($breakpoint-mobile + 1) {
+      letter-spacing: 0.16em;
+      display: inline-block;
+    }
+  }
+
+  .step-word-no {
+    .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        line-height: 1;
+        display: inline-block;
+        font-size: 60px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 12px;
+    }
+  }
+
   &:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 17px 24px 0 24px;
+    border-color: $color-green-4 transparent transparent transparent;
+    content: '';
+    position: absolute;
+    left: 166px;
+    right: 0;
+    bottom: -2px;
+    
     @include max-screen($breakpoint-mobile) {
       width: 0;
       height: 0;
@@ -332,8 +384,48 @@
     }
   }
 
-  &:nth-of-type(2) {
+  &:nth-of-type(1) {
+    .step-word-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 12px;
+      }
+    }
+
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        display: inline-block;
+        transform: translate(0px, -7px);
+        letter-spacing: 0.16em;
+      }
+    }
+
     .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        display: inline-block;
+        transform: translate(8px, 5px);
+        line-height: 1;
+      }
+    }
+
+    .media-desc {
+      @include max-screen($breakpoint-mobile + 1) {
+        padding-top: 16px;
+      }
+    }
+  }
+
+  &:nth-of-type(2) {
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-2px, -2px);
+      }
+    }
+
+    .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(8px, 2px);
+      }
+
       @include max-screen($breakpoint-mobile) {
         transform: translate(-7px, 5px);
         display: inline-block;
@@ -353,9 +445,25 @@
     }
 
     .note {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 4px;
+      }
+
       @include max-screen($breakpoint-mobile) {
         margin-top: 22px;
       }
+    }
+
+    .note-acorn {
+      @include min-screen($breakpoint-mobile + 1) {
+        top: -23px;
+        right: -22px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      padding: 0 0 60px;
+      margin-bottom: 40px;
     }
 
     @include max-screen($breakpoint-mobile) {
@@ -365,7 +473,23 @@
   }
 
   &:nth-of-type(3) {
+    .step-word-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 6px;
+      }
+    }
+
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-2px, -7px);
+      }
+    }
+
     .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(2px, -3px);
+      }
+      
       @include max-screen($breakpoint-mobile) {
         display: inline-block;
         transform: translate(-6px, 5px);
@@ -378,6 +502,10 @@
       }
     }
 
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 41px;
+    }
+
     @include max-screen($breakpoint-mobile) {
       padding-top: 17px;
       padding-bottom: 42px;
@@ -386,10 +514,26 @@
   }
 
   &:nth-of-type(4) {
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-3px, -6px);
+      }
+    }
+
     .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(1px, -4px);
+      }
+
       @include max-screen($breakpoint-mobile) {
         display: inline-block;
         transform: translate(-1px, 5px);
+      }
+    }
+
+    .step-word-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 2px;
       }
     }
 
@@ -400,14 +544,29 @@
     }
 
     .media-desc {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 6px;
+      }
+
       @include max-screen($breakpoint-mobile) {
         padding-top: 5px;
       }
     }
 
     .note {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 34px;
+      }
+
       @include max-screen($breakpoint-mobile) {
         margin-top: 20px;
+      }
+    }
+
+    .note-acorn {
+      @include min-screen($breakpoint-mobile + 1) {
+        top: -23px;
+        right: -22px;
       }
     }
 
@@ -420,9 +579,7 @@
 
   &:last-of-type {
     &:before {
-      @include max-screen($breakpoint-mobile) {
-        content: none;
-      }
+      content: none;
     }
   }
 
@@ -434,6 +591,18 @@
         }
       }
     }
+  }
+
+  &:not(:last-child) {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 38px;
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 0 0 50px;
+    max-width: 1033px;
+    position: relative;
   }
 
   @include max-screen($breakpoint-mobile) {

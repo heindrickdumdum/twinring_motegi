@@ -137,15 +137,34 @@
 
   &.heading-wrap-craft {
     .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 10px;
+      }
+
       @include max-screen($breakpoint-mobile) {
         margin-top: 11px;
       }
     }
 
     svg {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 378px;
+        height: 33px;
+      }
+      
       @include max-screen($breakpoint-mobile) {
         height: 25px;
       }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: -0.04em;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 64px;
     }
   }
 
@@ -351,6 +370,11 @@
     }
 
     .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 8px;
+        transform: translateX(-10px);
+      }
+
       @include max-screen($breakpoint-mobile) {
         height: 43px;
         display: block;
@@ -359,6 +383,41 @@
       }
       .heading-subtext {
         text-align: left;
+      }
+    }
+
+    svg {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 413px;
+        height: 36px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: -0.04em;
+      }
+    }
+  }
+
+  &.heading-wrap-menu {
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: -0.04em;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 10px;
+        height: 34px;
+      }
+
+      svg {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 377px;
+          height: 34px;
+        }
       }
     }
   }

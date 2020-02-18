@@ -48,7 +48,7 @@
       <span>アクティビティ情報</span>
     </h3>
 
-    <p>自分の想いをカタチにして、いつの間にか夢中になれるクラフト時間。自然素材を自由に加工して、思い出のお土産を作ろう！</p>
+    <p>自分の想いをカタチにして、いつの間にか夢中になれるクラフト時間。自然素材を自由に加工して、<br class="u-show-pc"/>思い出のお土産を作ろう！</p>
 
     <table class="table table-craft">
       <tbody>
@@ -223,12 +223,11 @@
         }) %>
       </div>
     </div>
-    <div class="swiper-container slider js-slider">
+    <div class="swiper-container slider js-slider-craft" id="commonSlider">
       <ul class="swiper-wrapper top-slide">
         <% forest.forEach(item => { %>
         <li class="swiper-slide slider-item">
-          <div class="top-slider-image">
-            <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+          <div class="top-slider-image" style="background-image: url(https://via.placeholder.com/576x407);">
           </div>
           <span class="top-slider-text">
             <%- item.desc -%>

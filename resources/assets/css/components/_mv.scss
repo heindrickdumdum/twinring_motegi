@@ -795,6 +795,7 @@
   &.mv-subpage-craft {
     @include min-screen($breakpoint-mobile + 1) {
       height: 447px;
+      margin-bottom: 89px;
     }
 
     .mv-heading-subpage {

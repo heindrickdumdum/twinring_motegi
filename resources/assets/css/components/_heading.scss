@@ -71,32 +71,46 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-
-    @include max-screen($breakpoint-mobile) {
-      max-width: 250px;
-    }
   }
 
   @include max-screen($breakpoint-mobile) {
     .heading-main-subpage {
-      margin-top: 90px;
+      margin-top: 0;
     }
 
     .heading-family-walk {
+      .heading {
+        margin-bottom: 20px;
+      }
+
       .heading-subtext {
-        height: 67px;
+        width: 315.5px;
+        height: 55.5px;
+        margin-top: 12px;
       }
     }
 
     .heading-guide-walk {
+      .heading {
+        margin-bottom: 20px;
+      }
+
       .heading-subtext {
-        height: 71px;
+        width: 196.5px;
+        height: 56px;
+        margin-top: 13px;
       }
     }
 
     .heading-free-walk {
+      .heading {
+        margin-bottom: 18px;
+      }
+
       .heading-subtext {
-        height: 35px;
+        width: 256.5px;
+        height: 25px;
+        margin-top: 14px;
       }
     }
 
@@ -114,7 +128,10 @@
   }
 
   @include max-screen($breakpoint-mobile) {
-    .subpage-section-family-walk,
+    .subpage-section-family-walk {
+      margin-top: 72px;
+    }
+
     .subpage-section-aqua-labo {
       margin-top: 150px;
     }

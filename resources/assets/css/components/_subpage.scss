@@ -76,6 +76,11 @@
       font-size: 15px;
     }
 
+    //sp
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 17px;
+    }
+
     .subpage-craft & {
       @include max-screen($breakpoint-mobile) {
         margin-bottom: 43px;
@@ -171,6 +176,11 @@
   max-width: 669px;
   height: 137px;
   margin: -20px auto 135px;
+
+  //sp
+  @include max-screen($breakpoint-mobile) {
+    height: 70px;
+  }
 }
 
 .subpage-button-link {
@@ -247,6 +257,10 @@
 .subpage-button-family-walk {
   margin-top: 50px;
   margin-bottom: 0px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 33px;
+  }
 }
 
 //modifier walk precuation
@@ -256,6 +270,10 @@
 
   @include min-screen($breakpoint-mobile + 1) {
     padding: 70px 56px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 37px 23px;
   }
 
   h4 {
@@ -293,38 +311,50 @@
 //modifier forest walk
 .subpage-walk {
   .subpage-banner-walk {
-    @include min-screen($breakpoint-mobile + 1) {
+    @include min-screen($breakpoint-mobile + 1) { // min sp
       margin-bottom: 23px;
     }
   }
   
   .subpage-inner-walk {
-    @include min-screen($breakpoint-mobile + 1) {
+    @include min-screen($breakpoint-mobile + 1) { // min sp
       margin-bottom: 108px;  
+    }
+    
+    @include max-screen($breakpoint-mobile) { // max sp
+      margin-bottom: 81px; 
     }
 
     > p {
-      @include min-screen($breakpoint-mobile + 1) {
+      @include min-screen($breakpoint-mobile + 1) { // min sp
         margin-bottom: 30px;
       }
     }
   }
 
   .subpage-button-family-walk {
-    @include min-screen($breakpoint-mobile + 1) {
+    @include min-screen($breakpoint-mobile + 1) { // min sp
       margin-top: 61px;
     }
   }
 
   .subpage-section-guide-walk {
     .subpage-inner-walk {
-      @include min-screen($breakpoint-mobile + 1) {
+      @include min-screen($breakpoint-mobile + 1) { // min sp
         margin-bottom: 116px;
       }
 
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 73px;
+      }
+
       > p {
-        @include min-screen($breakpoint-mobile + 1) {
+        @include min-screen($breakpoint-mobile + 1) { // min sp
           margin-bottom: 58px;
+        }
+
+        @include max-screen($breakpoint-mobile) { // max sp
+          margin-bottom: 15px;
         }
       }
     }
@@ -334,6 +364,10 @@
     .subpage-inner-walk {
       @include min-screen($breakpoint-mobile + 1) {
         margin-bottom: 125px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 41px;
       }
 
       > p {
@@ -348,6 +382,17 @@
     @include min-screen($breakpoint-mobile + 1) {
       margin-bottom: -8px;
     }
+
+    @include max-screen($breakpoint-mobile) {
+      .subpage-inner {
+        margin-bottom: 72px;
+      }
+    }
+  }
+
+  //modifier sp forest walk
+  .subpage-inner-anchor {
+    margin-top: 53px;
   }
 }
 //modifier forest walk end

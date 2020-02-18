@@ -1,9 +1,9 @@
-//import preload from "./components/preload";
+import preload from "./components/preload";
 import topMvCarousel from "./components/top-mv-carousel";
 import slider from './components/slider';
 import topFeatureSlider from './components/top-feature-slider';
 
-//preload();
+preload();
 topMvCarousel();
 
 topFeatureSlider({

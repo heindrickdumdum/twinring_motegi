@@ -2,6 +2,10 @@
   background-color: $color-light-gray;
   margin-bottom: 45px;
   padding: 17px 0;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-bottom: 0;
+  }
 }
 
 .footer-top-nav-list {
@@ -13,7 +17,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 41px;
+    padding-top: 26px;
   }
 }
 

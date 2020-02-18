@@ -11,6 +11,10 @@
     width: 100%;
     height: calc((100% / 2) + 70px);
     background-color: $color-light-gray;
+
+    @include max-screen($breakpoint-mobile) {
+      height: calc((100% / 2) + 118px);
+    }
   }
 
   &.block-image-hellowoods {
@@ -18,8 +22,8 @@
   }
 
   @include max-screen($breakpoint-mobile) {
-    margin-top: 0;
-    padding-bottom: 20px;
+    margin-top: 27px;
+    padding-bottom: 36px;
   }
 }
 

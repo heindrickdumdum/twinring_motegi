@@ -1,3 +1,9 @@
+.parkmap-inner {
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 64px;
+  }
+}
+
 .parkmap-container {
   position: relative;
 }
@@ -65,7 +71,8 @@
     background-size: contain;
 
     @include max-screen($breakpoint-mobile) {
-      font-size: 15px;
+      padding: 2px 0 0 2px;
+      font-size: 13px;
     }
   }
 
@@ -155,7 +162,7 @@
   width: 410px;
 
   @include max-screen($breakpoint-mobile) {
-    margin-top: -33px;
+    margin-top: -93px;
     position: relative;
     right: auto;
     left: 23px;

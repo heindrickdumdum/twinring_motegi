@@ -3,7 +3,7 @@
   margin: -6px -30px 0;
 
   @include max-screen($breakpoint-mobile) {
-    margin: 24px 0 0;
+    margin: -7px 0 0;
     flex-direction: column;
   }
 }
@@ -41,7 +41,7 @@
   position: relative;
 
   @include max-screen($breakpoint-mobile) {
-    padding-top: 26px;
+    padding-top: 18px;
   }
 
   &:hover {

@@ -86,11 +86,6 @@
     top: -8%;
     width: 109%;
     height: 115%;
-
-    @include max-screen($breakpoint-mobile) {
-      // width: 111%;
-      // height: 128%;
-    }
   }
 }
 

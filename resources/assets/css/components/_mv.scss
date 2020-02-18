@@ -225,6 +225,24 @@
   span {
     display: block;
   }
+
+  &.mv-heading-top {
+    @include max-screen($breakpoint-mobile) {
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 15.5px;
+        height: 16.5px;
+        right: 24px;
+        top: 92px;
+        background-image: url(#{$image-path}design-petal1-sp.png);
+      }
+    }
+  }
 }
 
 .mv-heading-text {
@@ -690,7 +708,7 @@
 }
 
 .mv-inner {
-  
+
     @include max-screen($breakpoint-mobile) {
       height: 378px;
     }
@@ -773,7 +791,7 @@
     }
   }
 
-  
+
     // itadaki mv
 
     &.itadaki-mv {

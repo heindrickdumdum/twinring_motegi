@@ -21,7 +21,8 @@
 
 //MODIFIER
 
-.swiper-pagination-feature {
+.swiper-pagination-feature,
+.swiper-pagination-section {
   margin-top: 14px;
   text-align: center;
 
@@ -33,13 +34,30 @@
     height: 3px;
     background-color: $color-gray;
 
+    @include max-screen($breakpoint-mobile){
+      margin: 0 4px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+
     &.swiper-pagination-bullet-active {
       background-color: $color-green;
     }
   }
 }
 
+.swiper-pagination-feature {
+  @include max-screen($breakpoint-mobile){
+    margin-top: -13px;
+  }
+}
 
+.swiper-pagination-section {
+  @include max-screen($breakpoint-mobile){
+    margin-top: 15px;
+  }
+}
 
 .slider-dokidoki {
   .slide-text {
@@ -240,5 +258,3 @@
     }
   }
 }
-
-

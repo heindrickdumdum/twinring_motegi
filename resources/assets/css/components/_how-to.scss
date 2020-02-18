@@ -1,6 +1,12 @@
 .how-to-container {
   border-bottom: 1px solid $color-gray;
   max-width: $container;
+  margin: 0 auto;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 69%;
+    max-width: 100%;
+  }
 }
 
 //modifier

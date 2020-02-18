@@ -49,6 +49,11 @@
       margin: 0 auto;
       letter-spacing: -0.01em;
       font-size: 34px;
+
+      @include max-screen($breakpoint-mobile) {
+        letter-spacing: 0.01em;
+        font-size: 24px;
+      }
     }
 
     .heading-subtext {
@@ -59,14 +64,23 @@
   &.heading-wrap-parkmap {
     .heading-subtext {
       width: 750px;
+      max-width: 100%;
 
       @include max-screen($breakpoint-mobile) {
         width: 400px;
         height: 70px;
         display: inline-block;
         text-align: left;
-        margin-left: -9px;
+      }
+    }
+  }
+
+  &.heading-wrap-how-to {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
         margin-top: 11px;
+        width: 218px;
+        height: 30px;
       }
     }
   }
@@ -74,6 +88,11 @@
   &.heading-wrap-activity {
     .heading-subtext {
       width: 800px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 100%;
+        width: 316px;
+      }
     }
   }
 

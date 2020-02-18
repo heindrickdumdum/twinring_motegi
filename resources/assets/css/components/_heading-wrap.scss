@@ -56,21 +56,6 @@
     }
   }
 
-  &.heading-wrap-menu {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        margin: 13px auto 0;
-        height: 26px;
-      }
-    }
-
-    .heading {
-      @include max-screen($breakpoint-mobile) {
-        margin: 24px 0 37px;
-      }
-    }
-  }
-
   &.heading-wrap-parkmap {
     .heading-subtext {
       width: 750px;
@@ -309,30 +294,6 @@
     }
   }
 
-  &.heading-comparison {
-    text-align: center;
-    .heading-subtext {
-      max-width: 491px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        margin-top: 10px;
-      }
-    }
-
-    .heading-aqua-labo {
-      .heading-subtext {
-        height: 48px;
-      }
-    }
-
-    .heading-mammal-labo {
-      .heading-subtext {
-        height: 55px;
-      }
-    }
-  }
-
   &.heading-forest-craft {
     .heading {
       @include max-screen($breakpoint-mobile) {
@@ -369,20 +330,14 @@
     }
   }
 
-  @include max-screen($breakpoint-mobile) {
-    .subpage-section-family-walk {
-      margin-top: 72px;
-    }
-
-    .subpage-section-aqua-labo {
-      margin-top: 150px;
-    }
-  }
-
   &.heading-wrap-menu {
     .heading-text {
       @include min-screen($breakpoint-mobile + 1) {
         letter-spacing: -0.04em;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 22.5px;
       }
     }
 
@@ -398,7 +353,51 @@
           height: 34px;
         }
       }
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 13px auto 0;
+        height: 26px;
+      }
+    }
+
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin: 24px 0 37px;
+      }
     }
   }
 
+  &.heading-comparison {
+    text-align: center;
+    .heading-subtext {
+      max-width: 491px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 10px;
+      }
+    }
+
+    .heading-aqua-labo {
+      .heading-subtext {
+        height: 48px;
+      }
+    }
+
+    .heading-mammal-labo {
+      .heading-subtext {
+        height: 55px;
+      }
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    .subpage-section-family-walk {
+      margin-top: 72px;
+    }
+
+    .subpage-section-aqua-labo {
+      margin-top: 150px;
+    }
+  }
 }

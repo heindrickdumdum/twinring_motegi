@@ -10,7 +10,7 @@
     <ul class="mv-list">
       <li class="mv-item">
         <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/labo-mv.jpg') %>);"></div>
-        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/labo-mv.jpg') %>);"></div>
+        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/labo-mv-sp.jpg') %>);"></div>
       </li>
     </ul>
 
@@ -21,7 +21,7 @@
     </h1>
   </div>
 
-  <div class="subpage-inner">
+  <div class="subpage-inner subpage-inner-anchor">
     <div class="l-section-title u-show-pc">
       <%- include('/partials/heading', {
         modifier: 'heading-main heading-main-subpage',
@@ -32,7 +32,7 @@
 
     <div class="l-section-title u-show-sp">
       <%- include('/partials/heading', {
-        modifier: 'heading-main heading-main-subpage',
+        modifier: 'heading-main heading-main-subpage heading-main-subpage-labo',
         subtext: mix('/assets/images/hellowoods/lab-color-title.png'),
         altSubtext: 'lab'
       }); -%>

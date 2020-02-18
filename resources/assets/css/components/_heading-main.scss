@@ -17,6 +17,15 @@
         height: 49.5px;
       }
     }
+
+    &-labo {
+      .heading-subtext {
+        @include max-screen($breakpoint-mobile) {
+          width: 219px;
+          height: 50.5px;
+        }
+      }
+    }
   }
 
   .heading {

@@ -612,6 +612,10 @@
       @include min-screen($breakpoint-mobile + 1) {
         margin-bottom: 33px;
       }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 19px;
+      }
     }
 
     .heading-text {
@@ -627,6 +631,12 @@
         width: 264px;
         height: 34px;
         margin-right: auto;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 201.5px;
+        height: 25px;
+        margin-top: 14px;
       }
     }
   }
@@ -638,6 +648,11 @@
       @include min-screen($breakpoint-mobile + 1) {
         margin-bottom: 30px;
       }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 95px;
+        margin-bottom: 14px;
+      }
     }
 
     .heading-text {
@@ -653,6 +668,12 @@
         width: 264px;
         height: 34px;
         margin-right: auto;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 171.5px;
+        height: 25.5px;
+        margin-top: 14px;
       }
     }
   }

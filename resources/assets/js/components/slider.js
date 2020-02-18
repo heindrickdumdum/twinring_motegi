@@ -8,7 +8,7 @@ export default function slider(params) {
     speed: 1500,
     initialSlide: 2,
     centeredSlides: false,
-
+   
     breakpoints: {
       1280: {
         slidesPerView: 3.5,
@@ -24,7 +24,8 @@ export default function slider(params) {
         slidesPerView: 1.5,
         initialSlide: 1,
         loopedSlides: 0,
-        loop: true
+        loop: true,
+       
       }
     },
 

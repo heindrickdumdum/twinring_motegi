@@ -10,7 +10,7 @@
 
   @include max-screen($breakpoint-mobile) {
     flex-direction: column;
-    padding: 0 20px;
+    padding: 0 35px;
   }
 
   &:not(:last-child) {
@@ -19,6 +19,14 @@
     @include min-screen($breakpoint-mobile + 1) {
       margin-bottom: 55px;
     }
+  }
+}
+
+.sumika-media,
+.itadaki-media,
+.dokidoki-media {
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 61px;
   }
 }
 
@@ -92,6 +100,10 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 20px;
+
+    @include max-screen($breakpoint-mobile) {
+      border-radius: 7px;
+    }
 
     .media-craft & {
       @include max-screen($breakpoint-mobile) {

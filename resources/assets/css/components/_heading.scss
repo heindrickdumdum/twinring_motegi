@@ -159,6 +159,12 @@
     margin: 0 auto;
   }
 
+  &.heading-banner-more-tsubasa{
+    .heading-subtext {
+      height: auto;
+    }
+  }
+
   &.heading-banner-more-acrox {
     .heading-subtext {
       @include max-screen($breakpoint-mobile) {
@@ -374,6 +380,7 @@
 
   &.heading-main-craft {
     .heading-texts {
+      display: block;
       img {
         @include max-screen($breakpoint-mobile) {
           width: 220px;
@@ -935,7 +942,9 @@
 
   .heading-kids-carbike-attraction {
     .heading-subtext {
-      width: 100%;
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 716px;
+      }
     }
   }
 }
@@ -947,6 +956,13 @@
       // max-width: 319px;
       // margin-top: 0px;
       display: block;
+      height: 36px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 0px;
+        max-width: 230px;
+        padding: 0px;
+      }
     }
   }
 }
@@ -954,11 +970,15 @@
 // modifier adventure
 .adventure {
   .adventure-heading {
-    max-width: 443px;
+    // max-width: 443px;
     width: 100%;
     height: 35px;
     margin-left: auto;
     margin-right: auto;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 50px;
+    }
 
     &.hellowoods {
       font-size: 39px;
@@ -980,10 +1000,61 @@
     .heading-subtext {
       // max-width: 443px;
       display: block;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 34px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 257px;
+        margin-top: 0;
+        padding: 0;
+      }
+      }
+
+      &-sumika {
+      .heading-subtext {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 443px;
+          height: 35px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          max-width: 225px;
+          padding: 0;
+        }
+      }
+    }
+
+    &-dokidoki {
+      .heading-subtext {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 578px;
+          height: 35px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          max-width: 289px;
+          padding: 0;
+        }
+      }
+    }
+
+    &-itadaki {
+      .heading-subtext {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 349px;
+          height: 35px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          max-width: 174.5px;
+          padding: 0;
+          margin-top: -14px;
+        }
+      }
     }
   }
-
-
 }
 
 // modifier dokidoki mobipark
@@ -1176,6 +1247,20 @@
       .heading-subtext {
         min-height: 111px;
       }
+    }
+  }
+}
+
+//modifier map
+.heading-map {
+  position: relative;
+}
+
+//modifier adventure racing kart
+.racing-kart {
+  .adventure-content-copy {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 0px;
     }
   }
 }

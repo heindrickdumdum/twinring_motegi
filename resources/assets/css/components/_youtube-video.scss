@@ -3,7 +3,7 @@
 }
 
 .youtube-video-content {
-  margin: 0 -25px;
+  margin: 0 -20px;
 }
 
 .youtube-video-list {
@@ -15,7 +15,7 @@
 }
 
 .youtube-video-item {
-  padding: 0 20px;
+  padding: 0 24px;
 
   &:last-child {
     @include max-screen($breakpoint-mobile) {
@@ -57,7 +57,7 @@
 
 .youtube-video-description {
   display: block;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.731;
   text-align: left;
   margin-top: 10px;

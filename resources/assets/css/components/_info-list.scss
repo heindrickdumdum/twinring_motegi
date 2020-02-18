@@ -9,7 +9,7 @@
     max-width: 1021px;
     width: 100%;
     max-height: 320px;
-    margin: 37px auto 0;
+    margin: 58px auto 0;
     overflow-y: scroll;
 
     @include max-screen($breakpoint-mobile) {
@@ -18,7 +18,7 @@
     }
 
     .info-item {
-      padding-left: 50px;
+      padding-left: 45px;
       padding-right: 20px;
       font-size: 18px;   
       letter-spacing: 0.16em;
@@ -47,8 +47,8 @@
       }
 
       span {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 24px;
+        margin-bottom: 25px;
         display: block;
 
         @include max-screen($breakpoint-mobile) {
@@ -61,6 +61,10 @@
       &:first-child {
         span {
           margin-top: 0px;
+
+          @include min-screen($breakpoint-mobile + 1) {
+            margin-bottom: 14px;
+          }
         }
       }
     }

@@ -1,17 +1,12 @@
-
-.step-item {
-  .step-no {
-    margin-bottom: 18px;
-  }
-  
+.step-item-inner {
   .step-image {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 17px;
     padding: 5px 0;
-  
+
     position: relative;
     width: 100%;
-  
+
     &:before {
       content: '';
       display: block;
@@ -28,53 +23,88 @@
         background-size: 98% 101%;
       }
     }
-  
+
     &.step-goal-bg {
       background-image: url("../images/tsubasa/goal-bg.png");
     }
-  
+
     img {
       width: 100%;
       position: relative;
       z-index: 1;
       border-radius: 10px;
       overflow: hidden;
-  
+
       @include max-screen($breakpoint-mobile) {
         width: 100%;
       }
     }
-  
+
     @include max-screen($breakpoint-mobile) {
       padding: 5px 14px;
     }
   }
 
+  .step-no {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+
+      &:first-child {
+        @include max-screen($breakpoint-mobile) {
+          max-width: 55px;
+          margin-left: 5px;
+        }
+      }
+
+      &:last-child {
+        @include max-screen($breakpoint-mobile) {
+          max-width: 25px;
+        }
+      }
+    }
+  }
+
   .step-title {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: bold;
     color: $color-green;
+    letter-spacing: 0.16em;
+    margin-bottom: 5px;
   }
 
   .step-subtitle {
     font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    margin-bottom: 12px;
   }
 
   .step-desc {
     max-width: 300px;
     margin: auto;
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    line-height: 2;
+    text-align: left;
   }
 
 
-  &::after {
-    content: " ";
-    width: 55px;
-    height: 25px;
-    position: absolute;
-    background: url(/assets/images/tsubasa/step-arrow-down.png) no-repeat;
-    left: 0;
-    right: 0;
-    margin: auto;
-    bottom: -55px;
-  }
+  // &::after {
+  //   content: " ";
+  //   width: 55px;
+  //   height: 25px;
+  //   position: absolute;
+  //   background: url(/assets/images/tsubasa/step-arrow-down.png) no-repeat;
+  //   left: 0;
+  //   right: 0;
+  //   margin: auto;
+  //   bottom: -55px;
+  // }
 }

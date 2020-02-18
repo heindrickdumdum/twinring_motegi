@@ -6,7 +6,7 @@
 <%- include('/partials/head', { title }) -%>
 
 <div class="subpage subpage-walk">
-  <div class="mv mv-subpage">
+  <div class="mv mv-subpage mv-subpage-walk">
     <ul class="mv-list">
       <li class="mv-item">
         <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/walk-mv.jpg') %>);"></div>
@@ -21,7 +21,7 @@
     </h1>
   </div>
 
-  <div class="subpage-inner">
+  <div class="subpage-inner subpage-inner-anchor">
     <div class="l-section-title u-show-pc">
       <%- include('/partials/heading', {
         modifier: 'heading-main heading-main-subpage',
@@ -63,7 +63,7 @@
   </div>
 
   <section class="subpage-section subpage-section-family-walk" id="tekuteku">
-    <div class="subpage-inner">
+    <div class="subpage-inner subpage-inner-walk">
       <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
           modifier: 'heading-gradient-tobottom heading-walk heading-family-walk',
@@ -86,7 +86,7 @@
         }); -%>
       </div>
 
-      <div class="subpage-banner">
+      <div class="subpage-banner subpage-banner-walk">
         <div class="subpage-banner-inner">
           <img src="<%- mix('/assets/images/hellowoods/walk-banner-img.jpg') -%>" alt="family walk">
         </div>
@@ -166,7 +166,7 @@
   </section>
 
   <section class="subpage-section subpage-section-guide-walk" id="guide-walk">
-    <div class="subpage-inner">
+    <div class="subpage-inner subpage-inner-walk">
       <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
           modifier: 'heading-gradient-tobottom heading-walk heading-guide-walk',
@@ -189,7 +189,7 @@
         }); -%>
       </div>
 
-      <div class="subpage-banner">
+      <div class="subpage-banner subpage-banner-walk">
         <div class="subpage-banner-inner">
           <img src="<%- mix('/assets/images/hellowoods/walk-guide.jpg') -%>" alt="guide walk">
         </div>
@@ -289,7 +289,7 @@
   </section>
 
   <section class="subpage-section subpage-section-free-walk" id="free-walk">
-    <div class="subpage-inner">
+    <div class="subpage-inner subpage-inner-walk">
       <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
           modifier: 'heading-gradient-tobottom heading-walk heading-free-walk',
@@ -312,7 +312,7 @@
         }); -%>
       </div>
 
-      <div class="subpage-banner">
+      <div class="subpage-banner subpage-banner-walk">
         <div class="subpage-banner-inner">
           <img src="<%- mix('/assets/images/hellowoods/walk-free.jpg') -%>" alt="guide walk">
         </div>
@@ -404,13 +404,17 @@
     </div>
   </div>
 
+  <!-- recommendation module -->
+  <%- include('/partials/recommendation') -%>
+  
+  <!-- pick up module -->
+  <%- include('/partials/pickup') -%>
+
   <!-- END BOTTOM -->
 </div>
 
-<!-- recommendation module -->
-<%- include('/partials/recommendation') -%>
-
-<!-- pick up module -->
-<%- include('/partials/pickup') -%>
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsWalk
+}) -%>
 
 <%- include('/partials/footer', {pageId}) -%>

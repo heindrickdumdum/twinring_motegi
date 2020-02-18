@@ -36,6 +36,11 @@
   margin-top: 20px;
   height: 36px;
 
+  // additional
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
   @include max-screen($breakpoint-mobile) {
     height: 22px;
     display: block;
@@ -66,32 +71,46 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-
-    @include max-screen($breakpoint-mobile) {
-      max-width: 250px;
-    }
   }
 
   @include max-screen($breakpoint-mobile) {
     .heading-main-subpage {
-      margin-top: 90px;
+      margin-top: 0;
     }
 
     .heading-family-walk {
+      .heading {
+        margin-bottom: 20px;
+      }
+
       .heading-subtext {
-        height: 67px;
+        width: 315.5px;
+        height: 55.5px;
+        margin-top: 12px;
       }
     }
 
     .heading-guide-walk {
+      .heading {
+        margin-bottom: 20px;
+      }
+
       .heading-subtext {
-        height: 71px;
+        width: 196.5px;
+        height: 56px;
+        margin-top: 13px;
       }
     }
 
     .heading-free-walk {
+      .heading {
+        margin-bottom: 18px;
+      }
+
       .heading-subtext {
-        height: 35px;
+        width: 256.5px;
+        height: 25px;
+        margin-top: 14px;
       }
     }
 
@@ -109,21 +128,12 @@
   }
 
   @include max-screen($breakpoint-mobile) {
-    .subpage-section-family-walk,
+    .subpage-section-family-walk {
+      margin-top: 72px;
+    }
+
     .subpage-section-aqua-labo {
       margin-top: 150px;
-    }
-  }
-}
-
-// modifier challenge
-.challenge {
-  .heading-text {
-    max-width: 584px;
-    width: 100%;
-
-    @include max-screen($breakpoint-mobile) {
-      max-width: 250px;
     }
   }
 }
@@ -137,6 +147,49 @@
   .heading-subtext {
     max-width: 161px;
     width: 100%;
+  }
+}
+
+//modifier for SP
+.page-mobipark {
+  .heading-subtext {
+    @include max-screen($breakpoint-mobile) {
+      min-height: 47px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+
+    }
+  }
+
+  .heading-info {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        min-height: 47px;
+      }
+    }
+  }
+
+  .heading-kids-carbike-attraction {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        min-height: 56px;
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+// modifier challenge
+.challenge {
+  .heading-text {
+    max-width: 584px;
+    width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 250px;
+    }
   }
 }
 
@@ -442,41 +495,112 @@
   }
 }
 
-//modifier for SP
-@include max-screen($breakpoint-mobile) {
-  .subpage-mobipark {
-    .heading-subtext {
-      min-height: 47px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    .heading-info {
-      .heading-subtext {
-        min-height: 47px;
-      }
-    }
-
-    .heading-kids-carbike-attraction {
-      .heading-subtext {
-        min-height: 111px;
-      }
-    }
-  }
-}
-
 //modifier map
 .heading-map {
   position: relative;
 }
 
-//modifier adventure racing kart
-.racing-kart {
-  .adventure-content-copy {
-    @include min-screen($breakpoint-mobile + 1) {
-      margin-top: 0px;
+//modifier sp info
+.info-container {
+  .heading-info {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        min-height: 25px !important;
+        margin-top: 12px;
+      }
     }
   }
 }
+
+//modifier adventure racing kart
+.racing-kart {
+  .heading-racing-kart {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        min-height: 23px;
+        margin-top: 12px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+
+//modifier forest walk
+.subpage-section-family-walk {
+  .heading-family-walk {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 33px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 13px;
+        margin-left: auto;
+        width: 668px;
+        height: 33px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.subpage-section-guide-walk {
+  .heading-guide-walk {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 33px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 13px;
+        margin-left: auto;
+        width: 481px;
+        height: 33px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.subpage-section-free-walk {
+  .heading-free-walk {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 33px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 13px;
+        margin-left: auto;
+        width: 336px;
+        height: 34px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+//modifier forest walk end

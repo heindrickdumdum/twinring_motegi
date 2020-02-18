@@ -7,8 +7,8 @@ parkmapButton();
 headerMenu();
 headerTopNav();
 
-new SmoothScroll('a[href*="#"]', {
+new SmoothScroll('a[href^="#"]', {
   topOnEmptyHash: true,
-  speed: 600,
+  speed: 900,
   easing: 'easeInOutCubic'
 });

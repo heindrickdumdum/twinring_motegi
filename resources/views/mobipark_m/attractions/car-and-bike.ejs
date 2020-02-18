@@ -17,7 +17,7 @@ SPRITE_SVG = '/assets/svg/sprite.svg';
       </li>
     </ul>
 
-    <div class="l-container mv-container">
+    <div class="mv-container">
       <h1 class="mv-heading">
         <span class="mv-heading-texts">
           <svg>
@@ -35,10 +35,12 @@ SPRITE_SVG = '/assets/svg/sprite.svg';
         </span>
 
         <span class="mv-heading-subtexts u-show-sp">
-          <svg>
+          <span class="u-title-hidden">Car bike</span>
+          <img src="<%- mix('/assets/images/car-and-bike/carbike-category-title-sp.png') %>" alt="carbike">
+          <!-- <svg>
             <title>Car and Bike</title>
-            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-carbike-main-title-sp') %>"></use>
-          </svg>
+            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-subtext-sp') %>"></use>
+          </svg> -->
         </span>
       </h1>
 
@@ -123,10 +125,18 @@ SPRITE_SVG = '/assets/svg/sprite.svg';
   <section class="subpage-section subpage-section-carbike">
     <div class="l-section-title">
       <%- include('/partials/heading', {
-        modifier: 'heading-gradient-tobottom heading-attraction',
+        modifier: 'heading-gradient-tobottom heading-attraction u-show-pc',
         text: ' Attraction’s Category',
         alt : '',
         subtextvg: 'car-and-bike-attraction-categories',
+        altSubtext: '',
+      }) %>
+
+      <%- include('/partials/heading', {
+        modifier: 'heading-gradient-tobottom heading-attraction u-show-sp',
+        text: ' Attraction’s Category',
+        alt : '',
+        subtextvg: 'carbike-category-title-sp',
         altSubtext: '',
       }) %>
     </div>

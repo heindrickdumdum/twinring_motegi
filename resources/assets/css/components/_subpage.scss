@@ -438,7 +438,18 @@
     }
   }
 
+  .subpage-inner-anchor {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 53px;
+      margin-bottom: 0px;
+    }
+  }
+
   .subpage-section-aqua-labo {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 84px;
+    }
+
     .subpage-inner {
       @include min-screen($breakpoint-mobile + 1) {
         margin-bottom: 196px;
@@ -454,6 +465,12 @@
     .subpage-banner {
       @include min-screen($breakpoint-mobile + 1) {
         margin-bottom: 22px;
+      }
+    }
+
+    .subpage-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 17px;
       }
     }
   }
@@ -474,6 +491,18 @@
     .subpage-banner {
       @include min-screen($breakpoint-mobile + 1) {
         margin-bottom: 31px;
+      }
+    }
+
+    .subpage-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 17px;
+      }
+    }
+
+    .subpage-button {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 71px;
       }
     }
   }

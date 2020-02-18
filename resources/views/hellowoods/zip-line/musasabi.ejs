@@ -42,7 +42,8 @@
       <div class="heading-wrap heading-main heading-main-musasabi">
         <h2 class="heading">
           <span class="heading-texts">
-            <img src="<%= mix('/assets/images/musasabi/musasabi-color-title-sp.png') %>" alt="ガイドと一緒に 森を巡るガイドツアー式 ジップライン">
+            <img class="u-show-pc" src="<%= mix('/assets/images/musasabi/musasabi-color-title.png') %>" alt="">
+            <img class="u-show-sp" src="<%= mix('/assets/images/musasabi/musasabi-color-title-sp.png') %>" alt="ガイドと一緒に 森を巡るガイドツアー式 ジップライン">
           </span>
         </h2>
       </div>
@@ -141,24 +142,13 @@
     <section class="subpage-section subpage-section-video">
       <div class="subpage-section-video-inner">
         <div class="l-section-title">
-          <div class="u-show-pc">
-            <%- include('/partials/heading', {
-              modifier: 'heading-gradient-tobottom heading-wrap-video-musasabi',
-              text: 'Musasabi Videos',
-              alt: '',
-              altSubtext: '',
-              subtextvg: 'musasabi-videos-title'
-            }) %>
-          </div>
-          <div class="u-show-sp">
-            <%- include('/partials/heading', {
-              modifier: 'heading-gradient-tobottom heading-wrap-video-musasabi',
-              text: 'Musasabi Videos',
-              alt: '',
-              altSubtext: '',
-              subtextvg: 'musasabi-videos-title-sp'
-            }) %>
-          </div>
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-wrap-video-musasabi',
+            text: 'Musasabi Videos',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'musasabi-videos-title'
+          }) %>
         </div>
 
         <div class="subpage-section-video-wrapper">
@@ -180,7 +170,7 @@
           }) %>
         </div>
 
-        <div class="steps-list-wrapper steps-list-wrapper-musasabi">
+        <div class="steps-list-wrapper">
           <%- include('/partials/steps', {
             dataSteps: getData().data.stepsMusasabi
           }) -%>
@@ -190,153 +180,11 @@
     </section>
 
     <section class="subpage-section subpage-section-faq">
-      <div class="subpage-section-inner">
-        <div class="l-section-title">
-          <%- include('/partials/heading', {
-            modifier: 'heading-gradient-tobottom heading-faq-tsubasa',
-            text: 'FAQ',
-            alt: '',
-            altSubtext: '',
-            subtextvg: 'faq-title'
-          }) %>
-        </div>
-        <div class="accordion">
-          <div class="accordion-inner">
-            <button class="accordion-btn js-accordion-btn is-collapsed" type="button">
-              <span class="accordion-btn-label">
-                <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
-              </span>
-              <span class="accordion-btn-text">
-                「メガジップライン つばさ」と「森のジップライン ムササビ」の受付（整理券配布所）はどこですか？
-              </span>
-            </button>
-            <div class="accordion-content js-accordion-content">
-              <p class="accordion-desc">
-                「ハローウッズインフォメーション」です。 整理券の発行には利用制限の確認が必要なので、ご利用者様ご 本人がお越しください。未成年の方は保護者様の同意署名が必要です。保護者様と一緒にお越しください。
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion">
-          <div class="accordion-inner">
-            <button class="accordion-btn js-accordion-btn" type="button">
-              <span class="accordion-btn-label">
-                <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
-              </span>
-              <span class="accordion-btn-text">
-                何時頃までに行けば参加出来ますか？
-              </span>
-            </button>
-            <div class="accordion-content js-accordion-content" style="display: none;">
-              <p class="accordion-desc">
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion">
-          <div class="accordion-inner">
-            <button class="accordion-btn js-accordion-btn" type="button">
-              <span class="accordion-btn-label">
-                <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
-              </span>
-              <span class="accordion-btn-text">
-                身長、体重の確認の仕方は？
-              </span>
-            </button>
-            <div class="accordion-content js-accordion-content" style="display: none;">
-              <p class="accordion-desc">
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion">
-          <div class="accordion-inner">
-            <button class="accordion-btn js-accordion-btn" type="button">
-              <span class="accordion-btn-label">
-                <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
-              </span>
-              <span class="accordion-btn-text">
-                4月から新4年生ですがムササビできますか？
-              </span>
-            </button>
-            <div class="accordion-content js-accordion-content" style="display: none;">
-              <p class="accordion-desc">
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion">
-          <div class="accordion-inner">
-            <button class="accordion-btn js-accordion-btn" type="button">
-              <span class="accordion-btn-label">
-                <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
-              </span>
-              <span class="accordion-btn-text">
-                前日予約や電話での予約はできますか？
-              </span>
-            </button>
-            <div class="accordion-content js-accordion-content" style="display: none;">
-              <p class="accordion-desc">
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion">
-          <div class="accordion-inner">
-            <button class="accordion-btn js-accordion-btn" type="button">
-              <span class="accordion-btn-label">
-                <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
-              </span>
-              <span class="accordion-btn-text">
-                ムササビを体験している人を下からついて行くことはできますか？
-              </span>
-            </button>
-            <div class="accordion-content js-accordion-content" style="display: none;">
-              <p class="accordion-desc">
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion">
-          <div class="accordion-inner">
-            <button class="accordion-btn js-accordion-btn" type="button">
-              <span class="accordion-btn-label">
-                <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
-              </span>
-              <span class="accordion-btn-text">
-                体験中落し物をした場合、すぐに見つかりますか？
-              </span>
-            </button>
-            <div class="accordion-content js-accordion-content" style="display: none;">
-              <p class="accordion-desc">
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion">
-          <div class="accordion-inner">
-            <button class="accordion-btn js-accordion-btn" type="button">
-              <span class="accordion-btn-label">
-                <img src="<%= mix('/assets/images/acc-q.png') %>" alt="">
-              </span>
-              <span class="accordion-btn-text">
-                約90分の体験中にトイレ休憩はありますか？
-              </span>
-            </button>
-            <div class="accordion-content js-accordion-content" style="display: none;">
-              <p class="accordion-desc">
-
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <section class="faq l-section">
+        <%- include('/partials/accordion', {
+          dataAccordion: getData().data.accordionMusasabi
+        }) -%>
+      </section>
     </section>
 
     <!-- BOTTOM -->
@@ -347,9 +195,9 @@
           <div class="call-to-action-inner">
             <div class="l-section-title">
               <%- include('/partials/heading', {
-                modifier: 'heading-net-acro-x',
-                text: '森のジップライン ムササビを<br>もっと楽しむ',
-                alt: '',
+                modifier: 'heading-banner-more heading-banner-more-musasabi',
+                imgPath: mix('/assets/images/deb-den/osanpo-enjoy-more-title.png'),
+                alt: '森のジップライン ムササビを<br>もっと楽しむ',
                 altSubtext: '',
                 subtextvg: ''
               }) %>

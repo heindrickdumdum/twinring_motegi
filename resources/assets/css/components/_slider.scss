@@ -226,6 +226,19 @@
     width: 100%;
     height: auto;
   }
+
+  .forest-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 59.5%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 54.5%;
+    }
+  }
 }
 
 

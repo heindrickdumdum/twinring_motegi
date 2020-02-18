@@ -46,6 +46,8 @@
 
   &.subpage-craft {
     &::before {
+      content: normal;
+
       @include max-screen($breakpoint-mobile) {
         content: normal;
       }
@@ -90,6 +92,10 @@
   }
 
   .subpage-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 123px;
+    }
+
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 95px;
     }
@@ -109,6 +115,12 @@
   font-size: 13px;
   letter-spacing: 0.11em;
   margin-bottom: 8px;
+
+  .subpage-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 5px;
+    }
+  }
 
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 24px;
@@ -156,6 +168,10 @@
   }
 
   &.subpage-banner-craft {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 26px;
+    }
+
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 20px;
     }

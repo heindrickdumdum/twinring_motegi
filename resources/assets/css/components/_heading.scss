@@ -922,6 +922,23 @@
       }
     }
   }
+
+  &.heading-wrap-hellowoods {
+    .heading-text {
+      @include max-screen ($breakpoint-mobile) {
+
+      }
+    }
+
+    .heading-subtext {
+      @include max-screen ($breakpoint-mobile) {
+        margin-top: 10px;
+        letter-spacing: 0.03em;
+      }
+    }
+
+
+  }
 }
 
 //modifier kids carbike attraction

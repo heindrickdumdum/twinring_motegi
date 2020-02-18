@@ -152,6 +152,13 @@
       margin-top: 26px;
     }
   }
+
+  &.alt-feature-heading {
+   @include min-screen ($breakpoint-mobile + 1) {
+    font-size: 24px;
+    margin-bottom: 38px;
+   }
+  }
 }
 
 .media-title-nohighlight {

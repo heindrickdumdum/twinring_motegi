@@ -818,3 +818,12 @@
     }
   }
 }
+
+//modifier MV forest walk
+.mv-subpage-walk {
+  overflow: hidden;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 127px;
+  }
+}

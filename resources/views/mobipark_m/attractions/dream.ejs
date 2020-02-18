@@ -248,10 +248,11 @@
 
   <%- include('/partials/pickup') -%>
 
+
   <!-- END BOTTOM -->
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsDream
+  breadcrumbs : getData().data.breadcrumbsMotoracer
 }) -%>
-<%- include('/partials/footer') -%>
+<%- include('/partials/footer', {pageId}) -%>

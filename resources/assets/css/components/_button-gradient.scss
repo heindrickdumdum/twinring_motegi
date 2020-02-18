@@ -23,15 +23,8 @@
 
   @include max-screen($breakpoint-mobile) {
     font-size: 12px;
+    letter-spacing: 0.14em;
   }
-
-  // &:hover {
-  //   @include min-screen($breakpoint-mobile + 1) {
-  //     .button-gradient-icon {
-  //       transform: translateX(5px);
-  //     }
-  //   }
-  // }
 
   &.button-gradient-cmn {
     height: auto;
@@ -39,7 +32,7 @@
 }
 
 .button-gradient-text {
-  background: linear-gradient(to right, #34b0e7 0%, #1cc763 100%);
+  background: linear-gradient(to right, $color-blue 0%, $color-green 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

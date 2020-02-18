@@ -10,7 +10,8 @@ export default function headerMenu() {
         headerSub = document.querySelector('#js-header-sub'),
         headerToggle = document.querySelector('#js-header-toggle'),
         headerToggleInner = document.querySelector('#js-header-toggle-inner'),
-        headerBurger = document.querySelector('#js-header-burger');
+        headerBurger = document.querySelector('#js-header-burger'),
+        headerSP = document.querySelector('#js-header-sp');
 
   let mediaQuery = window.matchMedia('(max-width: 749px)');
 
@@ -84,6 +85,12 @@ export default function headerMenu() {
    // function for SP
   function headerMenuSP() {
       scrollAble()
+
+      window.addEventListener('scroll', function() {
+        if(this.scrollY > 50) {
+          headerSP.classList.add(CONST.IS_ACTIVE);
+        }
+      })
 
       headerButtonSub.forEach( function(el) {
         let elAttrib = el.getAttribute('data-target')

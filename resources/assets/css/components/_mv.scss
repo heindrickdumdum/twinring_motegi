@@ -67,6 +67,22 @@
       padding-bottom: 71%;
     }
   }
+
+  &.mv-image-sp {
+    display: none;
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+    }
+  }
+
+  &.mv-image-pc {
+    display: block;
+
+    @include max-screen($breakpoint-mobile) {
+      display: none;
+    }
+  }
 }
 
 .mv-list-top {
@@ -628,6 +644,13 @@
   .mv-heading-texts{
     width: 100%;
     text-align: left;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 23px;
+      font-weight: normal;
+      transform: translateY(-50%);
+      top: 50%;
+    }
   }
 
   .mv-heading-subtexts {

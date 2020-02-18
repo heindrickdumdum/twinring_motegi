@@ -88,6 +88,15 @@
       margin-bottom: 95px;
     }
   }
+
+  &.subpage-inner-musasabi {
+    > p {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 24px;
+        letter-spacing: 0.19em;
+      }
+    }
+  }
 }
 
 .subpage-title {
@@ -105,6 +114,10 @@
   	-webkit-text-fill-color: transparent;
 
   }
+}
+
+.subpage-title-musasabi {
+  margin-bottom: 14px;
 }
 
 .subpage-youtube {
@@ -144,6 +157,14 @@
     .subpage-title {
       @include max-screen($breakpoint-mobile) {
         margin-bottom: 10px;
+      }
+    }
+  }
+
+  &.subpage-banner-musasabi {
+    iframe {
+      @include max-screen($breakpoint-mobile) {
+        height: 212px;
       }
     }
   }
@@ -284,10 +305,21 @@
 
 .subpage-section-video {
   margin-bottom: 158px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 82px;
+  }
 }
 
 .subpage-section-video-wrapper {
   text-align: center;
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+    padding-top: 44%;
+    max-width: 289px;
+    margin: 0 auto;
+  }
 }
 
 //modifier forest walk

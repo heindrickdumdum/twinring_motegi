@@ -352,6 +352,26 @@
     }
   }
 
+  &.heading-wrap-video-musasabi {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 35px;
+    }
+
+    .heading-subtext {
+      height: 91px;
+      width: 300px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 10px;
+      }
+
+      @include min-screen($breakpoint-mobile) {
+        height: 37px;
+        width: 731px;
+      }
+    }
+  }
+
 
   &.heading-forest-craft {
     .heading {
@@ -372,4 +392,6 @@
       }
     }
   }
+
+
 }

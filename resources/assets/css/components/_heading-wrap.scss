@@ -140,8 +140,10 @@
       width: 520px;
       height: 36px;
       @include max-screen($breakpoint-mobile) {
-        width: auto;
-        height: 53px;
+        position: relative;
+        top: -6px;
+        width: 217px;
+        height: 57px;
       }
     }
   }
@@ -166,8 +168,10 @@
       width: 520px;
       height: 36px;
       @include max-screen($breakpoint-mobile) {
-        width: auto;
-        height: 53px;
+        position: relative;
+        top: -8px;
+        width: 206px;
+        height: 57px;
       }
     }
   }
@@ -178,7 +182,9 @@
       width: 520px;
       height: 36px;
       @include max-screen($breakpoint-mobile) {
-        width: auto;
+        width: 274px;
+        position: relative;
+        top: -14px;
       }
     }
   }
@@ -220,114 +226,66 @@
         width: auto;
       }
     }
-
   }
 
-  &.heading-net-acro-x {
-    margin-top: 15px;
-    margin-bottom: 0;
-
-    .heading-text {
-      position: relative;
-      left: 6px;
-      letter-spacing: 0.16em;
-    }
-  }
-
-  &.heading-carbike {
-    text-align: center;
-    margin-bottom: 27px;
-
-    @include min-screen($breakpoint-mobile + 1) {
-      margin-bottom: 85px;
+  @include max-screen($breakpoint-mobile) {
+    .heading-main-subpage {
+      margin-top: 0;
     }
 
-    .heading-subtext {
-      height: 40px;
+    .heading-family-walk {
+      .heading {
+        margin-bottom: 20px;
+      }
+
+      .heading-subtext {
+        width: 315.5px;
+        height: 55.5px;
+        margin-top: 12px;
+      }
     }
-  }
 
-  &.heading-carbike-car {
-    svg {
-      max-width: 259px;
-      width: 100%;
+    .heading-guide-walk {
+      .heading {
+        margin-bottom: 20px;
+      }
 
+      .heading-subtext {
+        width: 196.5px;
+        height: 56px;
+        margin-top: 13px;
+      }
+    }
 
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 405px;
+    .heading-free-walk {
+      .heading {
+        margin-bottom: 18px;
+      }
+
+      .heading-subtext {
+        width: 256.5px;
+        height: 25px;
+        margin-top: 14px;
       }
     }
   }
 
-  &.heading-carbike-bike {
-    svg {
-      max-width: 318px;
-      width: 100%;
-
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 497px;
-      }
-    }
-  }
-
-  &.heading-carbike-workshop {
-    svg {
-      max-width: 260px;
-      width: 100%;
-
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 407px;
-      }
-    }
-  }
-
-
-  &.heading-dokidoki-forest {
-    margin-bottom: 55px;
-
-    .heading-subtext {
-      max-width: 659px;
-      margin-top: 35px;
-      width: 100%;
-    }
-  }
-
-
-  &.heading-course-challenge {
-    margin-bottom: 35px;
-
-    @include min-screen($breakpoint-mobile + 1) {
-      margin-bottom: 58px;
+  &.heading-wrap-video-musasabi {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 35px;
     }
 
     .heading-subtext {
-      max-width: 139px;
-      margin: 0 auto;
-      height: 29px;
-      width: 100%;
-
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 201px;
-        height: 36px;
-      }
-    }
-  }
-
-  &.heading-kart-challenge {
-    margin-bottom: 50px;
-    .heading-subtext {
-      max-width: 959px;
-      margin: 0 auto;
-      width: 100%;
+      height: 91px;
+      width: 300px;
 
       @include max-screen($breakpoint-mobile) {
-        height: auto;
-        width: calc(100% + 40px);
-        max-width: 335px;
+        margin-top: 10px;
       }
 
-      @include max-screen(375px) {
-        left: -20px;
+      @include min-screen($breakpoint-mobile) {
+        height: 37px;
+        width: 731px;
       }
     }
   }
@@ -337,22 +295,24 @@
     .heading-subtext {
       max-width: 491px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 10px;
+      }
     }
-  }
 
+    .heading-aqua-labo {
+      .heading-subtext {
+        height: 48px;
+      }
+    }
 
-  &.heading-hellowoods {
-    @include max-screen ($breakpoint-mobile) {
-      .heading {
-        .heading-text {
-          font-size: 22.5px;
-          text-align: left;
-          letter-spacing: 2px;
-        }
+    .heading-mammal-labo {
+      .heading-subtext {
+        height: 55px;
       }
     }
   }
-
 
   &.heading-forest-craft {
     .heading {
@@ -360,17 +320,16 @@
         margin-bottom: 0;
       }
     }
+  }
 
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        height: 43px;
-        display: block;
-        padding: 0 14px 0 8px;
-        margin-top: 3px;
-      }
-      .heading-subtext {
-        text-align: left;
-      }
+  @include max-screen($breakpoint-mobile) {
+    .subpage-section-family-walk {
+      margin-top: 72px;
+    }
+
+    .subpage-section-aqua-labo {
+      margin-top: 150px;
     }
   }
+
 }

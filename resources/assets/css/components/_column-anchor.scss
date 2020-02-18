@@ -6,9 +6,42 @@
     .link-item {
       flex-grow: 1;
       flex-basis: 0;
+      position: relative;
+      text-align: center;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        &:first-child {
+          top: 3px;
+          left: 30px;
+        }
+
+        &:nth-child(2) {
+          top: 2px;
+          left: 17px;
+        }
+
+        &:last-child {
+          top: 2px;
+          left: -4px;
+        }
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        &:first-child {
+          top: -11px;
+        }
+
+        &:nth-child(2) {
+          top: -11px;
+        }
+
+        &:last-child {
+          top: -10px;
+        }
+      }
 
       a {
-        display: block;
+        display: inline-block;
         text-align: center;
         color: $color-black;
         font-size: 17px;
@@ -26,6 +59,16 @@
           transform: translateX(-50%);
           transition: all 0.3s ease;
           pointer-events: none;
+
+          //sp
+          @include max-screen($breakpoint-mobile) {
+            content: "";
+            background-image: url(/assets/images/hellowoods/caret-down.png);
+            background-size: 100%;
+            width: 26px;
+            height: 8.5px;
+            bottom: -16px;
+          }
         }
 
         &:hover:after {
@@ -34,19 +77,21 @@
 
         img {
           @include max-screen($breakpoint-mobile) {
-            max-width: calc(100% - 20px);
-            width: 100%;
+            width: 112px;
+            height: 111.5px;
           }
         }
         
         span {
           display: block;
-          margin-top: 15px;
+          margin-top: 10px;
+          letter-spacing: 0.1em;
 
           @include max-screen($breakpoint-mobile) {
             padding-left: 5px;
             padding-right: 5px;
             font-size: 13px;
+            margin-top: 7px;
           }
         }
       }
@@ -58,5 +103,42 @@
 .column-link-labo {
   .link-container {
     justify-content: space-evenly;
+
+    .link-item {
+      &:first-child {
+        text-align: right;
+
+        @include min-screen($breakpoint-mobile + 1) {
+          top: 1px;
+          left: -42px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          top: 1px;
+          left: -36px;
+        }
+      }
+
+      &:last-child {
+        text-align: left;
+
+        @include min-screen($breakpoint-mobile + 1) {
+          top: 1px;
+          left: 77px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          top: 1px;
+          left: 32px;
+        }
+      }
+    }
+  }
+}
+
+//modifier anchor
+.subpage-inner-anchor {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 147px;
   }
 }

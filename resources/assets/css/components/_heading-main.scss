@@ -6,10 +6,24 @@
     margin-bottom: 83px;
   }
 
-  @include max-screen($breakpoint-mobile + 1) {
-    &-subpage {
-      .heading-subtext {
+  &-subpage {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile + 1) {
         height: auto;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 202px;
+        height: 49.5px;
+      }
+    }
+
+    &-labo {
+      .heading-subtext {
+        @include max-screen($breakpoint-mobile) {
+          width: 219px;
+          height: 50.5px;
+        }
       }
     }
   }

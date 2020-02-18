@@ -30,16 +30,23 @@
   }
 
   .alt-feature-desc {
-    max-width: 430px;
+    max-width: 465px;
     margin: auto;
     width: 50%;
+
+    &.right {margin-right: 0;}
+    &.left {margin-left: 0;}
 
     .alt-feature-desc-wrapper {
       background: url('/assets/images/frame-v2.png') no-repeat;
       background-size: 100% 100%;
-      padding: 80px 40px;
+      padding: 73px 40px 45px;
       text-align: center;
       position: relative;
+
+      .alt-feature-desc-text {
+        line-height: 2;
+      }
 
       @include max-screen ($breakpoint-mobile) {
         padding: 10px 15px;
@@ -56,8 +63,9 @@
         }
 
         &.owl {
-          right: -40px;
-          top: -30px;
+          right: 0;
+          top: -50px;
+
           @include max-screen ($breakpoint-mobile) {
             top: -48px;
           }

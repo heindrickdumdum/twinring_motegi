@@ -4,13 +4,17 @@
 
 .youtube-video-content {
   margin: 0 -20px;
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 -27px;
+  }
 }
 
 .youtube-video-list {
   margin-top: 47px;
 
   @include max-screen($breakpoint-mobile) {
-    padding: 0 25px
+    padding: 0 25px;
+    margin-top: -7px;
   }
 }
 

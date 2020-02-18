@@ -1,12 +1,39 @@
 .sponsors {
   .sponsor-list {
     display: flex;
-    
+    max-width: 1021px;
+    margin: auto;
+    justify-content: space-between;
+
     @include max-screen($breakpoint-mobile) {
       flex-wrap: wrap;
     }
     .sponsor-item {
-      padding: 35px;
+      /*padding: 35px;*/
+
+      &.Coleman {
+        img {width: 100px;}
+      }
+
+      &.Stiihl {
+        img {width: 118px;}
+      }
+
+      &.Jyaoan {
+        img {width: 154px;}
+      }
+
+      &.Fumakira {
+        img {width: 110px;}
+      }
+
+      &.MSAD {
+        img {width: 165px;}
+      }
+
+      &.Mont-bell {
+        img {width: 118px;}
+      }
 
       @include max-screen($breakpoint-mobile) {
         width: 33%;

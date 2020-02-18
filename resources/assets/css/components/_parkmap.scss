@@ -289,7 +289,8 @@
 //modifier for SP
 .map {
   @include min-screen($breakpoint-mobile + 1) {
-    margin-top: -138px;
+    margin-top: -42px;
+    margin-bottom: 79px;
   }
 
   .map-img {

@@ -116,4 +116,25 @@
       max-width: 246px;
     }
   }
+
+  &.button-comparison {
+    max-width: 370px;
+    width: 100%;
+
+    br {
+      display: block;
+
+      @include min-screen(526px) {
+        display: none;
+      }
+    }
+
+    .button-icon {
+      @include max-screen(525px) {
+        right: 0;
+        position: relative;
+        margin-left: 20px;
+      }
+    }
+  }
 }

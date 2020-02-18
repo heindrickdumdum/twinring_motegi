@@ -73,13 +73,9 @@
   }
 
   .heading-subtext {
-    // max-width: 250px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    @include max-screen($breakpoint-mobile) {
-      max-width: 250px;
-    }
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -88,20 +84,38 @@
     }
 
     .heading-family-walk {
+      .heading {
+        margin-bottom: 18px;
+      }
+
       .heading-subtext {
-        height: 67px;
+        width: 315.5px;
+        height: 55.5px;
+        margin-top: 14px;
       }
     }
 
     .heading-guide-walk {
+      .heading {
+        margin-bottom: 18px;
+      }
+
       .heading-subtext {
-        height: 71px;
+        width: 196.5px;
+        height: 56px;
+        margin-top: 14px;
       }
     }
 
     .heading-free-walk {
+      .heading {
+        margin-bottom: 18px;
+      }
+
       .heading-subtext {
-        height: 35px;
+        width: 256.5px;
+        height: 25px;
+        margin-top: 14px;
       }
     }
 
@@ -515,6 +529,10 @@
 
 //modifier forest walk
 .subpage-section-family-walk {
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 72px !important;
+  }
+
   .heading-family-walk {
     .heading {
       @include min-screen($breakpoint-mobile + 1) {

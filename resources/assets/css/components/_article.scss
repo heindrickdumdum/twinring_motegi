@@ -127,8 +127,12 @@
 
   &.article-no-design {
     .article-heading {
+      margin-top: 7px;
+      padding-left: 0;
       color: $color-mineshaft;
+      letter-spacing: 0.03em;
     }
+
     &:hover {
       @include min-screen($breakpoint-mobile + 1) {
         .button-gradient-icon {

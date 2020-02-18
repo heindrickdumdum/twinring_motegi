@@ -172,7 +172,7 @@
   svg {
     width: 36px;
     height: 37px;
-    fill: $color-light-green;
+    fill: $color-green;
 
     @include max-screen($breakpoint-mobile) {
       width: 23px;
@@ -185,50 +185,6 @@
 
     @include max-screen($breakpoint-mobile) {
       flex-grow: unset;
-    }
-
-    svg {
-      fill: #0ba46d;
-
-      @include max-screen($breakpoint-mobile) {
-        fill: $color-green;
-      }
-    }
-  }
-  &.header-bottom-item-motorsports {
-    svg {
-      fill: #3db898;
-
-      @include max-screen($breakpoint-mobile) {
-        fill: $color-green;
-      }
-    }
-  }
-  &.header-bottom-item-camp {
-    svg {
-      fill: #67c8bd;
-
-      @include max-screen($breakpoint-mobile) {
-        fill: $color-green;
-      }
-    }
-  }
-  &.header-bottom-item-restaurant {
-    svg {
-      fill: #54c3c2;
-
-      @include max-screen($breakpoint-mobile) {
-        fill: $color-green;
-      }
-    }
-  }
-  &.header-bottom-item-shop {
-    svg {
-      fill: #68cbd4;
-
-      @include max-screen($breakpoint-mobile) {
-        fill: $color-green;
-      }
     }
   }
 }

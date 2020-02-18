@@ -286,7 +286,11 @@
 
 /*Tsubasa*/
 .media-note-tsubasa {
-  max-width: 300px;
+  max-width: 195px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    max-width: 300px;
+  }
 }
 
 .media-labo {

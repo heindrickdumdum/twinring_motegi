@@ -221,7 +221,7 @@
   width: 100%;
 
   @include min-screen($breakpoint-mobile + 1) {
-    padding-top: 98px;
+    padding-top: 49px;
     padding-left: 58px;
     width: calc(100% - 450px);
   }

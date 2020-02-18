@@ -61,7 +61,8 @@
   width: 100%;
 
   @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 120px;
+    // margin-bottom: 120px;
+    margin-bottom: 145px;
   }
 
   > p {
@@ -239,8 +240,9 @@
 }
 
 .subpage-section-howto-inner {
-  max-width: 1070px;
+  max-width: 1060px;
   margin: 0 auto;
+  padding: 0 20px;
 
   @include max-screen($breakpoint-mobile) {
     padding: 0 36px;

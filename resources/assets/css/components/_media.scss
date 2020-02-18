@@ -311,6 +311,10 @@
     @include min-screen($breakpoint-mobile + 1) {
       padding-top: 49px;
     }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 23px;
+    }
   
     .subpage-title {
       @include min-screen($breakpoint-mobile + 1) {
@@ -322,17 +326,33 @@
       @include min-screen($breakpoint-mobile + 1) {
         padding: 0;
       }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 0 34px;
+        margin-bottom: 77px;
+      }
     }
   
     .media-title {
       @include min-screen($breakpoint-mobile + 1) {
         margin-top: 3px;
       }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-top: 8px;
+      }
     }
   
     .media-desc {
       @include min-screen($breakpoint-mobile + 1) {
         padding-top: 15px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
       }
     }
   
@@ -355,6 +375,10 @@
     @include min-screen($breakpoint-mobile + 1) {
       padding-top: 57px;
     }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 23px;
+    }
   
     .subpage-title {
       @include min-screen($breakpoint-mobile + 1) {
@@ -366,17 +390,33 @@
       @include min-screen($breakpoint-mobile + 1) {
         padding: 0;
       }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 0 34px;
+        margin-bottom: 45px;
+      }
     }
   
     .media-title {
       @include min-screen($breakpoint-mobile + 1) {
         margin-top: 3px;
       }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-top: 8px;
+      }
     }
   
     .media-desc {
       @include min-screen($breakpoint-mobile + 1) {
         padding-top: 15px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
       }
     }
   

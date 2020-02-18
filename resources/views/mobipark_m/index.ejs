@@ -362,4 +362,9 @@
   <!-- END BOTTOM -->
 </div>
 
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsMobipark
+}) -%>
+
 <%- include('/partials/footer', {pageId}) -%>

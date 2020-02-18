@@ -40,12 +40,14 @@ export default function headerMenu() {
         headerSub.classList.add(CONST.VISIBLE_CLASS)
 
         if(elAttrib != '#') {
+
           headerSubInner.forEach( function(e) {
             e.style.display = 'none';
           })
 
           document.querySelectorAll('[data-content="'+elAttrib+'"]').forEach( function(e) {
             e.style.display = 'block'
+            console.log(e.parentNode);
           })
 
           scrollLock()

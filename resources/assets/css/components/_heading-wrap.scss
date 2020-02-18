@@ -1,5 +1,15 @@
 .heading-wrap {
 
+  &.heading-wrap-information {
+    .heading-text {
+      letter-spacing: 0.01em;
+    }
+    .heading-subtext {
+      margin-top: 14px;
+      width: 309px;
+    }
+  }
+
   &.heading-gradient-tobottom {
     .heading-text {
       background: linear-gradient(to bottom, #027cc3 35%, #099f48 100%);
@@ -38,11 +48,12 @@
     .heading-text,
     .heading-subtext {
       margin: 0 auto;
-      letter-spacing: 0.03em;
+      letter-spacing: -0.01em;
+      font-size: 34px;
     }
 
     .heading-subtext {
-      margin: 25px auto 0;
+      margin: 13px auto 0;
     }
   }
 
@@ -266,6 +277,38 @@
         margin-top: 14px;
       }
     }
+  }
+
+  &.heading-wrap-video-musasabi {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 35px;
+    }
+
+    .heading-subtext {
+      height: 91px;
+      width: 300px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 10px;
+      }
+
+      @include min-screen($breakpoint-mobile) {
+        height: 37px;
+        width: 731px;
+      }
+    }
+  }
+
+  &.heading-comparison {
+    text-align: center;
+    .heading-subtext {
+      max-width: 491px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 10px;
+      }
+    }
 
     .heading-aqua-labo {
       .heading-subtext {
@@ -280,6 +323,14 @@
     }
   }
 
+  &.heading-forest-craft {
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   @include max-screen($breakpoint-mobile) {
     .subpage-section-family-walk {
       margin-top: 72px;
@@ -289,4 +340,5 @@
       margin-top: 150px;
     }
   }
+
 }

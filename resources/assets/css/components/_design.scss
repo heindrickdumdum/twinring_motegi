@@ -3,7 +3,10 @@
 .design-mount,
 .design-feature,
 .design-parkmap,
-.design-parkmap-inner {
+.design-activity,
+.design-parkmap-inner,
+.design-activity-inner,
+.design-how-to {
   position: relative;
 
   &::before,
@@ -68,6 +71,53 @@
   }
 }
 
+.design-activity {
+  &::before {
+    width: 39px;
+    height: 34px;
+    left: 163px;
+    top: 162px;
+    background-image: url(#{$image-path}design-leaves7.png);
+    z-index: $z-min;
+  }
+  &::after {
+    width: 135px;
+    height: 262px;
+    right: 94px;
+    top: -68px;
+    background-image: url(#{$image-path}design-leaves6.png);
+  }
+}
+
+.design-activity-inner {
+  &::before {
+    width: 78px;
+    height: 109px;
+    left: 34px;
+    bottom: 6px;
+    background-image: url(#{$image-path}design-leaves8.png);
+  }
+  &::after {
+    width: 228px;
+    height: 183px;
+    right: -23px;
+    bottom: 49px;
+    background-image: url(#{$image-path}design-mount.png);
+  }
+}
+
+.design-how-to {
+  &::before {
+    width: 204px;
+    height: 204px;
+    right: 0;
+    top: -132px;
+    background-image: url(#{$image-path}design-circle2.png);
+    z-index: $z-min;
+  }
+}
+
+
 .design-circle {
   &::before {
     width: 204px;
@@ -75,7 +125,6 @@
     left: -11px;
     bottom: 105px;
     background-image: url(#{$image-path}design-circle.png);
-    opacity: .3;
   }
 
   &::after {
@@ -91,10 +140,9 @@
   &::before {
     width: 228px;
     height: 183px;
-    left: -11px;
-    bottom: 343px;
+    left: 16px;
+    top: 348px;
     background-image: url(#{$image-path}design-mount.png);
-    opacity: .3;
   }
 
   &::after {
@@ -103,6 +151,17 @@
     right: 80px;
     bottom: 118px;
     background-image: url(#{$image-path}design-petals2.png);
+  }
+
+  &.design-twinring {
+    &::after {
+      width: 37px;
+      height: 36px;
+      right: 93px;
+      bottom: calc((100% / 2) - 124px);
+      background-image: url(#{$image-path}design-petal2.png);
+      z-index: $z-min;
+    }
   }
 }
 
@@ -125,7 +184,6 @@
     left: 62px;
     bottom: 30px;
     background-image: url(#{$image-path}design-petals3.png);
-    opacity: .3;
   }
 
   &::after {
@@ -133,6 +191,6 @@
     height: 36px;
     right: 120px;
     bottom: 123px;
-    background-image: url(#{$image-path}design-petal2.png);
+    background-image: url(#{$image-path}design-petal3.png);
   }
 }

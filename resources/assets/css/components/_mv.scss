@@ -370,7 +370,7 @@
 .subpage-labo {
   .mv-image {
     @include max-screen($breakpoint-mobile) {
-      background-position-x: 70%;
+      background-position-x: 60%;
     }
   }
 }

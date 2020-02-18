@@ -16,12 +16,6 @@
     margin: 0 auto;
   }
 
-  &.heading-banner-more-tsubasa{
-    .heading-subtext {
-      height: auto;
-    }
-  }
-
   &.heading-banner-more-acrox {
     .heading-subtext {
       @include max-screen($breakpoint-mobile) {

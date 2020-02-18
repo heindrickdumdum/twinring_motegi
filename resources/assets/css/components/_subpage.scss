@@ -430,6 +430,56 @@
 }
 //modifier forest walk end
 
+//modifier forest labo
+.subpage-labo {
+  & > .subpage-inner {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 148px;
+    }
+  }
+
+  .subpage-section-aqua-labo {
+    .subpage-inner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 196px;
+      }
+
+      & > p {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 31px;
+        }
+      }
+    }
+
+    .subpage-banner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  .subpage-section-mammal-labo {
+    .subpage-inner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 196px;
+      }
+
+      & > p {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 31px;
+        }
+      }
+    }
+
+    .subpage-banner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 31px;
+      }
+    }
+  }
+}
+//modifier forest labo end
+
 .subpage-section-course,
 .subpage-section-kart {
   margin-bottom: 50px;

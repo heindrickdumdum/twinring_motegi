@@ -686,89 +686,105 @@
 }
 
 .mv-inner {
-  .mv-today {
-    width: 268px;
-    height: 266px;
-    background-image: url(../images/sumika/sumika-logo.png);
-    bottom: -45px;
-  }
-
-  .mv-heading {
-    bottom: 45px;
-  }
-
-  .mv-heading-subtexts {
-
-    svg {
-      fill: $color-white;
-      width: 520px;
-      height: 74px;
+  
+    @include max-screen($breakpoint-mobile) {
+      height: 378px;
     }
-  }
 
+    .mv-today {
+      width: 268px;
+      height: 266px;
+      background-image: url(../images/sumika/sumika-logo.png);
+      bottom: -45px;
+    }
 
-.mv-heading-sumika {
-  .mv-heading-subtexts {
-    svg {
-      width: 653px;
-      height: 81px;
-      @include max-screen($breakpoint-mobile) {
-        width: 220px;
+    .mv-heading {
+      bottom: 27px;
+    }
+
+    .mv-heading-subtexts {
+
+      svg {
+        fill: $color-white;
+        width: 520px;
         height: 74px;
       }
     }
-  }
-}
 
-.mv-heading-itadaki {
-  @include max-screen($breakpoint-mobile) {
-   .mv-heading-subtexts {
-    svg {
-      width: 162px;
-      height: 76px;
+    .mv-heading-texts {
+      font-family: $font-holland;
+      color: $color-white;
+      font-size: 50px;
+      letter-spacing: 0.06em;
+      width: auto;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 25px;
+      }
     }
-   }
-  }
-}
 
-.mv-heading-dokidoki {
-  @include max-screen($breakpoint-mobile) {
-   .mv-heading-subtexts {
-    svg {
-      width: 130px;
-      height: 76px;
+
+  .mv-heading-sumika {
+    .mv-heading-texts {
+      @include max-screen($breakpoint-mobile) {
+        font-size: 24px;
+        letter-spacing: 0.092em;
+      }
     }
-   }
+
+    .mv-heading-subtexts {
+      svg {
+        width: 653px;
+        height: 81px;
+        @include max-screen($breakpoint-mobile) {
+          width: 271px;
+          height: 87px;
+          position: relative;
+          left: -6px;
+          top: -3px;
+        }
+      }
+    }
   }
-}
 
-  .mv-heading-texts {
-    font-family: $font-holland;
-    color: $color-white;
-    font-size: 50px;
-    letter-spacing: 0.06em;
-    width: auto;
-
+  .mv-heading-itadaki {
     @include max-screen($breakpoint-mobile) {
-      font-size: 25px;
+    .mv-heading-subtexts {
+      svg {
+        width: 162px;
+        height: 76px;
+      }
+    }
     }
   }
 
-  // itadaki mv
-
-  &.itadaki-mv {
-    .mv-today {
-      background-image: url(../images/itadaki/today.png);
+  .mv-heading-dokidoki {
+    @include max-screen($breakpoint-mobile) {
+    .mv-heading-subtexts {
+      svg {
+        width: 130px;
+        height: 76px;
+      }
+    }
     }
   }
 
-  // dokidoki
+  
+    // itadaki mv
 
-  &.dokidoki-mv {
-    .mv-today {
-      background-image: url(../images/dokidoki/dokidoki-logo.png);
+    &.itadaki-mv {
+      .mv-today {
+        background-image: url(../images/itadaki/today.png);
+      }
     }
-  }
+
+    // dokidoki
+
+    &.dokidoki-mv {
+      .mv-today {
+        background-image: url(../images/dokidoki/dokidoki-logo.png);
+      }
+    }
 }
 
 // END sumika mv
@@ -847,7 +863,8 @@
 }
 
 //modifier MV forest walk
-.mv-subpage-walk {
+.mv-subpage-walk,
+.mv-subpage-labo {
   overflow: hidden;
 
   @include min-screen($breakpoint-mobile + 1) {

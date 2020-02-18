@@ -6,7 +6,7 @@
 <%- include('/partials/head', { title }) -%>
 
 <div class="subpage subpage-labo">
-  <div class="mv mv-subpage">
+  <div class="mv mv-subpage mv-subpage-labo">
     <ul class="mv-list">
       <li class="mv-item">
         <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/labo-mv.jpg') %>);"></div>
@@ -354,12 +354,18 @@
   </section>
 
   <!-- END BOTTOM -->
-</div>
 
 <!-- recommendation module -->
 <%- include('/partials/recommendation') -%>
 
 <!-- pick up module -->
 <%- include('/partials/pickup') -%>
+
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsLabo
+}) -%>
 
 <%- include('/partials/footer', {pageId}) -%>

@@ -4,6 +4,17 @@
   @include max-screen($breakpoint-mobile) {
     margin: 24px 0;
   }
+
+  &.heading-sumika {
+    .heading-texts {
+      img {
+        @include max-screen($breakpoint-mobile) {
+          width: 293px;
+        }
+      }
+    }
+  }
+  
 }
 
 .heading-text {
@@ -66,46 +77,31 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    @include max-screen($breakpoint-mobile) {
+      max-width: 250px;
+    }
   }
 
   @include max-screen($breakpoint-mobile) {
     .heading-main-subpage {
-      margin-top: 0;
+      margin-top: 90px;
     }
 
     .heading-family-walk {
-      .heading {
-        margin-bottom: 20px;
-      }
-
       .heading-subtext {
-        width: 315.5px;
-        height: 55.5px;
-        margin-top: 12px;
+        height: 67px;
       }
     }
 
     .heading-guide-walk {
-      .heading {
-        margin-bottom: 20px;
-      }
-
       .heading-subtext {
-        width: 196.5px;
-        height: 56px;
-        margin-top: 13px;
+        height: 71px;
       }
     }
 
     .heading-free-walk {
-      .heading {
-        margin-bottom: 18px;
-      }
-
       .heading-subtext {
-        width: 256.5px;
-        height: 25px;
-        margin-top: 14px;
+        height: 35px;
       }
     }
 
@@ -123,12 +119,21 @@
   }
 
   @include max-screen($breakpoint-mobile) {
-    .subpage-section-family-walk {
-      margin-top: 72px;
-    }
-
+    .subpage-section-family-walk,
     .subpage-section-aqua-labo {
       margin-top: 150px;
+    }
+  }
+}
+
+// modifier challenge
+.challenge {
+  .heading-text {
+    max-width: 584px;
+    width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 250px;
     }
   }
 }
@@ -172,18 +177,6 @@
         min-height: 56px;
         margin-top: 12px;
       }
-    }
-  }
-}
-
-// modifier challenge
-.challenge {
-  .heading-text {
-    max-width: 584px;
-    width: 100%;
-
-    @include max-screen($breakpoint-mobile) {
-      max-width: 250px;
     }
   }
 }
@@ -599,3 +592,56 @@
   }
 }
 //modifier forest walk end
+
+//modifier forest labo
+.subpage-section-aqua-labo {
+  .heading-aqua-labo {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 33px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 11px;
+        margin-left: auto;
+        width: 264px;
+        height: 34px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.subpage-section-mammal-labo {
+  .heading-mammal-labo {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 11px;
+        margin-left: auto;
+        width: 264px;
+        height: 34px;
+        margin-right: auto;
+      }
+    }
+  }
+}

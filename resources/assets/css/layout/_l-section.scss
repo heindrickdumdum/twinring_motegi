@@ -1,8 +1,13 @@
 .l-section {
   padding-bottom: 95px;
 
-  @include max-screen($breakpoint-mobile) {
+  &.youtube-video {
+    padding-top: 25px;
     padding-bottom: 0;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    padding-bottom: 55px;
   }
 
   &.l-section-hotel-twin {
@@ -38,6 +43,6 @@
 .l-section-inner {
   padding: 0 146px;
   @include max-screen($breakpoint-mobile) {
-    padding: 0 0 40px;
+    padding: 26px 0 40px;
   }
 }

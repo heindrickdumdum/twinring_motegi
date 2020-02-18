@@ -76,15 +76,11 @@
     }
 
     .step-no {
-      margin: 0 auto 5px;
+      margin: 0 auto;
       height: 45px;
       position: relative;
       font-size: 18px;
       color: $color-green;
-
-      @include min-screen($breakpoint-mobile) {
-        margin: 0 auto 10px;
-      }
 
       img {
         position: relative;
@@ -92,6 +88,10 @@
         right: 0;
         z-index: 3;
         margin: auto;
+
+        @include min-screen($breakpoint-mobile + 1) {
+          top: -8px;
+        }
       }
     }
 

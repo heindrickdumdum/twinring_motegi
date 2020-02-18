@@ -141,20 +141,24 @@
     <section class="subpage-section subpage-section-video">
       <div class="subpage-section-video-inner">
         <div class="l-section-title">
-          <%- include('/partials/heading', {
-            modifier: 'heading-gradient-tobottom heading-wrap-video-musasabi',
-            text: 'Musasabi Videos',
-            alt: '',
-            altSubtext: '',
-            subtextvg: 'musasabi-videos-title'
-          }) %>
-          <%- include('/partials/heading', {
-            modifier: 'heading-gradient-tobottom heading-wrap-video-musasabi',
-            text: 'Musasabi Videos',
-            alt: '',
-            altSubtext: '',
-            subtextvg: 'musasabi-videos-title-sp'
-          }) %>
+          <div class="u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-gradient-tobottom heading-wrap-video-musasabi',
+              text: 'Musasabi Videos',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'musasabi-videos-title'
+            }) %>
+          </div>
+          <div class="u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-gradient-tobottom heading-wrap-video-musasabi',
+              text: 'Musasabi Videos',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'musasabi-videos-title-sp'
+            }) %>
+          </div>
         </div>
 
         <div class="subpage-section-video-wrapper">

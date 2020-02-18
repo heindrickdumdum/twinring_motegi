@@ -3,8 +3,8 @@
     <%
     dataSteps.forEach(item => {
     %>
-    <li class="step-list-item step-<%= item.step %>">
-      <div class="step-item">
+    <li class="step-item step-<%= item.step %>">
+      <div class="step-item-inner">
         <div class="step-no">
           <img class="img-step" src="/assets/images/tsubasa/step.png" alt="Goal">
           <img src="/assets/images/tsubasa/<%= item.step %>.png" alt="Goal">
@@ -20,7 +20,7 @@
           <%= item.subText %>
         </p>
         <%if (item.step == 'goal') { %>
-          <div class="media-bottom step-list-media-bottom">
+          <div class="media-bottom step-media-bottom">
             <div class="media-note media-note-tsubasa">
               <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
               <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">

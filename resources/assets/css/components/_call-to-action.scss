@@ -46,7 +46,7 @@
 
 .call-to-action-inner {
   position: relative;
-  max-height: 277px;
+  max-height: 320px;
   padding: 47px;
 
 @include max-screen($breakpoint-mobile) {
@@ -107,7 +107,7 @@
   }
 
   @include max-screen($breakpoint-mobile) {
-   
+
     // font-size: 12px;
     margin-top: 15px;
   }

@@ -54,6 +54,18 @@
   &.button-parkmap {
     width: 98%;
 
+    @include min-screen($breakpoint-mobile + 1) {
+      &:hover {
+        color: $color-green;
+
+        .button-icon {
+          svg {
+            stroke: $color-green;
+          }
+        }
+      }
+    }
+
     .button-icon {
       right: 18px;
     }

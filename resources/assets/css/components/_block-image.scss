@@ -1,6 +1,6 @@
 .block-image {
   margin-top: 66px;
-  padding-bottom: 143px;
+  padding-bottom: 126px;
   position: relative;
 
   &::before {
@@ -9,7 +9,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 284px;
+    height: calc((100% / 2) + 70px);
     background-color: $color-light-gray;
   }
 

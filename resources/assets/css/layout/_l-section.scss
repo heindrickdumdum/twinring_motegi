@@ -6,7 +6,7 @@
   }
 
   &.l-section-hotel-twin {
-    padding-bottom: 70px;
+    padding-bottom: 47px;
 
     @include max-screen($breakpoint-mobile) {
       padding-bottom: 52px;
@@ -24,6 +24,14 @@
   &.sponsors {
     @include max-screen ($breakpoint-mobile) {
       margin-bottom: 55px;
+    }
+  }
+
+  &.l-section-activity {
+    margin-top: -72px;
+
+    @include max-screen ($breakpoint-mobile) {
+      margin-top: 0;
     }
   }
 

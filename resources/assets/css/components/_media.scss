@@ -289,37 +289,101 @@
   max-width: 300px;
 }
 
-.media-labo {
-  padding-top: 50px;
-
-  .media {
+//modifier forest labo
+.subpage-section-aqua-labo {
+  .media-labo {
     @include min-screen($breakpoint-mobile + 1) {
-      padding: 0;
+      padding-top: 49px;
     }
-  }
-
-
-  .media-left {
-    width: 425px;
-
-    @include max-screen($breakpoint-mobile) {
-      width: 100%;
+  
+    .subpage-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 24px;
+      }
     }
-  }
-
-  .media-right {
-    // padding-left: 425px;
-    //
-    // @include max-screen($breakpoint-mobile) {
-    //   padding-left: 20px;
-    //   padding-right: 20px;
-    // }
-  }
-
-  .media-bg {
-    margin-left: 0px;
+  
+    .media {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding: 0;
+      }
+    }
+  
+    .media-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 3px;
+      }
+    }
+  
+    .media-desc {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 15px;
+      }
+    }
+  
+    .media-left {
+      width: 425px;
+  
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+  
+    .media-bg {
+      margin-left: 0px;
+    }
   }
 }
+
+.subpage-section-mammal-labo {
+  .media-labo {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 57px;
+    }
+  
+    .subpage-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 34px;
+      }
+    }
+  
+    .media {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding: 0;
+      }
+    }
+  
+    .media-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 3px;
+      }
+    }
+  
+    .media-desc {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 15px;
+      }
+    }
+  
+    .media-left {
+      width: 425px;
+  
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+  
+    .media-bg {
+      margin-left: 0px;
+    }
+  }
+
+  .subpage-button {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 89px;
+    }
+  }
+}
+//modifier forest labo end
 
 //modifier
 .media-craft {

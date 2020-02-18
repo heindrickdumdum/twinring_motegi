@@ -820,7 +820,8 @@
 }
 
 //modifier MV forest walk
-.mv-subpage-walk {
+.mv-subpage-walk,
+.mv-subpage-labo {
   overflow: hidden;
 
   @include min-screen($breakpoint-mobile + 1) {

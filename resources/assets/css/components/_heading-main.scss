@@ -1,0 +1,125 @@
+//main page title
+.heading-main {
+  margin-bottom: 45px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 83px;
+  }
+
+  @include max-screen($breakpoint-mobile + 1) {
+    &-subpage {
+      .heading-subtext {
+        height: auto;
+      }
+    }
+  }
+
+  .heading {
+    // max-width: 651px;
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &.heading-main-carbike {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 25px;
+    }
+
+    .heading {
+      // margin-bottom: 65px;
+      max-width: 531px;
+    }
+  }
+
+  &.heading-main-dokidoki {
+    .heading {
+      max-width: 497px;
+    }
+  }
+
+  &.heading-main-wild-racer {
+    .heading {
+      max-width: 505px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 320px;
+      }
+    }
+  }
+
+  &.heading-main-bunbun {
+    .heading {
+      max-width: 445px;
+    }
+  }
+
+  &.heading-main-motorcycle {
+    .heading {
+      max-width: 358px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 250px;
+      }
+    }
+  }
+
+  &.heading-main-forest-driving {
+    img {
+      max-width: 628px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 243px;
+      }
+    }
+  }
+
+  &.heading-main-challenge {
+    img {
+      max-width: 274px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 651px;
+      }
+    }
+  }
+
+  &.heading-main-debden {
+    img {
+      max-width: 310px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 651px;
+      }
+    }
+  }
+
+  &.heading-main-tsubasa {
+    margin: 60px 0;
+  }
+
+  &.heading-main-craft {
+    .heading-texts {
+      display: block;
+      img {
+        @include max-screen($breakpoint-mobile) {
+          width: 220px;
+        }
+      }
+    }
+
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin: 56px auto 59px;
+      }
+    }
+  }
+
+}

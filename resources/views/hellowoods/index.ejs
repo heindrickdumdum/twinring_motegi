@@ -100,9 +100,9 @@
   </div>
 
     <section class="field-introduction">
-      <div class="l-container field-introduction-container">
+      <div class="field-introduction-container">
         <%- include('/partials/heading', {
-          modifier: 'heading-wrap-how-to heading-wrap-center',
+          modifier: 'heading-wrap-how-to heading-wrap-center heading-wrap-hellowoods',
           text: 'Field Introduction',
           alt: '',
           subtextvg: 'hellowoods-field-intro-subtext',
@@ -143,7 +143,7 @@
       <section class="adventure">
         <div class="l-section-title">
           <%- include('/partials/heading', {
-            modifier: 'heading-wrap-center',
+            modifier: 'heading-wrap-center heading-wrap-hellowoods adventure',
             text: 'Explore',
             alt: '',
             altSubtext: '',
@@ -151,7 +151,7 @@
           }) %>
         </div>
     
-        <div class="l-container">
+        <div class="forest-container">
           <%- include('/partials/hellowoods/section-forest') -%>
         </div>
       </section>
@@ -161,7 +161,7 @@
     <section class="l-section alternate-feature l-section-hellowoods">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: '',
+          modifier: 'heading-wrap-center heading-wrap-hellowoods',
           text: 'Experience',
           alt: '',
           altSubtext: '',
@@ -177,7 +177,7 @@
     <section class="l-section alternate-feature l-section-hellowoods">
       <div class="l-section-title">
         <%- include('/partials/heading', {
-          modifier: '',
+          modifier: 'heading-wrap-center heading-wrap-hellowoods',
           text: 'Learn',
           alt: '',
           altSubtext: '',
@@ -190,9 +190,9 @@
       </div>
     </section>
 
-    <div class=" block-image">
+    <div class=" block-image block-image-hellowoods">
       <div class="l-container">
-        <ul class="block-image-list">
+        <ul class="block-image-list block-image-list-hellowoods">
           <%
             hellowoodsGallery.forEach( block => {
           %>
@@ -255,7 +255,7 @@
       <div class="l-container">
         <div class="call-to-action-wrapper">
           <div class="call-to-action-inner">
-            <h2 class="heading">
+            <h2 class="heading headig-call-to-action">
               <span class="heading-text">
                 ハローウッズをもっと楽しむ
               </span>

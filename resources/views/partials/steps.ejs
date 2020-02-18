@@ -3,14 +3,22 @@
     <%
     dataSteps.forEach(item => {
     %>
-    <li class="step-list-item step-<%= item.step %>">
-      <div class="step-item">
+    <li class="step-item step-<%= item.step %>">
+      <div class="step-item-inner">
         <div class="step-no">
           <img class="img-step" src="/assets/images/tsubasa/step.png" alt="Goal">
-          <img src="/assets/images/tsubasa/<%= item.step %>.png" alt="Goal">
+          <img class="step-number" src="/assets/images/tsubasa/<%= item.step %>.png" alt="Goal">
         </div>
         <div class="step-image">
-          <img src="<%= item.image %>" alt="Step 1">
+          <div class="step-image-inner">
+
+            <% if(item.imageSp !== '') { %>
+              <img class="u-show-pc" src="<%= item.image %>" alt="Step <%= item.step %>">
+              <img class="u-show-sp" src="<%= item.imageSp %>" alt="Step <%= item.step %>">
+            <% } else { %>
+              <img src="<%= item.image %>" alt="Step <%= item.step %>">
+            <% } %>
+          </div>
         </div>
         <div class="step-title"><%= item.heading %></div>
         <% if (item.subHeading != "") { %>
@@ -20,7 +28,7 @@
           <%= item.subText %>
         </p>
         <%if (item.step == 'goal') { %>
-          <div class="media-bottom step-list-media-bottom">
+          <div class="media-bottom step-media-bottom">
             <div class="media-note media-note-tsubasa">
               <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
               <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">

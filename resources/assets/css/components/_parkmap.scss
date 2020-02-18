@@ -273,6 +273,19 @@
 }
 
 //modifier for SP
+.map {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: -42px;
+    margin-bottom: 79px;
+  }
+
+  .map-img {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -52px;
+    }
+  }
+}
+
 @include max-screen($breakpoint-mobile) {
   .map {
     margin-bottom: 52px;

@@ -47,6 +47,11 @@
   margin-top: 20px;
   height: 36px;
 
+  // additional
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
   @include max-screen($breakpoint-mobile) {
     height: 22px;
     display: block;
@@ -77,7 +82,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-
     @include max-screen($breakpoint-mobile) {
       max-width: 250px;
     }
@@ -139,7 +143,6 @@
   }
 }
 
-
 //modifier mobipark heading
 .heading-mobipark {
   .heading {
@@ -152,784 +155,32 @@
   }
 }
 
-//banner title image or text
-.heading-banner-more {
-  .heading {
-    margin: 0;
-  }
-
-  .heading-text {
-    line-height: 1;
-    letter-spacing: 0.16em;
-    font-size: 31px;
-    position: relative;
-  }
-
+//modifier for SP
+.page-mobipark {
   .heading-subtext {
-    position: relative;
-    margin: 0 auto;
-  }
-
-  &.heading-banner-more-acrox {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        max-width: 184px;
-        height: auto;
-      }
-    }
-  }
-
-  &.heading-banner-more-forestdriving {
-    .heading-subtext {
-      max-width: 419px;
-      width: 100%;
-      left: 10px;
-
-      @include max-screen($breakpoint-mobile) {
-        left: 0;
-        max-width: 158px;
-        height: auto;
-      }
-    }
-
-  }
-
-  &.heading-banner-more-debden {
-    .heading-subtext {
-      max-width: 528px;
-      width: 100%;
-      left: 10px;
-
-      @include max-screen($breakpoint-mobile) {
-        left: 0;
-        max-width: 208px;
-        height: 46px;
-      }
-
-    }
-  }
-
-  &.heading-banner-more-challenge {
-    .heading-subtext {
-      max-width: 528px;
-
-      width: 100%;
-      left: 10px;
-    }
-  }
-
-  &.heading-banner-more-bunbun {
-    .heading-subtext {
-      left: 26px;
-
-      @include max-screen($breakpoint-mobile) {
-        left: 0;
-        max-width: 232px;
-        height: 46px;
-      }
-    }
-  }
-
-  &.heading-banner-more-motorcycle {
-    .heading-subtext {
-      left: 9px;
-      height: auto;
-
-      @include max-screen($breakpoint-mobile) {
-        left: 0;
-        max-width: 210px;
-      }
-    }
-  }
-
-  &.heading-banner-more-mototouring {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        max-width: 184px;
-        height: 46px;
-      }
-    }
-  }
-  &.heading-banner-more-motoracer {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        max-width: 161px;
-        height: 46px;
-      }
-    }
-  }
-  &.heading-banner-more-dream {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        max-width: 178px;
-        height: 46px;
-      }
-    }
-  }
-  &.heading-banner-more-wildracer {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        max-width: 206px;
-        height: 46px;
-      }
-    }
-  }
-}
-
-//main page title
-.heading-main {
-  margin-bottom: 45px;
-
-  @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 83px;
-  }
-
-  @include max-screen($breakpoint-mobile + 1) {
-    &-subpage {
-      .heading-subtext {
-        height: auto;
-      }
-    }
-  }
-
-  .heading {
-    // max-width: 651px;
-    width: 100%;
-    margin: 0 auto;
-
-    img {
-      display: block;
-      margin: 0 auto;
-    }
-  }
-
-  &.heading-main-carbike {
     @include max-screen($breakpoint-mobile) {
-      margin-bottom: 25px;
-    }
+      min-height: 47px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
 
-    .heading {
-      // margin-bottom: 65px;
-      max-width: 531px;
-    }
-  }
-
-  &.heading-main-dokidoki {
-    .heading {
-      max-width: 497px;
     }
   }
 
-  &.heading-main-wild-racer {
-    .heading {
-      max-width: 505px;
-
-      @include max-screen($breakpoint-mobile) {
-        max-width: 320px;
-      }
-    }
-  }
-
-  &.heading-main-bunbun {
-    .heading {
-      max-width: 445px;
-    }
-  }
-
-  &.heading-main-motorcycle {
-    .heading {
-      max-width: 358px;
-
-      @include max-screen($breakpoint-mobile) {
-        max-width: 250px;
-      }
-    }
-  }
-
-  &.heading-main-forest-driving {
-    img {
-      max-width: 628px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        max-width: 243px;
-      }
-    }
-  }
-
-  &.heading-main-challenge {
-    img {
-      max-width: 274px;
-      width: 100%;
-
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 651px;
-      }
-    }
-  }
-
-  &.heading-main-debden {
-    img {
-      max-width: 310px;
-      width: 100%;
-
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 651px;
-      }
-    }
-  }
-
-  &.heading-main-tsubasa {
-    margin: 60px 0;
-  }
-
-  &.heading-main-craft {
-    .heading-texts {
-      display: block;
-      img {
-        @include max-screen($breakpoint-mobile) {
-          width: 220px;
-        }
-      }
-    }
-
-    .heading {
-      @include max-screen($breakpoint-mobile) {
-        margin: 56px auto 59px;
-      }
-    }
-  }
-
-}
-
-//how to enjoy heading
-.heading-howto {
-  @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 60px;
-  }
-
-  &.heading-howto-acrox {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 628px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        margin-bottom: 35px;
-        max-width: 228px;
-        height: 57px;
-      }
-    }
-  }
-
-  &.heading-howto-bunbun {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 560px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        max-width: 289px;
-        height: 58px;
-      }
-    }
-  }
-
-  &.heading-howto-debden {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 669px;
-      width: 100%;
-      height: 40px;
-    }
-  }
-
-  &.heading-howto-dokidoki {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 545px;
-      width: 100%;
-    }
-  }
-
-  &.heading-howto-forest-driving {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 539px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        margin: 10px auto 0;
-        max-width: 196px;
-        height: 57px;
-      }
-    }
-  }
-
-  &.heading-howto-wildracer {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 626px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        margin: 10px auto 0;
-        max-width: 256px;
-        height: 57px;
-      }
-    }
-  }
-
-  &.heading-howto-motorcycle {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 925px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        height: 89px;
-      }
-    }
-  }
-
-  &.heading-howto-mototouring {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 625px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        margin: 10px auto 0;
-        max-width: 228px;
-        height: 58px;
-      }
-    }
-  }
-
-  &.heading-howto-motoracer {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 583px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        margin: 10px auto 0;
-        max-width: 200px;
-        height: 57px;
-      }
-    }
-  }
-
-  &.heading-howto-dream {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 616px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        margin: 10px auto 0;
-        max-width: 221px;
-        height: 57px;
-      }
-    }
-  }
-
-  &.heading-howto-drift {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 515px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        margin: 10px auto 0;
-        max-width: 197px;
-        height: 57px;
-      }
-    }
-  }
-
-  &.heading-howto-challenge {
-    .heading-subtext {
-      margin: 17px auto 0;
-      max-width: 669px;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        max-width: 256px;
-        height: 56px;
-        margin-top: 15px;
-      }
-    }
-  }
-}
-
-.heading-wrap {
-  &.heading-gradient-tobottom {
-    .heading-text {
-      background: linear-gradient(to bottom, #027cc3 35%, #099f48 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 22.5px;
-      font-weight: bold;
-      letter-spacing: 0.1em;
-
-      @include min-screen($breakpoint-mobile + 1) {
-        font-size: 36px;
-        letter-spacing: 0.1em;
-      }
-    }
-  }
-
-  &.heading-gradient-toright {
-    .heading-text {
-      background: linear-gradient(to right, #027cc3 0%, #099f48 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 23px;
-      font-weight: bold;
-      letter-spacing: 0.03em;
-
-      @include min-screen($breakpoint-mobile + 1) {
-        font-size: 36px;
-        letter-spacing: 0.1em;
-      }
-    }
-  }
-
-  &.heading-wrap-center {
-    text-align: center;
-
-    .heading-text,
-    .heading-subtext {
-      margin: 0 auto;
-      letter-spacing: 0.03em;
-    }
-
-    .heading-subtext {
-      margin: 25px auto 0;
-    }
-  }
-
-  &.heading-wrap-menu {
+  .heading-info {
     .heading-subtext {
       @include max-screen($breakpoint-mobile) {
-        margin: 13px auto 0;
-        height: 26px;
-      }
-    }
-
-    .heading {
-      @include max-screen($breakpoint-mobile) {
-        margin: 24px 0 37px;
+        min-height: 47px;
       }
     }
   }
 
-  &.heading-wrap-parkmap {
-    .heading-subtext {
-      width: 750px;
-
-      @include max-screen($breakpoint-mobile) {
-        width: 400px;
-        height: 70px;
-        display: inline-block;
-        text-align: left;
-        margin-left: -9px;
-        margin-top: 11px;
-      }
-    }
-  }
-
-  &.heading-wrap-activity {
-    .heading-subtext {
-      width: 800px;
-    }
-  }
-
-  &.heading-dokidoki {
-    .heading-text {
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .heading-subtext {
-      margin: 24px auto 0;
-      text-align: center;
-    }
-
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &.heading-net-dokidoki {
-    margin-bottom: 40px;
-
-    .heading-text {
-      margin: 0 auto;
-      text-align: center;
-    }
-  }
-
-  &.heading-sumika-faq {
-    margin-bottom: 40px;
-    text-align: center;
-
-    .heading-subtext {
-      width: 284px;
-      height: 34px;
-      margin: 0 auto;
-    }
-
-    .heading-text {
-      letter-spacing: 0.1em;
-    }
-  }
-// sumika/itadaki/dokidoki
-
-  &.heading-enjoy {
-    margin-bottom: 40px;
-    svg {
-      width: 520px;
-      height: 36px;
-      @include max-screen($breakpoint-mobile) {
-        position: relative;
-        top: -6px;
-        width: 217px;
-        height: 57px;
-      }
-    }
-  }
-
-  &.heading-wrap-craft {
+  .heading-kids-carbike-attraction {
     .heading-subtext {
       @include max-screen($breakpoint-mobile) {
-        margin-top: 11px;
-      }
-    }
-
-    svg {
-      @include max-screen($breakpoint-mobile) {
-        height: 25px;
-      }
-    }
-  }
-
-  &.heading-forest {
-    margin-bottom: 40px;
-    svg {
-      width: 520px;
-      height: 36px;
-      @include max-screen($breakpoint-mobile) {
-        position: relative;
-        top: -8px;
-        width: 206px;
-        height: 57px;
-      }
-    }
-  }
-
-  &.heading-video {
-    margin-bottom: 40px;
-    svg {
-      width: 520px;
-      height: 36px;
-      @include max-screen($breakpoint-mobile) {
-        width: 274px;
-        position: relative;
-        top: -14px;
-      }
-    }
-  }
-
-  &.heading-recommend {
-    margin-bottom: 40px;
-    svg {
-      width: 513px;
-      height: 34px;
-      @include max-screen($breakpoint-mobile) {
-        width: auto;
-      }
-    }
-  }
-
-  &.heading-attraction {
-    .heading-subtext {
-      margin-top: 10px;
-      max-width: 489px;
-      width: 100%;
-    }
-  }
-
-  &.heading-pickup {
-    margin-bottom: 37px;
-    .heading-text {
-      letter-spacing: 0.05em;
-    }
-
-    .heading-subtext {
-      margin-top: 10px;
-      width: 100%;
-    }
-
-    svg {
-      max-width: 389px;
-      height: 34px;
-      @include max-screen($breakpoint-mobile) {
-        width: auto;
-      }
-    }
-
-  }
-
-  &.heading-net-acro-x {
-    margin-top: 15px;
-    margin-bottom: 0;
-
-    .heading-text {
-      position: relative;
-      left: 6px;
-      letter-spacing: 0.16em;
-    }
-  }
-
-  &.heading-carbike {
-    text-align: center;
-    margin-bottom: 27px;
-
-    @include min-screen($breakpoint-mobile + 1) {
-      margin-bottom: 85px;
-    }
-
-    .heading-subtext {
-      height: 40px;
-    }
-  }
-
-  &.heading-carbike-car {
-    svg {
-      max-width: 259px;
-      width: 100%;
-
-
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 405px;
-      }
-    }
-  }
-
-  &.heading-carbike-bike {
-    svg {
-      max-width: 318px;
-      width: 100%;
-
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 497px;
-      }
-    }
-  }
-
-  &.heading-carbike-workshop {
-    svg {
-      max-width: 260px;
-      width: 100%;
-
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 407px;
-      }
-    }
-  }
-
-
-  &.heading-dokidoki-forest {
-    margin-bottom: 55px;
-
-    .heading-subtext {
-      max-width: 659px;
-      margin-top: 35px;
-      width: 100%;
-    }
-  }
-
-
-  &.heading-course-challenge {
-    margin-bottom: 35px;
-
-    @include min-screen($breakpoint-mobile + 1) {
-      margin-bottom: 58px;
-    }
-
-    .heading-subtext {
-      max-width: 139px;
-      margin: 0 auto;
-      height: 29px;
-      width: 100%;
-
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 201px;
-        height: 36px;
-      }
-    }
-  }
-
-  &.heading-kart-challenge {
-    margin-bottom: 50px;
-    .heading-subtext {
-      max-width: 959px;
-      margin: 0 auto;
-      width: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        height: auto;
-        width: calc(100% + 40px);
-        max-width: 335px;
-      }
-
-      @include max-screen(375px) {
-        left: -20px;
-      }
-    }
-  }
-
-  &.heading-comparison {
-    text-align: center;
-    .heading-subtext {
-      max-width: 491px;
-      width: 100%;
-    }
-  }
-
-
-  &.heading-hellowoods {
-    @include max-screen ($breakpoint-mobile) {
-      .heading {
-        .heading-text {
-          font-size: 22.5px;
-          text-align: left;
-          letter-spacing: 2px;
-        }
-      }
-    }
-  }
-
-
-  &.heading-forest-craft {
-    .heading {
-      @include max-screen($breakpoint-mobile) {
-        margin-bottom: 0;
-      }
-    }
-
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        height: 43px;
-        display: block;
-        padding: 0 14px 0 8px;
-        margin-top: 3px;
-      }
-      .heading-subtext {
-        text-align: left;
+        min-height: 56px;
+        margin-top: 12px;
       }
     }
   }
@@ -953,7 +204,9 @@
 
   .heading-kids-carbike-attraction {
     .heading-subtext {
-      width: 100%;
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 716px;
+      }
     }
   }
 }
@@ -965,6 +218,13 @@
       // max-width: 319px;
       // margin-top: 0px;
       display: block;
+      height: 36px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 0px;
+        max-width: 230px;
+        padding: 0px;
+      }
     }
   }
 }
@@ -972,11 +232,15 @@
 // modifier adventure
 .adventure {
   .adventure-heading {
-    max-width: 443px;
+    // max-width: 443px;
     width: 100%;
     height: 35px;
     margin-left: auto;
     margin-right: auto;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 50px;
+    }
 
     &.hellowoods {
       font-size: 39px;
@@ -998,10 +262,61 @@
     .heading-subtext {
       // max-width: 443px;
       display: block;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 34px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 257px;
+        margin-top: 0;
+        padding: 0;
+      }
+      }
+
+      &-sumika {
+      .heading-subtext {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 443px;
+          height: 35px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          max-width: 225px;
+          padding: 0;
+        }
+      }
+    }
+
+    &-dokidoki {
+      .heading-subtext {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 578px;
+          height: 35px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          max-width: 289px;
+          padding: 0;
+        }
+      }
+    }
+
+    &-itadaki {
+      .heading-subtext {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 349px;
+          height: 35px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          max-width: 174.5px;
+          padding: 0;
+          margin-top: -14px;
+        }
+      }
     }
   }
-
-
 }
 
 // modifier dokidoki mobipark
@@ -1173,28 +488,165 @@
   }
 }
 
-//modifier for SP
-@include max-screen($breakpoint-mobile) {
-  .subpage-mobipark {
+//modifier map
+.heading-map {
+  position: relative;
+}
+
+//modifier sp info
+.info-container {
+  .heading-info {
     .heading-subtext {
-      min-height: 47px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    .heading-info {
-      .heading-subtext {
-        min-height: 47px;
-      }
-    }
-
-    .heading-kids-carbike-attraction {
-      .heading-subtext {
-        min-height: 111px;
+      @include max-screen($breakpoint-mobile) {
+        min-height: 25px !important;
+        margin-top: 12px;
       }
     }
   }
 }
 
+//modifier adventure racing kart
+.racing-kart {
+  .heading-racing-kart {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        min-height: 23px;
+        margin-top: 12px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+
+//modifier forest walk
+.subpage-section-family-walk {
+  .heading-family-walk {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 33px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 13px;
+        margin-left: auto;
+        width: 668px;
+        height: 33px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.subpage-section-guide-walk {
+  .heading-guide-walk {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 33px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 13px;
+        margin-left: auto;
+        width: 481px;
+        height: 33px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.subpage-section-free-walk {
+  .heading-free-walk {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 33px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 13px;
+        margin-left: auto;
+        width: 336px;
+        height: 34px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+//modifier forest walk end
+
+//modifier forest labo
+.subpage-section-aqua-labo {
+  .heading-aqua-labo {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 33px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 11px;
+        margin-left: auto;
+        width: 264px;
+        height: 34px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.subpage-section-mammal-labo {
+  .heading-mammal-labo {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 11px;
+        margin-left: auto;
+        width: 264px;
+        height: 34px;
+        margin-right: auto;
+      }
+    }
+  }
+}

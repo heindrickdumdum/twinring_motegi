@@ -164,6 +164,13 @@
       margin-top: 26px;
     }
   }
+
+  &.alt-feature-heading {
+   @include min-screen ($breakpoint-mobile + 1) {
+    font-size: 24px;
+    margin-bottom: 38px;
+   }
+  }
 }
 
 .media-title-nohighlight {
@@ -270,6 +277,10 @@
   text-align: center;
   font-size: 26px;
 
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 23px;
+  }
+
   @include max-screen($breakpoint-mobile) {
     font-size: 13px;
     margin-top: 0px;
@@ -287,40 +298,108 @@
 
 /*Tsubasa*/
 .media-note-tsubasa {
-  max-width: 300px;
+  max-width: 195px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    max-width: 300px;
+  }
 }
 
-.media-labo {
-  padding-top: 50px;
-
-  .media {
-    padding-left: 0px;
-    padding-right: 0px;
+//modifier forest labo
+.subpage-section-aqua-labo {
+  .media-labo {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 49px;
+    }
+  
+    .subpage-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 24px;
+      }
+    }
+  
+    .media {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding: 0;
+      }
+    }
+  
+    .media-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 3px;
+      }
+    }
+  
+    .media-desc {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 15px;
+      }
+    }
+  
+    .media-left {
+      width: 425px;
+  
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+  
+    .media-bg {
+      margin-left: 0px;
+    }
   }
+}
 
-  .media-left {
-    width: 425px;
-
-    @include max-screen($breakpoint-mobile) {
-      width: 100%;
-      padding-left: 20px;
-      padding-right: 20px;
+.subpage-section-mammal-labo {
+  .media-labo {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 57px;
+    }
+  
+    .subpage-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 34px;
+      }
+    }
+  
+    .media {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding: 0;
+      }
+    }
+  
+    .media-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 3px;
+      }
+    }
+  
+    .media-desc {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 15px;
+      }
+    }
+  
+    .media-left {
+      width: 425px;
+  
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+  
+    .media-bg {
+      margin-left: 0px;
     }
   }
 
-  .media-right {
-    padding-left: 425px;
-
-    @include max-screen($breakpoint-mobile) {
-      padding-left: 20px;
-      padding-right: 20px;
+  .subpage-button {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 89px;
     }
   }
-
-  .media-bg {
-    margin-left: 0px;
-  }
 }
+//modifier forest labo end
 
 //modifier
 .media-craft {

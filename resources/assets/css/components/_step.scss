@@ -42,26 +42,26 @@
   width: 100%;
 
   @include max-screen ($breakpoint-mobile) {
-    width: 80%;
-    margin: 0 auto;
+    // margin: 0 auto;
+    padding: 0 20px;
   }
 }
 
-.step-list-media-bottom {
+.step-media-bottom {
   margin-top: 30px;
 }
 
-.step-list-item {
+.step-item {
   width: calc((100% - 120px) / 3);
-  text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
   position: relative;
+  text-align: center;
 
   @include max-screen($breakpoint-mobile) {
     width: 100%;
     max-width: 450px;
     margin: auto;
-    margin-bottom: 80px;
+    margin-bottom: 23px;
   }
 
   &.step-goal {
@@ -69,7 +69,6 @@
 
     @include max-screen ($breakpoint-mobile) {
       width: 100%;
-      margin-bottom: 40px;
     }
 
     .img-step {
@@ -77,7 +76,7 @@
     }
 
     .step-no {
-      margin: 0 auto 10px;
+      margin: 0 auto;
       height: 45px;
       position: relative;
       font-size: 18px;
@@ -89,17 +88,27 @@
         right: 0;
         z-index: 3;
         margin: auto;
+
+        @include min-screen($breakpoint-mobile + 1) {
+          top: -8px;
+        }
       }
     }
 
-    .step-image {
+    .step-image-inner {
       &:before {
-        background-image: url("../images/step-bg-goal.png");
-        background-repeat: no-repeat;
-        width: calc(100% + 40px);
-        left: -19px;
+        @include min-screen($breakpoint-mobile + 1) {
+          background-image: url("../images/step-bg-goal.png");
+          background-repeat: no-repeat;
+          width: calc(100% + 40px);
+          left: -19px;
+        }
       }
 
+
+    }
+
+    .step-image {
       &:after {
         display: none;
       }
@@ -114,7 +123,7 @@
         height: 50px;
         position: absolute;
         top: 50%;
-        right: -38px;
+        right: -44px;
         -webkit-transform: translate(0, -50%);
         transform: translate(0, -50%);
         background: url('/assets/images/tsubasa/step-arrow.png') no-repeat;
@@ -122,6 +131,23 @@
         @include max-screen ($breakpoint-mobile) {
           display: none;
         }
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    &::after {
+      content: " ";
+      width: 28px;
+      height: 12px;
+      position: relative;
+      display: none;
+      margin: 20px auto 0;
+      background: url('/assets/images/tsubasa/step-arrow-down.png') no-repeat;
+      background-size: contain;
+
+      @include max-screen ($breakpoint-mobile) {
+        display: block;
       }
     }
   }

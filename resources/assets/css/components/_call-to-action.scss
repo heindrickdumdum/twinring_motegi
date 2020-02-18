@@ -46,7 +46,7 @@
 
 .call-to-action-inner {
   position: relative;
-  max-height: 277px;
+  max-height: 320px;
   padding: 47px;
 
 @include max-screen($breakpoint-mobile) {
@@ -107,7 +107,7 @@
   }
 
   @include max-screen($breakpoint-mobile) {
-   
+
     // font-size: 12px;
     margin-top: 15px;
   }
@@ -192,6 +192,17 @@
 
 
 .call-to-action-hellowoods {
+  .call-to-action-inner {
+    padding: 40px;
+  }
+  
+  .headig-call-to-action {
+    margin: 0;
+    .heading-text {
+      font-size: 25px;
+    }
+  }
+
   &::after {
     display: none;
   }

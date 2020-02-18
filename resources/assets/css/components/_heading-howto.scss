@@ -1,0 +1,160 @@
+//how to enjoy heading
+.heading-howto {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 60px;
+  }
+
+  &.heading-howto-acrox {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 628px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 35px;
+        max-width: 228px;
+        height: 57px;
+      }
+    }
+  }
+
+  &.heading-howto-bunbun {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 560px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 289px;
+        height: 58px;
+      }
+    }
+  }
+
+  &.heading-howto-debden {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 669px;
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  &.heading-howto-dokidoki {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 545px;
+      width: 100%;
+    }
+  }
+
+  &.heading-howto-forest-driving {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 539px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 196px;
+        height: 57px;
+      }
+    }
+  }
+
+  &.heading-howto-wildracer {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 626px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 256px;
+        height: 57px;
+      }
+    }
+  }
+
+  &.heading-howto-motorcycle {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 925px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        height: 89px;
+      }
+    }
+  }
+
+  &.heading-howto-mototouring {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 625px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 228px;
+        height: 58px;
+      }
+    }
+  }
+
+  &.heading-howto-motoracer {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 583px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 200px;
+        height: 57px;
+      }
+    }
+  }
+
+  &.heading-howto-dream {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 616px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 221px;
+        height: 57px;
+      }
+    }
+  }
+
+  &.heading-howto-drift {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 515px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 197px;
+        height: 57px;
+      }
+    }
+  }
+
+  &.heading-howto-challenge {
+    .heading-subtext {
+      margin: 17px auto 0;
+      max-width: 669px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 256px;
+        height: 56px;
+        margin-top: 15px;
+      }
+    }
+  }
+}

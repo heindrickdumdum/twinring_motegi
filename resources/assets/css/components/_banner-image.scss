@@ -1,6 +1,8 @@
 .banner-image {
+  background-color: #f9f9f9;
+
   .banner-image-wrap {
-    border: 1px solid #878787;
+    border: 1px solid #d2d2d2;
     background-image: url(../images/hellowoods/blog-banner.png);
     text-align: center;
     padding: 30px;
@@ -23,6 +25,6 @@
   }
 
   @include max-screen ($breakpoint-mobile) {
-    background-color: $color-light;
+    background-color: #f9f9f9;
   }
 }

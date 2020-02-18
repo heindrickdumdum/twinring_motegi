@@ -61,7 +61,8 @@
   width: 100%;
 
   @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 120px;
+    // margin-bottom: 120px;
+    margin-bottom: 145px;
   }
 
   > p {
@@ -76,6 +77,11 @@
       font-size: 15px;
     }
 
+    //sp
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 17px;
+    }
+
     .subpage-craft & {
       @include max-screen($breakpoint-mobile) {
         margin-bottom: 43px;
@@ -86,6 +92,15 @@
   .subpage-craft & {
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 95px;
+    }
+  }
+
+  &.subpage-inner-musasabi {
+    > p {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 24px;
+        letter-spacing: 0.19em;
+      }
     }
   }
 }
@@ -105,6 +120,10 @@
   	-webkit-text-fill-color: transparent;
 
   }
+}
+
+.subpage-title-musasabi {
+  margin-bottom: 14px;
 }
 
 .subpage-youtube {
@@ -148,6 +167,14 @@
     }
   }
 
+  &.subpage-banner-musasabi {
+    iframe {
+      @include max-screen($breakpoint-mobile) {
+        height: 212px;
+      }
+    }
+  }
+
 }
 
 .subpage-section {
@@ -171,6 +198,11 @@
   max-width: 669px;
   height: 137px;
   margin: -20px auto 135px;
+
+  //sp
+  @include max-screen($breakpoint-mobile) {
+    height: 70px;
+  }
 }
 
 .subpage-button-link {
@@ -208,8 +240,9 @@
 }
 
 .subpage-section-howto-inner {
-  max-width: 1070px;
+  max-width: 1060px;
   margin: 0 auto;
+  padding: 0 20px;
 
   @include max-screen($breakpoint-mobile) {
     padding: 0 36px;
@@ -243,23 +276,35 @@
   padding: 0 20px;
 }
 
-//modifier hellowoods family walk
+//modifier family walk
 .subpage-button-family-walk {
   margin-top: 50px;
   margin-bottom: 0px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 33px;
+  }
 }
 
-//modifier hellowoods precuation
+//modifier walk precuation
 .subpage-inner-precaution {
-  padding: 56px;
   background-color: #479d4c;
   color: $color-white;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 70px 56px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 37px 23px;
+  }
 
   h4 {
     margin-bottom: 20px;
     font-size: 24px;
     font-family: $font-hiragino;
     line-height: 1.417;
+    letter-spacing: 0.1em;
 
     @include max-screen($breakpoint-mobile) {
       font-size: 13px;
@@ -280,8 +325,158 @@
 
 .subpage-section-video {
   margin-bottom: 158px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 82px;
+  }
 }
 
 .subpage-section-video-wrapper {
   text-align: center;
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+    padding-top: 44%;
+    max-width: 289px;
+    margin: 0 auto;
+  }
 }
+
+//modifier forest walk
+.subpage-walk {
+  .subpage-banner-walk {
+    @include min-screen($breakpoint-mobile + 1) { // min sp
+      margin-bottom: 23px;
+    }
+  }
+  
+  .subpage-inner-walk {
+    @include min-screen($breakpoint-mobile + 1) { // min sp
+      margin-bottom: 108px;  
+    }
+    
+    @include max-screen($breakpoint-mobile) { // max sp
+      margin-bottom: 81px; 
+    }
+
+    > p {
+      @include min-screen($breakpoint-mobile + 1) { // min sp
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .subpage-button-family-walk {
+    @include min-screen($breakpoint-mobile + 1) { // min sp
+      margin-top: 61px;
+    }
+  }
+
+  .subpage-section-guide-walk {
+    .subpage-inner-walk {
+      @include min-screen($breakpoint-mobile + 1) { // min sp
+        margin-bottom: 116px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 73px;
+      }
+
+      > p {
+        @include min-screen($breakpoint-mobile + 1) { // min sp
+          margin-bottom: 58px;
+        }
+
+        @include max-screen($breakpoint-mobile) { // max sp
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .subpage-section-free-walk {
+    .subpage-inner-walk {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 125px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 41px;
+      }
+
+      > p {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 58px;
+        }
+      }
+    }
+  }
+
+  .subpage-banner-precaution {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: -8px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      .subpage-inner {
+        margin-bottom: 72px;
+      }
+    }
+  }
+
+  //modifier sp forest walk
+  .subpage-inner-anchor {
+    margin-top: 53px;
+  }
+}
+//modifier forest walk end
+
+//modifier forest labo
+.subpage-labo {
+  & > .subpage-inner {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 148px;
+    }
+  }
+
+  .subpage-section-aqua-labo {
+    .subpage-inner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 196px;
+      }
+
+      & > p {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 31px;
+        }
+      }
+    }
+
+    .subpage-banner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  .subpage-section-mammal-labo {
+    .subpage-inner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 196px;
+      }
+
+      & > p {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 31px;
+        }
+      }
+    }
+
+    .subpage-banner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 31px;
+      }
+    }
+  }
+}
+//modifier forest labo end

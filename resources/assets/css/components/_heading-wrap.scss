@@ -1,0 +1,365 @@
+.heading-wrap {
+  &.heading-gradient-tobottom {
+    .heading-text {
+      background: linear-gradient(to bottom, #027cc3 35%, #099f48 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 22.5px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 36px;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+
+  &.heading-gradient-toright {
+    .heading-text {
+      background: linear-gradient(to right, #027cc3 0%, #099f48 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 23px;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 36px;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+
+  &.heading-wrap-center {
+    text-align: center;
+
+    .heading-text,
+    .heading-subtext {
+      margin: 0 auto;
+      letter-spacing: 0.03em;
+    }
+
+    .heading-subtext {
+      margin: 25px auto 0;
+    }
+  }
+
+  &.heading-wrap-menu {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        margin: 13px auto 0;
+        height: 26px;
+      }
+    }
+
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin: 24px 0 37px;
+      }
+    }
+  }
+
+  &.heading-wrap-parkmap {
+    .heading-subtext {
+      width: 750px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 400px;
+        height: 70px;
+        display: inline-block;
+        text-align: left;
+        margin-left: -9px;
+        margin-top: 11px;
+      }
+    }
+  }
+
+  &.heading-wrap-activity {
+    .heading-subtext {
+      width: 800px;
+    }
+  }
+
+  &.heading-dokidoki {
+    .heading-text {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .heading-subtext {
+      margin: 24px auto 0;
+      text-align: center;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.heading-net-dokidoki {
+    margin-bottom: 40px;
+
+    .heading-text {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &.heading-sumika-faq {
+    margin-bottom: 40px;
+    text-align: center;
+
+    .heading-subtext {
+      width: 284px;
+      height: 34px;
+      margin: 0 auto;
+    }
+
+    .heading-text {
+      letter-spacing: 0.1em;
+    }
+  }
+// sumika/itadaki/dokidoki
+
+  &.heading-enjoy {
+    margin-bottom: 40px;
+    svg {
+      width: 520px;
+      height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+        height: 53px;
+      }
+    }
+  }
+
+  &.heading-wrap-craft {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 11px;
+      }
+    }
+
+    svg {
+      @include max-screen($breakpoint-mobile) {
+        height: 25px;
+      }
+    }
+  }
+
+  &.heading-forest {
+    margin-bottom: 40px;
+    svg {
+      width: 520px;
+      height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+        height: 53px;
+      }
+    }
+  }
+
+  &.heading-video {
+    margin-bottom: 40px;
+    svg {
+      width: 520px;
+      height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
+    }
+  }
+
+  &.heading-recommend {
+    margin-bottom: 40px;
+    svg {
+      width: 513px;
+      height: 34px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
+    }
+  }
+
+  &.heading-attraction {
+    .heading-subtext {
+      margin-top: 10px;
+      max-width: 489px;
+      width: 100%;
+    }
+  }
+
+  &.heading-pickup {
+    margin-bottom: 37px;
+    .heading-text {
+      letter-spacing: 0.05em;
+    }
+
+    .heading-subtext {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    svg {
+      max-width: 389px;
+      height: 34px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
+    }
+
+  }
+
+  &.heading-net-acro-x {
+    margin-top: 15px;
+    margin-bottom: 0;
+
+    .heading-text {
+      position: relative;
+      left: 6px;
+      letter-spacing: 0.16em;
+    }
+  }
+
+  &.heading-carbike {
+    text-align: center;
+    margin-bottom: 27px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 85px;
+    }
+
+    .heading-subtext {
+      height: 40px;
+    }
+  }
+
+  &.heading-carbike-car {
+    svg {
+      max-width: 259px;
+      width: 100%;
+
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 405px;
+      }
+    }
+  }
+
+  &.heading-carbike-bike {
+    svg {
+      max-width: 318px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 497px;
+      }
+    }
+  }
+
+  &.heading-carbike-workshop {
+    svg {
+      max-width: 260px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 407px;
+      }
+    }
+  }
+
+
+  &.heading-dokidoki-forest {
+    margin-bottom: 55px;
+
+    .heading-subtext {
+      max-width: 659px;
+      margin-top: 35px;
+      width: 100%;
+    }
+  }
+
+
+  &.heading-course-challenge {
+    margin-bottom: 35px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 58px;
+    }
+
+    .heading-subtext {
+      max-width: 139px;
+      margin: 0 auto;
+      height: 29px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 201px;
+        height: 36px;
+      }
+    }
+  }
+
+  &.heading-kart-challenge {
+    margin-bottom: 50px;
+    .heading-subtext {
+      max-width: 959px;
+      margin: 0 auto;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        width: calc(100% + 40px);
+        max-width: 335px;
+      }
+
+      @include max-screen(375px) {
+        left: -20px;
+      }
+    }
+  }
+
+  &.heading-comparison {
+    text-align: center;
+    .heading-subtext {
+      max-width: 491px;
+      width: 100%;
+    }
+  }
+
+
+  &.heading-hellowoods {
+    @include max-screen ($breakpoint-mobile) {
+      .heading {
+        .heading-text {
+          font-size: 22.5px;
+          text-align: left;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+
+
+  &.heading-forest-craft {
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0;
+      }
+    }
+
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        height: 43px;
+        display: block;
+        padding: 0 14px 0 8px;
+        margin-top: 3px;
+      }
+      .heading-subtext {
+        text-align: left;
+      }
+    }
+  }
+}

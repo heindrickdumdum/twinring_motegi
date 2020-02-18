@@ -1,4 +1,5 @@
 .heading-wrap {
+
   &.heading-gradient-tobottom {
     .heading-text {
       background: linear-gradient(to bottom, #027cc3 35%, #099f48 100%);
@@ -107,22 +108,6 @@
     }
   }
 
-  &.heading-sumika-faq {
-    margin-bottom: 40px;
-    text-align: center;
-
-    .heading-subtext {
-      width: 284px;
-      height: 34px;
-      margin: 0 auto;
-    }
-
-    .heading-text {
-      letter-spacing: 0.1em;
-    }
-  }
-// sumika/itadaki/dokidoki
-
   &.heading-enjoy {
     margin-bottom: 40px;
     svg {
@@ -189,14 +174,6 @@
     }
   }
 
-  &.heading-attraction {
-    .heading-subtext {
-      margin-top: 10px;
-      max-width: 489px;
-      width: 100%;
-    }
-  }
-
   &.heading-pickup {
     margin-bottom: 37px;
     .heading-text {
@@ -214,6 +191,38 @@
       @include max-screen($breakpoint-mobile) {
         width: auto;
       }
+    }
+  }
+
+  &.heading-sumika-faq {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 24px;
+    }
+
+    .heading-subtext {
+      svg {
+        @include max-screen($breakpoint-mobile) {
+          position: relative;
+          top: -15px;
+          width: 200px;
+          height: 35px;
+        }
+      }
+    }
+
+    .heading-text {
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &.heading-attraction {
+    .heading-subtext {
+      margin-top: 10px;
+      max-width: 489px;
+      width: 100%;
     }
   }
 

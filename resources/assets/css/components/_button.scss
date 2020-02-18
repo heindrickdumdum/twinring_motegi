@@ -73,6 +73,18 @@
     }
   }
 
+  &.button-sumika-instagram {
+    @include max-screen($breakpoint-mobile) {
+      width: 75%;
+    }
+    .button-icon {
+      @include max-screen($breakpoint-mobile) {
+        width: 17px;
+        right: 15px;
+      }
+    }
+  }
+
   &.button-hellowoods {
     width: 100%;
     max-width: 364px;

@@ -239,18 +239,18 @@
     </div>
 
     <section class="subpage-section subpage-section-comparison l-section">
-      <div class="subpage-section-inner">
-        <div class="l-section-title">
-          <%- include('/partials/heading', {
-            modifier: 'heading-gradient-tobottom heading-comparison',
-            text: 'Comparison',
-            alt: '',
-            altSubtext: '',
-            subtextvg: 'tsubasa-comparison'
-          }) %>
-        </div>
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-comparison',
+          text: 'Comparison',
+          alt: '',
+          altSubtext: '',
+          subtextvg: 'tsubasa-comparison'
+        }) %>
+      </div>
 
-        <div class="comparison">
+      <div class="comparison">
+        <div class="comparison-inner">
           <div class="comparison-row">
             <div class="comparison-col">
               <!-- mid -->
@@ -370,6 +370,13 @@
             </div>
           </div>
         </div>
+        <div class="comparison-btn comparison-btn-musasabi">
+          <%- include('/partials/button', {
+            modifier: 'button-comparison',
+            text: 'つばさの<br />詳細を見る',
+            link: '#'
+          }) %>
+        </div>
       </div>
     </section>
 
@@ -381,5 +388,9 @@
     <!-- END BOTTOM -->
   </main>
 </div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsMusasabi
+}) -%>
 
 <%- include('/partials/footer', {pageId} ) -%>

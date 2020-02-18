@@ -332,6 +332,10 @@
     .heading-subtext {
       max-width: 491px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 10px;
+      }
     }
   }
 

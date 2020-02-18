@@ -63,6 +63,10 @@
   }
 
   .mv-subpage-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 420px;
+    }
+
     @include max-screen($breakpoint-mobile) {
       padding-bottom: 71%;
     }
@@ -784,6 +788,18 @@
 
       @include min-screen($breakpoint-mobile + 1) {
         font-size: 46px;
+      }
+    }
+  }
+
+  &.mv-subpage-craft {
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 447px;
+    }
+
+    .mv-heading-subpage {
+      @include min-screen($breakpoint-mobile + 1) {
+        top: 43%;
       }
     }
   }

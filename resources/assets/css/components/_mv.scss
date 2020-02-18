@@ -377,19 +377,31 @@
 
 // modifier
 .mv-car-and-bike {
-  .mv-heading {
-    bottom: 45px;
+  .mv-container {
+    max-width: 1263px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
 
-    @include max-screen($breakpoint-mobile) {
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 30px;
+    @include min-screen($breakpoint-mobile) {
+      bottom: -15px;
     }
   }
 
+  .mv-heading {
+    position: relative;
+    bottom: 0;
+    left: 0
+  }
+
   .mv-heading-texts{
-    width: 448px;
+    width: 568px;
     height: 50px;
 
     svg {
@@ -413,18 +425,33 @@
     color: rgb(255, 255, 255);
     text-align: left;
     text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+    position: relative;
+    left: -15px;
+    max-width: 595px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      max-width: 259px;
+      height: 128px;
+      position: relative;
+      left: -10px;
+    }
 
     svg {
       width: 100%;
       height: 100%;
     }
+
+
   }
 
   .mv-logo {
     width: 268px;
     height: 266px;
     background-image: url(../images/car-and-bike/mv-logo.png);
-    bottom: -60px;
+    bottom: 0;
+
+    position: relative;
   }
 }
 

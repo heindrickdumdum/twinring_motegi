@@ -188,6 +188,12 @@
       margin-top: 10px;
       max-width: 489px;
       width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 10px auto 0;
+        max-width: 225px;
+        height: 54px;
+      }
     }
   }
 

@@ -2,26 +2,12 @@
   .step-image {
     display: block;
     margin-bottom: 17px;
-    padding: 5px 0;
-
+    // padding: 5px 0;
     position: relative;
     width: 100%;
 
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      background-image: url("../images/step-bg.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
-      left: -15px;
-      right: -15px;
-      top: -5px;
-      bottom: -15PX;
-
-      @include max-screen ($breakpoint-mobile) {
-        background-size: 98% 101%;
-      }
+    @include max-screen($breakpoint-mobile) {
+      padding: 0 18px;
     }
 
     &.step-goal-bg {
@@ -40,15 +26,50 @@
       }
     }
 
-    @include max-screen($breakpoint-mobile) {
-      padding: 5px 14px;
+
+  }
+
+  .step-image-inner {
+    position: relative;
+    padding: 5px 0;
+    width: 100%;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url("../images/step-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      // left: -15px;
+      // right: -15px;
+      // top: 0;
+      // bottom: -15PX;
+      left: -4%;
+      top: 0;
+      height: 105%;
+      width: 108%;
+    }
+  }
+
+  .step-image-box {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      max-width: 317px;
+      max-height: 317px;
+      padding-bottom: 55%;
+      width: 100%;
     }
   }
 
   .step-no {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
 
     img {
@@ -59,7 +80,7 @@
       &:first-child {
         @include max-screen($breakpoint-mobile) {
           max-width: 55px;
-          margin-left: 5px;
+          margin-right: 5px;
         }
       }
 
@@ -68,31 +89,56 @@
           max-width: 25px;
         }
       }
+
+      .step-10 & {
+        @include max-screen($breakpoint-mobile) {
+          max-width: 42px;
+        }
+      }
+
+      .step-goal & {
+        @include max-screen($breakpoint-mobile) {
+          max-width: 146px;
+        }
+      }
     }
   }
 
   .step-title {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     color: $color-green;
     letter-spacing: 0.16em;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
   }
 
   .step-subtitle {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: 0.16em;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 15px;
+    }
   }
 
   .step-desc {
     max-width: 300px;
     margin: auto;
-    font-size: 15px;
+    font-size: 12px;
     letter-spacing: 0.16em;
     line-height: 2;
     text-align: left;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 15px;
+    }
   }
 
 

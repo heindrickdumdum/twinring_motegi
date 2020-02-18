@@ -1,6 +1,7 @@
 .adventure {
   @include min-screen($breakpoint-mobile + 1) {
-    margin-top: -60px;
+    margin-top: 0;
+    margin-bottom: 150px;
   }
 
   @include max-screen ($breakpoint-mobile) {    
@@ -12,10 +13,12 @@
 
 .adventure-container {
   margin-top: 48px;
+  max-width: 1100px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 
   @include max-screen($breakpoint-mobile) {
-    margin-left: -20px;
-    margin-right: -20px;
     margin-bottom: 90px;
     margin-top: -6px;
 
@@ -114,7 +117,7 @@
   }
 }
 
-//modifier
+//modifier racing kart
 .logo-racing-kart {
   max-width: 320px;
   margin-bottom: 31px;
@@ -122,6 +125,14 @@
   @include max-screen($breakpoint-mobile) {
     max-width: 151px;
     margin-bottom: 16px;
+  }
+}
+
+.racing-kart {
+  .adventure-content-copy {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 0px;
+    }
   }
 }
 

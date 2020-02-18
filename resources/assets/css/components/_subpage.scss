@@ -243,23 +243,27 @@
   padding: 0 20px;
 }
 
-//modifier hellowoods family walk
+//modifier family walk
 .subpage-button-family-walk {
   margin-top: 50px;
   margin-bottom: 0px;
 }
 
-//modifier hellowoods precuation
+//modifier walk precuation
 .subpage-inner-precaution {
-  padding: 56px;
   background-color: #479d4c;
   color: $color-white;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 70px 56px;
+  }
 
   h4 {
     margin-bottom: 20px;
     font-size: 24px;
     font-family: $font-hiragino;
     line-height: 1.417;
+    letter-spacing: 0.1em;
 
     @include max-screen($breakpoint-mobile) {
       font-size: 13px;
@@ -285,3 +289,65 @@
 .subpage-section-video-wrapper {
   text-align: center;
 }
+
+//modifier forest walk
+.subpage-walk {
+  .subpage-banner-walk {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 23px;
+    }
+  }
+  
+  .subpage-inner-walk {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 108px;  
+    }
+
+    > p {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .subpage-button-family-walk {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 61px;
+    }
+  }
+
+  .subpage-section-guide-walk {
+    .subpage-inner-walk {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 116px;
+      }
+
+      > p {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 58px;
+        }
+      }
+    }
+  }
+
+  .subpage-section-free-walk {
+    .subpage-inner-walk {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 125px;
+      }
+
+      > p {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 58px;
+        }
+      }
+    }
+  }
+
+  .subpage-banner-precaution {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: -8px;
+    }
+  }
+}
+//modifier forest walk end

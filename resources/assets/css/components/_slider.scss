@@ -85,7 +85,7 @@
     // max-width: 508px;
     @include min-screen($breakpoint-mobile + 1) {
       width: 524px;
-      height: calc(100% - 83px);
+      height: 344px;
     }
 
     position: relative;

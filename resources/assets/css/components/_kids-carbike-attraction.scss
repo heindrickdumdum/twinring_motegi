@@ -1,6 +1,11 @@
 .kids-carbike-attraction {
   @include min-screen($breakpoint-mobile + 1) {
-    margin-top: 55px;
+    margin-top: 0;
+    margin-bottom: 149px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: -27px;
   }
 
   .row {

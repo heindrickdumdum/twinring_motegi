@@ -4,6 +4,17 @@
   @include max-screen($breakpoint-mobile) {
     margin: 24px 0;
   }
+
+  &.heading-sumika {
+    .heading-texts {
+      img {
+        @include max-screen($breakpoint-mobile) {
+          width: 293px;
+        }
+      }
+    }
+  }
+  
 }
 
 .heading-text {
@@ -683,8 +694,10 @@
       width: 520px;
       height: 36px;
       @include max-screen($breakpoint-mobile) {
-        width: auto;
-        height: 53px;
+        position: relative;
+        top: -6px;
+        width: 217px;
+        height: 57px;
       }
     }
   }
@@ -709,8 +722,10 @@
       width: 520px;
       height: 36px;
       @include max-screen($breakpoint-mobile) {
-        width: auto;
-        height: 53px;
+        position: relative;
+        top: -8px;
+        width: 206px;
+        height: 57px;
       }
     }
   }
@@ -721,7 +736,9 @@
       width: 520px;
       height: 36px;
       @include max-screen($breakpoint-mobile) {
-        width: auto;
+        width: 274px;
+        position: relative;
+        top: -14px;
       }
     }
   }
@@ -1180,3 +1197,4 @@
     }
   }
 }
+

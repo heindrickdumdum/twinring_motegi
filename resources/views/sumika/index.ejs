@@ -40,7 +40,7 @@
   <section class="video-mv l-section">
     <div class="l-container">
         <div class="heading-wrap l-heading-main">
-          <h2 class="heading">
+          <h2 class="heading heading-sumika">
             <span class="heading-texts">
               <img src="<%= mix('/assets/images/sumika/samukia-heading.png') %>" alt="sumika">
             </span>
@@ -62,7 +62,7 @@
       </h3>
 
       <p class="table-subheading">
-        肉食動物や大きな鳥から小動物まで、あらゆる生きもの達の隠れ家となっている場所、それがすみか。<br>
+        肉食動物や大きな鳥から小動物まで、あらゆる生きもの達の隠れ家となっている場所、それがすみか。<br class="u-show-pc">
         ネットが張りめぐらされた「巨大ネットの森 SUMIKA」で逃げて、隠れて、生き延びよう！
       </p>
 
@@ -190,7 +190,7 @@
        </div>
       </div>
 
-      <div class="l-container">
+      <div class="sumika-media how-to-content">
         <div class="media u-clear">
           <div class="media-left">
             <div class="media-bg">
@@ -275,7 +275,7 @@
   </section>
 
   <section class="top-slide l-section">
-    <div class="swiper-container slider js-slider">
+    <div class="swiper-container common-slider sumika-slider slider js-slider">
       <ul class="swiper-wrapper top-slide">
         <% forest.forEach(item => { %>
         <li class="swiper-slide slider-item">
@@ -288,6 +288,7 @@
         </li>
         <% } ) %>
       </ul>
+      <div class="swiper-pagination"></div>
     </div>
     <div class="l-container">
       <div class="l-note">
@@ -340,9 +341,10 @@
     <div class="instagram-wrapper l-container">
       <div class="instagram-inner">
         <div class="instagram-inner-content">
-            <h2 class="heading l-heading-inner">
+            <h2 class="heading l-heading-inner sumika-hashtag">
               <span class="heading-texts">
-                <img src="<%= mix('/assets/images/sumika/hashtag.png') %>" alt="sumika">
+                <img class="u-show-pc" src="<%= mix('/assets/images/sumika/hashtag.png') %>" alt="sumika">
+                <img class="u-show-sp" src="<%= mix('/assets/images/sumika/sumika-hashtag-sp.png') %>" alt="sumika">
               </span>
             </h2>
           <div class="instagram-content">
@@ -372,6 +374,7 @@
       </div>
     </div>
   </section>
+  
   <section class="faq l-section">
     <%- include('/partials/accordion', {
       dataAccordion: getData().data.accordionData

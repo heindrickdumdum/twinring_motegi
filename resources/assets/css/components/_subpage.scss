@@ -46,6 +46,8 @@
 
   &.subpage-craft {
     &::before {
+      content: normal;
+
       @include max-screen($breakpoint-mobile) {
         content: normal;
       }
@@ -90,6 +92,10 @@
   }
 
   .subpage-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 123px;
+    }
+
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 95px;
     }
@@ -105,10 +111,34 @@
   }
 }
 
+.subpage-inner-wrap {
+  .subpage-craft & {
+    &::before {
+      @include min-screen($breakpoint-mobile + 1) {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -222px;
+        right: 0;
+        background-image: url("../images/craft/craft-subpage-inner-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 783px;
+      }
+    }
+  }
+}
+
 .subpage-title {
   font-size: 13px;
   letter-spacing: 0.11em;
   margin-bottom: 8px;
+
+  .subpage-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 5px;
+    }
+  }
 
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 24px;
@@ -156,6 +186,10 @@
   }
 
   &.subpage-banner-craft {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 26px;
+    }
+
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 20px;
     }

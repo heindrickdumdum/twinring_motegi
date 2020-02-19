@@ -130,10 +130,39 @@
     }
 
     .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-9px, 0);
+      }
+
       @include max-screen($breakpoint-mobile) {
-        margin: 56px auto 59px;
+        margin: 0 auto;
       }
     }
+
+    &::before {
+      @include max-screen($breakpoint-mobile) {
+        background-image: url(../images/craft/craft-heading-wrap-bg-sp.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: -20px;
+        top: -19px;
+        right: -21px;
+        bottom: 0;
+        content: "";
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 105px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      position: relative;
+      margin: 0;
+      padding: 29px 0 60px;
+    }
   }
+
 
 }

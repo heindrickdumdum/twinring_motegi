@@ -76,6 +76,7 @@
    
     @include max-screen($breakpoint-mobile) {
       font-size: 12px;
+      margin: 0 0 30px;
     }
   }
 

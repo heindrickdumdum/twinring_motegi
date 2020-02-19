@@ -9,6 +9,11 @@
   }
 
   .forest-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      display: block;
+      margin: 14px 0 0;
+    }
+
   	@include max-screen($breakpoint-mobile) {
 			font-size: 13px;
 			margin-top: 13px;

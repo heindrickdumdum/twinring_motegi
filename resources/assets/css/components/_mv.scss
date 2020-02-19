@@ -68,6 +68,7 @@
   .mv-subpage-craft & {
     @include min-screen($breakpoint-mobile + 1) {
       height: 420px;
+      padding-bottom: 0;
     }
 
     @include max-screen($breakpoint-mobile) {

@@ -25,71 +25,73 @@
     </h1>
   </div>
 
-  <div class="subpage-inner">
-    <div class="heading-wrap heading-main heading-main-tsubasa heading-main-craft">
-      <h2 class="heading">
-        <span class="heading-texts u-show-pc">
-          <img src="<%= mix('/assets/images/craft/craft-color-title.png') %>" alt="Craft">
-        </span>
-        <span class="heading-texts u-show-sp">
-          <img src="<%= mix('/assets/images/craft/craft-color-title-sp.png') %>" alt="Craft">
-        </span>
-      </h2>
-    </div>
-
-    <div class="subpage-banner subpage-banner-craft">
-      <div class="subpage-banner-inner">
-        <img class="u-show-pc" src="<%= mix('/assets/images/craft/subpage-banner.jpg') %>" alt="Craft">
-        <img class="u-show-sp" src="<%= mix('/assets/images/craft/subpage-banner-sp.jpg') %>" alt="Craft">
+  <div class="subpage-inner-wrap">
+    <div class="subpage-inner">
+      <div class="heading-wrap heading-main heading-main-tsubasa heading-main-craft">
+        <h2 class="heading">
+          <span class="heading-texts u-show-pc">
+            <img src="<%= mix('/assets/images/craft/craft-color-title.png') %>" alt="Craft">
+          </span>
+          <span class="heading-texts u-show-sp">
+            <img src="<%= mix('/assets/images/craft/craft-color-title-sp.png') %>" alt="Craft">
+          </span>
+        </h2>
       </div>
+
+      <div class="subpage-banner subpage-banner-craft">
+        <div class="subpage-banner-inner">
+          <img class="u-show-pc" src="<%= mix('/assets/images/craft/subpage-banner.jpg') %>" alt="Craft">
+          <img class="u-show-sp" src="<%= mix('/assets/images/craft/subpage-banner-sp.jpg') %>" alt="Craft">
+        </div>
+      </div>
+
+      <h3 class="subpage-title">
+        <span>アクティビティ情報</span>
+      </h3>
+
+      <p>自分の想いをカタチにして、いつの間にか夢中になれるクラフト時間。自然素材を自由に加工して、<br class="u-show-pc"/>思い出のお土産を作ろう！</p>
+
+      <table class="table table-craft">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">場所</th>
+            <td class="table-col">
+              ハローウッズ内森のクラフト工房
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">開催日</th>
+            <td class="table-col">
+              毎日開催
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">所要時間</th>
+            <td class="table-col">約1時間</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">雨天の開催</th>
+            <td class="table-col">雨天でも営業しております。</td>
+          </tr>
+          <tr class="table-row">
+            <th class="table-head">対象者</th>
+            <td class="table-col">全年齢対象<br>
+              小学生以下は保護者の同伴（成人）が必要です</td>
+          </tr>
+          <tr class="table-row">
+            <th class="table-head">料金</th>
+            <td class="table-col">モビパークパスポート対象外<br>
+              350円〜 (クラフトごとで異なります。)</td>
+          </tr>
+          <tr class="table-row">
+            <th class="table-head">予約受付</th>
+            <td class="table-col">営業終了60分前までにハローウッズインフォメーションにて受付ください。</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
-    <h3 class="subpage-title">
-      <span>アクティビティ情報</span>
-    </h3>
-
-    <p>自分の想いをカタチにして、いつの間にか夢中になれるクラフト時間。自然素材を自由に加工して、<br class="u-show-pc"/>思い出のお土産を作ろう！</p>
-
-    <table class="table table-craft">
-      <tbody>
-        <tr class="table-row">
-          <th class="table-head">場所</th>
-          <td class="table-col">
-            ハローウッズ内森のクラフト工房
-          </td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">開催日</th>
-          <td class="table-col">
-            毎日開催
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">所要時間</th>
-          <td class="table-col">約1時間</td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">雨天の開催</th>
-          <td class="table-col">雨天でも営業しております。</td>
-        </tr>
-        <tr class="table-row">
-          <th class="table-head">対象者</th>
-          <td class="table-col">全年齢対象<br>
-            小学生以下は保護者の同伴（成人）が必要です</td>
-        </tr>
-        <tr class="table-row">
-          <th class="table-head">料金</th>
-          <td class="table-col">モビパークパスポート対象外<br>
-            350円〜 (クラフトごとで異なります。)</td>
-        </tr>
-        <tr class="table-row">
-          <th class="table-head">予約受付</th>
-          <td class="table-col">営業終了60分前までにハローウッズインフォメーションにて受付ください。</td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 
   <section class="how-to-enjoy how-to-craft l-section">
@@ -238,8 +240,10 @@
     </div>
   </section>
 
-  <section class="l-menu l-container">
-    <%- include('/partials/hellowoods/section-menu') -%>
+  <section class="l-menu">
+    
+      <%- include('/partials/hellowoods/section-menu') -%>
+    
   </section>
 
   <!-- recommendation module -->

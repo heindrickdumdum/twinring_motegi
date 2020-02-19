@@ -4,18 +4,34 @@
 	}
 
 	&::before {
+		@include min-screen($breakpoint-mobile + 1) {
+			background-image: url("../images/craft/craft-menu-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: -127px;
+    	right: 0px;
+      bottom: 0;
+      content: "";
+		}
+
     @include max-screen($breakpoint-mobile) {
       background-image: url("../images/craft/craft-menu-bg-sp.png");
       background-repeat: no-repeat;
       background-size: 100%;
       position: absolute;
       left: 0;
-      top: 11px;
+      top: 32px;
       right: 0;
       bottom: 0;
       content: "";
     }
   }
+}
+
+.menu-container {
+	position: relative;
 }
 
 .menu-list {
@@ -89,13 +105,25 @@
 //modifier
 .craft-recommendation {
 	&::before {
+		@include min-screen($breakpoint-mobile + 1) {
+			background-image: url("../images/craft/craft-recommendation-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 8px;
+    	top: -151px;
+    	right: 0px;
+      bottom: 0;
+      content: "";
+		}
+
     @include max-screen($breakpoint-mobile) {
       background-image: url("../images/craft/craft-recommendation-bg-sp.png");
       background-repeat: no-repeat;
       background-size: 100%;
       position: absolute;
       left: 0;
-      top: -47px;
+      top: -31px;
       right: 0;
       bottom: 0;
       content: "";
@@ -147,16 +175,16 @@
   }
 
   .article {
+  	.article-heading {
+	  	@include max-screen($breakpoint-mobile) {
+	  		margin-top: 11px;
+	  		min-height: 54px;
+	  		padding: 0;
+	  	}
+	  }
+
   	@include max-screen($breakpoint-mobile) {
 			padding: 0 5px 36px;
-  	}
-  }
-
-  .article-heading {
-  	@include max-screen($breakpoint-mobile) {
-  		margin-top: 11px;
-  		min-height: 52px;
-  		padding: 0;
   	}
   }
 
@@ -165,6 +193,10 @@
 			padding-top: 61%;
 			background-size: cover;
   	}
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+  	margin-top: 83px;
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -176,18 +208,20 @@
 
 //modifier
 .craft-pick-up {
-	@include min-screen($breakpoint-mobile + 1) {
-		margin-top: 51px;
-	}
-	
-	@include max-screen($breakpoint-mobile) {
-		margin-top: -52px;
-		padding-bottom: 25px;
-		position: relative;
-	}
-
 	&::before {
-    @include max-screen($breakpoint-mobile) {
+		@include min-screen($breakpoint-mobile + 1) {
+			background-image: url("../images/craft/craft-pickup-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+    	top: 196px;
+    	right: -13px;
+      bottom: 0;
+      content: "";
+		}
+
+		@include max-screen($breakpoint-mobile) {
       background-image: url("../images/craft/craft-pickup-bg-sp.png");
       background-repeat: no-repeat;
       position: absolute;
@@ -197,7 +231,17 @@
       width: 126px;
       content: "";
     }
-  }
+	}
+
+	@include min-screen($breakpoint-mobile + 1) {
+		margin-top: 51px;
+	}
+	
+	@include max-screen($breakpoint-mobile) {
+		margin-top: -29px;
+		padding-bottom: 25px;
+		position: relative;
+	}
 
 	.heading-pickup {
 		svg {

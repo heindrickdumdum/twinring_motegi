@@ -111,6 +111,24 @@
   }
 }
 
+.subpage-inner-wrap {
+  .subpage-craft & {
+    &::before {
+      @include min-screen($breakpoint-mobile + 1) {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -222px;
+        right: 0;
+        background-image: url("../images/craft/craft-subpage-inner-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 783px;
+      }
+    }
+  }
+}
+
 .subpage-title {
   font-size: 13px;
   letter-spacing: 0.11em;

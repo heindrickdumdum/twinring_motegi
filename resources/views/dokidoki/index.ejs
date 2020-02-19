@@ -6,29 +6,29 @@
 
 <%
 
-  forest = [
+  forestSliderData = [
     {
-      src: mix('https://via.placeholder.com/576x407'),
+      src: mix('/assets/images/dokidoki/forest-1.jpg'),
       alt: `dokidoki slide 1`,
-      desc: `目の前の壁を超えろ！新芽のチャレンジウォール`
+      desc: `1 目の前の壁を超えろ！新芽のチャレンジウォール`
     },
     {
-      src: mix('https://via.placeholder.com/576x407'),
+      src: mix('/assets/images/dokidoki/forest-2.jpg'),
       alt: `dokidoki slide 2`,
       desc: `アカネズミのひみつの場所！どんぐりころころ`
     },
     {
-      src: mix('https://via.placeholder.com/576x407'),
+      src: mix('/assets/images/dokidoki/forest-3.jpg'),
       alt: `dokidoki slide 3`,
       desc: `丸太の一般橋を渡ろう！`
     },
     {
-      src: mix('https://via.placeholder.com/576x407'),
+      src: mix('/assets/images/dokidoki/forest-1.jpg'),
       alt: `dokidoki slide 3`,
       desc: `丸太の一般橋を渡ろう！`
     },
     {
-      src: mix('https://via.placeholder.com/576x407'),
+      src: mix('/assets/images/dokidoki/forest-2.jpg'),
       alt: `dokidoki slide 3`,
       desc: `丸太の一般橋を渡ろう！`
     }
@@ -40,8 +40,7 @@
   <div class="mv mv-inner dokidoki-mv">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-background-grey.jpg')%>);">
-        </div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-img.jpg')%>);"></div>
       </li>
     </ul>
 
@@ -198,7 +197,7 @@
     </div>
   </section>
 
-  <section class="how-to-enjoy l-section">
+  <section class="how-to-enjoy">
     <div class="l-container">
       <div class="l-section-title">
         <div class="u-show-pc">
@@ -221,6 +220,7 @@
         </div>
       </div>
 
+
       <div class="how-to-content dokidoki-media">
         <div class="media u-clear">
           <div class="media-left">
@@ -233,8 +233,7 @@
           <div class="media-right">
             <h4 class="media-title"><span>ドキドキの連続！39のアスレチック</span></h4>
             <p class="media-desc">
-              5階建ての建物を“巨大などんぐりの木”に見立てた「森感覚アスレチック
-              DOKIDOKI」には、1階から5階に行くルートには、全部で39のアスレチックがあります。さまざまなアスレチックをクリアしててっぺんをめざしましょう！
+              “巨大などんぐりの木”に見立てた５階建ての「森感覚アスレチック DOKIDOKI」には、全部で３９のアスレチックがあります。さまざまなアスレチックをクリアしててっぺんをめざしましょう！
             </p>
 
             <div class="note">
@@ -251,17 +250,16 @@
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img2.png') %>);"></div>
               </div>
             </div>
           </div>
           <div class="media-right">
             <h4 class="media-title">
-              <span>体力と勇気が試される！</span><br>
-              <span>選んで進む2つのコース</span>
+              <span>体力と勇気が試される！<br /> 選んで進む2つのコース</span>
             </h4>
             <p class="media-desc">
-              DOKIDOKIは小学1年生から高学年、そして大人も楽しめるアスレチックです。 コースを進んで行くと、アスレチックの難易度でコースが分かれ、年齢や体力に応じてコースを選ぶことができます。
+              森感覚アスレチック DOKIDOKIは小学1年生から高学年、そして大人も楽しめるアスレチックです。 コースを進んで行くと、アスレチックの難易度でコースが分かれ、年齢や体力に応じてコースを選ぶことができます。
             </p>
             <div class="note">
               <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
@@ -277,7 +275,7 @@
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img3.png') %>);"></div>
               </div>
             </div>
           </div>
@@ -286,11 +284,11 @@
               <span>小学生未満のお子様はどきどきひろばで</span>
             </h4>
             <p class="media-desc">
-              DOKIDOKIは小学生未満の幼児のお子様はご利用いただけません。小さいお子様はアトラクション前のどきどき広場にて遊んでいただけます。<br />丸太や小さな山の形をしたアスレチックで遊んだり、キッズボルダリングで“プチボルダリング体験”をお楽しみいただけます。
+              森感覚アスレチック
+              DOKIDOKIは小学生未満のお子さまはご利用いただけません。小さいお子さまはアトラクション前のどきどきひろばにて遊んでいただけます。<br />丸太や小さな山の形をしたアスレチックで遊んだり、キッズボルダリングで“プチボルダリング体験”をお楽しみいただけます。
             </p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -319,7 +317,7 @@
 
     <div class="swiper-container common-slider dokidoki-slider slider js-slider">
       <ul class="swiper-wrapper top-slide">
-        <% forest.forEach(item => { %>
+        <% forestSliderData.forEach(item => { %>
         <li class="swiper-slide slider-item">
           <div class="top-slider-image">
             <img src="<%- item.src -%>" alt="<%- item.alt -%>">
@@ -340,7 +338,7 @@
         <div class="u-show-pc">
           <%- include('/partials/heading', {
               modifier: 'heading-video',
-              text: 'Dokidoki Videos',
+              text: 'Sumika Videos',
               subtextvg: 'dokidoki-video-title',
               altSubtext: '',
             }) %>
@@ -348,7 +346,7 @@
         <div class="u-show-sp">
           <%- include('/partials/heading', {
               modifier: 'heading-video',
-              text: 'Dokidoki Videos',
+              text: 'Sumika Videos',
               subtextvg: 'dokidoki-videos-title-sp',
               altSubtext: '',
             }) %>
@@ -424,7 +422,7 @@
     }) %>
   </section>
 
-  <div class="call-to-action">
+  <!-- <div class="call-to-action">
     <div class="l-container">
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
@@ -447,31 +445,26 @@
             }) %>
           </div>
           <span class="call-to-action-dot call-to-action-dot-1">
-            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+            <img src="<%- mix('/assets/images/dokidoki/banner-dot-1.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-2">
-            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+            <img src="<%- mix('/assets/images/dokidoki/banner-dot-2.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-3">
-            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+            <img src="<%- mix('/assets/images/dokidoki/banner-dot-3.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-4">
-            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+            <img src="<%- mix('/assets/images/dokidoki/banner-dot-4.png')%> ">
           </span>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="banner-cta">
-    <div class="l-container">
-      <div class="banner-cta-inner">
-        <a href="#">
-          <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
-        </a>
-      </div>
-    </div>
-  </div>
+  <%- include('/partials/banner-cta', {
+    link: 'https://www.twinring.jp/mobipark_m/card/',
+    imgPath: mix('/assets/images/subpage-banner.png')
+  }) -%>
 
   <section class="recommendation l-section">
     <div class="l-section-title">

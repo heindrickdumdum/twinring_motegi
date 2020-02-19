@@ -1,5 +1,5 @@
 .forest {
-  .forest-craft {
+  &.forest-craft {
     overflow: hidden;
 
     &::before {
@@ -17,12 +17,13 @@
     }
 
     @include min-screen($breakpoint-mobile + 1) {
-      margin-top: -22px;
+      margin-top: -59px;
       padding-bottom: 91px;
     }
 
     @include max-screen($breakpoint-mobile) {
       margin-top: 40px;
+      padding-bottom: 65px;
     }
   }
 }

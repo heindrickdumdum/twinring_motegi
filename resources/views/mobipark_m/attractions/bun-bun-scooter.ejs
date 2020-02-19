@@ -216,13 +216,10 @@
     </div>
   </div>
 
-  <div class="banner-cta">
-    <div class="l-container">
-      <div class="banner-cta-bottom-inner">
-        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
-      </div>
-    </div>
-  </div>
+  <%- include('/partials/banner-cta', {
+    link: 'https://www.twinring.jp/mobipark_m/card/',
+    imgPath: mix('/assets/images/subpage-banner.png')
+  }) -%>
 
   <%- include('/partials/recommendation') -%>
 

@@ -127,7 +127,7 @@ accordionData = [
   <div class="mv mv-inner itadaki-mv">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-background-grey.jpg')%>);"></div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-itadaki.jpg')%>);"></div>
       </li>
     </ul>
 
@@ -306,7 +306,7 @@ accordionData = [
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+                <div style="background-image: url(<%= mix('/assets/images/itadaki/media/media-1.jpg') %>);"></div>
               </div>
             </div>
           </div>
@@ -334,7 +334,7 @@ accordionData = [
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+                <div style="background-image: url(<%= mix('/assets/images/itadaki/media/media-2.jpg') %>);"></div>
               </div>
             </div>
           </div>
@@ -363,7 +363,7 @@ accordionData = [
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+                <div style="background-image: url(<%= mix('/assets/images/itadaki/media/media-3.jpg') %>);"></div>
               </div>
             </div>
           </div>
@@ -410,7 +410,7 @@ accordionData = [
     </div>
     <div class="swiper-container common-slider itadaki-slider slider js-slider">
       <ul class="swiper-wrapper top-slide">
-        <% forest.forEach(item => { %>
+        <% forestItadaki.forEach(item => { %>
         <li class="swiper-slide slider-item">
           <div class="top-slider-image">
             <img src="<%- item.src -%>" alt="<%- item.alt -%>">
@@ -419,7 +419,7 @@ accordionData = [
             <%- item.desc -%>
           </span>
         </li>
-        <% } ) %>
+        <% }) %>
       </ul>
       <div class="swiper-pagination"></div>
     </div>
@@ -531,7 +531,7 @@ accordionData = [
     </div>
       <div class="swiper-container slider js-slider-bottom">
         <ul class="swiper-wrapper slider-wrapper">
-          <% getData().data.recommend.forEach(item => { %>
+          <% getData().data.recommendDokidoki.forEach(item => { %>
           <li class="swiper-slide slider-item">
             <%- include('/partials/article-no-design', {
               image: item.image,

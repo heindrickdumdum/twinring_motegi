@@ -40,7 +40,7 @@
   <div class="mv mv-inner dokidoki-mv">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-img.jpg')%>);"></div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dokidoki/mv-img.jpg')%>);"></div>
       </li>
     </ul>
 
@@ -471,7 +471,7 @@
     </div>
       <div class="swiper-container slider js-slider-bottom">
         <ul class="swiper-wrapper slider-wrapper">
-          <% getData().data.recommend.forEach(item => { %>
+          <% getData().data.recommendDokidoki.forEach(item => { %>
           <li class="swiper-slide slider-item">
             <%- include('/partials/article-no-design', {
               image: item.image,

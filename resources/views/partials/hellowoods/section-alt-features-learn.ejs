@@ -53,3 +53,30 @@
 
 
 </div>
+
+<div class="alt-feature row">
+  <div class="alt-feature-image-wrapper">
+    <img class="u-show-pc alt-feature-image" src="<%= mix('/assets/images/hellowoods/learn-img-3.png') %>" alt="Forest Craft">
+    <img class="u-show-sp alt-feature-image" src="<%= mix('/assets/images/hellowoods/learn-img-3-sp.png') %>" alt="Forest Craft">
+  </div>
+  <div class="alt-feature-desc right">
+    <div class="alt-feature-desc-wrapper">
+      <img class="animal-icon rabbit-right u-show-pc" src="<%= mix('/assets/images/hellowoods/squirrel-icon.png') %>" alt="Squirrel">
+      <img class="animal-icon rabbit u-show-sp" src="<%= mix('/assets/images/hellowoods/squirrel-icon-sp.png') %>" alt="Squirrel">
+      <p class="media-title alt-feature-heading">
+        <span>生きものの研究室</span>
+      </p>
+      <p class="alt-feature-desc-text">ノコギリやナタなど、<br>
+        生きものたちの暮らしや不思議を<br>
+        間近で観察しよう。
+        </p>
+      <div class="l-button">
+        <%- include('/partials/button', {
+          modifier: 'button-hellowoods',
+          text: 'もっと見る',
+          link: '#'
+        }) %>
+      </div>
+    </div>
+  </div>
+</div>

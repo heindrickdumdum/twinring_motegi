@@ -80,6 +80,15 @@
           }
         }
 
+        &.rabbit-right {
+          right: 0px;
+          top: -30px;
+
+          @include max-screen ($breakpoint-mobile) {
+            top: -48px;
+          }
+        }
+
         &.bird {
           top: -40px;
           right: 0;

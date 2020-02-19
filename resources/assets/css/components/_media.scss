@@ -739,4 +739,17 @@
 }
 //modifier forest labo end
 
-
+//modifier mobipark
+.page-mobipark {
+  .media-title-racing-kart {
+    span {
+      @include min-screen($breakpoint-mobile + 1) {
+        background-image: linear-gradient(0deg, #c3e8d8 21.43%, #ffffff 21.43%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 71.43%, #ffffff 71.43%, #ffffff 100%);
+        background-size: 35.00px 40.00px;
+        background-position-y: -10%;
+        background-repeat-y: no-repeat;
+      }
+    }
+  }
+}
+//modifier mobipark end

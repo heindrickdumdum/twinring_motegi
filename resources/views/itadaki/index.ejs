@@ -127,7 +127,12 @@ accordionData = [
   <div class="mv mv-inner itadaki-mv">
     <ul class="mv-list">
       <li class="mv-item">
+<<<<<<< HEAD
         <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-itadaki.jpg')%>);"></div>
+=======
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-background-grey.jpg')%>);">
+        </div>
+>>>>>>> develop
       </li>
     </ul>
 
@@ -169,7 +174,8 @@ accordionData = [
       <div class="l-youtube">
         <section class="youtube">
           <div class="youtube-iframe-container">
-            <iframe width="100%" height="587" src="https://www.youtube.com/embed/6GUbJzXAcmA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="587" src="https://www.youtube.com/embed/6GUbJzXAcmA" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </section>
       </div>
@@ -243,9 +249,9 @@ accordionData = [
           <tr class="table-row">
             <th class="table-head">日程</th>
             <td class="table-col">
-              9月		15日（日）、16日（月）、29日（日）<br>
-              10月	15日（日）、16日（月）、29日（日）<br>
-              11月	15日（日）、16日（月）、29日（日）
+              9月 15日（日）、16日（月）、29日（日）<br>
+              10月 15日（日）、16日（月）、29日（日）<br>
+              11月 15日（日）、16日（月）、29日（日）
             </td>
           </tr>
 
@@ -281,24 +287,24 @@ accordionData = [
   <section class="how-to-enjoy l-section">
     <div class="l-container">
       <div class="l-section-title">
-       <div class="u-show-pc">
-        <%- include('/partials/heading', {
+        <div class="u-show-pc">
+          <%- include('/partials/heading', {
           modifier: 'heading-enjoy',
           text: 'How to Enjoy',
           alt: 'How to Enjoy',
           subtextvg: 'itadaki-cta-title',
           altSubtext: '',
         }) %>
-       </div>
-       <div class="u-show-sp">
-        <%- include('/partials/heading', {
+        </div>
+        <div class="u-show-sp">
+          <%- include('/partials/heading', {
           modifier: 'heading-enjoy',
           text: 'How to Enjoy',
           alt: 'How to Enjoy',
           subtextvg: 'itadaki-enjoy-point-title-sp',
           altSubtext: '',
         }) %>
-       </div>
+        </div>
       </div>
 
       <div class="how-to-content itadaki-media">
@@ -426,9 +432,9 @@ accordionData = [
   </section>
 
   <section class="youtube-video l-section">
-      <div class="l-container">
-        <div class="l-section-title">
-         <div class="u-show-pc">
+    <div class="l-container">
+      <div class="l-section-title">
+        <div class="u-show-pc">
           <%- include('/partials/heading', {
             modifier: 'heading-forest',
             text: 'Ways to feel the Forest',
@@ -436,8 +442,8 @@ accordionData = [
             subtextvg: 'itadaki-forest-title',
             altSubtext: '',
           }) %>
-         </div>
-         <div class="u-show-sp">
+        </div>
+        <div class="u-show-sp">
           <%- include('/partials/heading', {
             modifier: 'heading-forest',
             text: 'Ways to feel the Forest',
@@ -445,34 +451,38 @@ accordionData = [
             subtextvg: 'itadaki-videos-title-sp',
             altSubtext: '',
           }) %>
-         </div>
         </div>
         <div class="youtube-video-content youtube-video-content-itadaki">
           <ul class="youtube-video-list row">
             <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
               <div class="youtube-video-wrapper">
                 <div class="youtube-video-inner">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/QwxqqkbxhiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/QwxqqkbxhiM" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 </div>
               </div>
-              <p class="youtube-video-description">仲間とチャレンジコースに挑戦！</p>
-            </li>
-            <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
-              <div class="youtube-video-wrapper">
-                <div class="youtube-video-inner">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/D8-Z6rgRe1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-              </div>
-              <p class="youtube-video-description">DOKIDOKI タイムアタック映像！</p>
-            </li>
-          </ul>
         </div>
+        <p class="youtube-video-description">仲間とチャレンジコースに挑戦！</p>
+        </li>
+        <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
+          <div class="youtube-video-wrapper">
+            <div class="youtube-video-inner">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/D8-Z6rgRe1I" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          <p class="youtube-video-description">DOKIDOKI タイムアタック映像！</p>
+        </li>
+        </ul>
       </div>
+    </div>
   </section>
 
   <section class="faq l-section">
     <%- include('/partials/accordion', {
-      dataAccordion: getData().data.accordionData
+      dataAccordion: getData().data.accordionItadaki
     }) %>
   </section>
 
@@ -515,10 +525,12 @@ accordionData = [
     </div>
   </div> -->
 
+
   <%- include('/partials/banner-cta', {
     link: 'https://www.twinring.jp/mobipark_m/card/',
     imgPath: mix('/assets/images/subpage-banner.png')
   }) -%>
+
 
   <section class="recommendation">
     <div class="l-section-title">
@@ -529,20 +541,21 @@ accordionData = [
         subtextvg: 'recommendation-title'
       }) %>
     </div>
-      <div class="swiper-container slider js-slider-bottom">
-        <ul class="swiper-wrapper slider-wrapper">
-          <% getData().data.recommendDokidoki.forEach(item => { %>
-          <li class="swiper-slide slider-item">
-            <%- include('/partials/article-no-design', {
+
+    <div class="swiper-container slider js-slider-bottom">
+      <ul class="swiper-wrapper slider-wrapper">
+        <% getData().data.recommendDokidoki.forEach(item => { %>
+        <li class="swiper-slide slider-item">
+          <%- include('/partials/article-no-design', {
               image: item.image,
               heading: item.heading,
               buttonLink: item.buttonLink,
               buttonText: 'モビパーク'
             }) %>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
   </section>
 
   <section class="pick-up">

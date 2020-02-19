@@ -291,9 +291,43 @@
         margin-top: 10px;
       }
 
-      @include min-screen($breakpoint-mobile) {
+      @include min-screen($breakpoint-mobile + 1) {
         height: 37px;
         width: 731px;
+        transform: translate(-10px, 0px);
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(7px, -1px);
+      }
+    }
+
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 54px;
+      }
+    }
+  }
+
+  &.heading-howto-musasabi {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 54px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(10px, 0px);
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(9px, 1px);
+        height: 33px;
       }
     }
   }

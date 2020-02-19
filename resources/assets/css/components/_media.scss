@@ -64,8 +64,8 @@
     top: 0;
     left: -2%;
     z-index: 0;
-    width: 104%;
-    height: 104%;
+    width: 103%;
+    height: 103%;
 
     .media-craft & {
       @include max-screen($breakpoint-mobile) {
@@ -149,13 +149,13 @@
     z-index: 1;
 
     @include max-screen($breakpoint-mobile) {
-      background-image: linear-gradient(0deg, #c3e8d8 22.22%, #ffffff 22.22%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 72.22%, #ffffff 72.22%, #ffffff 100%);
-      background-size: 18.00px 18.00px;
+      background-image: linear-gradient(0deg, #c3e8d8 25%, #ffffff 25%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 75%, #ffffff 75%, #ffffff 100%);
+      background-size: 32.00px 32.00px;
     }
 
     @include min-screen($breakpoint-mobile + 1) {
-      background-image: linear-gradient(0deg, #c3e8d8 21.43%, #ffffff 21.43%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 71.43%, #ffffff 71.43%, #ffffff 100%);
-      background-size: 28.00px 28.00px;
+      background-image: linear-gradient(0deg, #c3e8d8 19.44%, #ffffff 19.44%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 69.44%, #ffffff 69.44%, #ffffff 100%);
+      background-size: 36.00px 36.00px;
     }
   }
 
@@ -183,13 +183,11 @@
   font-size: 12px;
   padding-top: 10px;
   line-height: 2;
+  letter-spacing: 0.16em;
+  font-weight: 300;
 
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 15px;
-  }
-
-  .media-subpage & {
-    letter-spacing: 0.16em;
   }
 }
 
@@ -315,13 +313,13 @@
     @include max-screen($breakpoint-mobile) {
       padding-top: 23px;
     }
-  
+
     .subpage-title {
       @include min-screen($breakpoint-mobile + 1) {
         margin-bottom: 24px;
       }
     }
-  
+
     .media {
       @include min-screen($breakpoint-mobile + 1) {
         padding: 0;
@@ -332,7 +330,7 @@
         margin-bottom: 77px;
       }
     }
-  
+
     .media-title {
       @include min-screen($breakpoint-mobile + 1) {
         margin-top: 3px;
@@ -344,7 +342,7 @@
         margin-top: 8px;
       }
     }
-  
+
     .media-desc {
       @include min-screen($breakpoint-mobile + 1) {
         padding-top: 15px;
@@ -355,15 +353,15 @@
         padding-right: 6px;
       }
     }
-  
+
     .media-left {
       width: 425px;
-  
+
       @include max-screen($breakpoint-mobile) {
         width: 100%;
       }
     }
-  
+
     .media-bg {
       margin-left: 0px;
     }
@@ -379,13 +377,13 @@
     @include max-screen($breakpoint-mobile) {
       padding-top: 23px;
     }
-  
+
     .subpage-title {
       @include min-screen($breakpoint-mobile + 1) {
         margin-bottom: 34px;
       }
     }
-  
+
     .media {
       @include min-screen($breakpoint-mobile + 1) {
         padding: 0;
@@ -396,7 +394,7 @@
         margin-bottom: 45px;
       }
     }
-  
+
     .media-title {
       @include min-screen($breakpoint-mobile + 1) {
         margin-top: 3px;
@@ -408,7 +406,7 @@
         margin-top: 8px;
       }
     }
-  
+
     .media-desc {
       @include min-screen($breakpoint-mobile + 1) {
         padding-top: 15px;
@@ -419,15 +417,15 @@
         padding-right: 6px;
       }
     }
-  
+
     .media-left {
       width: 425px;
-  
+
       @include max-screen($breakpoint-mobile) {
         width: 100%;
       }
     }
-  
+
     .media-bg {
       margin-left: 0px;
     }

@@ -34,10 +34,24 @@
   }
 
   .banner-cta-bottom-inner {
+    display: block;
     padding-left: 100px;
     padding-right: 100px;
     position: relative;
     z-index: 2;
+    opacity: 1;
+    transition: opacity .5s ease;
+
+
+    &:hover {
+      @include min-screen($breakpoint-mobile + 1) {
+        opacity: 0.8;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
 
     //SP
     @include max-screen($breakpoint-mobile) {

@@ -10,6 +10,10 @@
 .instagram-banner {
   text-align: center;
   margin-top: 72px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 49px;
+  }
 }
 
 .instagram-inner {

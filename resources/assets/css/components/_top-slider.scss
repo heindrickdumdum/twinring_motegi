@@ -1,6 +1,8 @@
 .top-slider-text {
   font-size: 20px;
   display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.06em;
 
   @include max-screen($breakpoint-mobile) {
     font-size: 12px;
@@ -18,5 +20,15 @@
 			letter-spacing: 0.1em;
 			line-height: 1.65;
   	}
+  }
+}
+
+.top-slider-image {
+  text-align: center;
+  margin-bottom: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }

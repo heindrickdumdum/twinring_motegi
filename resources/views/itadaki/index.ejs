@@ -515,15 +515,10 @@ accordionData = [
     </div>
   </div> -->
 
-  <div class="banner-cta">
-    <div class="l-container">
-      <div class="banner-cta-inner">
-        <a href="#">
-          <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
-        </a>
-      </div>
-    </div>
-  </div>
+  <%- include('/partials/banner-cta', {
+    link: 'https://www.twinring.jp/mobipark_m/card/',
+    imgPath: mix('/assets/images/subpage-banner.png')
+  }) -%>
 
   <section class="recommendation">
     <div class="l-section-title">

@@ -1,5 +1,5 @@
 .header-sp {
-  &.is-active {
+  @include max-screen($breakpoint-mobile) {
     position: fixed;
     top: 0;
     left: 0;
@@ -7,6 +7,14 @@
     background-color: $color-white;
     z-index: $z-max;
   }
+  // &.is-active {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   background-color: $color-white;
+  //   z-index: $z-max;
+  // }
 }
 
 .header-sp-toggle {

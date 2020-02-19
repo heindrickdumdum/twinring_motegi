@@ -404,6 +404,41 @@
     }
   }
 
+  &.heading-course-challenge {
+    margin-bottom: 35px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 58px;
+    }
+
+    .heading-subtext {
+      max-width: 139px;
+      margin: 0 auto;
+      height: 29px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 201px;
+        height: 36px;
+      }
+    }
+  }
+
+  &.heading-kart-challenge {
+    margin-bottom: 50px;
+    .heading-subtext {
+      max-width: 959px;
+      margin: 0 auto;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        width: 100%;
+        max-width: 335px;
+      }
+    }
+  }
+
   &.heading-comparison {
     text-align: center;
     .heading-subtext {

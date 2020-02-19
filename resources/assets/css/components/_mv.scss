@@ -45,16 +45,19 @@
   }
 
   .mv-subpage & {
-    max-height: 607px;
+    max-height: 100%;
+    height: 0;
+    // max-height: 450px;
     height: 0;
     overflow-y: hidden;
 
     @include min-screen($breakpoint-mobile + 1) {
-      height: 607px;
+      // height: 450px;
+      padding-bottom: 29%;
     }
 
     @include max-screen($breakpoint-mobile) {
-      padding-bottom: 76%;
+      padding-bottom: 65%;
     }
 
     &::after {
@@ -817,11 +820,11 @@
 
 .mv-subpage {
   margin-bottom: 7px;
-  max-height: 607px;
+  // max-height: 450px;
   height: auto;
 
   @include min-screen($breakpoint-mobile + 1) {
-    height: 607px;
+    // height: 450px;
     margin-bottom: 50px;
   }
 

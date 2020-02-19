@@ -13,15 +13,15 @@
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/challenge/mv-img.jpg') %>);"></div>
+        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/challenge/mv-img.jpg') %>);"></div>
+
+        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/challenge/mv-img-sp.jpg') %>);"></div>
       </li>
     </ul>
 
-    <h2 class="mv-heading mv-heading-subpage">
-      <span class="mv-heading-text">
-        チャレンジカート
-      </span>
-    </h2>
+    <h1 class="u-title-hidden">
+      チャレンジカート
+    </h1>
   </div>
 
   <div class="subpage-inner">
@@ -39,7 +39,7 @@
     <!-- YOUTUBE -->
     <div class="subpage-banner">
       <div class="subpage-banner-inner">
-        <img src="<%= mix('/assets/images/challenge/banner.jpg') %>" alt="">
+        <img src="<%= mix('/assets/images/challenge/subpage-banner.jpg') %>" alt="">
       </div>
     </div>
 
@@ -392,7 +392,7 @@
 
   <%- include('/partials/banner-cta', {
     link: 'https://www.twinring.jp/mobipark_m/card/',
-    imgPath: mix('/assets/images/subpage-banner.png')
+    imgPath: mix('/assets/images/subpage-banner-bottom.png')
   }) -%>
 
   <%- include('/partials/recommendation') -%>

@@ -610,7 +610,9 @@
       &:after {
         @include max-screen($breakpoint-mobile) {
           top: 5px;
-          height: 103%;
+          height: 102%;
+          background-position: center bottom;
+          width: 103%;
         }
       }
     }

@@ -164,5 +164,18 @@
     }
   }
 
+  &.heading-main-musasabi {
+    .heading {
+      img {
+        @include min-screen($breakpoint-mobile + 1) {
+          transform: translate(-11px, 2px);
+        }
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 83px;
+    }
+  }
 
 }

@@ -153,7 +153,7 @@
         width: 378px;
         height: 33px;
       }
-      
+
       @include max-screen($breakpoint-mobile) {
         height: 25px;
       }
@@ -225,30 +225,6 @@
       @include max-screen($breakpoint-mobile) {
         width: auto;
       }
-    }
-  }
-
-  &.heading-sumika-faq {
-    margin-bottom: 40px;
-    text-align: center;
-
-    @include max-screen($breakpoint-mobile) {
-      margin-bottom: 24px;
-    }
-
-    .heading-subtext {
-      svg {
-        @include max-screen($breakpoint-mobile) {
-          position: relative;
-          top: -15px;
-          width: 200px;
-          height: 35px;
-        }
-      }
-    }
-
-    .heading-text {
-      letter-spacing: 0.1em;
     }
   }
 
@@ -363,6 +339,30 @@
 
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 18px;
+    }
+  }
+
+  &.heading-sumika-faq {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 24px;
+    }
+
+    .heading-subtext {
+      svg {
+        @include max-screen($breakpoint-mobile) {
+          position: relative;
+          top: -15px;
+          width: 200px;
+          height: 35px;
+        }
+      }
+    }
+
+    .heading-text {
+      letter-spacing: 0.1em;
     }
   }
 

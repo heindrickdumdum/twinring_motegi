@@ -79,6 +79,10 @@
     margin: 0 0 30px;
     max-width: 598px;
 
+    .block-image-text-hellowoods {
+      text-align: center;
+    }
+    
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 26px;
       &:last-child {

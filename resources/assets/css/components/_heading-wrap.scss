@@ -340,12 +340,20 @@
         width: 413px;
         height: 36px;
       }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 316px;
+      }
     }
 
     .heading-text {
       @include min-screen($breakpoint-mobile + 1) {
         letter-spacing: -0.04em;
       }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 18px;
     }
   }
 
@@ -362,7 +370,7 @@
 
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
-        margin-top: 10px;
+        margin-top: 2px;
         height: 34px;
       }
 
@@ -370,18 +378,19 @@
         @include min-screen($breakpoint-mobile + 1) {
           width: 377px;
           height: 34px;
+          margin-left: -17px;
         }
       }
 
       @include max-screen($breakpoint-mobile) {
-        margin: 13px auto 0;
+        margin: 7px auto 0;
         height: 26px;
       }
     }
 
     .heading {
       @include max-screen($breakpoint-mobile) {
-        margin: 24px 0 37px;
+        margin: 24px 0 41px;
       }
     }
   }

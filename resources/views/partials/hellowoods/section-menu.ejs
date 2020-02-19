@@ -1,27 +1,29 @@
 <div class="menu">
-  <div class="heading-wrap heading-wrap-menu heading-wrap-center heading-gradient-tobottom">
-    <div class="heading">
-      <p class="heading-text">
-        Menu
-      </p>
-      <h2 class="heading-subtext">
-        <svg>
-          <title>森のクラフトメニュー</title>
-          <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-craft-menu-title') %>"></use>
-        </svg>
-      </h2>
+  <div class="l-container menu-container">
+    <div class="heading-wrap heading-wrap-menu heading-wrap-center heading-gradient-tobottom">
+      <div class="heading">
+        <p class="heading-text">
+          Menu
+        </p>
+        <h2 class="heading-subtext">
+          <svg>
+            <title>森のクラフトメニュー</title>
+            <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-craft-menu-title') %>"></use>
+          </svg>
+        </h2>
+      </div>
     </div>
+    <ul class="menu-list">
+      <% getData().data.craftMenuData.forEach(item => { %>
+        <li class="menu-list-item">
+          <a class="menu-list-link">
+            <div class="menu-list-image" style="background-image:url(<%= item.image %>);"></div>
+            <h3 class="menu-list-title"><%= item.title %></h3>
+            <p class="menu-list-price"><%= item.price %></p>
+          </a>
+        </li>
+        </li>
+      <% }) %>
+    </ul>
   </div>
-  <ul class="menu-list">
-    <% getData().data.craftMenuData.forEach(item => { %>
-      <li class="menu-list-item">
-        <a class="menu-list-link">
-          <div class="menu-list-image" style="background-image:url(<%= item.image %>);"></div>
-          <h3 class="menu-list-title"><%= item.title %></h3>
-          <p class="menu-list-price"><%= item.price %></p>
-        </a>
-      </li>
-      </li>
-    <% }) %>
-  </ul>
 </div>

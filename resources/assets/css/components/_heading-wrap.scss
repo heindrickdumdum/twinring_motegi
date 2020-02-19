@@ -50,6 +50,11 @@
       margin: 0 auto;
       letter-spacing: -0.01em;
       font-size: 34px;
+
+      @include max-screen($breakpoint-mobile) {
+        letter-spacing: 0.01em;
+        font-size: 24px;
+      }
     }
 
     .heading-subtext {
@@ -57,32 +62,26 @@
     }
   }
 
-  &.heading-wrap-menu {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        margin: 13px auto 0;
-        height: 26px;
-      }
-    }
-
-    .heading {
-      @include max-screen($breakpoint-mobile) {
-        margin: 24px 0 37px;
-      }
-    }
-  }
-
   &.heading-wrap-parkmap {
     .heading-subtext {
       width: 750px;
+      max-width: 100%;
 
       @include max-screen($breakpoint-mobile) {
         width: 400px;
         height: 70px;
         display: inline-block;
         text-align: left;
-        margin-left: -9px;
+      }
+    }
+  }
+
+  &.heading-wrap-how-to {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
         margin-top: 11px;
+        width: 218px;
+        height: 30px;
       }
     }
   }
@@ -90,6 +89,11 @@
   &.heading-wrap-activity {
     .heading-subtext {
       width: 800px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 100%;
+        width: 316px;
+      }
     }
   }
 
@@ -135,15 +139,34 @@
 
   &.heading-wrap-craft {
     .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 10px;
+      }
+
       @include max-screen($breakpoint-mobile) {
         margin-top: 11px;
       }
     }
 
     svg {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 378px;
+        height: 33px;
+      }
+      
       @include max-screen($breakpoint-mobile) {
         height: 25px;
       }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: -0.04em;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 64px;
     }
   }
 
@@ -299,6 +322,79 @@
     }
   }
 
+  &.heading-forest-craft {
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 8px;
+        transform: translateX(-10px);
+        text-align: left;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        height: 43px;
+        display: block;
+        padding: 0 14px 0 8px;
+        margin-top: 3px;
+      }
+    }
+
+    svg {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 413px;
+        height: 36px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: -0.04em;
+      }
+    }
+  }
+
+  &.heading-wrap-menu {
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: -0.04em;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 22.5px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 10px;
+        height: 34px;
+      }
+
+      svg {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 377px;
+          height: 34px;
+        }
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 13px auto 0;
+        height: 26px;
+      }
+    }
+
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin: 24px 0 37px;
+      }
+    }
+  }
+
   &.heading-comparison {
     text-align: center;
     .heading-subtext {
@@ -323,14 +419,6 @@
     }
   }
 
-  &.heading-forest-craft {
-    .heading {
-      @include max-screen($breakpoint-mobile) {
-        margin-bottom: 0;
-      }
-    }
-  }
-
   @include max-screen($breakpoint-mobile) {
     .subpage-section-family-walk {
       margin-top: 72px;
@@ -340,5 +428,4 @@
       margin-top: 150px;
     }
   }
-
 }

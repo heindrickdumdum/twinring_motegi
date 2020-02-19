@@ -3,7 +3,7 @@
 
   &.section-inner-activity {
     @include max-screen($breakpoint-mobile) {
-      margin: 90px 0;
+      margin: 83px 0 90px;
     }
   }
 }
@@ -16,7 +16,7 @@
   position: relative;
 
   @include max-screen($breakpoint-mobile) {
-    padding-top: 32%;
+    padding-top: 46%;
     height: auto;
   }
 }
@@ -103,7 +103,7 @@
 
   @include max-screen($breakpoint-mobile) {
     width: 249px;
-    margin: 46px auto 0;
+    margin: 10px auto 0;
 
     // accessing _button.scsss
     .button-icon {

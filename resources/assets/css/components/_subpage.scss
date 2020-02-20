@@ -53,6 +53,14 @@
         content: normal;
       }
     }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 17px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 8px;
+    }
   }
 
   &.subpage-musasabi {

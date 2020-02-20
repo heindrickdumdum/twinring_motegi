@@ -36,7 +36,7 @@ export default function headerMenu() {
         e.preventDefault();
       });
 
-      el.addEventListener( 'mouseenter', e => {
+      el.addEventListener( 'mouseenter', () => {
 
         if(elAttrib != '#') {
 

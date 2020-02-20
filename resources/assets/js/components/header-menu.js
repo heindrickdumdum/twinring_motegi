@@ -6,8 +6,8 @@ export default function headerMenu() {
   const headerButton = document.querySelectorAll('.js-header-button'),
         headerButtonSub = document.querySelectorAll('.js-header-button-sub'),
         headerSubInner = document.querySelectorAll('.js-header-sub-content-inner'),
-        headerClose = document.querySelector('#js-header-close'),
-        headerSub = document.querySelector('#js-header-sub'),
+        headerSub = document.querySelectorAll('.js-header-sub'),
+        headerClose = document.querySelectorAll('.js-header-close'),
         headerToggle = document.querySelector('#js-header-toggle'),
         headerToggleInner = document.querySelector('#js-header-toggle-inner'),
         headerBurger = document.querySelector('#js-header-burger'),
@@ -29,55 +29,63 @@ export default function headerMenu() {
   // function for PC
   function headerMenuPC() {
 
-  headerButton.forEach( function(el) {
-      let elAttrib = el.getAttribute('data-target')
+    headerButton.forEach( el => {
+      let elAttrib = el.dataset.target;
 
-      el.addEventListener( 'click', function(e) {
+      el.addEventListener( 'click', e => {
         e.preventDefault();
       });
 
-      el.addEventListener( 'mouseenter', function() {
-
-        headerSub.classList.add(CONST.VISIBLE_CLASS)
+      el.addEventListener( 'mouseenter', () => {
 
         if(elAttrib != '#') {
 
-          headerSubInner.forEach( function(e) {
-            e.style.display = 'none';
-          })
+          let target = document.querySelector('.js-header-sub[data-content="'+elAttrib+'"]');
 
-          document.querySelectorAll('[data-content="'+elAttrib+'"]').forEach( function(e) {
-            e.style.display = 'block'
-            console.log(e.parentNode);
-          })
+          setTimeout(() => {
+            target.classList.add(CONST.VISIBLE_CLASS)
+          }, 500);
+
+          if(target.classList.contains(CONST.VISIBLE_CLASS)) {
+            target.classList.add(CONST.VISIBLE_CLASS)
+          } else {
+            headerSub.forEach( e => {
+              e.classList.remove(CONST.VISIBLE_CLASS);
+            })
+          }
 
           scrollLock()
         }
 
       });
+
     });
 
     // prevent element from clicking
-    document.querySelector('.header-sub-content').addEventListener('click', function(e) {
-      e.stopPropagation();
+    document.querySelectorAll('.js-header-sub-content').forEach( e => {
+      e.addEventListener('click', contentInner => {
+        contentInner.stopPropagation();
+      });
     });
 
-    headerSub.addEventListener('click', function(e) {
-      e.preventDefault();
-      headerSub.classList.remove(CONST.VISIBLE_CLASS);
-
-      scrollAble()
+    headerSub.forEach( e => {
+      e.addEventListener('click', sub => {
+        sub.preventDefault();
+        e.classList.remove(CONST.VISIBLE_CLASS);
+        scrollAble()
+      })
     })
 
-    if(!headerSub.classList.contains(CONST.VISIBLE_CLASS)) {
-      scrollAble()
-    }
+    headerClose.forEach( e => {
+      e.addEventListener( 'click', close => {
+        close.preventDefault()
 
-    headerClose.addEventListener( 'click', function(e) {
-      e.preventDefault()
+        headerSub.forEach( sub => {
+          sub.classList.remove(CONST.VISIBLE_CLASS);
+        })
 
-      headerSub.classList.remove(CONST.VISIBLE_CLASS)
-      scrollAble()
+        scrollAble()
+      });
     });
 
   } // end of function for PC
@@ -86,25 +94,25 @@ export default function headerMenu() {
   function headerMenuSP() {
       scrollAble()
 
-      window.addEventListener('scroll', function() {
-        if(this.scrollY > 50) {
+      window.addEventListener('scroll', e => {
+        if(e.currentTarget.scrollY > 50) {
           headerSP.classList.add(CONST.IS_ACTIVE);
         }
       })
 
-      headerButtonSub.forEach( function(el) {
-        let elAttrib = el.getAttribute('data-target')
+      headerButtonSub.forEach( (el) => {
+        let elAttrib = el.dataset.target
 
         if(elAttrib != '#') {
           el.classList.add(CONST.IS_ACTIVE);
 
-          el.addEventListener( 'click', function(e) {
+          el.addEventListener( 'click', e => {
             e.preventDefault();
 
             let thisButton = e.currentTarget;
             thisButton.classList.toggle(CONST.VISIBLE_CLASS);
 
-            document.querySelectorAll('[data-content="'+elAttrib+'"]').forEach( function(content) {
+            document.querySelectorAll('[data-content="'+elAttrib+'"]').forEach( content => {
               if(thisButton.classList.contains(CONST.VISIBLE_CLASS)) {
                 headerSubInner.forEach( function(e) {
                   e.classList.remove(CONST.IS_ACTIVE);
@@ -112,7 +120,7 @@ export default function headerMenu() {
                 content.classList.add(CONST.IS_ACTIVE);
                 content.style.top = thisButton.offsetTop + thisButton.offsetHeight +'px';
 
-                headerButtonSub.forEach( function(el) {
+                headerButtonSub.forEach( el => {
                   el.style.marginBottom = 0;
                   el.classList.remove(CONST.VISIBLE_CLASS);
                   thisButton.classList.add(CONST.VISIBLE_CLASS);
@@ -120,11 +128,11 @@ export default function headerMenu() {
 
                 e.currentTarget.style.marginBottom = content.clientHeight +'px';
               } else {
-                headerSubInner.forEach( function(e) {
+                headerSubInner.forEach( e => {
                   e.classList.remove(CONST.IS_ACTIVE);
                 })
 
-                headerButtonSub.forEach( function(el) {
+                headerButtonSub.forEach( el => {
                   el.style.marginBottom = 0;
                 });
               }
@@ -133,7 +141,9 @@ export default function headerMenu() {
         }
      })
 
-    headerBurger.addEventListener( 'click', function(e) {
+
+    // burger menu
+    headerBurger.addEventListener( 'click', e => {
       e.preventDefault();
         e.currentTarget.classList.toggle(CONST.IS_ACTIVE);
         headerToggle.classList.toggle(CONST.IS_ACTIVE);

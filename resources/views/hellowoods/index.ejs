@@ -45,7 +45,7 @@
               subtextvg: 'info-subtext'
             }) %>
           </div>
-    
+
           <div class="l-container">
             <ul class="info-list">
               <% hellowoodsInfo.forEach(item => { %>
@@ -57,7 +57,7 @@
           </div>
       </section>
     </div>
-    
+
     <div class="l-section">
       <div class="challenge hellowoods">
         <div class="l-container">
@@ -79,7 +79,7 @@
                 <img src="<%- mix('/assets/images/hellowoods/life-overflow-images-sp.png') -%>" alt="Challenge">
               </div>
 
-              
+
             </div>
             <div class="challenge-right">
               <p class="heading-text">
@@ -138,7 +138,7 @@
         </ul>
       </div>
     </section>
-    
+
     <div class="l-section">
       <section class="adventure">
         <div class="l-section-title">
@@ -150,13 +150,13 @@
             subtextvg: 'hellowoods-explore-sub'
           }) %>
         </div>
-    
+
         <div class="forest-container">
           <%- include('/partials/hellowoods/section-forest') -%>
         </div>
       </section>
     </div>
-    
+
 
     <section class="l-section alternate-feature l-section-hellowoods">
       <div class="l-section-title">
@@ -248,7 +248,7 @@
             </a>
           </div>
         </div>
-      </div>    
+      </div>
     </section>
 
     <div class="call-to-action call-to-action-hellowoods">
@@ -312,13 +312,11 @@
     </section>
 
     <!-- recommendation module -->
-    <%- include('/partials/recommendation', {
-  dataRecommend : getData().data.recommend
-}) -%>
+    <%- include('/partials/recommendation') -%>
 
     <!-- pick up module -->
     <%- include('/partials/pickup') -%>
-    
+
   </main>
 </div>
 

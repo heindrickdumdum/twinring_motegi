@@ -9,8 +9,10 @@
           <ul class="header-sub-image-list">
             <% list.forEach( item => { %>
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="#">
-                <div class="header-sub-image" style="background-image: url(<%- item.image %>);"></div>
+              <a class="header-sub-image-link" href="<%- item.link %>">
+                <div class="header-sub-image-wrap">
+                  <div class="header-sub-image" style="background-image: url(<%- item.image %>);"></div>
+                </div>
                 <span class="header-sub-image-text"><%- item.text %></span>
               </a>
             </li>

@@ -60,7 +60,7 @@
           <tr class="table-row">
             <th class="table-head">所要時間</th>
             <td class="table-col">
-              約30分〜40分 <br/>
+              約30分～40分 <br/>
               風の状況、参加人数により異なります。<br/>
               （受付は営業終了30分前まで。定員になり次第受付を終了します。）</td>
           </tr>
@@ -347,13 +347,11 @@
           }) %>
         </div>
       </div>
-      
+
     </section>
 
     <!-- recommendation module -->
-    <%- include('/partials/recommendation', {
-  dataRecommend : getData().data.recommend
-}) -%>
+    <%- include('/partials/recommendation') -%>
 
     <!-- pick up module -->
     <%- include('/partials/pickup') -%>

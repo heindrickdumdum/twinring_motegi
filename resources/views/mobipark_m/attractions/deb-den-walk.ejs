@@ -8,232 +8,234 @@
 
 <% pageId = 'mobipark-subpage'; %>
 
-<div class="subpage">
-  <div class="mv mv-subpage">
-    <ul class="mv-list">
-      <li class="mv-item">
-        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.jpg') %>);"></div>
-        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img-sp.jpg') %>);"></div>
-      </li>
-    </ul>
+<main class="l-main">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.jpg') %>);"></div>
+          <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
 
-    <h1 class="u-title-hidden">
-      おさんぽでんでん
-    </h1>
-  </div>
-
-  <div class="subpage-inner">
-    <div class="l-section-title">
-      <div class="heading-wrap heading-main heading-main-wild-racer">
-        <h2 class="heading">
-          <span class="u-title-hidden">Deb den walk</span>
-          <span class="heading-texts u-show-pc">
-            <img src="<%= mix('/assets/images/deb-den/osanpo-color-title.png') %>" alt="deb den">
-          </span>
-          <span class="heading-texts u-show-sp">
-            <img src="<%= mix('/assets/images/deb-den/osanpo-color-title-sp.png') %>" alt="deb den">
-          </span>
-        </h2>
-      </div>
+      <h1 class="u-title-hidden">
+        おさんぽでんでん
+      </h1>
     </div>
 
-    <div class="subpage-banner">
-      <div class="subpage-banner-inner">
-        <img class="" src="<%= mix('/assets/images/deb-den/subpage-banner.jpg') %>" alt="">
-      </div>
-    </div>
-
-    <h3 class="subpage-title">
-      <span>アトラクション情報</span>
-    </h3>
-
-    <p>でんでんむしに乗って葉っぱの上をのんびりお散歩。親子で一緒に乗ることができるのりものです。3歳<br />からはひとりで運転できます。</p>
-
-    <table class="table">
-      <tbody>
-        <tr class="table-row">
-          <th class="table-head">場所</th>
-          <td class="table-col">モビパーク内</td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">所要時間</th>
-          <td class="table-col">約2分
-          </td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">雨天の運行</th>
-          <td class="table-col">雨天でも営業いたしております。
-          </td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">対象者</th>
-          <td class="table-col">0歳以上でひとり座りできる方※1
-          </td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">身長制限</th>
-          <td class="table-col">なし</td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">料金</th>
-          <td class="table-col">
-            モビパークパスポート対象 <br>アトラクションチケット利用：200円
-          </td>
-        </tr>
-
-        <tr class="table-row">
-          <th class="table-head">ご利用にあたって</th>
-          <td class="table-col">
-            ※1 0歳から2歳までの方：<br>0歳から2歳までのお子さまは中学生以上の同伴者の付添いが必要になります。
-          </td>
-        </tr>
-
-      </tbody>
-    </table>
-  </div>
-
-  <section class="subpage-section subpage-section-howto">
-    <div class="subpage-section-howto-inner">
+    <div class="subpage-inner">
       <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-howto heading-howto-debden u-show-pc',
-          text: 'How to Enjoy',
-          alt: 'おさんぽでんでんを楽しむポイント',
-          subtextvg: 'debden-enjoy-point-title',
-          altSubtext: '',
-        }) %>
-
-        <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-howto heading-howto-debden u-show-sp',
-          text: 'How to Enjoy',
-          alt: 'おさんぽでんでんを楽しむポイント',
-          subtextvg: 'debden-enjoy-point-title-sp',
-          altSubtext: '',
-        }) %>
+        <div class="heading-wrap heading-main heading-main-debden">
+          <h2 class="heading">
+            <span class="u-title-hidden">Deb den walk</span>
+            <span class="heading-texts u-show-pc">
+              <img src="<%= mix('/assets/images/deb-den/osanpo-color-title.png') %>" alt="deb den">
+            </span>
+            <span class="heading-texts u-show-sp">
+              <img src="<%= mix('/assets/images/deb-den/osanpo-color-title-sp.png') %>" alt="deb den">
+            </span>
+          </h2>
+        </div>
       </div>
 
-      <div class="how-to-content">
-        <div class="media media-subpage u-clear">
-          <div class="media-left">
-            <div class="media-bg">
-              <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/deb-den/enjoy-img1.jpg') %>);"></div>
+      <div class="subpage-banner">
+        <div class="subpage-banner-inner">
+          <img class="" src="<%= mix('/assets/images/deb-den/subpage-banner.jpg') %>" alt="">
+        </div>
+      </div>
+
+      <h3 class="subpage-title">
+        <span>アトラクション情報</span>
+      </h3>
+
+      <p>でんでんむしに乗って葉っぱの上をのんびりお散歩。親子で一緒に乗ることができるのりものです。3歳<br />からはひとりで運転できます。</p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">場所</th>
+            <td class="table-col">モビパーク内</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">所要時間</th>
+            <td class="table-col">約2分
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">雨天の運行</th>
+            <td class="table-col">雨天でも営業いたしております。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象者</th>
+            <td class="table-col">0歳以上でひとり座りできる方※1
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">身長制限</th>
+            <td class="table-col">なし</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">料金</th>
+            <td class="table-col">
+              モビパークパスポート対象 <br>アトラクションチケット利用：200円
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">ご利用にあたって</th>
+            <td class="table-col">
+              ※1 0歳から2歳までの方：<br>0歳から2歳までのお子さまは中学生以上の同伴者の付添いが必要になります。
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <section class="subpage-section subpage-section-howto">
+      <div class="subpage-section-howto-inner">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-howto heading-howto-debden u-show-pc',
+            text: 'How to Enjoy',
+            alt: 'おさんぽでんでんを楽しむポイント',
+            subtextvg: 'debden-enjoy-point-title',
+            altSubtext: '',
+          }) %>
+
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-howto heading-howto-debden u-show-sp',
+            text: 'How to Enjoy',
+            alt: 'おさんぽでんでんを楽しむポイント',
+            subtextvg: 'debden-enjoy-point-title-sp',
+            altSubtext: '',
+          }) %>
+        </div>
+
+        <div class="how-to-content">
+          <div class="media media-subpage u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/deb-den/enjoy-img1.jpg') %>);"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="media-right">
-            <h4 class="media-title">
-              <span>3歳から一人で運転！</span>
-            </h4>
-            <p class="media-desc">
-              3歳から一人で自由にアクセルとハンドルを操作。0歳から親子で一緒に乗れる、のりものデビューにぴったりのアトラクション！
-            </p>
+            <div class="media-right">
+              <h4 class="media-title">
+                <span>3歳から一人で運転！</span>
+              </h4>
+              <p class="media-desc">
+                3歳から一人で自由にアクセルとハンドルを操作。0歳から親子で一緒に乗れる、のりものデビューにぴったりのアトラクション！
+              </p>
 
-            <div class="media-bottom">
-              <div class="media-note">
-                <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                <div class="media-note-text">
-                  100点取れたら… <br>
-                  交通ルールを守れタネ！
+              <div class="media-bottom">
+                <div class="media-note">
+                  <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
+                  <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
+                  <div class="media-note-text">
+                    100点取れたら… <br>
+                    交通ルールを守れタネ！
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="media media-subpage u-clear">
-          <div class="media-left">
-            <div class="media-bg">
-              <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/deb-den/enjoy-img2.jpg') %>);"></div>
+          <div class="media media-subpage u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/deb-den/enjoy-img2.jpg') %>);"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="media-right">
-            <h4 class="media-title">
-              <div class="u-show-pc">
-                <span>
-                  でんでん虫になった気分でのんびりお散歩！
-                </span>
-              </div>
-            </h4>
-            <p class="media-desc">
-              大きな葉っぱの上がでんでん虫のコース。森と空を眺めながら、でんでん虫になった気分でお散歩しよう！
-            </p>
+            <div class="media-right">
+              <h4 class="media-title">
+                <div class="u-show-pc">
+                  <span>
+                    でんでん虫になった気分でのんびりお散歩！
+                  </span>
+                </div>
+              </h4>
+              <p class="media-desc">
+                大きな葉っぱの上がでんでん虫のコース。森と空を眺めながら、でんでん虫になった気分でお散歩しよう！
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BOTTOM -->
+    <!-- BOTTOM -->
 
-  <!-- <div class="call-to-action">
-    <div class="l-container">
-      <div class="call-to-action-wrapper">
-        <div class="call-to-action-inner">
-          <%- include('/partials/heading', {
-            modifier: 'heading-banner-more heading-banner-more-debden u-show-pc',
-            imgPath: mix('/assets/images/deb-den/osanpo-enjoy-more-title.png'),
-            alt: 'アクロエックスをもっと楽しむ',
-            altSubtext: '',
-            subtextvg: ''
-          }) %>
-          <%- include('/partials/heading', {
-            modifier: 'heading-banner-more heading-banner-more-debden u-show-sp',
-            imgPath: mix('/assets/images/deb-den/osanpo-enjoy-more-title-sp.png'),
-            alt: 'アクロエックスをもっと楽しむ',
-            altSubtext: '',
-            subtextvg: ''
-          }) %>
-          <div class="call-to-action-description">
-            <p class="call-to-action-description-text u-show-pc">
-              おさんぽでんでんのこだわりポイントや、知っているとも<br>っと楽しくなる情報を配信中しています。
-            </p>
-            <p class="call-to-action-description-text u-show-sp">
-              おさんぽでんでんの<br />こだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
-            </p>
-          </div>
-          <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
-            <%- include('/partials/button', {
-              modifier: 'button-banner-more',
-              text: 'もっと見る',
-              link: '#'
+    <!-- <div class="call-to-action">
+      <div class="l-container">
+        <div class="call-to-action-wrapper">
+          <div class="call-to-action-inner">
+            <%- include('/partials/heading', {
+              modifier: 'heading-banner-more heading-banner-more-debden u-show-pc',
+              imgPath: mix('/assets/images/deb-den/osanpo-enjoy-more-title.png'),
+              alt: 'アクロエックスをもっと楽しむ',
+              altSubtext: '',
+              subtextvg: ''
             }) %>
+            <%- include('/partials/heading', {
+              modifier: 'heading-banner-more heading-banner-more-debden u-show-sp',
+              imgPath: mix('/assets/images/deb-den/osanpo-enjoy-more-title-sp.png'),
+              alt: 'アクロエックスをもっと楽しむ',
+              altSubtext: '',
+              subtextvg: ''
+            }) %>
+            <div class="call-to-action-description">
+              <p class="call-to-action-description-text u-show-pc">
+                おさんぽでんでんのこだわりポイントや、知っているとも<br>っと楽しくなる情報を配信中しています。
+              </p>
+              <p class="call-to-action-description-text u-show-sp">
+                おさんぽでんでんの<br />こだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
+              </p>
+            </div>
+            <div class="l-button l-button-call-to-action l-button-call-to-action-subpage">
+              <%- include('/partials/button', {
+                modifier: 'button-banner-more',
+                text: 'もっと見る',
+                link: '#'
+              }) %>
+            </div>
+            <span class="call-to-action-dot call-to-action-dot-1">
+              <img src="<%- mix('/assets/images/dokidoki/banner-dot-1.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-2">
+              <img src="<%- mix('/assets/images/dokidoki/banner-dot-2.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-3">
+              <img src="<%- mix('/assets/images/dokidoki/banner-dot-3.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-4">
+              <img src="<%- mix('/assets/images/dokidoki/banner-dot-4.png')%> ">
+            </span>
           </div>
-          <span class="call-to-action-dot call-to-action-dot-1">
-            <img src="<%- mix('/assets/images/dokidoki/banner-dot-1.png')%> ">
-          </span>
-          <span class="call-to-action-dot call-to-action-dot-2">
-            <img src="<%- mix('/assets/images/dokidoki/banner-dot-2.png')%> ">
-          </span>
-          <span class="call-to-action-dot call-to-action-dot-3">
-            <img src="<%- mix('/assets/images/dokidoki/banner-dot-3.png')%> ">
-          </span>
-          <span class="call-to-action-dot call-to-action-dot-4">
-            <img src="<%- mix('/assets/images/dokidoki/banner-dot-4.png')%> ">
-          </span>
         </div>
       </div>
-    </div>
-  </div> -->
+    </div> -->
 
-  <%- include('/partials/banner-cta', {
-    link: 'https://www.twinring.jp/mobipark_m/card/',
-    imgPath: mix('/assets/images/subpage-banner-bottom.png')
-  }) -%>
+    <%- include('/partials/banner-cta', {
+      link: 'https://www.twinring.jp/mobipark_m/card/',
+      imgPath: mix('/assets/images/subpage-banner-bottom.png')
+    }) -%>
 
-  <%- include('/partials/recommendation') -%>
+    <%- include('/partials/recommendation') -%>
 
-  <%- include('/partials/pickup') -%>
+    <%- include('/partials/pickup') -%>
 
-  <!-- END BOTTOM -->
-</div>
+    <!-- END BOTTOM -->
+  </div>
+</main>
 
 
 <%- include('/partials/breadcrumbs', {

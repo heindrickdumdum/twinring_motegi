@@ -141,5 +141,6 @@
   
   @include max-screen($breakpoint-mobile) {
     margin-top: -8px;
+    background-position: right top;
   }
 }

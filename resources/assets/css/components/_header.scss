@@ -125,6 +125,12 @@
   &[data-target="#"] {
     pointer-events: none;
   }
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: $color-green;
+    }
+  }
 }
 
 .header-bottom-item {
@@ -235,6 +241,12 @@
       letter-spacing: 0.08em;
     }
 
+    @include min-screen($breakpoint-mobile + 1) {
+      &:hover {
+        color: rgba($color-mineshaft, .2);
+      }
+    }
+    
     &.is-active {
       color: rgba($color-mineshaft, .2);
     }

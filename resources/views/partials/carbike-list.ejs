@@ -1,0 +1,47 @@
+
+<% if(dataCarbikeList) { %>
+  <ul class="carbike-list">
+    <% dataCarbikeList.forEach( item => { %>
+      <li class="carbike-item">
+        <article class="carbike-article">
+          <div class="carbike-article-thumb">
+            <div class="carbike-article-thumb-img"
+                style="background-image: url(<%- item.imgPath %>)">
+              </div>
+            <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %>">
+              <%- item.category %>
+            </span>
+          </div>
+
+          <div class="carbike-article-content">
+            <h3 class="carbike-article-title">
+              <span>
+                <%- item.title %>
+                <% if(item.icon !== '') { %>
+                  <i class="ico-carbike ico-carbike-<%- item.icon %>"></i>
+                <% } %>
+              </span>
+
+
+            </h3>
+
+            <ul class="carbike-article-list">
+              <% item.dataList.forEach( dataitem => { %>
+                <li class="carbike-article-list-item">
+                  <span class="carbike-article-list-label"><%= dataitem.label %></span>
+                  <p class="carbike-article-list-desc"><%- dataitem.content %></p>
+                </li>
+              <% }) %>
+            </ul>
+
+            <!-- <div class="carbike-article-more">
+              <a class="carbike-article-more-link" href="#">
+                <span>詳細はこちら</span>
+              </a>
+            </div> -->
+          </div>
+        </article>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>

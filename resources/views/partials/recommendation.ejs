@@ -1,3 +1,4 @@
+
 <section class="recommendation">
   <div class="l-section-title">
     <%- include('/partials/heading', {
@@ -7,18 +8,19 @@
       subtextvg: 'recommendation-title'
     }) %>
   </div>
-    <div class="swiper-container slider js-slider-bottom">
-      <ul class="swiper-wrapper slider-wrapper">
-        <% getData().data.recommend.forEach(item => { %>
-        <li class="swiper-slide slider-item">
-          <%- include('/partials/article-no-design', {
-            image: item.image,
-            heading: item.heading,
-            buttonLink: item.buttonLink,
-            buttonText: 'モビパーク'
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
+
+  <div class="swiper-container slider js-slider-bottom">
+    <ul class="swiper-wrapper slider-wrapper">
+      <% getData().data.recommend.forEach(item => { %>
+      <li class="swiper-slide slider-item">
+        <%- include('/partials/article-no-design', {
+          image: item.image,
+          heading: item.heading,
+          buttonLink: item.buttonLink,
+          buttonText: 'モビパーク'
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
 </section>

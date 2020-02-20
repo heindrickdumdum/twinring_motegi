@@ -1,5 +1,5 @@
 <% if(dataSteps) { %>
-  <ul class="step-list">
+  <ol class="step-list">
     <%
     dataSteps.forEach(item => {
     %>
@@ -33,8 +33,8 @@
               <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
               <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
               <div class="media-note-text">
-                乗れたら… <br>
-                大空には羽ばたけタネ！
+                乗れたら…<br>
+                森を巡ってこれタネ！
               </div>
             </div>
           </div>
@@ -42,5 +42,5 @@
       </div>
     </li>
     <% }) %>
-  </ul>
+  </ol>
 <% } %>

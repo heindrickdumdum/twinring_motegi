@@ -113,6 +113,10 @@
     @include min-screen($breakpoint-mobile + 1) {
       color: $color-green;
     }
+
+    &[href="#"] {
+      cursor: default;
+    }
   }
 
   @include max-screen($breakpoint-mobile) {

@@ -1,5 +1,7 @@
 .heading {
   margin: 40px 0;
+  position: relative;
+  z-index: $z-min;
 
   @include max-screen($breakpoint-mobile) {
     margin: 24px 0;
@@ -14,7 +16,7 @@
       }
     }
   }
-  
+
 }
 
 .heading-text {

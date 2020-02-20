@@ -10,8 +10,10 @@
           <ul class="header-sub-image-list header-sub-image-list-padding">
             <% list.forEach( item => { %>
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="#">
-                <div class="header-sub-image<% if(list.length > 3) { %> header-sub-image-small<% } %>" style="background-image: url(<%- item.image %>);"></div>
+              <a class="header-sub-image-link" href="<%- item.link %>">
+                <div class="header-sub-image-wrap">
+                  <div class="header-sub-image<% if(list.length > 3) { %> header-sub-image-small<% } %>" style="background-image: url(<%- item.image %>);"></div>
+                </div>
                 <span class="header-sub-image-text"><%- item.text %></span>
               </a>
             </li>
@@ -33,7 +35,9 @@
         サーキットを走るTOP
       </a>
 
-      <div class="header-sub-image" style="background-image: url(<%= mix('/assets/images/header/motor-img7.jpg') %>);"></div>
+      <div class="header-sub-image-wrap">
+        <div class="header-sub-image" style="background-image: url(<%= mix('/assets/images/header/motor-img7.jpg') %>);"></div>
+      </div>
 
       <ul class="header-sub-button-list">
         <% getData().data.headerMotorRightLinks.forEach( item => { %>

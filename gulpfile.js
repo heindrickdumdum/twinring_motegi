@@ -3,16 +3,23 @@ var gulp = require( 'gulp' ),
     convertEncoding = require( 'gulp-convert-encoding' );
 
 gulp.task('build-shift-jis', function() {
-    return gulp.src([
-      'public/**'
-      ],{
-      base: 'public/'
-      })
-      .pipe(replace('UTF-8', 'Shift_JIS'))
-      //.pipe(replace('/assets/', './'))
-      //.pipe(replace('assets/', './'))
-      .pipe(convertEncoding({to: 'Shift_JIS'}))
-      .pipe(gulp.dest('public/'));
+      return gulp.src('public/')
+        //.pipe(replace('UTF-8', 'Shift_JIS'))
+        //.pipe(replace('/assets/', './'))
+        //.pipe(replace('assets/', './'))
+        //.pipe(convertEncoding({to: 'Shift_JIS'}))
+        .pipe(gulp.dest('public/'));
+
+//    return gulp.src([
+//      'public/**'
+//      ],{
+//      base: 'public/'
+//      })
+//      .pipe(replace('UTF-8', 'Shift_JIS'))
+//      //.pipe(replace('/assets/', './'))
+//      //.pipe(replace('assets/', './'))
+//      .pipe(convertEncoding({to: 'Shift_JIS'}))
+//      .pipe(gulp.dest('public_shiftjis/'));
 });
 
 gulp.task('build-shift-jis-stg', function() {

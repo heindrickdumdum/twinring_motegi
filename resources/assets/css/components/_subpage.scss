@@ -397,6 +397,22 @@
   @include max-screen($breakpoint-mobile) {
     margin-top: 33px;
   }
+
+  .banner-list {
+    position: relative;
+
+    .list-item {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      opacity: 0;
+      transition: opacity 1s ease-in;
+
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 //modifier walk precuation
@@ -604,7 +620,7 @@
 
     .subpage-title {
       @include max-screen($breakpoint-mobile) {
-        margin-bottom: 17px;
+        margin-bottom: 12px;
       }
     }
   }
@@ -630,13 +646,19 @@
 
     .subpage-title {
       @include max-screen($breakpoint-mobile) {
-        margin-bottom: 17px;
+        margin-bottom: 12px;
       }
     }
 
     .subpage-button {
       @include max-screen($breakpoint-mobile) {
         margin-top: 71px;
+      }
+
+      &-labo {
+        @include max-screen($breakpoint-mobile) {
+          width: 100%;
+        }
       }
     }
   }

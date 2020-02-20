@@ -2,7 +2,7 @@ var gulp = require( 'gulp' ),
     replace = require( 'gulp-replace' ),
     convertEncoding = require( 'gulp-convert-encoding' );
 
-gulp.task('build-shift-jis-test', function() {
+gulp.task('build-shift-jis', function() {
     return gulp.src([
       'public/**'
       ],{
@@ -15,7 +15,7 @@ gulp.task('build-shift-jis-test', function() {
       .pipe(gulp.dest('public/'));
 });
 
-gulp.task('build-shift-jis', function() {
+gulp.task('build-shift-jis-stg', function() {
     return gulp.src([
       'public/**'
       ],{

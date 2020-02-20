@@ -1,6 +1,7 @@
 <%
   var title = 'Twin Ring Motegi | 森の研究室'
   pageId = 'hellowoods-subpage';
+  subpageId = 'forest-labo';
 %>
 
 <%- include('/partials/head', { title }) -%>
@@ -346,4 +347,4 @@
   breadcrumbs : getData().data.breadcrumbsLabo
 }) -%>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', {pageId, subpageId}) -%>

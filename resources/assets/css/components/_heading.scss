@@ -155,7 +155,7 @@
 // modifier challenge
 .challenge {
   .heading-text {
-    max-width: 584px;
+    max-width: 560px;
     width: 100%;
 
     @include max-screen($breakpoint-mobile) {

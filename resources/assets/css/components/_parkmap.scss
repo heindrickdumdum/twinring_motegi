@@ -301,8 +301,32 @@
   }
 
   .map-img {
+    background-image: url(#{$image-path}/mobipark/map-bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+
     @include min-screen($breakpoint-mobile + 1) {
       margin-top: -52px;
+      padding-top: 90px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      height: 288px;
+      padding-top: 40px;
+      background-size: contain;
+    }
+
+    img {
+      max-width: 912px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 277px;
+      }
     }
   }
 }

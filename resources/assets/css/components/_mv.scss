@@ -532,6 +532,12 @@
   margin-bottom: 7px;
   overflow-y: hidden;
 
+  .mv-image {
+    @include max-screen($breakpoint-mobile) {
+      background-position-x: 84%;
+    }
+  }
+
   .mv-heading {
     @include min-screen($breakpoint-mobile + 1) {
       bottom: 89px;
@@ -906,3 +912,4 @@
     margin-bottom: 127px;
   }
 }
+//modifier MV forest walk end

@@ -248,7 +248,9 @@
 
   <!-- recommendation module -->
   <div class="craft-recommendation">
-  <%- include('/partials/recommendation') -%>
+  <%- include('/partials/recommendation', {
+  dataRecommend : getData().data.recommend
+}) -%>
   </div>
 
   <!-- pick up module -->

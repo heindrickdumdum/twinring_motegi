@@ -8,320 +8,226 @@ SPRITE_SVG = '/assets/svg/sprite.svg';
 
 <% pageId = 'mobipark-subpage-carbike'; %>
 
-<div class="subpage">
-  <div class="mv mv-subpage mv-car-and-bike">
-    <ul class="mv-list">
-      <li class="mv-item">
-        <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/car-and-bike/mv-img.jpg') %>);"></div>
-        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/car-and-bike/sp-mv.png') %>);"></div>
-      </li>
-    </ul>
+<main class="l-main">
+  <div class="subpage">
+    <div class="mv mv-subpage mv-car-and-bike">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/car-and-bike/mv-img.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/car-and-bike/mv-img-sp.png') %>);"></div>
+        </li>
+      </ul>
 
-    <div class="mv-container">
-      <h1 class="mv-heading">
-        <span class="mv-heading-texts">
-          <svg>
-            <title>Car and Bike</title>
-            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-text') %>"></use>
-          </svg>
-        </span>
-        <span class="mv-heading-subtexts u-show-pc">
-          <svg>
-            <title>Car and Bike</title>
-            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-subtext') %>"></use>
-          </svg>
-
-
-        </span>
-
-        <span class="mv-heading-subtexts u-show-sp">
-          <span class="u-title-hidden">Car bike</span>
-          <img src="<%- mix('/assets/images/car-and-bike/carbike-category-title-sp.png') %>" alt="carbike">
-          <!-- <svg>
-            <title>Car and Bike</title>
-            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-subtext-sp') %>"></use>
-          </svg> -->
-        </span>
-      </h1>
-
-      <div class="u-show-pc mv-today mv-logo">
-        <div class="mv-l-inner">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section class="subpage-section subpage-section-howto">
-    <div class="subpage-section-howto-inner">
-      <div class="heading-wrap heading-main heading-main-carbike">
-        <h2 class="heading">
-          <span class="u-title-hidden">Car and bike</span>
-          <span class="heading-texts">
-            <img src="<%= mix('/assets/images/car-and-bike/carbike-color-title.png') %>" alt="">
+      <div class="mv-container">
+        <h1 class="mv-heading">
+          <span class="mv-heading-texts">
+            <svg>
+              <title>Car and Bike</title>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-text') %>"></use>
+            </svg>
           </span>
-        </h2>
-      </div>
+          <span class="mv-heading-subtexts u-show-pc">
+            <svg>
+              <title>Car and Bike</title>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-subtext') %>"></use>
+            </svg>
 
-      <div class="how-to-content">
-        <div class="media u-clear">
-          <div class="media-left">
-            <div class="media-bg">
-              <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-1.png') %>);"></div>
-              </div>
-            </div>
-          </div>
-          <div class="media-right">
-            <h4 class="media-title">
-              <span>のりもののアトラクション</span><br>
-              <span>でも「森」をイメージ</span>
-            </h4>
-            <p class="media-desc">
-              森をイメージしているアトラクションは、SUMIKA・DOKIDOKI・ITADAKIだけではありません。車やバイクののりもののアトラクションでも森をイメージしています。森のやさしく、あたたかい雰囲気のながで楽しくのびのび遊べます。
-            </p>
 
-          </div>
-        </div>
-        <div class="media u-clear">
-          <div class="media-left">
-            <div class="media-bg">
-              <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-2.png') %>);"></div>
-              </div>
-            </div>
-          </div>
-          <div class="media-right">
-            <h4 class="media-title">
-              <span>3歳からひとりで運転できる</span><br>
-              <span>操る喜びを実感できるアトラクション</span>
-            </h4>
-            <p class="media-desc">
-              ツインリンクもてぎには、3歳のお子様でもひとりで運転できるようなアトラクションがたくさんあります。<br>お子様にとってはこれまで体験したことがない、はじめての「操る喜び」を実感できます。
-            </p>
+          </span>
 
-          </div>
-        </div>
-        <div class="media u-clear">
-          <div class="media-left">
-            <div class="media-bg">
-              <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-3.png') %>);"></div>
-              </div>
-            </div>
-          </div>
-          <div class="media-right">
-            <h4 class="media-title">
-              <span>何度でも挑戦したくなるしくみや仕掛け</span>
-            </h4>
-            <p class="media-desc">
-              いくつかのアトラクションには、点数や走行タイム、順位でランクがつく仕掛けを用意しています。ランクアップを目指して何度も遊びたくたくなるのが、ツインリンクもてぎのアトラクションの魅力です。<br />アトラクションが終わった後には、自分の写真入りのライセンスカードをつくることができます。
-            </p>
+          <span class="mv-heading-subtexts u-show-sp">
+            <span class="u-title-hidden">Car bike</span>
+            <img src="<%- mix('/assets/images/car-and-bike/carbike-category-title-sp.png') %>" alt="carbike">
+            <!-- <svg>
+              <title>Car and Bike</title>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-subtext-sp') %>"></use>
+            </svg> -->
+          </span>
+        </h1>
+
+        <div class="u-show-pc mv-today mv-logo">
+          <div class="mv-l-inner">
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="subpage-section subpage-section-carbike">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-gradient-tobottom heading-attraction u-show-pc',
-        text: ' Attraction’s Category',
-        alt : '',
-        subtextvg: 'car-and-bike-attraction-categories',
-        altSubtext: '',
-      }) %>
+    <section class="subpage-section subpage-section-howto">
+      <div class="subpage-section-howto-inner">
+        <div class="heading-wrap heading-main heading-main-carbike">
+          <h2 class="heading">
+            <span class="u-title-hidden">Car and bike</span>
+            <span class="heading-texts">
+              <img src="<%= mix('/assets/images/car-and-bike/carbike-color-title.png') %>" alt="">
+            </span>
+          </h2>
+        </div>
 
-      <%- include('/partials/heading', {
-        modifier: 'heading-gradient-tobottom heading-attraction u-show-sp',
-        text: ' Attraction’s Category',
-        alt : '',
-        subtextvg: 'carbike-category-title-sp',
-        altSubtext: '',
-      }) %>
-    </div>
+        <div class="how-to-content">
+          <div class="media u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-1.jpg') %>);"></div>
+                </div>
+              </div>
+            </div>
+            <div class="media-right">
+              <h4 class="media-title">
+                <span>３歳からひとりで運転にチャレンジ</span>
+              </h4>
+              <p class="media-desc">
+                モビパークには３歳のお子さまがひとりで自由に運転できるクルマとバイクのアトラクションがあります。はじめての運転ならではの「できた」の瞬間を親子で体感することができます。
+              </p>
 
-    <div class="carbike-menu">
-      <div class="swiper-container slider-carbike-container js-slider-carbike">
-
-        <div class="swiper-wrapper slider-carbike">
-          <div class="swiper-slide slider-carbike-item">
-            <div class="carbike-menu-item">
-              <a class="carbike-menu-link js-scroll" href="#car">
-                <img src="<%= mix('/assets/images/car-and-bike/category-car.png') %>" alt="">
-              </a>
             </div>
           </div>
-          <div class="swiper-slide slider-carbike-item">
-            <div class="carbike-menu-item">
-              <a class="carbike-menu-link js-scroll" href="#bike">
-                <img src="<%= mix('/assets/images/car-and-bike/category-bike.png') %>" alt="">
-              </a>
+          <div class="media u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-2.jpg') %>);"></div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="swiper-slide slider-carbike-item">
-            <div class="carbike-menu-item">
-              <a class="carbike-menu-link js-scroll" href="#workshop">
-                <img src="<%= mix('/assets/images/car-and-bike/category-workshop.png') %>" alt="">
-              </a>
-            </div>
-          </div>
+            <div class="media-right">
+              <h4 class="media-title">
+                <span>ランクアップを目指して何度もチャレンジした</span>
+              </h4>
+              <p class="media-desc">
+                ほとんどのアトラクションには、点数や走行タイム、順位でランクがつくようになっています。ランクごとに写真入りのライセンスカードをつくることができるため、ランクアップを目指して何度もチャレンジしたくなります。
+              </p>
 
+            </div>
+          </div>
+          <div class="media u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/car-and-bike/attraction-3.jpg') %>);"></div>
+                </div>
+              </div>
+            </div>
+            <div class="media-right">
+              <h4 class="media-title">
+                <span>クルマとバイクも「森」をイメージ</span>
+              </h4>
+              <p class="media-desc">
+                クルマとバイクのアトラクションも森の生きものや緑のやさしさをコンセプトにデザインしています。森ならではの自然の雰囲気を感じながら親子でのびのびと遊ぶことができます。
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="subpage-section subpage-section-carbike" id="car">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-carbike heading-carbike-car',
-        text: '',
-        alt : '',
-        subtextvg: 'car-and-bike-car-title',
-        altSubtext: '',
-      }) %>
-    </div>
+    <section class="subpage-section subpage-section-carbike">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-attraction u-show-pc',
+          text: ' Attraction’s Category',
+          alt : '',
+          subtextvg: 'car-and-bike-attraction-categories',
+          altSubtext: '',
+        }) %>
 
-    <ul class="carbike-list">
-      <% getData().data.carList.forEach( item => { %>
-        <li class="carbike-item">
-          <article class="carbike-article">
-            <div class="carbike-article-thumb">
-              <div class="carbike-article-thumb-img"
-                  style="background-image: url(<%- item.imgPath %>)">
-                </div>
-              <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %>">
-                <%- item.category %>
-              </span>
-            </div>
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-attraction u-show-sp',
+          text: ' Attraction’s Category',
+          alt : '',
+          subtextvg: 'carbike-category-title-sp',
+          altSubtext: '',
+        }) %>
+      </div>
 
-            <div class="carbike-article-content">
-              <h3 class="carbike-article-title"><%- item.title %></h3>
+      <div class="carbike-menu">
+        <div class="swiper-container slider-carbike-container js-slider-carbike">
 
-              <ul class="carbike-article-list">
-                <% item.dataList.forEach( dataitem => { %>
-                  <li class="carbike-article-list-item">
-                    <span class="carbike-article-list-label"><%= dataitem.label %></span>
-                    <p class="carbike-article-list-desc"><%- dataitem.content %></p>
-                  </li>
-                <% }) %>
-              </ul>
-
-              <div class="carbike-article-more">
-                <a class="carbike-article-more-link" href="#">
-                  <span>詳細はこちら</span>
+          <div class="swiper-wrapper slider-carbike">
+            <div class="swiper-slide slider-carbike-item">
+              <div class="carbike-menu-item">
+                <a class="carbike-menu-link js-scroll" href="#car">
+                  <img src="<%= mix('/assets/images/car-and-bike/category-car.png') %>" alt="">
                 </a>
               </div>
             </div>
-          </article>
-        </li>
-      <% }) %>
-    </ul>
-  </section>
-
-  <section class="subpage-section subpage-section-carbike" id="bike">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-carbike heading-carbike-bike',
-        text: '',
-        alt : '',
-        subtextvg: 'car-and-bike-bike-title',
-        altSubtext: '',
-      }) %>
-    </div>
-
-    <ul class="carbike-list">
-      <% getData().data.bikeList.forEach( item => { %>
-        <li class="carbike-item">
-          <article class="carbike-article">
-            <div class="carbike-article-thumb">
-              <div class="carbike-article-thumb-img"
-                  style="background-image: url(<%- item.imgPath %>)">
-                </div>
-              <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %>">
-                <%- item.category %>
-              </span>
-            </div>
-
-            <div class="carbike-article-content">
-              <h3 class="carbike-article-title"><%- item.title %></h3>
-
-              <ul class="carbike-article-list">
-                <% item.dataList.forEach( dataitem => { %>
-                  <li class="carbike-article-list-item">
-                    <span class="carbike-article-list-label"><%= dataitem.label %></span>
-                    <p class="carbike-article-list-desc"><%- dataitem.content %></p>
-                  </li>
-                <% }) %>
-              </ul>
-
-              <div class="carbike-article-more">
-                <a class="carbike-article-more-link" href="#">
-                  <span>詳細はこちら</span>
+            <div class="swiper-slide slider-carbike-item">
+              <div class="carbike-menu-item">
+                <a class="carbike-menu-link js-scroll" href="#bike">
+                  <img src="<%= mix('/assets/images/car-and-bike/category-bike.png') %>" alt="">
                 </a>
               </div>
             </div>
-          </article>
-        </li>
-      <% }) %>
-    </ul>
-  </section>
-
-  <section class="subpage-section subpage-section-carbike" id="workshop">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-carbike heading-carbike-workshop',
-        text: '',
-        alt : '',
-        subtextvg: 'car-and-bike-carworkshop-title',
-        altSubtext: '',
-      }) %>
-    </div>
-
-    <ul class="carbike-list">
-      <% getData().data.workshopList.forEach( item => { %>
-        <li class="carbike-item">
-          <article class="carbike-article">
-            <div class="carbike-article-thumb">
-              <div class="carbike-article-thumb-img"
-                  style="background-image: url(<%- item.imgPath %>)">
-                </div>
-              <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %>">
-                <%- item.category %>
-              </span>
-            </div>
-
-            <div class="carbike-article-content">
-              <h3 class="carbike-article-title"><%- item.title %></h3>
-
-              <ul class="carbike-article-list">
-                <% item.dataList.forEach( dataitem => { %>
-                  <li class="carbike-article-list-item">
-                    <span class="carbike-article-list-label"><%= dataitem.label %></span>
-                    <p class="carbike-article-list-desc"><%- dataitem.content %></p>
-                  </li>
-                <% }) %>
-              </ul>
-
-              <div class="carbike-article-more">
-                <a class="carbike-article-more-link" href="#">
-                  <span>詳細はこちら</span>
+            <div class="swiper-slide slider-carbike-item">
+              <div class="carbike-menu-item">
+                <a class="carbike-menu-link js-scroll" href="#workshop">
+                  <img src="<%= mix('/assets/images/car-and-bike/category-workshop.png') %>" alt="">
                 </a>
               </div>
             </div>
-          </article>
-        </li>
-      <% }) %>
-    </ul>
-  </section>
 
-  <%- include('/partials/recommendation') -%>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <%- include('/partials/pickup') -%>
+    <section class="subpage-section subpage-section-carbike" id="car">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-carbike heading-carbike-car',
+          text: '',
+          alt : '',
+          subtextvg: 'car-and-bike-car-title',
+          altSubtext: '',
+        }) %>
+      </div>
 
-</div>
+      <%- include('/partials/carbike-list', {
+        dataCarbikeList : getData().data.carList
+      }) -%>
+    </section>
 
+    <section class="subpage-section subpage-section-carbike" id="bike">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-carbike heading-carbike-bike',
+          text: '',
+          alt : '',
+          subtextvg: 'car-and-bike-bike-title',
+          altSubtext: '',
+        }) %>
+      </div>
+
+      <%- include('/partials/carbike-list', {
+        dataCarbikeList : getData().data.bikeList
+      }) -%>
+    </section>
+
+    <section class="subpage-section subpage-section-carbike" id="workshop">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-carbike heading-carbike-workshop',
+          text: '',
+          alt : '',
+          subtextvg: 'car-and-bike-carworkshop-title',
+          altSubtext: '',
+        }) %>
+      </div>
+
+      <%- include('/partials/carbike-list', {
+        dataCarbikeList : getData().data.workshopList
+      }) -%>
+
+    </section>
+
+    <%- include('/partials/recommendation', {
+      dataRecommend: getData().data.recommend
+    }) -%>
+
+    <%- include('/partials/pickup') -%>
+
+  </div>
+</main>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsCarbike

@@ -1,3 +1,4 @@
+
 <section class="recommendation">
   <div class="l-section-title">
     <%- include('/partials/heading', {
@@ -7,9 +8,11 @@
       subtextvg: 'recommendation-title'
     }) %>
   </div>
+
+  <%  if(dataRecommend) { %>
     <div class="swiper-container slider js-slider-bottom">
       <ul class="swiper-wrapper slider-wrapper">
-        <% getData().data.recommend.forEach(item => { %>
+        <% dataRecommend.forEach(item => { %>
         <li class="swiper-slide slider-item">
           <%- include('/partials/article-no-design', {
             image: item.image,
@@ -21,4 +24,5 @@
         <% }) %>
       </ul>
     </div>
+    <% } %>
 </section>

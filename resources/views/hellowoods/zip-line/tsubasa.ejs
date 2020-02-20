@@ -351,7 +351,9 @@
     </section>
 
     <!-- recommendation module -->
-    <%- include('/partials/recommendation') -%>
+    <%- include('/partials/recommendation', {
+  dataRecommend : getData().data.recommend
+}) -%>
 
     <!-- pick up module -->
     <%- include('/partials/pickup') -%>

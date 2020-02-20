@@ -1,4 +1,5 @@
 .heading-wrap {
+
   &.heading-wrap-information {
     .heading-text {
       letter-spacing: 0.01em;
@@ -122,22 +123,6 @@
     }
   }
 
-  &.heading-sumika-faq {
-    margin-bottom: 40px;
-    text-align: center;
-
-    .heading-subtext {
-      width: 284px;
-      height: 34px;
-      margin: 0 auto;
-    }
-
-    .heading-text {
-      letter-spacing: 0.1em;
-    }
-  }
-// sumika/itadaki/dokidoki
-
   &.heading-enjoy {
     margin-bottom: 40px;
     svg {
@@ -168,7 +153,7 @@
         width: 378px;
         height: 33px;
       }
-      
+
       @include max-screen($breakpoint-mobile) {
         height: 25px;
       }
@@ -223,14 +208,6 @@
     }
   }
 
-  &.heading-attraction {
-    .heading-subtext {
-      margin-top: 10px;
-      max-width: 489px;
-      width: 100%;
-    }
-  }
-
   &.heading-pickup {
     margin-bottom: 37px;
     .heading-text {
@@ -248,6 +225,14 @@
       @include max-screen($breakpoint-mobile) {
         width: auto;
       }
+    }
+  }
+
+  &.heading-attraction {
+    .heading-subtext {
+      margin-top: 10px;
+      max-width: 489px;
+      width: 100%;
     }
   }
 
@@ -306,9 +291,43 @@
         margin-top: 10px;
       }
 
-      @include min-screen($breakpoint-mobile) {
+      @include min-screen($breakpoint-mobile + 1) {
         height: 37px;
         width: 731px;
+        transform: translate(-10px, 0px);
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(7px, -1px);
+      }
+    }
+
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 54px;
+      }
+    }
+  }
+
+  &.heading-howto-musasabi {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 54px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(10px, 0px);
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(9px, 1px);
+        height: 33px;
       }
     }
   }
@@ -340,12 +359,44 @@
         width: 413px;
         height: 36px;
       }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 316px;
+      }
     }
 
     .heading-text {
       @include min-screen($breakpoint-mobile + 1) {
         letter-spacing: -0.04em;
       }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &.heading-sumika-faq {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 24px;
+    }
+
+    .heading-subtext {
+      svg {
+        @include max-screen($breakpoint-mobile) {
+          position: relative;
+          top: -15px;
+          width: 200px;
+          height: 35px;
+        }
+      }
+    }
+
+    .heading-text {
+      letter-spacing: 0.1em;
     }
   }
 
@@ -362,7 +413,7 @@
 
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
-        margin-top: 10px;
+        margin-top: 2px;
         height: 34px;
       }
 
@@ -370,18 +421,54 @@
         @include min-screen($breakpoint-mobile + 1) {
           width: 377px;
           height: 34px;
+          margin-left: -17px;
         }
       }
 
       @include max-screen($breakpoint-mobile) {
-        margin: 13px auto 0;
+        margin: 7px auto 0;
         height: 26px;
       }
     }
 
     .heading {
       @include max-screen($breakpoint-mobile) {
-        margin: 24px 0 37px;
+        margin: 24px 0 41px;
+      }
+    }
+  }
+
+  &.heading-course-challenge {
+    margin-bottom: 35px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 58px;
+    }
+
+    .heading-subtext {
+      max-width: 139px;
+      margin: 0 auto;
+      height: 29px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 201px;
+        height: 36px;
+      }
+    }
+  }
+
+  &.heading-kart-challenge {
+    margin-bottom: 50px;
+    .heading-subtext {
+      max-width: 959px;
+      margin: 0 auto;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        width: 100%;
+        max-width: 335px;
       }
     }
   }

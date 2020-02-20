@@ -12,14 +12,14 @@
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dream/mv-img.jpg') %>);"></div>
+        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/dream/mv-img.jpg') %>);"></div>
+
+        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/dream/mv-img-sp.jpg') %>);"></div>
       </li>
     </ul>
 
-    <h1 class="mv-heading mv-heading-subpage">
-      <span class="mv-heading-text">
-        ドリームカート
-      </span>
+    <h1 class="u-title-hidden">
+      ドリームカート
     </h1>
   </div>
 
@@ -187,7 +187,7 @@
 
   <!-- BOTTOM -->
 
-  <div class="call-to-action">
+  <!-- <div class="call-to-action">
     <div class="l-container">
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
@@ -234,15 +234,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="banner-cta">
-    <div class="l-container">
-      <div class="banner-cta-bottom-inner">
-        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
-      </div>
-    </div>
-  </div>
+  <%- include('/partials/banner-cta', {
+    link: 'https://www.twinring.jp/mobipark_m/card/',
+    imgPath: mix('/assets/images/subpage-banner-bottom.png')
+  }) -%>
 
   <%- include('/partials/recommendation') -%>
 
@@ -253,6 +250,6 @@
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsMotoracer
+  breadcrumbs : getData().data.breadcrumbsDream
 }) -%>
 <%- include('/partials/footer', {pageId}) -%>

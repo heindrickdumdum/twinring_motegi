@@ -13,15 +13,15 @@
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/challenge/mv-img.jpg') %>);"></div>
+        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/challenge/mv-img.jpg') %>);"></div>
+
+        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/challenge/mv-img-sp.jpg') %>);"></div>
       </li>
     </ul>
 
-    <h2 class="mv-heading mv-heading-subpage">
-      <span class="mv-heading-text">
-        チャレンジカート
-      </span>
-    </h2>
+    <h1 class="u-title-hidden">
+      チャレンジカート
+    </h1>
   </div>
 
   <div class="subpage-inner">
@@ -39,7 +39,7 @@
     <!-- YOUTUBE -->
     <div class="subpage-banner">
       <div class="subpage-banner-inner">
-        <img src="<%= mix('/assets/images/challenge/banner.jpg') %>" alt="">
+        <img src="<%= mix('/assets/images/challenge/subpage-banner.jpg') %>" alt="">
       </div>
     </div>
 
@@ -60,7 +60,7 @@
           <th class="table-head">所要時間</th>
           <td class="table-col">
             説明10分、走行時間8分間の20分程度。<br />
-            通常、12：00〜13：00に営業（〜12：00予約受付）しています。※1
+            通常、12：00～13：00に営業（～12：00予約受付）しています。※1
           </td>
         </tr>
 
@@ -322,7 +322,7 @@
             </li>
             <li class="kart-item">
               <span class="kart-sched">走行時間</span>
-              <p>14:00 〜 15:00</p>
+              <p>14:00 ～ 15:00</p>
             </li>
             <li class="kart-item">
               <span class="kart-sched">参加資格</span>
@@ -390,13 +390,10 @@
     </div>
   </div>
 
-  <div class="banner-cta">
-    <div class="l-container">
-      <div class="banner-cta-bottom-inner">
-        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
-      </div>
-    </div>
-  </div>
+  <%- include('/partials/banner-cta', {
+    link: 'https://www.twinring.jp/mobipark_m/card/',
+    imgPath: mix('/assets/images/subpage-banner-bottom.png')
+  }) -%>
 
   <%- include('/partials/recommendation') -%>
 

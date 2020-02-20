@@ -9,6 +9,7 @@
     margin-bottom: 120px;
   }
 
+
   > * {
     position: relative;
   }
@@ -49,6 +50,22 @@
       content: normal;
 
       @include max-screen($breakpoint-mobile) {
+        content: normal;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 17px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &.subpage-musasabi {
+    &::before {
+      @include min-screen($breakpoint-mobile + 1) {
         content: normal;
       }
     }
@@ -102,10 +119,49 @@
   }
 
   &.subpage-inner-musasabi {
+    position: relative;
+    
     > p {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 63px;
+      }
       @include max-screen($breakpoint-mobile) {
         margin-bottom: 24px;
         letter-spacing: 0.19em;
+      }
+    }
+  }
+}
+
+.subpage-inner-wrap {
+  .subpage-craft & {
+    &::before {
+      @include min-screen($breakpoint-mobile + 1) {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -222px;
+        right: 0;
+        background-image: url("../images/craft/craft-subpage-inner-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 783px;
+      }
+    }
+  }
+
+  .subpage-musasabi & {
+    &::before {
+      @include min-screen($breakpoint-mobile + 1) {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../images/musasabi/musasabi-subpage-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
       }
     }
   }
@@ -135,7 +191,9 @@
 }
 
 .subpage-title-musasabi {
-  margin-bottom: 14px;
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 6px;
+  }
 }
 
 .subpage-youtube {
@@ -188,6 +246,10 @@
       @include max-screen($breakpoint-mobile) {
         height: 212px;
       }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 30px;
     }
   }
 
@@ -254,8 +316,44 @@
   }
 }
 
+.subpage-section-comparison-musasabi {
+  &::before {
+    @include min-screen($breakpoint-mobile + 1) {
+      background-image: url(../images/musasabi/musasabi-comparison-bg.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: -4px;
+      top: 17px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+}
+
+.subpage-section-howto-musasabi {
+  &::before {
+    @include min-screen($breakpoint-mobile + 1) {
+      background-image: url(../images/musasabi/musasabi-howto-bg.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: -142px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 80px;
+  }
+}
+
 .subpage-section-howto-inner {
-  max-width: 1060px;
+  // max-width: 1060px;
   margin: 0 auto;
   padding: 0 20px;
 
@@ -343,6 +441,26 @@
 
   @include max-screen($breakpoint-mobile) {
     margin-bottom: 82px;
+  }
+
+  &.subpage-section-video-musasabi {
+    &::before {
+      @include min-screen($breakpoint-mobile + 1) {
+        background-image: url(../images/musasabi/musasabi-videos-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: 0;
+        top: -102px;
+        right: 0;
+        bottom: 0;
+        content: "";
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 153px;
+    }
   }
 }
 

@@ -45,16 +45,19 @@
   }
 
   .mv-subpage & {
-    max-height: 607px;
+    max-height: 100%;
     height: 0;
+    // max-height: 450px;
+    // height: 0;
     overflow-y: hidden;
 
     @include min-screen($breakpoint-mobile + 1) {
-      height: 607px;
+      // height: 450px;
+      padding-bottom: 29%;
     }
 
     @include max-screen($breakpoint-mobile) {
-      padding-bottom: 76%;
+      padding-bottom: 65%;
     }
 
     &::after {
@@ -65,6 +68,7 @@
   .mv-subpage-craft & {
     @include min-screen($breakpoint-mobile + 1) {
       height: 420px;
+      padding-bottom: 0;
     }
 
     @include max-screen($breakpoint-mobile) {
@@ -689,24 +693,6 @@
   }
 }
 
-.mv-musasabi {
-  .mv-heading-texts{
-    width: 100%;
-    text-align: left;
-
-    @include max-screen($breakpoint-mobile) {
-      font-size: 23px;
-      font-weight: normal;
-      transform: translateY(-50%);
-      top: 50%;
-    }
-  }
-
-  .mv-heading-subtexts {
-    font-weight: normal;
-  }
-}
-
 .mv-inner {
 
     @include max-screen($breakpoint-mobile) {
@@ -817,11 +803,11 @@
 
 .mv-subpage {
   margin-bottom: 7px;
-  max-height: 607px;
+  // max-height: 450px;
   height: auto;
 
   @include min-screen($breakpoint-mobile + 1) {
-    height: 607px;
+    // height: 450px;
     margin-bottom: 50px;
   }
 
@@ -866,6 +852,52 @@
     }
   }
 
+  &.mv-musasabi {
+    .mv-heading-texts{
+      width: 100%;
+      text-align: left;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 23px;
+        font-weight: normal;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+    }
+
+    .mv-heading-subtexts {
+      font-weight: normal;
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: 0.17em;
+        margin-top: 18px;
+      }
+    }
+
+    .mv-image {
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 620px;
+        max-height: none;
+      }
+    }
+
+    .mv-heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        bottom: 56px;
+        left: 31px;
+      }
+    }
+
+    &::after {
+      @include min-screen($breakpoint-mobile + 1) {
+        bottom: -89px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      height: auto;
+      margin-bottom: 72px;
+    }
+  }
 }
 
 .mv-image-subpage {

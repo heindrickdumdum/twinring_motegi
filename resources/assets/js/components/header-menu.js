@@ -38,14 +38,9 @@ export default function headerMenu() {
 
       el.addEventListener( 'mouseenter', e => {
 
-        console.log(e.target, e.relatedTarget);
-
         if(elAttrib != '#') {
 
           let target = document.querySelector('.js-header-sub[data-content="'+elAttrib+'"]');
-
-
-          console.log(target);
 
           setTimeout(() => {
             target.classList.add(CONST.VISIBLE_CLASS)

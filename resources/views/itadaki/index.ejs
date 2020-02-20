@@ -97,26 +97,26 @@ accordionData = [
   pickup = [
     {
       'image': mix('/assets/images/dokidoki/feature/img1.png'),
-      'heading': `2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
-      'date': '2019.11.02 〜 2019.11.03',
+      'heading': `2019 FIM MotoGP&trade; 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
+      'date': '2019.11.02 ～ 2019.11.03',
       'link': '#',
       },
     {
       'image': mix('/assets/images/dokidoki/feature/img2.png'),
-      'heading': '2019 FIM MotoGP™ 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
-      'date': '2019.11.02 〜 2019.11.03',
+      'heading': '2019 FIM MotoGP&trade; 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
+      'date': '2019.11.02 ～ 2019.11.03',
       'link': '#',
     },
     {
       'image': mix('/assets/images/dokidoki/feature/img3.png'),
       'heading': 'モトレーサー タイムアタック選手権2019予選',
-      'date': '2019.11.02 〜 2019.11.03',
+      'date': '2019.11.02 ～ 2019.11.03',
       'link': '#',
     },
     {
       'image': mix('/assets/images/dokidoki/feature/img4.png'),
       'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
-      'date': '2019.11.02 〜 2019.11.03',
+      'date': '2019.11.02 ～ 2019.11.03',
       'link': '#',
     }
   ]
@@ -127,7 +127,7 @@ accordionData = [
   <div class="mv mv-inner itadaki-mv">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-background-grey.jpg')%>);"></div>
+        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-itadaki.jpg')%>);"></div>
       </li>
     </ul>
 
@@ -169,7 +169,8 @@ accordionData = [
       <div class="l-youtube">
         <section class="youtube">
           <div class="youtube-iframe-container">
-            <iframe width="100%" height="587" src="https://www.youtube.com/embed/6GUbJzXAcmA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="587" src="https://www.youtube.com/embed/6GUbJzXAcmA" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </section>
       </div>
@@ -243,9 +244,9 @@ accordionData = [
           <tr class="table-row">
             <th class="table-head">日程</th>
             <td class="table-col">
-              9月		15日（日）、16日（月）、29日（日）<br>
-              10月	15日（日）、16日（月）、29日（日）<br>
-              11月	15日（日）、16日（月）、29日（日）
+              9月 15日（日）、16日（月）、29日（日）<br>
+              10月 15日（日）、16日（月）、29日（日）<br>
+              11月 15日（日）、16日（月）、29日（日）
             </td>
           </tr>
 
@@ -281,24 +282,24 @@ accordionData = [
   <section class="how-to-enjoy l-section">
     <div class="l-container">
       <div class="l-section-title">
-       <div class="u-show-pc">
-        <%- include('/partials/heading', {
+        <div class="u-show-pc">
+          <%- include('/partials/heading', {
           modifier: 'heading-enjoy',
           text: 'How to Enjoy',
           alt: 'How to Enjoy',
           subtextvg: 'itadaki-cta-title',
           altSubtext: '',
         }) %>
-       </div>
-       <div class="u-show-sp">
-        <%- include('/partials/heading', {
+        </div>
+        <div class="u-show-sp">
+          <%- include('/partials/heading', {
           modifier: 'heading-enjoy',
           text: 'How to Enjoy',
           alt: 'How to Enjoy',
           subtextvg: 'itadaki-enjoy-point-title-sp',
           altSubtext: '',
         }) %>
-       </div>
+        </div>
       </div>
 
       <div class="how-to-content itadaki-media">
@@ -306,7 +307,7 @@ accordionData = [
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+                <div style="background-image: url(<%= mix('/assets/images/itadaki/media/media-1.jpg') %>);"></div>
               </div>
             </div>
           </div>
@@ -334,7 +335,7 @@ accordionData = [
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+                <div style="background-image: url(<%= mix('/assets/images/itadaki/media/media-2.jpg') %>);"></div>
               </div>
             </div>
           </div>
@@ -363,7 +364,7 @@ accordionData = [
           <div class="media-left">
             <div class="media-bg">
               <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
+                <div style="background-image: url(<%= mix('/assets/images/itadaki/media/media-3.jpg') %>);"></div>
               </div>
             </div>
           </div>
@@ -410,7 +411,7 @@ accordionData = [
     </div>
     <div class="swiper-container common-slider itadaki-slider slider js-slider">
       <ul class="swiper-wrapper top-slide">
-        <% forest.forEach(item => { %>
+        <% forestItadaki.forEach(item => { %>
         <li class="swiper-slide slider-item">
           <div class="top-slider-image">
             <img src="<%- item.src -%>" alt="<%- item.alt -%>">
@@ -419,35 +420,34 @@ accordionData = [
             <%- item.desc -%>
           </span>
         </li>
-        <% } ) %>
+        <% }) %>
       </ul>
       <div class="swiper-pagination"></div>
     </div>
   </section>
 
   <section class="youtube-video l-section">
-      <div class="l-container">
-        <div class="l-section-title">
-         <div class="u-show-pc">
+    <div class="l-container">
+      <div class="l-section-title">
+        <div class="u-show-pc">
           <%- include('/partials/heading', {
             modifier: 'heading-forest',
-            text: 'Ways to feel the Forest',
+            text: 'Sumika Videos',
             alt: 'Ways to feel the Forest',
             subtextvg: 'itadaki-forest-title',
             altSubtext: '',
           }) %>
-         </div>
-         <div class="u-show-sp">
+        </div>
+        <div class="u-show-sp">
           <%- include('/partials/heading', {
             modifier: 'heading-forest',
-            text: 'Ways to feel the Forest',
+            text: 'Sumika Videos',
             alt: 'Ways to feel the Forest',
             subtextvg: 'itadaki-videos-title-sp',
             altSubtext: '',
           }) %>
-         </div>
         </div>
-        <div class="youtube-video-content">
+        <div class="youtube-video-content youtube-video-content-itadaki">
           <ul class="youtube-video-list row">
             <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
               <div class="youtube-video-wrapper">
@@ -456,27 +456,27 @@ accordionData = [
                 </div>
               </div>
               <p class="youtube-video-description">仲間とチャレンジコースに挑戦！</p>
-            </li>
-            <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
-              <div class="youtube-video-wrapper">
-                <div class="youtube-video-inner">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/D8-Z6rgRe1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </li>
+              <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
+                <div class="youtube-video-wrapper">
+                  <div class="youtube-video-inner">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D8-Z6rgRe1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
                 </div>
-              </div>
-              <p class="youtube-video-description">DOKIDOKI タイムアタック映像！</p>
-            </li>
+                <p class="youtube-video-description">DOKIDOKI タイムアタック映像！</p>
+              </li>
           </ul>
-        </div>
       </div>
+    </div>
   </section>
 
   <section class="faq l-section">
     <%- include('/partials/accordion', {
-      dataAccordion: getData().data.accordionData
+      dataAccordion: getData().data.accordionItadaki
     }) %>
   </section>
 
-  <div class="call-to-action">
+  <!-- <div class="call-to-action">
     <div class="l-container">
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
@@ -513,17 +513,14 @@ accordionData = [
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="banner-cta">
-    <div class="l-container">
-      <div class="banner-cta-inner">
-        <a href="#">
-          <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
-        </a>
-      </div>
-    </div>
-  </div>
+
+  <%- include('/partials/banner-cta', {
+    link: 'https://www.twinring.jp/mobipark_m/card/',
+    imgPath: mix('/assets/images/subpage-banner-bottom.png')
+  }) -%>
+
 
   <section class="recommendation">
     <div class="l-section-title">
@@ -534,20 +531,21 @@ accordionData = [
         subtextvg: 'recommendation-title'
       }) %>
     </div>
-      <div class="swiper-container slider js-slider-bottom">
-        <ul class="swiper-wrapper slider-wrapper">
-          <% getData().data.recommend.forEach(item => { %>
-          <li class="swiper-slide slider-item">
-            <%- include('/partials/article-no-design', {
+
+    <div class="swiper-container slider js-slider-bottom">
+      <ul class="swiper-wrapper slider-wrapper">
+        <% getData().data.recommendDokidoki.forEach(item => { %>
+        <li class="swiper-slide slider-item">
+          <%- include('/partials/article-no-design', {
               image: item.image,
               heading: item.heading,
               buttonLink: item.buttonLink,
               buttonText: 'モビパーク'
             }) %>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
   </section>
 
   <section class="pick-up">

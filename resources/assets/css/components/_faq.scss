@@ -2,7 +2,7 @@
   margin-top: 80px;
 
   @include max-screen($breakpoint-mobile) {
-    margin-top: 63px;
+    margin-top: 28px;
   }
 }
 
@@ -23,4 +23,26 @@
 
 .faq-subpage {
   padding-bottom: 40px;
+}
+
+.faq-musasabi {
+  &::before {
+    @include min-screen($breakpoint-mobile + 1) {
+      background-image: url(../images/musasabi/musasabi-faq-bg.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: -150px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+
+  .faq-inner {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding: 0 167px;
+    }
+  }
 }

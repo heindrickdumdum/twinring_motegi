@@ -17,6 +17,18 @@
     }
   }
 
+  &.sumika-hashtag {
+    .heading-texts {
+      text-align: center;
+      img {
+        @include max-screen($breakpoint-mobile) {
+          width: 200px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
 }
 
 .heading-text {

@@ -1,6 +1,6 @@
 .media {
   margin: 0 auto;
-  max-width: 1015px;
+  max-width: 1060px;
   display: flex;
   width: 100%;
 
@@ -10,7 +10,7 @@
 
   @include max-screen($breakpoint-mobile) {
     flex-direction: column;
-    padding: 0 35px;
+    padding: 0 20px;
   }
 
   &:not(:last-child) {
@@ -610,7 +610,9 @@
       &:after {
         @include max-screen($breakpoint-mobile) {
           top: 5px;
-          height: 103%;
+          height: 102%;
+          background-position: center bottom;
+          width: 103%;
         }
       }
     }

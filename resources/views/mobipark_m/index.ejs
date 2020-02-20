@@ -37,8 +37,8 @@
   </div>
 
   <section class="info-container">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
           modifier: 'heading-info',
           text: 'Information',
           alt: 'information',
@@ -46,17 +46,17 @@
           subtextvg: 'mobipark-information-title',
           altSubtextvg: 'Information'
         }) %>
-      </div>
+    </div>
 
-      <div class="l-container">
-        <ul class="info-list">
-          <% mobiparkData.forEach(item => { %>
-          <li class="info-item">
-            <span><%= item.desc %></span>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
+    <div class="l-container">
+      <ul class="info-list">
+        <% mobiparkData.forEach(item => { %>
+        <li class="info-item">
+          <span><%= item.desc %></span>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
   </section>
 
   <div class="challenge">
@@ -71,7 +71,7 @@
               <img src="<%- mix('/assets/images/mobipark/challenge-img2.png') -%>" alt="challenge">
             </div>
           </div>
-          
+
           <div class="challenge-img u-show-sp">
             <img src="<%- mix('/assets/images/mobipark/circle-img-sp.png') -%>" alt="Challenge">
           </div>
@@ -120,11 +120,13 @@
     </div>
 
     <ul class="adventure-container">
-      
+
       <!-- SUMIKA -->
       <li class="adventure-list">
-        <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-sumika.jpg') %>);">
-          <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/sumika-logo.png') %>" alt="adventure sumika">
+        <div class="adventure-bg"
+          style="background-image: url(<%= mix('/assets/images/mobipark/adventure-sumika.jpg') %>);">
+          <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/sumika-logo.png') %>"
+            alt="adventure sumika">
         </div>
 
         <div class="l-adventure-sp-container">
@@ -155,10 +157,12 @@
 
       <!-- DOKIDOKI -->
       <li class="adventure-list">
-        <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-dokidoki.jpg') %>);">
-          <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/dokidoki-logo.png') %>" alt="adventure sumika">
+        <div class="adventure-bg"
+          style="background-image: url(<%= mix('/assets/images/mobipark/adventure-dokidoki.jpg') %>);">
+          <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/dokidoki-logo.png') %>"
+            alt="adventure sumika">
         </div>
-        
+
         <div class="l-adventure-sp-container">
           <div class="l-adventure l-adventure-dokidoki">
             <div class="l-section-title l-section-title-adventure">
@@ -181,14 +185,16 @@
                 link: '#'
               }) %>
             </div>
-          </div>              
+          </div>
         </div>
       </li>
 
       <!-- ITADAKI -->
       <li class="adventure-list adventure-list-itadaki">
-        <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/mobipark/adventure-itadaki.jpg') %>);">
-          <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/itadaki-logo.png') %>" alt="adventure sumika">
+        <div class="adventure-bg"
+          style="background-image: url(<%= mix('/assets/images/mobipark/adventure-itadaki.jpg') %>);">
+          <img class="adventure-image-logo" src="<%= mix('/assets/images/mobipark/itadaki-logo.png') %>"
+            alt="adventure sumika">
         </div>
 
         <div class="l-adventure-sp-container">
@@ -292,10 +298,12 @@
       </div>
     </div>
 
-    <div class="adventure-bg adventure-bg-racing-kart u-show-pc" style="background-image: url(<%= mix('/assets/images/mobipark/racing-kart-bg.jpg') %>);">
+    <div class="adventure-bg adventure-bg-racing-kart u-show-pc"
+      style="background-image: url(<%= mix('/assets/images/mobipark/racing-kart-bg.jpg') %>);">
     </div>
 
-    <div class="adventure-bg adventure-bg-racing-kart u-show-sp" style="background-image: url(<%= mix('/assets/images/mobipark/racing-kart-bg-sp.jpg') %>);">
+    <div class="adventure-bg adventure-bg-racing-kart u-show-sp"
+      style="background-image: url(<%= mix('/assets/images/mobipark/racing-kart-bg-sp.jpg') %>);">
     </div>
 
     <div class="l-adventure-sp-container">

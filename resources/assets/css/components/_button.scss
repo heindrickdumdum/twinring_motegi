@@ -101,6 +101,16 @@
     }
   }
 
+  &.button-instagram {
+    max-width: 381px;
+    letter-spacing: 0.112em;
+    width: 100%;
+    
+    @include max-screen($breakpoint-mobile) {
+      max-width: 248px;
+    }
+  }
+
   &.button-hellowoods {
     width: 100%;
     max-width: 364px;

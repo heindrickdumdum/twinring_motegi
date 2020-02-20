@@ -4,8 +4,6 @@
 }
 
 .header-sub-content-inner {
-  display: block;
-
   @include max-screen($breakpoint-mobile) {
     margin: 0 auto;
     padding-right: 20px;
@@ -16,10 +14,12 @@
     top: 0;
     opacity: 0;
     z-index: -1;
+    display: none;
     transition: opacity $duration $ease-in-out;
   }
 
   &.is-active {
+    display: block;
     opacity: 1;
     z-index: $z-min;
   }
@@ -32,9 +32,9 @@
   position: fixed;
   top: 183px;
   left: 0;
-  height: calc(100vh - 187px);
+  height: calc(100vh - 180px);
   z-index: -9;
-  transition: opacity $duration $ease-in-out .5s;
+  transition: opacity $duration $ease-in-out;
 
   @include max-screen($breakpoint-mobile) {
     position: absolute;
@@ -69,13 +69,14 @@
 
 .header-sub-close {
   display: block;
-  padding-right: 20px;
+  padding-right: 12px;
   position: absolute;
-  right: 28px;
+  right: 26px;
   top: 16px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: rgba($color-mineshaft, .5);
+  letter-spacing: 0.05em;
   cursor: pointer;
   z-index: $z-min;
 
@@ -84,11 +85,11 @@
     content: '';
     position: absolute;
     right: 0;
-    top: 0;
+    top: 2px;
     transform-origin: center;
-    height: 20px;
+    height: 17px;
     width: 2px;
-    background-color: $color-gray;
+    background-color: #969696;
   }
 
   &::before {
@@ -102,14 +103,13 @@
 }
 
 .header-sub-content-inner-wrap {
-  padding: 27px 38px 10px;
+  padding: 27px 38px 35px;
   background-color: $color-white;
   overflow: hidden;
 }
 
 .header-sub-inner {
   display: flex;
-  margin-bottom: 30px;
 
   @include max-screen($breakpoint-mobile) {
     display: block;
@@ -117,14 +117,13 @@
 
   &.header-sub-inner-attraction,
   &.header-sub-inner-restaurant {
-    margin-bottom: 0px;
     position: relative;
   }
 }
 
 .header-sub-right-content {
   position: absolute;
-  top: 30.5%;
+  top: 43.2%;
   right: 4px;
 
   @include max-screen($breakpoint-mobile) {
@@ -215,9 +214,13 @@
   }
 
   &.header-sub-bottom-list-upper {
-    margin-top: -5px;
+    margin-top: 25px;
     padding-bottom: 0;
     padding-top: 0;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 0;
+    }
 
     li {
       flex-grow: unset;
@@ -289,7 +292,6 @@
 
 .header-sub-top-button {
   display: inline-block;
-  margin-bottom: 24px;
   padding: 0 34px 0 21px;
   font-size: 15px;
   font-weight: bold;
@@ -373,6 +375,10 @@
 
       .header-sub-button-link-icon {
         transform: translateX(5px);
+
+        svg {
+          stroke: $color-green;
+        }
       }
     }
   }
@@ -380,7 +386,7 @@
 
 .header-sub-image-item {
   flex: 1;
-  margin: 0 10px 25px;
+  margin: 25px 10px 0;
 
   @include max-screen($breakpoint-mobile) {
     margin: 0 0 23px;
@@ -389,19 +395,39 @@
 
 .header-sub-image {
   display: block;
-  padding: 27.5% 0;
-  border-radius: 5px;
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $color-dark;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: center;
+  transition: transform $duration $ease-in-out;
+}
+
+.header-sub-image-wrap {
+  padding: 27.5% 0;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+
+  .header-sub-image-small {
+    padding: 30.5% 0;
+  }
 
   @include max-screen($breakpoint-mobile) {
     display: none;
   }
 
-  &.header-sub-image-small {
-    padding: 30.5% 0;
+  @include min-screen($breakpoint-mobile + 1) {
+    &:hover {
+      .header-sub-image {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 
@@ -450,7 +476,7 @@
   }
 
   &.header-sub-image-list-attraction {
-    .header-sub-image {
+    .header-sub-image-wrap {
       padding: 17.5% 0;
 
       &.header-sub-image-small {
@@ -468,7 +494,7 @@
   }
 
   &.header-sub-image-list-restaurant {
-    .header-sub-image {
+    .header-sub-image-wrap {
       padding: 17.5% 0;
 
       &.header-sub-image-small {
@@ -501,6 +527,13 @@
 .header-sub-image-link {
   font-size: 15px;
   color: $color-mineshaft;
+  transition: color $duration $ease-in-out;
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: $color-green;
+    }
+  }
 }
 
 .header-sub-image-text {
@@ -552,6 +585,18 @@
 }
 
 .header-sub-content-inner-motorsports {
+  margin-bottom: -25px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 0;
+  }
+
+  .header-sub-inner {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 30px;
+    }
+  }
+
   .header-sub-top-button-icon {
     svg {
       fill: $color-red;
@@ -566,7 +611,8 @@
     &.header-sub-inner-block-right {
       flex-basis: 48.5%;
 
-      .header-sub-image {
+      .header-sub-image-wrap {
+        margin-top: 25px;
         margin-bottom: 19px;
         padding: 18% 0;
       }

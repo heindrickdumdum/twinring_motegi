@@ -1,5 +1,6 @@
 <% if(typeof pageId === 'undefined') { var pageId = ''; } %>
 <% if(typeof page === 'undefined') { var page = ''; } %>
+<% if(typeof subpageId === 'undefined') { var subpageId = ''; } %>
 
 <%
   let pages = [
@@ -109,7 +110,10 @@
   <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
   <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
   <% } %>
-
+  
+  <% if(subpageId == 'forest-labo') { %>
+    <script src="<%= mix('/assets/js/labo.js') %>" async></script>
+  <% } %>
 
 </body>
 </html>

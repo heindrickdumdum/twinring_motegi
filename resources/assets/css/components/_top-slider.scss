@@ -16,10 +16,21 @@
 
   	@include max-screen($breakpoint-mobile) {
 			font-size: 13px;
-			margin-top: 13px;
+			margin-top: 9px;
 			letter-spacing: 0.1em;
 			line-height: 1.65;
   	}
+  }
+
+  small {
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    display: block;
+    font-weight: normal;
+
+    @include max-screen($breakpoint-mobile) {
+      display: none;
+    }
   }
 }
 
@@ -30,5 +41,16 @@
   img {
     width: 100%;
     height: auto;
+  }
+
+  .forest-craft & {
+    padding-top: 59.25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 55%;
+      margin-bottom: 0;
+    }
   }
 }

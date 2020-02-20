@@ -1,6 +1,6 @@
 .media {
   margin: 0 auto;
-  max-width: 1015px;
+  max-width: 1060px;
   display: flex;
   width: 100%;
 
@@ -19,6 +19,14 @@
     @include min-screen($breakpoint-mobile + 1) {
       margin-bottom: 55px;
     }
+  }
+}
+
+.sumika-media,
+.itadaki-media,
+.dokidoki-media {
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 61px;
   }
 }
 
@@ -56,8 +64,8 @@
     top: 0;
     left: -2%;
     z-index: 0;
-    width: 104%;
-    height: 104%;
+    width: 103%;
+    height: 103%;
 
     .media-craft & {
       @include max-screen($breakpoint-mobile) {
@@ -92,6 +100,10 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 20px;
+
+    @include max-screen($breakpoint-mobile) {
+      border-radius: 7px;
+    }
 
     .media-craft & {
       @include max-screen($breakpoint-mobile) {
@@ -137,20 +149,21 @@
     z-index: 1;
 
     @include max-screen($breakpoint-mobile) {
-      background-image: linear-gradient(0deg, #c3e8d8 22.22%, #ffffff 22.22%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 72.22%, #ffffff 72.22%, #ffffff 100%);
-      background-size: 18.00px 18.00px;
+      background-image: linear-gradient(0deg, #c3e8d8 25%, #ffffff 25%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 75%, #ffffff 75%, #ffffff 100%);
+      background-size: 32.00px 32.00px;
     }
 
     @include min-screen($breakpoint-mobile + 1) {
-      background-image: linear-gradient(0deg, #c3e8d8 21.43%, #ffffff 21.43%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 71.43%, #ffffff 71.43%, #ffffff 100%);
-      background-size: 28.00px 28.00px;
+      background-image: linear-gradient(0deg, #c3e8d8 19.44%, #ffffff 19.44%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 69.44%, #ffffff 69.44%, #ffffff 100%);
+      background-size: 36.00px 36.00px;
     }
   }
 
-  .media-craft & {
-    @include max-screen($breakpoint-mobile) {
-      margin-top: 26px;
-    }
+  &.alt-feature-heading {
+   @include min-screen ($breakpoint-mobile + 1) {
+    font-size: 24px;
+    margin-bottom: 38px;
+   }
   }
 }
 
@@ -164,13 +177,11 @@
   font-size: 12px;
   padding-top: 10px;
   line-height: 2;
+  letter-spacing: 0.16em;
+  font-weight: 300;
 
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 15px;
-  }
-
-  .media-subpage & {
-    letter-spacing: 0.16em;
   }
 }
 
@@ -279,44 +290,86 @@
 
 /*Tsubasa*/
 .media-note-tsubasa {
-  max-width: 300px;
-}
+  max-width: 195px;
 
-.media-labo {
-  padding-top: 50px;
-
-  .media {
-    @include min-screen($breakpoint-mobile + 1) {
-      padding: 0;
-    }
-  }
-
-
-  .media-left {
-    width: 425px;
-
-    @include max-screen($breakpoint-mobile) {
-      width: 100%;
-    }
-  }
-
-  .media-right {
-    // padding-left: 425px;
-    //
-    // @include max-screen($breakpoint-mobile) {
-    //   padding-left: 20px;
-    //   padding-right: 20px;
-    // }
-  }
-
-  .media-bg {
-    margin-left: 0px;
+  @include min-screen($breakpoint-mobile + 1) {
+    max-width: 300px;
   }
 }
 
 //modifier
 .media-craft {
+  .media-right {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-left: 55px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-left: 5px;
+    }
+  }
+
+  .media-title {
+    span {
+      background-image: none;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 26px;
+    }
+  }
+
+  .media-desc {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 17px;
+    }
+  }
+
+
+
+  .step-word {
+    @include min-screen($breakpoint-mobile + 1) {
+      letter-spacing: 0.16em;
+      display: inline-block;
+    }
+  }
+
+  .step-word-no {
+    .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        line-height: 1;
+        display: inline-block;
+        font-size: 60px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        display: inline-block;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .note {
+    @include max-screen($breakpoint-mobile) {
+      margin-left: 22px;
+    }
+  }
+
   &:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 17px 24px 0 24px;
+    border-color: $color-green-4 transparent transparent transparent;
+    content: '';
+    position: absolute;
+    left: 166px;
+    right: 0;
+    bottom: -2px;
+
     @include max-screen($breakpoint-mobile) {
       width: 0;
       height: 0;
@@ -332,8 +385,67 @@
     }
   }
 
-  &:nth-of-type(2) {
+  &:nth-of-type(1) {
+    .step-word-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 12px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        top: -47px;
+      }
+    }
+
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        display: inline-block;
+        transform: translate(0px, -7px);
+        letter-spacing: 0.16em;
+      }
+    }
+
     .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        display: inline-block;
+        transform: translate(8px, 5px);
+        line-height: 1;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        transform: translate(-5px, 4px);
+      }
+    }
+
+    .media-desc {
+      @include max-screen($breakpoint-mobile) {
+        padding-top: 10px;
+      }
+    }
+
+    .media-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 21px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 10px;
+      margin-bottom: 36px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-2px, -2px);
+      }
+    }
+
+    .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(8px, 2px);
+      }
+
       @include max-screen($breakpoint-mobile) {
         transform: translate(-7px, 5px);
         display: inline-block;
@@ -342,30 +454,64 @@
 
     .media-title {
       @include max-screen($breakpoint-mobile) {
-        margin-top: 13px;
+        margin-top: 8px;
       }
     }
 
     .media-desc {
       @include max-screen($breakpoint-mobile) {
-        padding-top: 12px;
+        padding-top: 15px;
       }
     }
 
     .note {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 4px;
+      }
+
       @include max-screen($breakpoint-mobile) {
         margin-top: 22px;
+        margin-left: 28px;
       }
     }
 
+    .note-acorn {
+      @include min-screen($breakpoint-mobile + 1) {
+        top: -23px;
+        right: -22px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      padding: 0 0 60px;
+      margin-bottom: 40px;
+    }
+
     @include max-screen($breakpoint-mobile) {
-      padding-top: 26px;
-      margin-bottom: 39px;
+      padding-top: 36px;
+      padding-bottom: 36px;
+      margin-bottom: 23px;
     }
   }
 
   &:nth-of-type(3) {
+    .step-word-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 6px;
+      }
+    }
+
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-2px, -7px);
+      }
+    }
+
     .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(2px, -3px);
+      }
+
       @include max-screen($breakpoint-mobile) {
         display: inline-block;
         transform: translate(-6px, 5px);
@@ -374,22 +520,42 @@
 
     .media-title {
       @include max-screen($breakpoint-mobile) {
-        margin-top: 13px;
+        margin-top: 9px;
       }
     }
 
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 41px;
+    }
+
     @include max-screen($breakpoint-mobile) {
-      padding-top: 17px;
+      padding-top: 28px;
       padding-bottom: 42px;
-      margin-bottom: 28px;
+      margin-bottom: 14px;
     }
   }
 
   &:nth-of-type(4) {
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-3px, -6px);
+      }
+    }
+
     .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(1px, -4px);
+      }
+
       @include max-screen($breakpoint-mobile) {
         display: inline-block;
         transform: translate(-1px, 5px);
+      }
+    }
+
+    .step-word-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 2px;
       }
     }
 
@@ -400,29 +566,42 @@
     }
 
     .media-desc {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 6px;
+      }
+
       @include max-screen($breakpoint-mobile) {
         padding-top: 5px;
       }
     }
 
     .note {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 34px;
+      }
+
       @include max-screen($breakpoint-mobile) {
         margin-top: 20px;
       }
     }
 
+    .note-acorn {
+      @include min-screen($breakpoint-mobile + 1) {
+        top: -23px;
+        right: -22px;
+      }
+    }
+
     @include max-screen($breakpoint-mobile) {
-      padding-top: 18px;
-      padding-bottom: 42px;
-      margin-bottom: 28px;
+      padding-top: 28px;
+      padding-bottom: 0;
+      margin-bottom: 0;
     }
   }
 
   &:last-of-type {
     &:before {
-      @include max-screen($breakpoint-mobile) {
-        content: none;
-      }
+      content: none;
     }
   }
 
@@ -430,15 +609,181 @@
     .media-bg {
       &:after {
         @include max-screen($breakpoint-mobile) {
-          top: 0;
+          top: 5px;
+          height: 102%;
+          background-position: center bottom;
+          width: 103%;
         }
       }
     }
   }
 
+  &:not(:last-child) {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 38px;
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 0 0 50px;
+    max-width: 1033px;
+    position: relative;
+  }
+
   @include max-screen($breakpoint-mobile) {
     position: relative;
-    padding: 21px 37px 30px 40px;
+    padding: 21px 34px 30px 34px;
     margin-bottom: 50px;
   }
 }
+
+//modifier forest labo
+.subpage-section-aqua-labo {
+  .media-labo {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 49px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 23px;
+    }
+
+    .subpage-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .media {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding: 0;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 0 34px;
+        margin-bottom: 77px;
+      }
+    }
+
+    .media-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 3px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-top: 8px;
+      }
+    }
+
+    .media-desc {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 15px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+    }
+
+    .media-left {
+      width: 425px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+
+    .media-bg {
+      margin-left: 0px;
+    }
+  }
+}
+
+.subpage-section-mammal-labo {
+  .media-labo {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 57px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 23px;
+    }
+
+    .subpage-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 34px;
+      }
+    }
+
+    .media {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding: 0;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 0 34px;
+        margin-bottom: 45px;
+      }
+    }
+
+    .media-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 3px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-top: 8px;
+      }
+    }
+
+    .media-desc {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 15px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+    }
+
+    .media-left {
+      width: 425px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+
+    .media-bg {
+      margin-left: 0px;
+    }
+  }
+
+  .subpage-button {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 89px;
+    }
+  }
+}
+//modifier forest labo end
+
+//modifier mobipark
+.page-mobipark {
+  .media-title-racing-kart {
+    span {
+      @include min-screen($breakpoint-mobile + 1) {
+        background-image: linear-gradient(0deg, #c3e8d8 21.43%, #ffffff 21.43%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 71.43%, #ffffff 71.43%, #ffffff 100%);
+        background-size: 35.00px 40.00px;
+        background-position-y: -10%;
+        background-repeat-y: no-repeat;
+      }
+    }
+  }
+}
+//modifier mobipark end

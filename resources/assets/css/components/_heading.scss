@@ -4,6 +4,29 @@
   @include max-screen($breakpoint-mobile) {
     margin: 24px 0;
   }
+
+  &.heading-sumika {
+    .heading-texts {
+      img {
+        @include max-screen($breakpoint-mobile) {
+          width: 293px;
+        }
+      }
+    }
+  }
+
+  &.sumika-hashtag {
+    .heading-texts {
+      text-align: center;
+      img {
+        @include max-screen($breakpoint-mobile) {
+          width: 200px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  
 }
 
 .heading-text {
@@ -50,11 +73,6 @@
     width: 100%;
     height: 100%;
   }
-
-  .heading-wrap-video-musasabi & {
-    height: 37px;
-    width: 731px;
-  }
 }
 
 //modifier for SP walk program and labo
@@ -67,14 +85,9 @@
   }
 
   .heading-subtext {
-    // max-width: 250px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-
-    @include max-screen($breakpoint-mobile) {
-      max-width: 250px;
-    }
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -83,20 +96,38 @@
     }
 
     .heading-family-walk {
+      .heading {
+        margin-bottom: 18px;
+      }
+
       .heading-subtext {
-        height: 67px;
+        width: 315.5px;
+        height: 55.5px;
+        margin-top: 14px;
       }
     }
 
     .heading-guide-walk {
+      .heading {
+        margin-bottom: 18px;
+      }
+
       .heading-subtext {
-        height: 71px;
+        width: 196.5px;
+        height: 56px;
+        margin-top: 14px;
       }
     }
 
     .heading-free-walk {
+      .heading {
+        margin-bottom: 18px;
+      }
+
       .heading-subtext {
-        height: 35px;
+        width: 256.5px;
+        height: 25px;
+        margin-top: 14px;
       }
     }
 
@@ -117,6 +148,18 @@
     .subpage-section-family-walk,
     .subpage-section-aqua-labo {
       margin-top: 150px;
+    }
+  }
+}
+
+// modifier challenge
+.challenge {
+  .heading-text {
+    max-width: 584px;
+    width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 250px;
     }
   }
 }
@@ -142,7 +185,7 @@
       margin-right: auto;
       padding-left: 20px;
       padding-right: 20px;
-      
+
     }
   }
 
@@ -158,149 +201,7 @@
     .heading-subtext {
       @include max-screen($breakpoint-mobile) {
         min-height: 56px;
-        margin-top: 12px; 
-      }
-    }
-  }
-}
-
-// modifier challenge
-.challenge {
-  .heading-text {
-    max-width: 584px;
-    width: 100%;
-
-    @include max-screen($breakpoint-mobile) {
-      max-width: 250px;
-    }
-  }
-}
-
-//banner title image or text
-.heading-banner-more {
-  .heading {
-    margin: 0;
-  }
-
-  .heading-text {
-    line-height: 1;
-    letter-spacing: 0.16em;
-    font-size: 31px;
-    position: relative;
-  }
-
-  // .heading-subtext {
-  //   position: relative;
-  //   margin: 0 auto;
-  // }
-
-  &.heading-banner-more-tsubasa{
-    .heading-subtext {
-      height: auto;
-    }
-  }
-
-  &.heading-banner-more-acrox {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        max-width: 184px;
-        height: auto;
-      }
-    }
-  }
-
-  &.heading-banner-more-forestdriving {
-    .heading-subtext {
-      max-width: 419px;
-      width: 100%;
-      left: 10px;
-
-      @include max-screen($breakpoint-mobile) {
-        left: 0;
-        max-width: 158px;
-        height: auto;
-      }
-    }
-
-  }
-
-  &.heading-banner-more-debden {
-    .heading-subtext {
-      max-width: 528px;
-      width: 100%;
-      left: 10px;
-
-      @include max-screen($breakpoint-mobile) {
-        left: 0;
-        max-width: 208px;
-        height: 46px;
-      }
-
-    }
-  }
-
-  &.heading-banner-more-challenge {
-    .heading-subtext {
-      max-width: 528px;
-
-      width: 100%;
-      left: 10px;
-    }
-  }
-
-  &.heading-banner-more-bunbun {
-    .heading-subtext {
-      left: 26px;
-
-      @include max-screen($breakpoint-mobile) {
-        left: 0;
-        max-width: 232px;
-        height: 46px;
-      }
-    }
-  }
-
-  &.heading-banner-more-motorcycle {
-    .heading-subtext {
-      left: 9px;
-      height: auto;
-
-      @include max-screen($breakpoint-mobile) {
-        left: 0;
-        max-width: 210px;
-      }
-    }
-  }
-
-  &.heading-banner-more-mototouring {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        max-width: 184px;
-        height: 46px;
-      }
-    }
-  }
-  &.heading-banner-more-motoracer {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        max-width: 161px;
-        height: 46px;
-      }
-    }
-  }
-  &.heading-banner-more-dream {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        max-width: 178px;
-        height: 46px;
-      }
-    }
-  }
-  &.heading-banner-more-wildracer {
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        max-width: 206px;
-        height: 46px;
+        margin-top: 12px;
       }
     }
   }
@@ -640,6 +541,10 @@
 
 //modifier forest walk
 .subpage-section-family-walk {
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 72px !important;
+  }
+
   .heading-family-walk {
     .heading {
       @include min-screen($breakpoint-mobile + 1) {
@@ -717,3 +622,77 @@
   }
 }
 //modifier forest walk end
+
+//modifier forest labo
+.subpage-section-aqua-labo {
+  .heading-aqua-labo {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 33px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 19px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 11px;
+        margin-left: auto;
+        width: 264px;
+        height: 34px;
+        margin-right: auto;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 201.5px;
+        height: 25px;
+        margin-top: 14px;
+      }
+    }
+  }
+}
+
+.subpage-section-mammal-labo {
+  .heading-mammal-labo {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 30px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 95px;
+        margin-bottom: 14px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 22px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 11px;
+        margin-left: auto;
+        width: 264px;
+        height: 34px;
+        margin-right: auto;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 171.5px;
+        height: 25.5px;
+        margin-top: 14px;
+      }
+    }
+  }
+}

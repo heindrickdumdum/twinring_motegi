@@ -6,10 +6,24 @@
     margin-bottom: 83px;
   }
 
-  @include max-screen($breakpoint-mobile + 1) {
-    &-subpage {
-      .heading-subtext {
+  &-subpage {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile + 1) {
         height: auto;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 202px;
+        height: 49.5px;
+      }
+    }
+
+    &-labo {
+      .heading-subtext {
+        @include max-screen($breakpoint-mobile) {
+          width: 219px;
+          height: 50.5px;
+        }
       }
     }
   }
@@ -116,9 +130,51 @@
     }
 
     .heading {
-      @include max-screen($breakpoint-mobile) {
-        margin: 56px auto 59px;
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-9px, 0);
       }
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 0 auto;
+      }
+    }
+
+    &::before {
+      @include max-screen($breakpoint-mobile) {
+        background-image: url(../images/craft/craft-heading-wrap-bg-sp.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: -20px;
+        top: -19px;
+        right: -21px;
+        bottom: 0;
+        content: "";
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 105px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      position: relative;
+      margin: 0;
+      padding: 29px 0 60px;
+    }
+  }
+
+  &.heading-main-musasabi {
+    .heading {
+      img {
+        @include min-screen($breakpoint-mobile + 1) {
+          transform: translate(-11px, 2px);
+        }
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 83px;
     }
   }
 

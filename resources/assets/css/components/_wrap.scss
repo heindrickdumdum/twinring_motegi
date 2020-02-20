@@ -2,6 +2,10 @@
   position: relative;
   z-index: 1;
 
+  @include max-screen($breakpoint-mobile) {
+    padding-top: 56px;
+  }
+
   &:before {
     content: '';
     background-color: $color-white;

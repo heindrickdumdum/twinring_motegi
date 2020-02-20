@@ -1,0 +1,17 @@
+<%
+if (typeof link === 'undefined'){
+  var link = '';
+}
+
+if (typeof imgPath === 'undefined'){
+  var imgPath = '';
+}
+%>
+
+<div class="banner-cta">
+  <div class="l-container">
+    <a class="banner-cta-bottom-inner" href="<%- link %>" target="_blank">
+      <img src="<%- imgPath %>">
+    </a>
+  </div>
+</div>

@@ -1,10 +1,29 @@
 .how-to-container {
   border-bottom: 1px solid $color-gray;
+  max-width: $container;
+  margin: 0 auto;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 69%;
+    max-width: 100%;
+  }
 }
 
 //modifier
 .how-to-craft {
   &::before {
+    @include min-screen($breakpoint-mobile + 1) {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -123px;
+      right: 0;
+      background-image: url("../images/craft/craft-howto-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      bottom: 0;
+    }
+    
     @include max-screen($breakpoint-mobile) {
       background-image: url("../images/craft/craft-how-to-bg-sp1.png");
       background-repeat: no-repeat;
@@ -26,9 +45,33 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 90px;
+      bottom: 49px;
       content: "";
       height: 309px;
+    }
+  }
+
+  .subpage-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-bottom: 130px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 26px;
+    }
+  }
+
+  .heading-wrap-craft {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 18px;
+      }
+    }
+
+    svg {
+      @include max-screen($breakpoint-mobile) {
+        width: 300px;
+      }
     }
   }
 }

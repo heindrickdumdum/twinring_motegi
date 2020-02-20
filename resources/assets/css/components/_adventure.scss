@@ -3,6 +3,12 @@
     margin-top: 0;
     margin-bottom: 150px;
   }
+
+  @include max-screen ($breakpoint-mobile) {    
+    .forest-container {
+      margin-top: 33px;
+    }
+  }
 }
 
 .adventure-container {
@@ -33,10 +39,21 @@
     margin-bottom: 48px;
 
     &.adventure-list-hellowoods {
-      margin-bottom: 95px;
+      margin-bottom: 47px;
 
-      .adventure-bg {
-        height: 140px;
+      &:nth-child(2) {
+        margin-bottom: 20px;
+
+        .adventure-bg {
+          height: 140px;
+        }
+        .adventure-image-logo {
+          bottom: -48px;
+        }
+
+        .l-adventure.hellowoods {
+          margin-top: -11px;
+        }
       }
     }
   }
@@ -78,7 +95,7 @@
   &.hellowoods {
     bottom: -100px;
     @include max-screen($breakpoint-mobile) {
-      bottom: -48px;
+      bottom: -30px;
       max-width: 119px;  
     }
   }

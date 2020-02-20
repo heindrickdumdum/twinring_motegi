@@ -10,6 +10,10 @@
 .instagram-banner {
   text-align: center;
   margin-top: 72px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 49px;
+  }
 }
 
 .instagram-inner {
@@ -17,7 +21,7 @@
   background: url(#{$image-path}sumika/frame-lg.png) no-repeat center top;
   background-size: 100% 100%;
   padding-bottom: 80px;
-  z-index: $z-max;
+  z-index: 2;
 
   @include max-screen($breakpoint-mobile) {
     background: none;
@@ -39,7 +43,7 @@
 
     @include max-screen($breakpoint-mobile) {
       content: none;
-    } 
+    }
   }
 
   &:after {
@@ -54,10 +58,10 @@
     background-position: center;
     width: 180px;
     height: 59px;
-    
+
     @include max-screen($breakpoint-mobile) {
       content: none;
-    } 
+    }
   }
 }
 
@@ -86,7 +90,7 @@
 
     @include max-screen($breakpoint-mobile) {
       content: none;
-    } 
+    }
   }
 }
 
@@ -124,6 +128,7 @@
     width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-top: 10px;
   }
 
   img {

@@ -45,16 +45,19 @@
   }
 
   .mv-subpage & {
-    max-height: 607px;
+    max-height: 100%;
     height: 0;
+    // max-height: 450px;
+    // height: 0;
     overflow-y: hidden;
 
     @include min-screen($breakpoint-mobile + 1) {
-      height: 607px;
+      // height: 450px;
+      padding-bottom: 29%;
     }
 
     @include max-screen($breakpoint-mobile) {
-      padding-bottom: 76%;
+      padding-bottom: 65%;
     }
 
     &::after {
@@ -63,6 +66,11 @@
   }
 
   .mv-subpage-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 420px;
+      padding-bottom: 0;
+    }
+
     @include max-screen($breakpoint-mobile) {
       padding-bottom: 71%;
     }
@@ -221,6 +229,24 @@
   span {
     display: block;
   }
+
+  &.mv-heading-top {
+    @include max-screen($breakpoint-mobile) {
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 15.5px;
+        height: 16.5px;
+        right: 24px;
+        top: 92px;
+        background-image: url(#{$image-path}design-petal1-sp.png);
+      }
+    }
+  }
 }
 
 .mv-heading-text {
@@ -370,26 +396,38 @@
 .subpage-labo {
   .mv-image {
     @include max-screen($breakpoint-mobile) {
-      background-position-x: 70%;
+      background-position-x: 60%;
     }
   }
 }
 
 // modifier
 .mv-car-and-bike {
-  .mv-heading {
-    bottom: 45px;
+  .mv-container {
+    max-width: 1263px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
 
-    @include max-screen($breakpoint-mobile) {
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 30px;
+    @include min-screen($breakpoint-mobile) {
+      bottom: -15px;
     }
   }
 
+  .mv-heading {
+    position: relative;
+    bottom: 0;
+    left: 0
+  }
+
   .mv-heading-texts{
-    width: 448px;
+    width: 568px;
     height: 50px;
 
     svg {
@@ -413,18 +451,33 @@
     color: rgb(255, 255, 255);
     text-align: left;
     text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+    position: relative;
+    left: -15px;
+    max-width: 595px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      max-width: 259px;
+      height: 128px;
+      position: relative;
+      left: -10px;
+    }
 
     svg {
       width: 100%;
       height: 100%;
     }
+
+
   }
 
   .mv-logo {
     width: 268px;
     height: 266px;
     background-image: url(../images/car-and-bike/mv-logo.png);
-    bottom: -60px;
+    bottom: 0;
+
+    position: relative;
   }
 }
 
@@ -640,108 +693,106 @@
   }
 }
 
-.mv-musasabi {
-  .mv-heading-texts{
-    width: 100%;
-    text-align: left;
+.mv-inner {
 
     @include max-screen($breakpoint-mobile) {
-      font-size: 23px;
-      font-weight: normal;
-      transform: translateY(-50%);
-      top: 50%;
+      height: 378px;
     }
-  }
 
-  .mv-heading-subtexts {
-    font-weight: normal;
-  }
-}
-
-.mv-inner {
-  .mv-today {
-    width: 268px;
-    height: 266px;
-    background-image: url(../images/sumika/sumika-logo.png);
-    bottom: -45px;
-  }
-
-  .mv-heading {
-    bottom: 45px;
-  }
-
-  .mv-heading-subtexts {
-
-    svg {
-      fill: $color-white;
-      width: 520px;
-      height: 74px;
+    .mv-today {
+      width: 268px;
+      height: 266px;
+      background-image: url(../images/sumika/sumika-logo.png);
+      bottom: -45px;
     }
-  }
 
+    .mv-heading {
+      bottom: 27px;
+    }
 
-.mv-heading-sumika {
-  .mv-heading-subtexts {
-    svg {
-      width: 653px;
-      height: 81px;
-      @include max-screen($breakpoint-mobile) {
-        width: 220px;
+    .mv-heading-subtexts {
+
+      svg {
+        fill: $color-white;
+        width: 520px;
         height: 74px;
       }
     }
-  }
-}
 
-.mv-heading-itadaki {
-  @include max-screen($breakpoint-mobile) {
-   .mv-heading-subtexts {
-    svg {
-      width: 162px;
-      height: 76px;
+    .mv-heading-texts {
+      font-family: $font-holland;
+      color: $color-white;
+      font-size: 50px;
+      letter-spacing: 0.06em;
+      width: auto;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 25px;
+      }
     }
-   }
-  }
-}
 
-.mv-heading-dokidoki {
-  @include max-screen($breakpoint-mobile) {
-   .mv-heading-subtexts {
-    svg {
-      width: 130px;
-      height: 76px;
+
+  .mv-heading-sumika {
+    .mv-heading-texts {
+      @include max-screen($breakpoint-mobile) {
+        font-size: 24px;
+        letter-spacing: 0.092em;
+      }
     }
-   }
+
+    .mv-heading-subtexts {
+      svg {
+        width: 653px;
+        height: 81px;
+        @include max-screen($breakpoint-mobile) {
+          width: 271px;
+          height: 87px;
+          position: relative;
+          left: -6px;
+          top: -3px;
+        }
+      }
+    }
   }
-}
 
-  .mv-heading-texts {
-    font-family: $font-holland;
-    color: $color-white;
-    font-size: 50px;
-    letter-spacing: 0.06em;
-    width: auto;
-
+  .mv-heading-itadaki {
     @include max-screen($breakpoint-mobile) {
-      font-size: 25px;
+    .mv-heading-subtexts {
+      svg {
+        width: 162px;
+        height: 76px;
+      }
+    }
     }
   }
 
-  // itadaki mv
-
-  &.itadaki-mv {
-    .mv-today {
-      background-image: url(../images/itadaki/today.png);
+  .mv-heading-dokidoki {
+    @include max-screen($breakpoint-mobile) {
+    .mv-heading-subtexts {
+      svg {
+        width: 130px;
+        height: 76px;
+      }
+    }
     }
   }
 
-  // dokidoki
 
-  &.dokidoki-mv {
-    .mv-today {
-      background-image: url(../images/dokidoki/dokidoki-logo.png);
+    // itadaki mv
+
+    &.itadaki-mv {
+      .mv-today {
+        background-image: url(../images/itadaki/today.png);
+      }
     }
-  }
+
+    // dokidoki
+
+    &.dokidoki-mv {
+      .mv-today {
+        background-image: url(../images/dokidoki/dokidoki-logo.png);
+      }
+    }
 }
 
 // END sumika mv
@@ -752,11 +803,11 @@
 
 .mv-subpage {
   margin-bottom: 7px;
-  max-height: 607px;
+  // max-height: 450px;
   height: auto;
 
   @include min-screen($breakpoint-mobile + 1) {
-    height: 607px;
+    // height: 450px;
     margin-bottom: 50px;
   }
 
@@ -788,6 +839,65 @@
     }
   }
 
+  &.mv-subpage-craft {
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 447px;
+      margin-bottom: 89px;
+    }
+
+    .mv-heading-subpage {
+      @include min-screen($breakpoint-mobile + 1) {
+        top: 43%;
+      }
+    }
+  }
+
+  &.mv-musasabi {
+    .mv-heading-texts{
+      width: 100%;
+      text-align: left;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 23px;
+        font-weight: normal;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+    }
+
+    .mv-heading-subtexts {
+      font-weight: normal;
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: 0.17em;
+        margin-top: 18px;
+      }
+    }
+
+    .mv-image {
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 620px;
+        max-height: none;
+      }
+    }
+
+    .mv-heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        bottom: 56px;
+        left: 31px;
+      }
+    }
+
+    &::after {
+      @include min-screen($breakpoint-mobile + 1) {
+        bottom: -89px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      height: auto;
+      margin-bottom: 72px;
+    }
+  }
 }
 
 .mv-image-subpage {
@@ -820,7 +930,8 @@
 }
 
 //modifier MV forest walk
-.mv-subpage-walk {
+.mv-subpage-walk,
+.mv-subpage-labo {
   overflow: hidden;
 
   @include min-screen($breakpoint-mobile + 1) {

@@ -34,12 +34,15 @@
       @include max-screen ($breakpoint-mobile) {
         background-size: cover;
         padding-top: 0;
-
-        .section-contents,
-        .map-image {
-          /*padding: 0 32px;*/
-        }
+        margin-top: 50px;
+        margin-bottom: 5px;
+        margin-right: 4px;
+        margin-left: -10px;
       }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 23px;
     }
   }
   

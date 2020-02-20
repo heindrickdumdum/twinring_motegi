@@ -1,7 +1,15 @@
 .comparison {
   display: block;
   width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
+
+.comparison-inner {
+  width: 100%;
+}
+
 .comparison-col {
   display: flex;
   flex-direction: column;
@@ -58,8 +66,10 @@
   }
 
   &:nth-child(3) {
+    background: #f2faf5;
+
     @include min-screen($breakpoint-mobile + 1) {
-      order: 3
+      order: 3;
     }
   }
 }
@@ -71,16 +81,39 @@
 
   &:first-child {
     .comparison-col {
-      padding:40px 15px;
+      &:not(:first-child) {
+        padding:40px 15px;
 
-      @include min-screen($breakpoint-mobile + 1) {
-        padding: 40px 50px;
+        @include min-screen($breakpoint-mobile + 1) {
+          padding: 40px 50px;
+        }
+      }
+
+      &:first-child {
+        padding: 0;
       }
     }
   }
 }
 
+.comparison-btn {
+  margin-top: 20px;
+  width: calc(100% / 2);
+  padding: 0 15px;
 
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 0 20px;
+    margin-top: 34px;
+    width: calc((100% - 220px) / 2);
+  }
+}
+
+.comparison-btn-musasabi,
+.comparison-btn-tsubasa {
+  margin-left: auto;
+}
+
+.comparison
 
 .comparison-img-1 {
   max-width: 216px;

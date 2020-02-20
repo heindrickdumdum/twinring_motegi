@@ -12,14 +12,13 @@
   <div class="mv mv-subpage">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.jpg') %>);"></div>
+        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.jpg') %>);"></div>
+        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img-sp.jpg') %>);"></div>
       </li>
     </ul>
 
-    <h1 class="mv-heading mv-heading-subpage">
-      <span class="mv-heading-text">
-        おさんぽでんでん
-      </span>
+    <h1 class="u-title-hidden">
+      おさんぽでんでん
     </h1>
   </div>
 
@@ -40,7 +39,7 @@
 
     <div class="subpage-banner">
       <div class="subpage-banner-inner">
-        <img class="" src="<%= mix('https://via.placeholder.com/2042x946') %>" alt="">
+        <img class="" src="<%= mix('/assets/images/deb-den/subpage-banner.jpg') %>" alt="">
       </div>
     </div>
 
@@ -48,7 +47,7 @@
       <span>アトラクション情報</span>
     </h3>
 
-    <p>かたつむりに乗って葉っぱの上をのんびりお散歩。親子で一緒に乗ることができるのりものです。3歳からはひとりで運転できます。</p>
+    <p>でんでんむしに乗って葉っぱの上をのんびりお散歩。親子で一緒に乗ることができるのりものです。3歳<br />からはひとりで運転できます。</p>
 
     <table class="table">
       <tbody>
@@ -122,12 +121,8 @@
         <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
-              <div class="media-thumb u-show-pc">
-                <div style="background-image: url(<%= mix('/assets/images/forest-driving/enjoy-img1.png') %>);"></div>
-              </div>
-
-              <div class="media-thumb u-show-sp">
-                <div style="background-image: url(<%= mix('/assets/images/forest-driving/sp-enjoy-img1.png') %>);"></div>
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/deb-den/enjoy-img1.jpg') %>);"></div>
               </div>
             </div>
           </div>
@@ -136,7 +131,7 @@
               <span>3歳から一人で運転！</span>
             </h4>
             <p class="media-desc">
-              3歳から一人で自由にアクセルとハンドルを操作。0歳から親子で一緒に乗れる、乗り物デビューにぴったりのアトラクション！
+              3歳から一人で自由にアクセルとハンドルを操作。0歳から親子で一緒に乗れる、のりものデビューにぴったりのアトラクション！
             </p>
 
             <div class="media-bottom">
@@ -154,12 +149,8 @@
         <div class="media media-subpage u-clear">
           <div class="media-left">
             <div class="media-bg">
-              <div class="media-thumb u-show-pc">
-                <div style="background-image: url(<%= mix('/assets/images/forest-driving/enjoy-img2.png') %>);"></div>
-              </div>
-
-              <div class="media-thumb u-show-sp">
-                <div style="background-image: url(<%= mix('/assets/images/forest-driving/sp-enjoy-img2.png') %>);"></div>
+              <div class="media-thumb">
+                <div style="background-image: url(<%= mix('/assets/images/deb-den/enjoy-img2.jpg') %>);"></div>
               </div>
             </div>
           </div>
@@ -182,7 +173,7 @@
 
   <!-- BOTTOM -->
 
-  <div class="call-to-action">
+  <!-- <div class="call-to-action">
     <div class="l-container">
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
@@ -216,29 +207,26 @@
             }) %>
           </div>
           <span class="call-to-action-dot call-to-action-dot-1">
-            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+            <img src="<%- mix('/assets/images/dokidoki/banner-dot-1.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-2">
-            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+            <img src="<%- mix('/assets/images/dokidoki/banner-dot-2.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-3">
-            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+            <img src="<%- mix('/assets/images/dokidoki/banner-dot-3.png')%> ">
           </span>
           <span class="call-to-action-dot call-to-action-dot-4">
-            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+            <img src="<%- mix('/assets/images/dokidoki/banner-dot-4.png')%> ">
           </span>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="banner-cta">
-    <div class="l-container">
-      <div class="banner-cta-bottom-inner">
-        <img src="<%- mix('/assets/images/sumika/company-logo.jpg')%> ">
-      </div>
-    </div>
-  </div>
+  <%- include('/partials/banner-cta', {
+    link: 'https://www.twinring.jp/mobipark_m/card/',
+    imgPath: mix('/assets/images/subpage-banner-bottom.png')
+  }) -%>
 
   <%- include('/partials/recommendation') -%>
 

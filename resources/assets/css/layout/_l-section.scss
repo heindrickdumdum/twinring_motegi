@@ -1,15 +1,20 @@
 .l-section {
   padding-bottom: 95px;
 
-  @include max-screen($breakpoint-mobile) {
+  &.youtube-video {
+    padding-top: 25px;
     padding-bottom: 0;
   }
 
+  @include max-screen($breakpoint-mobile) {
+    padding-bottom: 55px;
+  }
+
   &.l-section-hotel-twin {
-    padding-bottom: 70px;
+    padding-bottom: 47px;
 
     @include max-screen($breakpoint-mobile) {
-      padding-bottom: 52px;
+      padding-bottom: 33px;
     }
   }
 
@@ -27,6 +32,14 @@
     }
   }
 
+  &.l-section-activity {
+    margin-top: -72px;
+
+    @include max-screen ($breakpoint-mobile) {
+      margin-top: 0;
+    }
+  }
+
   @include max-screen ($breakpoint-mobile) {
     &.banner-image {
       padding-bottom: 60px;
@@ -38,6 +51,6 @@
 .l-section-inner {
   padding: 0 146px;
   @include max-screen($breakpoint-mobile) {
-    padding: 0 0 40px;
+    padding: 26px 0 40px;
   }
 }

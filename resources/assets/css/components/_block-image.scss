@@ -1,6 +1,6 @@
 .block-image {
   margin-top: 66px;
-  padding-bottom: 143px;
+  padding-bottom: 126px;
   position: relative;
 
   &::before {
@@ -9,13 +9,21 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 284px;
+    height: calc((100% / 2) + 70px);
     background-color: $color-light-gray;
+
+    @include max-screen($breakpoint-mobile) {
+      height: calc((100% / 2) + 118px);
+    }
+  }
+
+  &.block-image-hellowoods {
+    padding-bottom: 0;
   }
 
   @include max-screen($breakpoint-mobile) {
-    margin-top: 0;
-    padding-bottom: 20px;
+    margin-top: 27px;
+    padding-bottom: 36px;
   }
 }
 
@@ -24,7 +32,11 @@
   margin: 0 -8px;
   position: relative;
   z-index: $z-min;
+  justify-content: space-between;
 
+  &.block-image-list-hellowoods {
+    margin: 0;
+  }
   @include max-screen($breakpoint-mobile) {
     margin: 0;
     flex-direction: column;
@@ -64,8 +76,13 @@
   }
 
   &.block-image-item-hellowoods {
-    margin: 0 0 40px;
+    margin: 0 0 30px;
+    max-width: 598px;
 
+    .block-image-text-hellowoods {
+      text-align: center;
+    }
+    
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 26px;
       &:last-child {

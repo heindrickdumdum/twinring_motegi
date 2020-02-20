@@ -1,5 +1,6 @@
 <%
   var title = 'Twin Ring Motegi'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
   pageId = 'index'
 %>
 <% include('/partials/data/index') %>
@@ -37,7 +38,7 @@
   </ul>
 
   <div class="l-container mv-container">
-    <h2 class="mv-heading">
+    <h2 class="mv-heading mv-heading-top">
       <span class="mv-heading-text">
         Twin ring Motegi
       </span>
@@ -91,7 +92,7 @@
           </li>
           <% }) %>
         </ul>
-        <div class="swiper-pagination swiper-pagination-feature"></div>
+        <div class="swiper-pagination swiper-pagination-section"></div>
       </div>
     </section>
   </div>
@@ -160,8 +161,9 @@
     </div>
   </div>
 
-  <section class="l-section">
+  <section class="l-section l-section-activity design-activity">
     <%- include('/partials/top/section-activity') -%>
+    <div class="design-activity-inner"></div>
   </section>
 
   <section class="l-section design-circle">
@@ -178,11 +180,11 @@
     <%- include('/partials/top/section-twinring') -%>
   </section>
 
-  <section class="l-section l-section-hotel-twin">
+  <section class="l-section l-section-hotel-twin design-mount design-twinring">
     <%- include('/partials/top/section-hotel-twin') -%>
   </section>
 
-  <section class="l-how-to">
+  <section class="l-how-to design-how-to">
     <div class="how-to">
       <%- include('/partials/heading', {
         modifier: 'heading-wrap-how-to heading-wrap-center',
@@ -208,14 +210,14 @@
         </ul>
       </div>
 
-      <div class="l-container how-to-container"></div>
+      <div class="how-to-container"></div>
     </div>
   </section>
 
   <section class="information">
     <div class="l-container information-container">
       <%- include('/partials/heading', {
-        modifier: '',
+        modifier: 'heading-wrap-information',
         text: 'Information',
         subtextvg: 'information-subtext',
         altSubtext: '',

@@ -86,11 +86,6 @@
     top: -8%;
     width: 109%;
     height: 115%;
-
-    @include max-screen($breakpoint-mobile) {
-      // width: 111%;
-      // height: 128%;
-    }
   }
 }
 
@@ -127,8 +122,12 @@
 
   &.article-no-design {
     .article-heading {
+      margin-top: 7px;
+      padding-left: 0;
       color: $color-mineshaft;
+      letter-spacing: 0.03em;
     }
+
     &:hover {
       @include min-screen($breakpoint-mobile + 1) {
         .button-gradient-icon {

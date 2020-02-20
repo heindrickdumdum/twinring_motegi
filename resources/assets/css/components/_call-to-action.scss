@@ -192,7 +192,34 @@
 
 
 .call-to-action-hellowoods {
+  .call-to-action-inner {
+    padding: 40px;
+  }
+  
+  .headig-call-to-action {
+    margin: 0;
+    .heading-text {
+      font-size: 25px;
+    }
+  }
+
   &::after {
     display: none;
+  }
+}
+
+.call-to-action-musasabi {
+  &::before {
+    @include min-screen($breakpoint-mobile + 1) {
+      background-image: url(../images/musasabi/musasabi-cta-bg.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: -32px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
   }
 }

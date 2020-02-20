@@ -4,6 +4,10 @@
   right: 20px;
   transition: transform $duration $ease-in-out;
 
+  @include max-screen($breakpoint-mobile) {
+    width: 15px;
+  }
+
   svg {
     width: 100%;
     height: 12px;
@@ -54,6 +58,18 @@
   &.button-parkmap {
     width: 98%;
 
+    @include min-screen($breakpoint-mobile + 1) {
+      &:hover {
+        color: $color-green;
+
+        .button-icon {
+          svg {
+            stroke: $color-green;
+          }
+        }
+      }
+    }
+
     .button-icon {
       right: 18px;
     }
@@ -70,6 +86,28 @@
     .button-icon {
       right: 26px;
       width: 20px;
+    }
+  }
+
+  &.button-sumika-instagram {
+    @include max-screen($breakpoint-mobile) {
+      width: 75%;
+    }
+    .button-icon {
+      @include max-screen($breakpoint-mobile) {
+        width: 17px;
+        right: 15px;
+      }
+    }
+  }
+
+  &.button-instagram {
+    max-width: 381px;
+    letter-spacing: 0.112em;
+    width: 100%;
+    
+    @include max-screen($breakpoint-mobile) {
+      max-width: 248px;
     }
   }
 
@@ -102,6 +140,27 @@
 
     @include max-screen($breakpoint-mobile) {
       max-width: 246px;
+    }
+  }
+
+  &.button-comparison {
+    max-width: 370px;
+    width: 100%;
+
+    br {
+      display: block;
+
+      @include min-screen(526px) {
+        display: none;
+      }
+    }
+
+    .button-icon {
+      @include max-screen(525px) {
+        right: 0;
+        position: relative;
+        margin-left: 20px;
+      }
     }
   }
 }

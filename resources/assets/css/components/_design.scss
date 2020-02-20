@@ -3,7 +3,10 @@
 .design-mount,
 .design-feature,
 .design-parkmap,
-.design-parkmap-inner {
+.design-activity,
+.design-parkmap-inner,
+.design-activity-inner,
+.design-how-to {
   position: relative;
 
   &::before,
@@ -14,6 +17,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+
+    @include max-screen($breakpoint-mobile) {
+      display: none;
+    }
   }
 }
 
@@ -24,6 +31,14 @@
     left: 0;
     top: 143px;
     background-image: url(#{$image-path}design-mount1.png);
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+      width: 130px;
+      height: 106px;
+      top: 169px;
+      left: 32px;
+    }
   }
   &::after {
     width: 57px;
@@ -41,6 +56,16 @@
     left: 45px;
     top: -58px;
     background-image: url(#{$image-path}design-leaves2.png);
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+      width: 194px;
+      height: 175px;
+      right: -56px;
+      top: -20px;
+      left: auto;
+      background-image: url(#{$image-path}design-leaves1-sp.png);
+    }
   }
   &::after {
     width: 78px;
@@ -48,6 +73,15 @@
     right: 379px;
     top: -31px;
     background-image: url(#{$image-path}design-leaves3.png);
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+      width: 153px;
+      height: 146px;
+      left: -38px;
+      top: calc((100% / 2) - 161px);
+      background-image: url(#{$image-path}design-leaves2-sp.png);
+    }
   }
 }
 
@@ -68,6 +102,53 @@
   }
 }
 
+.design-activity {
+  &::before {
+    width: 39px;
+    height: 34px;
+    left: 163px;
+    top: 162px;
+    background-image: url(#{$image-path}design-leaves7.png);
+    z-index: $z-min;
+  }
+  &::after {
+    width: 135px;
+    height: 262px;
+    right: 94px;
+    top: -68px;
+    background-image: url(#{$image-path}design-leaves6.png);
+  }
+}
+
+.design-activity-inner {
+  &::before {
+    width: 78px;
+    height: 109px;
+    left: 34px;
+    bottom: 6px;
+    background-image: url(#{$image-path}design-leaves8.png);
+  }
+  &::after {
+    width: 228px;
+    height: 183px;
+    right: -23px;
+    bottom: 49px;
+    background-image: url(#{$image-path}design-mount.png);
+  }
+}
+
+.design-how-to {
+  &::before {
+    width: 204px;
+    height: 204px;
+    right: 0;
+    top: -132px;
+    background-image: url(#{$image-path}design-circle2.png);
+    z-index: $z-min;
+  }
+}
+
+
 .design-circle {
   &::before {
     width: 204px;
@@ -75,7 +156,6 @@
     left: -11px;
     bottom: 105px;
     background-image: url(#{$image-path}design-circle.png);
-    opacity: .3;
   }
 
   &::after {
@@ -91,10 +171,9 @@
   &::before {
     width: 228px;
     height: 183px;
-    left: -11px;
-    bottom: 343px;
+    left: 16px;
+    top: 348px;
     background-image: url(#{$image-path}design-mount.png);
-    opacity: .3;
   }
 
   &::after {
@@ -103,6 +182,17 @@
     right: 80px;
     bottom: 118px;
     background-image: url(#{$image-path}design-petals2.png);
+  }
+
+  &.design-twinring {
+    &::after {
+      width: 37px;
+      height: 36px;
+      right: 93px;
+      bottom: calc((100% / 2) - 124px);
+      background-image: url(#{$image-path}design-petal2.png);
+      z-index: $z-min;
+    }
   }
 }
 
@@ -125,7 +215,6 @@
     left: 62px;
     bottom: 30px;
     background-image: url(#{$image-path}design-petals3.png);
-    opacity: .3;
   }
 
   &::after {
@@ -133,6 +222,6 @@
     height: 36px;
     right: 120px;
     bottom: 123px;
-    background-image: url(#{$image-path}design-petal2.png);
+    background-image: url(#{$image-path}design-petal3.png);
   }
 }

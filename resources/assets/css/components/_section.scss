@@ -1,9 +1,9 @@
 .section-inner {
-  margin-top: 27px;
+  margin-top: -11px;
 
   &.section-inner-activity {
     @include max-screen($breakpoint-mobile) {
-      margin: 90px 0;
+      margin: 83px 0 90px;
     }
   }
 }
@@ -16,9 +16,7 @@
   position: relative;
 
   @include max-screen($breakpoint-mobile) {
-    // height: 204px;
-    // padding-top: 43%;
-    padding-top: 32%;
+    padding-top: 46%;
     height: auto;
   }
 }
@@ -91,7 +89,7 @@
   line-height: 2;
   letter-spacing: 0.19em;
   position: relative;
-  z-index: $z-min;
+  z-index: $z-max9;
 
   @include max-screen($breakpoint-mobile) {
     text-align: left;
@@ -105,7 +103,7 @@
 
   @include max-screen($breakpoint-mobile) {
     width: 249px;
-    margin: 46px auto 0;
+    margin: 10px auto 0;
 
     // accessing _button.scsss
     .button-icon {

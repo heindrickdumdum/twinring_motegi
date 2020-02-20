@@ -10,7 +10,15 @@
           <img class="step-number" src="/assets/images/tsubasa/<%= item.step %>.png" alt="Goal">
         </div>
         <div class="step-image">
-          <img src="<%= item.image %>" alt="Step 1">
+          <div class="step-image-inner">
+
+            <% if(item.imageSp !== '') { %>
+              <img class="u-show-pc" src="<%= item.image %>" alt="Step <%= item.step %>">
+              <img class="u-show-sp" src="<%= item.imageSp %>" alt="Step <%= item.step %>">
+            <% } else { %>
+              <img src="<%= item.image %>" alt="Step <%= item.step %>">
+            <% } %>
+          </div>
         </div>
         <div class="step-title"><%= item.heading %></div>
         <% if (item.subHeading != "") { %>

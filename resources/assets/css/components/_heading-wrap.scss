@@ -1,4 +1,15 @@
 .heading-wrap {
+
+  &.heading-wrap-information {
+    .heading-text {
+      letter-spacing: 0.01em;
+    }
+    .heading-subtext {
+      margin-top: 14px;
+      width: 309px;
+    }
+  }
+
   &.heading-gradient-tobottom {
     .heading-text {
       background: linear-gradient(to bottom, #027cc3 35%, #099f48 100%);
@@ -37,40 +48,40 @@
     .heading-text,
     .heading-subtext {
       margin: 0 auto;
-      letter-spacing: 0.03em;
-    }
+      letter-spacing: -0.01em;
+      font-size: 34px;
 
-    .heading-subtext {
-      margin: 25px auto 0;
-    }
-  }
-
-  &.heading-wrap-menu {
-    .heading-subtext {
       @include max-screen($breakpoint-mobile) {
-        margin: 13px auto 0;
-        height: 26px;
+        letter-spacing: 0.01em;
+        font-size: 24px;
       }
     }
 
-    .heading {
-      @include max-screen($breakpoint-mobile) {
-        margin: 24px 0 37px;
-      }
+    .heading-subtext {
+      margin: 13px auto 0;
     }
   }
 
   &.heading-wrap-parkmap {
     .heading-subtext {
       width: 750px;
+      max-width: 100%;
 
       @include max-screen($breakpoint-mobile) {
         width: 400px;
         height: 70px;
         display: inline-block;
         text-align: left;
-        margin-left: -9px;
+      }
+    }
+  }
+
+  &.heading-wrap-how-to {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
         margin-top: 11px;
+        width: 218px;
+        height: 30px;
       }
     }
   }
@@ -78,6 +89,11 @@
   &.heading-wrap-activity {
     .heading-subtext {
       width: 800px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 100%;
+        width: 316px;
+      }
     }
   }
 
@@ -107,45 +123,50 @@
     }
   }
 
-  &.heading-sumika-faq {
-    margin-bottom: 40px;
-    text-align: center;
-
-    .heading-subtext {
-      width: 284px;
-      height: 34px;
-      margin: 0 auto;
-    }
-
-    .heading-text {
-      letter-spacing: 0.1em;
-    }
-  }
-// sumika/itadaki/dokidoki
-
   &.heading-enjoy {
     margin-bottom: 40px;
     svg {
       width: 520px;
       height: 36px;
       @include max-screen($breakpoint-mobile) {
-        width: auto;
-        height: 53px;
+        position: relative;
+        top: -6px;
+        width: 217px;
+        height: 57px;
       }
     }
   }
 
   &.heading-wrap-craft {
     .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 10px;
+      }
+
       @include max-screen($breakpoint-mobile) {
         margin-top: 11px;
       }
     }
 
     svg {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 378px;
+        height: 33px;
+      }
+
       @include max-screen($breakpoint-mobile) {
         height: 25px;
       }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: -0.04em;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 64px;
     }
   }
 
@@ -155,8 +176,10 @@
       width: 520px;
       height: 36px;
       @include max-screen($breakpoint-mobile) {
-        width: auto;
-        height: 53px;
+        position: relative;
+        top: -8px;
+        width: 206px;
+        height: 57px;
       }
     }
   }
@@ -167,7 +190,9 @@
       width: 520px;
       height: 36px;
       @include max-screen($breakpoint-mobile) {
-        width: auto;
+        width: 274px;
+        position: relative;
+        top: -14px;
       }
     }
   }
@@ -180,14 +205,6 @@
       @include max-screen($breakpoint-mobile) {
         width: auto;
       }
-    }
-  }
-
-  &.heading-attraction {
-    .heading-subtext {
-      margin-top: 10px;
-      max-width: 489px;
-      width: 100%;
     }
   }
 
@@ -209,78 +226,217 @@
         width: auto;
       }
     }
-
   }
 
-  &.heading-net-acro-x {
-    margin-top: 15px;
-    margin-bottom: 0;
+  &.heading-attraction {
+    .heading-subtext {
+      margin-top: 10px;
+      max-width: 489px;
+      width: 100%;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    .heading-main-subpage {
+      margin-top: 0;
+    }
+
+    .heading-family-walk {
+      .heading {
+        margin-bottom: 20px;
+      }
+
+      .heading-subtext {
+        width: 315.5px;
+        height: 55.5px;
+        margin-top: 12px;
+      }
+    }
+
+    .heading-guide-walk {
+      .heading {
+        margin-bottom: 20px;
+      }
+
+      .heading-subtext {
+        width: 196.5px;
+        height: 56px;
+        margin-top: 13px;
+      }
+    }
+
+    .heading-free-walk {
+      .heading {
+        margin-bottom: 18px;
+      }
+
+      .heading-subtext {
+        width: 256.5px;
+        height: 25px;
+        margin-top: 14px;
+      }
+    }
+  }
+
+  &.heading-wrap-video-musasabi {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 35px;
+    }
+
+    .heading-subtext {
+      height: 91px;
+      width: 300px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 10px;
+      }
+
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 37px;
+        width: 731px;
+        transform: translate(-10px, 0px);
+      }
+    }
 
     .heading-text {
-      position: relative;
-      left: 6px;
-      letter-spacing: 0.16em;
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(7px, -1px);
+      }
+    }
+
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 54px;
+      }
     }
   }
 
-  &.heading-carbike {
+  &.heading-howto-musasabi {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 54px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(10px, 0px);
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(9px, 1px);
+        height: 33px;
+      }
+    }
+  }
+
+  &.heading-forest-craft {
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 8px;
+        transform: translateX(-10px);
+        text-align: left;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        height: 43px;
+        display: block;
+        padding: 0 14px 0 8px;
+        margin-top: 3px;
+      }
+    }
+
+    svg {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 413px;
+        height: 36px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 316px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: -0.04em;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &.heading-sumika-faq {
+    margin-bottom: 40px;
     text-align: center;
-    margin-bottom: 27px;
 
-    @include min-screen($breakpoint-mobile + 1) {
-      margin-bottom: 85px;
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 24px;
     }
 
     .heading-subtext {
-      height: 40px;
-    }
-  }
-
-  &.heading-carbike-car {
-    svg {
-      max-width: 259px;
-      width: 100%;
-
-
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 405px;
+      svg {
+        @include max-screen($breakpoint-mobile) {
+          position: relative;
+          top: -15px;
+          width: 200px;
+          height: 35px;
+        }
       }
     }
-  }
 
-  &.heading-carbike-bike {
-    svg {
-      max-width: 318px;
-      width: 100%;
-
-      @include min-screen($breakpoint-mobile + 1) {
-        max-width: 497px;
-      }
+    .heading-text {
+      letter-spacing: 0.1em;
     }
   }
 
-  &.heading-carbike-workshop {
-    svg {
-      max-width: 260px;
-      width: 100%;
-
+  &.heading-wrap-menu {
+    .heading-text {
       @include min-screen($breakpoint-mobile + 1) {
-        max-width: 407px;
+        letter-spacing: -0.04em;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 22.5px;
       }
     }
-  }
-
-
-  &.heading-dokidoki-forest {
-    margin-bottom: 55px;
 
     .heading-subtext {
-      max-width: 659px;
-      margin-top: 35px;
-      width: 100%;
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 2px;
+        height: 34px;
+      }
+
+      svg {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 377px;
+          height: 34px;
+          margin-left: -17px;
+        }
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 7px auto 0;
+        height: 26px;
+      }
+    }
+
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin: 24px 0 41px;
+      }
     }
   }
-
 
   &.heading-course-challenge {
     margin-bottom: 35px;
@@ -311,12 +467,8 @@
 
       @include max-screen($breakpoint-mobile) {
         height: auto;
-        width: calc(100% + 40px);
+        width: 100%;
         max-width: 335px;
-      }
-
-      @include max-screen(375px) {
-        left: -20px;
       }
     }
   }
@@ -326,40 +478,32 @@
     .heading-subtext {
       max-width: 491px;
       width: 100%;
-    }
-  }
 
-
-  &.heading-hellowoods {
-    @include max-screen ($breakpoint-mobile) {
-      .heading {
-        .heading-text {
-          font-size: 22.5px;
-          text-align: left;
-          letter-spacing: 2px;
-        }
-      }
-    }
-  }
-
-
-  &.heading-forest-craft {
-    .heading {
       @include max-screen($breakpoint-mobile) {
-        margin-bottom: 0;
+        margin-top: 10px;
       }
     }
 
-    .heading-subtext {
-      @include max-screen($breakpoint-mobile) {
-        height: 43px;
-        display: block;
-        padding: 0 14px 0 8px;
-        margin-top: 3px;
-      }
+    .heading-aqua-labo {
       .heading-subtext {
-        text-align: left;
+        height: 48px;
       }
+    }
+
+    .heading-mammal-labo {
+      .heading-subtext {
+        height: 55px;
+      }
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    .subpage-section-family-walk {
+      margin-top: 72px;
+    }
+
+    .subpage-section-aqua-labo {
+      margin-top: 150px;
     }
   }
 }

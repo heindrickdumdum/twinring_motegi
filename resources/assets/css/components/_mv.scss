@@ -938,3 +938,15 @@
     margin-bottom: 127px;
   }
 }
+
+.mv-tsubasa {
+  @include max-screen ($breakpoint-mobile) {
+    .mv-logo-tsubasa {
+      display: block;
+      max-width: 130px;
+      bottom: -140px;
+      right: 10px;
+    }
+  }
+}
+

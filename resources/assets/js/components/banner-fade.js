@@ -18,5 +18,5 @@ export default function bannerFade(params) {
 
       items[currentIdx].classList.add('is-active');
     }, 4200);
-  }, 4200);
+  }, 100);
 }

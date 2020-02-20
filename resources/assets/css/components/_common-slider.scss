@@ -2,6 +2,9 @@
   position: relative;
 
   .swiper-wrapper {
+    justify-content: center;
+    margin-left: 40px;
+
     .swiper-slide-prev {
       opacity: 0.7;
     }

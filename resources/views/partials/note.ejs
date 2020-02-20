@@ -1,0 +1,11 @@
+<%
+if (typeof modifier === 'undefined'){
+  var modifier = '';
+}
+%>
+
+<div class="note">
+  <div class="note-message<%- ' '+modifier %>"
+    style="background-image: url('/assets/images/<%- image_directory +'/'+ image_filename %>');">
+  </div>
+</div>

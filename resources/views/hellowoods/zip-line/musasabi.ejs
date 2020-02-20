@@ -43,7 +43,7 @@
         <div class="heading-wrap heading-main heading-main-musasabi">
           <h2 class="heading">
             <span class="heading-texts">
-              <img class="u-show-pc" src="<%= mix('/assets/images/musasabi/musasabi-color-title.png') %>" alt="">
+              <img class="u-show-pc" src="<%= mix('/assets/images/musasabi/musasabi-color-title-updated.png') %>" alt="">
               <img class="u-show-sp" src="<%= mix('/assets/images/musasabi/musasabi-color-title-sp.png') %>" alt="ガイドと一緒に 森を巡るガイドツアー式 ジップライン">
             </span>
           </h2>
@@ -59,7 +59,9 @@
           <span>アトラクション情報</span>
         </h3>
 
-        <p>ムササビはハローウッズの森のガイド付のジップラインです。地上、樹冠、樹間と移動しながらいろいろな発見をし、さらに鳥が森の中を飛び回るようなジップスライド体験で、今まで経験したことのない爽快感をぜひ体験してください。</p>
+        <p>
+          森の中をガイドが案内しながら、木と木の間をムササビのように飛び回るジップライン。生きものの目線に近づいて、植物を身近に感じながら自然の面白さを見つけよう。
+        </p>
 
         <table class="table">
           <tbody>
@@ -79,7 +81,7 @@
 
             <tr class="table-row">
               <th class="table-head">雨天の運行</th>
-              <td class="table-col">天候などによって安全が確保できないと判断した場合は、運行を中止いたします。</td>
+              <td class="table-col">天候などによって安全が確保できないと判断した場合は、運行を中止いたします</td>
             </tr>
 
             <tr class="table-row">
@@ -92,14 +94,16 @@
             </tr>
             <tr class="table-row">
               <th class="table-head">料金</th>
-              <td class="table-col">モビパークパスポート対象外<br>2200円</td>
+              <td class="table-col">モビパークパスポート対象外<br/>2.200円</td>
             </tr>
             <tr class="table-row">
               <th class="table-head">受付方法について</th>
-              <td class="table-col">・森のジップライン ムササビは当日予約制です。ハローウッズインフォメーションにて受付を行ってください。<br>
-                　※受付の際、利用制限を確認いたします。利用希望者様ご本人が受付にお越しください。<br>
-                　※未成年の方は保護者の同意署名が必要です。（保護者となる方は成人（20歳以上）の方に限ります。）<br>
-                ・定員に達し次第、受付を終了いたします。</td>
+              <td class="table-col">
+                ・森のジップライン ムササビは当日予約制です。ハローウッズインフォメーションにて受付を行ってください。<br/>
+                　※受付の際、利用制限を確認いたします。利用希望者様ご本人が受付にお越しください。<br/>
+                　※未成年の方は保護者の同意署名が必要です。（保護者となる方は成人（20歳以上）の方に限ります。）<br/>
+                ・定員に達し次第、受付を終了いたします。
+              </td>
             </tr>
             <tr class="table-row">
               <th class="table-head">ご利用にあたって</th>
@@ -112,7 +116,7 @@
                 <p>飲酒されている方、妊娠中の方、心疾患をお持ちの方、体調不良の方、健康上不安のある方はご利用いただけません。</p>
                 <p>【4】事前説明・同意書にご同意いただける方</p>
                 <p>※参加者が未成年（20歳未満）の場合は、保護者（成人）の署名が必要です。</p>
-                <p>【5】聴覚障がいや視覚障がいなど、お身体の不自由な方は、ご利用いただけない場合が</p>
+                <p>【5】聴覚障がいや視覚障がいなど、お身体の不自由な方は、ご利用いただけない場合がございます。</p>
                 <br/>
                 <p>注意事項</p>
                 <p>【1】ルールを守らない場合は重大事故となる可能性がありますので、必ずスタッフの指示に従ってください。</p>
@@ -161,31 +165,9 @@
         </div>
 
         <div class="subpage-section-video-wrapper">
-          <iframe class="video-border" width="760" height="430" src="https://www.youtube.com/embed/iydaJ8lN-4I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="video-border" width="760" height="430" src="https://www.youtube.com/embed/Jxao8GHXegA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
-    </section>
-
-    <section class="subpage-section subpage-section-howto subpage-section-howto-musasabi">
-
-      <div class="subpage-section-howto-inner">
-        <div class="l-section-title">
-          <%- include('/partials/heading', {
-            modifier: 'heading-gradient-tobottom heading-howto-musasabi',
-            text: 'Flow to Play',
-            alt: '',
-            altSubtext: '',
-            subtextvg: 'trial-title'
-          }) %>
-        </div>
-
-        <div class="steps-list-wrapper">
-          <%- include('/partials/steps', {
-            dataSteps: getData().data.stepsMusasabi
-          }) -%>
-        </div>
-      </div>
-
     </section>
 
     <section class="subpage-section subpage-section-faq">
@@ -213,8 +195,7 @@
             </div>
             <div class="call-to-action-description">
               <p class="call-to-action-description-text">
-                森のジップライン ムササビのこだわりポイントや、<br>
-                知っているともっと楽しくなる情報を配信中しています。
+                こだわりポイントや、<br>知っているともっと楽しくなる情報はこちら！
               </p>
             </div>
             <div class="l-button l-button-call-to-action">
@@ -276,37 +257,34 @@
 
           <div class="comparison-row">
             <div class="comparison-col">
-              <p>特徴</p>
+              <!-- <p>特徴</p> -->
             </div>
             <div class="comparison-col">
               <ul>
-                <li>・日本最大級のジップラインで森の中からサーキットに向けて高低差20mを一気に滑る</li>
-                <li>・森とサーキット2つの景色を楽しめる</li>
+                <li>森からサーキットへ大空を羽ばたく、全長５６１ｍの空中散歩！</li>
               </ul>
             </div>
             <div class="comparison-col">
               <ul>
-                <li>・ガイドと一緒に森を抜け谷を越える「森を楽しむ」ジップライン</li>
-                <li>・地上18mの高さの樹冠タワーガイドとゆらゆらゆれる吊り橋も含む内容盛りだくさんのツアー</li>
+                <li>ガイドが案内しながら森を飛びまわる自然観察ツアー！</li>
               </ul>
             </div>
           </div>
 
           <div class="comparison-row">
             <div class="comparison-col">
-              <p>こんな方に<br />おすすめ</p>
+              <p>こんな方に<br>おすすめ</p>
             </div>
             <div class="comparison-col">
               <ul>
-                <li>・高低差やスピードでスリルを感じたい</li>
-                <li>・モビパークパスポートでお得に楽しみたい</li>
+                <li>・ジップライン初心者の方</li>
+                <li>・大空に飛び出して壮大な空中散歩を楽しみたい方</li>
               </ul>
             </div>
             <div class="comparison-col">
               <ul>
-                <li>・ガイドと一緒に森をとことん遊びつくしたい</li>
-                <li>・森の冒険、自然の中の発見を楽しみたい</li>
-                <li>・ただジップラインを滑るだけじゃ満足できない</li>
+                <li>・ガイドから森のことをじっくり聞きたい方</li>
+                <li>・家族や仲間と一緒に森の冒険を楽しみたい方</li>
               </ul>
             </div>
           </div>

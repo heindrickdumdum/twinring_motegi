@@ -48,7 +48,7 @@ export default function headerMenu() {
 
           document.querySelectorAll('[data-content="'+elAttrib+'"]').forEach( function(e) {
             e.style.display = 'block'
-            console.log(e.parentNode);
+            //console.log(e.parentNode);
           })
 
           scrollLock()

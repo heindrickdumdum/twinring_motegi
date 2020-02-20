@@ -12,13 +12,13 @@ slider({
    
     breakpoints: {
       1280: {
-        slidesPerView: 3.5,
-        spaceBetween: 50,
+        slidesPerView: 2.5,
+        spaceBetween: 60,
         loopedSlides: 0,
         initialSlide: 1,
         slidesPerGroup: 3,
-        
       },
+
       375: {
         spaceBetween: 20,
         centeredSlides: true,

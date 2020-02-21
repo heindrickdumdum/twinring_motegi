@@ -84,9 +84,9 @@
     background-size: 100% 100%;
     background-position: center;
     left: -89px;
-    top: -99px;
+    top: -76px;
     right: -67px;
-    bottom: -197px;
+    bottom: -170px;
 
     @include max-screen($breakpoint-mobile) {
       content: none;

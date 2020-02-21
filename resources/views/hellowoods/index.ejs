@@ -229,26 +229,9 @@
     </div>
 
     <section class="l-section l-section-hellowoods faq-file-dl">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: '',
-          text: 'FAQ',
-          alt: '',
-          altSubtext: '',
-          subtextvg: 'faq'
-        }) %>
-      </div>
-
-      <div class="l-container file-dl">
-        <div class="">
-          <div class="file-dl-wrap">
-            <a href="http://test.pdf" target="_blank" class="file-link">
-              <h2 class="file-name">ハローウッズのよくあるご質問 <img src="<%- mix('/assets/images/pdf-icon.png')%> " alt="PDF"></h2>
-              <span>(0KB)</span>
-            </a>
-          </div>
-        </div>
-      </div>
+      <%- include('/partials/accordion', {
+        dataAccordion: getData().data.accordionHellowoods
+      }) %>
     </section>
 
   <!--

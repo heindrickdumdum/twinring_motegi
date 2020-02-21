@@ -4,7 +4,7 @@
   position: relative;
   border: 1px solid #ccc;
   text-align: center;
-  padding: 0 40px;
+  padding: 0 40px 10px;
   overflow: hidden;
   transition: max-height .3s ease-in-out;
 
@@ -19,8 +19,7 @@
 
   .table-heading {
     margin: 0;
-    padding: 36px 0 50px;
-    position: relative;
+    padding: 36px 0;
   }
 
   .collapse-arrow {
@@ -29,6 +28,14 @@
     margin: 0 auto;
     bottom: 13px;
     top: auto;
+  }
+
+  &.is-open {
+    padding-bottom: 50px;
+
+    .collapse-arrow {
+      transform: rotate(0);
+    }
   }
 }
 

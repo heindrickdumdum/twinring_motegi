@@ -123,7 +123,7 @@ accordionData = [
 %>
 <% pageId = 'itadaki'; %>
 <%- include('./../partials/head', { title }) -%>
-<div class="subpage">
+<div class="subpage subpage-itadaki">
   <div class="mv mv-inner itadaki-mv">
     <ul class="mv-list">
       <li class="mv-item">
@@ -160,7 +160,7 @@ accordionData = [
       <div class="heading-wrap l-heading-main">
         <h2 class="heading">
           <span class="heading-texts">
-            <img src="<%= mix('/assets/images/itadaki/itadaki-main-title.png') %>" alt="itadaki">
+            <img src="<%= mix('/assets/images/itadaki/itadaki-color-title.png') %>" alt="itadaki">
           </span>
         </h2>
       </div>
@@ -557,7 +557,8 @@ accordionData = [
   <%- include('/partials/banner-cta', {
     modifier: 'banner-cta-bg-itadaki',
     link: 'https://www.twinring.jp/mobipark_m/card/',
-    imgPath: mix('/assets/images/subpage-banner-bottom.png')
+    imgPath: mix('/assets/images/subpage-banner-bottom.png'),
+    alt: '上手に乗れたらライセンスカードをつくろう'
   }) -%>
 
 

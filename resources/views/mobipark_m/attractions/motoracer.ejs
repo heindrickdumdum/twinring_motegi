@@ -136,15 +136,11 @@
                 日本で唯一、MotoGPTM世界選手権を開催しているツインリンクもてぎならではの本格的バイクアトラクションを体感しよう！
               </p>
 
-              <div class="media-bottom">
-                <div class="media-note">
-                  <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                  <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                  <div class="media-note-text">
-                    勇気を出して<br />タイムアタックにチャレンジできタネ！
-                  </div>
-                </div>
-              </div>
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/motoracer/racer-dekitane-banner.jpg')
+              }) %>
+
             </div>
           </div>
           <div class="media media-subpage u-clear">

@@ -92,10 +92,15 @@
   z-index: $z-max9;
 
   > a {
+    transition: opacity 0.3s ease-in;
+
     &:link,
-    &:hover,
     &:visited {
       color: $color-black;
+    }
+
+    &:hover {
+      opacity: 0.5;
     }
   }
 

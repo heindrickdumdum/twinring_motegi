@@ -190,6 +190,12 @@
         @include min-screen($breakpoint-mobile + 1) {
           transform: translate(-11px, 2px);
         }
+
+        &:last-child {
+          @include max-screen($breakpoint-mobile) {
+            max-width: 335px;
+          }
+        }
       }
     }
 

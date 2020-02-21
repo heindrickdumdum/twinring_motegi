@@ -1,0 +1,19 @@
+// .collpase {}
+
+.collapse-inner {
+  position: relative;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 0 40px 60px;
+  overflow: hidden;
+  transition: max-height .3s ease-in-out;
+
+  // &.is-active {
+  //   max-height: 700px;
+  // }
+
+  .table-subheading {
+    text-align: center;
+    margin-top: 40px;
+  }
+}

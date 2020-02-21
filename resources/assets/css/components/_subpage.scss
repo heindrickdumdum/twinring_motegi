@@ -417,8 +417,7 @@
 
 //modifier walk precuation
 .subpage-inner-precaution {
-  background-color: #479d4c;
-  color: $color-white;
+  background-color: #f7f7f7;
 
   @include min-screen($breakpoint-mobile + 1) {
     padding: 70px 56px;

@@ -1,5 +1,10 @@
 .swiper-container {
   overflow: visible;
+  opacity: 0;
+
+  &.swiper-container-initialized {
+    opacity: 1;
+  }
 
   .forest-craft & {
   	@include min-screen($breakpoint-mobile + 1) {

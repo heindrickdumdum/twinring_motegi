@@ -82,6 +82,20 @@
 	line-height: 1.7778;
 	color: $color-mineshaft;
 	margin: 12px 0 5px;
+	position: relative;
+
+	span {
+		font-size: 14px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		font-weight: normal;
+
+		@include max-screen($breakpoint-mobile) {
+			font-size: 9px;
+		}	
+	}
 
 	@include max-screen($breakpoint-mobile) {
 		font-size: 13px;

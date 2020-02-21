@@ -118,3 +118,22 @@
 //   padding: 20px;
 //   line-height: 2;
 // }
+
+
+/*Tsubasa table*/
+.accordion-table-tsubasa {
+  .accordion-btn-table {
+    padding: 0;
+  }
+  .accordion-description-table {
+    border: none;
+    p {
+      padding: 0;
+      margin: 0;
+      background: none;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+}

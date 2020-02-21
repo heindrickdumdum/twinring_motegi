@@ -4,6 +4,31 @@
   text-align: center;
   z-index: $z-max;
 
+  // Modifier
+  &.banner-cta-bg {
+    &:before {
+      position: relative;
+      top: 41px;
+      left: -24px;
+      z-index: 2;
+      content: "";
+      display: block;
+      width: 228px;
+      height: 183px;
+      background-size: 100%;
+      background-position: center;
+      background-attachment: no-repeat;
+      background-image: url(#{$image-path}mount.png);
+
+      // @include sp { }
+    }
+
+    &:after {
+      margin-top: -252px;
+      // @include sp { }
+    }
+  }
+
   @include max-screen($breakpoint-mobile) {
     margin: 50px 0;
   }
@@ -11,7 +36,7 @@
   &:after {
     display: block;
     position: relative;
-    content: '';
+    content: "";
     background-color: $color-light-gray;
     height: 100px;
     margin-top: -113px;
@@ -40,8 +65,7 @@
     position: relative;
     z-index: 2;
     opacity: 1;
-    transition: opacity .5s ease;
-
+    transition: opacity 0.5s ease;
 
     &:hover {
       @include min-screen($breakpoint-mobile + 1) {

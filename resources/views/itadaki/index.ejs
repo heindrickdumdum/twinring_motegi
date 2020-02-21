@@ -320,14 +320,11 @@ accordionData = [
               ながら進みましょう！
             </p>
 
-            <div class="note">
-              <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-              <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-              <div class="note-text">
-                最後まであきらめずに<br>
-                ゴールできタネ！
-              </div>
-            </div>
+            <%- include('/partials/note', {
+              modifier: 'note-message-itadaki-banner-1',
+              image_directory: 'itadaki',
+              image_filename: 'itadaki-banner-1.jpg'
+            }) %>
 
           </div>
         </div>
@@ -350,14 +347,13 @@ accordionData = [
               制覇して5階までたどり着ければ「迷宮森殿 ITADAKI」
               クリアです。
             </p>
-            <div class="note">
-              <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-              <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-              <div class="note-text">
-                難しいコースでもこわがらずに<br>
-                チャレンジできタネ！
-              </div>
-            </div>
+
+            <%- include('/partials/note', {
+              modifier: 'note-message-itadaki-banner-2',
+              image_directory: 'itadaki',
+              image_filename: 'itadaki-banner-2.jpg'
+            }) %>
+
           </div>
         </div>
         <div class="media u-clear">
@@ -452,22 +448,26 @@ accordionData = [
             <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
               <div class="youtube-video-wrapper">
                 <div class="youtube-video-inner">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/QwxqqkbxhiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/QwxqqkbxhiM" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 </div>
               </div>
               <p class="youtube-video-description">仲間とチャレンジコースに挑戦！</p>
-              </li>
-              <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
-                <div class="youtube-video-wrapper">
-                  <div class="youtube-video-inner">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/D8-Z6rgRe1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
+            </li>
+            <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
+              <div class="youtube-video-wrapper">
+                <div class="youtube-video-inner">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/D8-Z6rgRe1I" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 </div>
-                <p class="youtube-video-description">DOKIDOKI タイムアタック映像！</p>
-              </li>
+              </div>
+              <p class="youtube-video-description">DOKIDOKI タイムアタック映像！</p>
+            </li>
           </ul>
+        </div>
       </div>
-    </div>
   </section>
 
   <section class="faq l-section">
@@ -475,6 +475,45 @@ accordionData = [
       dataAccordion: getData().data.accordionItadaki
     }) %>
   </section>
+
+  <div class="call-to-action call-to-action-itadaki">
+    <div class="l-container">
+      <div class="call-to-action-wrapper">
+        <div class="call-to-action-inner">
+          <h2 class="headig-call-to-action">
+            <span class="heading-text">
+              ハローウッズをもっと楽しむ
+            </span>
+          </h2>
+          <div class="call-to-action-description">
+            <p class="call-to-action-description-text">
+              ハローウッズのこだわりポイントや、<br>
+              知っているともっと楽しくなる情報を配信中しています。
+            </p>
+          </div>
+          <div class="l-button l-button-call-to-action">
+            <%- include('/partials/button', {
+              modifier: '',
+              text: 'もっと見る',
+              link: '#'
+            }) %>
+          </div>
+          <span class="call-to-action-dot call-to-action-dot-1">
+            <img src="<%- mix('/assets/images/hellowoods/bubble-1.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-2">
+            <img src="<%- mix('/assets/images/hellowoods/bubble-2.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-3">
+            <img src="<%- mix('/assets/images/hellowoods/bubble-4.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-4">
+            <img src="<%- mix('/assets/images/hellowoods/bubble-3.png')%> ">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- <div class="call-to-action">
     <div class="l-container">
@@ -517,6 +556,7 @@ accordionData = [
 
 
   <%- include('/partials/banner-cta', {
+    modifier: 'banner-cta-bg',
     link: 'https://www.twinring.jp/mobipark_m/card/',
     imgPath: mix('/assets/images/subpage-banner-bottom.png')
   }) -%>

@@ -235,15 +235,11 @@
             <p class="media-desc">
               “巨大などんぐりの木”に見立てた５階建ての「森感覚アスレチック DOKIDOKI」には、全部で３９のアスレチックがあります。さまざまなアスレチックをクリアしててっぺんをめざしましょう！
             </p>
-
-            <div class="note">
-              <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-              <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-              <div class="note-text">
-                てっぺんまで登れタネ！
-              </div>
-            </div>
-
+            <%- include('/partials/note', {
+              modifier: 'note-message-itadaki-banner-1',
+              image_directory: 'dokidoki',
+              image_filename: 'dokidoki-banner-1.jpg'
+            }) %>
           </div>
         </div>
         <div class="media u-clear">
@@ -261,14 +257,11 @@
             <p class="media-desc">
               森感覚アスレチック DOKIDOKIは小学1年生から高学年、そして大人も楽しめるアスレチックです。 コースを進んで行くと、アスレチックの難易度でコースが分かれ、年齢や体力に応じてコースを選ぶことができます。
             </p>
-            <div class="note">
-              <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-              <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-              <div class="note-text">
-                難しいコースに<br>
-                チャレンジできタネ！
-              </div>
-            </div>
+            <%- include('/partials/note', {
+              modifier: 'note-message-itadaki-banner-1',
+              image_directory: 'dokidoki',
+              image_filename: 'dokidoki-banner-1.jpg'
+            }) %>
           </div>
         </div>
         <div class="media u-clear">

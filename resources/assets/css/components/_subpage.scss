@@ -45,6 +45,12 @@
     }
   }
 
+  &.subpage-itadaki {
+    &::before {
+      background-image: url('../images/itadaki/subpage-bg.png');
+    }
+  }
+
   &.subpage-craft {
     &::before {
       content: normal;

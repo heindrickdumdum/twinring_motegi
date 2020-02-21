@@ -28,19 +28,35 @@
   }
 }
 
+.header-sub-content-overlay {
+  @include min-screen($breakpoint-mobile + 1) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -9;
+    transition: opacity $duration $ease-in-out;
+
+    &.is-visible {
+      opacity: 1;
+      background: rgba($color-black, .5);
+      z-index: $z-min;
+    }
+  }
+}
+
 .header-sub-content-wrap {
   opacity: 0;
-  background: rgba($color-black, .5);
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 183px;
   left: 0;
+  right: 0;
   height: calc(100vh - 180px);
-  z-index: -9;
   transition: opacity .5s $ease-in-out;
 
   @include max-screen($breakpoint-mobile) {
-    position: absolute;
     top: 0;
   }
 
@@ -106,9 +122,12 @@
 }
 
 .header-sub-content-inner-wrap {
+  margin-top: 2px;
   padding: 27px 38px 35px;
   background-color: $color-white;
   overflow: hidden;
+  position: relative;
+  z-index: $z-max;
 }
 
 .header-sub-inner {

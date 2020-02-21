@@ -9,14 +9,14 @@ export default function headerMenu() {
         headerSub = document.querySelectorAll('.js-header-sub'),
         headerSubContent = document.querySelectorAll('.js-header-sub-content'),
         headerClose = document.querySelectorAll('.js-header-close'),
-        //headerContainer = document.querySelector('#js-header-container'),
+        headerOverlay = document.querySelector('#js-overlay'),
 
         headerSP = document.querySelector('#js-header-sp'),
         headerBurger = document.querySelector('#js-header-burger'),
         headerToggle = document.querySelector('#js-header-toggle'),
         headerToggleInner = document.querySelector('#js-header-toggle-inner');
 
-        //const wrap = document.querySelector('#js-wrap');
+  const wrap = document.querySelector('#js-wrap');
 
   let mediaQuery = window.matchMedia('(max-width: 749px)');
 
@@ -45,11 +45,14 @@ export default function headerMenu() {
       el.addEventListener('mouseenter', e => {
         e.preventDefault();
 
-        scrollLock();
-
         target.classList.add(CONST.VISIBLE_CLASS)
 
         if(target.classList.contains(CONST.VISIBLE_CLASS)) {
+          wrap.style.top = `${wrap.getBoundingClientRect().top}px`;
+          wrap.classList.add(CONST.IS_ACTIVE);
+
+          headerOverlay.classList.add(CONST.VISIBLE_CLASS);
+
           headerSub.forEach( e => {
             e.classList.remove(CONST.VISIBLE_CLASS);
           })
@@ -60,15 +63,6 @@ export default function headerMenu() {
 
     });
 
-    // window.addEventListener('scroll', function() {
-    //   if(this.scrollY > 0) {
-    //     headerSub.forEach( e => {
-    //       e.style.top = `${headerContainer.offsetHeight - this.scrollY}px`;
-    //       e.style.height = `calc(100vh - ${headerContainer.offsetHeight - this.scrollY}px)`;
-    //     })
-    //   }
-    // })
-
     // prevent element from clicking
     headerSubContent.forEach( e => {
       e.addEventListener('click', contentInner => {
@@ -76,14 +70,15 @@ export default function headerMenu() {
       });
     });
 
-    headerSub.forEach( e => {
-      e.addEventListener('click', sub => {
-        sub.preventDefault();
-        e.classList.remove(CONST.VISIBLE_CLASS);
-
-        scrollAble()
+    headerOverlay.addEventListener('click', e => {
+      e.preventDefault();
+      headerSub.forEach( sub => {
+        sub.classList.remove(CONST.VISIBLE_CLASS);
       })
 
+      e.currentTarget.classList.remove(CONST.VISIBLE_CLASS);
+
+      wrap.classList.remove(CONST.IS_ACTIVE);
     })
 
     headerClose.forEach( e => {
@@ -93,8 +88,8 @@ export default function headerMenu() {
         headerSub.forEach( sub => {
           sub.classList.remove(CONST.VISIBLE_CLASS);
         })
-
-        scrollAble()
+        headerOverlay.classList.remove(CONST.VISIBLE_CLASS);
+        wrap.classList.remove(CONST.IS_ACTIVE);
       });
     });
 

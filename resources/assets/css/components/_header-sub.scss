@@ -16,10 +16,13 @@
     z-index: -1;
     display: none;
     transition: opacity $duration $ease-in-out;
+
+    &.is-active {
+      display: block;
+    }
   }
 
   &.is-active {
-    display: block;
     opacity: 1;
     z-index: $z-min;
   }
@@ -34,7 +37,7 @@
   left: 0;
   height: calc(100vh - 180px);
   z-index: -9;
-  transition: opacity $duration $ease-in-out;
+  transition: opacity .5s $ease-in-out;
 
   @include max-screen($breakpoint-mobile) {
     position: absolute;
@@ -125,6 +128,7 @@
   position: absolute;
   top: 43.2%;
   right: 4px;
+  z-index: $z-min;
 
   @include max-screen($breakpoint-mobile) {
     position: relative;

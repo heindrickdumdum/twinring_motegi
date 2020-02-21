@@ -785,6 +785,17 @@
   }
 
   .mv-heading-dokidoki {
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: 50px;
+      
+      .mv-heading-subtexts {
+        svg {
+          width: 810px;
+          height: 72px;
+        }
+      }
+    }
+
     @include max-screen($breakpoint-mobile) {
     .mv-heading-subtexts {
       svg {

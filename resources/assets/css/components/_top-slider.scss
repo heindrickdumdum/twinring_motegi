@@ -42,15 +42,4 @@
     width: 100%;
     height: auto;
   }
-
-  .forest-craft & {
-    padding-top: 59.25%;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @include max-screen($breakpoint-mobile) {
-      padding-top: 55%;
-      margin-bottom: 0;
-    }
-  }
 }

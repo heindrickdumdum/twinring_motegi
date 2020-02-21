@@ -51,12 +51,16 @@
 
 .table-col {
   width: calc(100% - 93px);
-  letter-spacing: 0.18em;
+  letter-spacing: 0.1em;
   padding-top: 15px;
   padding-bottom: 15px;
 
   @include min-screen($breakpoint-mobile + 1) {
     width: calc(100% - 220px);
+  }
+
+  a {
+    color: $base-font-color;
   }
 }
 
@@ -91,6 +95,11 @@
       letter-spacing: 0.1em;
       line-height: 1.5;
     }
+  }
+
+  a {
+    color: $base-font-color;
+    text-decoration: underline;
   }
 }
 

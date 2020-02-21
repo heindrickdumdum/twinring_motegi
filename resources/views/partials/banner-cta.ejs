@@ -6,12 +6,20 @@ if (typeof link === 'undefined'){
 if (typeof imgPath === 'undefined'){
   var imgPath = '';
 }
+
+if(typeof modifier === 'undefined'){
+  var modifier ='';
+}
+
+if(typeof alt === 'undefined'){
+  var alt ='';
+}
 %>
 
-<div class="banner-cta">
+<div class="banner-cta<%- ' '+modifier %>">
   <div class="l-container">
     <a class="banner-cta-bottom-inner" href="<%- link %>" target="_blank">
-      <img src="<%- imgPath %>">
+      <img src="<%- imgPath %>" alt="<%- alt %>">
     </a>
   </div>
 </div>

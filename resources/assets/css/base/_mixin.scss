@@ -1,12 +1,12 @@
-@mixin sprite-width($sprite,$scale:1) {
+@mixin sprite-width($sprite, $scale: 1) {
   width: nth($sprite, 5) * $scale;
 }
 
-@mixin sprite-height($sprite,$scale:1) {
+@mixin sprite-height($sprite, $scale: 1) {
   height: nth($sprite, 6) * $scale;
 }
 
-@mixin sprite-position($sprite,$scale:1) {
+@mixin sprite-position($sprite, $scale: 1) {
   $sprite-offset-x: nth($sprite, 3) * $scale;
   $sprite-offset-y: nth($sprite, 4) * $scale;
   background-position: $sprite-offset-x $sprite-offset-y;
@@ -18,11 +18,11 @@
   background-repeat: no-repeat;
 }
 
-@mixin sprite-size($sprite,$scale:1) {
-  background-size: nth($sprite, 7)*$scale nth($sprite, 8)*$scale;
+@mixin sprite-size($sprite, $scale: 1) {
+  background-size: nth($sprite, 7) * $scale nth($sprite, 8) * $scale;
 }
 
-@mixin sprite($sprite,$scale:1) {
+@mixin sprite($sprite, $scale: 1) {
   display: inline-block;
   @include sprite-image($sprite);
   @include sprite-position($sprite, $scale);
@@ -31,7 +31,7 @@
   @include sprite-size($sprite, $scale);
 }
 
-@mixin line-clamp($line-height, $font-size, $lines, $color){
+@mixin line-clamp($line-height, $font-size, $lines, $color) {
   line-height: $line-height;
   height: $font-size * $line-height * $lines + px;
   overflow: hidden;
@@ -43,7 +43,7 @@
     position: absolute;
   }
   &:before {
-    content: '...';
+    content: "...";
     background: $color;
     right: 0;
     text-align: center;
@@ -51,7 +51,7 @@
     top: $font-size * $line-height * ($lines - 1) + px;
   }
   &:after {
-    content: '';
+    content: "";
     height: 100%;
     width: 100%;
     z-index: 2;
@@ -64,6 +64,17 @@
     $size: $size + 1;
   }
   @media all and (#{$type}-width: $size) {
+    @content;
+  }
+}
+
+@mixin debug($zIndex: auto) {
+  border: 1px solid #ff0000;
+  z-index: $zIndex;
+}
+
+@mixin sp {
+  @include max-screen($breakpoint-mobile) {
     @content;
   }
 }

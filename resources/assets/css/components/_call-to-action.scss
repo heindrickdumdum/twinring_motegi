@@ -22,13 +22,17 @@
       // height: 325px;
       // height: 255px;
       height: 120%;
-      content: '';
+      content: "";
       background-color: $color-light-gray;
       position: absolute;
       top: 80px;
       left: 0px;
       z-index: $z-min2;
     }
+  }
+
+  &.call-to-action-itadaki {
+    margin: 25px 0 -230px;
   }
 }
 
@@ -49,13 +53,13 @@
   max-height: 320px;
   padding: 47px;
 
-@include max-screen($breakpoint-mobile) {
-  padding: 27px 31px 10px;
-}
+  @include max-screen($breakpoint-mobile) {
+    padding: 27px 31px 10px;
+  }
 
   &:before {
     position: absolute;
-    content: '';
+    content: "";
     background-image: url(#{$image-path}sumika/frame-sm.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -68,7 +72,7 @@
 
   &:after {
     position: absolute;
-    content: '';
+    content: "";
     background-image: url(#{$image-path}sumika/green-dots.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -78,13 +82,12 @@
     bottom: 39px;
     pointer-events: none;
 
-    @include max-screen ($breakpoint-mobile) {
+    @include max-screen($breakpoint-mobile) {
       background-image: url(#{$image-path}sumika/green-dots-sp.png);
       background-size: contain;
       background-position: center;
     }
   }
-
 }
 
 .call-to-action-title {
@@ -107,9 +110,12 @@
   }
 
   @include max-screen($breakpoint-mobile) {
-
     // font-size: 12px;
     margin-top: 15px;
+  }
+
+  &.call-to-action-description-text-itadaki {
+    margin-top: -10px;
   }
 }
 
@@ -190,12 +196,11 @@
   padding-bottom: 37px;
 }
 
-
 .call-to-action-hellowoods {
   .call-to-action-inner {
     padding: 40px;
   }
-  
+
   .headig-call-to-action {
     margin: 0;
     .heading-text {

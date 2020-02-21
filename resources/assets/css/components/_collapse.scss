@@ -1,0 +1,38 @@
+// .collpase {}
+
+.collapse-inner {
+  position: relative;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 0 40px;
+  overflow: hidden;
+  transition: max-height .3s ease-in-out;
+
+  // &.is-active {
+  //   max-height: 700px;
+  // }
+
+  .table-subheading {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .table-heading {
+    margin: 0;
+    padding: 36px 0 50px;
+    position: relative;
+  }
+
+  .collapse-arrow {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 13px;
+    top: auto;
+  }
+}
+
+.collapse-content-wrap {
+  overflow: hidden;
+  transition: height .5s cubic-bezier(.22,.61,.36,1);
+}

@@ -4,6 +4,42 @@
   text-align: center;
   z-index: $z-max;
 
+  // modifier
+  &.banner-cta-bg-itadaki {
+    margin: 0 0 239px;
+
+    @include sp {
+      margin: 0 0 59px;
+    }
+
+    &:before {
+      position: relative;
+      top: 41px;
+      left: -78px;
+      z-index: 2;
+      content: "";
+      display: block;
+      width: 228px;
+      height: 183px;
+      background-size: 100%;
+      background-position: center;
+      background-attachment: no-repeat;
+      background-image: url(#{$image-path}mount.png);
+
+      @include sp {
+        display: none;
+      }
+    }
+
+    &:after {
+      margin-top: -252px;
+
+      @include sp {
+        margin-top: -37px;
+      }
+    }
+  }
+
   @include max-screen($breakpoint-mobile) {
     margin: 50px 0;
   }
@@ -11,7 +47,7 @@
   &:after {
     display: block;
     position: relative;
-    content: '';
+    content: "";
     background-color: $color-light-gray;
     height: 100px;
     margin-top: -113px;
@@ -40,8 +76,7 @@
     position: relative;
     z-index: 2;
     opacity: 1;
-    transition: opacity .5s ease;
-
+    transition: opacity 0.5s ease;
 
     &:hover {
       @include min-screen($breakpoint-mobile + 1) {

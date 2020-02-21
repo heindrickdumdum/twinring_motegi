@@ -1,0 +1,14 @@
+<%
+if (typeof modifier === 'undefined'){
+  var modifier = '';
+}
+
+if (typeof imgPath === 'undefined'){
+  var imgPath = '';
+}
+%>
+
+<div class="note  <%- modifier %>">
+  <div class="note-message" style="background-image: url(<%- imgPath %>);">
+  </div>
+</div>

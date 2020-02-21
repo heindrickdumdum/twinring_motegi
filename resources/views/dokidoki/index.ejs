@@ -187,7 +187,7 @@
             <td class="table-col">
               ※入場整理券は定員に達し次第、受付を終了いたします。<br>
               ※別途、モビパークパスポートまたはのりもの券をお買い求めください。<br>
-              ※アトラクションには年齢制限がございます。 >>詳しくはこちら<br>
+              ※アトラクションには年齢制限がございます。<a href="https://www.twinring.jp/mobipark_m/guide/"> >>詳しくはこちら</a><br>
               ※混雑状況や天候などより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
             </td>
           </tr>
@@ -235,14 +235,11 @@
             <p class="media-desc">
               “巨大などんぐりの木”に見立てた５階建ての「森感覚アスレチック DOKIDOKI」には、全部で３９のアスレチックがあります。さまざまなアスレチックをクリアしててっぺんをめざしましょう！
             </p>
-
-            <div class="note">
-              <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-              <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-              <div class="note-text">
-                てっぺんまで登れタネ！
-              </div>
-            </div>
+           
+            <%- include('/partials/note', {
+              modifier: 'note-message-itadaki-banner-1',
+              imgPath: mix('/assets/images/dokidoki/dokidoki-banner-1.jpg')
+            }) %>
 
           </div>
         </div>
@@ -261,14 +258,11 @@
             <p class="media-desc">
               森感覚アスレチック DOKIDOKIは小学1年生から高学年、そして大人も楽しめるアスレチックです。 コースを進んで行くと、アスレチックの難易度でコースが分かれ、年齢や体力に応じてコースを選ぶことができます。
             </p>
-            <div class="note">
-              <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-              <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-              <div class="note-text">
-                難しいコースに<br>
-                チャレンジできタネ！
-              </div>
-            </div>
+             
+            <%- include('/partials/note', {
+              modifier: 'note-message-itadaki-banner-1',
+              imgPath: mix('/assets/images/dokidoki/dokidoki-banner-2.jpg')
+            }) %>
           </div>
         </div>
         <div class="media u-clear">
@@ -298,7 +292,7 @@
       <div class="u-show-pc">
         <%- include('/partials/heading', {
         modifier: 'heading-forest',
-        text: 'Ways to feel the Forest',
+        text: 'Exciting athletic',
         alt: '',
         subtextvg: 'dokidoki-athletic-title',
         altSubtext: '',
@@ -307,7 +301,7 @@
       <div class="u-show-sp">
         <%- include('/partials/heading', {
         modifier: 'heading-forest',
-        text: 'Ways to feel the Forest',
+        text: 'Exciting athletic',
         alt: '',
         subtextvg: 'dokidoki-copy-title-sp',
         altSubtext: '',
@@ -403,7 +397,7 @@
             <%- include('/partials/button', {
               modifier: 'button-instagram',
               text: 'インスタグラムでもっと見る',
-              link: '#'
+              link: 'https://www.instagram.com/explore/tags/%E6%A3%AE%E6%84%9F%E8%A6%9A%E3%82%A2%E3%82%B9%E3%83%AC%E3%83%81%E3%83%83%E3%82%AFdokidoki/'
             }) %>
           </div>
           <!-- <div class="instagram-banner">
@@ -463,7 +457,8 @@
 
   <%- include('/partials/banner-cta', {
     link: 'https://www.twinring.jp/mobipark_m/card/',
-    imgPath: mix('/assets/images/subpage-banner-bottom.png')
+    imgPath: mix('/assets/images/subpage-banner-bottom.png'),
+    alt: '上手に乗れたらライセンスカードをつくろう'
   }) -%>
 
   <section class="recommendation l-section">

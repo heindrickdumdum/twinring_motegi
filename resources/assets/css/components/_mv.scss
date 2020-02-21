@@ -200,20 +200,28 @@
 
   &.hellowoods-mv-heading {
     bottom: 50px;
-
-
+    width: 100%;
 
     .heading-text {
       font-size: 45px;
       -webkit-text-fill-color: $color-white;
     }
     .heading-subtext {
-      height: 50px;
+      width: 100%;
+      max-width: 400px;
+      height: 90px;
+      margin-top: 0;
 
       @include max-screen ($breakpoint-mobile) {
         height: 43px;
         width: 227px;
         margin-top: 0;
+      }
+    }
+
+    .heading-tsubasa {
+      .heading-subtext {
+        max-width: 600px;
       }
     }
 
@@ -696,6 +704,10 @@
     height: 266px;
     background-image: url(../images/tsubasa/mv-logo.png);
     bottom: -60px;
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url(../images/tsubasa/mv-logo-sp.png);
+    }
   }
 }
 
@@ -944,6 +956,18 @@
     margin-bottom: 127px;
   }
 }
+
+.mv-tsubasa {
+  @include max-screen ($breakpoint-mobile) {
+    .mv-logo-tsubasa {
+      display: block;
+      max-width: 130px;
+      bottom: -140px;
+      right: 10px;
+    }
+  }
+}
+
 //modifier MV forest walk end
 
 //modifier forest labo 

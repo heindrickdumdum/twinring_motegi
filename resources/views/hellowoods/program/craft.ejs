@@ -77,8 +77,10 @@
           </tr>
           <tr class="table-row">
             <th class="table-head">対象者</th>
-            <td class="table-col">全年齢対象<br>
-              小学生以下は保護者の同伴（成人）が必要です</td>
+            <td class="table-col">
+              全年齢対象 <br/>
+              小学生以下は保護者の同伴（成人）が必要です
+            </td>
           </tr>
           <tr class="table-row">
             <th class="table-head">料金</th>
@@ -141,18 +143,10 @@
             <p class="media-desc">
               普段なかなか使うことのない道具を使って、木材を切っていこう！道具の使い方はスタッフが丁寧に教えるので、はじめてでも安心・安全！
             </p>
-            <div class="note">
-              <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-              <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-              <div class="note-text u-show-pc">
-                難しいコースでもこわがらずに<br>
-                チャレンジできタネ！
-              </div>
-              <div class="note-text u-show-sp">
-                材料を切れたら…<br/>
-                道具を上手に使えタネ！
-              </div>
-            </div>
+            <%- include('/partials/note', {
+              modifier: 'note-craft',
+              imgPath: mix('/assets/images/craft/craft-dekitane-banner-1.jpg')
+            }) %>
           </div>
         </div>
         <div class="media media-craft u-clear">
@@ -192,15 +186,10 @@
             <p class="media-desc">
               想像力を膨らませて、可愛くアレンジしてね！自分の想いを形にするって、とっても楽しい！
             </p>
-            <div class="note">
-              <img class="note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-              <img class="note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-              <div class="note-text">
-                最後まであきらめずに<br>
-                ゴールできタネ！
-              </div>
-
-            </div>
+            <%- include('/partials/note', {
+              modifier: 'note-craft',
+              imgPath: mix('/assets/images/craft/craft-dekitane-banner-2.jpg')
+            }) %>
           </div>
         </div>
 
@@ -229,11 +218,12 @@
         }) %>
       </div>
     </div>
-    <div class="swiper-container slider js-slider-craft" id="commonSlider">
+    <div class="swiper-container slider js-slider common-slider" id="commonSlider">
       <ul class="swiper-wrapper top-slide">
         <% forestCraft.forEach(item => { %>
         <li class="swiper-slide slider-item">
-          <div class="top-slider-image" style="background-image: url(<%- item.src -%>);">
+          <div class="top-slider-image">
+            <img src="<%- item.src -%>" alt="<%- item.alt -%>">
           </div>
           <span class="top-slider-text">
             <%- item.desc -%>

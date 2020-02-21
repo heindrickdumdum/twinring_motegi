@@ -26,8 +26,12 @@
       <div class="heading-wrap heading-main heading-main-moto-touring">
         <h2 class="heading">
           <span class="u-title-hidden">Moto Touring</span>
-          <span class="heading-texts">
+          <span class="heading-texts u-show-pc">
             <img src="<%= mix('/assets/images/moto-touring/moto-color-title.png') %>" alt="">
+          </span>
+
+          <span class="heading-texts u-show-sp">
+            <img src="<%= mix('/assets/images/moto-touring/moto-color-title-sp.png') %>" alt="">
           </span>
         </h2>
       </div>
@@ -131,15 +135,10 @@
                 家族みんなでお揃いのヘルメットをかぶってツーリング。子どもにも大人にもちょうどいいサイズのバイク！
               </p>
 
-              <div class="media-bottom">
-                <div class="media-note">
-                  <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                  <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                  <div class="media-note-text">
-                    みんなで<br />ツーリングを楽しめタネ！
-                  </div>
-                </div>
-              </div>
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/moto-touring/dekitane-banner1-image.jpg')
+              }) %>
             </div>
           </div>
           <div class="media media-subpage u-clear">
@@ -171,7 +170,7 @@
               </div>
             </div>
             <div class="media-right">
-              <h4 class="media-title media-title-nohighlight">
+              <h4 class="media-title">
                 <span>
                   より本格的なモトレーサーへステップアップ！
                 </span>
@@ -179,6 +178,11 @@
               <p class="media-desc">
                 モトツーリングでライセンスをゲットしたら、<br />レーサー気分が味わえるモトレーサーにステップアップしよう！
               </p>
+
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/moto-touring/dekitane-banner2-image.jpg')
+              }) %>
             </div>
           </div>
         </div>

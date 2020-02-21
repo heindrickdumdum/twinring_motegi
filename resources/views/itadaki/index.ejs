@@ -321,9 +321,8 @@ accordionData = [
             </p>
 
             <%- include('/partials/note', {
-              modifier: 'note-message-itadaki-banner-1',
-              image_directory: 'itadaki',
-              image_filename: 'itadaki-banner-1.jpg'
+              modifier: 'note-itadaki-banner-1',
+              imgPath: mix('/assets/images/itadaki/itadaki-banner-1.jpg')
             }) %>
 
           </div>
@@ -348,10 +347,10 @@ accordionData = [
               クリアです。
             </p>
 
+
             <%- include('/partials/note', {
-              modifier: 'note-message-itadaki-banner-2',
-              image_directory: 'itadaki',
-              image_filename: 'itadaki-banner-2.jpg'
+              modifier: 'note-itadaki-banner-2',
+              imgPath: mix('/assets/images/itadaki/itadaki-banner-2.jpg')
             }) %>
 
           </div>
@@ -388,8 +387,8 @@ accordionData = [
         <div class="u-show-pc">
           <%- include('/partials/heading', {
             modifier: 'heading-forest',
-            text: 'Ways to feel the Forest',
-            alt: 'Ways to feel the Forest',
+            text: 'Aim for the top of the ecosystem',
+            alt: 'Aim for the top of the ecosystem',
             subtextvg: 'itadaki-forest-title',
             altSubtext: '',
           }) %>
@@ -397,8 +396,8 @@ accordionData = [
         <div class="u-show-sp">
           <%- include('/partials/heading', {
             modifier: 'heading-forest',
-            text: 'Ways to feel the Forest',
-            alt: 'Ways to feel the Forest',
+            text: 'Aim for the top of the ecosystem',
+            alt: 'Aim for the top of the ecosystem',
             subtextvg: 'itadaki-copy-title-sp',
             altSubtext: '',
           }) %>
@@ -476,17 +475,19 @@ accordionData = [
     }) %>
   </section>
 
+  <!-- call to action w/ modifier -->
+
   <!-- <div class="call-to-action call-to-action-itadaki">
     <div class="l-container">
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <h2 class="headig-call-to-action">
             <span class="heading-text">
-              ハローウッズをもっと楽しむ
+              迷宮森殿 ITADAKI<br>をもっと楽しむ
             </span>
           </h2>
           <div class="call-to-action-description">
-            <p class="call-to-action-description-text">
+            <p class="call-to-action-description-text call-to-action-description-text-itadaki">
               ハローウッズのこだわりポイントや、<br>
               知っているともっと楽しくなる情報を配信中しています。
             </p>
@@ -515,8 +516,47 @@ accordionData = [
     </div>
   </div> -->
 
+  <!-- <div class="call-to-action">
+    <div class="l-container">
+      <div class="call-to-action-wrapper">
+        <div class="call-to-action-inner">
+          <h2>
+            <span class="heading-texts">
+              <img src="<%= mix('/assets/images/itadaki/itadaki-enjoy-more-title.png') %>" alt="sumika">
+            </span>
+          </h2>
+          <div class="call-to-action-description">
+            <p class="call-to-action-description-text">
+              ITADAKIのこだわりポイントや、<br>
+              知っているともっと楽しくなる情報を配信中しています。
+            </p>
+          </div>
+          <div class="l-button l-button-call-to-action">
+            <%- include('/partials/button', {
+              modifier: 'button-sumika',
+              text: 'もっと見る',
+              link: '#'
+            }) %>
+          </div>
+          <span class="call-to-action-dot call-to-action-dot-1">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-2">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-3">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+          </span>
+          <span class="call-to-action-dot call-to-action-dot-4">
+            <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
   <%- include('/partials/banner-cta', {
-    modifier: 'banner-cta-bg',
+    modifier: 'banner-cta-bg-itadaki',
     link: 'https://www.twinring.jp/mobipark_m/card/',
     imgPath: mix('/assets/images/subpage-banner-bottom.png')
   }) -%>

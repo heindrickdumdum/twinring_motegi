@@ -352,12 +352,6 @@
     }
   }
 
-  .note {
-    @include max-screen($breakpoint-mobile) {
-      margin-left: 22px;
-    }
-  }
-
   &:before {
     width: 0;
     height: 0;

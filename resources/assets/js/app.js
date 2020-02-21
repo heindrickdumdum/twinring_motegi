@@ -17,3 +17,4 @@ new SmoothScroll('a[href^="#"]', {
 document.querySelector('.js-collapse-button').onclick = function() {
   document.querySelector('.subpage-collapse-description').classList.toggle('hidden');
 };
+

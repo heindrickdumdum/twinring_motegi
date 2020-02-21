@@ -1,3 +1,4 @@
+
 <nav class="footer-top-links">
   <%
     getData().data.footerTopList.forEach( list => {
@@ -7,14 +8,22 @@
       list.forEach( item => {
     %>
     <li class="footer-top-links-item">
-      <span class="footer-top-links-text"><%- item.text %></span>
+      <%
+      if(item.link === '') { %>
+        <span class="footer-top-links-text"><%- item.text %></span>
+      <% } else { %>
+        <a class="footer-top-links-item-link" href="<%- item.link %>">
+          <span class="footer-top-links-text"><%- item.text %></span>
+        </a>
+      <% } %>
+
 
        <% if(typeof item.sub == 'object') { %>
         <ul class="footer-top-links-sub">
           <%
             item.sub.forEach( sub => {
           %>
-          <li><a href="<%- sub.text %>"><%- sub.text %></a></li>
+          <li><a href="<%- sub.link %>"><%- sub.text %></a></li>
           <% }) %>
         </ul>
       <% } %>

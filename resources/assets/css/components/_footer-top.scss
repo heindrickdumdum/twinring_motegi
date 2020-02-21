@@ -100,6 +100,18 @@
   letter-spacing: 0.03em;
 }
 
+.footer-top-links-item-link {
+  display: inline-block;
+  font-size: 14px;
+  color: $color-primary;
+  transition: color $duration $ease-in-out;
+  position: relative;
+
+  &:hover {
+    color: $color-green;
+  }
+}
+
 .footer-top-links-text {
   display: block;
   margin-bottom: 17px;

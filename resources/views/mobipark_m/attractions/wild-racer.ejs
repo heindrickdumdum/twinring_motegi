@@ -132,16 +132,11 @@
                 一人でも、家族でチームを組んでも、バトルが楽しい。勝利への近道は、カーブで思いっきりハンドルを切るとできるドリフト走行！
               </p>
 
-              <div class="media-bottom">
-                <div class="media-note">
-                  <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                  <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                  <div class="media-note-text">
-                    はじめてのドリフトに<br>
-                    挑戦できタネ！
-                  </div>
-                </div>
-              </div>
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/wild-racer/dekitane-banner-wildracer.jpg')
+              }) %>
+
             </div>
           </div>
           <div class="media media-subpage u-clear">

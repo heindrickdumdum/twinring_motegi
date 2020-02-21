@@ -269,6 +269,8 @@
       font-size: 39px;
       height: auto;
       max-width: none;
+      margin-bottom: 0;
+
 
       @include max-screen ($breakpoint-mobile) {
         font-size: 20px;

@@ -29,8 +29,8 @@
         <h2 class="heading">
           <span class="u-title-hidden">Forest driving school</span>
           <span class="heading-texts">
-            <img class="u-show-pc" src="<%= mix('/assets/images/forest-driving/forest-driving-title.png') %>" alt="forest-driving">
-            <img class="u-show-sp" src="<%= mix('/assets/images/forest-driving/sp-forest-driving-title.png') %>" alt="forest-driving">
+            <img class="u-show-pc" src="<%= mix('/assets/images/forest-driving/forest-color-title.png') %>" alt="forest-driving">
+            <img class="u-show-sp" src="<%= mix('/assets/images/forest-driving/forest-color-title-sp.png') %>" alt="forest-driving">
           </span>
         </h2>
       </div>
@@ -172,16 +172,10 @@
                 交通ルールを守って走行できると得点がアップ。<br>90点以上はゴールド免許、 <br>100点満点ならプラチナ免許がゲットできるよ！
               </p>
 
-              <div class="media-bottom">
-                <div class="media-note">
-                  <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="image flag">
-                  <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="image acorn">
-                  <div class="media-note-text">
-                    100点取れたら… <br>
-                    交通ルールを守れタネ！
-                  </div>
-                </div>
-              </div>
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/forest-driving/dekitane-banner-image.jpg')
+              }) %>
             </div>
           </div>
 

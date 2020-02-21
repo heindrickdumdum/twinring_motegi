@@ -65,7 +65,7 @@
 
           <tr class="table-row">
             <th class="table-head">雨天の運行</th>
-            <td class="table-col">雨天でも営業いたしております。
+            <td class="table-col">営業いたします
             </td>
           </tr>
 
@@ -135,16 +135,12 @@
                 3歳から一人で自由にアクセルとハンドルを操作。0歳から親子で一緒に乗れる、のりものデビューにぴったりのアトラクション！
               </p>
 
-              <div class="media-bottom">
-                <div class="media-note">
-                  <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                  <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                  <div class="media-note-text">
-                    100点取れたら… <br>
-                    交通ルールを守れタネ！
-                  </div>
-                </div>
-              </div>
+
+
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/deb-den/dekitane-banner-osanpo.jpg')
+              }) %>
             </div>
           </div>
           <div class="media media-subpage u-clear">

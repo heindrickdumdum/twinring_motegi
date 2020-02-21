@@ -490,6 +490,34 @@
   }
 }
 
+//modifier subpage-section-collapse
+.subpage-section-collapse {
+  background-color: #f7f7f7;
+  max-width: 800px;
+  margin: 50px auto;
+  
+  .subpage-collapse-heading {
+    padding: 30px;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .subpage-collapse-description {
+    padding: 0 50px 50px 50px;
+
+    > p {
+      line-height: 2;
+      margin: 0 0 17px;
+      letter-spacing: 0.16em;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
 //modifier forest walk
 .subpage-walk {
   .subpage-banner-walk {
@@ -669,27 +697,5 @@
   margin-bottom: 50px;
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 120px;
-  }
-}
-
-.subpage-section-collapse {
-  background-color: #f7f7f7;
-  max-width: 800px;
-  margin: 50px auto;
-  
-  .subpage-collapse-heading {
-    padding: 30px;
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bold;
-  }
-
-  .subpage-collapse-description {
-    padding: 0 50px 50px 50px;
-    line-height: 2.15;
-  }
-
-  .hidden {
-    display: none;
   }
 }

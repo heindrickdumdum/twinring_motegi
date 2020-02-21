@@ -182,8 +182,10 @@
               <p class="media-desc">
                 1周381mの専用コースを３周タイムアタック。通常のアトラクションとは一味違うスピードを体感！
               </p>
-
-
+              <%- include('/partials/note', {
+                modifier: 'note-challenge',
+                imgPath: mix('/assets/images/challenge/challenge-dekitane-banner-1.jpg')
+              }) %>
             </div>
           </div>
           <div class="media media-subpage u-clear">
@@ -206,8 +208,10 @@
               <p class="media-desc u-show-sp">
                 基準タイムをクリアして大人と同じステージへ。プロでも乗りこなすのが難しいハイパワーのレーシングカートに挑戦しよう！
               </p>
-
-
+              <%- include('/partials/note', {
+                modifier: 'note-challenge',
+                imgPath: mix('/assets/images/challenge/challenge-dekitane-banner-2.jpg')
+              }) %>
             </div>
           </div>
         </div>
@@ -342,11 +346,11 @@
       </div>
     </section> -->
 
-    <section class="faq l-section">
+    <!-- <section class="faq l-section">
       <%- include('/partials/accordion', {
         dataAccordion: getData().data.accordionChallenge
       }) -%>
-    </section>
+    </section> -->
 
 
     <!-- BOTTOM -->

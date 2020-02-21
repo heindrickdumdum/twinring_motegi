@@ -46,7 +46,7 @@
         <span>アトラクション情報</span>
       </h3>
 
-      <p>森の中で挑戦するはじめてのバイク。森のトレーニングコースでバイクの乗り方、アクセル・ブレーキの<br />ハンドル操作を練習しよう。</p>
+      <p>森の中で挑戦するはじめてのバイク。森のトレーニングコースでバイクの乗り方、アクセル・ブレーキの<br/>ハンドル操作を練習しよう。</p>
 
       <table class="table">
         <tbody>
@@ -57,7 +57,7 @@
 
           <tr class="table-row">
             <th class="table-head">所要時間</th>
-            <td class="table-col">約20分（装備の装着、説明、一人ずつ練習、本番、装備外し）</td>
+            <td class="table-col">約20分（保護具の脱着、乗り方の説明、乗車）</td>
           </tr>
 
           <tr class="table-row">
@@ -123,13 +123,10 @@
               </p>
 
               <div class="media-bottom">
-                <div class="media-note">
-                  <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                  <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                  <div class="media-note-text">
-                    はじめてのバイクに<br />チャレンジできタネ！
-                  </div>
-                </div>
+                <%- include('/partials/note', {
+                  modifier: 'note-motorcycle-training',
+                  imgPath: mix('/assets/images/motor-cycle-training/motorcycle-dekitane-banner-1.jpg')
+                }) %>
               </div>
             </div>
           </div>
@@ -153,13 +150,10 @@
               </p>
 
               <div class="media-bottom">
-                <div class="media-note">
-                  <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                  <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                  <div class="media-note-text">
-                    ひとりでバイクに乗れタネ！
-                  </div>
-                </div>
+                <%- include('/partials/note', {
+                  modifier: 'note-motorcycle-training',
+                  imgPath: mix('/assets/images/motor-cycle-training/motorcycle-dekitane-banner-2.jpg')
+                }) %>
               </div>
             </div>
           </div>

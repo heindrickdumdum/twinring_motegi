@@ -4,6 +4,37 @@
   width: 100%;
   max-width: 350px;
   // height: 106px;
+
+  // Itadaki banners
+  &.note-itadaki-banner-1 {
+    > div {
+      position: relative;
+      top: 6px;
+      left: 54px;
+      width: 96%;
+
+      @include sp {
+        top: 4px;
+        left: 34px;
+        width: 76%;
+      }
+    }
+  }
+
+  &.note-itadaki-banner-2 {
+    > div {
+      position: relative;
+      top: 6px;
+      left: 66px;
+      width: 98%;
+
+      @include sp {
+        top: -2px;
+        left: 15px;
+        width: 76%;
+      }
+    }
+  }
 }
 
 .note-message {
@@ -12,9 +43,6 @@
   width: 100%;
   padding-bottom: 37%;
 }
-
-
-
 
 // .note {
 //   position: relative;
@@ -177,7 +205,7 @@
 //     }
 //   }
 
-  // &.note-message-dokidoki-banner {}
-  // &.note-message-sumika-banner {}
+// &.note-message-dokidoki-banner {}
+// &.note-message-sumika-banner {}
 
 // }

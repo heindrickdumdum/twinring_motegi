@@ -1,3 +1,9 @@
+.header-wrap {
+  background-color: $color-white;
+  position: relative;
+  z-index: $z-max;
+}
+
 .header-logo {
   display: block;
 }
@@ -246,7 +252,7 @@
         color: rgba($color-mineshaft, .2);
       }
     }
-    
+
     &.is-active {
       color: rgba($color-mineshaft, .2);
     }

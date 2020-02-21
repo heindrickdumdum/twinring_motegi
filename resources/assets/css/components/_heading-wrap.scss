@@ -137,6 +137,20 @@
     }
   }
 
+  &.heading-you-video {
+    margin-bottom: 40px;
+    svg {
+      width: 520px;
+      height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        position: relative;
+        top: -26px;
+        width: 286px;
+        height: 57px;
+      }
+    }
+  }
+
   &.heading-wrap-craft {
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {

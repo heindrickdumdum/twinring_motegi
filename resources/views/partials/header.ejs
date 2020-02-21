@@ -2,7 +2,7 @@
 
 <header>
   <div class="u-show-pc">
-    <div class="l-container">
+    <div class="l-container" id="js-header-container">
         <div class="l-header-top">
           <% if(typeof topHeading === 'undefined') { %>
             <div class="l-header-top-logo">
@@ -85,6 +85,16 @@
                 </a>
               </li>
               <% }) %>
+              <li class="header-bottom-item header-bottom-item-shop">
+                <a class="header-bottom-link" href="https://www.twinring.jp/goods_m/" target="_blank">
+                  <span class="header-bottom-link-text">グッズ＆<br class="u-show-pc">ショップ</span>
+                  <i class="header-bottom-icon">
+                    <%- include('/partials/svg', {
+                      name: 'shop'
+                    }) %>
+                  </i>
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

@@ -38,7 +38,8 @@
       <div class="heading-wrap heading-main heading-main-tsubasa">
         <h2 class="heading">
           <span class="heading-texts">
-            <img src="<%= mix('/assets/images/tsubasa/tsubasa-color-title.png') %>" alt="Tsubasa">
+            <img class="u-show-pc" src="<%= mix('/assets/images/tsubasa/tsubasa-color-title.png') %>" alt="Tsubasa">
+            <img class="u-show-sp" src="<%= mix('/assets/images/tsubasa/tsubasa-color-title-sp.png') %>" alt="Tsubasa">
           </span>
         </h2>
       </div>
@@ -102,7 +103,7 @@
       </table>
 
       <div class="subpage-section subpage-section-collapse">
-        <div class="subpage-collapse-heading js-collapse-button">受付方法について</div>
+        <div class="subpage-collapse-heading js-collapse-button">ご利用にあたって</div>
         <div class="subpage-collapse-description hidden">
           <p>ご利用制限：</p>
           <p>【1】体重35kg以上90kg以下の方</p>
@@ -163,7 +164,7 @@
       </section>
     </section>
 
-    <div class="call-to-action">
+  <!--  <div class="call-to-action">
       <div class="l-container">
         <div class="call-to-action-wrapper">
           <div class="call-to-action-inner">
@@ -204,6 +205,7 @@
         </div>
       </div>
     </div>
+  -->
 
     <section class="subpage-section subpage-section-comparison l-section">
       <div class="l-section-title">
@@ -212,7 +214,7 @@
           text: 'Comparison',
           alt: '',
           altSubtext: '',
-          subtextvg: 'tsubasa-comparison'
+          subtextvg: 'tsubasa-comparison-title'
         }) %>
       </div>
 
@@ -343,7 +345,7 @@
           <%- include('/partials/button', {
             modifier: 'button-comparison',
             text: 'ムササビの<br />詳細を見る',
-            link: '#'
+            link: '/hellowoods/zip-line/musasabi.html'
           }) %>
         </div>
       </div>

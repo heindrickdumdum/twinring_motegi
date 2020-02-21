@@ -513,16 +513,16 @@
   .subpage-collapse-description {
     overflow: hidden;
     transition: height .5s cubic-bezier(.22,.61,.36,1);
+  }
+
+  .subpage-collapse-content {
+    padding: 0 50px 50px 50px;
 
     > p {
       line-height: 2;
       margin: 0 0 17px;
       letter-spacing: 0.16em;
     }
-  }
-
-  .subpage-collapse-content {
-    padding: 0 50px 50px 50px;
   }
 
   .hidden {

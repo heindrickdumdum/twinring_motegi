@@ -105,9 +105,16 @@
                 ・定員に達し次第、受付を終了いたします。
               </td>
             </tr>
-            <tr class="table-row">
-              <th class="table-head">ご利用にあたって</th>
-              <td class="table-col">
+          </tbody>
+        </table>
+
+        <div class="accordion accordion-musasabi">
+          <dl class="accordion-inner">
+              <dt class="accordion-btn js-accordion accordion-btn-musasabi">
+                ご利用にあたって
+                <span class="accordion-arrow js-arrow accordion-arrow-musasabi"></span>
+              </dt>
+              <dd class="accordion-description js-description accordion-description-musasabi">
                 <p>ご利用制限：</p>
                 <p>【1】小学4年生以上、身長135cm以上 体重100kg以下のすべての要件を満たす方</p>
                 <p>※小学生2名につき保護者（成人）1名以上の同伴参加（有料）が必要です。</p>
@@ -137,11 +144,9 @@
                 <p>参加者の理由による途中リタイヤおよび、上記注意事項をお守りいただけず、利用中止とする場合は返金いたしません。</p>
                 <p>悪天候などの理由により、運行中止となる場合は、ご利用状況によって一部もしくは全額返金させていただきます。</p>
                 <p>※返金の対象は森のジップライン ムササビのご利用料金のみとし、入場料・駐車料などの払い戻しは行ないません。</p>
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
+              </dd>
+          </dl>
+        </div>
       </div>
     </div>
 
@@ -170,6 +175,25 @@
       </div>
     </section>
 
+    <!-- <section class="subpage-section subpage-section-howto subpage-section-howto-musasabi">
+      <div class="subpage-section-howto-inner">
+        <div class="l-section-title">
+          <%#- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-howto-musasabi',
+          text: 'Flow to Play',
+          alt: '',
+          altSubtext: '',
+          subtextvg: 'trial-title'
+          }) %>
+        </div>
+        <div class="steps-list-wrapper">
+          <%#- include('/partials/steps', {
+          dataSteps: getData().data.stepsMusasabi
+          }) -%>
+        </div>
+      </div>
+    </section> -->
+
     <section class="subpage-section subpage-section-faq">
       <section class="faq faq-musasabi l-section">
         <%- include('/partials/accordion', {
@@ -180,12 +204,12 @@
 
     <!-- BOTTOM -->
 
-    <div class="call-to-action call-to-action-musasabi">
+    <!-- <div class="call-to-action call-to-action-musasabi">
       <div class="l-container">
         <div class="call-to-action-wrapper">
           <div class="call-to-action-inner">
             <div class="l-section-title">
-              <%- include('/partials/heading', {
+              <%#- include('/partials/heading', {
                 modifier: 'heading-banner-more heading-banner-more-musasabi',
                 imgPath: mix('/assets/images/deb-den/osanpo-enjoy-more-title.png'),
                 alt: '森のジップライン ムササビを<br>もっと楽しむ',
@@ -199,34 +223,34 @@
               </p>
             </div>
             <div class="l-button l-button-call-to-action">
-              <%- include('/partials/button', {
+              <%#- include('/partials/button', {
                 'modifier': 'button-acro-x',
                 'text': 'もっと見る',
                 'link': '#'
               }) %>
             </div>
             <span class="call-to-action-dot call-to-action-dot-1">
-              <img src="<%- mix('/assets/images/musasabi/bubble-1.png')%> ">
+              <img src="<%#- mix('/assets/images/musasabi/bubble-1.png')%> ">
             </span>
             <span class="call-to-action-dot call-to-action-dot-2">
-              <img src="<%- mix('/assets/images/musasabi/bubble-2.png')%> ">
+              <img src="<%#- mix('/assets/images/musasabi/bubble-2.png')%> ">
             </span>
             <span class="call-to-action-dot call-to-action-dot-3">
-              <img src="<%- mix('/assets/images/musasabi/bubble-4.png')%> ">
+              <img src="<%#- mix('/assets/images/musasabi/bubble-4.png')%> ">
             </span>
             <span class="call-to-action-dot call-to-action-dot-4">
-              <img src="<%- mix('/assets/images/musasabi/bubble-3.png')%> ">
+              <img src="<%#- mix('/assets/images/musasabi/bubble-3.png')%> ">
             </span>
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="subpage-button">
+    <!-- <div class="subpage-button">
       <a class="subpage-button-link" href="#">
         <span>キャスト・スタッフ紹介</span>
       </a>
-    </div>
+    </div> -->
 
     <section class="subpage-section subpage-section-comparison subpage-section-comparison-musasabi l-section">
       <div class="l-section-title">
@@ -361,7 +385,7 @@
           <%- include('/partials/button', {
             modifier: 'button-comparison',
             text: 'つばさの<br />詳細を見る',
-            link: '#'
+            link: 'https://www.twinring.jp/hellowoods/zip-line/tsubasa'
           }) %>
         </div>
       </div>

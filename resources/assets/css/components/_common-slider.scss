@@ -1,16 +1,21 @@
 .common-slider {
   position: relative;
+  margin: 0 -176px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 -214px;
+  }
 
   .swiper-wrapper {
-    justify-content: center;
-    margin-left: 40px;
+   // justify-content: center;
+    //margin-left: 40px;
 
     .swiper-slide-prev {
-      opacity: 0.7;
+      opacity: 0.5;
     }
 
     .swiper-slide-next {
-      opacity: 0.7;
+      opacity: 0.5;
     }
   }
 

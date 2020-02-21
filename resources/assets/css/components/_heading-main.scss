@@ -177,4 +177,11 @@
       margin-bottom: 83px;
     }
   }
+
+  &.heading-main-dream {
+    @include max-screen($breakpoint-mobile) {
+      max-width: 350px;
+      margin: 0 auto 45px;
+    }
+  }
 }

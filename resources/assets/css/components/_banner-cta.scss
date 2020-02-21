@@ -4,8 +4,14 @@
   text-align: center;
   z-index: $z-max;
 
-  // Modifier
-  &.banner-cta-bg {
+  // modifier
+  &.banner-cta-bg-itadaki {
+    margin: 0 0 239px;
+
+    @include sp {
+      margin: 0 0 59px;
+    }
+
     &:before {
       position: relative;
       top: 41px;
@@ -20,12 +26,17 @@
       background-attachment: no-repeat;
       background-image: url(#{$image-path}mount.png);
 
-      // @include sp { }
+      @include sp {
+        display: none;
+      }
     }
 
     &:after {
       margin-top: -252px;
-      // @include sp { }
+
+      @include sp {
+        margin-top: -37px;
+      }
     }
   }
 

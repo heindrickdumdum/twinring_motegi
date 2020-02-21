@@ -26,14 +26,25 @@
 
   @include max-screen($breakpoint-mobile) {
     width: calc(100vw - 45px);
-    left: auto;
-    right: 0;
+    // left: -100%;
+    // position: relative;
+    // top: 0;
+    // margin-top: 11px;
+    // left: auto;
+    // right: 0;
   }
 
   &.is-active {
     @include max-screen($breakpoint-mobile) {
       opacity: 1;
       z-index: $z-max;
+
+
+      width: calc(100vw - 45px);
+      left: -100%;
+      position: relative;
+      top: 0;
+      margin-top: 11px;
     }
   }
 
@@ -59,8 +70,15 @@
     display: block;
     padding: 0 20px;
 
-    @include max-screen($breakpoint-mobile) {
-      padding: 0 12px;
+    // @include max-screen($breakpoint-mobile) {
+    //   // padding: 0 12px;
+    // }
+
+    &:first-child {
+      @include max-screen($breakpoint-mobile) {
+        width: 45%;
+        padding-left: 25px;
+      }
     }
 
     &:last-child {
@@ -69,7 +87,9 @@
       width: calc(100% - 150px);
 
       @include max-screen($breakpoint-mobile) {
-        padding: 0 12px;
+        // padding: 0 12px;
+        padding-left: 30px;
+        width: 55%;
       }
     }
   }
@@ -127,10 +147,6 @@
 .header-top-nav-sub-item {
   display: block;
   margin-bottom: 21px;
-
-  @include max-screen($breakpoint-mobile) {
-    margin-bottom: 7px;
-  }
 
   &:last-child {
     margin-bottom: 0;

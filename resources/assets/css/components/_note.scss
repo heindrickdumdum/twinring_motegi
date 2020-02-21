@@ -1,3 +1,49 @@
+.note {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  // height: 106px;
+
+  // Itadaki banners
+  &.note-itadaki-banner-1 {
+    > div {
+      position: relative;
+      top: 6px;
+      left: 54px;
+      width: 96%;
+
+      @include sp {
+        top: 4px;
+        left: 34px;
+        width: 76%;
+      }
+    }
+  }
+
+  &.note-itadaki-banner-2 {
+    > div {
+      position: relative;
+      top: 6px;
+      left: 66px;
+      width: 98%;
+
+      @include sp {
+        top: -2px;
+        left: 15px;
+        width: 76%;
+      }
+    }
+  }
+}
+
+.note-message {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-bottom: 37%;
+}
+
 // .note {
 //   position: relative;
 //   display: inline-block;
@@ -63,102 +109,103 @@
 //   }
 // }
 
-.note {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  max-width: 335px;
-  text-align: left;
-  margin-top: 15px;
+// .note {
+//   position: relative;
+//   display: inline-block;
+//   width: 100%;
+//   max-width: 335px;
+//   text-align: left;
+//   margin-top: 15px;
+//
+//   @include min-screen($breakpoint-mobile + 1) {
+//     margin-top: 25px;
+//     max-width: 318px;
+//   }
+// }
 
-  @include min-screen($breakpoint-mobile + 1) {
-    margin-top: 25px;
-    max-width: 318px;
-  }
-}
+// .note-flag,
+// .note-acorn {
+//   position: absolute;
+// }
+//
+// .note-flag {
+//   top: -13px;
+//   left: -1px;
+//   width: 45px;
+//   height: 23.5px;
+//
+//   @include min-screen($breakpoint-mobile + 1) {
+//     top: -24px;
+//     left: -3px;
+//     width: 90px;
+//     height: 47px;
+//   }
+// }
+//
+// .note-acorn {
+//   top: -12px;
+//   right: -17px;
+//   width: 38px;
+//   height: 46px;
+//
+//   @include min-screen($breakpoint-mobile + 1) {
+//     top: -33px;
+//     right: -42px;
+//     width: 75px;
+//     height: 92px;
+//   }
+// }
+//
+// .note-text {
+//   width: 100%;
+//   padding: 11px 12px 8px;
+//   font-size: 11px;
+//   color: #fff;
+//   background-color: #8daf86;
+//   border-radius: 2px;
+//
+//   @include min-screen($breakpoint-mobile + 1) {
+//     border-radius: 4px;
+//     padding: 23px 32px 20px;
+//     font-size: 16px;
+//   }
+// }
+//
+// .note-message {
+//   position: relative;
+//   top: 0;
+//   left: 0;
+//   background-size: contain;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   height: 106px;
+//
+//   // Itadaki banners
+//   &.note-message-itadaki-banner-1 {
+//     top: -24px;
+//     left: 58px;
+//     width: 105%;
+//
+//     @include sp {
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//     }
+//   }
+//
+//   &.note-message-itadaki-banner-2 {
+//     top: -17px;
+//     left: 53px;
+//     width: 121%;
+//
+//     @include sp {
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//     }
+//   }
 
-.note-flag,
-.note-acorn {
-  position: absolute;
-}
+// &.note-message-dokidoki-banner {}
+// &.note-message-sumika-banner {}
 
-.note-flag {
-  top: -13px;
-  left: -1px;
-  width: 45px;
-  height: 23.5px;
-
-  @include min-screen($breakpoint-mobile + 1) {
-    top: -24px;
-    left: -3px;
-    width: 90px;
-    height: 47px;
-  }
-}
-
-.note-acorn {
-  top: -12px;
-  right: -17px;
-  width: 38px;
-  height: 46px;
-
-  @include min-screen($breakpoint-mobile + 1) {
-    top: -33px;
-    right: -42px;
-    width: 75px;
-    height: 92px;
-  }
-}
-
-.note-text {
-  width: 100%;
-  padding: 11px 12px 8px;
-  font-size: 11px;
-  color: #fff;
-  background-color: #8daf86;
-  border-radius: 2px;
-
-  @include min-screen($breakpoint-mobile + 1) {
-    border-radius: 4px;
-    padding: 23px 32px 20px;
-    font-size: 16px;
-  }
-}
-
-.note-message {
-  position: relative;
-  top: 0;
-  left: 0;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 106px;
-
-  // Itadaki banners
-  &.note-message-itadaki-banner-1 {
-    top: -24px;
-    left: 58px;
-    width: 105%;
-
-    @include sp {
-      top: -29px;
-      left: 35px;
-      width: 76%;
-    }
-  }
-
-  &.note-message-itadaki-banner-2 {
-    top: -17px;
-    left: 53px;
-    width: 121%;
-
-    @include sp {
-      top: -35px;
-      left: 16px;
-      width: 76%;
-    }
-  }
-
-  // &.note-message-dokidoki-banner {}
-  // &.note-message-sumika-banner {}
-}
+// }

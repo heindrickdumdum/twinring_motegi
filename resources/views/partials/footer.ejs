@@ -55,13 +55,15 @@
       <nav>
         <ul class="footer-bottom-list">
           <li class="footer-bottom-item">
-            <a class="footer-bottom-link" href="#"><img class="footer-bottom-item-image" src="<%= mix('/assets/images/footer-name.png') %>" alt=""></a>
+            <a class="footer-bottom-link" href="#">
+              <img class="footer-bottom-item-image" src="<%= mix('/assets/images/footer-name.png') %>" alt="">
+            </a>
           </li>
           <%
             getData().data.footerBottomNav.forEach( bottomLink => {
           %>
           <li class="footer-bottom-item">
-            <a class="footer-bottom-link" href="<%- bottomLink.link %>"><%- bottomLink.text %></a>
+            <a class="footer-bottom-link" href="<%- bottomLink.link %>" target="_blank"><%- bottomLink.text %></a>
           </li>
           <% }) %>
         </ul>
@@ -77,10 +79,16 @@
         </div>
         <ul class="footer-bottom-logos">
           <li>
-            <img src="<%= mix('/assets/images/suzuka-logo.png') %>" alt="Suzuka">
+            <a href="https://www.suzukacircuit.jp/" target="_blank">
+              <img src="<%= mix('/assets/images/suzuka-logo.png') %>" alt="Suzuka">
+            </a>
+
           </li>
           <li>
-            <img src="<%= mix('/assets/images/suzuka-zh-logo.png') %>" alt="Suzuka ZH">
+            <a href="https://www.suzukacircuit.jp/info_s/suzukacircuitpark/" target="_blank">
+              <img src="<%= mix('/assets/images/suzuka-zh-logo.png') %>" alt="Suzuka ZH">
+            </a>
+
           </li>
         </ul>
       </div>
@@ -110,7 +118,7 @@
   <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
   <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
   <% } %>
-  
+
   <% if(subpageId == 'forest-labo') { %>
     <script src="<%= mix('/assets/js/labo.js') %>" async></script>
   <% } %>

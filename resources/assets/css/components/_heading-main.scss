@@ -72,6 +72,26 @@
     }
   }
 
+  &.heading-main-motoracer {
+    .heading {
+      max-width: 610px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 400px;
+      }
+    }
+  }
+
+  &.heading-main-moto-touring {
+    .heading {
+      max-width: 703px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 300px;
+      }
+    }
+  }
+
   &.heading-main-motorcycle {
     .heading {
       max-width: 358px;
@@ -88,7 +108,7 @@
       width: 100%;
 
       @include max-screen($breakpoint-mobile) {
-        max-width: 243px;
+        max-width: 270px;
       }
     }
   }
@@ -106,7 +126,7 @@
 
   &.heading-main-debden {
     img {
-      max-width: 310px;
+      max-width: 285px;
       width: 100%;
 
       @include min-screen($breakpoint-mobile + 1) {

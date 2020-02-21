@@ -120,7 +120,7 @@
 
   &.subpage-inner-musasabi {
     position: relative;
-    
+
     > p {
       @include min-screen($breakpoint-mobile + 1) {
         margin-bottom: 63px;
@@ -470,6 +470,7 @@
         right: 0;
         bottom: 0;
         content: "";
+        pointer-events: none;
       }
     }
 

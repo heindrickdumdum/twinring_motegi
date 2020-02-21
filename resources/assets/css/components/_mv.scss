@@ -200,15 +200,17 @@
 
   &.hellowoods-mv-heading {
     bottom: 50px;
-
-
+    width: 100%;
 
     .heading-text {
       font-size: 45px;
       -webkit-text-fill-color: $color-white;
     }
     .heading-subtext {
-      height: 50px;
+      width: 100%;
+      max-width: 600px;
+      height: 90px;
+      margin-top: 0;
 
       @include max-screen ($breakpoint-mobile) {
         height: 43px;

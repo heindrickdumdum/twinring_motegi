@@ -7,11 +7,16 @@ export default function headerMenu() {
         headerButtonSub = document.querySelectorAll('.js-header-button-sub'),
         headerSubInner = document.querySelectorAll('.js-header-sub-content-inner'),
         headerSub = document.querySelectorAll('.js-header-sub'),
+        headerSubContent = document.querySelectorAll('.js-header-sub-content'),
         headerClose = document.querySelectorAll('.js-header-close'),
-        headerToggle = document.querySelector('#js-header-toggle'),
-        headerToggleInner = document.querySelector('#js-header-toggle-inner'),
+        //headerContainer = document.querySelector('#js-header-container'),
+
+        headerSP = document.querySelector('#js-header-sp'),
         headerBurger = document.querySelector('#js-header-burger'),
-        headerSP = document.querySelector('#js-header-sp');
+        headerToggle = document.querySelector('#js-header-toggle'),
+        headerToggleInner = document.querySelector('#js-header-toggle-inner');
+
+        //const wrap = document.querySelector('#js-wrap');
 
   let mediaQuery = window.matchMedia('(max-width: 749px)');
 
@@ -31,38 +36,41 @@ export default function headerMenu() {
 
     headerButton.forEach( el => {
       let elAttrib = el.dataset.target;
+      let target = document.querySelector('.js-header-sub[data-content="'+elAttrib+'"]');
 
       el.addEventListener( 'click', e => {
         e.preventDefault();
       });
 
-      el.addEventListener( 'mouseenter', () => {
+      el.addEventListener('mouseenter', e => {
+        e.preventDefault();
 
-        if(elAttrib != '#') {
+        scrollLock();
 
-          let target = document.querySelector('.js-header-sub[data-content="'+elAttrib+'"]');
+        target.classList.add(CONST.VISIBLE_CLASS)
 
-          setTimeout(() => {
-            target.classList.add(CONST.VISIBLE_CLASS)
-          }, 500);
-
-          if(target.classList.contains(CONST.VISIBLE_CLASS)) {
-            target.classList.add(CONST.VISIBLE_CLASS)
-          } else {
-            headerSub.forEach( e => {
-              e.classList.remove(CONST.VISIBLE_CLASS);
-            })
-          }
-
-          scrollLock()
+        if(target.classList.contains(CONST.VISIBLE_CLASS)) {
+          headerSub.forEach( e => {
+            e.classList.remove(CONST.VISIBLE_CLASS);
+          })
+          target.classList.add(CONST.VISIBLE_CLASS)
         }
 
-      });
+      })
 
     });
 
+    // window.addEventListener('scroll', function() {
+    //   if(this.scrollY > 0) {
+    //     headerSub.forEach( e => {
+    //       e.style.top = `${headerContainer.offsetHeight - this.scrollY}px`;
+    //       e.style.height = `calc(100vh - ${headerContainer.offsetHeight - this.scrollY}px)`;
+    //     })
+    //   }
+    // })
+
     // prevent element from clicking
-    document.querySelectorAll('.js-header-sub-content').forEach( e => {
+    headerSubContent.forEach( e => {
       e.addEventListener('click', contentInner => {
         contentInner.stopPropagation();
       });
@@ -72,8 +80,10 @@ export default function headerMenu() {
       e.addEventListener('click', sub => {
         sub.preventDefault();
         e.classList.remove(CONST.VISIBLE_CLASS);
+
         scrollAble()
       })
+
     })
 
     headerClose.forEach( e => {
@@ -89,6 +99,7 @@ export default function headerMenu() {
     });
 
   } // end of function for PC
+
 
    // function for SP
   function headerMenuSP() {

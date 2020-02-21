@@ -13,7 +13,8 @@
     <div class="mv mv-subpage">
       <ul class="mv-list">
         <li class="mv-item">
-          <div class="mv-image" style="background-image:url(<%= mix('/assets/images/bun-bun-scooter/mv-img.jpg') %>);"></div>
+          <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/bun-bun-scooter/mv-img.jpg') %>);"></div>
+          <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/bun-bun-scooter/mv-img-sp.jpg') %>);"></div>
         </li>
       </ul>
 
@@ -43,7 +44,7 @@
         <span>アトラクション情報</span>
       </h3>
 
-      <p>転倒しない自立式バイクで初めての運転操作にチャレンジ。かわいいみつばちと一緒に音楽を聞きながら<br />お散歩しよう。</p>
+      <p>3歳から運転できるスクータータイプのアトラクション。アクセルとブレーキを手で操りながら、みつば<br/>ちになってお花畑をお散歩！</p>
 
       <table class="table">
         <tbody>
@@ -60,7 +61,7 @@
 
           <tr class="table-row">
             <th class="table-head">雨天の運行</th>
-            <td class="table-col">雨天でも営業いたしております。
+            <td class="table-col">雨天でも営業いたします。
             </td>
           </tr>
 
@@ -78,7 +79,7 @@
           <tr class="table-row">
             <th class="table-head">料金</th>
             <td class="table-col">
-              モビパークパスポート対象<br>アトラクションチケット利用：500円
+              モビパークパスポート対象 <br/>アトラクションチケット利用：300円
             </td>
           </tr>
 
@@ -117,10 +118,10 @@
             <div class="media-right">
               <h4 class="media-title"><span>転倒しないスクーターで乗り物デビュー！</span></h4>
               <p class="media-desc">
-                スクーターのように手でアクセルとブレーキを操作。転倒しない<br>から自転車に乗れない子どもでも安心して楽しめます。
+                スクーターのように手でアクセルとブレーキを操作。転倒しない<br/>から自転車に乗れない子どもでも安心して楽しめます。
               </p>
 
-              <div class="media-bottom">
+              <!-- <div class="media-bottom">
                 <div class="media-note">
                   <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
                   <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
@@ -128,7 +129,7 @@
                     乗り物デビューできタネ！
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="media media-subpage media-subpage-bunbun u-clear">
@@ -146,9 +147,12 @@
                 </span>
               </h4>
               <p class="media-desc">
-                みつばちにデザインされたスクーターでお花畑をぐるっと<br>
-                1周。写真スポットにぴったり！
+                みつばちにデザインされたスクーターでお花畑をぐるっと<br/>1周。写真スポットにぴったり！
               </p>
+              <%- include('/partials/note', {
+                modifier: 'note-bunbun',
+                imgPath: mix('/assets/images/bun-bun-scooter/bunbun-dekitane-banner.jpg')
+              }) %>
             </div>
           </div>
         </div>

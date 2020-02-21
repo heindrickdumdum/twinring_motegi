@@ -151,16 +151,11 @@
                 ールまで正確に運転して100点満点を目指そう！
               </p>
 
-              <div class="media-bottom">
-                <div class="media-note">
-                  <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                  <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                  <div class="media-note-text">
-                    どんな道でも <br>
-                    上手に乗りこなせタネ！
-                  </div>
-                </div>
-              </div>
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/acro-x/dekitane-banner-acrox.jpg')
+              }) %>
+
             </div>
           </div>
           <div class="media media-subpage media-subpage-acro-x u-clear">

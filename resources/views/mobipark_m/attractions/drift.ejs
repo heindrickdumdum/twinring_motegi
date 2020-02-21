@@ -73,20 +73,9 @@
           </tr>
 
           <tr class="table-row">
-            <th class="table-head">身長制限</th>
-            <td class="table-col">身長135cm以上</td>
-          </tr>
-
-          <tr class="table-row">
             <th class="table-head">料金</th>
             <td class="table-col">
               モビパークパスポート対象<br />アトラクションチケット利用：600円
-            </td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">ご利用にあたって</th>
-            <td class="table-col">
             </td>
           </tr>
 
@@ -127,15 +116,10 @@
               <p class="media-desc">
                 ハイパワーエンジンの音と振動を感じながら、アクセル全開でドリフト走行にチャレンジしよう！
               </p>
-              <div class="media-bottom">
-                <div class="media-note">
-                  <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                  <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                  <div class="media-note-text">
-                    こわがらずに<br />ドリフトできタネ！
-                  </div>
-                </div>
-              </div>
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/drift/dekitane-drfit-1-image.jpg')
+              }) %>
 
 
             </div>
@@ -157,7 +141,10 @@
               <p class="media-desc">
                 最大6台のマシンがグリーンフラッグを合図に一斉スタート。大きなエンジン音とともに走り出すシーンは迫力満点！
               </p>
-
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/drift/dekitane-drfit-2-image.jpg')
+              }) %>
 
             </div>
           </div>

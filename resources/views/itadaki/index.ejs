@@ -321,9 +321,8 @@ accordionData = [
             </p>
 
             <%- include('/partials/note', {
-              modifier: 'note-message-itadaki-banner-1',
-              image_directory: 'itadaki',
-              image_filename: 'itadaki-banner-1.jpg'
+              modifier: 'note-itadaki-banner-1',
+              imgPath: mix('/assets/images/itadaki/itadaki-banner-1.jpg')
             }) %>
 
           </div>
@@ -348,10 +347,10 @@ accordionData = [
               クリアです。
             </p>
 
+
             <%- include('/partials/note', {
-              modifier: 'note-message-itadaki-banner-2',
-              image_directory: 'itadaki',
-              image_filename: 'itadaki-banner-2.jpg'
+              modifier: 'note-itadaki-banner-2',
+              imgPath: mix('/assets/images/itadaki/itadaki-banner-2.jpg')
             }) %>
 
           </div>
@@ -476,17 +475,18 @@ accordionData = [
     }) %>
   </section>
 
-  <div class="call-to-action call-to-action-itadaki">
+  <!-- call to action w/ modifier -->
+  <!-- <div class="call-to-action call-to-action-itadaki">
     <div class="l-container">
       <div class="call-to-action-wrapper">
         <div class="call-to-action-inner">
           <h2 class="headig-call-to-action">
             <span class="heading-text">
-              ハローウッズをもっと楽しむ
+              迷宮森殿 ITADAKI<br>をもっと楽しむ
             </span>
           </h2>
           <div class="call-to-action-description">
-            <p class="call-to-action-description-text">
+            <p class="call-to-action-description-text call-to-action-description-text-itadaki">
               ハローウッズのこだわりポイントや、<br>
               知っているともっと楽しくなる情報を配信中しています。
             </p>
@@ -513,7 +513,7 @@ accordionData = [
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- <div class="call-to-action">
     <div class="l-container">
@@ -556,7 +556,7 @@ accordionData = [
 
 
   <%- include('/partials/banner-cta', {
-    modifier: 'banner-cta-bg',
+    modifier: 'banner-cta-bg-itadaki',
     link: 'https://www.twinring.jp/mobipark_m/card/',
     imgPath: mix('/assets/images/subpage-banner-bottom.png')
   }) -%>

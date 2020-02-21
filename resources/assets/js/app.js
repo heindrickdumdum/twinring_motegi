@@ -12,3 +12,6 @@ new SmoothScroll('a[href^="#"]', {
   speed: 900,
   easing: 'easeInOutCubic'
 });
+
+
+

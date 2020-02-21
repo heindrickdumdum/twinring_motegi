@@ -41,7 +41,7 @@
       <!-- YOUTUBE -->
       <div class="subpage-banner">
         <div class="subpage-banner-inner">
-          <img class="" src="<%= mix('https://via.placeholder.com/2042x946') %>" alt="">
+          <img class="" src="<%= mix('/assets/images/dream/subpage-banner.jpg') %>" alt="">
         </div>
       </div>
 
@@ -119,7 +119,7 @@
             <div class="media-left">
               <div class="media-bg">
                 <div class="media-thumb">
-                  <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+                  <div style="background-image: url(<%= mix('/assets/images/dream/enjoy-img1.jpg') %>);"></div>
                 </div>
               </div>
             </div>
@@ -136,7 +136,7 @@
             <div class="media-left">
               <div class="media-bg">
                 <div class="media-thumb">
-                  <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+                  <div style="background-image: url(<%= mix('/assets/images/dream/enjoy-img2.jpg') %>);"></div>
                 </div>
               </div>
             </div>
@@ -149,28 +149,18 @@
               <p class="media-desc">
                 何度か走行してマシンに慣れたら、一番速く走行できるベストラインにチャレンジしてコースを攻略しよう！
               </p>
-
-              <div class="media-bottom">
-                <div class="media-note">
-                  <img class="media-note-flag" src="<%= mix('/assets/images/img-flag.png') %>" alt="">
-                  <img class="media-note-acorn" src="<%= mix('/assets/images/img-acorn.png') %>" alt="">
-                  <div class="media-note-text">
-                    はじめてのカートに<br />チャレンジできタネ！
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="media media-subpage u-clear">
             <div class="media-left">
               <div class="media-bg">
                 <div class="media-thumb">
-                  <div style="background-image: url(<%= mix('https://via.placeholder.com/350x150') %>);"></div>
+                  <div style="background-image: url(<%= mix('/assets/images/dream/enjoy-img3.jpg') %>);"></div>
                 </div>
               </div>
             </div>
             <div class="media-right">
-              <h4 class="media-title media-title-nohighlight"><span>より本格的なカートへステップアップ！</span></h4>
+              <h4 class="media-title"><span>より本格的なカートへステップアップ！</span></h4>
               <p class="media-desc u-show-pc">
                 ドリームカートでライセンスをゲットして、<br />さらにハイスピードのチャレンジカートにステップアップしよう！
               </p>
@@ -178,7 +168,10 @@
                 ドリームカートでライセンスをゲットして、さらにハイスピードのチャレンジカートにステップアップしよう！
               </p>
 
-
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/dream/dekitane-banner-1.jpg')
+              }) %>
             </div>
           </div>
         </div>

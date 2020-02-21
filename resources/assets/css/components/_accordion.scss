@@ -1,6 +1,16 @@
 .accordion {
   display: block;
   width: 100%;
+
+  &.accordion-musasabi {
+    background-color: $color-table-head;
+    max-width: 800px;
+    margin: 40px auto 0;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 25px;
+    }
+  }
 }
 
 .accordion-arrow {
@@ -29,6 +39,10 @@
   &.is-active {
     transform: translateY(-50%) rotate(0deg);
   }
+
+  &.accordion-arrow-musasabi {
+    display: none;
+  }
 }
 
 // .accordion-inner {}
@@ -53,6 +67,15 @@
     padding: 10px 27px 12px;
   }
 
+  &.accordion-btn-musasabi {
+    text-align: center;
+    padding: 35px 44px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding: 15px 20px;
+    }
+  }
+
 }
 
 
@@ -73,10 +96,20 @@
     padding: 20px;
     line-height: 2;
     margin: 0 22px 30px;
-   
+
     @include max-screen($breakpoint-mobile) {
       font-size: 12px;
       margin: 0 0 30px;
+    }
+  }
+
+  &.accordion-description-musasabi {
+    border: 0;
+    padding: 0 20px;
+
+    p {
+      padding: 0;
+      margin-bottom: 15px;
     }
   }
 

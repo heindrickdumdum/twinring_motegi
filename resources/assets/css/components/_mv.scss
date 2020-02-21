@@ -696,6 +696,10 @@
     height: 266px;
     background-image: url(../images/tsubasa/mv-logo.png);
     bottom: -60px;
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url(../images/tsubasa/mv-logo-sp.png);
+    }
   }
 }
 

@@ -58,6 +58,10 @@
   @include min-screen($breakpoint-mobile + 1) {
     width: calc(100% - 220px);
   }
+
+  a {
+    color: $base-font-color;
+  }
 }
 
 .table-head, .table-col {
@@ -91,6 +95,11 @@
       letter-spacing: 0.1em;
       line-height: 1.5;
     }
+  }
+
+  a {
+    color: $base-font-color;
+    text-decoration: underline;
   }
 }
 

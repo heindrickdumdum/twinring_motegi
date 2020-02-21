@@ -208,7 +208,7 @@
     }
     .heading-subtext {
       width: 100%;
-      max-width: 600px;
+      max-width: 400px;
       height: 90px;
       margin-top: 0;
 
@@ -216,6 +216,12 @@
         height: 43px;
         width: 227px;
         margin-top: 0;
+      }
+    }
+
+    .heading-tsubasa {
+      .heading-subtext {
+        max-width: 600px;
       }
     }
 

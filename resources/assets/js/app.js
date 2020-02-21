@@ -12,9 +12,3 @@ new SmoothScroll('a[href^="#"]', {
   speed: 900,
   easing: 'easeInOutCubic'
 });
-
-/*Subpage Collapse*/
-document.querySelector('.js-collapse-button').onclick = function() {
-  document.querySelector('.subpage-collapse-description').classList.toggle('hidden');
-};
-

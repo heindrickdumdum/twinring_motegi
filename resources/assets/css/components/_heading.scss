@@ -29,6 +29,16 @@
     }
   }
 
+  &.heading-dokidoki {
+    .heading-texts {
+      img {
+        @include max-screen($breakpoint-mobile) {
+          width: 363px;
+        }
+      }
+    }
+  }
+
 }
 
 .heading-text {

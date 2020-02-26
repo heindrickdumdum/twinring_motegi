@@ -247,6 +247,13 @@
     }
   }
 
+  &.subpage-banner-tsubasa {
+    .subpage-banner-inner-tsubasa {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+
   &.subpage-banner-musasabi {
     iframe {
       @include max-screen($breakpoint-mobile) {

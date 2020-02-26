@@ -531,6 +531,44 @@ accordionData = [
       </div>
   </section>
 
+
+  <section class="instagram l-section">
+    <div class="instagram-wrapper l-container">
+      <div class="instagram-inner">
+        <div class="instagram-inner-content">
+          <h2 class="heading l-heading-inner">
+            <span class="heading-texts">
+              <img class="heading-itadaki-instagram" src="<%= mix('/assets/images/itadaki/itadaki-hashtag-title.png') %>" alt="dokidoki">
+            </span>
+          </h2>
+          <div class="instagram-content">
+            <ul class="instagram-list">
+              <% instagram.forEach(item => { %>
+              <li class="instagram-list-item col-sm-4">
+                <div class="instagram-list-item-image">
+                  <img src="<%- item.image %>" alt="<%- item.alt %>">
+                </div>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+          <div class="l-button">
+            <%- include('/partials/button', {
+              modifier: 'button-instagram',
+              text: 'インスタグラムでもっと見る',
+              link: 'https://www.instagram.com/explore/tags/%E8%BF%B7%E5%AE%AE%E6%A3%AE%E6%AE%BFitadaki/?hl=ja'
+            }) %>
+          </div>
+          <!-- <div class="instagram-banner">
+            <a href="#">
+              <img src="<%- mix('/assets/images/sumika/net-sumika/instagram-banner.jpg')%> ">
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="faq l-section">
     <%- include('/partials/accordion', {
       dataAccordion: getData().data.accordionItadaki

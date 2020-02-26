@@ -499,6 +499,15 @@
     }
   }
 
+  &.heading-wrap-youtube {
+    @include max-screen ($breakpoint-mobile) {
+      .heading-subtext {
+        height: 80px;
+        max-width: 240px;
+      }
+    }
+  }
+
   &.heading-comparison {
     text-align: center;
 

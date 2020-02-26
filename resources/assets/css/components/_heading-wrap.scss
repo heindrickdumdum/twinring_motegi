@@ -252,6 +252,15 @@
     }
   }
 
+  &.heading-wrap-carbike {
+    @include max-screen ($breakpoint-mobile) {
+      .heading-subtext {
+        height: 100px;
+        max-width: 300px;
+      }
+    }
+  }
+
   @include max-screen($breakpoint-mobile) {
     .heading-main-subpage {
       margin-top: 0;

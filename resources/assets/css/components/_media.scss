@@ -160,14 +160,22 @@
   }
 
   &.alt-feature-heading {
+    margin-bottom: 20px;
+
     .media-title-text {
       background-size: 36.00px 45.00px;
+
+      @include max-screen($breakpoint-mobile) {
+        background-size: 32.00px 32.00px;
+      }
     }
 
-   @include min-screen ($breakpoint-mobile + 1) {
-    font-size: 24px;
-    margin-bottom: 38px;
-   }
+    @include min-screen ($breakpoint-mobile + 1) {
+      font-size: 24px;
+      margin-bottom: 38px;
+    }
+
+
   }
 }
 

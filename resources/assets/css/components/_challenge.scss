@@ -64,6 +64,10 @@
 
     &.hellowoods {
       max-width: 600px;
+
+      @include max-screen ($breakpoint-mobile) {
+        line-height: 2;
+      }
     }
   }
 
@@ -73,9 +77,9 @@
 
       @include max-screen($breakpoint-mobile) {
         max-width: 310px;
-        margin-left: auto;
         display: block;
         padding-top: 15px;
+        margin: auto;
       }
     }
   }
@@ -129,6 +133,10 @@
   @include max-screen($breakpoint-mobile) {
     margin-bottom: 90px;
     margin-top: -27px;
+
+    &.hellowoods {
+      margin-bottom: 0;
+    }
   }
 
 

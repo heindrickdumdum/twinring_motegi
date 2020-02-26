@@ -255,8 +255,8 @@
   &.heading-wrap-carbike {
     @include max-screen ($breakpoint-mobile) {
       .heading-subtext {
-        height: 100px;
-        max-width: 300px;
+        height: 70px;
+        max-width: 250px;    
       }
     }
   }

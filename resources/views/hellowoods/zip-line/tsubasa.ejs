@@ -219,14 +219,25 @@
   -->
 
     <section class="subpage-section subpage-section-comparison l-section">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-comparison',
-          text: 'Comparison',
-          alt: '',
-          altSubtext: '',
-          subtextvg: 'tsubasa-comparison-title'
-        }) %>
+      <div class="l-section-title heading-tsubasa">
+        <div class="u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-comparison',
+            text: 'Comparison',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'tsubasa-comparison-title'
+          }) %>
+        </div>
+        <div class="u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-comparison',
+            text: 'Comparison',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'tsubasa-comparison-title-sp'
+          }) %>
+        </div>
       </div>
 
       <div class="comparison">

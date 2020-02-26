@@ -196,6 +196,15 @@
 }
 
 //modifier for SP
+.heading-tsubasa {
+  .heading-subtext {
+    @include max-screen($breakpoint-mobile) {
+      height: 55px;
+    }
+  }
+}
+
+//modifier for SP
 .page-mobipark {
   .heading-subtext {
     @include max-screen($breakpoint-mobile) {
@@ -745,14 +754,5 @@
 
   @include max-screen($breakpoint-mobile) {
     width: auto;
-  }
-}
-
-//modifier for SP
-.heading-tsubasa {
-  .heading-subtext {
-    @include max-screen($breakpoint-mobile) {
-      height: 55px;
-    }
   }
 }

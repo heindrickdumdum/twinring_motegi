@@ -675,4 +675,9 @@ accordionData = [
     </div>
   </section>
 </div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsItadaki
+}) -%>
+
 <%- include('./../partials/footer', {pageId} ) -%>

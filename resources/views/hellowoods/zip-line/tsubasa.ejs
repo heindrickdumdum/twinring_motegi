@@ -38,15 +38,15 @@
       <div class="heading-wrap heading-main heading-main-tsubasa">
         <h2 class="heading">
           <span class="heading-texts">
-            <img class="u-show-pc" src="<%= mix('/assets/images/tsubasa/tsubasa-color-title.png') %>" alt="Tsubasa">
-            <img class="u-show-sp" src="<%= mix('/assets/images/tsubasa/tsubasa-color-title-sp.png') %>" alt="Tsubasa">
+            <img class="u-show-pc" src="<%= mix('/assets/images/tsubasa/tsubasa-color-title.png') %>" alt="日本最大級の２本のラインで味わうスリル">
+            <img class="u-show-sp" src="<%= mix('/assets/images/tsubasa/tsubasa-color-title-sp.png') %>" alt="日本最大級の２本のラインで味わうスリル">
           </span>
         </h2>
       </div>
 
       <div class="subpage-banner subpage-banner-tsubasa">
         <div class="subpage-banner-inner subpage-banner-inner-tsubasa">
-          <img src="<%= mix('/assets/images/tsubasa/subpage-banner-top.jpg') %>" alt="Tsubasa">
+          <img src="<%= mix('/assets/images/tsubasa/subpage-banner-top.jpg') %>" alt="メガジップラインつばさ">
         </div>
       </div>
 
@@ -93,10 +93,10 @@
           </tr>
           <tr class="table-row">
             <th class="table-head">受付方法について</th>
-            <td class="table-col">・森のジップライン ムササビは当日予約制です。ハローウッズインフォメーションにて受付を行ってください。<br/>
-              　※受付の際、利用制限を確認いたします。利用希望者様ご本人が受付にお越しください。<br/>
-              　※未成年の方は保護者の同意署名が必要です。（保護者となる方は成人（20歳以上）の方に限ります。）<br/>
-              ・定員に達し次第、受付を終了いたします。</td>
+            <td class="table-col">・メガジップライン つばさ利用希望のお客さまは、ハローウッズインフォメーションにて受付を行ってください。（パスポートで利用する場合も受付が必要です。）<br>
+              ※受付の際、利用制限を確認いたします。ご本人さまが受付にお越しください。<br>
+              ※未成年の方は保護者の同意署名が必要です。（保護者となる方は成人（20歳以上）の方に限ります。）<br>
+              ・受付は当日分のみ行い、定員になり次第受付を終了いたします。</td>
           </tr>
 
         </tbody>
@@ -140,13 +140,22 @@
       
       <!-- YOUTUBE -->
       <div class="l-youtube">
-        <div class="l-section-title">
+        <div class="u-show-pc l-section-title">
           <%- include('/partials/heading', {
             modifier: 'heading-gradient-tobottom heading-comparison',
             text: 'Musasabi Videos',
             alt: '',
             altSubtext: '',
             subtextvg: 'tsubasa-video-title'
+          }) %>
+        </div>
+        <div class="u-show-sp l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-comparison',
+            text: 'Musasabi Videos',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'musasabi-videos-title-sp'
           }) %>
         </div>
         <div class="youtube youtube-video-wrapper">
@@ -227,12 +236,12 @@
               <!-- mid -->
             </div>
             <div class="comparison-col">
-              <img class="comparison-img-1" src="<%= mix('/assets/images/tsubasa/compare-1.png') %>" alt="">
-              <img src="<%= mix('/assets/images/tsubasa/zipline-1.png') %>" alt="">
+              <img class="comparison-img-1" src="<%= mix('/assets/images/tsubasa/compare-1.png') %>" alt="森のジップラインムササビ">
+              <img src="<%= mix('/assets/images/tsubasa/zipline-1.png') %>" alt="メガジップラインつばさ">
             </div>
             <div class="comparison-col">
-              <img class="comparison-img-2" src="<%= mix('/assets/images/tsubasa/compare-2.png') %>" alt="">
-              <img src="<%= mix('/assets/images/tsubasa/zipline-2.png') %>" alt="">
+              <img class="comparison-img-2" src="<%= mix('/assets/images/tsubasa/compare-2.png') %>" alt="メガジップラインつばさ">
+              <img src="<%= mix('/assets/images/tsubasa/zipline-2.png') %>" alt="森のジップラインムササビ">
             </div>
           </div>
 

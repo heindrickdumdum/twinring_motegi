@@ -170,7 +170,7 @@
           下記の日程は 混雑が予想されるため、 対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
           期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
         </p>
-    
+
         <table class="table">
           <tbody>
             <tr class="table-row">
@@ -181,22 +181,22 @@
                 11月 15日（日）、16日（月）、29日（日）
               </td>
             </tr>
-    
+
             <tr class="table-row">
               <th class="table-head">対象アトラクション</th>
               <td class="table-col">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</td>
             </tr>
-    
+
             <tr class="table-row">
               <th class="table-head">配布場所</th>
               <td class="table-col">アトラクション前特設テント</td>
             </tr>
-    
+
             <tr class="table-row">
               <th class="table-head">配布枚数</th>
               <td class="table-col">各回約200枚配布※1回の所要時間約40分（説明10分、遊べる時間30分、時間入れ替え割）</td>
             </tr>
-    
+
             <tr class="table-row">
               <th class="table-head">配布にあたって</th>
               <td class="table-col">
@@ -209,7 +209,7 @@
           </tbody>
         </table>
       </div>
-    
+
      </div>
    </div>
   </div>
@@ -252,7 +252,7 @@
               夜明け直後は多くの森の生きものが活動を始める賑やかな時間となり、昼間は強い生きものが中心に活動し、夜になると夜行性の生きものが闇に隠れて動き始めます。「巨大ネットの森「SUMIKA」では、そんなリアルな森の雰囲気を音で再現します。
             </p>
 
-          
+
             <%- include('/partials/note', {
               modifier: 'note-message-itadaki-banner-1',
               imgPath: mix('/assets/images/sumika/sumika-banner-1.jpg')
@@ -278,7 +278,7 @@
               巨大ネットを広葉樹に見立て、四季折々で変化する木々を再現します。また、夏は昼間が長く、冬は夜が長くなるように光の演出は細部にまでこだわっています。
             </p>
 
-          
+
             <%- include('/partials/note', {
               modifier: 'note-message-itadaki-banner-1',
               imgPath: mix('/assets/images/sumika/sumika-banner-2.jpg')
@@ -299,7 +299,7 @@
             <p class="media-desc">
               SUMIKAは、最大高さ約11m 、ネット面積：約1000㎡の巨大ネットアスレチック。屋内では日本最大面積（※当社調べ）となっており、これまでにないスケールの空間の中で、身体を動かして遊べます。
             </p>
- 
+
             <%- include('/partials/note', {
               modifier: 'note-message-itadaki-banner-1',
               imgPath: mix('/assets/images/sumika/sumika-banner-3.jpg')
@@ -549,5 +549,9 @@
     </div>
   </section>
 </div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsSumika
+}) -%>
 
 <%- include('./../partials/footer', {pageId} ) -%>

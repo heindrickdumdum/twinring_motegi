@@ -312,7 +312,7 @@ accordionData = [
         </div>
       </div>
     </div>
-  
+
     <div class="collapse">
      <div class="l-container">
        <div class="collapse-inner">
@@ -325,7 +325,7 @@ accordionData = [
             下記の日程は 混雑が予想されるため、 対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
             期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
           </p>
-      
+
           <table class="table">
             <tbody>
               <tr class="table-row">
@@ -336,22 +336,22 @@ accordionData = [
                   11月 15日（日）、16日（月）、29日（日）
                 </td>
               </tr>
-      
+
               <tr class="table-row">
                 <th class="table-head">対象アトラクション</th>
                 <td class="table-col">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</td>
               </tr>
-      
+
               <tr class="table-row">
                 <th class="table-head">配布場所</th>
                 <td class="table-col">アトラクション前特設テント</td>
               </tr>
-      
+
               <tr class="table-row">
                 <th class="table-head">配布枚数</th>
                 <td class="table-col">各回約200枚配布※1回の所要時間約40分（説明10分、遊べる時間30分、時間入れ替え割）</td>
               </tr>
-      
+
               <tr class="table-row">
                 <th class="table-head">配布にあたって</th>
                 <td class="table-col">
@@ -364,11 +364,11 @@ accordionData = [
             </tbody>
           </table>
         </div>
-      
+
        </div>
      </div>
     </div>
-  
+
   </section>
 
   <section class="how-to-enjoy l-section">
@@ -709,4 +709,9 @@ accordionData = [
     </div>
   </section>
 </div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsItadaki
+}) -%>
+
 <%- include('./../partials/footer', {pageId} ) -%>

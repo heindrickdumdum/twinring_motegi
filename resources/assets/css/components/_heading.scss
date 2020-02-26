@@ -724,3 +724,20 @@
   }
 }
 
+.heading-dokidoki-instagram {
+  width: 500px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: auto;
+  }
+}
+  
+.heading-itadaki-instagram {
+  width: 400px;
+  
+  @include max-screen($breakpoint-mobile) {
+    width: auto;
+  }
+}
+  
+

@@ -38,7 +38,6 @@
       }
     }
   }
-
 }
 
 .heading-text {
@@ -714,6 +713,14 @@
         margin-top: 14px;
       }
     }
+  }
+}
+
+.heading-dokidoki-instagram {
+  width: 500px;
+  
+  @include max-screen($breakpoint-mobile) {
+    width: auto;
   }
 }
 

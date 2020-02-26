@@ -143,6 +143,17 @@
   }
 }
 
+.table-heading-attractioninfo {
+  img {
+    max-width: 234px;
+    width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 126px;
+    }
+  }
+}
+
 .table-heading {
   margin-top: 36px;
   margin-bottom: 15px;
@@ -167,16 +178,7 @@
   }
 }
 
-.table-heading-attractioninfo {
-  img {
-    max-width: 234px;
-    width: 100%;
 
-    @include max-screen($breakpoint-mobile) {
-      max-width: 126px;
-    }
-  }
-}
 
 .table-subheading {
   margin-bottom: 32px;

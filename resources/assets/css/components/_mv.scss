@@ -649,7 +649,7 @@
   margin-bottom: 80px;
   position: relative;
   .mv-heading {
-    bottom: 45px;
+    bottom: 5px;
 
     @include max-screen($breakpoint-mobile) {
       top: 50%;

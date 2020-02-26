@@ -21,7 +21,7 @@
 
   &::before {
     width: 285px;
-    left: 25px;
+    left: 15px;
     top: -12px;
     background-image: url(#{$image-path}article/leaves.png);
     background-position: -44px top;
@@ -36,7 +36,7 @@
   }
 
   &::after {
-    right: 17px;
+    right: 26px;
     bottom: 0;
     transform: scaleY(-1);
     background-image: url(#{$image-path}article/leaves2.png);
@@ -69,10 +69,10 @@
 }
 
 .article-image {
-  padding-top: 59%;
+  padding-top: 62%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: relative;
 
   &::before {
@@ -82,10 +82,10 @@
     background-size: contain;
     background-position: center;
     position: absolute;
-    left: -4.66%;
-    top: -8%;
-    width: 109%;
-    height: 115%;
+    left: -6.66%;
+    top: -17%;
+    height: 133%;
+    width: 110%;
   }
 }
 

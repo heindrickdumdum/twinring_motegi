@@ -29,7 +29,7 @@ SPRITE_SVG = '/assets/svg/sprite.svg';
           <span class="mv-heading-subtexts u-show-pc">
             <svg>
               <title>Car and Bike</title>
-              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-subtext') %>"></use>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-carbike-main-title') %>"></use>
             </svg>
 
 
@@ -37,11 +37,10 @@ SPRITE_SVG = '/assets/svg/sprite.svg';
 
           <span class="mv-heading-subtexts u-show-sp">
             <span class="u-title-hidden">Car bike</span>
-            <img src="<%- mix('/assets/images/car-and-bike/carbike-category-title-sp.png') %>" alt="carbike">
-            <!-- <svg>
+            <svg>
               <title>Car and Bike</title>
-              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-subtext-sp') %>"></use>
-            </svg> -->
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-carbike-main-title-sp') %>"></use>
+            </svg>
           </span>
         </h1>
 
@@ -58,7 +57,8 @@ SPRITE_SVG = '/assets/svg/sprite.svg';
           <h2 class="heading">
             <span class="u-title-hidden">Car and bike</span>
             <span class="heading-texts">
-              <img src="<%= mix('/assets/images/car-and-bike/carbike-color-title.png') %>" alt="">
+              <img class="u-show-pc" src="<%= mix('/assets/images/car-and-bike/carbike-color-title.png') %>" alt="">
+              <img class="u-show-sp" src="<%= mix('/assets/images/car-and-bike/carbike-color-title-sp.png') %>" alt="">
             </span>
           </h2>
         </div>

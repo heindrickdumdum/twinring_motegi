@@ -7,14 +7,6 @@
     background-color: $color-white;
     z-index: $z-max;
   }
-  // &.is-active {
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   background-color: $color-white;
-  //   z-index: $z-max;
-  // }
 }
 
 .header-sp-toggle {
@@ -26,7 +18,8 @@
 .header-sp-toggle-inner {
   padding: 6px 20px 35px;
   height: calc(100vh - 56px);
-  overflow: auto;
+  overflow: hidden;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -104,6 +97,10 @@
   align-items: center;
   flex-grow: 1;
   background-color: $color-white;
+
+  &.is-active {
+    margin-bottom: -1px;
+  }
 }
 
 .header-sp-burger {

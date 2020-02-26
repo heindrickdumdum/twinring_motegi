@@ -2,11 +2,7 @@
   <a href="<%- buttonLink -%>" class="article-no-design-link">
     <div class="article-image-wrap">
       <div class="article-image"
-           style="background-image: url(<% if(image != '') { %>
-             <%- image %>
-             <% } else { %><%= mix('/assets/images/noimage.jpg') %>
-             <% } %>)"></div>
-    </div>
+           style="background-image: url(<%= (image) ? image : mix('/assets/images/noimage.jpg') %>)"></div>
     <h3 class="article-heading"><%- heading %></h3>
     <%- include('/partials/button-gradient', {
       modifier: 'button-gradient-cmn',

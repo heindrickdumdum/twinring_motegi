@@ -12,31 +12,30 @@ export default function headerTopNav() {
   mediaQuery.addListener(headerTopNavController);
 
   function headerTopNavController({ matches }) {
-      if ( !matches ) {
+    if ( matches ) {
+      headerTopButton.forEach( el => {
 
-      headerButtonLang.addEventListener('click', (e) => {
+        el.addEventListener( 'click', function(e) {
+          if (el.getAttribute('href') == '#') {
+            e.preventDefault();
+          }
+
+            if (el.children[1] != null) {
+
+              headerTopSub.forEach( e => {
+                e.classList.toggle(CONST.IS_ACTIVE)
+              });
+            }
+          });
+      });
+    } else {
+      headerButtonLang.addEventListener('click', e => {
         e.preventDefault();
         let buttonThis = e.currentTarget;
 
         buttonThis.classList.toggle(CONST.IS_ACTIVE);
         headerLang.classList.toggle(CONST.IS_ACTIVE);
       })
-
-    } else {
-      headerTopButton.forEach( function(el) {
-
-        el.addEventListener( 'click', function(e) {
-          e.preventDefault();
-
-          if (el.children[1] != null) {
-
-            headerTopSub.forEach( function(e) {
-              e.classList.toggle(CONST.IS_ACTIVE)
-            });
-          }
-        });
-
-      });
     }
   }
 }

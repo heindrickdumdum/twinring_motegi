@@ -31,6 +31,13 @@
     @include max-screen($breakpoint-mobile) {
       display: none;
     }
+
+    .top-slide-craft & {
+      @include max-screen($breakpoint-mobile) {
+        display: block;
+        font-size: 12px;
+      }
+    }
   }
 }
 

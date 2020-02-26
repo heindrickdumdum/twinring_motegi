@@ -3,6 +3,10 @@
   position: relative;
   width: 100%;
   max-width: 350px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 auto;
+  }
   // height: 106px;
 
   // Itadaki banners

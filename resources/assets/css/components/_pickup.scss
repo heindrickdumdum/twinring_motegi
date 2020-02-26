@@ -21,4 +21,10 @@
   @include max-screen($breakpoint-mobile) {
     padding: 12.5px;
   }
+
+  .article-period {
+    @include max-screen($breakpoint-mobile) {
+      padding-left: 0;
+    }
+  }
 }

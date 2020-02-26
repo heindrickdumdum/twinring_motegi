@@ -57,7 +57,7 @@
   top: 183px;
   left: 0;
   right: 0;
-  height: calc(100vh - 180px);
+  height: calc(100vh - (180px + 60px));
   transition: opacity .5s $ease-in-out;
 
   @include max-screen($breakpoint-mobile) {
@@ -74,7 +74,7 @@
 .header-sub-content {
   position: relative;
   width: 100%;
-  height: calc(100% - 60px);
+  height: 100%;
   left: 0;
   top: 2px;
   right: 0;

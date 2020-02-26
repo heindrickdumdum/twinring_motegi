@@ -490,6 +490,14 @@
 
   &.heading-comparison {
     text-align: center;
+
+    &-musasabi { //musasabi comparison SP 
+      .heading-subtext {
+        @include max-screen($breakpoint-mobile) {
+          height: 60px;
+        }
+      }
+    }
     .heading-subtext {
       max-width: 491px;
       width: 100%;

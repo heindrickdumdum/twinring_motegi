@@ -124,6 +124,17 @@
     }
   }
 
+  &.heading-main-drift {
+    img {
+      max-width: 335px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 819px;
+      }
+    }
+  }
+
   &.heading-main-debden {
     img {
       max-width: 285px;

@@ -622,6 +622,10 @@
   //modifier sp forest walk
   .subpage-inner-anchor {
     margin-top: 53px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -39px;
+    }
   }
 }
 //modifier forest walk end
@@ -636,7 +640,7 @@
 
   .subpage-inner-anchor {
     @include max-screen($breakpoint-mobile) {
-      margin-top: 53px;
+      margin-top: -39px;
       margin-bottom: 0px;
     }
   }

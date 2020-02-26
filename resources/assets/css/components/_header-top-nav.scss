@@ -21,30 +21,28 @@
   text-align: left;
   border: 1px solid $color-green;
   opacity: 0;
-  z-index: -1;
-  transition: opacity $duration $ease-in-out;
+  visibility: hidden;
+  z-index: -2;
+  transition: opacity $duration $ease-in-out,
+              visibility $duration $ease-in-out;
 
   @include max-screen($breakpoint-mobile) {
+    padding: 0;
     width: calc(100vw - 45px);
-    // left: -100%;
-    // position: relative;
-    // top: 0;
-    // margin-top: 11px;
-    // left: auto;
-    // right: 0;
+    max-height: 0;
+    left: -100%;
+    top: 0;
+    position: relative;
   }
 
   &.is-active {
     @include max-screen($breakpoint-mobile) {
-      opacity: 1;
-      z-index: $z-max;
-
-
-      width: calc(100vw - 45px);
-      left: -100%;
-      position: relative;
-      top: 0;
       margin-top: 11px;
+      padding: 20px 0;
+      max-height: 100%;
+      opacity: 1;
+      visibility: visible;
+      z-index: $z-max;
     }
   }
 
@@ -70,10 +68,6 @@
     display: block;
     padding: 0 20px;
 
-    // @include max-screen($breakpoint-mobile) {
-    //   // padding: 0 12px;
-    // }
-
     &:first-child {
       @include max-screen($breakpoint-mobile) {
         width: 45%;
@@ -87,7 +81,6 @@
       width: calc(100% - 150px);
 
       @include max-screen($breakpoint-mobile) {
-        // padding: 0 12px;
         padding-left: 30px;
         width: 55%;
       }
@@ -114,6 +107,7 @@
   &:hover {
     @include min-screen($breakpoint-mobile + 1) {
       .header-top-nav-sub {
+        visibility: visible;
         opacity: 1;
         z-index: $z-max;
       }
@@ -132,10 +126,10 @@
   &:hover {
     @include min-screen($breakpoint-mobile + 1) {
       color: $color-green;
-    }
 
-    &[href="#"] {
-      cursor: default;
+      &[href="#"] {
+        cursor: default;
+      }
     }
   }
 

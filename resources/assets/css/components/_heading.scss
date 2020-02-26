@@ -17,6 +17,14 @@
     }
   }
 
+  &.heading-sumika-hashtag {
+    .heading-texts {
+      img {
+        max-width: 477px;
+      }
+    }
+  }
+
   &.sumika-hashtag {
     .heading-texts {
       text-align: center;
@@ -38,7 +46,6 @@
       }
     }
   }
-
 }
 
 .heading-text {

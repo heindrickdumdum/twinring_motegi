@@ -303,6 +303,7 @@
 
       @include max-screen($breakpoint-mobile) {
         margin-top: 10px;
+        height: 65px;
       }
 
       @include min-screen($breakpoint-mobile + 1) {

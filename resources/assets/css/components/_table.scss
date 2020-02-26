@@ -167,6 +167,17 @@
   }
 }
 
+.table-heading-attractioninfo {
+  img {
+    max-width: 234px;
+    width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 126px;
+    }
+  }
+}
+
 .table-subheading {
   margin-bottom: 32px;
   font-size: 15px;

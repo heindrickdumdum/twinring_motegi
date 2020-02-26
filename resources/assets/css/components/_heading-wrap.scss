@@ -58,7 +58,9 @@
     }
 
     .heading-subtext {
-      margin: 13px auto 0;
+      @include min-screen ($breakpoint-mobile + 1) {
+        margin: 13px auto 0;
+      }
     }
   }
 
@@ -250,6 +252,15 @@
     }
   }
 
+  &.heading-wrap-carbike {
+    @include max-screen ($breakpoint-mobile) {
+      .heading-subtext {
+        height: 70px;
+        max-width: 250px;    
+      }
+    }
+  }
+
   @include max-screen($breakpoint-mobile) {
     .heading-main-subpage {
       margin-top: 0;
@@ -303,6 +314,7 @@
 
       @include max-screen($breakpoint-mobile) {
         margin-top: 10px;
+        height: 65px;
       }
 
       @include min-screen($breakpoint-mobile + 1) {
@@ -489,6 +501,14 @@
 
   &.heading-comparison {
     text-align: center;
+
+    &-musasabi { //musasabi comparison SP 
+      .heading-subtext {
+        @include max-screen($breakpoint-mobile) {
+          height: 60px;
+        }
+      }
+    }
     .heading-subtext {
       max-width: 491px;
       width: 100%;

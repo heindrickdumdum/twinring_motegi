@@ -1,5 +1,5 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = '森のジップライン ムササビ｜森の自然体験ミュージアムハローウッズ｜ツインリンクもてぎ'
 %>
 
 <% pageId = 'hellowoods-subpage'; %>
@@ -43,7 +43,7 @@
         <div class="heading-wrap heading-main heading-main-musasabi">
           <h2 class="heading">
             <span class="heading-texts">
-              <img class="u-show-pc" src="<%= mix('/assets/images/musasabi/musasabi-color-title-updated.png') %>" alt="">
+              <img class="u-show-pc" src="<%= mix('/assets/images/musasabi/musasabi-color-title-updated.png') %>" alt="ガイドと一緒に 森を巡るガイドツアー式 ジップライン">
               <img class="u-show-sp" src="<%= mix('/assets/images/musasabi/musasabi-color-title-updated-sp.png') %>" alt="ガイドと一緒に 森を巡るガイドツアー式 ジップライン">
             </span>
           </h2>
@@ -250,13 +250,22 @@
     </div> -->
 
     <section class="subpage-section subpage-section-comparison subpage-section-comparison-musasabi l-section">
-      <div class="l-section-title">
+      <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
           modifier: 'heading-gradient-tobottom heading-comparison',
-          text: 'Musasabi Videos',
+          text: 'Comparison',
           alt: '',
           altSubtext: '',
           subtextvg: 'tsubasa-comparison-title'
+        }) %>
+      </div>
+      <div class="l-section-title u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-gradient-tobottom heading-comparison heading-comparison-musasabi',
+          text: 'Comparison',
+          alt: '',
+          altSubtext: '',
+          subtextvg: 'musasabi-comparison-title-sp'
         }) %>
       </div>
 
@@ -267,12 +276,12 @@
               <!-- mid -->
             </div>
             <div class="comparison-col">
-              <img class="comparison-img-1" src="<%= mix('/assets/images/tsubasa/compare-1.png') %>" alt="">
-              <img src="<%= mix('/assets/images/tsubasa/zipline-1.png') %>" alt="">
+              <img class="comparison-img-1" src="<%= mix('/assets/images/tsubasa/compare-1.png') %>" alt="compare-1">
+              <img src="<%= mix('/assets/images/tsubasa/zipline-1.png') %>" alt="zipline-1">
             </div>
             <div class="comparison-col">
-              <img class="comparison-img-2" src="<%= mix('/assets/images/tsubasa/compare-2.png') %>" alt="">
-              <img src="<%= mix('/assets/images/tsubasa/zipline-2.png') %>" alt="">
+              <img class="comparison-img-2" src="<%= mix('/assets/images/tsubasa/compare-2.png') %>" alt="compare-2">
+              <img src="<%= mix('/assets/images/tsubasa/zipline-2.png') %>" alt="zipline-2">
             </div>
           </div>
 

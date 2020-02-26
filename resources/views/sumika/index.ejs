@@ -37,7 +37,7 @@
     </div>
   </div>
 
-  <section class="video-mv l-section">
+<section class="video-mv l-section">
     <div class="l-container">
       <div class="heading-wrap l-heading-main">
         <h2 class="heading heading-sumika">
@@ -83,7 +83,7 @@
 
           <tr class="table-row">
             <th class="table-head">雨天の運行</th>
-            <td class="table-col">屋内施設となりますので、雨天時でもお楽しみいただけます。</td>
+            <td class="table-col">営業いたします。※屋内施設となりますので、雨天時でもお楽しみいただけます。</td>
           </tr>
 
           <tr class="table-row">
@@ -122,8 +122,6 @@
         </tbody>
       </table>
     </div>
-  </section>
-
   <div class="subpage-section subpage-section-collapse">
     <div class="subpage-collapse-heading js-collapse-button">ご利用にあたっての注意点</div>
     <div class="subpage-collapse-description">
@@ -132,11 +130,11 @@
         <p>靴を脱いでのご利用となります。 必ず靴下を履いてご利用ください。なお、指先が分かれたタイプの靴下、たび、ストッキング、タイツはご利用いただけません。もし、ご準備ない場合は、SUMIKA内に、靴下の自動販売機がございますのでご利用ください。
         </p>
         <br>
-        <p>※１小学生未満のお子様の利用について :</p>
+        <p>※１小学生未満のおこさまの利用について :</p>
         小学生未満のお子さまは中学生以上の同伴者の付添い（有料）が必要になります。 </p>
         <br>
-        <p>0歳～2歳のお子様の利用について :</p>
-        <p>0歳～2歳のお子様は遊具では遊ぶことはできません。保護者様同伴（有料）にてSUMIKA内の芝生のレストエリアをご利用いただけます。</p>
+        <p>0歳～2歳のおこさまの利用について :</p>
+        <p>0歳～2歳のおこさまは遊具では遊ぶことはできません。保護者様同伴（有料）にてSUMIKA内の芝生のレストエリアをご利用いただけます。</p>
       </div>
     </div>
   </div>
@@ -186,16 +184,17 @@
                 ※入場整理券は定員に達し次第、受付を終了いたします。<br>
                 ※別途、モビパークパスポートまたはのりもの券をお買い求めください。<br>
                 ※アトラクションには年齢制限がございます。 <a href="https://www.twinring.jp/mobipark_m/guide/"> >>詳しくはこちら</a><br>
-                ※混雑状況や天候などより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
+                ※混雑状況や天候などにより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-
      </div>
-   </div>
-  </div>
+    </div>
+  </section>
+
+  
 
   <section class="l-section">
     <div class="l-container">
@@ -383,9 +382,9 @@
     <div class="instagram-wrapper l-container">
       <div class="instagram-inner">
         <div class="instagram-inner-content">
-          <h2 class="heading l-heading-inner sumika-hashtag">
+          <h2 class="heading l-heading-inner heading-sumika-hashtag sumika-hashtag">
             <span class="heading-texts">
-              <img class="u-show-pc" src="<%= mix('/assets/images/sumika/hashtag.png') %>" alt="sumika">
+              <img class="u-show-pc" src="<%= mix('/assets/images/sumika/sumika-hashtag.png') %>" alt="sumika">
               <img class="u-show-sp" src="<%= mix('/assets/images/sumika/sumika-hashtag-sp.png') %>" alt="sumika">
             </span>
           </h2>
@@ -532,5 +531,9 @@
     </div>
   </section>
 </div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsSumika
+}) -%>
 
 <%- include('./../partials/footer', {pageId} ) -%>

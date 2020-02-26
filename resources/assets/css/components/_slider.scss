@@ -3,6 +3,11 @@
 .slider-wrapper {
   margin-left: 110px;
 
+  a {
+    //fix IOS Slider Issue
+    -webkit-touch-callout: none;
+  }
+
   @include query($breakpoint-mobile){
       margin-left: 0;
   }

@@ -5,7 +5,14 @@
   max-width: 350px;
 
   @include max-screen($breakpoint-mobile) {
+    max-width: 235px;
     margin: 0 auto;
+    left: 12px;
+    width: 100%;
+  }
+
+  @include max-screen(450px) {
+    left: 5%;
   }
   // height: 106px;
 
@@ -18,9 +25,12 @@
       width: 96%;
 
       @include sp {
-        top: 4px;
-        left: 34px;
-        width: 76%;
+        // top: 4px;
+        // left: 34px;
+        // width: 76%;
+        top: 0;
+        left: 0;
+        width: 100%;
       }
     }
   }
@@ -33,9 +43,12 @@
       width: 98%;
 
       @include sp {
-        top: -2px;
-        left: 15px;
-        width: 76%;
+        // top: -2px;
+        // left: 15px;
+        // width: 76%;
+        top: 0;
+        left: 0;
+        width: 100%;
       }
     }
   }
@@ -47,169 +60,3 @@
   width: 100%;
   padding-bottom: 37%;
 }
-
-// .note {
-//   position: relative;
-//   display: inline-block;
-//   width: 318px;
-//   text-align: left;
-//   margin-top: 25px;
-
-//   .media-craft & {
-//     @include max-screen($breakpoint-mobile) {
-//       width: 194.5px;
-//       margin: 25px auto 7px;
-//       transform: translateX(-11px);
-//       display: block;
-//     }
-//   }
-// }
-
-// .note-flag, .note-acorn {
-//   position: absolute;
-// }
-
-// .note-flag {
-//   top: -24px;
-//   left: -3px;
-
-//   .media-craft & {
-//     @include max-screen($breakpoint-mobile) {
-//       top: -14px;
-//       left: -1px;
-//       width: 46px;
-//     }
-//   }
-// }
-
-// .note-acorn {
-//   top: -33px;
-//   right: -42px;
-
-//   .media-craft & {
-//     @include max-screen($breakpoint-mobile) {
-//       top: -12px;
-//       right: -18px;
-//       width: 38px;
-//     }
-//   }
-// }
-
-// .note-text {
-//   width: 100%;
-//   padding: 23px 32px 20px;
-//   font-size: 16px;
-//   color: #fff;
-//   background-color: #8daf86;
-//   border-radius: 4px;
-
-//   .media-craft & {
-//     @include max-screen($breakpoint-mobile) {
-//       font-size: 11px;
-//       letter-spacing: 0.16em;
-//       line-height: 1.5;
-//       padding: 12px 17px 5px;
-//     }
-//   }
-// }
-
-// .note {
-//   position: relative;
-//   display: inline-block;
-//   width: 100%;
-//   max-width: 335px;
-//   text-align: left;
-//   margin-top: 15px;
-//
-//   @include min-screen($breakpoint-mobile + 1) {
-//     margin-top: 25px;
-//     max-width: 318px;
-//   }
-// }
-
-// .note-flag,
-// .note-acorn {
-//   position: absolute;
-// }
-//
-// .note-flag {
-//   top: -13px;
-//   left: -1px;
-//   width: 45px;
-//   height: 23.5px;
-//
-//   @include min-screen($breakpoint-mobile + 1) {
-//     top: -24px;
-//     left: -3px;
-//     width: 90px;
-//     height: 47px;
-//   }
-// }
-//
-// .note-acorn {
-//   top: -12px;
-//   right: -17px;
-//   width: 38px;
-//   height: 46px;
-//
-//   @include min-screen($breakpoint-mobile + 1) {
-//     top: -33px;
-//     right: -42px;
-//     width: 75px;
-//     height: 92px;
-//   }
-// }
-//
-// .note-text {
-//   width: 100%;
-//   padding: 11px 12px 8px;
-//   font-size: 11px;
-//   color: #fff;
-//   background-color: #8daf86;
-//   border-radius: 2px;
-//
-//   @include min-screen($breakpoint-mobile + 1) {
-//     border-radius: 4px;
-//     padding: 23px 32px 20px;
-//     font-size: 16px;
-//   }
-// }
-//
-// .note-message {
-//   position: relative;
-//   top: 0;
-//   left: 0;
-//   background-size: contain;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   height: 106px;
-//
-//   // Itadaki banners
-//   &.note-message-itadaki-banner-1 {
-//     top: -24px;
-//     left: 58px;
-//     width: 105%;
-//
-//     @include sp {
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//     }
-//   }
-//
-//   &.note-message-itadaki-banner-2 {
-//     top: -17px;
-//     left: 53px;
-//     width: 121%;
-//
-//     @include sp {
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//     }
-//   }
-
-// &.note-message-dokidoki-banner {}
-// &.note-message-sumika-banner {}
-
-// }

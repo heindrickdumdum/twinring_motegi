@@ -1017,3 +1017,10 @@
   top: 78% !important;
   left: 47% !important;
 }
+
+//modifier forest walk
+.mv-heading-text-walk {
+  @include min-screen($breakpoint-mobile + 1) {
+    font-weight: 600 !important;
+  }
+}

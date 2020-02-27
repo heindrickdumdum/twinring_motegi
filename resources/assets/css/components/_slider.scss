@@ -8,23 +8,48 @@
     -webkit-touch-callout: none;
   }
 
-  @include query($breakpoint-mobile){
+  @include max-screen($breakpoint-mobile) {
       margin-left: 0;
   }
+}
 
-  &.slider-wrapper-feature {
-    //margin-left: calc(((100vw - 1220px) / 2) - 19px);
-    margin-left: 92px;
+.slider-container-mobipark {
+  overflow: hidden;
+}
 
-    @include query($breakpoint-mobile){
-      margin-left: 0;
+.slider-wrap {
+  margin: 0 auto;
+  max-width: $container;
+
+  @include max-screen($breakpoint-mobile) {
+    max-width: 88%;
+  }
+
+  .slider-item {
+    max-width: calc(100% / 3.42);
+    width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 93%;
+    }
+  }
+
+  .slider-wrapper {
+    margin-left: 0;
+  }
+
+  &.slider-wrap-how-to {
+    @include max-screen($breakpoint-mobile) {
+      max-width: 90%;
     }
   }
 }
 
-// .slider-item {}
-
 //MODIFIER
+.slider-wrapper-feature {
+  margin-left: 0;
+}
+
 
 .swiper-pagination-feature,
 .swiper-pagination-section {
@@ -93,6 +118,8 @@
     }
 
     @include max-screen($breakpoint-mobile) {
+      max-width: 96.5%;
+
       &::before {
         content: '';
         width: 100%;

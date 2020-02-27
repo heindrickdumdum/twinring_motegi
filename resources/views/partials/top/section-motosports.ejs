@@ -25,7 +25,7 @@
   <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/motosports/bg.jpg') %>);"></div>
   <div class="l-container">
     <div class="section-contents">
-      <p class="section-contents-copy">世界が注目するレースでは数々のドラマが生まれる。<br class="u-show-pc">からだ全体で感じる未体験のサウンド、パワー、スピードは記憶に残る感動になりま</p>
+      <p class="section-contents-copy">世界が注目する数々のドラマが生まれる。<br class="u-show-pc">未体験のサウンド、パワー、スピードをからだ全体で感じよう。</p>
 
       <ul class="section-cards u-show-pc">
         <%
@@ -45,28 +45,30 @@
         %>
       </ul>
 
-      <div class="swiper-container slider js-slider-sp u-show-sp">
-        <ul class="swiper-wrapper section-cards">
-          <%
-            sectionMotoSportsCards.forEach( card => {
-          %>
-          <li class="swiper-slide">
-            <div class="section-cards-item">
-              <a href="<%- card.url %>" class="section-card-link">
-                <div class="section-cards-image-wrap image-border">
-                  <span class="section-cards-category"><%- card.category %></span>
-                  <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
-                </div>
-                <p class="section-cards-title"><%- card.title %></p>
-              </a>
-            </div>
-          </li>
-          <%
-            })
-          %>
-        </ul>
+      <div class="slider-wrap u-show-sp">
+        <div class="swiper-container slider js-slider-sp">
+          <ul class="swiper-wrapper section-cards">
+            <%
+              sectionMotoSportsCards.forEach( card => {
+            %>
+            <li class="swiper-slide">
+              <div class="section-cards-item">
+                <a href="<%- card.url %>" class="section-card-link">
+                  <div class="section-cards-image-wrap image-border">
+                    <span class="section-cards-category"><%- card.category %></span>
+                    <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+                  </div>
+                  <p class="section-cards-title"><%- card.title %></p>
+                </a>
+              </div>
+            </li>
+            <%
+              })
+            %>
+          </ul>
 
-        <div class="swiper-pagination swiper-pagination-section"></div>
+          <div class="swiper-pagination swiper-pagination-section"></div>
+        </div>
       </div>
 
       <div class="section-button">

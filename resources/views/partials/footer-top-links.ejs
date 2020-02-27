@@ -9,7 +9,7 @@
     %>
     <li class="footer-top-links-item">
       <%
-      if(item.link === '') { %>
+      if(!item.link) { %>
         <span class="footer-top-links-text"><%- item.text %></span>
       <% } else { %>
         <a class="footer-top-links-item-link" href="<%- item.link %>">
@@ -18,7 +18,7 @@
       <% } %>
 
 
-       <% if(typeof item.sub == 'object') { %>
+       <% if(typeof item.sub === 'object') { %>
         <ul class="footer-top-links-sub">
           <%
             item.sub.forEach( sub => {

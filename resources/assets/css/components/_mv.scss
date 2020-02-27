@@ -199,7 +199,7 @@
   }
 
   &.hellowoods-mv-heading {
-    bottom: 50px;
+    bottom: 5px;
     width: 100%;
 
     .heading-text {
@@ -454,7 +454,7 @@
   }
 
   .mv-heading-subtexts {
-    margin-top: -10px;
+    margin-top: 10px;
     font-size: 54px;
     color: rgb(255, 255, 255);
     text-align: left;
@@ -649,7 +649,7 @@
   margin-bottom: 80px;
   position: relative;
   .mv-heading {
-    bottom: 45px;
+    bottom: 5px;
 
     @include max-screen($breakpoint-mobile) {
       top: 50%;
@@ -708,6 +708,17 @@
 
     @include max-screen($breakpoint-mobile) {
       background-image: url(../images/tsubasa/mv-logo-sp.png);
+    }
+  }
+
+  .mv-logo-musasabi {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/musasabi/mv-logo.png);
+    bottom: -60px;
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url(../images/musasabi/mv-logo-sp.png);
     }
   }
 }
@@ -775,6 +786,10 @@
   }
 
   .mv-heading-itadaki {
+    .mv-heading-texts {
+      margin-left: 25px;
+    }
+
     @include max-screen($breakpoint-mobile) {
     .mv-heading-subtexts {
       svg {
@@ -788,7 +803,7 @@
   .mv-heading-dokidoki {
     @include min-screen($breakpoint-mobile + 1) {
       bottom: 50px;
-      
+
       .mv-heading-subtexts {
         svg {
           width: 810px;
@@ -983,9 +998,20 @@
   }
 }
 
+.mv-musasabi {
+  @include max-screen ($breakpoint-mobile) {
+    .mv-logo-musasabi {
+      display: block;
+      max-width: 130px;
+      bottom: -140px;
+      right: 10px;
+    }
+  }
+}
+
 //modifier MV forest walk end
 
-//modifier forest labo 
+//modifier forest labo
 .mv-heading-subpage-labo {
   text-align: right !important;
   top: 78% !important;

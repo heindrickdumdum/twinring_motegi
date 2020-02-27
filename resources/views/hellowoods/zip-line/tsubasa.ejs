@@ -38,15 +38,15 @@
       <div class="heading-wrap heading-main heading-main-tsubasa">
         <h2 class="heading">
           <span class="heading-texts">
-            <img class="u-show-pc" src="<%= mix('/assets/images/tsubasa/tsubasa-color-title.png') %>" alt="Tsubasa">
-            <img class="u-show-sp" src="<%= mix('/assets/images/tsubasa/tsubasa-color-title-sp.png') %>" alt="Tsubasa">
+            <img class="u-show-pc" src="<%= mix('/assets/images/tsubasa/tsubasa-color-title.png') %>" alt="日本最大級の２本のラインで味わうスリル">
+            <img class="u-show-sp" src="<%= mix('/assets/images/tsubasa/tsubasa-color-title-sp.png') %>" alt="日本最大級の２本のラインで味わうスリル">
           </span>
         </h2>
       </div>
 
       <div class="subpage-banner subpage-banner-tsubasa">
         <div class="subpage-banner-inner subpage-banner-inner-tsubasa">
-          <img src="<%= mix('/assets/images/tsubasa/subpage-banner-top.jpg') %>" alt="Tsubasa">
+          <img src="<%= mix('/assets/images/tsubasa/subpage-banner-top.jpg') %>" alt="メガジップラインつばさ">
         </div>
       </div>
 
@@ -61,7 +61,7 @@
           <tr class="table-row">
             <th class="table-head">場所</th>
             <td class="table-col">
-              モビパーク内
+              ハローウッズ
             </td>
           </tr>
 
@@ -80,28 +80,32 @@
 
           <tr class="table-row">
             <th class="table-head">対象者</th>
-            <td class="table-col">年齢による制限はございません。</td>
+            <td class="table-col">年齢制限なし</td>
           </tr>
           <tr class="table-row">
             <th class="table-head">身長制限</th>
+            <td class="table-col">なし</td>
+          </tr>
+          <tr class="table-row">
+            <th class="table-head">体重制限</th>
             <td class="table-col">体重35kg以上90kg</td>
           </tr>
           <tr class="table-row">
             <th class="table-head">料金</th>
             <td class="table-col">モビパークパスポート対象<br/>
-              アトラクションチケット利用：1400円</td>
+              アトラクションチケット利用：1,400円</td>
           </tr>
           <tr class="table-row">
             <th class="table-head">受付方法について</th>
-            <td class="table-col">・森のジップライン ムササビは当日予約制です。ハローウッズインフォメーションにて受付を行ってください。<br/>
-              　※受付の際、利用制限を確認いたします。利用希望者様ご本人が受付にお越しください。<br/>
-              　※未成年の方は保護者の同意署名が必要です。（保護者となる方は成人（20歳以上）の方に限ります。）<br/>
-              ・定員に達し次第、受付を終了いたします。</td>
+            <td class="table-col">・メガジップライン つばさ利用希望のお客さまは、ハローウッズインフォメーションにて受付を行ってください。（パスポートで利用する場合も受付が必要です。）<br>
+              ※受付の際、利用制限を確認いたします。ご本人さまが受付にお越しください。<br>
+              ※未成年の方は保護者の同意署名が必要です。（保護者となる方は成人（20歳以上）の方に限ります。）<br>
+              ・受付は当日分のみ行い、定員になり次第受付を終了いたします。</td>
           </tr>
 
         </tbody>
       </table>
-      
+
       <div class="subpage-section subpage-section-collapse">
         <div class="subpage-collapse-heading js-collapse-button">ご利用にあたって</div>
         <div class="subpage-collapse-description">
@@ -114,7 +118,6 @@
             <p>【4】事前説明・同意書にご同意いただける方</p>
             <p>※参加者が未成年（20歳未満）の場合は、保護者（成人）の署名が必要です。</p>
             <p>【5】聴覚障がいや視覚障がいなど、お身体の不自由な方は、ご利用いただけない場合がございます。</p>
-            <p>事前にお問い合わせいただきますようお願いいたします。&gt;&gt;お問い合わせはこちら</p>
             <br>
             <p>注意事項</p>
             <p>【1】ルールを守らない場合は重大事故となる可能性がありますので、必ずスタッフの指示に従ってください。</p>
@@ -133,20 +136,29 @@
             <p>返金について：</p>
             <p>参加者の理由による途中リタイヤおよび、上記注意事項をお守りいただけず、利用中止とする場合は返金いたしません。</p>
             <p>悪天候などの理由により、運行中止となる場合は、ご利用状況によって一部もしくは全額返金させていただきます。</p>
-            <p>※返金の対象はメガジップラインつばさのご利用料金のみとし、入場料・駐車料・パスポートなどの払い戻しは行ないません。</p>
+            <p>※返金の対象はメガジップライン つばさのご利用料金のみとし、入場料・駐車料・パスポートなどの払い戻しは行ないません。</p>
           </div>
         </div>
       </div>
-      
+
       <!-- YOUTUBE -->
       <div class="l-youtube">
-        <div class="l-section-title">
+        <div class="u-show-pc l-section-title">
           <%- include('/partials/heading', {
             modifier: 'heading-gradient-tobottom heading-comparison',
             text: 'Musasabi Videos',
             alt: '',
             altSubtext: '',
             subtextvg: 'tsubasa-video-title'
+          }) %>
+        </div>
+        <div class="u-show-sp l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-wrap-youtube',
+            text: 'Musasabi Videos',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'musasabi-videos-title-sp'
           }) %>
         </div>
         <div class="youtube youtube-video-wrapper">
@@ -210,14 +222,25 @@
   -->
 
     <section class="subpage-section subpage-section-comparison l-section">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: 'heading-gradient-tobottom heading-comparison',
-          text: 'Comparison',
-          alt: '',
-          altSubtext: '',
-          subtextvg: 'tsubasa-comparison-title'
-        }) %>
+      <div class="l-section-title heading-tsubasa">
+        <div class="u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-comparison',
+            text: 'Comparison',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'tsubasa-comparison-title'
+          }) %>
+        </div>
+        <div class="u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-comparison',
+            text: 'Comparison',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'tsubasa-comparison-title-sp'
+          }) %>
+        </div>
       </div>
 
       <div class="comparison">
@@ -227,49 +250,45 @@
               <!-- mid -->
             </div>
             <div class="comparison-col">
-              <img class="comparison-img-1" src="<%= mix('/assets/images/tsubasa/compare-1.png') %>" alt="">
-              <img src="<%= mix('/assets/images/tsubasa/zipline-1.png') %>" alt="">
+              <img class="comparison-img-1" src="<%= mix('/assets/images/tsubasa/compare-1.png') %>" alt="メガジップラインつばさ">
+              <img src="<%= mix('/assets/images/tsubasa/zipline-1.png') %>" alt="メガジップラインつばさ">
             </div>
             <div class="comparison-col">
-              <img class="comparison-img-2" src="<%= mix('/assets/images/tsubasa/compare-2.png') %>" alt="">
-              <img src="<%= mix('/assets/images/tsubasa/zipline-2.png') %>" alt="">
-            </div>
-          </div>
-
-          <div class="comparison-row">
-            <div class="comparison-col">
-              <p>特徴</p>
-            </div>
-            <div class="comparison-col">
-              <ul>
-                <li>森からサーキットへ</li>
-                <li>大空を羽ばたく、
-                  全長５６１ｍの空中散歩！</li>
-              </ul>
-            </div>
-            <div class="comparison-col">
-              <ul>
-                <li>ガイドが案内しながら</li>
-                <li>森を飛びまわる自然観察ツアー！</li>
-              </ul>
+              <img class="comparison-img-2" src="<%= mix('/assets/images/tsubasa/compare-2.png') %>" alt="森のジップラインムササビ">
+              <img src="<%= mix('/assets/images/tsubasa/zipline-2.png') %>" alt="森のジップラインムササビ">
             </div>
           </div>
 
           <div class="comparison-row">
             <div class="comparison-col">
-              <p>こんな方に<br />おすすめ</p>
+              <!-- <p>特徴</p> -->
             </div>
             <div class="comparison-col">
               <ul>
-                <li>・高低差やスピードでスリルを感じたい</li>
-                <li>・モビパークパスポートでお得に楽しみたい</li>
+                <li>森からサーキットへ大空を羽ばたく、全長５６１ｍの空中散歩！</li>
               </ul>
             </div>
             <div class="comparison-col">
               <ul>
-                <li>・ガイドと一緒に森をとことん遊びつくしたい</li>
-                <li>・森の冒険、自然の中の発見を楽しみたい</li>
-                <li>・ただジップラインを滑るだけじゃ満足できない</li>
+                <li>ガイドが案内しながら森を飛びまわる自然観察ツアー！</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="comparison-row">
+            <div class="comparison-col">
+              <p>こんな方に<br>おすすめ</p>
+            </div>
+            <div class="comparison-col">
+              <ul>
+                <li>・ジップライン初心者の方</li>
+                <li>・大空に飛び出して壮大な空中散歩を楽しみたい方</li>
+              </ul>
+            </div>
+            <div class="comparison-col">
+              <ul>
+                <li>・ガイドから森のことをじっくり聞きたい方</li>
+                <li>・家族や仲間と一緒に森の冒険を楽しみたい方</li>
               </ul>
             </div>
           </div>

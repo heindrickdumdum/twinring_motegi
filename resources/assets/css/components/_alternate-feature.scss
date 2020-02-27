@@ -40,9 +40,22 @@
     .alt-feature-desc-wrapper {
       background: url('/assets/images/frame-v2.png') no-repeat;
       background-size: 100% 100%;
-      padding: 73px 40px 45px;
+      padding: 40px 40px 45px;
       text-align: center;
       position: relative;
+
+      &.new::before {
+        content: "NEW!";
+        background-color: #51ca30;
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        padding: 5px 10px;
+        color: $color-white;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1;
+      }
 
       .alt-feature-desc-text {
         line-height: 2;

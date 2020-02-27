@@ -205,6 +205,11 @@
     .heading-text {
       font-size: 45px;
       -webkit-text-fill-color: $color-white;
+
+      @include max-screen ($breakpoint-mobile) {
+        text-align: left;
+        font-size: 23px;
+      }
     }
     .heading-subtext {
       width: 100%;
@@ -213,9 +218,9 @@
       margin-top: 0;
 
       @include max-screen ($breakpoint-mobile) {
-        height: 43px;
-        width: 227px;
-        margin-top: 0;
+        height: 60px;
+        width: 230px;
+        margin: 0;
       }
     }
 
@@ -226,7 +231,8 @@
     }
 
     @include max-screen ($breakpoint-mobile) {
-      left: 20px;
+      left: 0;
+      padding: 50px 20px;
 
       .heading {
         margin-bottom: 12px;

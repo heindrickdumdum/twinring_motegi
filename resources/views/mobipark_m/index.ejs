@@ -140,7 +140,12 @@
                 }) %>
               </div>
 
-              <p class="adventure-content-copy">
+              <p class="adventure-content-copy u-show-pc">
+                森の生きものたちが隠れるすみかをテーマにした、<br>
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <p class="adventure-content-copy u-show-sp">
                 森の生きものたちが隠れるすみかをテーマにした、
                 屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
               </p>
@@ -174,7 +179,12 @@
                 }) %>
               </div>
 
-              <p class="adventure-content-copy">
+              <p class="adventure-content-copy u-show-pc">
+                巨大などんぐりの木のてっぺんを目指す、<br>
+                新感覚の木登り型アスレチック。39のアスレチックが待ち受けています。
+              </p>
+
+              <p class="adventure-content-copy u-show-sp">
                 巨大などんぐりの木のてっぺんを目指す、
                 新感覚の木登り型アスレチック。39のアスレチックが待ち受けています。
               </p>
@@ -208,7 +218,12 @@
                 }) %>
               </div>
 
-              <p class="adventure-content-copy">
+              <p class="adventure-content-copy u-show-pc">
+                森の生態系を表現した立体迷路。<br>
+                リアルな生きもののオブジェを観察しながら１４ヶ所のスタンプを集め、頂上を目指していきます。
+              </p>
+
+              <p class="adventure-content-copy u-show-sp">
                 森の生態系を表現した立体迷路。
                 リアルな生きもののオブジェを観察しながら１４ヶ所のスタンプを集め、頂上を目指していきます。
               </p>
@@ -319,7 +334,13 @@
             </p>
           </div>
 
-          <p class="adventure-content-copy">
+          <p class="adventure-content-copy u-show-pc">
+            はじめての人でもチャレンジできる気軽さがありながら、<br>
+            スピード感、エンジン音、コーナーリングの感覚は <br>
+            レーシングカーそのものという本格的なアトラクション。
+          </p>
+
+          <p class="adventure-content-copy u-show-sp">
             はじめての人でもチャレンジできる気軽さがありながら、
             スピード感、エンジン音、コーナーリングの感覚は
             レーシングカーそのものという本格的なアトラクション。
@@ -337,8 +358,13 @@
     </section>
 
     <!-- BOTTOM -->
+    <%- include('/partials/banner-cta', {
+      link: 'https://www.twinring.jp/mobipark_m/card/',
+      imgPath: mix('/assets/images/mobipark/mobipark-banner-card.png'),
+      alt: '上手に乗れたらライセンスカードをつくろう'
+    }) -%>
 
-    <div class="banner-cta">
+    <!-- <div class="banner-cta">
       <div class="l-container">
         <div class="banner-cta-bottom-inner">
           <a href="https://www.twinring.jp/mobipark_m/card/" target="_blank">
@@ -346,7 +372,7 @@
           </a>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- recommendation module -->
     <%- include('/partials/recommendation') -%>

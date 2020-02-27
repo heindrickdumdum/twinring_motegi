@@ -99,21 +99,30 @@
   margin-top: -25px;
 }
 
-.instagram-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 30px;
-
-  @include max-screen($breakpoint-mobile) {
-    margin-left: 0;
-  }
-}
-
 .instagram-list-item {
   padding: 0 10px;
 
   @include max-screen($breakpoint-mobile) {
     padding: 0 5px;
+  }
+}
+
+
+.instagram-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 30px;
+
+  &.sumika-instagram-list {
+   .instagram-list-item {
+    &:last-child {
+      display: none;
+    }
+   }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-left: 0;
   }
 }
 

@@ -31,7 +31,7 @@
 
       &:last-child {
         order: 1;
-        padding-right: 70px;
+        padding-right: 30px;
 
         @include max-screen($breakpoint-mobile) {
           order: 2;

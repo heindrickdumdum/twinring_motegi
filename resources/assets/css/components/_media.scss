@@ -477,12 +477,12 @@
 
     .note {
       @include min-screen($breakpoint-mobile + 1) {
-        margin-left: 4px;
+        // margin-left: 4px;
       }
 
       @include max-screen($breakpoint-mobile) {
         margin-top: 22px;
-        margin-left: 28px;
+        // margin-left: 28px;
       }
     }
 

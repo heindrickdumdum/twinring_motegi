@@ -172,7 +172,7 @@
   &:last-of-type {
     img {
       @include max-screen($breakpoint-mobile) {
-        width: auto;
+        width: 150px;
       }
     }
   }
@@ -194,3 +194,19 @@
     color: rgb(51, 51, 51);
   }
 }
+
+//modifier forest walk
+.subpage-walk {
+  .table-row {
+    .table-col {
+      p {
+        margin-bottom: 15px;
+  
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+//modifier forest walk end

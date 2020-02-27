@@ -1,11 +1,26 @@
 .column-link {
+  &-walk { //forest walk
+    .link-container {
+      max-width: 840px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-labo { //forest lab
+    .link-container {
+      max-width: 600px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: space-evenly;
+    }
+  }
+
   .link-container {
     display: flex;
     justify-content: space-evenly;
-    max-width: 600px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
 
     .link-item {
       flex-grow: 1;
@@ -98,43 +113,6 @@
             margin-top: 7px;
           }
         }
-      }
-    }
-  }
-}
-
-//modifier labo
-.column-link-labo {
-  .link-container {
-    justify-content: space-evenly;
-
-    .link-item {
-      &:first-child {
-        // text-align: right;
-
-        // @include min-screen($breakpoint-mobile + 1) {
-        //   top: 1px;
-        //   left: -42px;
-        // }
-
-        // @include max-screen($breakpoint-mobile) {
-        //   top: 1px;
-        //   left: -36px;
-        // }
-      }
-
-      &:last-child {
-        // text-align: left;
-
-        // @include min-screen($breakpoint-mobile + 1) {
-        //   top: 1px;
-        //   left: 77px;
-        // }
-
-        // @include max-screen($breakpoint-mobile) {
-        //   top: 1px;
-        //   left: 32px;
-        // }
       }
     }
   }

@@ -1,9 +1,8 @@
 <%
-  var title = '森あそび｜森の自然体験ミュージアムハローウッズ｜ツインリンクもてぎ'
-  pageId = 'hellowoods';
+  var title = '森あそび｜森の自然体験ミュージアムハローウッズ｜ツインリンクもてぎ';
+  pageId = 'program';
 %>
-
-<%- include('/partials/head', { title }) -%>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main>
   <div class="subpage subpage-walk">
@@ -299,4 +298,4 @@
   breadcrumbs : getData().data.breadcrumbsWalk
 }) -%>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

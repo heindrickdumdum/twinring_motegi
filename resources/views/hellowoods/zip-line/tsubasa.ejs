@@ -1,9 +1,8 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi';
+  pageId = 'tsubasa';
 %>
-<% pageId = 'tsubasa'; %>
-
-<%- include('/partials/head', { title }) -%>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <div class="subpage subpage-tsubasa">
 
@@ -385,4 +384,4 @@
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsTsubasa
 }) -%>
-<%- include('/partials/footer', {pageId} ) -%>
+<%- include('/partials/footer', { pageId } ) -%>

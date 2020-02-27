@@ -1,12 +1,10 @@
 <%
-var title = 'Twin Ring Motegi'
+var title = 'Twin Ring Motegi';
 SPRITE_SVG = '/assets/svg/sprite.svg';
+pageId = 'carAndBike';
 %>
-
 <% include('/partials/data/index') %>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark-subpage-carbike'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
   <div class="subpage">
@@ -236,4 +234,4 @@ SPRITE_SVG = '/assets/svg/sprite.svg';
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsCarbike
 }) -%>
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

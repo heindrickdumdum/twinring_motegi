@@ -1,12 +1,10 @@
 <%
-  var title = 'ツインリンクもてぎ｜モビパーク'
+  var title = 'ツインリンクもてぎ｜モビパーク';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'mobipark';
 %>
-
 <%- include('/partials/data/index') -%>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main>
   <div class="subpage subpage-mobipark page-mobipark">
@@ -364,4 +362,4 @@
   breadcrumbs : getData().data.breadcrumbsMobipark
 }) -%>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

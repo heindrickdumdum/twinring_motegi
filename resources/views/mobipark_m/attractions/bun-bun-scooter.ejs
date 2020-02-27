@@ -1,12 +1,10 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'bunBunScooter';
 %>
-
 <% include('/partials/data/index') %>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark-subpage'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
   <div class="subpage">
@@ -221,4 +219,4 @@
   breadcrumbs : getData().data.breadcrumbsBunbun
 }) -%>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

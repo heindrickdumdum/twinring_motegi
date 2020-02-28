@@ -18,15 +18,16 @@
 }
 
 .slider-wrap {
-  margin: 0 auto;
-  max-width: $container;
+  max-width: 100%;
+  padding-left: 7%;
+  padding-right: 7%;
 
-  @include max-screen($breakpoint-mobile) {
-    max-width: 88%;
-  }
+  // @include max-screen($breakpoint-mobile) {
+  //   max-width: 88%;
+  // }
 
   .slider-item {
-    max-width: calc(100% / 3.42);
+    max-width: calc(100% / 3.56);
     width: 100%;
 
     @include max-screen($breakpoint-mobile) {
@@ -41,6 +42,14 @@
   &.slider-wrap-how-to {
     @include max-screen($breakpoint-mobile) {
       max-width: 90%;
+    }
+  }
+
+  &.slider-wrap-section {
+    @include max-screen($breakpoint-mobile) {
+      .slider-item {
+        max-width: 100%;
+      }
     }
   }
 }

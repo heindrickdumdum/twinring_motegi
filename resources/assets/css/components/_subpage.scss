@@ -255,6 +255,8 @@
   }
 
   &.subpage-banner-musasabi {
+    text-align: center;
+    
     iframe {
       @include max-screen($breakpoint-mobile) {
         height: 212px;

@@ -68,7 +68,7 @@
   font-size: 36px;
 
   .is-ie & {
-    background: none;
+    background: none !important;
     color: $color-gossamer;
     -webkit-text-fill-color: $color-gossamer;
     -moz-text-fill-color: $color-gossamer;

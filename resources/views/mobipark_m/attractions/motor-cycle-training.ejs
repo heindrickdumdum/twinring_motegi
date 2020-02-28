@@ -28,7 +28,7 @@
         <h2 class="heading">
           <span class="u-title-hidden">Motorcyle Training</span>
           <span class="heading-texts">
-            <img src="<%= mix('/assets/images/motor-cycle-training/cycle-color-title.png') %>" alt="Motorcyle Training">
+            <img src="<%= mix('/assets/images/motor-cycle-training/cycle-color-title.png') %>" alt="森の中で初めてのバイクにチャレンジ">
           </span>
         </h2>
       </div>
@@ -36,7 +36,7 @@
       <!-- YOUTUBE -->
       <div class="subpage-banner">
         <div class="subpage-banner-inner">
-          <img src="<%= mix('/assets/images/motor-cycle-training/subpage-banner.jpg') %>" alt="アトラクション情報">
+          <img src="<%= mix('/assets/images/motor-cycle-training/subpage-banner.jpg') %>" alt="バイクに乗る少女">
         </div>
       </div>
 
@@ -44,7 +44,7 @@
         <span>アトラクション情報</span>
       </h3>
 
-      <p>森の中で挑戦するはじめてのバイク。森のトレーニングコースでバイクの乗り方、アクセル・ブレーキの<br/>ハンドル操作を練習しよう。</p>
+      <p>森の中で挑戦するはじめてのバイク。森のトレーニングコースでバイクの乗り方、アクセル・ブレーキのハンドル操作を練習しよう。</p>
 
       <table class="table">
         <tbody>
@@ -55,7 +55,7 @@
 
           <tr class="table-row">
             <th class="table-head">所要時間</th>
-            <td class="table-col">約20分（保護具の脱着、乗り方の説明、乗車）</td>
+            <td class="table-col">約20分（装備の装着、説明、一人ずつ練習、本番、装備外し）</td>
           </tr>
 
           <tr class="table-row">
@@ -238,7 +238,8 @@
 
     <%- include('/partials/banner-cta', {
       link: 'https://www.twinring.jp/mobipark_m/card/',
-      imgPath: mix('/assets/images/subpage-banner-bottom.png')
+      imgPath: mix('/assets/images/subpage-banner-bottom.png'),
+      alt: ''
     }) -%>
 
     <%- include('/partials/recommendation') -%>

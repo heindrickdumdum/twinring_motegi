@@ -1,6 +1,7 @@
 .swiper-container {
   overflow: visible;
   opacity: 0;
+  background-color: $color-white;
 
   &.swiper-container-initialized {
     opacity: 1;

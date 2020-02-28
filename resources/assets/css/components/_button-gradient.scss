@@ -33,6 +33,18 @@
 
 .button-gradient-text {
   background: linear-gradient(to right, $color-blue 0%, $color-green 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  
+  .is-ie & {
+    background: none;
+    color: $color-gossamer;
+    -webkit-text-fill-color: $color-gossamer;
+    -moz-text-fill-color: $color-gossamer;
+    -ms-text-fill-color: $color-gossamer;
+  }
 }

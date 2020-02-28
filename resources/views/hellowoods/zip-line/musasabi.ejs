@@ -12,20 +12,21 @@
         <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/musasabi/mv-img-sp.png') %>);"></div>
         <h2 class="u-show-sp mv-heading">
           <span class="mv-heading-texts">
-            森のジップライン ムササビ
+            
           </span>
         </h2>
       </li>
     </ul>
 
     <div class="l-container mv-container u-show-pc ">
-      <h2 class="mv-heading">
-        <span class="mv-heading-texts">
-          Musasabi Forest Zipline
-        </span>
-        <span class="mv-heading-subtexts">
-          森のジップライン ムササビ
-        </span>
+      <h2 class="mv-heading hellowoods-mv-heading">
+        <%- include('/partials/heading', {
+          modifier: 'heading-musasabi',
+          text: 'Musasabi Forest Zipline',
+          alt: '',
+          subtextvg: 'musasabi-main-title',
+          altSubtext: ''
+        }) %>
       </h2>
 
       <div class="mv-today mv-logo mv-logo-musasabi">
@@ -49,7 +50,7 @@
 
         <div class="subpage-banner subpage-banner-musasabi">
           <div class="subpage-banner-inner">
-            <iframe width="1020" height="573" src="https://www.youtube.com/embed/Jxao8GHXegA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src="<%= mix('/assets/images/musasabi/musasabi-attraction-information.png') %>" alt="アトラクション情報">
           </div>
         </div>
 

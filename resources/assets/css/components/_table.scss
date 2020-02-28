@@ -172,7 +172,8 @@
   &:last-of-type {
     img {
       @include max-screen($breakpoint-mobile) {
-        width: 150px;
+        width: 245px;
+        height: 15px;
       }
     }
   }

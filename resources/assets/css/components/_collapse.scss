@@ -20,6 +20,10 @@
   .table-heading {
     margin: 0;
     padding: 36px 0;
+
+    @include max-screen($breakpoint-mobile) {
+      padding: 15px 0 26px;
+    }
   }
 
   .collapse-arrow {

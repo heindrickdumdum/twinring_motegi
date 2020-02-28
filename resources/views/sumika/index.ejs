@@ -1,10 +1,10 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'sumika';
 %>
 <% include('./../partials/data/index') %>
-<%- include('./../partials/head', { title }) -%>
-<% pageId = 'sumika'; %>
+<%- include('./../partials/head', { pageId, title }) -%>
 
 <div class="subpage">
   <div class="mv mv-inner">
@@ -523,4 +523,4 @@
   breadcrumbs : getData().data.breadcrumbsSumika
 }) -%>
 
-<%- include('./../partials/footer', {pageId} ) -%>
+<%- include('./../partials/footer', { pageId } ) -%>

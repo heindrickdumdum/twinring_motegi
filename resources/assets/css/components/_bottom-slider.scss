@@ -1,4 +1,8 @@
 .bottom-slider {
-  padding: 0 110px;
   width: 100%;
+  padding: 0 50px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 0 110px;
+  }
 }

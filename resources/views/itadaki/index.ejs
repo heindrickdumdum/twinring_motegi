@@ -1,128 +1,9 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'itadaki';
 %>
-
-<%
-accordionData = [
-      {
-        question: '小さい子どもが遊べますか？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '所要時間は？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '以下に記載している方はご利用をご遠慮ください。',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'トイレ・授乳室について ',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '荷物はどこに置けばいいですか？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '飲食物の持ち込みは？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'カメラについて',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'ベビーカーについて',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-
-    ]
-%>
-
-<%
-  recommend = [
-    {
-      'image': mix('/assets/images/top/how-to/img1.jpg'),
-      'heading': '巨大ネットの森SUMIKA',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img2.jpg'),
-      'heading': '森感覚アスレチックDOKIDOKI',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img3.jpg'),
-      'heading': '迷宮森殿 ITADAKI',
-      'buttonLink': '#',
-    }
-  ]
-%>
-
-<%
-  pickup = [
-    {
-      'image': mix('/assets/images/dokidoki/feature/img1.png'),
-      'heading': `2019 FIM MotoGP&trade; 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
-      'date': '2019.11.02 ～ 2019.11.03',
-      'link': '#',
-      },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img2.png'),
-      'heading': '2019 FIM MotoGP&trade; 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
-      'date': '2019.11.02 ～ 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img3.png'),
-      'heading': 'モトレーサー タイムアタック選手権2019予選',
-      'date': '2019.11.02 ～ 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img4.png'),
-      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
-      'date': '2019.11.02 ～ 2019.11.03',
-      'link': '#',
-    }
-  ]
-%>
-<% pageId = 'itadaki'; %>
-<%- include('./../partials/head', { title }) -%>
+<%- include('./../partials/head', { pageId, title }) -%>
 <div class="subpage subpage-itadaki">
   <div class="mv mv-inner itadaki-mv">
     <ul class="mv-list">
@@ -298,9 +179,7 @@ accordionData = [
               <tr class="table-row">
                 <th class="table-head">日程</th>
                 <td class="table-col">
-                  9月 15日（日）、16日（月）、29日（日）<br>
-                  10月 15日（日）、16日（月）、29日（日）<br>
-                  11月 15日（日）、16日（月）、29日（日）
+                 3月20日（金・祝）、21日（土）、22日（日）、28日（土）、29日（日）
                 </td>
               </tr>
 
@@ -500,7 +379,7 @@ accordionData = [
                     allowfullscreen></iframe>
                 </div>
               </div>
-              <p class="youtube-video-description">「迷宮森殿 ITADAKI」紹介映像（120秒）</p>
+              <!-- <p class="youtube-video-description">「迷宮森殿 ITADAKI」紹介映像（120秒）</p> -->
             </li>
             <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
               <div class="youtube-video-wrapper">
@@ -510,7 +389,7 @@ accordionData = [
                     allowfullscreen></iframe>
                 </div>
               </div>
-              <p class="youtube-video-description">「迷宮森殿 ITADAKI」体験シーン</p>
+              <!-- <p class="youtube-video-description">「迷宮森殿 ITADAKI」体験シーン</p> -->
             </li>
           </ul>
         </div>
@@ -650,64 +529,14 @@ accordionData = [
   }) -%>
 
 
-  <section class="recommendation">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-recommend',
-        text: 'Recommendation',
-        altSubtext: '',
-        subtextvg: 'recommendation-title'
-      }) %>
-    </div>
+  <%- include('/partials/recommendation') -%>
 
-    <div class="swiper-container slider js-slider-bottom">
-      <ul class="swiper-wrapper slider-wrapper">
-        <% getData().data.recommendDokidoki.forEach(item => { %>
-        <li class="swiper-slide slider-item">
-          <%- include('/partials/article-no-design', {
-              image: item.image,
-              heading: item.heading,
-              buttonLink: item.buttonLink,
-              buttonText: 'モビパーク'
-            }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
-  </section>
-
-  <section class="pick-up">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-pickup',
-        text: 'Pick Up',
-        altSubtext: '',
-        subtextvg: 'pickup-event'
-      }) %>
-    </div>
-    <div class="l-container">
-      <div class="pick-inner">
-        <ul class="pickup-list row">
-          <% getData().data.pickup.forEach(item => { %>
-          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-6">
-            <%- include('/partials/article', {
-              category: item.category,
-              image: item.image,
-              heading: item.heading,
-              date: item.date,
-              link: item.link,
-              modifier: 'pickup-article'
-            }) %>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <%- include('/partials/pickup') -%>
+  
 </div>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsItadaki
 }) -%>
 
-<%- include('./../partials/footer', {pageId} ) -%>
+<%- include('./../partials/footer', { pageId } ) -%>

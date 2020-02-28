@@ -1,12 +1,10 @@
 <%
-  var title = 'ツインリンクもてぎ｜モビパーク'
+  var title = 'ツインリンクもてぎ｜モビパーク';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'mobipark';
 %>
-
 <%- include('/partials/data/index') -%>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main>
   <div class="subpage subpage-mobipark page-mobipark">
@@ -42,6 +40,7 @@
         <%- include('/partials/heading', {
             modifier: 'heading-info',
             text: 'Information',
+            <!-- imgPath: mix('/assets/images/mobipark/information-title.png'), -->
             alt: 'information',
             altSubtext: '',
             subtextvg: 'mobipark-information-title',
@@ -53,7 +52,9 @@
         <ul class="info-list">
           <% mobiparkData.forEach(item => { %>
           <li class="info-item">
-            <span><%= item.desc %></span>
+            <a href="/sumika/#information" target="_blank">
+              <span><%= item.desc %></span>
+            </a>
           </li>
           <% }) %>
         </ul>
@@ -79,7 +80,7 @@
           </div>
           <div class="challenge-right">
             <p class="heading-text">
-              <img src="<%- mix('/assets/images/mobipark/mobipark-content-title.png') -%>" alt="はじめての挑戦と、できたの喜びに子どもたちが夢中になる">
+              <img src="<%- mix('/assets/images/mobipark/mobipark-content-title.png') -%>" alt="子どもが夢中になれるチャレンジがいっぱい。親子でたくさんの「できタネ！」をあつめよう">
             </p>
             <p class="desc">
               モビパークには、森をテーマに親子でチャレンジできるアスレチックや立体迷路、子どもが自由に操れるクルマやバイクのアトラクションがいっぱい。モビパークは、そんな子どもたちのステップアップを応援します。
@@ -141,7 +142,7 @@
               </div>
 
               <p class="adventure-content-copy u-show-pc">
-                森の生きものたちが隠れるすみかをテーマにした、<br>
+                森の生きものたちが隠れるすみかをテーマにした、<br/>
                 屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
               </p>
 
@@ -180,7 +181,7 @@
               </div>
 
               <p class="adventure-content-copy u-show-pc">
-                巨大などんぐりの木のてっぺんを目指す、<br>
+                巨大などんぐりの木のてっぺんを目指す、<br/>
                 新感覚の木登り型アスレチック。39のアスレチックが待ち受けています。
               </p>
 
@@ -219,7 +220,7 @@
               </div>
 
               <p class="adventure-content-copy u-show-pc">
-                森の生態系を表現した立体迷路。<br>
+                森の生態系を表現した立体迷路。<br/>
                 リアルな生きもののオブジェを観察しながら１４ヶ所のスタンプを集め、頂上を目指していきます。
               </p>
 
@@ -267,7 +268,7 @@
         <div class="row">
           <div class="col-lg-6 col-sm-12">
             <div class="slide-container">
-              <div class="swiper-container slider  slider-container-mobipark" id="js-mobipark-slider">
+              <div class="swiper-container slider  slider-container-mobipark swiper-container-mobipark" id="js-mobipark-slider">
                 <ul class="swiper-wrapper">
                   <% mobiparkSlides.forEach( item => { %>
                   <li class="swiper-slide slider-item">
@@ -282,7 +283,7 @@
 
           <div class="col-lg-6 col-sm-12">
             <h3 class="content-heading">
-              アクセルとハンドルを自由に操作
+              アクセルとハンドルを自由に操作<br/>
               目標に向かってステップアップ
             </h3>
             <p class="content-desc">
@@ -335,8 +336,8 @@
           </div>
 
           <p class="adventure-content-copy u-show-pc">
-            はじめての人でもチャレンジできる気軽さがありながら、<br>
-            スピード感、エンジン音、コーナーリングの感覚は <br>
+            はじめての人でもチャレンジできる気軽さがありながら、<br/>
+            スピード感、エンジン音、コーナーリングの感覚は <br/>
             レーシングカーそのものという本格的なアトラクション。
           </p>
 
@@ -382,7 +383,6 @@
 
     <!-- END BOTTOM -->
   </div>
-
 </main>
 
 <!-- BREADCRUMBS -->
@@ -390,4 +390,4 @@
   breadcrumbs : getData().data.breadcrumbsMobipark
 }) -%>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

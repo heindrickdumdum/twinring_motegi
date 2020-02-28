@@ -1,11 +1,10 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'motoTouring';
 %>
-
 <% include('/partials/data/index') %>
-<%- include('/partials/head', { title }) -%>
-<% pageId = 'mobipark-subpage'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
   <div class="subpage">
@@ -25,13 +24,13 @@
     <div class="subpage-inner">
       <div class="heading-wrap heading-main heading-main-moto-touring">
         <h2 class="heading">
-          <span class="u-title-hidden">Moto Touring</span>
+          <span class="u-title-hidden">森の中を親子でのんびりとツーリングに出掛けよう！</span>
           <span class="heading-texts u-show-pc">
-            <img src="<%= mix('/assets/images/moto-touring/moto-color-title.png') %>" alt="">
+            <img src="<%= mix('/assets/images/moto-touring/moto-color-title.png') %>" alt="森の中を親子でのんびりとツーリングに出掛けよう！">
           </span>
 
           <span class="heading-texts u-show-sp">
-            <img src="<%= mix('/assets/images/moto-touring/moto-color-title-sp.png') %>" alt="">
+            <img src="<%= mix('/assets/images/moto-touring/moto-color-title-sp.png') %>" alt="森の中を親子でのんびりとツーリングに出掛けよう！">
           </span>
         </h2>
       </div>
@@ -39,7 +38,7 @@
       <!-- YOUTUBE -->
       <div class="subpage-banner">
         <div class="subpage-banner-inner">
-          <img class="" src="<%= mix('/assets/images/moto-touring/subpage-banner.jpg') %>" alt="">
+          <img class="" src="<%= mix('/assets/images/moto-touring/subpage-banner.jpg') %>" alt="親子ツーリング">
         </div>
       </div>
 
@@ -59,14 +58,14 @@
           <tr class="table-row">
             <th class="table-head">所要時間</th>
             <td class="table-col">
-              約5分（走行時間3分）
+              約15分
             </td>
           </tr>
 
           <tr class="table-row">
             <th class="table-head">雨天の運行</th>
             <td class="table-col">
-              雨天などにより、コースコンディション悪化の場合、営業見合わせとなる場合がございます。
+              営業いたします。荒天時などコースコンディションが悪化した場合には営業を中断します。
             </td>
           </tr>
 
@@ -106,7 +105,7 @@
           <%- include('/partials/heading', {
             modifier: 'heading-gradient-tobottom heading-howto heading-howto-mototouring u-show-pc',
             text: 'How to Enjoy',
-            alt: '',
+            alt: 'How to Enjoy',
             subtextvg: 'moto-enjoy-point-title',
             altSubtext: '',
           }) %>
@@ -114,7 +113,7 @@
           <%- include('/partials/heading', {
             modifier: 'heading-gradient-tobottom heading-howto heading-howto-mototouring u-show-sp',
             text: 'How to Enjoy',
-            alt: '',
+            alt: 'How to Enjoy',
             subtextvg: 'moto-enjoy-point-title-sp',
             altSubtext: '',
           }) %>
@@ -243,7 +242,8 @@
 
     <%- include('/partials/banner-cta', {
       link: 'https://www.twinring.jp/mobipark_m/card/',
-      imgPath: mix('/assets/images/subpage-banner-bottom.png')
+      imgPath: mix('/assets/images/subpage-banner-bottom.png'),
+      alt: ''
     }) -%>
 
     <%- include('/partials/recommendation') -%>
@@ -258,4 +258,4 @@
   breadcrumbs : getData().data.breadcrumbsMototouring
 }) -%>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

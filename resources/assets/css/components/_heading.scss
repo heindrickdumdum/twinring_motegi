@@ -186,6 +186,7 @@
   .heading-text {
     max-width: 560px;
     width: 100%;
+    background: none; //for ie
 
     @include max-screen($breakpoint-mobile) {
       max-width: 250px;
@@ -274,6 +275,7 @@
   .heading-carbike {
     .heading-subtext {
       display: block;
+      max-width: 400px;
     }
   }
 }

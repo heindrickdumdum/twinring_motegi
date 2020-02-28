@@ -157,9 +157,7 @@
                 <tr class="table-row">
                   <th class="table-head">日程</th>
                   <td class="table-col">
-                    9月 15日（日）、16日（月）、29日（日）<br>
-                    10月 15日（日）、16日（月）、29日（日）<br>
-                    11月 15日（日）、16日（月）、29日（日）
+                    3月20日（金・祝）、21日（土）、22日（日）、28日（土）、29日（日）
                   </td>
                 </tr>
 
@@ -235,7 +233,7 @@
           <div class="media-right">
             <h4 class="media-title"><span>ドキドキの連続！39のアスレチック</span></h4>
             <p class="media-desc">
-              “巨大などんぐりの木”に見立てた５階建ての「森感覚アスレチック DOKIDOKI」には、全部で３９のアスレチックがあります。さまざまなアスレチックをクリアしててっぺんをめざしましょう！
+              “巨大などんぐりの木”に見立てた５階建ての「森感覚アスレチック DOKIDOKI」には、全部で3９のアスレチックがあります。さまざまなアスレチックをクリアしててっぺんをめざしましょう！
             </p>
 
             <%- include('/partials/note', {
@@ -465,60 +463,9 @@
     alt: '上手に乗れたらライセンスカードをつくろう'
   }) -%>
 
-  <section class="recommendation l-section">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-recommend',
-        text: 'Recommendation',
-        altSubtext: '',
-        subtextvg: 'recommendation-title'
-      }) %>
-    </div>
+  <%- include('/partials/recommendation') -%>
 
-    <div class="swiper-container slider js-slider-bottom">
-      <ul class="swiper-wrapper slider-wrapper">
-        <% getData().data.recommendDokidoki.forEach(item => { %>
-        <li class="swiper-slide slider-item">
-          <%- include('/partials/article-no-design', {
-              image: item.image,
-              heading: item.heading,
-              buttonLink: item.buttonLink,
-              buttonText: 'モビパーク'
-            }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
-  </section>
-
-  <section class="pick-up l-section">
-    <div class="l-section-title">
-      <%- include('/partials/heading', {
-        modifier: 'heading-pickup',
-        text: 'Pick Up',
-        altSubtext: '',
-        subtextvg: 'pickup-event'
-      }) %>
-    </div>
-    <div class="l-container">
-      <div class="pick-inner">
-        <ul class="pickup-list row">
-          <% getData().data.pickup.forEach(item => { %>
-          <li class="pickup-list-item col-lg-3 col-md-3 col-sm-6">
-            <%- include('/partials/article', {
-              category: item.category,
-              image: item.image,
-              heading: item.heading,
-              date: item.date,
-              link: item.link,
-              modifier: 'pickup-article'
-            }) %>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <%- include('/partials/pickup') -%>
 
 </div>
 
@@ -526,4 +473,4 @@
   breadcrumbs : getData().data.breadcrumbsDokidoki
 }) -%>
 
-<%- include('./../partials/footer', {pageId} ) -%>
+<%- include('./../partials/footer', { pageId } ) -%>

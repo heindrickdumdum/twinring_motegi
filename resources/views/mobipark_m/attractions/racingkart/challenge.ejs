@@ -1,12 +1,10 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi | チャレンジカート';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'challenge';
 %>
-
 <% include('/partials/data/index') %>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark-subpage'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
   <div class="subpage">
@@ -27,11 +25,11 @@
     <div class="subpage-inner">
       <div class="heading-wrap heading-main heading-main-challenge">
         <h2 class="heading">
-          <span class="u-title-hidden">Challenge Cart</span>
+          <span class="u-title-hidden">Challenge Kart</span>
           <span class="heading-texts">
-            <img class="u-show-pc" src="<%= mix('/assets/images/challenge/challenge-color-title.png') %>" alt="">
+            <img class="u-show-pc" src="<%= mix('/assets/images/challenge/challenge-color-title.png') %>" alt="本格的なモータースポーツアトラクション　君の可能性にチャレンジしよう">
 
-            <img class="u-show-sp" src="<%= mix('/assets/images/challenge/challenge-color-title-sp.png') %>" alt="">
+            <img class="u-show-sp" src="<%= mix('/assets/images/challenge/challenge-color-title-sp.png') %>" alt="本格的なモータースポーツアトラクション　君の可能性にチャレンジしよう">
           </span>
         </h2>
       </div>
@@ -39,7 +37,7 @@
       <!-- YOUTUBE -->
       <div class="subpage-banner">
         <div class="subpage-banner-inner">
-          <img src="<%= mix('/assets/images/challenge/subpage-banner.jpg') %>" alt="">
+          <img src="<%= mix('/assets/images/challenge/subpage-banner.jpg') %>" alt="マシンを運転する女の子">
         </div>
       </div>
 
@@ -131,7 +129,7 @@
           <%- include('/partials/heading', {
             modifier: 'heading-gradient-tobottom heading-howto heading-howto-challenge u-show-pc',
             text: 'How to Enjoy',
-            alt: '',
+            alt: 'How to Enjoy',
             subtextvg: 'challenge-enjoy-point-title',
             altSubtext: '',
           }) %>
@@ -139,7 +137,7 @@
           <%- include('/partials/heading', {
             modifier: 'heading-gradient-tobottom heading-howto heading-howto-challenge u-show-sp',
             text: 'How to Enjoy',
-            alt: '',
+            alt: 'How to Enjoy',
             subtextvg: 'challenge-enjoy-point-title-sp',
             altSubtext: '',
           }) %>
@@ -419,4 +417,4 @@
   breadcrumbs : getData().data.breadcrumbsChallenge
 }) -%>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

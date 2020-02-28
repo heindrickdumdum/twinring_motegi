@@ -56,7 +56,7 @@
     line-height: 2.25;
 
     @include max-screen($breakpoint-mobile) {
-      line-height: 1.55;
+      line-height: 2.25;
       margin: 0;
       margin-top: 22px;
       font-size: 12px;

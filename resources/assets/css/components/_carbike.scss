@@ -62,6 +62,10 @@
   margin-bottom: 20px;
   width: 100%;
 
+  .carbike-item-link {
+    color: inherit;
+  }
+
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 75px;
     width: calc((100% - 60px) / 2);
@@ -71,6 +75,7 @@
 .carbike-article-thumb {
   position: relative;
   margin-bottom: 12px;
+
 
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 23px;
@@ -127,6 +132,9 @@
   &.carbike-article-cat-bg-green-5 {
     background-color: #d2e737;
   }
+  &.carbike-article-cat-bg-green-6 {
+    background-color: #bcd63b;
+  }
 }
 
 .carbike-article-content {
@@ -167,8 +175,8 @@
 
 
   @include min-screen($breakpoint-mobile + 1) {
-    width: 57px;
-    height: 61px;
+    width: 50px;
+    height: 40px;
     right: -60px;
   }
 }

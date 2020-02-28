@@ -1,12 +1,10 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi | ドリームカート';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'dream';
 %>
-
 <% include('/partials/data/index') %>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark-subpage'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
   <div class="subpage">
@@ -41,7 +39,7 @@
       <!-- YOUTUBE -->
       <div class="subpage-banner">
         <div class="subpage-banner-inner">
-          <img class="" src="<%= mix('/assets/images/dream/subpage-banner.jpg') %>" alt="Dreamkart">
+          <img class="" src="<%= mix('/assets/images/dream/subpage-banner.jpg') %>" alt="ドリームカート">
         </div>
       </div>
 
@@ -49,7 +47,7 @@
         <span>アトラクション情報</span>
       </h3>
 
-      <p>初めてのカートにチャレンジ。最高速度20km/hのエンジンで動く本格カートで走行して爽快感を味わってみよう。<br />全長210mのコースをを約3分間走行します。</p>
+      <p>初めてのカート走行でライバルと勝負。アクセルとブレーキを使ってエンジンで動くマシンを自由に操り、モータースポーツの醍醐味を体感しよう。</p>
 
       <table class="table">
         <tbody>
@@ -100,7 +98,7 @@
           <%- include('/partials/heading', {
             modifier: 'heading-gradient-tobottom heading-howto heading-howto-dream u-show-pc',
             text: 'How to Enjoy',
-            alt: '',
+            alt: 'How to Enjoy',
             subtextvg: 'dream-enjoy-point-title',
             altSubtext: '',
           }) %>
@@ -108,7 +106,7 @@
           <%- include('/partials/heading', {
             modifier: 'heading-gradient-tobottom heading-howto heading-howto-dream u-show-sp',
             text: 'How to Enjoy',
-            alt: '',
+            alt: 'How to Enjoy',
             subtextvg: 'dream-enjoy-point-title-sp',
             altSubtext: '',
           }) %>
@@ -231,7 +229,8 @@
 
     <%- include('/partials/banner-cta', {
       link: 'https://www.twinring.jp/mobipark_m/card/',
-      imgPath: mix('/assets/images/subpage-banner-bottom.png')
+      imgPath: mix('/assets/images/subpage-banner-bottom.png'),
+      alt: ''
     }) -%>
 
     <%- include('/partials/recommendation') -%>
@@ -246,4 +245,4 @@
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsDream
 }) -%>
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

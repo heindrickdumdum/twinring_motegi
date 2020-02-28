@@ -1,10 +1,9 @@
 <%
   var title = 'Twin Ring Motegi';
+  pageId = 'hellowoods';
 %>
 <%- include('./../partials/data/index') -%>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'hellowoods'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <div class="subpage hellowoods-wrapper">
   <div class="mv mv-hellowoods">
@@ -142,7 +141,7 @@
       <section class="adventure">
         <div class="l-section-title">
           <%- include('/partials/heading', {
-            modifier: 'heading-wrap-center heading-wrap-hellowoods adventure',
+            modifier: 'heading-wrap-center heading-wrap-hellowoods',
             text: 'Swirl',
             alt: '',
             altSubtext: '',
@@ -304,4 +303,4 @@
   </main>
 </div>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

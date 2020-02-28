@@ -1,10 +1,8 @@
 <%
-  var title = 'Twin Ring Motegi | 森の研究室'
-  pageId = 'hellowoods-subpage';
-  subpageId = 'forest-labo';
+  var title = 'Twin Ring Motegi | 森の研究室';
+  pageId = 'labo';
 %>
-
-<%- include('/partials/head', { title }) -%>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main>
   <div class="subpage subpage-labo">
@@ -28,7 +26,7 @@
         <%- include('/partials/heading', {
           modifier: 'heading-main heading-main-subpage',
           subtext: mix('/assets/images/hellowoods/research-color-title.png'),
-          altSubtext: `生きものの研究室
+          altSubtext: `生きものの暮らしや不思議を観察しよう
           `
         }); -%>
       </div>
@@ -37,7 +35,7 @@
         <%- include('/partials/heading', {
           modifier: 'heading-main heading-main-subpage heading-main-subpage-labo',
           subtext: mix('/assets/images/hellowoods/lab-color-title.png'),
-          altSubtext: `生きものの研究室
+          altSubtext: `生きものの暮らしや不思議を観察しよう
           `
         }); -%>
       </div>
@@ -97,7 +95,7 @@
         </div>
 
         <h3 class="subpage-title">
-          <span>アトラクション情報</span>
+          <span>アクティビティ情報</span>
         </h3>
 
         <p>
@@ -130,7 +128,7 @@
             <tr class="table-row">
               <th class="table-head">雨天の開催</th>
               <td class="table-col">
-                雨天でも営業いたしております。
+                営業いたします
               </td>
             </tr>
 
@@ -260,7 +258,7 @@
             <tr class="table-row">
               <th class="table-head">雨天の開催</th>
               <td class="table-col">
-                雨天でも営業いたしております。
+                営業いたします
               </td>
             </tr>
 
@@ -322,10 +320,10 @@
           <a href="https://www.twinring.jp/hellowoods/wildlife/" target="_blank">
             <ul class="banner-list">
               <li class="list-item js-banner-item">
-                <img src="<%= mix('/assets/images/hellowoods/labo-banner-item1.jpg'); %>" alt="哺乳類研究室">
+                <img src="<%= mix('/assets/images/hellowoods/labo-banner-item1.jpg'); %>" alt="森で出会える動物たち">
               </li>
               <li class="list-item js-banner-item">
-                <img src="<%= mix('/assets/images/hellowoods/labo-banner-item2.jpg'); %>" alt="哺乳類研究室">
+                <img src="<%= mix('/assets/images/hellowoods/labo-banner-item2.jpg'); %>" alt="森で出会える動物たち">
               </li>
             </ul>
           </a>
@@ -349,4 +347,4 @@
   breadcrumbs : getData().data.breadcrumbsLabo
 }) -%>
 
-<%- include('/partials/footer', {pageId, subpageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

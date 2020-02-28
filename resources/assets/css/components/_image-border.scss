@@ -1,9 +1,9 @@
 .image-border {
-  border: 10px solid transparent;
-  border-image: url(#{$image-path}frame.png) 30 stretch;
+  padding: 10px;
+  background: url(#{$image-path}frame.png) no-repeat center;
+  background-size: contain;
 
   @include max-screen($breakpoint-mobile) {
-    border: 6px solid transparent;
-    border-image: url(#{$image-path}frame.png) 30 stretch;
+    padding: 7px;
   }
 }

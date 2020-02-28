@@ -33,10 +33,10 @@ slider({
 })
 
 // SUMIKA , ITADAKI, AND DOKIDOKI BOTTOM SLIDER
-slider({
-  id: 'commonSliderBottom', // REQUIRED
-  target: '.js-slider-bottom', // REQUIRED
-})
+// slider({
+//   id: 'commonSliderBottom', // REQUIRED
+//   target: '.js-slider-bottom', // REQUIRED
+// })
 
 // slider({
 //   id: 'commonSlider', // REQUIRED
@@ -56,3 +56,23 @@ slider({
 //     },
 // 	}
 // })
+
+slider({
+  id: 'commonSliderBottom', // REQUIRED
+  target: '.js-slider-bottom', // REQUIRED
+  options: {
+    slidesPerView: 'auto',
+    variableWidth: true,
+    spaceBetween: 60,
+    centeredSlides: false,
+    initialSlide: 1,
+
+    breakpoints: {
+      767: {
+        slidesPerView: 'auto',
+        spaceBetween: 25,
+        centeredSlides: true
+      }
+    }
+  }
+})

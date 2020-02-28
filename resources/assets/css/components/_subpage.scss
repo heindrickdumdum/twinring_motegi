@@ -421,6 +421,10 @@
       opacity: 0;
       transition: opacity 1s ease-in;
 
+      img {
+        width: 100%;
+      }
+
       &.is-active {
         opacity: 1;
       }

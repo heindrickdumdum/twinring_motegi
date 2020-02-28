@@ -40,6 +40,7 @@ if (typeof heading_level === 'undefined'){
 <div class="heading-wrap<%- ' '+modifier %>">
   <div class="heading">
     <% if(text) { %>
+      <span class="u-title-hidden"><%- alt %></span>
       <h<%- heading_level %> class="heading-text">
         <%- text %>
     </h<%= heading_level %>>

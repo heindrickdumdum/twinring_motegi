@@ -193,7 +193,7 @@
         modifier: 'heading-wrap-how-to heading-wrap-center',
         text: 'How to Enjoy',
         subtextvg: 'how-to-subtext',
-        altSubtext: '',
+        altSubtext: ''
       }) %>
 
       <div class="slider-wrap slider-wrap-how-to">
@@ -204,10 +204,15 @@
             %>
             <li class="swiper-slide slider-item">
               <%- include('/partials/article-no-design', {
+                category: '',
                 image: howToItem.image,
                 heading: howToItem.heading,
+                type: '',
+                date: '',
+                link: '',
+                modifier: '',
                 buttonText: howToItem.buttonText,
-                buttonLink: howToItem.buttonLink,
+                buttonLink: howToItem.buttonLink
               }) %>
             </li>
             <% }) %>

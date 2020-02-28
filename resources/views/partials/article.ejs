@@ -2,6 +2,10 @@
 if (typeof modifier === 'undefined') {
   var modifier = '';
 }
+
+if (typeof type === 'undefined') {
+  var type = '';
+}
 %>
 <article class="article <%- modifier %>">
   <a class="article-link" href="<%- link %>">
@@ -12,6 +16,10 @@ if (typeof modifier === 'undefined') {
       <div class="article-image"
            style="background-image: url(<%= (image) ? image : mix('/assets/images/noimage.jpg') %>)"></div>
     </div>
+    <% if(type) { %>
+      <span class="article-type article-type-<%- type %>"><%- type %></span>
+    <% } %>
+
     <h3 class="article-heading"><%- heading %></h3>
     <p class="article-period">
       開催期間：<time class="article-period-date" datetime="P1D"><%- date %></time>

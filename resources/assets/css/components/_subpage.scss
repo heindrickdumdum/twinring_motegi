@@ -21,7 +21,7 @@
     height: 1px;
     max-width: 1220px;
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 40px);
@@ -513,7 +513,7 @@
   background-color: #f7f7f7;
   max-width: 800px;
   margin: 50px auto;
-  
+
   .subpage-collapse-heading {
     padding: 30px;
     text-align: center;

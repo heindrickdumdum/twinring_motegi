@@ -74,6 +74,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
+  background-color: #fff;
 
   &::before {
     content: '';
@@ -127,12 +128,17 @@
 
   &.article-pickup {
     @include max-screen($breakpoint-mobile) {
-      padding: 0
+      padding: 0 0 20px 0;
     }
 
     .article-heading {
       min-height: 105px;
       margin-bottom: 10px;
+
+      @include max-screen($breakpoint-mobile) {
+        min-height: 100%;
+        margin-bottom: 20px;
+      }
     }
 
     .article-image-wrap {

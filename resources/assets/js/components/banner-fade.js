@@ -7,7 +7,11 @@ export default function bannerFade(params) {
     firstItem.classList.add('is-active');
 
     setInterval(() => {
-      items.forEach((item) => item.classList.remove('is-active'));
+      // items.forEach((item) => item.classList.remove('is-active'));
+      for(let item of items) {
+        item.classList.remove('is-active');
+      }
+
       firstItem.classList.remove('is-active');
 
       currentIdx++;

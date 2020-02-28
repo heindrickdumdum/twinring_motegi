@@ -14,7 +14,7 @@ body {
   font-family: $base-font-family;
   color: $base-font-color;
   background-color: $base-background-color;
-  min-width: $container;
+  min-width: $breakpoint-tablet;
   overflow-x: hidden;
 
   @media screen and (max-width: $breakpoint-mobile + 1) {

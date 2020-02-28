@@ -14,8 +14,3 @@ topFeatureSlider({
 	id: 'commonSlider', // REQUIRED
 	target: '.js-slider-sp', // REQUIRED
 })
-
-topFeatureSlider({
-	id: 'topHowTo', // REQUIRED
-	target: '.js-slider-how-to', // REQUIRED
-})

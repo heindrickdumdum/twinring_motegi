@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+import Swiper from 'swiper/dist/js/swiper.js';
 
 export default function topFeatureSlider(params) {
   if (!params.id) return;
@@ -6,7 +6,6 @@ export default function topFeatureSlider(params) {
 
   const defaultOptions = {
     speed: 1500,
-    initialSlide: 2,
     slidesPerView: 'auto',
     variableWidth: 'auto',
     spaceBetween: 55,
@@ -18,12 +17,10 @@ export default function topFeatureSlider(params) {
 
     breakpoints: {
       1280: {
-        initialSlide: 1,
         slidesPerGroup: 3
       },
       375: {
         spaceBetween: 10,
-        initialSlide: 1,
         slidesPerGroup: 1
       }
     },

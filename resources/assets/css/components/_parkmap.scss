@@ -9,9 +9,9 @@
 }
 
 .parkmap-image {
-  background: url(#{$image-path}top/parkmap/image.jpg) no-repeat center top;
+  background: url(#{$image-path}top/parkmap/map-v2.png) no-repeat center top;
   background-size: contain;
-  width: 1402px;
+  width: 1600px;
   height: 903px;
   position: relative;
   left: -346px;
@@ -19,9 +19,11 @@
 
   @include max-screen($breakpoint-mobile) {
     width: 550px;
-    height: 350px;
+    height: 370px;
     left: 50%;
     transform: translateX(-50%);
+    background: url(#{$image-path}top/parkmap/map-v2-sp.png) no-repeat center top;
+    background-size: contain;
   }
 }
 
@@ -29,6 +31,7 @@
   counter-reset: parkmap_image_list;
   position: relative;
   left: 330px;
+  display: none; //Termporarily hidden
 
   @include max-screen($breakpoint-mobile) {
     left: 0;

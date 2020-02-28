@@ -1,12 +1,10 @@
 <%
-  var title = 'DEN-DEN WALK | おさんぽ でんでん'
+  var title = 'DEN-DEN WALK | おさんぽ でんでん';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'debDenWalk';
 %>
-
 <% include('/partials/data/index') %>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark-subpage'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
   <div class="subpage">
@@ -236,4 +234,4 @@
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsDebden
 }) -%>
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

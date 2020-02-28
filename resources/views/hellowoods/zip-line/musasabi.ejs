@@ -1,10 +1,8 @@
 <%
-  var title = '森のジップライン ムササビ｜森の自然体験ミュージアムハローウッズ｜ツインリンクもてぎ'
+  var title = '森のジップライン ムササビ｜森の自然体験ミュージアムハローウッズ｜ツインリンクもてぎ';
+  pageId = 'musasabi';
 %>
-
-<% pageId = 'hellowoods-subpage'; %>
-
-<%- include('/partials/head', { title }) -%>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <div class="subpage subpage-musasabi">
   <div class="mv mv-subpage mv-musasabi">
@@ -411,4 +409,4 @@
   breadcrumbs : getData().data.breadcrumbsMusasabi
 }) -%>
 
-<%- include('/partials/footer', {pageId} ) -%>
+<%- include('/partials/footer', { pageId } ) -%>

@@ -1,12 +1,10 @@
 <%
-  var title = 'ツインリンクもてぎ｜モビパーク'
+  var title = 'ツインリンクもてぎ｜モビパーク';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'mobipark';
 %>
-
 <%- include('/partials/data/index') -%>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main>
   <div class="subpage subpage-mobipark page-mobipark">
@@ -282,7 +280,7 @@
 
           <div class="col-lg-6 col-sm-12">
             <h3 class="content-heading">
-              アクセルとハンドルを自由に操作
+              アクセルとハンドルを自由に操作<br>
               目標に向かってステップアップ
             </h3>
             <p class="content-desc">
@@ -390,4 +388,4 @@
   breadcrumbs : getData().data.breadcrumbsMobipark
 }) -%>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

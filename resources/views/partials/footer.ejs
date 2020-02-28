@@ -1,6 +1,5 @@
 <% if(typeof pageId === 'undefined') { var pageId = ''; } %>
 <% if(typeof page === 'undefined') { var page = ''; } %>
-<% if(typeof subpageId === 'undefined') { var subpageId = ''; } %>
 
 <%
   let pages = [
@@ -9,11 +8,24 @@
   'itadaki',
   'dokidoki',
   'mobipark',
-  'mobipark-subpage',
+  'challenge',
+  'acroX',
+  'bunBunScooter',
+  'carAndBike',
+  'debDenWalk',
+  'dream',
+  'drift',
+  'forestDrivingSchool',
+  'motoTouring',
+  'motorCycleTraining',
+  'motoracer',
+  'wildRacer',
   'hellowoods',
-  'hellowoods-subpage',
-  'tsubasa',
-  'mobipark-subpage-carbike'
+  'program',
+  'craft',
+  'labo',
+  'musasabi',
+  'tsubasa'
   ]
 %>
 
@@ -110,16 +122,16 @@
     <script src="<%= mix('/assets/js/index.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'mobipark-subpage-carbike') { %>
+  <% if(pageId == 'carAndBike') { %>
     <script src="<%= mix('/assets/js/carbike.js') %>" async></script>
   <% } %>
 
   <% if(pages.includes(pageId)) { %>
-  <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
-  <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
+    <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
+    <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
   <% } %>
 
-  <% if(subpageId == 'forest-labo') { %>
+  <% if(pageId == 'labo') { %>
     <script src="<%= mix('/assets/js/labo.js') %>" async></script>
   <% } %>
 

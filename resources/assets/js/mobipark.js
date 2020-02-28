@@ -6,6 +6,7 @@ slider({
   options: {
     speed: 500,
     slidesPerView: 1,
+    autoplay: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true

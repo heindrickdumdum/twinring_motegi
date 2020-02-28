@@ -63,6 +63,8 @@ slider({
   options: {
     slidesPerView: 'auto',
     variableWidth: true,
+    spaceBetween: 60,
+    centeredSlides: false,
 
     breakpoints: {
       768: {

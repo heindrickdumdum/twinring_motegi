@@ -66,11 +66,13 @@
     @include min-screen($breakpoint-mobile) {
       max-width: 369px;
       overflow: hidden;
+      margin-right: 60px;
     }
 
     @include max-screen($breakpoint-mobile) {
       opacity: 0.4;
       min-width: 257px;
+      margin-right: 25px;
     }
   }
 

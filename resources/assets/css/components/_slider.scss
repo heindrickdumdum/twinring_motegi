@@ -26,6 +26,36 @@
 
 //MODIFIER
 
+.slider-pickup,
+.slider-recommendation,
+.slider-howto {
+  opacity: 1;
+  overflow: visible;
+  margin-left: 0;
+
+  .slider-wrapper {
+    margin-left: 0;
+  }
+
+  .slider-item {
+    @include min-screen($breakpoint-mobile) {
+      max-width: 369px;
+      overflow: hidden;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      opacity: 0.4;
+      min-width: 257px;
+    }
+  }
+
+  .swiper-slide-active {
+    @include max-screen($breakpoint-mobile) {
+      opacity: 1;
+    }
+  }
+}
+
 .swiper-pagination-feature,
 .swiper-pagination-section {
   margin-top: 14px;
@@ -215,6 +245,7 @@
 .slider-carbike-container {
   width: 100%;
 }
+
 
 .slider-carbike {
   .slider-carbike-item {

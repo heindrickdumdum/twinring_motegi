@@ -127,7 +127,7 @@
           <div class="parkmap-image">
             <ul class="parkmap-image-list">
               <%
-                getData().data.parkmapButtonNumbers.forEach( button => {
+                getData().data.parkmapButtons.forEach( button => {
               %>
               <li class="parkmap-image-item js-parkmap-number">
                 <a href="<%- button.link %>" target="_blank"></a>
@@ -155,7 +155,7 @@
                   newTab: true,
                   modifier: 'button-parkmap',
                   text: 'エリア・施設一覧を見る',
-                  link: '#'
+                  link: 'https://www.twinring.jp/twinringmotegi/'
                 }) %>
               </li>
             </ul>
@@ -237,14 +237,6 @@
       <%- include('/partials/post', {
         postContent: getData().data.informationContent,
       }) -%>
-
-      <div class="information-button">
-        <%- include('/partials/button', {
-          modifier: '',
-          text: 'もっと見る',
-          link: '#'
-        }) %>
-      </div>
     </div>
   </section>
 </main>

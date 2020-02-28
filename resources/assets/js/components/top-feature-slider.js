@@ -21,7 +21,8 @@ export default function topFeatureSlider(params) {
       },
       375: {
         spaceBetween: 10,
-        slidesPerGroup: 1
+        slidesPerGroup: 1,
+        slidesPerView: 1,
       }
     },
 

@@ -63,6 +63,7 @@
         margin-top: 24px;
         margin-bottom: 25px;
         display: block;
+        color: #333;
 
         @include max-screen($breakpoint-mobile) {
           margin-bottom: -6px;

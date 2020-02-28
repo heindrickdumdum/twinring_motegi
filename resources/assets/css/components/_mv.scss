@@ -230,6 +230,15 @@
       }
     }
 
+    .heading-musasabi {
+      .heading-subtext {
+        max-width: 600px;
+        height: 80px;
+        fill: $color-white;
+      }
+    }
+
+
     @include max-screen ($breakpoint-mobile) {
       left: 0;
       padding: 50px 20px;

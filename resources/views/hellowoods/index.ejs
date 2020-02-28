@@ -49,7 +49,9 @@
             <ul class="info-list">
               <% hellowoodsInfo.forEach(item => { %>
               <li class="info-item">
-                <span><%= item.desc %></span>
+                <a href="<%- item.link %>">
+                  <span><%= item.desc %></span>
+                </a>
               </li>
               <% }) %>
             </ul>

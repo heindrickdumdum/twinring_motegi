@@ -1,12 +1,10 @@
 <%
-  var title = 'Twin Ring Motegi | チャレンジカート'
+  var title = 'Twin Ring Motegi | チャレンジカート';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'challenge';
 %>
-
 <% include('/partials/data/index') %>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark-subpage'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
   <div class="subpage">
@@ -419,4 +417,4 @@
   breadcrumbs : getData().data.breadcrumbsChallenge
 }) -%>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

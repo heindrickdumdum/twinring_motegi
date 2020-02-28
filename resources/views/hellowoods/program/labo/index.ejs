@@ -1,10 +1,8 @@
 <%
-  var title = 'Twin Ring Motegi | 森の研究室'
-  pageId = 'hellowoods-subpage';
-  subpageId = 'forest-labo';
+  var title = 'Twin Ring Motegi | 森の研究室';
+  pageId = 'labo';
 %>
-
-<%- include('/partials/head', { title }) -%>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main>
   <div class="subpage subpage-labo">
@@ -349,4 +347,4 @@
   breadcrumbs : getData().data.breadcrumbsLabo
 }) -%>
 
-<%- include('/partials/footer', {pageId, subpageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

@@ -45,7 +45,7 @@
     @include max-screen($breakpoint-mobile) {
       width: 124px;
       right: 32px;
-      bottom: 12px;
+      bottom: 9px;
     }
   }
 }
@@ -89,7 +89,8 @@
     width: 110%;
 
     @include max-screen($breakpoint-mobile) {
-      left: -6.65%;
+      left: -6.5%;
+      width: 108%;
     }
   }
 }

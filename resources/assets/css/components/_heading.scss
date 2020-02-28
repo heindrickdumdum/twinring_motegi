@@ -264,6 +264,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+    .is-ie & {//ie modifier
+      background: none;
+      color: $color-gossamer;
+      -webkit-text-fill-color: $color-gossamer;
+      -moz-text-fill-color: $color-gossamer;
+      -ms-text-fill-color: $color-gossamer;
+    }
+
     @include max-screen($breakpoint-mobile) {
       text-align: center;
       font-size: 13px;

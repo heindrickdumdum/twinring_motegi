@@ -50,6 +50,37 @@
   margin-left: 0;
 }
 
+.slider-gallery {
+  overflow: hidden;
+  margin-bottom: 25px;
+
+  .slider-item {
+    width: 100%;
+    position: relative;
+    transition-property: opacity;
+  }
+
+  .slider-gallery-img {
+    display: block;
+    width: 100%;
+    padding-bottom: 47%;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.slider-gallery-thumb {
+  .slider-item {
+    width: 70px;
+  }
+  .slider-gallery-thumb-img {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+  }
+}
 
 .slider-pickup,
 .slider-recommendation,

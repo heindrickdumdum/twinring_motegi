@@ -15,6 +15,7 @@
     max-height: 320px;
     margin: 58px auto 0;
     overflow-y: scroll;
+    -ms-overflow-style: none;
 
     @include max-screen($breakpoint-mobile) {
       margin: 0 0 85px 0;
@@ -29,6 +30,14 @@
       font-weight: 600;
       position: relative;
       border-bottom: 1px dashed $color-black;
+
+      a {
+        color: inherit;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
 
       &:before {
         width: 11px;

@@ -6,11 +6,11 @@ export default function topFeatureSlider(params) {
 
   const defaultOptions = {
     speed: 1500,
-    initialSlide: 2,
+    initialSlide: 1,
     slidesPerView: 'auto',
     variableWidth: 'auto',
     loop: false,
-    shortSwipes: true,
+    longSwipes: true,
     spaceBetween: 55,
     pagination: {
       el: '.swiper-pagination',
@@ -20,12 +20,10 @@ export default function topFeatureSlider(params) {
 
     breakpoints: {
       1280: {
-        initialSlide: 1,
         slidesPerGroup: 3
       },
       375: {
         spaceBetween: 10,
-        initialSlide: 1,
         slidesPerGroup: 1
       }
     },

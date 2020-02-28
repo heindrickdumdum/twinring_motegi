@@ -127,10 +127,10 @@
           <div class="parkmap-image">
             <ul class="parkmap-image-list">
               <%
-                getData().data.parkmapButtons.forEach( button => {
+                getData().data.parkmapButtonNumbers.forEach( button => {
               %>
               <li class="parkmap-image-item js-parkmap-number">
-                <a href="<%- button.link %>"></a>
+                <a href="<%- button.link %>" target="_blank"></a>
               </li>
               <% }) %>
             </ul>
@@ -141,7 +141,7 @@
                 getData().data.parkmapButtons.forEach( button => {
               %>
               <li class="parkmap-item js-parkmap-button">
-                <a class="parkmap-link" href="<%- button.link %>"><%- button.text %>
+                <a class="parkmap-link" href="<%- button.link %>" target="_blank"><%- button.text %>
                   <i class="parkmap-link-icon">
                     <%- include('/partials/svg', {
                       'name': 'arrow'
@@ -152,6 +152,7 @@
               <% }) %>
               <li class="parkmap-item parkmap-item-last">
                 <%- include('/partials/button', {
+                  newTab: true,
                   modifier: 'button-parkmap',
                   text: 'エリア・施設一覧を見る',
                   link: '#'

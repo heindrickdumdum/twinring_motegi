@@ -2,9 +2,12 @@
 if (typeof modifier === 'undefined') {
   var modifier = '';
 }
+if (typeof link === 'undefined') {
+  var link = '';
+}
 %>
 <article class="article <%- modifier %>">
-  <a class="article-link" href="<%- link %>">
+  <a class="article-link" href="javascript:;">
     <% if(category) { %>
     <span class="article-category<% if(category === 'NEWS') { %> article-category-news<% } %>"><%- category %></span>
     <% } %>

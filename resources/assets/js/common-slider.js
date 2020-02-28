@@ -61,11 +61,43 @@ slider({
   id: 'commonSliderBottom', // REQUIRED
   target: '.js-slider-bottom', // REQUIRED
   options: {
+    speed: 1500,
     slidesPerView: 'auto',
     variableWidth: true,
     spaceBetween: 60,
     centeredSlides: false,
     initialSlide: 1,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+
+    breakpoints: {
+      767: {
+        slidesPerView: 'auto',
+        spaceBetween: 25,
+        centeredSlides: true
+      }
+    }
+  }
+})
+
+slider({
+  id: 'commonSliderBottom', // REQUIRED
+  target: '.js-slider-pickup', // REQUIRED
+  options: {
+    speed: 1500,
+    slidesPerView: 'auto',
+    variableWidth: true,
+    spaceBetween: 60,
+    centeredSlides: false,
+    initialSlide: 1,
+    loop: true,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
 
     breakpoints: {
       767: {

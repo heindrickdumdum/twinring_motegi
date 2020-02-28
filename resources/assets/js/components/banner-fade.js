@@ -1,6 +1,10 @@
 export default function bannerFade(params) {
   const items = document.querySelectorAll(params.item);
+
+  if(!items) return;
+  
   const firstItem = items[0];
+
 
   setTimeout(() => {
     let currentIdx = 0;

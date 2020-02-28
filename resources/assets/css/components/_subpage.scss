@@ -215,7 +215,7 @@
     background: linear-gradient(to right, #027cc3 0%, #09a046 100%);
   	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+
     .is-ie & {
       background: none;
       color: $color-gossamer;
@@ -286,7 +286,7 @@
 
   &.subpage-banner-musasabi {
     text-align: center;
-    
+
     iframe {
       @include max-screen($breakpoint-mobile) {
         height: 212px;
@@ -325,6 +325,10 @@
   @include max-screen($breakpoint-mobile) {
     height: 70px;
   }
+}
+
+.subpage-image-gallery {
+  margin-bottom: 30px;
 }
 
 

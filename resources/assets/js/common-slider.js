@@ -65,18 +65,13 @@ slider({
     variableWidth: true,
     spaceBetween: 60,
     centeredSlides: false,
+    initialSlide: 1,
 
     breakpoints: {
-      768: {
+      767: {
         slidesPerView: 'auto',
-        spaceBetween: 60,
-        centeredSlides: false
-
-      },
-      375: {
         spaceBetween: 25,
-        centeredSlides: true,
-        slidesPerView: 'auto',
+        centeredSlides: true
       }
     }
   }

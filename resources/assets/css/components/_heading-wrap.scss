@@ -64,6 +64,14 @@
     }
   }
 
+  &.heading-wrap-hellowoods {
+    .heading-subtext {
+      @include max-screen ($breakpoint-mobile) {
+        height: 30px;
+      }
+    }
+  }
+
   &.heading-wrap-parkmap {
     .heading-subtext {
       width: 750px;

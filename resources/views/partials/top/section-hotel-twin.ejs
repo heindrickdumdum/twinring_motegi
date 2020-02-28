@@ -70,28 +70,30 @@
         %>
       </ul>
 
-      <div class="swiper-container slider js-slider-sp u-show-sp">
-        <ul class="swiper-wrapper section-cards">
-          <%
-            sectionHotelTwinCards.forEach( card => {
-          %>
-          <li class="swiper-slide">
-            <div class="section-cards-item">
-              <a href="<%- card.url %>" class="section-card-link">
-                <div class="section-cards-image-wrap image-border">
-                  <span class="section-cards-category"><%- card.category %></span>
-                  <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
-                </div>
-                <p class="section-cards-title"><%- card.title %></p>
-              </a>
-            </div>
-          </li>
-          <%
-            })
-          %>
-        </ul>
+      <div class="slider-wrap u-show-sp">
+        <div class="swiper-container slider js-slider-sp">
+          <ul class="swiper-wrapper section-cards">
+            <%
+              sectionHotelTwinCards.forEach( card => {
+            %>
+            <li class="swiper-slide">
+              <div class="section-cards-item">
+                <a href="<%- card.url %>" class="section-card-link">
+                  <div class="section-cards-image-wrap image-border">
+                    <span class="section-cards-category"><%- card.category %></span>
+                    <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+                  </div>
+                  <p class="section-cards-title"><%- card.title %></p>
+                </a>
+              </div>
+            </li>
+            <%
+              })
+            %>
+          </ul>
 
-        <div class="swiper-pagination swiper-pagination-section"></div>
+          <div class="swiper-pagination swiper-pagination-section"></div>
+        </div>
       </div>
 
       <div class="section-button">

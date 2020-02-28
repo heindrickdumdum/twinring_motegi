@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 const constants = {
   IS_ACTIVE: 'is-active',
   IS_HIDE: 'is-hide',
@@ -9,6 +11,11 @@ const constants = {
   SLIDES_PER_VIEW: 3,
   SLIDES_PER_SHIFT: 1,
   VIEWPORT_WIDTH: window.innerWidth || document.documentElement.clientWidth,
+  $window: $(window),
+  $document: $(document),
+  $htmlBody: $('html, body'),
+  $html: $('html'),
+  $body: $('body')
 };
 
 export default constants;

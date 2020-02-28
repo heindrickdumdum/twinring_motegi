@@ -1,0 +1,24 @@
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" id="js-viewport">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- DEFAULT -->
+<% if (meta[pageId].default.length > 0) { %>
+  <% meta[pageId].default.forEach(item => { %>
+    <meta name="<%= Object.keys(item) %>" content="<%= item[Object.keys(item)] === '' ? '' : item[Object.keys(item)] %>">
+  <% }) %>
+<% } %>
+
+<!-- OGP -->
+<% if (meta[pageId].ogp.length > 0) { %>
+  <% meta[pageId].ogp.forEach(item => { %>
+    <meta property="og:<%= Object.keys(item) %>" content="<%= item[Object.keys(item)] === '' ? '' : item[Object.keys(item)] %>">
+  <% }) %>
+<% } %>
+
+<!-- TWITTER -->
+<% if (meta[pageId].twitter.length > 0) { %>
+  <% meta[pageId].twitter.forEach(item => { %>
+    <meta name="twitter:<%= Object.keys(item) %>" content="<%= item[Object.keys(item)] === '' ? '' : item[Object.keys(item)] %>">
+  <% }) %>
+<% } %>

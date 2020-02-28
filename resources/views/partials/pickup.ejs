@@ -1,4 +1,4 @@
-<section class="pick-up">
+<section class="bottom-slider bottom-slider-pickup">
   <div class="l-section-title">
     <%- include('/partials/heading', {
       modifier: 'heading-pickup',
@@ -8,22 +8,23 @@
     }) %>
   </div>
 
-  <div class="l-container">
-    <div class="pick-inner">
-      <ul class="pickup-list row">
-        <% getData().data.pickup.forEach(item => { %>
-        <li class="pickup-list-item col-lg-3 col-md-3 col-sm-6">
-          <%- include('/partials/article', {
-            category: item.category,
-            image: item.image,
-            heading: item.heading,
-            date: item.date,
-            link: item.link,
-            modifier: 'pickup-article'
-          }) %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
+  <div class="swiper-container slider-pickup js-slider-bottom">
+    <ul class="swiper-wrapper slider-wrapper">
+      <% getData().data.pickup.forEach(item => { %>
+      <li class="swiper-slide slider-item">
+        <%- include('/partials/article-no-design', {
+          category: item.category,
+          image: item.image,
+          heading: item.heading,
+          type: item.type,
+          date: item.date,
+          link: item.link,
+          modifier: 'article-pickup',
+          buttonLink: '',
+          buttonText: ''
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
   </div>
 </section>

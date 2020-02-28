@@ -1,6 +1,6 @@
 //main page title
 .heading-main {
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 73px;
@@ -120,7 +120,7 @@
 
   &.heading-main-challenge {
     img {
-      max-width: 274px;
+      max-width: 316px;
       width: 100%;
 
       @include min-screen($breakpoint-mobile + 1) {

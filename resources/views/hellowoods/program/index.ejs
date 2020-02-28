@@ -1,9 +1,8 @@
 <%
-  var title = '森あそび｜森の自然体験ミュージアムハローウッズ｜ツインリンクもてぎ'
-  pageId = 'hellowoods';
+  var title = '森あそび｜森の自然体験ミュージアムハローウッズ｜ツインリンクもてぎ';
+  pageId = 'program';
 %>
-
-<%- include('/partials/head', { title }) -%>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main>
   <div class="subpage subpage-walk">
@@ -11,17 +10,18 @@
       <ul class="mv-list">
         <li class="mv-item">
           <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/walk-mv.jpg') %>);"></div>
-          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/walk-mv.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/walk-mv-sp.jpg') %>);"></div>
         </li>
       </ul>
 
       <h1 class="mv-heading mv-heading-subpage">
-        <span class="mv-heading-text">
+        <span class="mv-heading-text mv-heading-text-walk">
           森の散策プログラム
         </span>
       </h1>
     </div>
 
+    <!-- walk anchor -->
     <div class="subpage-inner subpage-inner-anchor">
       <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
@@ -39,7 +39,7 @@
         }); -%>
       </div>
 
-      <div class="column-link column-link-labo l-column-link">
+      <div class="column-link column-link-walk l-column-link">
         <ul class="link-container js-anchor-link">
           <li class="link-item">
             <a href="#tekuteku">
@@ -48,15 +48,24 @@
             </a>
           </li>
           <li class="link-item">
+            <a href="#guide-walk">
+              <img src="<%- mix('/assets/images/hellowoods/walk-link-guide.png') -%>" alt="どんぐりの森ガイドウォーク">
+              <span class="u-show-pc">どんぐりの森ガイドウォーク</span>
+              <span class="u-show-sp">どんぐりの森<br>ガイドウォーク</span>
+            </a>
+          </li>
+          <li class="link-item">
             <a href="#free-walk">
               <img src="<%- mix('/assets/images/hellowoods/walk-link-free.png') -%>" alt="森のフリーウォーク">
-              <span>森のフリーウォーク</span>
+              <span class="u-show-pc">森のフリーウォーク</span>
+              <span class="u-show-sp">森のフリー<br>ウォーク</span>
             </a>
           </li>
         </ul>
       </div>
     </div>
 
+    <!-- family walk -->
     <section class="subpage-section subpage-section-family-walk" id="tekuteku">
       <div class="subpage-inner subpage-inner-walk">
         <div class="l-section-title u-show-pc">
@@ -95,7 +104,7 @@
         </h3>
 
         <p>
-          家族みんなで森をめぐるドキドキ、ワクワクの新アトラクション！9個の生きものがランダムに描かれたビンゴカードにチャレンジし、「遊ぶ」・「くつろぐ」・「撮る」・「学ぶ」を体験しながら森を巡ろう！
+          家族みんなで森をめぐるドキドキ、ワクワクの新アトラクション！9個の生きものがランダムに描かれたビンゴカードにチャレンジし、「遊ぶ」・「寛ぐ」・「撮る」・「学ぶ」を体験しながら森を巡ろう！
         </p>
 
         <table class="table">
@@ -168,6 +177,125 @@
       </div>
     </section>
 
+    <!-- guide walk -->
+    <section class="subpage-section subpage-section-guide-walk" id="guide-walk">
+      <div class="subpage-inner subpage-inner-walk">
+        <div class="l-section-title u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-walk heading-guide-walk',
+            text: 'Guide Walk',
+            alt: '',
+            subtextvg: 'walk-guide-title',
+            altSubtextvg: 'Guide Walk',
+            altSubtext: ''
+          }); -%>
+        </div>
+
+        <div class="l-section-title u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-walk heading-guide-walk',
+            text: 'Guide Walk',
+            alt: '',
+            subtextvg: 'walk-donguri-title-sp',
+            altSubtextvg: 'Guide Walk',
+            altSubtext: ''
+          }); -%>
+        </div>
+
+        <div class="subpage-banner subpage-banner-walk">
+          <div class="subpage-banner-inner">
+            <img src="<%- mix('/assets/images/hellowoods/walk-guide.jpg') -%>" alt='どんぐりの森ガイドウォーク'>
+          </div>
+        </div>
+
+        <h3 class="subpage-title">
+          <span>アクティビティ情報</span>
+        </h3>
+
+        <p>
+          見つけた生きものをじっくり観察したり、手にとって触ってみたり。森で出会う生きものたちと安心して触れあえるのは、キャストと歩くガイドウォークならでは！
+        </p>
+
+        <table class="table">
+          <tbody>
+            <tr class="table-row">
+              <th class="table-head">場所</th>
+              <td class="table-col">
+                ハローウッズの森内
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">開催日</th>
+              <td class="table-col">
+                毎日開催
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">所要時間</th>
+              <td class="table-col">
+                <p>【10月】<br>
+                土日祝<br>
+                ロングコース（90分）<br>
+                ①10：30～12：00<br>
+                樹冠タワーガイドウォーク<br>
+                ①11：00～12：00　②13：30～14：30　③15：00～16：00<br>
+                ショートコース（60分）<br>
+                ①13：00～14：00　②14：30～15：30</p>
+                <p>
+                【11月】<br>
+                土日祝<br>
+                ロングコース（90分）<br>
+                ①10：30～12：00<br>
+                樹冠タワーガイドウォーク（60分）<br>
+                ①13：00～14：00<br>
+                ショートコース（60分）<br>
+                ①14：30～15：30</p>
+                  <p>
+                ※予告なく実施時間を変更することがございます。予めご了承ください。<br>
+                ※お客様の年齢などに応じて、ご案内するルートを変更することがございます。</p>
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">雨天の開催</th>
+              <td class="table-col">
+                雨天でも営業いたしております。
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">対象者</th>
+              <td class="table-col">
+                全年齢対象 <br>
+                小学生以下は保護者（成人）の同伴が必要です。
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">料金</th>
+              <td class="table-col">
+                モビパークパスポート対象外 <br>
+                ロングコース 510円／1名<br>
+                ショートコース　400円／1名<br>
+                樹冠タワーガイドウォーク 400円／1名<br>
+                ※0～2歳は無料です。
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">予約受付</th>
+              <td class="table-col">
+                ハローウッズインフォメーションにて、各回の5分前までにお申し込みください。
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- free walk -->
     <section class="subpage-section subpage-section-free-walk" id="free-walk">
       <div class="subpage-inner subpage-inner-walk">
         <div class="l-section-title u-show-pc">
@@ -262,6 +390,7 @@
       </div>
     </section>
 
+    <!-- walk caution -->
     <div class="subpage-banner subpage-banner-precaution">
       <div class="subpage-banner-inner">
         <div class="subpage-inner">
@@ -299,4 +428,4 @@
   breadcrumbs : getData().data.breadcrumbsWalk
 }) -%>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

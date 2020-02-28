@@ -76,23 +76,26 @@
 <main>
   <div class="l-feature design-feature">
     <section class="feature">
-      <div class="swiper-container slider js-feature-slider feature-container">
-        <ul class="swiper-wrapper slider-wrapper slider-wrapper-feature">
-          <%
-            getData().data.featureContent.forEach( featureItem => {
-          %>
-          <li class="swiper-slide slider-item">
-            <%- include('/partials/article', {
-              category: featureItem.category,
-              image: featureItem.image,
-              heading: featureItem.heading,
-              date: featureItem.date,
-              link: featureItem.link
-            }) %>
-          </li>
-          <% }) %>
-        </ul>
-        <div class="swiper-pagination swiper-pagination-section"></div>
+      <div class="slider-wrap">
+        <div class="swiper-container slider js-feature-slider feature-container">
+          <ul class="swiper-wrapper slider-wrapper slider-wrapper-feature">
+            <%
+              getData().data.featureContent.forEach( featureItem => {
+            %>
+            <li class="swiper-slide slider-item">
+              <%- include('/partials/article', {
+                modifier: 'article-feature',
+                category: featureItem.category,
+                image: featureItem.image,
+                heading: featureItem.heading,
+                date: featureItem.date,
+                link: featureItem.link
+              }) %>
+            </li>
+            <% }) %>
+          </ul>
+          <div class="swiper-pagination swiper-pagination-section swiper-pagination-feature"></div>
+        </div>
       </div>
     </section>
   </div>
@@ -193,26 +196,28 @@
         altSubtext: ''
       }) %>
 
-      <div class="swiper-container slider slider-howto js-slider-bottom slider-how-to-enjoy">
-        <ul class="swiper-wrapper slider-wrapper">
-          <%
-            getData().data.howToContent.forEach( howToItem => {
-          %>
-          <li class="swiper-slide slider-item">
-            <%- include('/partials/article-no-design', {
-              category: '',
-              image: howToItem.image,
-              heading: howToItem.heading,
-              type: '',
-              date: '',
-              link: '',
-              modifier: 'article-pickup',
-              buttonText: howToItem.buttonText,
-              buttonLink: howToItem.buttonLink
-            }) %>
-          </li>
-          <% }) %>
-        </ul>
+      <div class="slider-wrap slider-wrap-how-to">
+        <div class="swiper-container slider js-slider-how-to slider-how-to-enjoy">
+          <ul class="swiper-wrapper slider-wrapper">
+            <%
+              getData().data.howToContent.forEach( howToItem => {
+            %>
+            <li class="swiper-slide slider-item">
+              <%- include('/partials/article-no-design', {
+                category: '',
+                image: howToItem.image,
+                heading: howToItem.heading,
+                type: '',
+                date: '',
+                link: '',
+                modifier: '',
+                buttonText: howToItem.buttonText,
+                buttonLink: howToItem.buttonLink
+              }) %>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
       </div>
 
       <div class="how-to-container"></div>

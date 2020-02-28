@@ -1,12 +1,10 @@
 <%
-  var title = 'Twin Ring Motegi | 森の教習所'
+  var title = 'Twin Ring Motegi | 森の教習所';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'forestDrivingSchool';
 %>
-
 <% include('/partials/data/index') %>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark-subpage' %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
   <div class="subpage">
@@ -62,7 +60,7 @@
 
           <tr class="table-row">
             <th class="table-head">雨天の運行</th>
-            <td class="table-col">雨天でも営業いたしております。
+            <td class="table-col">雨天でも営業いたします。
             </td>
           </tr>
 
@@ -80,7 +78,7 @@
           <tr class="table-row">
             <th class="table-head">料金</th>
             <td class="table-col">
-              モビパークパスポート対象 <br>アトラクションチケット利用：400円
+              モビパークパスポート対象<br>アトラクションチケット利用：400円
             </td>
           </tr>
 
@@ -157,19 +155,19 @@
               <h4 class="media-title">
                 <div class="u-show-pc">
                   <span>
-                    交通ルールを守ってプラチナ免許をゲット！
+                    点数を集めてプラチナ免許をゲット！
                   </span>
                 </div>
 
                 <div class="u-show-sp">
-                  <span>交通ルールを守ってプラチナ免許を</span>
-                  <span>ゲット！</span>
+                  <span>点数を集めてプラチナ免許</span>
+                  <span>をゲット！</span>
                 </div>
 
 
               </h4>
               <p class="media-desc">
-                交通ルールを守って走行できると得点がアップ。<br>90点以上はゴールド免許、 <br>100点満点ならプラチナ免許がゲットできるよ！
+                交通ルールを守って走行できると得点がアップ。<br>90点以上はゴールド免許、<br>100点満点ならプラチナ免許がゲットできるよ！
               </p>
 
               <%- include('/partials/note', {
@@ -252,4 +250,4 @@
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsForestDrivingSchool
 }) -%>
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

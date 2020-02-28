@@ -1,12 +1,10 @@
 <%
-  var title = 'Twin Ring Motegi | アクロエックス'
+  var title = 'Twin Ring Motegi | アクロエックス';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'acroX';
 %>
-
 <% include('/partials/data/index') %>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark-subpage'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
   <div class="subpage">
@@ -44,7 +42,7 @@
         <span>アトラクション情報</span>
       </h3>
 
-      <p>凸凹道、坂道、水の中など、どんな道も走行できるハイパワーマシンをみんなで協力しながら運転して<br />100点満点を目指そう！</p>
+      <p>凸凹道、坂道、水の中など、どんな道も走行できるハイパワーマシンを運転して100点満点を目指そう！</p>
 
       <table class="table">
         <tbody>
@@ -86,7 +84,7 @@
           <tr class="table-row">
             <th class="table-head">ご利用にあたって</th>
             <td class="table-col">
-              ※1 2歳から小学校2年生までの方：<br>2歳から小学校2年生までのお子さまは、中学生以上の付き添いで乗車が可能です。小学校3年生以上のお子さまから、お一人で運転していただけます。
+              ※1 2歳から小学2年生までの方：<br>2歳から小学2年生までのお子さまは、中学生以上の付き添いで乗車が可能です。小学3年生以上のお子さまから、お一人で運転していただけます。
             </td>
           </tr>
 
@@ -100,7 +98,7 @@
           <%- include('/partials/heading', {
             modifier: 'heading-gradient-tobottom heading-howto heading-howto-acrox u-show-pc',
             text: 'How to Enjoy',
-            alt: '',
+            alt: 'How to Enjoy',
             subtextvg: 'acrox-enjoy-point-title',
             altSubtext: '',
           }) %>
@@ -108,7 +106,7 @@
           <%- include('/partials/heading', {
             modifier: 'heading-gradient-tobottom heading-howto heading-howto-acrox u-show-sp',
             text: 'How to Enjoy',
-            alt: '',
+            alt: 'How to Enjoy',
             subtextvg: 'acrox-enjoy-point-title-sp',
             altSubtext: '',
           }) %>
@@ -147,8 +145,7 @@
                 </span>
               </h4>
               <p class="media-desc">
-                障害物をクリアするたびに得点がアップ。スタートからゴ<br>
-                ールまで正確に運転して100点満点を目指そう！
+                障害物をクリアするたびに得点がアップ。スタートからゴールまで正確に運転して100点満点を目指そう！
               </p>
 
               <%- include('/partials/note', {
@@ -254,4 +251,4 @@
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsAcrox
 }) -%>
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

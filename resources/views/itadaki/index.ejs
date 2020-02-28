@@ -1,128 +1,9 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'itadaki';
 %>
-
-<%
-accordionData = [
-      {
-        question: '小さい子どもが遊べますか？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '所要時間は？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '以下に記載している方はご利用をご遠慮ください。',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'トイレ・授乳室について ',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '荷物はどこに置けばいいですか？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: '飲食物の持ち込みは？',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'カメラについて',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-      {
-        question: 'ベビーカーについて',
-        answer  : `3歳からご利用いただけます。キッズコーナーも併設しております。<br>
-                    ※小学生未満のお子様は中学生以上の同伴者の付添い（有料）が必要です。<br>
-                    ※キッズコーナー（虫食い落ち葉・どんぐりプール・いもむしトンネル・ツリーハウス滑り台）<br>
-                    は3～6歳のお子様限定のエリアです。<br>
-                    ※0～2歳のお子様は、キッズコーナー内にあるソファなどのレストエリアのみ利用可能となります。`
-      },
-
-    ]
-%>
-
-<%
-  recommend = [
-    {
-      'image': mix('/assets/images/top/how-to/img1.jpg'),
-      'heading': '巨大ネットの森SUMIKA',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img2.jpg'),
-      'heading': '森感覚アスレチックDOKIDOKI',
-      'buttonLink': '#',
-    },
-    {
-      'image': mix('/assets/images/top/how-to/img3.jpg'),
-      'heading': '迷宮森殿 ITADAKI',
-      'buttonLink': '#',
-    }
-  ]
-%>
-
-<%
-  pickup = [
-    {
-      'image': mix('/assets/images/dokidoki/feature/img1.png'),
-      'heading': `2019 FIM MotoGP&trade; 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ`,
-      'date': '2019.11.02 ～ 2019.11.03',
-      'link': '#',
-      },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img2.png'),
-      'heading': '2019 FIM MotoGP&trade; 世界選手権シリーズ第16戦 MOTUL<br>日本グランプリ',
-      'date': '2019.11.02 ～ 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img3.png'),
-      'heading': 'モトレーサー タイムアタック選手権2019予選',
-      'date': '2019.11.02 ～ 2019.11.03',
-      'link': '#',
-    },
-    {
-      'image': mix('/assets/images/dokidoki/feature/img4.png'),
-      'heading': '音と光のシンフォニー　ツインリンクもてぎ花火の祭典（夏）',
-      'date': '2019.11.02 ～ 2019.11.03',
-      'link': '#',
-    }
-  ]
-%>
-<% pageId = 'itadaki'; %>
-<%- include('./../partials/head', { title }) -%>
+<%- include('./../partials/head', { pageId, title }) -%>
 <div class="subpage subpage-itadaki">
   <div class="mv mv-inner itadaki-mv">
     <ul class="mv-list">
@@ -529,7 +410,7 @@ accordionData = [
           </h2>
           <div class="instagram-content">
             <ul class="instagram-list">
-              <% instagram.forEach(item => { %>
+              <% instagramItadakiImages.forEach(item => { %>
               <li class="instagram-list-item col-sm-4">
                 <div class="instagram-list-item-image">
                   <img src="<%- item.image %>" alt="<%- item.alt %>">
@@ -660,4 +541,4 @@ accordionData = [
   breadcrumbs : getData().data.breadcrumbsItadaki
 }) -%>
 
-<%- include('./../partials/footer', {pageId} ) -%>
+<%- include('./../partials/footer', { pageId } ) -%>

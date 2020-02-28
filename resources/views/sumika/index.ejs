@@ -1,16 +1,21 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'sumika';
 %>
 <% include('./../partials/data/index') %>
-<%- include('./../partials/head', { title }) -%>
-<% pageId = 'sumika'; %>
+<%- include('./../partials/head', { pageId, title }) -%>
 
 <div class="subpage">
   <div class="mv mv-inner">
     <ul class="mv-list">
       <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/sumika/sumika-mv.jpg')%>);"></div>
+        <div class="u-show-pc">
+          <div class="mv-image" style="background-image:url(<%= mix('/assets/images/sumika/sumika-mv.jpg')%>);"></div>
+        </div>
+        <div class="u-show-sp">
+          <div class="mv-image" style="background-image:url(<%= mix('/assets/images/sumika/sumika-mv-sp.jpg')%>);"></div>
+        </div>
       </li>
     </ul>
 
@@ -179,8 +184,6 @@
     </div>
   </section>
 
-
-
   <section class="l-section">
     <div class="l-container">
       <div class="sumika-heading l-heading">
@@ -244,7 +247,6 @@
               昼間はオオタカが飛び回っていた空が、夜には満点の星空に。光の演出で森の24時間を再現しています。
               巨大ネットを広葉樹に見立て、四季折々で変化する木々を再現します。また、夏は昼間が長く、冬は夜が長くなるように光の演出は細部にまでこだわっています。
             </p>
-
 
             <%- include('/partials/note', {
               modifier: 'note-message-itadaki-banner-1',
@@ -374,9 +376,9 @@
             </span>
           </h2>
           <div class="instagram-content">
-            <ul class="instagram-list">
+            <ul class="instagram-list sumika-instagram-list">
               <% instagram.forEach(item => { %>
-              <li class="instagram-list-item col-sm-4">
+              <li class="instagram-list-item  col-sm-4">
                 <div class="instagram-list-item-image">
                   <img src="<%- item.image %>" alt="<%- item.alt %>">
                 </div>
@@ -471,4 +473,4 @@
   breadcrumbs : getData().data.breadcrumbsSumika
 }) -%>
 
-<%- include('./../partials/footer', {pageId} ) -%>
+<%- include('./../partials/footer', { pageId } ) -%>

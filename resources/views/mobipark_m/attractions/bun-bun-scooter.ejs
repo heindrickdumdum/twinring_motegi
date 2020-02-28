@@ -1,12 +1,10 @@
 <%
-  var title = 'Twin Ring Motegi'
+  var title = 'Twin Ring Motegi';
   SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'bunBunScooter';
 %>
-
 <% include('/partials/data/index') %>
-<%- include('/partials/head', { title }) -%>
-
-<% pageId = 'mobipark-subpage'; %>
+<%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
   <div class="subpage">
@@ -28,7 +26,7 @@
         <h2 class="heading">
           <span class="u-title-hidden">Bun bun scooter</span>
           <span class="heading-texts">
-            <img src="<%= mix('/assets/images/bun-bun-scooter/bunbun-color-title.png') %>" alt="">
+            <img src="<%= mix('/assets/images/bun-bun-scooter/bunbun-color-title.png') %>" alt="みつばちのスクーターで、お花畑をお散歩しよう">
           </span>
         </h2>
       </div>
@@ -36,7 +34,7 @@
       <!-- YOUTUBE -->
       <div class="subpage-banner">
         <div class="subpage-banner-inner">
-          <img class="" src="<%= mix('/assets/images/bun-bun-scooter/subpage-banner.jpg') %>" alt="">
+          <img class="" src="<%= mix('/assets/images/bun-bun-scooter/subpage-banner.jpg') %>" alt="ぶんぶんスクーター">
         </div>
       </div>
 
@@ -221,4 +219,4 @@
   breadcrumbs : getData().data.breadcrumbsBunbun
 }) -%>
 
-<%- include('/partials/footer', {pageId}) -%>
+<%- include('/partials/footer', { pageId }) -%>

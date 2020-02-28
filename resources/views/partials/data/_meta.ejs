@@ -1,0 +1,566 @@
+<%
+meta = {
+  <!-- TOP -->
+  index: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  <!-- DOKIDOKI -->
+  dokidoki: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+
+  <!-- HELLOWOODS -->
+  hellowoods: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  program: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  labo: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  craft: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  musasabi: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  tsubasa: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+
+  <!-- ITADAKI -->
+  itadaki: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+
+  <!-- MOBIPARK -->
+  mobipark: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  challenge: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  acroX: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  bunBunScooter: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  carAndBike: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  debDenWalk: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  dream: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  drift: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  forestDrivingSchool: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  motoTouring: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  motorCycleTraining: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  debDenWalk: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  motoracer: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+  wildRacer: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  },
+
+  <!-- SUMIKA -->
+  sumika: {
+    default: [
+      { title: '' },
+      { description: '' },
+      { keywords: '' }
+    ],
+    ogp: [
+      { locale: 'ja_JP' },
+      { title: '' },
+      { description: '' },
+      { url: '' },
+      { site_name: '' },
+      { type: 'blog' },
+      { image: 'assets/images/common/logo_ogp.png' }
+    ],
+    twitter: [
+      { card: 'summary' },
+      { title: '' },
+      { site: '' },
+      { description: '' },
+      { image: '' }
+    ]
+  }
+}
+%>

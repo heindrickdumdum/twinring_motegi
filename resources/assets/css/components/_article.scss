@@ -196,6 +196,14 @@
       }
     }
   }
+
+  &.article-feature {
+    .article-period {
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 23px;
+      }
+    }
+  }
 }
 
 .article-link {

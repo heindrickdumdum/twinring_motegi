@@ -59,7 +59,7 @@
 
           <tr class="table-row">
             <th class="table-head">雨天の運行</th>
-            <td class="table-col">雨天でも営業いたします。
+            <td class="table-col">雨天でも営業いたします
             </td>
           </tr>
 
@@ -118,7 +118,10 @@
               <p class="media-desc">
                 スクーターのように手でアクセルとブレーキを操作。転倒しない<br/>から自転車に乗れない子どもでも安心して楽しめます。
               </p>
-
+              <%- include('/partials/note', {
+                modifier: 'note-bunbun',
+                imgPath: mix('/assets/images/bun-bun-scooter/dekitane-banner-bunbun.jpg')
+              }) %>
             </div>
           </div>
           <div class="media media-subpage media-subpage-bunbun u-clear">
@@ -138,10 +141,6 @@
               <p class="media-desc">
                 みつばちにデザインされたスクーターでお花畑をぐるっと<br/>1周。写真スポットにぴったり！
               </p>
-              <%- include('/partials/note', {
-                modifier: 'note-bunbun',
-                imgPath: mix('/assets/images/bun-bun-scooter/dekitane-banner-bunbun.jpg')
-              }) %>
             </div>
           </div>
         </div>

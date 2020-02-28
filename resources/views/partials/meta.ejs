@@ -8,6 +8,18 @@
 <link rel="stylesheet" href="<%= mix('/assets/css/app.css') %>">
 
 <script>
+  // IE foreach Polyfill
+  if ('NodeList' in window && !NodeList.prototype.forEach) {
+      NodeList.prototype.forEach = function (callback, thisArg) {
+          thisArg = thisArg || window;
+          for (let i = 0; i < this.length; i++) {
+              callback.call(thisArg, this[i], i, this);
+          }
+      };
+  }
+</script>
+
+<script>
   if (window.screen.width < 375) {
     document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
   } else if (window.screen.width >= 375) {

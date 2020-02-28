@@ -173,6 +173,29 @@
   }
 }
 
+.subpage-button-link {
+  color: #fff;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  span {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+    }
+  }
+}
+
 .subpage-title {
   font-size: 13px;
   letter-spacing: 0.11em;
@@ -191,8 +214,15 @@
   span {
     background: linear-gradient(to right, #027cc3 0%, #09a046 100%);
   	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
 
+    .is-ie & {
+      background: none;
+      color: $color-gossamer;
+      -webkit-text-fill-color: $color-gossamer;
+      -moz-text-fill-color: $color-gossamer;
+      -ms-text-fill-color: $color-gossamer;
+    }
   }
 }
 
@@ -256,7 +286,7 @@
 
   &.subpage-banner-musasabi {
     text-align: center;
-    
+
     iframe {
       @include max-screen($breakpoint-mobile) {
         height: 212px;
@@ -294,29 +324,6 @@
   //sp
   @include max-screen($breakpoint-mobile) {
     height: 70px;
-  }
-}
-
-.subpage-button-link {
-  color: #fff;
-  background: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  span {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-
-    @include max-screen($breakpoint-mobile) {
-      font-size: 12px;
-    }
   }
 }
 

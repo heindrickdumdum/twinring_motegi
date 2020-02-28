@@ -71,7 +71,7 @@ export default function headerMenu() {
       });
     });
 
-    headerOverlay.addEventListener('click', e => {
+    headerOverlay.addEventListener('mouseenter', e => {
       e.preventDefault();
       headerSub.forEach( sub => {
         sub.classList.remove(CONST.VISIBLE_CLASS);

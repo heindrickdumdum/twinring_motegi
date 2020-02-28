@@ -39,6 +39,12 @@
     }
   }
 
+  &.sumika-slider {
+    .swiper-pagination {
+      bottom: -30px;
+    }
+  }
+
   &.itadaki-slider {
     .swiper-pagination {
       bottom: -30px;

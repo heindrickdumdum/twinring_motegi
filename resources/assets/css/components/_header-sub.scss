@@ -44,7 +44,7 @@
     &.is-visible {
       opacity: 1;
       visibility: visible;
-      z-index: $z-min2;
+      z-index: 20;
     }
   }
 }
@@ -66,7 +66,7 @@
   }
 
   &.is-visible {
-    z-index: $z-max9;
+    z-index: 20;
     opacity: 1;
   }
 }

@@ -54,7 +54,7 @@
       </div>
     </h2>
 
-    <div class="mv-today mv-today-top">
+    <!-- <div class="mv-today mv-today-top">
       <div class="mv-today-inner">
         <img class="mv-today-text" src="<%= mix('/assets/images/mv-today-text.png') %>" alt="">
         <span class="mv-today-time">10:00-17:00</span>
@@ -69,7 +69,7 @@
           <span class="mv-today-celcius">&#176;c</span>
         </span>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -127,10 +127,10 @@
           <div class="parkmap-image">
             <ul class="parkmap-image-list">
               <%
-                getData().data.parkmapButtons.forEach( button => {
+                getData().data.parkmapButtonNumbers.forEach( button => {
               %>
               <li class="parkmap-image-item js-parkmap-number">
-                <a href="<%- button.link %>"></a>
+                <a href="<%- button.link %>" target="_blank"></a>
               </li>
               <% }) %>
             </ul>
@@ -141,7 +141,7 @@
                 getData().data.parkmapButtons.forEach( button => {
               %>
               <li class="parkmap-item js-parkmap-button">
-                <a class="parkmap-link" href="<%- button.link %>"><%- button.text %>
+                <a class="parkmap-link" href="<%- button.link %>" target="_blank"><%- button.text %>
                   <i class="parkmap-link-icon">
                     <%- include('/partials/svg', {
                       'name': 'arrow'
@@ -152,6 +152,7 @@
               <% }) %>
               <li class="parkmap-item parkmap-item-last">
                 <%- include('/partials/button', {
+                  newTab: true,
                   modifier: 'button-parkmap',
                   text: 'エリア・施設一覧を見る',
                   link: '#'
@@ -187,7 +188,7 @@
     <%- include('/partials/top/section-hotel-twin') -%>
   </section>
 
-  <section class="l-how-to design-how-to">
+  <!-- <section class="l-how-to design-how-to">
     <div class="how-to">
       <%- include('/partials/heading', {
         modifier: 'heading-wrap-how-to heading-wrap-center',
@@ -222,7 +223,7 @@
 
       <div class="how-to-container"></div>
     </div>
-  </section>
+  </section> -->
 
   <section class="information">
     <div class="l-container information-container">

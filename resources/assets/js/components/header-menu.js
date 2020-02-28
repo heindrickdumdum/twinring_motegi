@@ -71,7 +71,7 @@ export default function headerMenu() {
       });
     });
 
-    headerOverlay.addEventListener('click', e => {
+    headerOverlay.addEventListener('mouseenter', e => {
       e.preventDefault();
       headerSub.forEach( sub => {
         sub.classList.remove(CONST.VISIBLE_CLASS);
@@ -80,6 +80,7 @@ export default function headerMenu() {
       e.currentTarget.classList.remove(CONST.VISIBLE_CLASS);
 
       wrap.classList.remove(CONST.IS_ACTIVE);
+      wrap.style.top = '';
     })
 
     headerClose.forEach( e => {
@@ -91,6 +92,8 @@ export default function headerMenu() {
         })
         headerOverlay.classList.remove(CONST.VISIBLE_CLASS);
         wrap.classList.remove(CONST.IS_ACTIVE);
+
+        wrap.style.top = '';
       });
     });
 

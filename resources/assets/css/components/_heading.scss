@@ -43,6 +43,10 @@
     .heading-texts {
       img {
         max-width: 650px;
+        @include max-screen($breakpoint-mobile) {
+          max-width: 280px;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -66,6 +70,14 @@
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.1em;
   font-size: 36px;
+
+  .is-ie & {
+    background: none !important;
+    color: $color-gossamer;
+    -webkit-text-fill-color: $color-gossamer;
+    -moz-text-fill-color: $color-gossamer;
+    -ms-text-fill-color: $color-gossamer;
+  }
 
   @include max-screen($breakpoint-mobile) {
     letter-spacing: 0.01em;
@@ -255,6 +267,14 @@
     background: linear-gradient(to right, #027cc3 10%, #099f48 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    .is-ie & {//ie modifier
+      background: none;
+      color: $color-gossamer;
+      -webkit-text-fill-color: $color-gossamer;
+      -moz-text-fill-color: $color-gossamer;
+      -ms-text-fill-color: $color-gossamer;
+    }
 
     @include max-screen($breakpoint-mobile) {
       text-align: center;

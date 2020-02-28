@@ -1,11 +1,14 @@
 .header-wrap {
   background-color: $color-white;
   position: relative;
-  z-index: $z-max;
+  z-index: 21;
 }
 
 .header-logo {
   display: block;
+  width: 170px;
+  margin: 0 auto;
+  padding: 10px 0;
 }
 
 .header-top-others {

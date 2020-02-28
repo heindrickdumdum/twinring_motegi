@@ -31,6 +31,14 @@
       position: relative;
       border-bottom: 1px dashed $color-black;
 
+      a {
+        color: inherit;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
       &:before {
         width: 11px;
         height: 11px;

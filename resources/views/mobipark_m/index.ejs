@@ -40,6 +40,7 @@
         <%- include('/partials/heading', {
             modifier: 'heading-info',
             text: 'Information',
+            <!-- imgPath: mix('/assets/images/mobipark/information-title.png'), -->
             alt: 'information',
             altSubtext: '',
             subtextvg: 'mobipark-information-title',
@@ -51,7 +52,9 @@
         <ul class="info-list">
           <% mobiparkData.forEach(item => { %>
           <li class="info-item">
-            <span><%= item.desc %></span>
+            <a href="/sumika/#information" target="_blank">
+              <span><%= item.desc %></span>
+            </a>
           </li>
           <% }) %>
         </ul>

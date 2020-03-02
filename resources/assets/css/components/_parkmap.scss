@@ -9,7 +9,7 @@
 }
 
 .parkmap-image {
-  background: url(#{$image-path}top/parkmap/map-v3.jpg) no-repeat center top;
+  background: url(#{$image-path}top/parkmap/map-v2.png) no-repeat center top;
   background-size: contain;
   width: 1600px;
   height: 903px;
@@ -22,7 +22,7 @@
     height: 370px;
     left: 50%;
     transform: translateX(-50%);
-    background: url(#{$image-path}top/parkmap/map-v3-sp.jpg) no-repeat center top;
+    background: url(#{$image-path}top/parkmap/map-v2-sp.png) no-repeat center top;
     background-size: contain;
   }
 }
@@ -31,7 +31,6 @@
   counter-reset: parkmap_image_list;
   position: relative;
   left: 330px;
-  display: none; //Termporarily hidden
 
   @include max-screen($breakpoint-mobile) {
     left: 0;
@@ -82,71 +81,72 @@
   }
 
   &:first-child {
-    left: 201px;
-    top: 104px;
+    left: 355px;
+    top: 229px;
 
     @include max-screen($breakpoint-mobile) {
-      top: 32px;
+      left: 231px;
+      top: 48px;
     }
   }
 
   &:nth-of-type(2) {
-    left: 163px;
-    top: 266px;
+    left: 247px;
+    top: 299px;
 
     @include max-screen($breakpoint-mobile) {
-      left: 186px;
-      top: 95px;
+      left: 174px;
+      top: 86px;
     }
   }
 
   &:nth-of-type(3) {
-    left: 417px;
-    top: 189px;
+    left: 521px;
+    top: 374px;
 
     @include max-screen($breakpoint-mobile) {
-      left: 287px;
-      top: 65px;
+      left: 324px;
+      top: 129px;
     }
   }
 
   &:nth-of-type(4) {
-    left: 553px;
-    top: 217px;
+    left: 642px;
+    top: 396px;
 
     @include max-screen($breakpoint-mobile) {
-      left: 335px;
-      top: 76px;
+      left: 393px;
+      top: 142px;
     }
   }
 
   &:nth-of-type(5) {
-    left: 592px;
-    top: 278px;
+    left: 387px;
+    top: 492px;
 
     @include max-screen($breakpoint-mobile) {
-      left: 361px;
-      top: 116px;
+      left: 246px;
+      top: 194px;
     }
   }
 
   &:nth-of-type(6) {
-    left: 525px;
-    top: 529px;
+    left: 221px;
+    top: 447px;
 
     @include max-screen($breakpoint-mobile) {
-      left: 327px;
-      top: 195px;
+      left: 160px;
+      top: 173px;
     }
   }
 
   &:nth-of-type(7) {
-    left: 101px;
-    top: 443px;
+    left: 530px;
+    top: 516px;
 
     @include max-screen($breakpoint-mobile) {
-      left: 164px;
-      top: 166px;
+      left: 333px;
+      top: 207px;
     }
   }
 }

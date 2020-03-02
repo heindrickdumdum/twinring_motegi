@@ -57,7 +57,7 @@
     }
 
     @include max-screen($breakpoint-mobile) {
-      padding-bottom: 65%;
+      padding-bottom: 67%;
     }
 
     &::after {
@@ -476,7 +476,7 @@
     text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
     position: relative;
     left: -15px;
-    max-width: 500px;
+    max-width: 430px;
 
     @include max-screen($breakpoint-mobile) {
       width: 100%;
@@ -502,6 +502,14 @@
     bottom: 0;
 
     position: relative;
+  }
+
+  .mv-image {
+    height: 607px;
+
+    @include max-screen ($breakpoint-mobile) {
+      height: auto;
+    }
   }
 }
 
@@ -895,10 +903,27 @@
       font-size: 23px;
       font-weight: 300;
 
+      &.mv-heading-text-walk {
+        font-family: $font-hiragino-w3;
+      }
+
+      &.mv-heading-text-labo {
+        font-family: $font-hiragino-w3;
+      }
+
       @include min-screen($breakpoint-mobile + 1) {
         font-size: 46px;
       }
     }
+  }
+
+  &.mv-subpage-acrox {
+    &::after {
+      @include max-screen($breakpoint-mobile) {
+        display: none;
+      }
+    }
+
   }
 
   &.mv-subpage-craft {
@@ -1003,10 +1028,17 @@
 
 .mv-tsubasa {
   @include max-screen ($breakpoint-mobile) {
+    max-height: 265px;
+
+    .mv-image {
+      background-size: cover;
+      max-height: 265px;
+    }
+
     .mv-logo-tsubasa {
       display: block;
       max-width: 130px;
-      bottom: -140px;
+      bottom: -170px;
       right: 10px;
     }
   }

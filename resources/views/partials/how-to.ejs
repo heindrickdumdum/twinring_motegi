@@ -1,39 +1,36 @@
-<%
-if (typeof modifier === 'undefined'){
-  var modifier = '';
-}
-%>
+<section class="l-how-to design-how-to">
+  <div class="how-to">
+    <%- include('/partials/heading', {
+      modifier: 'heading-wrap-how-to heading-wrap-center',
+      text: 'How to Enjoy',
+      subtextvg: 'how-to-subtext',
+      altSubtext: ''
+    }) %>
 
-<div class="how-to-content">
-  <% if (dataHowto) {%>
-    <% dataHowto.forEach(item => { %>
-      <div class="media <%- modifier %> u-clear">
-        <div class="media-left">
-          <div class="media-bg">
-            <div class="media-thumb">
-              <div style="background-image: url(<%= item.imgPath %>);"></div>
-            </div>
-          </div>
-        </div>
-        <div class="media-right">
-          <h4 class="media-title">
-            <span><%- item.title %></span>
-          </h4>
-          <p class="media-desc">
-            <%- item.content %>
-          </p>
-
-          <% if (item.note !== ) { %>
-            <div class="media-note">
-              <div class="media-note-text">
-                <%- item.note %>
-              </div>
-            </div>
-          <% } %>
-        </div>
+    <div class="slider-wrap slider-wrap-how-to">
+      <div class="swiper-container slider js-slider-how-to slider-how-to-enjoy">
+        <ul class="swiper-wrapper slider-wrapper">
+          <%
+            getData().data.howToContent.forEach( howToItem => {
+          %>
+          <li class="swiper-slide slider-item">
+            <%- include('/partials/article-no-design', {
+              category: '',
+              image: howToItem.image,
+              heading: howToItem.heading,
+              type: '',
+              date: '',
+              link: '',
+              modifier: '',
+              buttonText: howToItem.buttonText,
+              buttonLink: howToItem.buttonLink
+            }) %>
+          </li>
+          <% }) %>
+        </ul>
       </div>
-    <% }) %>
-  <% } %>
+    </div>
 
-
-</div>
+    <div class="how-to-container"></div>
+  </div>
+</section>

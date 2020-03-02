@@ -1,37 +1,39 @@
-import Swiper from 'swiper';
+import Swiper from 'swiper/dist/js/swiper.js';
 
-export default function topSlider() {
-  let topSwiper = new Swiper('.top-slider', {  
+export default function topSlider(params) {
+  if (!params.id) return;
+  if (!params.target) return;
+
+  const defaultOptions = {
     speed: 1500,
-    initialSlide: 1,
+    slidesPerView: 'auto',
+    variableWidth: 'auto',
+    spaceBetween: 55,
+    pagination: {
+      el: '.swiper-pagination-section',
+      type: 'bullets',
+      clickable: true,
+    },
 
     breakpoints: {
-        1280: {
-            slidesPerView: 1.5,
-            spaceBetween: 10,
-            initialSlide: 1,
-            slidesPerGroup: 3,
-            loop: true,
-            centeredSlides: true
-        },
-        375: {
-            spaceBetween: 10,           
-            centeredSlides: true,
-            slidesPerView: 1.5,
-            initialSlide: 1,
-            loopedSlides: 0,
-            loop: true
-        }
+      1280: {
+        slidesPerGroup: 3
+      },
+      759: {
+        spaceBetween: 10,
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+      }
     },
-    on: {
-        resize: function() {
-            this.params.observer = true;
-        }
-    }
-});
 
-// mySwiper.addEventListener('resize', function () {
-//     this.reInit();
-// });
+    on: {
+      resize: function() {
+        this.params.observer = true;
+      }
+    }
+  }
+
+  const config = !params.options ? defaultOptions : params.options;
+  params.id = new Swiper(params.target, config);
 
 }

@@ -1,103 +1,227 @@
+
+<head>
+  <meta charset="Shift_JIS">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>???g???[?T?[?b???r?p?[?N?b?c?C???????N?????</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" id="js-viewport">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- DEFAULT -->
+
+  
+    
+      <meta name="title" content="???g???[?T?[?b???r?p?[?N?b?c?C???????N?????">
+    
+  
+    
+      <meta name="description" content="?c?C???????N???????w???r?p?[?N?x???A?q????B????????v?????????g??????h?A?`???????W??B???????т??????????B">
+    
+  
+
+
+<!-- OGP -->
+
+  
+    
+      <meta property="og:locale" content="ja_JP">
+    
+  
+    
+      <meta property="og:title" content="???g???[?T?[?b???r?p?[?N?b?c?C???????N?????">
+    
+  
+    
+      <meta property="og:description" content="?c?C???????N???????w???r?p?[?N?x???A?q????B????????v?????????g??????h?A?`???????W??B???????т??????????B">
+    
+  
+    
+  
+    
+  
+    
+      <meta property="og:type" content="blog">
+    
+  
+    
+      <meta property="og:image" content="https://www.twinring.jp/mobipark_m/img/common/ogp.jpg">
+    
+  
+
+
+<!-- TWITTER -->
+
+  
+    
+      <meta name="twitter:card" content="summary">
+    
+  
+    
+      <meta name="twitter:title" content="???g???[?T?[?b???r?p?[?N?b?c?C???????N?????">
+    
+  
+    
+  
+    
+      <meta name="twitter:description" content="?c?C???????N???????w???r?p?[?N?x???A?q????B????????v?????????g??????h?A?`???????W??B???????т??????????B">
+    
+  
+    
+  
+
+
+
+<meta name="format-detection" content="telephone=no">
+
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+<link rel="shortcut icon" href="./../assets/images/common/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="./../assets/images/common/apple-touch-icon-precomposed.png">
+
+<!-- CLIENT CSS -->
+<link href="./../assets/lib/test/reset.css" rel="stylesheet">
+<link href="./../assets/lib/test/style.css" rel="stylesheet">
+
+<!-- LIG CSS -->
+<link rel="stylesheet" href="./../assets/css/app.css">
+
+<script>
+  // IE foreach Polyfill
+  if ('NodeList' in window && !NodeList.prototype.forEach) {
+      NodeList.prototype.forEach = function (callback, thisArg) {
+          thisArg = thisArg || window;
+          for (let i = 0; i < this.length; i++) {
+              callback.call(thisArg, this[i], i, this);
+          }
+      };
+  }
+</script>
+
+<script>
+  if (window.screen.width < 375) {
+    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
+  } else if (window.screen.width >= 375) {
+    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=1, user-scalable=yes');
+  }
+</script>
+
+<!-- resize for tab -->
+<script>
+  (function () {
+    var ua = navigator.userAgent;
+    var isIpad = (ua.indexOf('iPad') > 0);
+    var isAndroidTab = (ua.indexOf('Android') > 0 && ua.match(/Mobile/i) == null);
+    var tab = isIpad || isAndroidTab;
+    var minWidth = tab ? 1240 : 'device-width';
+    var initialScale = tab ? window.parent.screen.width / minWidth : 1;
+    if (tab) {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="viewport" content="width=' + minWidth + ',initial-scale=' + initialScale + '">');
+    }
+  })()
+</script>
+
+<script> document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+
+</head>
 <body>
 
-
 <main class="l-main">
-  <div class="subpage">
-    <div class="mv mv-subpage">
-      <ul class="mv-list">
-        <li class="mv-item">
-          <div class="mv-image u-show-pc" style="background-image:url(./../assets/images/motoracer/mv-img.jpg);"></div>
-          <div class="mv-image u-show-sp" style="background-image:url(./../assets/images/motoracer/mv-img-sp.jpg);"></div>
-        </li>
-      </ul>
+  <div class="lig-content">
+    <div class="subpage">
+      <div class="mv mv-subpage">
+        <ul class="mv-list">
+          <li class="mv-item">
+            <div class="mv-image u-show-pc" style="background-image:url(./../assets/images/motoracer/mv-img.jpg);"></div>
+            <div class="mv-image u-show-sp" style="background-image:url(./../assets/images/motoracer/mv-img-sp.jpg);"></div>
+          </li>
+        </ul>
 
 
-      <h1 class="u-title-hidden">
-        モトレーサー
-      </h1>
-    </div>
-
-    <div class="subpage-inner">
-      <div class="heading-wrap heading-main heading-main-motoracer">
-        <h2 class="heading">
-          <span class="u-title-hidden">コーナリングにチャレンジしてタイムアタック</span>
-          <span class="heading-texts">
-            <img src="./../assets/images/motoracer/motor-color-title.png" alt="親子でバイクレースに参戦！最速タイムを叩き出そう！">
-          </span>
-        </h2>
+        <h1 class="u-title-hidden">
+          ???g???[?T?[
+        </h1>
       </div>
 
-      <!-- YOUTUBE -->
-      <div class="subpage-banner">
-        <div class="subpage-banner-inner">
-          <img class="" src="./../assets/images/motoracer/subpage-banner.jpg" alt="MOTORACER">
+      <div class="subpage-inner">
+        <div class="heading-wrap heading-main heading-main-motoracer">
+          <h2 class="heading">
+            <span class="u-title-hidden">?R?[?i?????O??`???????W????^?C???A?^?b?N</span>
+            <span class="heading-texts">
+              <img src="./../assets/images/motoracer/motor-color-title.png" alt="?e?q??o?C?N???[?X??Q??I????^?C????@???o?????I">
+            </span>
+          </h2>
         </div>
+
+        <!-- YOUTUBE -->
+        <div class="subpage-banner">
+          <div class="subpage-banner-inner">
+            <img class="" src="./../assets/images/motoracer/subpage-banner.jpg" alt="MOTORACER">
+          </div>
+        </div>
+
+        <h3 class="subpage-title">
+          <span>?A?g???N?V???????</span>
+        </h3>
+
+        <p>???[?V???O???C?_?[?C????????????????B?A?N?Z??????E?X?s?[?h?R???g???[???E?R?[?i?????O??`???????W????^?C?????k????B</p>
+
+        <table class="table">
+          <tbody>
+            <tr class="table-row">
+              <th class="table-head">??</th>
+              <td class="table-col">???r?p?[?N??</td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">???v????</th>
+              <td class="table-col">
+                ??15???i?????E???A??????????A???j
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">?J?V??^?s</th>
+              <td class="table-col">
+                ?c???????????B?r?V?????R?[?X?R???f?B?V???????????????????c???f??????B
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">????</th>
+              <td class="table-col">
+                ??????????]???????w3?N?????A<br />
+                ??????????g?c?[?????O????g???C?Z???XA?擾????w1?N????て1
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">?g??????</th>
+              <td class="table-col">???</td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">????</th>
+              <td class="table-col">
+                ???r?p?[?N?p?X?|?[?g???<br />
+                ?A?g???N?V?????`?P?b?g???p?F600?~
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">?????p?????????</th>
+              <td class="table-col">
+                <span class="table-col-num">??1</span>?????????F<br />
+                ???g???C?Z???XA??????????????A???w1?E2?N??????q????????y???????????????B<br />
+                ???g???C?Z???XA??A???g?c?[?????O?????[?????????A??????????????????????q?????v???[???g??????????B
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
       </div>
 
-      <h3 class="subpage-title">
-        <span>アトラクション情報</span>
-      </h3>
-
-      <p>レーシングライダー気分で速さを競おう。アクセル操作・スピードコントロール・コーナリングにチャレンジしてタイムを縮めよう。</p>
-
-      <table class="table">
-        <tbody>
-          <tr class="table-row">
-            <th class="table-head">場所</th>
-            <td class="table-col">モビパーク内</td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">所要時間</th>
-            <td class="table-col">
-              約15分（装備の装着、説明、一人ずつ練習、本番、装備外し）
-            </td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">雨天の運行</th>
-            <td class="table-col">
-              営業いたします。荒天時などコースコンディションが悪化した場合には営業を中断します。
-            </td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">対象者</th>
-            <td class="table-col">
-              小学3年生以上で補助輪なし自転車に乗れる、<br />
-              もしくはモトライセンスA取得の小学1年生以上※1
-            </td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">身長制限</th>
-            <td class="table-col">なし</td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">料金</th>
-            <td class="table-col">
-              モビパークパスポート対象<br />
-              アトラクションチケット利用：600円
-            </td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">ご利用にあたって</th>
-            <td class="table-col">
-              ※1対象者について：<br />
-              小学3年生以上で補助輪なし自転車に乗れるお子さまは最初からモトレーサーにチャレンジしていただけます。モトライセンスAをお持ちであれば、小学1・2年生のお子さまもお楽しみいただけます。<br />
-              モトライセンスAは、モトツーリングにてルールを守って、足をつかずに完走できたお子さまにプレゼントいたします
-            </td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-    <section class="subpage-section subpage-section-howto">
-      <div class="subpage-section-howto-inner">
-        <div class="l-section-title">
+      <section class="subpage-section subpage-section-howto">
+        <div class="subpage-section-howto-inner">
+          <div class="l-section-title">
 
 
 <div class="heading-wrap heading-gradient-tobottom heading-howto heading-howto-motoracer u-show-pc">
@@ -155,22 +279,22 @@
   </div>
 </div>
 
-        </div>
+          </div>
 
-        <div class="how-to-content">
-          <div class="media media-subpage u-clear">
-            <div class="media-left">
-              <div class="media-bg">
-                <div class="media-thumb">
-                  <div style="background-image: url(./../assets/images/motoracer/enjoy-img1.jpg);"></div>
+          <div class="how-to-content">
+            <div class="media media-subpage u-clear">
+              <div class="media-left">
+                <div class="media-bg">
+                  <div class="media-thumb">
+                    <div style="background-image: url(./../assets/images/motoracer/enjoy-img1.jpg);"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="media-right">
-              <h4 class="media-title"><span>MotoGP&trade;ライダー気分を体感！</span></h4>
-              <p class="media-desc">
-                日本で唯一、MotoGP&trade;世界選手権を開催しているツインリンクもてぎならではの本格的バイクアトラクションを体感しよう！
-              </p>
+              <div class="media-right">
+                <h4 class="media-title"><span>MotoGP&trade;???C?_?[?C???????I</span></h4>
+                <p class="media-desc">
+                  ???{??B??AMotoGP&trade;???E?I?????J????????c?C???????N???????????{?i?I?o?C?N?A?g???N?V?????????????I
+                </p>
 
 
 
@@ -179,66 +303,66 @@
   </div>
 </div>
 
-            </div>
-          </div>
-          <div class="media media-subpage u-clear">
-            <div class="media-left">
-              <div class="media-bg">
-                <div class="media-thumb">
-                  <div style="background-image: url(./../assets/images/motoracer/enjoy-img2.jpg);"></div>
-                </div>
               </div>
             </div>
-            <div class="media-right">
-              <h4 class="media-title">
-                <span>
-                  リアルなバイクを乗りこなそう！
-                </span>
-              </h4>
-              <p class="media-desc">
-                アクセルとブレーキ、そして上手にバランスをとってバイクを傾け、コーナーを乗りこなすテクニックをマスターしよう！
-              </p>
+            <div class="media media-subpage u-clear">
+              <div class="media-left">
+                <div class="media-bg">
+                  <div class="media-thumb">
+                    <div style="background-image: url(./../assets/images/motoracer/enjoy-img2.jpg);"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="media-right">
+                <h4 class="media-title">
+                  <span>
+                    ???A????o?C?N????肱??????I
+                  </span>
+                </h4>
+                <p class="media-desc">
+                  ?A?N?Z????u???[?L?A?????????o?????X???????o?C?N???X???A?R?[?i?[????肱????e?N?j?b?N???}?X?^?[?????I
+                </p>
 
 
 <div class="note  note-subpage">
   <div class="note-message" style="background-image: url(./../assets/images/motoracer/racer-dekitane-banner2.jpg);">
   </div>
 </div>
-            </div>
-          </div>
-          <div class="media media-subpage u-clear">
-            <div class="media-left">
-              <div class="media-bg">
-                <div class="media-thumb">
-                  <div style="background-image: url(./../assets/images/motoracer/enjoy-img3.jpg);"></div>
-                </div>
               </div>
             </div>
-            <div class="media-right">
-              <h4 class="media-title">
-                <span>
-                  タイムアタックで記録にチャレンジ！
-                </span>
-              </h4>
-              <p class="media-desc u-show-pc">
-                タイムアタックは1000分の1秒まで計測。<br />
-                たくさん練習して、何度転んでもチャレンジしたくなるのがモトレーサー！
-              </p>
-              <p class="media-desc u-show-sp">
-                タイムアタックは1000分の1秒まで計測。たくさん練習して、何度転んでもチャレンジしたくなるのがモトレーサー！
-              </p>
+            <div class="media media-subpage u-clear">
+              <div class="media-left">
+                <div class="media-bg">
+                  <div class="media-thumb">
+                    <div style="background-image: url(./../assets/images/motoracer/enjoy-img3.jpg);"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="media-right">
+                <h4 class="media-title">
+                  <span>
+                    ?^?C???A?^?b?N??L?^??`???????W?I
+                  </span>
+                </h4>
+                <p class="media-desc u-show-pc">
+                  ?^?C???A?^?b?N??1000????1?b???v???B<br />
+                  ??????????K????A???x?]?????`???????W??????????????g???[?T?[?I
+                </p>
+                <p class="media-desc u-show-sp">
+                  ?^?C???A?^?b?N??1000????1?b???v???B??????????K????A???x?]?????`???????W??????????????g???[?T?[?I
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- BOTTOM -->
+      <!-- BOTTOM -->
 
-    <!-- <div class="call-to-action">
-      <div class="l-container">
-        <div class="call-to-action-wrapper">
-          <div class="call-to-action-inner">
+      <!-- <div class="call-to-action">
+        <div class="l-container">
+          <div class="call-to-action-wrapper">
+            <div class="call-to-action-inner">
 
 
 <div class="heading-wrap heading-banner-more heading-banner-more-motoracer u-show-pc">
@@ -250,8 +374,8 @@
 
 
 
-        <span class="u-title-hidden">モトレーサーをもっと楽しむ</span>
-        <img src="./../assets/images/motoracer/motor-enjoy-more-title.png" alt="モトレーサーをもっと楽しむ">
+        <span class="u-title-hidden">???g???[?T?[????????y????</span>
+        <img src="./../assets/images/motoracer/motor-enjoy-more-title.png" alt="???g???[?T?[????????y????">
 
     </p>
 
@@ -271,8 +395,8 @@
 
 
 
-        <span class="u-title-hidden">モトレーサーをもっと楽しむ</span>
-        <img src="./../assets/images/motoracer/motor-enjoy-more-title-sp.png" alt="モトレーサーをもっと楽しむ">
+        <span class="u-title-hidden">???g???[?T?[????????y????</span>
+        <img src="./../assets/images/motoracer/motor-enjoy-more-title-sp.png" alt="???g???[?T?[????????y????">
 
     </p>
 
@@ -281,20 +405,20 @@
   </div>
 </div>
 
-            <div class="call-to-action-description">
-              <p class="call-to-action-description-text u-show-pc">
-                モトレーサーのこだわりポイントや、知っているともっと<br>
-                楽しくなる情報を配信中しています。
-              </p>
+              <div class="call-to-action-description">
+                <p class="call-to-action-description-text u-show-pc">
+                  ???g???[?T?[????????|?C???g??A?m?????????????<br>
+                  ?y??????????z?M???????????B
+                </p>
 
-              <p class="call-to-action-description-text u-show-sp">
-                モトレーサーのこだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
-              </p>
-            </div>
-            <div class="l-button l-button-call-to-action">
+                <p class="call-to-action-description-text u-show-sp">
+                  ???g???[?T?[????????|?C???g??A<br />?m?????????????<br />?y??????????z?M???????????B
+                </p>
+              </div>
+              <div class="l-button l-button-call-to-action">
 
 
-<a class="button button-banner-more" href="#" >もっと見る
+<a class="button button-banner-more" href="#" >?????????
   <i class="button-icon">
     <svg>
   <title>arrow</title>
@@ -304,30 +428,30 @@
   </i>
 </a>
 
+              </div>
+              <span class="call-to-action-dot call-to-action-dot-1">
+                <img src="./../assets/images/sumika/net-sumika/sumika-net-1.png ">
+              </span>
+              <span class="call-to-action-dot call-to-action-dot-2">
+                <img src="./../assets/images/sumika/net-sumika/sumika-net-2.png ">
+              </span>
+              <span class="call-to-action-dot call-to-action-dot-3">
+                <img src="./../assets/images/sumika/net-sumika/sumika-net-3.png ">
+              </span>
+              <span class="call-to-action-dot call-to-action-dot-4">
+                <img src="./../assets/images/sumika/net-sumika/sumika-net-4.png ">
+              </span>
             </div>
-            <span class="call-to-action-dot call-to-action-dot-1">
-              <img src="./../assets/images/sumika/net-sumika/sumika-net-1.png ">
-            </span>
-            <span class="call-to-action-dot call-to-action-dot-2">
-              <img src="./../assets/images/sumika/net-sumika/sumika-net-2.png ">
-            </span>
-            <span class="call-to-action-dot call-to-action-dot-3">
-              <img src="./../assets/images/sumika/net-sumika/sumika-net-3.png ">
-            </span>
-            <span class="call-to-action-dot call-to-action-dot-4">
-              <img src="./../assets/images/sumika/net-sumika/sumika-net-4.png ">
-            </span>
           </div>
         </div>
-      </div>
-    </div> -->
+      </div> -->
 
 
 
 <div class="banner-cta ">
   <div class="l-container">
     <a class="banner-cta-bottom-inner" href="https://www.twinring.jp/mobipark_m/card/" target="_blank">
-      <img src="./../assets/images/subpage-banner-bottom.png" alt="上手に乗れたらライセンスカードをつくろう">
+      <img src="./../assets/images/subpage-banner-bottom.png" alt="?????????C?Z???X?J?[?h???????">
     </a>
   </div>
 </div>
@@ -380,13 +504,13 @@
     </div>
 
 
-    <h3 class="article-heading">森のファミリーウォーク TEKUTEKU</h3>
+    <h3 class="article-heading">?X??t?@?~???[?E?H?[?N TEKUTEKU</h3>
 
 
 
 
     <a class="button-gradient button-gradient-cmn" href="/hellowoods/program/">
-  <span class="button-gradient-text">モビパーク</span>
+  <span class="button-gradient-text">???r?p?[?N</span>
   <i class="button-gradient-icon">
     <svg>
   <title>arrow</title>
@@ -414,13 +538,13 @@
     </div>
 
 
-    <h3 class="article-heading">巨大ネットの森 SUMIKA</h3>
+    <h3 class="article-heading">????l?b?g??X SUMIKA</h3>
 
 
 
 
     <a class="button-gradient button-gradient-cmn" href="/sumika/">
-  <span class="button-gradient-text">モビパーク</span>
+  <span class="button-gradient-text">???r?p?[?N</span>
   <i class="button-gradient-icon">
     <svg>
   <title>arrow</title>
@@ -448,13 +572,13 @@
     </div>
 
 
-    <h3 class="article-heading">森感覚アスレチック DOKIDOKI</h3>
+    <h3 class="article-heading">?X???o?A?X???`?b?N DOKIDOKI</h3>
 
 
 
 
     <a class="button-gradient button-gradient-cmn" href="/dokidoki/">
-  <span class="button-gradient-text">モビパーク</span>
+  <span class="button-gradient-text">???r?p?[?N</span>
   <i class="button-gradient-icon">
     <svg>
   <title>arrow</title>
@@ -482,13 +606,13 @@
     </div>
 
 
-    <h3 class="article-heading">迷宮森殿 ITADAKI</h3>
+    <h3 class="article-heading">???{?X?a ITADAKI</h3>
 
 
 
 
     <a class="button-gradient button-gradient-cmn" href="/itdaki/">
-  <span class="button-gradient-text">モビパーク</span>
+  <span class="button-gradient-text">???r?p?[?N</span>
   <i class="button-gradient-icon">
     <svg>
   <title>arrow</title>
@@ -516,13 +640,13 @@
     </div>
 
 
-    <h3 class="article-heading">森の空中散歩（ジップライン）</h3>
+    <h3 class="article-heading">?X???U???i?W?b?v???C???j</h3>
 
 
 
 
     <a class="button-gradient button-gradient-cmn" href="#">
-  <span class="button-gradient-text">モビパーク</span>
+  <span class="button-gradient-text">???r?p?[?N</span>
   <i class="button-gradient-icon">
     <svg>
   <title>arrow</title>
@@ -550,13 +674,13 @@
     </div>
 
 
-    <h3 class="article-heading">クルマ&バイクのアトラクション</h3>
+    <h3 class="article-heading">?N???}&?o?C?N??A?g???N?V????</h3>
 
 
 
 
     <a class="button-gradient button-gradient-cmn" href="#">
-  <span class="button-gradient-text">モビパーク</span>
+  <span class="button-gradient-text">???r?p?[?N</span>
   <i class="button-gradient-icon">
     <svg>
   <title>arrow</title>
@@ -576,7 +700,7 @@
   </div>
 </section>
 
-    <section class="bottom-slider bottom-slider-pickup" style="height: 510px;">
+      <section class="bottom-slider bottom-slider-pickup" style="height: 510px;">
   <div class="l-section-title">
 
 
@@ -625,11 +749,11 @@
       <span class="article-type article-type-Event">Event</span>
 
 
-    <h3 class="article-heading">「わくわくの森 春フェスタ」3月20日（金・祝）～開催</h3>
+    <h3 class="article-heading">?u??????X ?t?t?F?X?^?v3??20???i???E?j?j?`?J??</h3>
 
 
       <p class="article-period">
-        開催期間：<time class="article-period-date" datetime="P1D">2020年3月20日（金・祝）～2020年4月5日（日）</time>
+        ?J?????F<time class="article-period-date" datetime="P1D">2020?N3??20???i???E?j?j?`2020?N4??5???i???j</time>
       </p>
 
 
@@ -654,11 +778,11 @@
       <span class="article-type article-type-news">news</span>
 
 
-    <h3 class="article-heading">家族みんなで団らん「スーペリアファミリールーム」3月13日（金）～新登場</h3>
+    <h3 class="article-heading">????????c???u?X?[?y???A?t?@?~???[???[???v3??13???i???j?`?V?o??</h3>
 
 
       <p class="article-period">
-        開催期間：<time class="article-period-date" datetime="P1D">2020年3月13日（金）～</time>
+        ?J?????F<time class="article-period-date" datetime="P1D">2020?N3??13???i???j?`</time>
       </p>
 
 
@@ -683,11 +807,11 @@
       <span class="article-type article-type-news">news</span>
 
 
-    <h3 class="article-heading">歩くほどに発見「森のファミリーウォーク TEKUTEKU」3月14日（土）～新登場</h3>
+    <h3 class="article-heading">????????????u?X??t?@?~???[?E?H?[?N TEKUTEKU?v3??14???i?y?j?`?V?o??</h3>
 
 
       <p class="article-period">
-        開催期間：<time class="article-period-date" datetime="P1D">2020年3月14日（土）～</time>
+        ?J?????F<time class="article-period-date" datetime="P1D">2020?N3??14???i?y?j?`</time>
       </p>
 
 
@@ -712,11 +836,11 @@
       <span class="article-type article-type-news">news</span>
 
 
-    <h3 class="article-heading">“今”だけの冒険と発見「アクティビティ」<br />この春新登場</h3>
+    <h3 class="article-heading">?g???h??????`????????u?A?N?e?B?r?e?B?v<br />????t?V?o??</h3>
 
 
       <p class="article-period">
-        開催期間：<time class="article-period-date" datetime="P1D">2020年春</time>
+        ?J?????F<time class="article-period-date" datetime="P1D">2020?N?t</time>
       </p>
 
 
@@ -741,11 +865,11 @@
       <span class="article-type article-type-race">race</span>
 
 
-    <h3 class="article-heading">「スーパーバイクレース」前売りチケット<br />発売中</h3>
+    <h3 class="article-heading">?u?X?[?p?[?o?C?N???[?X?v?O????`?P?b?g<br />??????</h3>
 
 
       <p class="article-period">
-        開催期間：<time class="article-period-date" datetime="P1D">2020年4月25日（土）～2020年4月26日（日）</time>
+        ?J?????F<time class="article-period-date" datetime="P1D">2020?N4??25???i?y?j?`2020?N4??26???i???j</time>
       </p>
 
 
@@ -770,11 +894,11 @@
       <span class="article-type article-type-event">event</span>
 
 
-    <h3 class="article-heading">「トライアル世界選手権」3月14日（土）前売りチケット発売開始</h3>
+    <h3 class="article-heading">?u?g???C?A?????E?I???v3??14???i?y?j?O????`?P?b?g?????J?n</h3>
 
 
       <p class="article-period">
-        開催期間：<time class="article-period-date" datetime="P1D">2020年6月6日（土）～2020年6月7日（日）</time>
+        ?J?????F<time class="article-period-date" datetime="P1D">2020?N6??6???i?y?j?`2020?N6??7???i???j</time>
       </p>
 
 
@@ -790,12 +914,13 @@
 </section>
 
 
-    <!-- END BOTTOM -->
-  </div>
+      <!-- END BOTTOM -->
+    </div>
+</div>
 </main>
 
 
-  <div class="breadcrumbs">
+  <div class="breadcrumbs" id="lig-breadcrumbs">
     <div class="l-container">
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-item">
@@ -807,7 +932,7 @@
           <li class="breadcrumbs-item">
 
               <a class="breadcrumbs-link" href="#">
-                <span>モビパーク</span>
+                <span>???r?p?[?N</span>
               </a>
 
           </li>
@@ -815,14 +940,14 @@
           <li class="breadcrumbs-item">
 
               <a class="breadcrumbs-link" href="#">
-                <span>クルマ＆バイクのアトラクション</span>
+                <span>?N???}???o?C?N??A?g???N?V????</span>
               </a>
 
           </li>
 
           <li class="breadcrumbs-item">
 
-              <span>モトレーサー</span>
+              <span>???g???[?T?[</span>
 
           </li>
 
@@ -831,8 +956,15 @@
   </div>
 
 
+
   <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
   <script src="./../assets/js/app.js" async></script>
+
+
+
+
+
+
 
 
     <script src="./../assets/js/common-slider.js" async></script>
@@ -844,4 +976,4 @@
 
 
 </body>
-</html>
+

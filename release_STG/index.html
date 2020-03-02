@@ -1,91 +1,217 @@
-<script src="./assets/js/index.js" async></script>
+<!DOCTYPE html>
+
+<head>
+  <meta charset="Shift_JIS">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>森の中のモビリティテーマパーク ツインリンクもてぎ</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" id="js-viewport">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- DEFAULT -->
+
+
+
+      <meta name="title" content="森の中のモビリティテーマパーク ツインリンクもてぎ">
+
+
+
+      <meta name="description" content="グランピングや空中アスレチック、巨大な立体迷路など家族みんなで遊べるアトラクションがいっぱいの今関東で話題の新スポット。">
+
+
+
+
+<!-- OGP -->
+
+
+
+      <meta property="og:locale" content="ja_JP">
+
+
+
+      <meta property="og:title" content="森の中のモビリティテーマパーク ツインリンクもてぎ">
+
+
+
+      <meta property="og:description" content="グランピングや空中アスレチック、巨大な立体迷路など家族みんなで遊べるアトラクションがいっぱいの今関東で話題の新スポット。">
+
+
+
+
+
+
+
+      <meta property="og:type" content="blog">
+
+
+
+      <meta property="og:image" content="https://www.twinring.jp/home./assets/top/img/ogp.png">
+
+
+
+
+<!-- TWITTER -->
+
+
+
+      <meta name="twitter:card" content="summary">
+
+
+
+      <meta name="twitter:title" content="森の中のモビリティテーマパーク ツインリンクもてぎ">
+
+
+
+
+
+      <meta name="twitter:description" content="グランピングや空中アスレチック、巨大な立体迷路など家族みんなで遊べるアトラクションがいっぱいの今関東で話題の新スポット。">
+
+
+
+
+
+
+
+<meta name="format-detection" content="telephone=no">
+
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+<link rel="shortcut icon" href="./assets/images/common/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="./assets/images/common/apple-touch-icon-precomposed.png">
+
+<!-- CLIENT CSS -->
+<link href="./assets/lib/test/reset.css" rel="stylesheet">
+<link href="./assets/lib/test/style.css" rel="stylesheet">
+
+<!-- LIG CSS -->
+<link rel="stylesheet" href="./assets/css/app.css">
+
+<script>
+  // IE foreach Polyfill
+  if ('NodeList' in window && !NodeList.prototype.forEach) {
+      NodeList.prototype.forEach = function (callback, thisArg) {
+          thisArg = thisArg || window;
+          for (let i = 0; i < this.length; i++) {
+              callback.call(thisArg, this[i], i, this);
+          }
+      };
+  }
+</script>
+
+<script>
+  if (window.screen.width < 375) {
+    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
+  } else if (window.screen.width >= 375) {
+    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=1, user-scalable=yes');
+  }
+</script>
+
+<!-- resize for tab -->
+<script>
+  (function () {
+    var ua = navigator.userAgent;
+    var isIpad = (ua.indexOf('iPad') > 0);
+    var isAndroidTab = (ua.indexOf('Android') > 0 && ua.match(/Mobile/i) == null);
+    var tab = isIpad || isAndroidTab;
+    var minWidth = tab ? 1240 : 'device-width';
+    var initialScale = tab ? window.parent.screen.width / minWidth : 1;
+    if (tab) {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="viewport" content="width=' + minWidth + ',initial-scale=' + initialScale + '">');
+    }
+  })()
+</script>
+
+<script> document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+
+</head>
 <body>
 
+			<div id="lig-preload">
+				<div class="preload js-preload">
+					<div class="preload-image"></div>
+					<img class="preload-text" src="./assets/images/footer-twinring.png" alt="">
+				</div>
+			</div>
 
-    <div class="preload js-preload">
-      <div class="preload-image"></div>
-      <img class="preload-text" src="./assets/images/footer-twinring.png" alt="">
+
+
+<div class="lig-content">
+  <div class="mv mv-top">
+    <div class="mv-buttons">
+      <ul class="mv-buttons-list">
+        <li class="mv-buttons-item">
+          <a class="mv-buttons-link" href="https://www.twinring.jp/fee_m/" target="_blank">
+            <span>料金<br>・チケット</span>
+          </a>
+        </li>
+        <li class="mv-buttons-item">
+          <a class="mv-buttons-link" href="https://www.twinring.jp/access_m/" target="_blank">
+            <span>アクセス</span>
+          </a>
+        </li>
+      </ul>
     </div>
 
-
-
-
-
-<div class="mv mv-top">
-  <div class="mv-buttons">
-    <ul class="mv-buttons-list">
-      <li class="mv-buttons-item">
-        <a class="mv-buttons-link" href="https://www.twinring.jp/fee_m/" target="_blank">
-          <span>料金<br>・チケット</span>
-        </a>
+    <ul class="mv-list mv-list-top js-mv-list">
+      <li class="mv-item js-mv-item js-mv-item-first">
+        <div class="mv-image mv-image-pc" style="background-image:url(./assets/images/mv-img1.png);"></div>
+        <div class="mv-image mv-image-sp" style="background-image:url(./assets/images/mv-img1-sp.png);"></div>
       </li>
-      <li class="mv-buttons-item">
-        <a class="mv-buttons-link" href="https://www.twinring.jp/access_m/" target="_blank">
-          <span>アクセス</span>
-        </a>
+      <li class="mv-item js-mv-item js-mv-item-first">
+        <div class="mv-image mv-image-pc" style="background-image:url(./assets/images/mv-img2.png);"></div>
+        <div class="mv-image mv-image-sp" style="background-image:url(./assets/images/mv-img2-sp.png);"></div>
+      </li>
+      <li class="mv-item js-mv-item">
+        <div class="mv-image mv-image-pc" style="background-image:url(./assets/images/mv-img3.png);"></div>
+        <div class="mv-image mv-image-sp" style="background-image:url(./assets/images/mv-img3-sp.png);"></div>
       </li>
     </ul>
-  </div>
 
-  <ul class="mv-list mv-list-top js-mv-list">
-    <li class="mv-item js-mv-item js-mv-item-first">
-      <div class="mv-image mv-image-pc" style="background-image:url(./assets/images/mv-img1.png);"></div>
-      <div class="mv-image mv-image-sp" style="background-image:url(./assets/images/mv-img1-sp.png);"></div>
-    </li>
-    <li class="mv-item js-mv-item js-mv-item-first">
-      <div class="mv-image mv-image-pc" style="background-image:url(./assets/images/mv-img2.png);"></div>
-      <div class="mv-image mv-image-sp" style="background-image:url(./assets/images/mv-img2-sp.png);"></div>
-    </li>
-    <li class="mv-item js-mv-item">
-      <div class="mv-image mv-image-pc" style="background-image:url(./assets/images/mv-img3.png);"></div>
-      <div class="mv-image mv-image-sp" style="background-image:url(./assets/images/mv-img3-sp.png);"></div>
-    </li>
-  </ul>
+    <div class="l-container mv-container">
+      <h2 class="mv-heading mv-heading-top">
+        <span class="mv-heading-text">
+          Twin ring Motegi
+        </span>
+        <div class="u-show-pc">
+          <span class="mv-heading-subtext">
+            <img src="./assets/images/mv-heading-pc.svg" alt="家族にちょうどいい冒険を">
+          </span>
+        </div>
+        <div class="u-show-sp">
+          <span class="mv-heading-subtext">
+            <img src="./assets/images/mv-heading-sp.png" alt="家族にちょうどいい冒険を">
+          </span>
+        </div>
+      </h2>
 
-  <div class="l-container mv-container">
-    <h2 class="mv-heading mv-heading-top">
-      <span class="mv-heading-text">
-        Twin ring Motegi
-      </span>
-      <div class="u-show-pc">
-        <span class="mv-heading-subtext">
-          <img src="./assets/images/mv-heading-pc.svg" alt="家族にちょうどいい冒険を">
-        </span>
-      </div>
-      <div class="u-show-sp">
-        <span class="mv-heading-subtext">
-          <img src="./assets/images/mv-heading-sp.png" alt="家族にちょうどいい冒険を">
-        </span>
-      </div>
-    </h2>
-
-    <!-- <div class="mv-today mv-today-top">
-      <div class="mv-today-inner">
-        <img class="mv-today-text" src="./assets/images/mv-today-text.png" alt="">
-        <span class="mv-today-time">10:00-17:00</span>
-        <span class="mv-today-degree">
-          <i class="mv-today-degree-icon">
-            <svg>
-              <title>Sun</title>
-              <use xlink:href="./assets/svg/sprite.svg#sprite-sun"></use>
-            </svg>
-          </i>
-          <span class="mv-today-celcius-value">28</span>
-          <span class="mv-today-celcius">&#176;c</span>
-        </span>
-      </div>
-    </div> -->
+      <!-- <div class="mv-today mv-today-top">
+        <div class="mv-today-inner">
+          <img class="mv-today-text" src="./assets/images/mv-today-text.png" alt="">
+          <span class="mv-today-time">10:00-17:00</span>
+          <span class="mv-today-degree">
+            <i class="mv-today-degree-icon">
+              <svg>
+                <title>Sun</title>
+                <use xlink:href="./assets/svg/sprite.svg#sprite-sun"></use>
+              </svg>
+            </i>
+            <span class="mv-today-celcius-value">28</span>
+            <span class="mv-today-celcius">&#176;c</span>
+          </span>
+        </div>
+      </div> -->
+    </div>
   </div>
 </div>
 
 <main>
-  <div class="l-feature design-feature" style="height: 521px; margin-bottom: 190px;">
-    <section class="feature">
-      <div class="slider-wrap">
-        <div class="swiper-container slider js-feature-slider feature-container">
-          <ul class="swiper-wrapper slider-wrapper slider-wrapper-feature">
+  <div class="lig-content">
+    <div class="l-feature design-feature">
+      <section class="feature">
+        <div class="slider-wrap">
+          <div class="swiper-container slider js-feature-slider feature-container">
+            <ul class="swiper-wrapper slider-wrapper slider-wrapper-feature">
 
-            <li class="swiper-slide slider-item">
+              <li class="swiper-slide slider-item">
 
 <article class="article article-feature">
   <a class="article-link" href="https://www.twinring.jp/season-event/spring/">
@@ -105,9 +231,9 @@
   </a>
 </article>
 
-            </li>
+              </li>
 
-            <li class="swiper-slide slider-item">
+              <li class="swiper-slide slider-item">
 
 <article class="article article-feature">
   <a class="article-link" href="https://www.twinring.jp/hoteltwinring/renewal/">
@@ -127,9 +253,9 @@
   </a>
 </article>
 
-            </li>
+              </li>
 
-            <li class="swiper-slide slider-item">
+              <li class="swiper-slide slider-item">
 
 <article class="article article-feature">
   <a class="article-link" href="https://www.twinring.jp/hellowoods/tekuteku/">
@@ -149,9 +275,9 @@
   </a>
 </article>
 
-            </li>
+              </li>
 
-            <li class="swiper-slide slider-item">
+              <li class="swiper-slide slider-item">
 
 <article class="article article-feature">
   <a class="article-link" href="https://www.twinring.jp/activity/">
@@ -171,9 +297,9 @@
   </a>
 </article>
 
-            </li>
+              </li>
 
-            <li class="swiper-slide slider-item">
+              <li class="swiper-slide slider-item">
 
 <article class="article article-feature">
   <a class="article-link" href="https://www.twinring.jp/superbike_m/">
@@ -193,9 +319,9 @@
   </a>
 </article>
 
-            </li>
+              </li>
 
-            <li class="swiper-slide slider-item">
+              <li class="swiper-slide slider-item">
 
 <article class="article article-feature">
   <a class="article-link" href="https://www.twinring.jp/wctrial/">
@@ -215,20 +341,20 @@
   </a>
 </article>
 
-            </li>
+              </li>
 
-          </ul>
-          <div class="swiper-pagination swiper-pagination-section swiper-pagination-feature"></div>
+            </ul>
+            <div class="swiper-pagination swiper-pagination-feature"></div>
+          </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
 
-  <div class="l-parkmap design-parkmap">
-    <div class="parkmap design-parkmap-inner">
-      <div class="l-container parkmap-container">
+    <div class="l-parkmap design-parkmap">
+      <div class="parkmap design-parkmap-inner">
+        <div class="l-container parkmap-container">
 
-        <div class="u-show-pc">
+          <div class="u-show-pc">
 
 
 <div class="heading-wrap heading-wrap-parkmap">
@@ -257,9 +383,9 @@
   </div>
 </div>
 
-        </div>
+          </div>
 
-        <div class="u-show-sp">
+          <div class="u-show-sp">
 
 
 <div class="heading-wrap heading-wrap-parkmap">
@@ -288,131 +414,131 @@
   </div>
 </div>
 
-        </div>
-
-
-        <div class="parkmap-inner">
-          <div class="parkmap-image">
-            <ul class="parkmap-image-list">
-
-              <li class="parkmap-image-item js-parkmap-number">
-                <a href="https://www.twinring.jp/hellowoods/" target="_blank"></a>
-              </li>
-
-              <li class="parkmap-image-item js-parkmap-number">
-                <a href="https://www.twinring.jp/mobipark_m/" target="_blank"></a>
-              </li>
-
-              <li class="parkmap-image-item js-parkmap-number">
-                <a href="https://www.twinring.jp/f-glamping/" target="_blank"></a>
-              </li>
-
-              <li class="parkmap-image-item js-parkmap-number">
-                <a href="https://www.twinring.jp/hoteltwinring/" target="_blank"></a>
-              </li>
-
-              <li class="parkmap-image-item js-parkmap-number">
-                <a href="https://www.twinring.jp/motorsports_m/" target="_blank"></a>
-              </li>
-
-              <li class="parkmap-image-item js-parkmap-number">
-                <a href="https://www.twinring.jp/collection-hall/" target="_blank"></a>
-              </li>
-
-              <li class="parkmap-image-item js-parkmap-number">
-                <a href="https://www.twinring.jp/astp/" target="_blank"></a>
-              </li>
-
-            </ul>
           </div>
-          <div class="parkmap-right">
-            <ul class="parkmap-list">
 
-              <li class="parkmap-item js-parkmap-button">
-                <a class="parkmap-link" href="https://www.twinring.jp/hellowoods/" target="_blank">ハローウッズ
-                  <i class="parkmap-link-icon">
-                    <svg>
+
+          <div class="parkmap-inner">
+            <div class="parkmap-image">
+              <ul class="parkmap-image-list">
+
+                <li class="parkmap-image-item js-parkmap-number">
+                  <a href="https://www.twinring.jp/hellowoods/" target="_blank"></a>
+                </li>
+
+                <li class="parkmap-image-item js-parkmap-number">
+                  <a href="https://www.twinring.jp/mobipark_m/" target="_blank"></a>
+                </li>
+
+                <li class="parkmap-image-item js-parkmap-number">
+                  <a href="https://www.twinring.jp/f-glamping/" target="_blank"></a>
+                </li>
+
+                <li class="parkmap-image-item js-parkmap-number">
+                  <a href="https://www.twinring.jp/hoteltwinring/" target="_blank"></a>
+                </li>
+
+                <li class="parkmap-image-item js-parkmap-number">
+                  <a href="https://www.twinring.jp/motorsports_m/" target="_blank"></a>
+                </li>
+
+                <li class="parkmap-image-item js-parkmap-number">
+                  <a href="https://www.twinring.jp/collection-hall/" target="_blank"></a>
+                </li>
+
+                <li class="parkmap-image-item js-parkmap-number">
+                  <a href="https://www.twinring.jp/astp/" target="_blank"></a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="parkmap-right">
+              <ul class="parkmap-list">
+
+                <li class="parkmap-item js-parkmap-button">
+                  <a class="parkmap-link" href="https://www.twinring.jp/hellowoods/" target="_blank">ハローウッズ
+                    <i class="parkmap-link-icon">
+                      <svg>
   <title>arrow</title>
   <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
 </svg>
 
-                  </i>
-                </a>
-              </li>
+                    </i>
+                  </a>
+                </li>
 
-              <li class="parkmap-item js-parkmap-button">
-                <a class="parkmap-link" href="https://www.twinring.jp/mobipark_m/" target="_blank">モビパーク
-                  <i class="parkmap-link-icon">
-                    <svg>
+                <li class="parkmap-item js-parkmap-button">
+                  <a class="parkmap-link" href="https://www.twinring.jp/mobipark_m/" target="_blank">モビパーク
+                    <i class="parkmap-link-icon">
+                      <svg>
   <title>arrow</title>
   <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
 </svg>
 
-                  </i>
-                </a>
-              </li>
+                    </i>
+                  </a>
+                </li>
 
-              <li class="parkmap-item js-parkmap-button">
-                <a class="parkmap-link" href="https://www.twinring.jp/f-glamping/" target="_blank">森と星空のキャンプヴィレッジ
-                  <i class="parkmap-link-icon">
-                    <svg>
+                <li class="parkmap-item js-parkmap-button">
+                  <a class="parkmap-link" href="https://www.twinring.jp/f-glamping/" target="_blank">森と星空のキャンプヴィレッジ
+                    <i class="parkmap-link-icon">
+                      <svg>
   <title>arrow</title>
   <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
 </svg>
 
-                  </i>
-                </a>
-              </li>
+                    </i>
+                  </a>
+                </li>
 
-              <li class="parkmap-item js-parkmap-button">
-                <a class="parkmap-link" href="https://www.twinring.jp/hoteltwinring/" target="_blank">ホテルツインリンク
-                  <i class="parkmap-link-icon">
-                    <svg>
+                <li class="parkmap-item js-parkmap-button">
+                  <a class="parkmap-link" href="https://www.twinring.jp/hoteltwinring/" target="_blank">ホテルツインリンク
+                    <i class="parkmap-link-icon">
+                      <svg>
   <title>arrow</title>
   <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
 </svg>
 
-                  </i>
-                </a>
-              </li>
+                    </i>
+                  </a>
+                </li>
 
-              <li class="parkmap-item js-parkmap-button">
-                <a class="parkmap-link" href="https://www.twinring.jp/motorsports_m/" target="_blank">モータースポーツ
-                  <i class="parkmap-link-icon">
-                    <svg>
+                <li class="parkmap-item js-parkmap-button">
+                  <a class="parkmap-link" href="https://www.twinring.jp/motorsports_m/" target="_blank">モータースポーツ
+                    <i class="parkmap-link-icon">
+                      <svg>
   <title>arrow</title>
   <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
 </svg>
 
-                  </i>
-                </a>
-              </li>
+                    </i>
+                  </a>
+                </li>
 
-              <li class="parkmap-item js-parkmap-button">
-                <a class="parkmap-link" href="https://www.twinring.jp/collection-hall/" target="_blank">ホンダコレクションホール
-                  <i class="parkmap-link-icon">
-                    <svg>
+                <li class="parkmap-item js-parkmap-button">
+                  <a class="parkmap-link" href="https://www.twinring.jp/collection-hall/" target="_blank">ホンダコレクションホール
+                    <i class="parkmap-link-icon">
+                      <svg>
   <title>arrow</title>
   <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
 </svg>
 
-                  </i>
-                </a>
-              </li>
+                    </i>
+                  </a>
+                </li>
 
-              <li class="parkmap-item js-parkmap-button">
-                <a class="parkmap-link" href="https://www.twinring.jp/astp/" target="_blank">安全運転スクール
-                  <i class="parkmap-link-icon">
-                    <svg>
+                <li class="parkmap-item js-parkmap-button">
+                  <a class="parkmap-link" href="https://www.twinring.jp/astp/" target="_blank">安全運転スクール
+                    <i class="parkmap-link-icon">
+                      <svg>
   <title>arrow</title>
   <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
 </svg>
 
-                  </i>
-                </a>
-              </li>
+                    </i>
+                  </a>
+                </li>
 
-              <li class="parkmap-item parkmap-item-last">
+                <li class="parkmap-item parkmap-item-last">
 
 
 <a class="button button-parkmap" href="https://www.twinring.jp/twinringmotegi/"  target="_blank">エリア・施設一覧を見る
@@ -425,15 +551,15 @@
   </i>
 </a>
 
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <section class="l-section l-section-activity design-activity">
+    <section class="l-section l-section-activity design-activity">
 
 
   <div class="u-show-pc">
@@ -588,10 +714,10 @@
       </div>
     </div>
   </div>
-    <div class="design-activity-inner"></div>
-  </section>
+      <div class="design-activity-inner"></div>
+    </section>
 
-  <section class="l-section design-circle">
+    <section class="l-section design-circle">
 
 <div class="section-inner">
   <div class="section-image" style="background-image: url(./assets/images/top/mobi-park/bg.jpg);"></div>
@@ -696,9 +822,9 @@
     </div>
   </div>
 </div>
-  </section>
+    </section>
 
-  <section class="l-section design-mount">
+    <section class="l-section design-mount">
 
 
 <div class="section-inner">
@@ -805,10 +931,10 @@
   </div>
 </div>
 
-    <div class="design-petal"></div>
-  </section>
+      <div class="design-petal"></div>
+    </section>
 
-  <section class="l-section design-petals">
+    <section class="l-section design-petals">
 
 
 <div class="section-inner">
@@ -914,9 +1040,9 @@
     </div>
   </div>
 </div>
-  </section>
+    </section>
 
-  <section class="l-section l-section-hotel-twin design-mount design-twinring">
+    <section class="l-section l-section-hotel-twin design-mount design-twinring">
 
 
 <div class="section-inner">
@@ -1061,10 +1187,11 @@
     </ul>
   </div>
 </div>
-  </section>
+    </section>
 
-  <!-- <section class="l-how-to design-how-to">
-    <div class="how-to">
+    <!-- how-to module -->
+    <section class="l-how-to design-how-to">
+  <div class="how-to">
 
 
 <div class="heading-wrap heading-wrap-how-to heading-wrap-center">
@@ -1094,29 +1221,29 @@
 </div>
 
 
-      <div class="slider-wrap slider-wrap-how-to">
-        <div class="swiper-container slider js-slider-how-to slider-how-to-enjoy">
-          <ul class="swiper-wrapper slider-wrapper">
+    <div class="slider-wrap slider-wrap-how-to">
+      <div class="swiper-container slider js-slider-how-to slider-how-to-enjoy">
+        <ul class="swiper-wrapper slider-wrapper">
 
-            <li class="swiper-slide slider-item">
+          <li class="swiper-slide slider-item">
 
 
 <article class="article article-no-design ">
-  <a href="#" class="article-no-design-link">
+  <a href="https://www.twinring.jp/twinringmotegi/plan/adults.html" class="article-no-design-link">
 
     <div class="article-image-wrap">
       <div class="article-image"
-           style="background-image: url(./assets/images/top/how-to/img1.jpg)"></div>
+           style="background-image: url(./assets/images/top/how-to/tanoshi-1-image.jpg)"></div>
     </div>
 
 
-    <h3 class="article-heading">0歳～6歳のお子さまとのお楽しみ方</h3>
+    <h3 class="article-heading">【スタッフさんに聞いてみた】アクロエックスで100点を取るコツ</h3>
 
 
 
 
-    <a class="button-gradient button-gradient-cmn" href="#">
-  <span class="button-gradient-text">モデルコース</span>
+    <a class="button-gradient button-gradient-cmn" href="https://www.twinring.jp/twinringmotegi/plan/adults.html">
+  <span class="button-gradient-text">モビパーク</span>
   <i class="button-gradient-icon">
     <svg>
   <title>arrow</title>
@@ -1130,27 +1257,27 @@
   </a>
 </article>
 
-            </li>
+          </li>
 
-            <li class="swiper-slide slider-item">
+          <li class="swiper-slide slider-item">
 
 
 <article class="article article-no-design ">
-  <a href="#" class="article-no-design-link">
+  <a href="https://www.twinring.jp/twinringmotegi/plan/adults.html" class="article-no-design-link">
 
     <div class="article-image-wrap">
       <div class="article-image"
-           style="background-image: url(./assets/images/top/how-to/img2.jpg)"></div>
+           style="background-image: url(./assets/images/top/how-to/tanoshi-2-image.jpg)"></div>
     </div>
 
 
-    <h3 class="article-heading">小学校低学年のお子さまとのお楽しみ方</h3>
+    <h3 class="article-heading">スタッフが教える】森の教習所でプラチナライセンスを取るコツ</h3>
 
 
 
 
-    <a class="button-gradient button-gradient-cmn" href="#">
-  <span class="button-gradient-text">モデルコース</span>
+    <a class="button-gradient button-gradient-cmn" href="https://www.twinring.jp/twinringmotegi/plan/adults.html">
+  <span class="button-gradient-text">モビパーク</span>
   <i class="button-gradient-icon">
     <svg>
   <title>arrow</title>
@@ -1164,27 +1291,27 @@
   </a>
 </article>
 
-            </li>
+          </li>
 
-            <li class="swiper-slide slider-item">
+          <li class="swiper-slide slider-item">
 
 
 <article class="article article-no-design ">
-  <a href="#" class="article-no-design-link">
+  <a href="https://www.twinring.jp/twinringmotegi/plan/adults.html" class="article-no-design-link">
 
     <div class="article-image-wrap">
       <div class="article-image"
-           style="background-image: url(./assets/images/top/how-to/img3.jpg)"></div>
+           style="background-image: url(./assets/images/top/how-to/tanoshi-3-image.jpg)"></div>
     </div>
 
 
-    <h3 class="article-heading">小学校高学年のお子さまとのお楽しみ方</h3>
+    <h3 class="article-heading">【スタッフさんに聞いてみた】モトレーサー でSライセンスを取るコツ</h3>
 
 
 
 
-    <a class="button-gradient button-gradient-cmn" href="#">
-  <span class="button-gradient-text">モデルコース</span>
+    <a class="button-gradient button-gradient-cmn" href="https://www.twinring.jp/twinringmotegi/plan/adults.html">
+  <span class="button-gradient-text">モビパーク</span>
   <i class="button-gradient-icon">
     <svg>
   <title>arrow</title>
@@ -1198,27 +1325,27 @@
   </a>
 </article>
 
-            </li>
+          </li>
 
-            <li class="swiper-slide slider-item">
+          <li class="swiper-slide slider-item">
 
 
 <article class="article article-no-design ">
-  <a href="#" class="article-no-design-link">
+  <a href="https://www.twinring.jp/twinringmotegi/plan/adults.html" class="article-no-design-link">
 
     <div class="article-image-wrap">
       <div class="article-image"
-           style="background-image: url(./assets/images/top/how-to/img3.jpg)"></div>
+           style="background-image: url(./assets/images/top/how-to/tanoshi-1-image.jpg)"></div>
     </div>
 
 
-    <h3 class="article-heading">小学校高学年のお子さまとのお楽しみ方</h3>
+    <h3 class="article-heading">【スタッフさんに聞いてみた】アクロエックスで100点を取るコツ</h3>
 
 
 
 
-    <a class="button-gradient button-gradient-cmn" href="#">
-  <span class="button-gradient-text">モデルコース</span>
+    <a class="button-gradient button-gradient-cmn" href="https://www.twinring.jp/twinringmotegi/plan/adults.html">
+  <span class="button-gradient-text">モビパーク</span>
   <i class="button-gradient-icon">
     <svg>
   <title>arrow</title>
@@ -1232,18 +1359,86 @@
   </a>
 </article>
 
-            </li>
+          </li>
 
-          </ul>
-        </div>
+          <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design ">
+  <a href="https://www.twinring.jp/twinringmotegi/plan/adults.html" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/top/how-to/tanoshi-2-image.jpg)"></div>
+    </div>
+
+
+    <h3 class="article-heading">スタッフが教える】森の教習所でプラチナライセンスを取るコツ</h3>
+
+
+
+
+    <a class="button-gradient button-gradient-cmn" href="https://www.twinring.jp/twinringmotegi/plan/adults.html">
+  <span class="button-gradient-text">モビパーク</span>
+  <i class="button-gradient-icon">
+    <svg>
+  <title>arrow</title>
+  <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
+</svg>
+
+  </i>
+</a>
+
+
+  </a>
+</article>
+
+          </li>
+
+          <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design ">
+  <a href="https://www.twinring.jp/twinringmotegi/plan/adults.html" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/top/how-to/tanoshi-3-image.jpg)"></div>
+    </div>
+
+
+    <h3 class="article-heading">【スタッフさんに聞いてみた】モトレーサー でSライセンスを取るコツ</h3>
+
+
+
+
+    <a class="button-gradient button-gradient-cmn" href="https://www.twinring.jp/twinringmotegi/plan/adults.html">
+  <span class="button-gradient-text">モビパーク</span>
+  <i class="button-gradient-icon">
+    <svg>
+  <title>arrow</title>
+  <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
+</svg>
+
+  </i>
+</a>
+
+
+  </a>
+</article>
+
+          </li>
+
+        </ul>
       </div>
-
-      <div class="how-to-container"></div>
     </div>
-  </section> -->
 
-  <section class="information">
-    <div class="l-container information-container">
+    <div class="how-to-container"></div>
+  </div>
+</section>
+
+    <section class="information">
+      <div class="l-container information-container">
 
 
 <div class="heading-wrap heading-wrap-information">
@@ -1273,7 +1468,7 @@
 </div>
 
 
-      <div class="post-wrap">
+        <div class="post-wrap">
 
   <ul class="post-list">
 
@@ -1406,10 +1601,10 @@
   </ul>
 
 </div>
-    </div>
-  </section>
+      </div>
+    </section>
+  </div>
 </main>
-
 
 
 
@@ -1417,6 +1612,9 @@
   <script src="./assets/js/app.js" async></script>
 
 
+
+
+    <script src="./assets/js/index.js" async></script>
 
 
 
@@ -1431,3 +1629,4 @@
 
 
 </body>
+

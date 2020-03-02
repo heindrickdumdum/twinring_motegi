@@ -1,8 +1,8 @@
-// import bannerFade from './components/banner-fade.js';
-//
-// bannerFade({
-//   item: '.js-banner-item'
-// });
+ import bannerFade from './components/banner-fade.js';
+
+ bannerFade({
+   item: '.js-banner-item'
+ });
 
 import Swiper from 'swiper/dist/js/swiper.js';
 

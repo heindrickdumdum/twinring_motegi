@@ -41,7 +41,8 @@
     height: 100%;
 
     @include max-screen($breakpoint-mobile) {
-      background-position: center 53.1%;
+      background-position: center;
+      background-image: url('../images/bg-leaf.png');
     }
   }
 
@@ -532,6 +533,10 @@
     text-align: center;
     text-decoration: underline;
     font-weight: bold;
+    
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .subpage-collapse-description {

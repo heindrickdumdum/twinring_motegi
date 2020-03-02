@@ -13,10 +13,12 @@ export default class galleryLabo {
       spaceBetween: 10,
       variableWidth: true,
       slidesPerView: 'auto',
-      centeredSlides: true,
+      // centeredSlides: true,
+      allowTouchMove: false,
       freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      noSwiping: true
     })
 
     new Swiper('.js-gallery', {
@@ -33,10 +35,12 @@ export default class galleryLabo {
       spaceBetween: 10,
       variableWidth: true,
       slidesPerView: 'auto',
-      centeredSlides: true,
+      // centeredSlides: true,
+      allowTouchMove: false,
       freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      noSwiping: true
     })
 
     new Swiper('.js-gallery2', {

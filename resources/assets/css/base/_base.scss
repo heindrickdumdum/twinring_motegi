@@ -8,10 +8,11 @@
 */
 body {
   .wrap,
-  .lig-preload,
-  .lig-header,
   .lig-content,
-  .lig-footer
+  #lig-preload,
+  #lig-header,
+  #lig-footer,
+  #lig-breadcrumbs
   {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -24,14 +25,12 @@ body {
     overflow-x: hidden;
   }
 
-  @media screen and (max-width: $breakpoint-mobile + 1) {
-    min-width: 100%;
-  }
-}
-
-body {
   .client-content {
     box-sizing: initial;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile + 1) {
+    min-width: 100%;
   }
 }
 

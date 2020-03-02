@@ -10,6 +10,8 @@
   &.heading-sumika {
     .heading-texts {
       img {
+        width: 600px;
+        
         @include max-screen($breakpoint-mobile) {
           width: 100%;
           display: block;

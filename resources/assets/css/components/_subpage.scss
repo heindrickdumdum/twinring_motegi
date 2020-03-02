@@ -37,12 +37,16 @@
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
     height: 100%;
 
     @include max-screen($breakpoint-mobile) {
-      background-position: center;
+      background: url('../images/bg-leaf.png');
       background-image: url('../images/bg-leaf.png');
+      background-size: cover;
+      background-position-x: center;
     }
   }
 

@@ -1,4 +1,9 @@
-// .collpase {}
+.collpase {
+  margin: 0 -15px;
+  @include max-screen($breakpoint-mobile) {
+    padding: 0 10px;
+  }
+}
 
 .collapse-inner {
   position: relative;

@@ -4,305 +4,312 @@
 %>
 <%- include('./../partials/data/index') -%>
 <%- include('/partials/head', { pageId, title }) -%>
+<main>
+  <div class="lig-content">
+    <div class="subpage hellowoods-wrapper">
+      <div class="mv mv-hellowoods">
+        <ul class="mv-list">
+          <li class="mv-item">
+            <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/mv-img.png') %>);"></div>
+            <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/mv-img-sp.png') %>);"></div>
+          </li>
+        </ul>
 
-<div class="subpage hellowoods-wrapper">
-  <div class="mv mv-hellowoods">
-    <ul class="mv-list">
-      <li class="mv-item">
-        <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/mv-img.png') %>);"></div>
-        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/mv-img-sp.png') %>);"></div>
-      </li>
-    </ul>
+        <div class="l-container mv-container">
+          <h2 class="mv-heading hellowoods-mv-heading">
+            <%- include('/partials/heading', {
+              modifier: 'heading-hellowoods',
+              text: 'Hello Woods',
+              alt: '',
+              subtextvg: 'hellowoods-main-title',
+              altSubtext: ''
+            }) %>
+          </h2>
 
-    <div class="l-container mv-container">
-      <h2 class="mv-heading hellowoods-mv-heading">
-        <%- include('/partials/heading', {
-          modifier: 'heading-hellowoods',
-          text: 'Hello Woods',
-          alt: '',
-          subtextvg: 'hellowoods-main-title',
-          altSubtext: ''
-        }) %>
-      </h2>
-
-      <div class="u-show-pc mv-today mv-log mv-hellowoods-logo">
-        <div class="mv-l-inner">
+          <div class="u-show-pc mv-today mv-log mv-hellowoods-logo">
+            <div class="mv-l-inner">
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <main>
-    <div class="l-section">
-      <section class="info-container info-container-hellowoods">
+
+        <div class="l-section">
+          <section class="info-container info-container-hellowoods">
+              <div class="l-section-title">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-wrap-center heading-mobipark',
+                  text: 'Information',
+                  alt: 'information',
+                  altSubtext: '',
+                  subtextvg: 'info-subtext'
+                }) %>
+              </div>
+
+              <div class="l-container">
+                <ul class="info-list">
+                  <% hellowoodsInfo.forEach(item => { %>
+                  <li class="info-item">
+                    <a href="<%- item.link %>">
+                      <span><%= item.desc %></span>
+                    </a>
+                  </li>
+                  <% }) %>
+                </ul>
+              </div>
+          </section>
+        </div>
+
+        <div class="l-section">
+          <div class="challenge hellowoods">
+            <div class="l-container">
+              <div class="row">
+                <div class="challenge-left">
+                  <div class="challenge-img u-show-pc">
+                    <div class="challenge-img1">
+                      <img src="<%- mix('/assets/images/hellowoods/overflow-img-1.png') -%>" alt="梟">
+                    </div>
+                    <div class="challenge-img2">
+                      <img src="<%- mix('/assets/images/hellowoods/overflow-img-2.png') -%>" alt="女の子">
+                    </div>
+                    <div class="challenge-img3">
+                      <img src="<%- mix('/assets/images/hellowoods/overflow-img-3.png') -%>" alt="モモンガ">
+                    </div>
+                  </div>
+
+                  <div class="challenge-img u-show-sp">
+                    <img src="<%- mix('/assets/images/hellowoods/life-overflow-images-sp.png') -%>" alt="梟">
+                  </div>
+
+
+                </div>
+                <div class="challenge-right">
+                  <p class="heading-text">
+                    <img src="<%- mix('/assets/images/hellowoods/life-overflow-heading.png') -%>" alt="身近な自然に「溢れる生命」を見つけよう
+                    ">
+                  </p>
+                  <p class="desc hellowoods">
+                    森を家族で散策しながら、生きものや植物の不思議を見つけよう。ハローウッズには生きものの研究所や絶景・くつろぎスポット、迷路など“発見”につながる仕掛けがいっぱい。ハローウッズは子どもたちが自然とのふれあいを通して、生きるチカラを育める場所です。
+                  </p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+        <section class="field-introduction">
+          <div class="field-introduction-container">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-how-to heading-wrap-center heading-wrap-hellowoods',
+              text: 'Field Introduction',
+              alt: '',
+              subtextvg: 'hellowoods-field-intro-subtext',
+              altSubtext: ''
+            }) %>
+            <div class="map-wrapper">
+              <img class="map-image u-show-pc" src="<%= mix('/assets/images/hellowoods/field-intro-map.png') %>" alt="HALLOWOODS MAP">
+              <img class="map-image u-show-sp" src="<%= mix('/assets/images/hellowoods/field-intro-map.png') %>" alt="HALLOWOODS MAP">
+            </div>
+            <div class="section-contents">
+              <p class="section-contents-copy">
+                フィトンチッド溢れる癒しの森の中を家族でお散歩してリフレッシュしよう。<br>
+    森には遊歩道が敷かれているため小さなお子さまと一緒でも家族で森林浴を楽しめます。
+              </p>
+            </div>
+          </div>
+
+
+        </section>
+
+        <section class="top-slide l-section">
+          <div class="swiper-container common-slider sumika-slider slider js-slider">
+            <ul class="swiper-wrapper top-slide">
+              <% hellowoodsFields.forEach(item => { %>
+              <li class="swiper-slide slider-item">
+                <div class="top-slider-image">
+                  <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+                </div>
+                <span class="top-slider-text">
+                  <%- item.desc -%>
+                </span>
+              </li>
+              <% } ) %>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+
+        <div class="l-section">
+          <section class="adventure">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-wrap-hellowoods',
+                text: 'Swirl',
+                alt: '',
+                altSubtext: '',
+                subtextvg: 'hellowoods-new-title_1'
+              }) %>
+            </div>
+
+            <div class="forest-container">
+              <%- include('/partials/hellowoods/section-forest') -%>
+            </div>
+          </section>
+        </div>
+
+
+        <section class="l-section alternate-feature l-section-hellowoods">
           <div class="l-section-title">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-mobipark',
-              text: 'Information',
-              alt: 'information',
+              modifier: 'heading-wrap-center heading-wrap-hellowoods',
+              text: 'Play',
+              alt: '',
               altSubtext: '',
-              subtextvg: 'info-subtext'
+              subtextvg: 'hellowoods-new2-title'
             }) %>
           </div>
 
+          <div class="l-container-m">
+            <%- include('/partials/hellowoods/section-alt-features-exp') -%>
+          </div>
+        </section>
+
+        <section class="l-section alternate-feature l-section-hellowoods">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-wrap-hellowoods',
+              text: 'Explore',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'hellowoods-new3-title'
+            }) %>
+          </div>
+
+          <div class="l-container-m">
+            <%- include('/partials/hellowoods/section-alt-features-learn') -%>
+          </div>
+        </section>
+
+        <div class=" block-image block-image-hellowoods">
           <div class="l-container">
-            <ul class="info-list">
-              <% hellowoodsInfo.forEach(item => { %>
-              <li class="info-item">
-                <a href="<%- item.link %>">
-                  <span><%= item.desc %></span>
+            <ul class="block-image-list block-image-list-hellowoods">
+              <%
+                hellowoodsGallery.forEach( block => {
+              %>
+              <li class="block-image-item block-image-item-hellowoods image-border <%- block.modifier %>">
+                <a href="<%- block.url %>" class="block-image-item-link">
+                  <div class="block-image-inner" style="background-image: url(<%- block.bg %>);">
+                    <div class="block-image-text-wrap">
+                      <p class="block-image-text block-image-text-hellowoods">
+                        <span class="heading-text"><%- block.title %></span>
+                        <span class="block-image-subtext"><%- block.subtext %></span>
+                      </p>
+                    </div>
+                  </div>
                 </a>
               </li>
-              <% }) %>
+              <%
+                })
+              %>
             </ul>
           </div>
-      </section>
-    </div>
-
-    <div class="l-section">
-      <div class="challenge hellowoods">
-        <div class="l-container">
-          <div class="row">
-            <div class="challenge-left">
-              <div class="challenge-img u-show-pc">
-                <div class="challenge-img1">
-                  <img src="<%- mix('/assets/images/hellowoods/overflow-img-1.png') -%>" alt="梟">
-                </div>
-                <div class="challenge-img2">
-                  <img src="<%- mix('/assets/images/hellowoods/overflow-img-2.png') -%>" alt="女の子">
-                </div>
-                <div class="challenge-img3">
-                  <img src="<%- mix('/assets/images/hellowoods/overflow-img-3.png') -%>" alt="モモンガ">
-                </div>
-              </div>
-
-              <div class="challenge-img u-show-sp">
-                <img src="<%- mix('/assets/images/hellowoods/life-overflow-images-sp.png') -%>" alt="梟">
-              </div>
-
-
-            </div>
-            <div class="challenge-right">
-              <p class="heading-text">
-                <img src="<%- mix('/assets/images/hellowoods/life-overflow-heading.png') -%>" alt="身近な自然に「溢れる生命」を見つけよう
-                ">
-              </p>
-              <p class="desc hellowoods">
-                森を家族で散策しながら、生きものや植物の不思議を見つけよう。ハローウッズには生きものの研究所や絶景・くつろぎスポット、迷路など“発見”につながる仕掛けがいっぱい。ハローウッズは子どもたちが自然とのふれあいを通して、生きるチカラを育める場所です。
-              </p>
-
-            </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-    <section class="field-introduction">
-      <div class="field-introduction-container">
-        <%- include('/partials/heading', {
-          modifier: 'heading-wrap-how-to heading-wrap-center heading-wrap-hellowoods',
-          text: 'Field Introduction',
-          alt: '',
-          subtextvg: 'hellowoods-field-intro-subtext',
-          altSubtext: ''
-        }) %>
-        <div class="map-wrapper">
-          <img class="map-image u-show-pc" src="<%= mix('/assets/images/hellowoods/field-intro-map.png') %>" alt="HALLOWOODS MAP">
-          <img class="map-image u-show-sp" src="<%= mix('/assets/images/hellowoods/field-intro-map.png') %>" alt="HALLOWOODS MAP">
-        </div>
-        <div class="section-contents">
-          <p class="section-contents-copy">
-            フィトンチッド溢れる癒しの森の中を家族でお散歩してリフレッシュしよう。<br>
-森には遊歩道が敷かれているため小さなお子さまと一緒でも家族で森林浴を楽しめます。
-          </p>
-        </div>
-      </div>
-
-
-    </section>
-
-    <section class="top-slide l-section">
-      <div class="swiper-container common-slider sumika-slider slider js-slider">
-        <ul class="swiper-wrapper top-slide">
-          <% hellowoodsFields.forEach(item => { %>
-          <li class="swiper-slide slider-item">
-            <div class="top-slider-image">
-              <img src="<%- item.src -%>" alt="<%- item.alt -%>">
-            </div>
-            <span class="top-slider-text">
-              <%- item.desc -%>
-            </span>
-          </li>
-          <% } ) %>
-        </ul>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-
-    <div class="l-section">
-      <section class="adventure">
-        <div class="l-section-title">
-          <%- include('/partials/heading', {
-            modifier: 'heading-wrap-center heading-wrap-hellowoods',
-            text: 'Swirl',
-            alt: '',
-            altSubtext: '',
-            subtextvg: 'hellowoods-new-title_1'
-          }) %>
         </div>
 
-        <div class="forest-container">
-          <%- include('/partials/hellowoods/section-forest') -%>
-        </div>
-      </section>
-    </div>
-
-
-    <section class="l-section alternate-feature l-section-hellowoods">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: 'heading-wrap-center heading-wrap-hellowoods',
-          text: 'Play',
-          alt: '',
-          altSubtext: '',
-          subtextvg: 'hellowoods-new2-title'
-        }) %>
-      </div>
-
-      <div class="l-container-m">
-        <%- include('/partials/hellowoods/section-alt-features-exp') -%>
-      </div>
-    </section>
-
-    <section class="l-section alternate-feature l-section-hellowoods">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: 'heading-wrap-center heading-wrap-hellowoods',
-          text: 'Explore',
-          alt: '',
-          altSubtext: '',
-          subtextvg: 'hellowoods-new3-title'
-        }) %>
-      </div>
-
-      <div class="l-container-m">
-        <%- include('/partials/hellowoods/section-alt-features-learn') -%>
-      </div>
-    </section>
-
-    <div class=" block-image block-image-hellowoods">
-      <div class="l-container">
-        <ul class="block-image-list block-image-list-hellowoods">
-          <%
-            hellowoodsGallery.forEach( block => {
-          %>
-          <li class="block-image-item block-image-item-hellowoods image-border <%- block.modifier %>">
-            <a href="<%- block.url %>" class="block-image-item-link">
-              <div class="block-image-inner" style="background-image: url(<%- block.bg %>); width: 470px; margin-left: 54px;">
-                <div class="block-image-text-wrap">
-                  <p class="block-image-text block-image-text-hellowoods">
-                    <span class="heading-text"><%- block.title %></span>
-                    <span class="block-image-subtext"><%- block.subtext %></span>
+        <div class="l-section banner-image">
+          <div class="l-container">
+            <a href="https://www.twinring.jp/hellowoods/blog/">
+              <div class="banner-image-wrap">
+                  <p class="banner-image-text">
+                    <span class="heading-text">Blog</span>
+                    <span class="banner-image-subtext">ハローウッズの森だよりブログ </span>
                   </p>
-                </div>
               </div>
             </a>
-          </li>
-          <%
-            })
-          %>
-        </ul>
-      </div>
-    </div>
-
-    <div class="l-section banner-image">
-      <div class="l-container">
-        <a href="#">
-          <div class="banner-image-wrap">
-              <p class="banner-image-text">
-                <span class="heading-text">Blog</span>
-                <span class="banner-image-subtext">ハローウッズの森だよりブログ </span>
-              </p>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <section class="l-section l-section-hellowoods faq-file-dl">
-      <%- include('/partials/accordion', {
-        dataAccordion: getData().data.accordionHellowoods
-      }) %>
-    </section>
-
-  <!--
-    <div class="call-to-action call-to-action-hellowoods">
-      <div class="l-container">
-        <div class="call-to-action-wrapper">
-          <div class="call-to-action-inner">
-            <h2 class="heading headig-call-to-action">
-              <span class="heading-text">
-                ハローウッズをもっと楽しむ
-              </span>
-            </h2>
-            <div class="call-to-action-description">
-              <p class="call-to-action-description-text">
-                ハローウッズのこだわりポイントや、<br>
-                知っているともっと楽しくなる情報を配信中しています。
-              </p>
-            </div>
-            <div class="l-button l-button-call-to-action">
-              <%- include('/partials/button', {
-                modifier: '',
-                text: 'もっと見る',
-                link: '#'
-              }) %>
-            </div>
-            <span class="call-to-action-dot call-to-action-dot-1">
-              <img src="<%- mix('/assets/images/hellowoods/bubble-1.png')%> ">
-            </span>
-            <span class="call-to-action-dot call-to-action-dot-2">
-              <img src="<%- mix('/assets/images/hellowoods/bubble-2.png')%> ">
-            </span>
-            <span class="call-to-action-dot call-to-action-dot-3">
-              <img src="<%- mix('/assets/images/hellowoods/bubble-4.png')%> ">
-            </span>
-            <span class="call-to-action-dot call-to-action-dot-4">
-              <img src="<%- mix('/assets/images/hellowoods/bubble-3.png')%> ">
-            </span>
           </div>
         </div>
-      </div>
+
+        <section class="l-section l-section-hellowoods faq-file-dl">
+          <%- include('/partials/accordion', {
+            dataAccordion: getData().data.accordionHellowoods
+          }) %>
+        </section>
+
+      <!--
+        <div class="call-to-action call-to-action-hellowoods">
+          <div class="l-container">
+            <div class="call-to-action-wrapper">
+              <div class="call-to-action-inner">
+                <h2 class="heading headig-call-to-action">
+                  <span class="heading-text">
+                    ハローウッズをもっと楽しむ
+                  </span>
+                </h2>
+                <div class="call-to-action-description">
+                  <p class="call-to-action-description-text">
+                    ハローウッズのこだわりポイントや、<br>
+                    知っているともっと楽しくなる情報を配信中しています。
+                  </p>
+                </div>
+                <div class="l-button l-button-call-to-action">
+                  <%- include('/partials/button', {
+                    modifier: '',
+                    text: 'もっと見る',
+                    link: '#'
+                  }) %>
+                </div>
+                <span class="call-to-action-dot call-to-action-dot-1">
+                  <img src="<%- mix('/assets/images/hellowoods/bubble-1.png')%> ">
+                </span>
+                <span class="call-to-action-dot call-to-action-dot-2">
+                  <img src="<%- mix('/assets/images/hellowoods/bubble-2.png')%> ">
+                </span>
+                <span class="call-to-action-dot call-to-action-dot-3">
+                  <img src="<%- mix('/assets/images/hellowoods/bubble-4.png')%> ">
+                </span>
+                <span class="call-to-action-dot call-to-action-dot-4">
+                  <img src="<%- mix('/assets/images/hellowoods/bubble-3.png')%> ">
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      -->
+
+        <section class="l-section sponsors">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'sponsors',
+              text: '',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'hellowoods-partner-title'
+            }) %>
+          </div>
+          <div class="l-container">
+            <ul class="sponsor-list">
+              <% sponsorsData.forEach(item => { %>
+                <li class="sponsor-item <%- item.alt -%>">
+                  <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+                </li>
+                <% } ) %>
+            </ul>
+          </div>
+        </section>
+
+        <!-- recommendation module -->
+        <%- include('/partials/recommendation') -%>
+
+        <!-- pick up module -->
+        <%- include('/partials/pickup') -%>
+
+
     </div>
-  -->
+  </div>
+</main>
 
-    <section class="l-section sponsors">
-      <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: 'sponsors',
-          text: '',
-          alt: '',
-          altSubtext: '',
-          subtextvg: 'hellowoods-partner-title'
-        }) %>
-      </div>
-      <div class="l-container">
-        <ul class="sponsor-list">
-          <% sponsorsData.forEach(item => { %>
-            <li class="sponsor-item <%- item.alt -%>">
-              <img src="<%- item.src -%>" alt="<%- item.alt -%>">
-            </li>
-            <% } ) %>
-        </ul>
-      </div>
-    </section>
-
-    <!-- recommendation module -->
-    <%- include('/partials/recommendation') -%>
-
-    <!-- pick up module -->
-    <%- include('/partials/pickup') -%>
-
-  </main>
-</div>
-
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsMobipark
+}) -%>
 <%- include('/partials/footer', { pageId }) -%>

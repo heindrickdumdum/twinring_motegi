@@ -7,6 +7,10 @@
     .heading-subtext {
       margin-top: 14px;
       width: 309px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 20px;
+      }
     }
   }
 
@@ -47,7 +51,9 @@
 
     .heading-text,
     .heading-subtext {
-      margin: 0 auto;
+      // margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
       letter-spacing: -0.01em;
       font-size: 34px;
 

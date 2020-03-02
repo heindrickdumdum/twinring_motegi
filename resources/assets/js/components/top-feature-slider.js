@@ -9,8 +9,13 @@ export default function topFeatureSlider(params) {
     slidesPerView: 'auto',
     variableWidth: 'auto',
     spaceBetween: 55,
+    loop: true,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination-feature',
       type: 'bullets',
       clickable: true,
     },
@@ -20,9 +25,7 @@ export default function topFeatureSlider(params) {
         slidesPerGroup: 3
       },
       375: {
-        spaceBetween: 10,
-        slidesPerGroup: 1,
-        slidesPerView: 1,
+        spaceBetween: 10
       }
     },
 

@@ -15,7 +15,7 @@ topFeatureSlider({
     spaceBetween: 55,
     loop: true,
     autoplay: {
-      delay: 1500,
+      delay: 4500,
       disableOnInteraction: false,
     },
     pagination: {

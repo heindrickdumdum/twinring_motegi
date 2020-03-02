@@ -164,6 +164,10 @@
 .header-sub-right-content-item {
   display: block;
   margin-bottom: 18px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 10px;
+  }
 }
 
 .header-sub-right-content-link {
@@ -175,7 +179,20 @@
   transition: color $duration $ease-in-out;
 
   @include max-screen($breakpoint-mobile) {
+    padding-left: 15px;
     font-size: 12px;
+    letter-spacing: 0.1em;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 7px;
+      height: 1px;
+      background-color: $color-green;
+    }
   }
 
   &:hover {
@@ -192,6 +209,7 @@
 
   @include max-screen($breakpoint-mobile) {
     display: block;
+    padding-top: 18px;
   }
 
   li {
@@ -203,23 +221,10 @@
     border-right: 1px solid rgba($color-mineshaft, .5);
 
     @include max-screen($breakpoint-mobile) {
-      display: inline-block;
       vertical-align: top;
-      width: calc( 90% / 2);
-      margin-bottom: 12px;
+      width: 100%;
+      margin-bottom: 26px;
       padding: 0;
-
-      &:nth-of-type(even) {
-        padding: 0 5px 0 10px;
-        border-right: 0;
-      }
-    }
-
-    &:first-of-type {
-      padding-left: 0;
-    }
-
-    &:last-of-type {
       border-right: 0;
     }
   }
@@ -231,7 +236,20 @@
     transition: color $duration $ease-in-out;
 
     @include max-screen($breakpoint-mobile) {
+      padding-left: 15px;
       font-size: 12px;
+      letter-spacing: 0.1em;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 7px;
+        height: 1px;
+        background-color: $color-green;
+      }
     }
 
     &:hover {

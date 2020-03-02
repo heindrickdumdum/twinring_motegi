@@ -9,7 +9,7 @@
   }
 
   &.youtube-video-content-itadaki {
-    
+
     @include max-screen($breakpoint-mobile) {
       padding: 0;
     }
@@ -18,6 +18,9 @@
 
 .youtube-video-list {
   margin-top: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @include max-screen($breakpoint-mobile) {
     padding: 0 25px;

@@ -9,7 +9,7 @@
 }
 
 .parkmap-image {
-  background: url(#{$image-path}top/parkmap/map-v2.png) no-repeat center top;
+  background: url(#{$image-path}top/parkmap/map-v3.jpg) no-repeat center top;
   background-size: contain;
   width: 1600px;
   height: 903px;
@@ -22,7 +22,7 @@
     height: 370px;
     left: 50%;
     transform: translateX(-50%);
-    background: url(#{$image-path}top/parkmap/map-v2-sp.png) no-repeat center top;
+    background: url(#{$image-path}top/parkmap/map-v3-sp.jpg) no-repeat center top;
     background-size: contain;
   }
 }

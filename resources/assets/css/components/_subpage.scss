@@ -41,7 +41,7 @@
     height: 100%;
 
     @include max-screen($breakpoint-mobile) {
-      background-position: center;
+      background-position: top;
       background-image: url('../images/bg-leaf.png');
     }
   }

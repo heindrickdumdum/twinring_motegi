@@ -281,6 +281,12 @@
   @include max-screen($breakpoint-mobile) {
     font-size: 18px;
   }
+
+  .is-safari {
+    @include min-screen($breakpoint-mobile + 1) {
+      letter-spacing: 0.078em;
+    }
+  }
 }
 
 .mv-heading-subtext {
@@ -481,7 +487,7 @@
     @include max-screen($breakpoint-mobile) {
       width: 100%;
       max-width: 300px;
-      height: 100px;  
+      height: 100px;
       position: relative;
       left: -10px;
     }

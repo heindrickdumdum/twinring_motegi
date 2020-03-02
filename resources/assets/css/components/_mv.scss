@@ -57,7 +57,7 @@
     }
 
     @include max-screen($breakpoint-mobile) {
-      padding-bottom: 65%;
+      padding-bottom: 67%;
     }
 
     &::after {
@@ -899,6 +899,15 @@
         font-size: 46px;
       }
     }
+  }
+
+  &.mv-subpage-acrox {
+    &::after {
+      @include max-screen($breakpoint-mobile) {
+        display: none;
+      }
+    }
+
   }
 
   &.mv-subpage-craft {

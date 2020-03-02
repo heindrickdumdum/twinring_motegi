@@ -85,6 +85,11 @@
 }
 
 .slider-gallery-thumb {
+
+  .swiper-wrapper {
+    justify-content: center;
+  }
+
   .slider-item {
     width: 70px;
   }

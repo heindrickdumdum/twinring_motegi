@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>巨大迷路遊び「迷宮森殿 ITADAKI」｜ツインリンクもてぎ</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" id="js-viewport">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- DEFAULT -->
+
+  
+    
+      <meta name="title" content="巨大迷路遊び「迷宮森殿 ITADAKI」｜ツインリンクもてぎ">
+    
+  
+    
+      <meta name="description" content="巨大迷路で遊びながら楽しめる「迷宮森殿 ITADAKI」。森の生態系ピラミッドを模した超巨大な迷路はまさに立体図鑑！ファミリーやお子さま連れでおでかけしてみませんか？">
+    
+  
+
+
+<!-- OGP -->
+
+  
+    
+      <meta property="og:locale" content="ja_JP">
+    
+  
+    
+      <meta property="og:title" content="巨大迷路遊び「迷宮森殿 ITADAKI」｜ツインリンクもてぎ">
+    
+  
+    
+      <meta property="og:description" content="巨大迷路で遊びながら楽しめる「迷宮森殿 ITADAKI」。森の生態系ピラミッドを模した超巨大な迷路はまさに立体図鑑！ファミリーやお子さま連れでおでかけしてみませんか？">
+    
+  
+    
+  
+    
+  
+    
+      <meta property="og:type" content="blog">
+    
+  
+    
+      <meta property="og:image" content="https://www.twinring.jp/itadaki/img/common/ogp.png">
+    
+  
+
+
+<!-- TWITTER -->
+
+  
+    
+      <meta name="twitter:card" content="summary">
+    
+  
+    
+      <meta name="twitter:title" content="巨大迷路遊び「迷宮森殿 ITADAKI」｜ツインリンクもてぎ">
+    
+  
+    
+  
+    
+      <meta name="twitter:description" content="巨大迷路で遊びながら楽しめる「迷宮森殿 ITADAKI」。森の生態系ピラミッドを模した超巨大な迷路はまさに立体図鑑！ファミリーやお子さま連れでおでかけしてみませんか？">
+    
+  
+    
+  
+
+
+
+<meta name="format-detection" content="telephone=no">
+
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+<link rel="shortcut icon" href="./assets/images/common/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="./assets/images/common/apple-touch-icon-precomposed.png">
+
+<!-- CLIENT CSS -->
+<link href="./assets/lib/test/reset.css" rel="stylesheet">
+<link href="./assets/lib/test/style.css" rel="stylesheet">
+
+<!-- LIG CSS -->
+<link rel="stylesheet" href="./assets/css/app.css">
+
+<script>
+  // IE foreach Polyfill
+  if ('NodeList' in window && !NodeList.prototype.forEach) {
+      NodeList.prototype.forEach = function (callback, thisArg) {
+          thisArg = thisArg || window;
+          for (let i = 0; i < this.length; i++) {
+              callback.call(thisArg, this[i], i, this);
+          }
+      };
+  }
+</script>
+
+<script>
+  if (window.screen.width < 375) {
+    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
+  } else if (window.screen.width >= 375) {
+    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=1, user-scalable=yes');
+  }
+</script>
+
+<!-- resize for tab -->
+<script>
+  (function () {
+    var ua = navigator.userAgent;
+    var isIpad = (ua.indexOf('iPad') > 0);
+    var isAndroidTab = (ua.indexOf('Android') > 0 && ua.match(/Mobile/i) == null);
+    var tab = isIpad || isAndroidTab;
+    var minWidth = tab ? 1240 : 'device-width';
+    var initialScale = tab ? window.parent.screen.width / minWidth : 1;
+    if (tab) {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="viewport" content="width=' + minWidth + ',initial-scale=' + initialScale + '">');
+    }
+  })()
+</script>
+
+<script> document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+
+</head>
+<body>
+
+<div class="subpage subpage-itadaki">
+  <div class="mv mv-inner itadaki-mv">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="mv-image" style="background-image:url(./assets/images/itadaki/mv-itadaki.jpg);"></div>
+      </li>
+    </ul>
+
+    <div class="l-container mv-container">
+      <h2 class="mv-heading mv-heading-itadaki">
+        <span class="mv-heading-texts">
+          Forest Labyrinth
+        </span>
+        <span class="mv-heading-subtexts">
+          <svg class="u-show-pc">
+            <title>迷宮森殿 ITADAKI</title>
+            <use xlink:href="./assets/svg/sprite.svg#sprite-itadaki-main-title"></use>
+          </svg>
+          <svg class="u-show-sp">
+            <title>迷宮森殿 ITADAKI</title>
+            <use xlink:href="./assets/svg/sprite.svg#sprite-itadaki-main-title-sp"></use>
+          </svg>
+        </span>
+      </h2>
+
+      <div class="mv-today">
+        <div class="mv-today-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="main-content l-section">
+    <div class="l-container">
+        <div class="heading-wrap l-heading-main">
+            <h2 class="heading">
+              <span class="heading-texts">
+                <img src="./assets/images/itadaki/itadaki-color-title.png" alt="itadaki">
+              </span>
+            </h2>
+        </div>
+
+      <!-- YOUTUBE -->
+      <div class="l-youtube">
+        <section class="youtube">
+          <div class="youtube-iframe-container">
+            <iframe width="100%" height="587" src="https://www.youtube.com/embed/QwxqqkbxhiM" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </section>
+      </div>
+
+      <h3 class="table-heading table-heading-sp">
+        <img src="./assets/images/dokidoki/attraction-title.png" alt="title">
+      </h3>
+
+      <p class="table-subheading">
+        森の生態系を体感できる5階建ての立体迷路。14ヶ所のスタンプを集め2つのクイズに正解し、家族みんなで協力しながら頂上を目指そう！
+      </p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">場所</th>
+            <td class="table-col">モビパーク内</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">所要時間</th>
+            <td class="table-col">約30分（受付は営業終了30分前まで）
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">雨天の運行</th>
+            <td class="table-col">営業いたします。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象者</th>
+            <td class="table-col">3歳以上※1</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">身長制限</th>
+            <td class="table-col">なし</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">料金</th>
+            <td class="table-col">
+              モビパークパスポート対象 <br>
+              アトラクションチケット利用：800円
+            </td>
+          </tr>
+
+         <tr class="table-row">
+            <th class="table-head">ご利用にあたって</th>
+            <td class="table-col">
+              ※１ &nbsp;小学生未満のお子さまの利用について : <br>
+              小学生未満のお子さまは中学生以上の同伴者の付添い（有料）が必要になります。
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <!-- <h3 class="table-heading">
+        <img src="./assets/images/dokidoki/admission-title.png" alt="title">
+      </h3>
+      <p class="table-subheading">
+        下記の日程は混雑が予想されるため、対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
+        期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
+      </p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">日程</th>
+            <td class="table-col">
+              9月 15日（日）、16日（月）、29日（日）<br>
+              10月 15日（日）、16日（月）、29日（日）<br>
+              11月 15日（日）、16日（月）、29日（日）
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象アトラクション</th>
+            <td class="table-col">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">配布場所</th>
+            <td class="table-col">アトラクション前特設テント</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">配布枚数</th>
+            <td class="table-col">各回約200枚配布※1回の所要時間約40分（説明10分、遊べる時間30分、時間入れ替え制）</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">配布にあたって</th>
+            <td class="table-col">
+              ※入場整理券は定員に達し次第、受付を終了いたします。<br>
+              ※別途、モビパークパスポートまたはのりもの券をお買い求めください。<br>
+              ※アトラクションには年齢制限がございます。 >>詳しくはこちら<br>
+              ※混雑状況や天候などにより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+  </div>
+    <div class="subpage-section subpage-section-collapse">
+    </div>
+
+    <div class="collapse">
+      <div class="l-container">
+        <div class="collapse-inner">
+            <h3 class="table-heading table-heading-collapse js-collapse-button">
+              <img src="./assets/images/dokidoki/admission-title.png" alt="title">
+              <span class="accordion-arrow collapse-arrow"></span>
+            </h3>
+            <div class="collapse-content-wrap">
+              <p class="table-subheading">
+                下記の日程は混雑が予想されるため、対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
+                期間中、対象アトラクションは入場整理券をお持ちでないとご利用いただけませんので、ご了承ください。
+              </p>
+
+              <table class="table">
+                <tbody>
+                  <tr class="table-row">
+                    <th class="table-head">日程</th>
+                    <td class="table-col">
+                    3月20日（金・祝）、21日（土）、22日（日）、28日（土）、29日（日）
+                    </td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head">対象アトラクション</th>
+                    <td class="table-col">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head">配布場所</th>
+                    <td class="table-col">アトラクション前特設テント</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head">配布枚数</th>
+                    <td class="table-col">巨大ネットの森 SUMIKA：各回約200枚配布森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI：１時間ごとに約200枚配布</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head">配布にあたって</th>
+                    <td class="table-col">
+                      ※入場整理券は定員に達し次第、受付を終了いたします。<br>
+                      ※別途、モビパークパスポートまたはアトラクションチケットをお買い求めください。<br>
+                      ※アトラクションには年齢制限がございます。 <a href="https://www.twinring.jp/mobipark_m/guide/"> >>詳しくはこちら</a><br>
+                      ※混雑状況や天候などにより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-to-enjoy l-section">
+    <div class="l-container">
+      <div class="l-section-title">
+        <div class="u-show-pc">
+
+
+<div class="heading-wrap heading-howto heading-howto-itadaki">
+  <div class="heading">
+
+      <span class="u-title-hidden">How to Enjoy</span>
+      <h2 class="heading-text">
+        How to Enjoy
+    </h2>
+
+
+
+    <p class="heading-subtext">
+
+        <svg>
+          <title>itadaki-cta-title</title>
+          <use xlink:href="./assets/svg/sprite.svg#sprite-itadaki-cta-title"></use>
+        </svg>
+
+
+
+    </p>
+
+
+
+  </div>
+</div>
+
+        </div>
+        <div class="u-show-sp">
+
+
+<div class="heading-wrap heading-howto heading-howto-itadaki">
+  <div class="heading">
+
+      <span class="u-title-hidden">How to Enjoy</span>
+      <h2 class="heading-text">
+        How to Enjoy
+    </h2>
+
+
+
+    <p class="heading-subtext">
+
+        <svg>
+          <title>itadaki-cta-title-sp</title>
+          <use xlink:href="./assets/svg/sprite.svg#sprite-itadaki-cta-title-sp"></use>
+        </svg>
+
+
+
+    </p>
+
+
+
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="how-to-content itadaki-media">
+        <div class="media u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(./assets/images/itadaki/media/media-1.jpg);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title"><span>森の生きものの巨大オブジェ＆アスレチック</span></h4>
+            <p class="media-desc">
+              「迷宮森殿 ITADAKI」の中には、巨大で迫力満点のリアルな生きものや植物のオブジェがいっぱいです。自然界が作り出す様々な障害物やバランスボール、ネット登りで楽しみながら進みましょう！
+            </p>
+
+
+
+<div class="note  note-itadaki-banner-1">
+  <div class="note-message" style="background-image: url(./assets/images/itadaki/itadaki-banner-1.jpg);">
+  </div>
+</div>
+
+          </div>
+        </div>
+        <div class="media u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(./assets/images/itadaki/media/media-2.jpg);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              <span>1階から5階に隠された14ヶ所のスタンプ</span>
+            </h4>
+            <p class="media-desc">
+              1階から5階まで全部で14ヶ所のスタンプが隠されています。さらに途中2ヶ所にクイズポイントがあります。できるだけ多くのスタンプを集め、2つのクイズに正解し、迷路を制覇して5階までたどり着ければ「迷宮森殿 ITADAKI」クリアです。
+            </p>
+
+
+
+
+<div class="note  note-itadaki-banner-2">
+  <div class="note-message" style="background-image: url(./assets/images/itadaki/itadaki-banner-2.jpg);">
+  </div>
+</div>
+
+          </div>
+        </div>
+        <div class="media u-clear">
+          <div class="media-left">
+            <div class="media-bg">
+              <div class="media-thumb">
+                <div style="background-image: url(./assets/images/itadaki/media/media-3.jpg);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="media-right">
+            <h4 class="media-title">
+              <span>森の生態系ピラミッドの立体図鑑</span>
+            </h4>
+            <p class="media-desc">
+               森の生きものたちを、食物連鎖の順番に並べていくと生態系ピラミッドができあがります。5階層にわかれた「迷宮森殿 ITADAKI」は、迷路全体で森の生態系そのものを表現しています。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="forest l-section">
+    <div class="l-container">
+      <div class="l-section-title">
+        <div class="u-show-pc">
+
+
+<div class="heading-wrap heading-forest">
+  <div class="heading">
+
+      <span class="u-title-hidden">Aim for the top of the ecosystem</span>
+      <h2 class="heading-text">
+        Aim for the top of the ecosystem
+    </h2>
+
+
+
+    <p class="heading-subtext">
+
+        <svg>
+          <title>itadaki-forest-title</title>
+          <use xlink:href="./assets/svg/sprite.svg#sprite-itadaki-forest-title"></use>
+        </svg>
+
+
+
+    </p>
+
+
+
+  </div>
+</div>
+
+        </div>
+        <div class="u-show-sp">
+
+
+<div class="heading-wrap heading-forest">
+  <div class="heading">
+
+      <span class="u-title-hidden">Aim for the top of the ecosystem</span>
+      <h2 class="heading-text">
+        Aim for the top of the ecosystem
+    </h2>
+
+
+
+    <p class="heading-subtext">
+
+        <svg>
+          <title>itadaki-copy-title-sp</title>
+          <use xlink:href="./assets/svg/sprite.svg#sprite-itadaki-copy-title-sp"></use>
+        </svg>
+
+
+
+    </p>
+
+
+
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="swiper-container common-slider itadaki-slider slider js-slider">
+      <ul class="swiper-wrapper top-slide">
+
+        <li class="swiper-slide slider-item">
+          <div class="top-slider-image">
+            <img src="./assets/images/itadaki/slider/slider-1.jpg" alt="itadaki slide 1">
+          </div>
+          <span class="top-slider-text">
+            森の生態系の頂点に君臨するのがオオタカだ！          </span>
+        </li>
+
+        <li class="swiper-slide slider-item">
+          <div class="top-slider-image">
+            <img src="./assets/images/itadaki/slider/slider-2.jpg" alt="itadaki slide 2">
+          </div>
+          <span class="top-slider-text">
+            たくさんの試練を乗り越えて“ITADAKI”を目指そう！          </span>
+        </li>
+
+        <li class="swiper-slide slider-item">
+          <div class="top-slider-image">
+            <img src="./assets/images/itadaki/slider/slider-3.jpg" alt="itadaki slide 3">
+          </div>
+          <span class="top-slider-text">
+            大木のなかには、リスのどんぐりの貯蔵庫も？          </span>
+        </li>
+
+        <li class="swiper-slide slider-item">
+          <div class="top-slider-image">
+            <img src="./assets/images/itadaki/slider/slider-1.jpg" alt="itadaki slide 1">
+          </div>
+          <span class="top-slider-text">
+            森の生態系の頂点に君臨するのがオオタカだ！          </span>
+        </li>
+
+        <li class="swiper-slide slider-item">
+          <div class="top-slider-image">
+            <img src="./assets/images/itadaki/slider/slider-2.jpg" alt="itadaki slide 2">
+          </div>
+          <span class="top-slider-text">
+            たくさんの試練を乗り越えて“ITADAKI”を目指そう！          </span>
+        </li>
+
+      </ul>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section class="youtube-video l-section">
+    <div class="l-container">
+      <div class="l-section-title">
+        <div class="u-show-pc">
+
+
+<div class="heading-wrap heading-you-video">
+  <div class="heading">
+
+      <span class="u-title-hidden">Ways to feel the Forest</span>
+      <h2 class="heading-text">
+        Itadaki Videos
+    </h2>
+
+
+
+    <p class="heading-subtext">
+
+        <svg>
+          <title>itadaki-video-title</title>
+          <use xlink:href="./assets/svg/sprite.svg#sprite-itadaki-video-title"></use>
+        </svg>
+
+
+
+    </p>
+
+
+
+  </div>
+</div>
+
+        </div>
+        <div class="u-show-sp">
+
+
+<div class="heading-wrap heading-you-video">
+  <div class="heading">
+
+      <span class="u-title-hidden">Ways to feel the Forest</span>
+      <h2 class="heading-text">
+        Itadaki Videos
+    </h2>
+
+
+
+    <p class="heading-subtext">
+
+        <svg>
+          <title>itadaki-video-title</title>
+          <use xlink:href="./assets/svg/sprite.svg#sprite-itadaki-video-title"></use>
+        </svg>
+
+
+
+    </p>
+
+
+
+  </div>
+</div>
+
+        </div>
+        <div class="youtube-video-content youtube-video-content-itadaki">
+          <ul class="youtube-video-list row">
+            <li class="youtube-video-item col-lg-8 col-md-8 col-sm-12">
+              <div class="youtube-video-wrapper">
+                <div class="youtube-video-inner">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/D8-Z6rgRe1I" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+              <!-- <p class="youtube-video-description">「迷宮森殿 ITADAKI」体験シーン</p> -->
+            </li>
+          </ul>
+        </div>
+      </div>
+  </section>
+
+
+  <section class="instagram l-section">
+    <div class="instagram-wrapper l-container">
+      <div class="instagram-inner">
+        <div class="instagram-inner-content">
+          <h2 class="heading l-heading-inner">
+            <span class="heading-texts">
+              <img class="heading-itadaki-instagram" src="./assets/images/itadaki/itadaki-hashtag-title.png" alt="dokidoki">
+            </span>
+          </h2>
+          <div class="instagram-content">
+            <ul class="instagram-list">
+
+              <li class="instagram-list-item col-sm-4">
+                <div class="instagram-list-item-image">
+                  <img src="./assets/images/itadaki/instagram/1.jpg" alt="instagram">
+                </div>
+              </li>
+
+              <li class="instagram-list-item col-sm-4">
+                <div class="instagram-list-item-image">
+                  <img src="./assets/images/itadaki/instagram/2.jpg" alt="instagram">
+                </div>
+              </li>
+
+              <li class="instagram-list-item col-sm-4">
+                <div class="instagram-list-item-image">
+                  <img src="./assets/images/itadaki/instagram/3.jpg" alt="instagram">
+                </div>
+              </li>
+
+              <li class="instagram-list-item col-sm-4">
+                <div class="instagram-list-item-image">
+                  <img src="./assets/images/itadaki/instagram/4.jpg" alt="instagram">
+                </div>
+              </li>
+
+              <li class="instagram-list-item col-sm-4">
+                <div class="instagram-list-item-image">
+                  <img src="./assets/images/itadaki/instagram/5.jpg" alt="instagram">
+                </div>
+              </li>
+
+              <li class="instagram-list-item col-sm-4">
+                <div class="instagram-list-item-image">
+                  <img src="./assets/images/itadaki/instagram/6.jpg" alt="instagram">
+                </div>
+              </li>
+
+              <li class="instagram-list-item col-sm-4">
+                <div class="instagram-list-item-image">
+                  <img src="./assets/images/itadaki/instagram/7.jpg" alt="instagram">
+                </div>
+              </li>
+
+              <li class="instagram-list-item col-sm-4">
+                <div class="instagram-list-item-image">
+                  <img src="./assets/images/itadaki/instagram/8.jpg" alt="instagram">
+                </div>
+              </li>
+
+              <li class="instagram-list-item col-sm-4">
+                <div class="instagram-list-item-image">
+                  <img src="./assets/images/itadaki/instagram/9.jpg" alt="instagram">
+                </div>
+              </li>
+
+              <li class="instagram-list-item col-sm-4">
+                <div class="instagram-list-item-image">
+                  <img src="./assets/images/itadaki/instagram/10.jpg" alt="instagram">
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          <div class="l-button">
+
+
+<a class="button button-instagram" href="https://www.instagram.com/explore/tags/%E8%BF%B7%E5%AE%AE%E6%A3%AE%E6%AE%BFitadaki"  target="_blank">インスタグラムでもっと見る
+  <i class="button-icon">
+    <svg>
+  <title>arrow</title>
+  <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
+</svg>
+
+  </i>
+</a>
+
+          </div>
+          <!-- <div class="instagram-banner">
+            <a href="#">
+              <img src="./assets/images/sumika/net-sumika/instagram-banner.jpg ">
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq l-section">
+
+
+  <div class="l-container">
+    <div class="faq-inner">
+      <div class="l-heading">
+
+
+<div class="heading-wrap heading-sumika-faq">
+  <div class="heading">
+
+      <span class="u-title-hidden">faq</span>
+      <h2 class="heading-text">
+        FAQ
+    </h2>
+
+
+
+    <p class="heading-subtext">
+
+        <svg>
+          <title>faq-title</title>
+          <use xlink:href="./assets/svg/sprite.svg#sprite-faq-title"></use>
+        </svg>
+
+
+
+    </p>
+
+
+
+  </div>
+</div>
+
+      </div>
+        <div class="accordion">
+          <dl class="accordion-inner">
+
+              <dt class="accordion-btn js-accordion">
+                  <span class="accordion-btn-label">
+                    <img src="./assets/images/acc-q.png" alt="question">
+                  </span>
+                  雨天時も遊べますか？
+                  <span class="accordion-arrow js-arrow"></span>
+              </dt>
+              <dd class="accordion-description js-description">
+                <p>雨天でも営業いたしております。屋根がないため、濡れて滑りやすい場所や、頭上から水滴が落ちてくる場所もあり、衣服が汚れてしまう可能性がございます。お客さまご判断でのご利用をお願いいたします。</p>
+              </dd>
+
+              <dt class="accordion-btn js-accordion">
+                  <span class="accordion-btn-label">
+                    <img src="./assets/images/acc-q.png" alt="question">
+                  </span>
+                  暗くなっても営業していますか？
+                  <span class="accordion-arrow js-arrow"></span>
+              </dt>
+              <dd class="accordion-description js-description">
+                <p>営業時間内は営業いたしております。スポット照明で通路を照らしておりますが、足元が見えにくい場所もございますので、十分に気をつけてご利用をお願いいたします。</p>
+              </dd>
+
+              <dt class="accordion-btn js-accordion">
+                  <span class="accordion-btn-label">
+                    <img src="./assets/images/acc-q.png" alt="question">
+                  </span>
+                  小さな子どもでも遊べますか？
+                  <span class="accordion-arrow js-arrow"></span>
+              </dt>
+              <dd class="accordion-description js-description">
+                <p>ご利用は3歳から可能ですので、3歳未満のお子さまはご家族とお待ちいただくようにお願いいたします。横に屋内休憩室（センターラウンジ）や森のジェラテリア ROCCO（ジェラート）もございますのでお待ちの間よろしければご利用ください。</p>
+              </dd>
+
+              <dt class="accordion-btn js-accordion">
+                  <span class="accordion-btn-label">
+                    <img src="./assets/images/acc-q.png" alt="question">
+                  </span>
+                  ベビーカー置き場はありますか？
+                  <span class="accordion-arrow js-arrow"></span>
+              </dt>
+              <dd class="accordion-description js-description">
+                <p>係員室横でお預かりさせていただきます。お戻りになりましたらお声がけください。</p>
+              </dd>
+
+              <dt class="accordion-btn js-accordion">
+                  <span class="accordion-btn-label">
+                    <img src="./assets/images/acc-q.png" alt="question">
+                  </span>
+                  荷物置き場はありますか？
+                  <span class="accordion-arrow js-arrow"></span>
+              </dt>
+              <dd class="accordion-description js-description">
+                <p>係員室横にございます。大きなお手荷物は迷路内でしゃがんだり、狭い通路を移動する際支障になりますので、貴重品以外は必ず棚にお預けの上ご利用ください。お戻りになりましたらお声がけください。</p>
+              </dd>
+
+              <dt class="accordion-btn js-accordion">
+                  <span class="accordion-btn-label">
+                    <img src="./assets/images/acc-q.png" alt="question">
+                  </span>
+                  障がい者でも利用できますか？
+                  <span class="accordion-arrow js-arrow"></span>
+              </dt>
+              <dd class="accordion-description js-description">
+                <p>迷路内部は階段や体をかがめたり、動かす場所がございますので、介護者の方が必ず付き添っていただきまして、お申し出いただいた障がいの度合いによって、ご利用判断をお願いいたします。</p>
+              </dd>
+
+              <dt class="accordion-btn js-accordion">
+                  <span class="accordion-btn-label">
+                    <img src="./assets/images/acc-q.png" alt="question">
+                  </span>
+                  近くのトイレはどこですか？
+                  <span class="accordion-arrow js-arrow"></span>
+              </dt>
+              <dd class="accordion-description js-description">
+                <p>モビパークの「みんなのトイレ」が最寄りで、道路を渡って100m程先にございます。迷路内にトイレはございませんので、予め済ませてからご利用ください。</p>
+              </dd>
+
+              <dt class="accordion-btn js-accordion">
+                  <span class="accordion-btn-label">
+                    <img src="./assets/images/acc-q.png" alt="question">
+                  </span>
+                  通常の利用時間はどの程度ですか？
+                  <span class="accordion-arrow js-arrow"></span>
+              </dt>
+              <dd class="accordion-description js-description">
+                <p>14個のスタンプを集めながら、各階をお楽しみいただくためには30分程度時間を要します。</p>
+              </dd>
+
+          </dl>
+        </div>
+    </div>
+  </div>
+
+
+  </section>
+
+
+
+<div class="banner-cta banner-cta-bg-itadaki">
+  <div class="l-container">
+    <a class="banner-cta-bottom-inner" href="https://www.twinring.jp/mobipark_m/card/" target="_blank">
+      <img src="./assets/images/subpage-banner-bottom.png" alt="上手に乗れたらライセンスカードをつくろう">
+    </a>
+  </div>
+</div>
+
+
+
+<section class="bottom-slider">
+  <div class="l-section-title">
+
+
+<div class="heading-wrap heading-recommend">
+  <div class="heading">
+
+      <span class="u-title-hidden"></span>
+      <h2 class="heading-text">
+        Recommendation
+    </h2>
+
+
+
+    <p class="heading-subtext">
+
+        <svg>
+          <title>recommendation-title</title>
+          <use xlink:href="./assets/svg/sprite.svg#sprite-recommendation-title"></use>
+        </svg>
+
+
+
+    </p>
+
+
+
+  </div>
+</div>
+
+  </div>
+
+  <div class="swiper-container slider-recommendation js-slider-bottom">
+    <ul class="swiper-wrapper slider-wrapper">
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-recommendation">
+  <a href="/hellowoods/program/" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/recommendation/recommendation01.jpg)"></div>
+    </div>
+
+
+    <h3 class="article-heading">森のファミリーウォーク TEKUTEKU</h3>
+
+
+
+
+    <a class="button-gradient button-gradient-cmn" href="/hellowoods/program/">
+  <span class="button-gradient-text">モビパーク</span>
+  <i class="button-gradient-icon">
+    <svg>
+  <title>arrow</title>
+  <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
+</svg>
+
+  </i>
+</a>
+
+
+  </a>
+</article>
+
+      </li>
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-recommendation">
+  <a href="/sumika/" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/recommendation/recommendation02.jpg)"></div>
+    </div>
+
+
+    <h3 class="article-heading">巨大ネットの森 SUMIKA</h3>
+
+
+
+
+    <a class="button-gradient button-gradient-cmn" href="/sumika/">
+  <span class="button-gradient-text">モビパーク</span>
+  <i class="button-gradient-icon">
+    <svg>
+  <title>arrow</title>
+  <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
+</svg>
+
+  </i>
+</a>
+
+
+  </a>
+</article>
+
+      </li>
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-recommendation">
+  <a href="/dokidoki/" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/recommendation/recommendation03.jpg)"></div>
+    </div>
+
+
+    <h3 class="article-heading">森感覚アスレチック DOKIDOKI</h3>
+
+
+
+
+    <a class="button-gradient button-gradient-cmn" href="/dokidoki/">
+  <span class="button-gradient-text">モビパーク</span>
+  <i class="button-gradient-icon">
+    <svg>
+  <title>arrow</title>
+  <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
+</svg>
+
+  </i>
+</a>
+
+
+  </a>
+</article>
+
+      </li>
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-recommendation">
+  <a href="/itdaki/" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/recommendation/recommendation04.jpg)"></div>
+    </div>
+
+
+    <h3 class="article-heading">迷宮森殿 ITADAKI</h3>
+
+
+
+
+    <a class="button-gradient button-gradient-cmn" href="/itdaki/">
+  <span class="button-gradient-text">モビパーク</span>
+  <i class="button-gradient-icon">
+    <svg>
+  <title>arrow</title>
+  <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
+</svg>
+
+  </i>
+</a>
+
+
+  </a>
+</article>
+
+      </li>
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-recommendation">
+  <a href="#" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/recommendation/recommendation05.jpg)"></div>
+    </div>
+
+
+    <h3 class="article-heading">森の空中散歩（ジップライン）</h3>
+
+
+
+
+    <a class="button-gradient button-gradient-cmn" href="#">
+  <span class="button-gradient-text">モビパーク</span>
+  <i class="button-gradient-icon">
+    <svg>
+  <title>arrow</title>
+  <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
+</svg>
+
+  </i>
+</a>
+
+
+  </a>
+</article>
+
+      </li>
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-recommendation">
+  <a href="#" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/recommendation/recommendation06.jpg)"></div>
+    </div>
+
+
+    <h3 class="article-heading">クルマ&バイクのアトラクション</h3>
+
+
+
+
+    <a class="button-gradient button-gradient-cmn" href="#">
+  <span class="button-gradient-text">モビパーク</span>
+  <i class="button-gradient-icon">
+    <svg>
+  <title>arrow</title>
+  <use xlink:href="./assets/svg/sprite.svg#sprite-arrow"></use>
+</svg>
+
+  </i>
+</a>
+
+
+  </a>
+</article>
+
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+  <section class="bottom-slider bottom-slider-pickup">
+  <div class="l-section-title">
+
+
+<div class="heading-wrap heading-pickup">
+  <div class="heading">
+
+      <span class="u-title-hidden"></span>
+      <h2 class="heading-text">
+        Pick Up
+    </h2>
+
+
+
+    <p class="heading-subtext">
+
+        <svg>
+          <title>pickup-event</title>
+          <use xlink:href="./assets/svg/sprite.svg#sprite-pickup-event"></use>
+        </svg>
+
+
+
+    </p>
+
+
+
+  </div>
+</div>
+
+  </div>
+
+  <div class="swiper-container slider-pickup js-slider-pickup">
+    <ul class="swiper-wrapper slider-wrapper">
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-pickup">
+  <a href="" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/pickup/pickup-01.jpg)"></div>
+    </div>
+
+      <span class="article-type article-type-Event">Event</span>
+
+
+    <h3 class="article-heading">「わくわくの森 春フェスタ」3月20日（金・祝）～開催</h3>
+
+
+      <p class="article-period">
+        開催期間：<time class="article-period-date" datetime="P1D">2020年3月20日（金・祝）～2020年4月5日（日）</time>
+      </p>
+
+
+
+
+  </a>
+</article>
+
+      </li>
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-pickup">
+  <a href="" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/pickup/pickup-02.jpg)"></div>
+    </div>
+
+      <span class="article-type article-type-news">news</span>
+
+
+    <h3 class="article-heading">家族みんなで団らん「スーペリアファミリールーム」3月13日（金）～新登場</h3>
+
+
+      <p class="article-period">
+        開催期間：<time class="article-period-date" datetime="P1D">2020年3月13日（金）～</time>
+      </p>
+
+
+
+
+  </a>
+</article>
+
+      </li>
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-pickup">
+  <a href="" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/pickup/pickup-03.jpg)"></div>
+    </div>
+
+      <span class="article-type article-type-news">news</span>
+
+
+    <h3 class="article-heading">歩くほどに発見「森のファミリーウォーク TEKUTEKU」3月14日（土）～新登場</h3>
+
+
+      <p class="article-period">
+        開催期間：<time class="article-period-date" datetime="P1D">2020年3月14日（土）～</time>
+      </p>
+
+
+
+
+  </a>
+</article>
+
+      </li>
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-pickup">
+  <a href="" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/pickup/pickup-04.jpg)"></div>
+    </div>
+
+      <span class="article-type article-type-news">news</span>
+
+
+    <h3 class="article-heading">“今”だけの冒険と発見「アクティビティ」<br />この春新登場</h3>
+
+
+      <p class="article-period">
+        開催期間：<time class="article-period-date" datetime="P1D">2020年春</time>
+      </p>
+
+
+
+
+  </a>
+</article>
+
+      </li>
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-pickup">
+  <a href="" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/pickup/pickup-05.jpg)"></div>
+    </div>
+
+      <span class="article-type article-type-race">race</span>
+
+
+    <h3 class="article-heading">「スーパーバイクレース」前売りチケット<br />発売中</h3>
+
+
+      <p class="article-period">
+        開催期間：<time class="article-period-date" datetime="P1D">2020年4月25日（土）～2020年4月26日（日）</time>
+      </p>
+
+
+
+
+  </a>
+</article>
+
+      </li>
+
+      <li class="swiper-slide slider-item">
+
+
+<article class="article article-no-design article-pickup">
+  <a href="" class="article-no-design-link">
+
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(./assets/images/pickup/pickup-06.jpg)"></div>
+    </div>
+
+      <span class="article-type article-type-event">event</span>
+
+
+    <h3 class="article-heading">「トライアル世界選手権」3月14日（土）前売りチケット発売開始</h3>
+
+
+      <p class="article-period">
+        開催期間：<time class="article-period-date" datetime="P1D">2020年6月6日（土）～2020年6月7日（日）</time>
+      </p>
+
+
+
+
+  </a>
+</article>
+
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+</div>
+
+
+  <div class="breadcrumbs" id="lig-breadcrumbs">
+    <div class="l-container">
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="#">
+            <span>TOP</span>
+          </a>
+        </li>
+
+          <li class="breadcrumbs-item">
+
+              <a class="breadcrumbs-link" href="#">
+                <span>モビパーク</span>
+              </a>
+
+          </li>
+
+          <li class="breadcrumbs-item">
+
+              <span>迷宮森殿 ITADAKI</span>
+
+          </li>
+
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
+  <script src="./assets/js/app.js" async></script>
+
+
+
+
+
+
+
+
+    <script src="./assets/js/common-slider.js" async></script>
+    <script src="./assets/js/accordion.js" async></script>
+
+
+
+
+
+
+</body>
+</html>

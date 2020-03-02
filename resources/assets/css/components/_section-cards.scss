@@ -49,9 +49,9 @@
   font-size: 12px;
   background-color: $color-white;
   position: absolute;
-  left: -61px;
-  top: 46px;
-  transform: rotate(-45deg);
+  left: -42px;
+  top: 39px;
+  transform: rotate(-45deg) scale(.8);
   transform-origin: left;
   z-index: $z-min;
 
@@ -61,7 +61,7 @@
     left: -29px;
     top: 8px;
     border-radius: 20%;
-    transform: rotate(-45deg) scale(0.8);
+    transform: rotate(-45deg) scale(.8);
   }
 
   &::before {

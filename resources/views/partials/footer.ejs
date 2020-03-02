@@ -29,88 +29,88 @@
   ]
 %>
 
-	<footer class="footer" id="lig-footer">
+  <footer class="footer" id="lig-footer">
 
-		<nav class="footer-top-nav-list-wrap">
-			<div class="l-container">
-				<ul class="footer-top-nav-list">
-					<%
-						getData().data.footerTopNav.forEach( topLink => {
-					%>
-				<li class="footer-top-nav-item">
-					<a class="footer-top-nav-link" href="<%- topLink.link %>">
-						<span class="footer-top-nav-icon">
-							<img class="footer-bottom-item-image" src="<%- topLink.image %>" alt="time">
-						</span>
-						<span class="footer-top-nav-text"><%- topLink.text %></span>
-					</a>
-				</li>
-			<% }) %>
-				</ul>
-			</div>
-		</nav>
+  <nav class="footer-top-nav-list-wrap">
+    <div class="l-container">
+      <ul class="footer-top-nav-list">
+        <%
+          getData().data.footerTopNav.forEach( topLink => {
+        %>
+        <li class="footer-top-nav-item <%- topLink.modifier %>">
+          <a class="footer-top-nav-link" href="<%- topLink.link %>">
+            <span class="footer-top-nav-icon">
+              <img class="footer-bottom-item-image" src="<%- topLink.image %>" alt="time">
+            </span>
+            <span class="footer-top-nav-text"><%- topLink.text %></span>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </nav>
 
-		<div class="footer-top-links u-show-pc">
-			<div class="l-container">
-				<%- include('/partials/footer-top-links') -%>
-			</div>
-		</div>
+  <div class="footer-top-links u-show-pc">
+    <div class="l-container">
+      <%- include('/partials/footer-top-links') -%>
+    </div>
+  </div>
 
-		<div class="footer-sns">
-			<%- include('/partials/sns') -%>
-		</div>
+  <div class="footer-sns">
+    <%- include('/partials/sns') -%>
+  </div>
 
-		<div class="footer-background"></div>
+  <div class="footer-background"></div>
 
-		<div class="footer-bottom">
-			<div class="l-container">
-				<nav>
-					<ul class="footer-bottom-list">
-						<li class="footer-bottom-item">
-							<a class="footer-bottom-link" href="#">
-								<img class="footer-bottom-item-image" src="<%= mix('/assets/images/footer-name.png') %>" alt="株式会社モビリティランド">
-							</a>
-						</li>
-						<%
-							getData().data.footerBottomNav.forEach( bottomLink => {
-						%>
-					<li class="footer-bottom-item">
-						<a class="footer-bottom-link" href="<%- bottomLink.link %>" target="_blank"><%- bottomLink.text %></a>
-					</li>
-				<% }) %>
-					</ul>
-				</nav>
+  <div class="footer-bottom">
+    <div class="l-container">
+      <nav>
+        <ul class="footer-bottom-list">
+          <li class="footer-bottom-item">
+            <a class="footer-bottom-link" href="https://www.mobilityland.co.jp/" target="_blank">
+              <img class="footer-bottom-item-image" src="<%= mix('/assets/images/footer-name.png') %>" alt="株式会社モビリティランド">
+            </a>
+          </li>
+          <%
+            getData().data.footerBottomNav.forEach( bottomLink => {
+          %>
+          <li class="footer-bottom-item">
+            <a class="footer-bottom-link" href="<%- bottomLink.link %>" target="_blank"><%- bottomLink.text %></a>
+          </li>
+          <% }) %>
+        </ul>
+      </nav>
 
-				<div class="footer-bottom-copyright-wrap">
-					<p class="footer-bottom-copyright">
-						<small>(c) Mobilityland Corporation All Rights Reserved.
-							<br>Kochira (Kochira family) is an original character of MOBILITYLAND designed by Mr. Osamu Tezuka. (c)TEZUKA PRODUCTIONS</small>
-					</p>
-					<div class="footer-bottom-name u-show-sp">
-						<img class="footer-bottom-name-text" src="<%= mix('/assets/images/footer-name-sp.png') %>" alt="株式会社モビリティランド">
-					</div>
-					<ul class="footer-bottom-logos">
-						<li>
-							<a href="https://www.suzukacircuit.jp/" target="_blank">
-								<img src="<%= mix('/assets/images/suzuka-logo.png') %>" alt="Suzuka">
-							</a>
+      <div class="footer-bottom-copyright-wrap">
+        <p class="footer-bottom-copyright">
+          <small>(c) Mobilityland Corporation All Rights Reserved.
+                <br>Kochira (Kochira family) is an original character of MOBILITYLAND designed by Mr. Osamu Tezuka. (c)TEZUKA PRODUCTIONS</small>
+        </p>
+        <div class="footer-bottom-name u-show-sp">
+          <img class="footer-bottom-name-text" src="<%= mix('/assets/images/footer-name-sp.png') %>" alt="株式会社モビリティランド">
+        </div>
+        <ul class="footer-bottom-logos">
+          <li>
+            <a href="https://www.suzukacircuit.jp/" target="_blank">
+              <img src="<%= mix('/assets/images/suzuka-logo.png') %>" alt="Suzuka">
+            </a>
 
-						</li>
-						<li>
-							<a href="https://www.suzukacircuit.jp/info_s/suzukacircuitpark/" target="_blank">
-								<img src="<%= mix('/assets/images/suzuka-zh-logo.png') %>" alt="Suzuka ZH">
-							</a>
+          </li>
+          <li>
+            <a href="https://www.suzukacircuit.jp/info_s/suzukacircuitpark/" target="_blank">
+              <img src="<%= mix('/assets/images/suzuka-zh-logo.png') %>" alt="Suzuka ZH">
+            </a>
 
-						</li>
-					</ul>
-				</div>
+          </li>
+        </ul>
+      </div>
 
-			</div>
-		</div>
+    </div>
+  </div>
 
-	</footer>
+  </footer>
 
-</div><!-- /.wrap -->
+</div><!-- end of wrap -->
 
   <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
   <script src="<%= mix('/assets/js/app.js') %>" async></script>

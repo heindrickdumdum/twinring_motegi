@@ -31,7 +31,7 @@
     width: 100%;
 
     @include max-screen($breakpoint-mobile) {
-      max-width: 93%;
+      max-width: 100%;
     }
   }
 
@@ -85,6 +85,11 @@
 }
 
 .slider-gallery-thumb {
+
+  .swiper-wrapper {
+    justify-content: center;
+  }
+
   .slider-item {
     width: 70px;
   }

@@ -111,17 +111,30 @@
 }
 
 .article-type {
-  display: block;
+  background: linear-gradient(to right, #027cc3 0%, #099f48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  display: inline-block;
   text-transform: uppercase;
   font-size: 14px;
-  color: #57cd32;
+  color: #09a046;
   font-weight: 600;
   margin-bottom: 7px;
   letter-spacing: 0.06em;
+  line-height: 1;
 
-  &.article-type-event {
-    color: #3e9722;
+  .is-ie & {//ie modifier
+    background: none;
+    color: $color-gossamer;
+    -webkit-text-fill-color: $color-gossamer;
+    -moz-text-fill-color: $color-gossamer;
+    -ms-text-fill-color: $color-gossamer;
   }
+
+  // &.article-type-event {
+  //   color: #09a046;
+  // }
 
 }
 

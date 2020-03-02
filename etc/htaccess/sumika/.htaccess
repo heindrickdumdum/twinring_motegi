@@ -1,2 +1,12 @@
 AddType image/svg+xml .svg .svgz
 
+# For Redirect
+# RewriteRule ^PATH$ URL [L,R=301]
+RewriteRule ^campaign-contest/index.html$ https://www.twinring.jp/sumika/ [L,R=301]
+RewriteRule ^campaign/index.html$ https://www.twinring.jp/sumika/ [L,R=301]
+RewriteRule ^point/index.html$ https://www.twinring.jp/sumika/ [L,R=301]
+RewriteRule ^landscape/index.html$ https://www.twinring.jp/sumika/ [L,R=301]
+RewriteRule ^hw/index.html$ https://www.twinring.jp/sumika/ [L,R=301]
+RewriteRule ^faq/index.html$ https://www.twinring.jp/sumika/ [L,R=301]
+
+

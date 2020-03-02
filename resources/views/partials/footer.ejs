@@ -37,7 +37,7 @@
         <%
           getData().data.footerTopNav.forEach( topLink => {
         %>
-        <li class="footer-top-nav-item">
+        <li class="footer-top-nav-item <%- topLink.modifier %>">
           <a class="footer-top-nav-link" href="<%- topLink.link %>">
             <span class="footer-top-nav-icon">
               <img class="footer-bottom-item-image" src="<%- topLink.image %>" alt="time">

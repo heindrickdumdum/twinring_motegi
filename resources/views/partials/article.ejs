@@ -12,7 +12,7 @@ if (typeof type === 'undefined') {
 }
 %>
 <article class="article <%- modifier %>">
-  <a class="article-link" href="javascript:;">
+  <a class="article-link" href="<%- link %>">
     <% if(category) { %>
     <span class="article-category<% if(category === 'NEWS') { %> article-category-news<% } %>"><%- category %></span>
     <% } %>

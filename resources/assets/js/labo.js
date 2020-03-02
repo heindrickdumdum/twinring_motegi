@@ -1,8 +1,8 @@
-// import bannerFade from './components/banner-fade.js';
-//
-// bannerFade({
-//   item: '.js-banner-item'
-// });
+ import bannerFade from './components/banner-fade.js';
+
+ bannerFade({
+   item: '.js-banner-item'
+ });
 
 import Swiper from 'swiper/dist/js/swiper.js';
 
@@ -13,10 +13,12 @@ export default class galleryLabo {
       spaceBetween: 10,
       variableWidth: true,
       slidesPerView: 'auto',
-      centeredSlides: true,
+      // centeredSlides: true,
+      allowTouchMove: false,
       freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      noSwiping: true
     })
 
     new Swiper('.js-gallery', {
@@ -33,10 +35,12 @@ export default class galleryLabo {
       spaceBetween: 10,
       variableWidth: true,
       slidesPerView: 'auto',
-      centeredSlides: true,
+      // centeredSlides: true,
+      allowTouchMove: false,
       freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      noSwiping: true
     })
 
     new Swiper('.js-gallery2', {

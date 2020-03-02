@@ -49,6 +49,15 @@
   }
 }
 
+.table-col-num {
+  display: inline-block;
+  margin-right: 30px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-right: 20px;
+  }
+}
+
 .table-col {
   width: calc(100% - 93px);
   letter-spacing: 0.1em;
@@ -202,7 +211,7 @@
     .table-col {
       p {
         margin-bottom: 15px;
-  
+
         &:last-child {
           margin-bottom: 0px;
         }

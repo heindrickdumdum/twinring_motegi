@@ -43,7 +43,7 @@
     height: 100%;
 
     @include max-screen($breakpoint-mobile) {
-      background: url('../images/bg-leaf.png');
+      // background: url('../images/bg-leaf.png');
       background-image: url('../images/bg-leaf.png');
       background-size: cover;
       background-position-x: center;
@@ -53,6 +53,13 @@
   &.subpage-itadaki {
     &::before {
       background-image: url('../images/itadaki/subpage-bg.png');
+
+      @include max-screen($breakpoint-mobile) {
+        // background: url('../images/bg-leaf.png');
+        background-image: url('../images/bg-leaf.png');
+        background-size: cover;
+        background-position-x: center;
+      }
     }
   }
 

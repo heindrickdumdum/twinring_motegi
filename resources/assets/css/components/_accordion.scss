@@ -43,6 +43,10 @@
   &.accordion-arrow-musasabi {
     display: none;
   }
+
+  .is-open & {
+    transform: rotate(0);
+  }
 }
 
 // .accordion-inner {}

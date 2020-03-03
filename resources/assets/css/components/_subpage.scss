@@ -526,6 +526,11 @@
   }
 }
 
+.subpage-collapse-num {
+  display: inline-block;
+  margin-right: 20px;
+}
+
 //modifier subpage-section-collapse
 .subpage-section-collapse {
   background-color: #f7f7f7;
@@ -537,7 +542,7 @@
     text-align: center;
     text-decoration: underline;
     font-weight: bold;
-    
+
     &:hover {
       cursor: pointer;
     }
@@ -550,6 +555,12 @@
 
   .subpage-collapse-content {
     padding: 0 50px 50px 50px;
+
+    a {
+      display: inline-block;
+      color: #333;
+      text-decoration: underline;
+    }
 
     > p {
       line-height: 2;

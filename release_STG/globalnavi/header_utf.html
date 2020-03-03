@@ -1,52 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="shortcut icon" href="/globalnavi/assets/images/common/favicon.ico">
-<link rel="apple-touch-icon-precomposed" href="/globalnavi/assets/images/common/apple-touch-icon-precomposed.png">
-<link rel="stylesheet" href="/globalnavi/assets/css/app.css">
 
-<script>
-  // IE foreach Polyfill
-  if ('NodeList' in window && !NodeList.prototype.forEach) {
-      NodeList.prototype.forEach = function (callback, thisArg) {
-          thisArg = thisArg || window;
-          for (let i = 0; i < this.length; i++) {
-              callback.call(thisArg, this[i], i, this);
-          }
-      };
-  }
-</script>
 
-<script>
-  if (window.screen.width < 375) {
-    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
-  } else if (window.screen.width >= 375) {
-    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=1, user-scalable=yes');
-  }
-</script>
+			<div class="preload js-preload">
+				<div class="preload-image"></div>
+				<img class="preload-text" src="/globalnavi/assets/images/footer-twinring.png" alt="">
+			</div>
 
-<!-- resize for tab -->
-<script>
-  (function () {
-    var ua = navigator.userAgent;
-    var isIpad = (ua.indexOf('iPad') > 0);
-    var isAndroidTab = (ua.indexOf('Android') > 0 && ua.match(/Mobile/i) == null);
-    var tab = isIpad || isAndroidTab;
-    var minWidth = tab ? 1240 : 'device-width';
-    var initialScale = tab ? window.parent.screen.width / minWidth : 1;
-    if (tab) {
-      document.head.insertAdjacentHTML('beforeend', '<meta name="viewport" content="width=' + minWidth + ',initial-scale=' + initialScale + '">');
-    }
-  })()
-</script>
+ <div class="wrap" id="js-wrap">
 
-<script> document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
 
-</head>
-<body>
 
 
 <header>
@@ -65,7 +26,7 @@
             <div class="l-header-top-right">
               <ul class="header-top-others">
                 <li class="header-top-others-item header-top-others-item-logo">
-                  <a class="header-top-others-link" href="https://www.twinring.jp/motogp/" target="_blank">
+                  <a class="header-top-others-link" href="/motogp/" target="_blank">
                     <img src="/globalnavi/assets/images/logo-motogp.png" alt="MotoGP">
                   </a>
                 </li>
@@ -83,13 +44,13 @@
                   </a>
                   <ul class="header-lang js-header-lang">
                     <li class="header-lang-item">
-                      <a href="https://www.twinring.jp/" target="_blank">JP</a>
+                      <a href="/" target="_blank">JP</a>
                     </li>
                     <li class="header-lang-item">
-                      <a href="https://www.twinring.jp/english/" target="_blank">EN</a>
+                      <a href="/english/" target="_blank">EN</a>
                     </li>
                     <li class="header-lang-item">
-                      <a href="https://www.twinring.jp/tw/" target="_blank">CH</a>
+                      <a href="/tw/" target="_blank">CH</a>
                     </li>
                   </ul>
                 </li>
@@ -97,34 +58,34 @@
               <nav class="header-top-nav">
 
                 <li class="header-top-nav-item js-top-nav-button">
-                  <a class="header-top-nav-link" href="https://www.twinring.jp/twinringmotegi/plan/adults.html" target="_blank">ã‚‚ã¦ãŽã®æ¥½ã—ã¿æ–¹</a>
+                  <a class="header-top-nav-link" href="/twinringmotegi/plan/adults.html" target="_blank">‚à‚Ä‚¬‚ÌŠy‚µ‚Ý•û</a>
 
                 </li>
 
                 <li class="header-top-nav-item js-top-nav-button">
-                  <a class="header-top-nav-link" href="#" target="_blank">ãƒ‹ãƒ¥ãƒ¼ã‚¹ãƒ»ã‚¤ãƒ™ãƒ³ãƒˆ</a>
+                  <a class="header-top-nav-link" href="#" target="_blank">ƒjƒ…[ƒXEƒCƒxƒ“ƒg</a>
 
                   <div class="header-top-nav-sub">
 
                       <ul>
 
-                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="#" target="_blank">ãƒ‹ãƒ¥ãƒ¼ã‚¹ä¸€è¦§</a></li>
-
-                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/event/" target="_blank">ã‚¤ãƒ™ãƒ³ãƒˆä¸€è¦§</a></li>
+                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/calendar_m/" target="_blank">ƒCƒxƒ“ƒgˆê——</a></li>
 
                       </ul>
 
                       <ul>
 
-                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/season-event/spring/" target="_blank">æ˜¥ã®ã‚¤ãƒ™ãƒ³ãƒˆç‰¹é›†</a></li>
+                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/season-event/spring/" target="_blank">t‚ÌƒCƒxƒ“ƒg“ÁW</a></li>
 
-                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/season-event/gw/" target="_blank">GWã®ã‚¤ãƒ™ãƒ³ãƒˆç‰¹é›†</a></li>
+                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/season-event/gw/" target="_blank">GW‚ÌƒCƒxƒ“ƒg“ÁW</a></li>
 
-                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/season-event/summer/" target="_blank">å¤ã®ã‚¤ãƒ™ãƒ³ãƒˆç‰¹é›†</a></li>
+                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/season-event/summer/" target="_blank">‰Ä‚ÌƒCƒxƒ“ƒg“ÁW</a></li>
 
-                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/season-event/winter/" target="_blank">å†¬ã®ã‚¤ãƒ™ãƒ³ãƒˆç‰¹é›†</a></li>
+                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/season-event/autumn/" target="_blank">H‚ÌƒCƒxƒ“ƒg“ÁW</a></li>
 
-                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/fireworks/" target="_blank">èŠ±ç«ã®ç¥­å…¸ã€€å¤/å†¬</a></li>
+                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/season-event/winter/" target="_blank">“~‚ÌƒCƒxƒ“ƒg“ÁW</a></li>
+
+                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/fireworks/" target="_blank">‰Ô‰Î‚ÌÕ“T@‰Ä/“~</a></li>
 
                       </ul>
 
@@ -133,22 +94,22 @@
                 </li>
 
                 <li class="header-top-nav-item js-top-nav-button">
-                  <a class="header-top-nav-link" href="https://www.twinring.jp/hours_m/" target="_blank">å–¶æ¥­æ™‚é–“</a>
+                  <a class="header-top-nav-link" href="/hours_m/" target="_blank">‰c‹ÆŽžŠÔ</a>
 
                 </li>
 
                 <li class="header-top-nav-item js-top-nav-button">
-                  <a class="header-top-nav-link" href="https://www.twinring.jp/fee_m/" target="_blank">æ–™é‡‘ãƒ»ãƒã‚±ãƒƒãƒˆ</a>
+                  <a class="header-top-nav-link" href="/fee_m/" target="_blank">—¿‹àEƒ`ƒPƒbƒg</a>
 
                 </li>
 
                 <li class="header-top-nav-item js-top-nav-button">
-                  <a class="header-top-nav-link" href="https://www.twinring.jp/service_m/" target="_blank">ã‚ˆãã‚ã‚‹ã”è³ªå•</a>
+                  <a class="header-top-nav-link" href="/service_m/" target="_blank">‚æ‚­‚ ‚é‚²Ž¿–â</a>
 
                 </li>
 
                 <li class="header-top-nav-item js-top-nav-button">
-                  <a class="header-top-nav-link" href="https://www.twinring.jp/access_m/" target="_blank">ã‚¢ã‚¯ã‚»ã‚¹</a>
+                  <a class="header-top-nav-link" href="/access_m/" target="_blank">ƒAƒNƒZƒX</a>
 
                 </li>
 
@@ -162,7 +123,7 @@
 
                 <li class="header-bottom-item header-bottom-item-location">
                   <a class="header-bottom-link js-header-button" data-target="#header-sub-access" href="#">
-                    <span class="header-bottom-link-text">ã‚¨ãƒªã‚¢ãƒ»æ–½è¨­</span>
+                    <span class="header-bottom-link-text">ƒGƒŠƒAEŽ{Ý</span>
                     <i class="header-bottom-icon">
                       <svg>
   <title>location</title>
@@ -175,7 +136,7 @@
 
                 <li class="header-bottom-item header-bottom-item-activity">
                   <a class="header-bottom-link js-header-button" data-target="#header-sub-attraction" href="#">
-                    <span class="header-bottom-link-text">ã‚¢ãƒˆãƒ©ã‚¯ã‚·ãƒ§ãƒ³ãƒ»<br class="u-show-pc">ã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£</span>
+                    <span class="header-bottom-link-text">ƒAƒgƒ‰ƒNƒVƒ‡ƒ“E<br class="u-show-pc">ƒAƒNƒeƒBƒrƒeƒB</span>
                     <i class="header-bottom-icon">
                       <svg>
   <title>activity</title>
@@ -188,7 +149,7 @@
 
                 <li class="header-bottom-item header-bottom-item-motorsports">
                   <a class="header-bottom-link js-header-button" data-target="#header-sub-motorsports" href="#">
-                    <span class="header-bottom-link-text">ãƒ¢ãƒ¼ã‚¿ãƒ¼<br class="u-show-pc">ã‚¹ãƒãƒ¼ãƒ„</span>
+                    <span class="header-bottom-link-text">ƒ‚[ƒ^[<br class="u-show-pc">ƒXƒ|[ƒc</span>
                     <i class="header-bottom-icon">
                       <svg>
   <title>motorsports</title>
@@ -201,7 +162,7 @@
 
                 <li class="header-bottom-item header-bottom-item-camp">
                   <a class="header-bottom-link js-header-button" data-target="#header-sub-camp" href="#">
-                    <span class="header-bottom-link-text">ãƒ›ãƒ†ãƒ«ãƒ»<br class="u-show-pc">ã‚­ãƒ£ãƒ³ãƒ—</span>
+                    <span class="header-bottom-link-text">ƒzƒeƒ‹E<br class="u-show-pc">ƒLƒƒƒ“ƒv</span>
                     <i class="header-bottom-icon">
                       <svg>
   <title>camp</title>
@@ -214,7 +175,7 @@
 
                 <li class="header-bottom-item header-bottom-item-restaurant">
                   <a class="header-bottom-link js-header-button" data-target="#header-sub-restaurant" href="#">
-                    <span class="header-bottom-link-text">ãƒ¬ã‚¹ãƒˆãƒ©ãƒ³</span>
+                    <span class="header-bottom-link-text">ƒŒƒXƒgƒ‰ƒ“</span>
                     <i class="header-bottom-icon">
                       <svg>
   <title>restaurant</title>
@@ -226,8 +187,8 @@
                 </li>
 
                 <li class="header-bottom-item header-bottom-item-shop">
-                  <a class="header-bottom-link" href="https://www.twinring.jp/goods_m/" target="_blank">
-                    <span class="header-bottom-link-text">ã‚°ãƒƒã‚ºï¼†<br class="u-show-pc">ã‚·ãƒ§ãƒƒãƒ—</span>
+                  <a class="header-bottom-link" href="/goods_m/" target="_blank">
+                    <span class="header-bottom-link-text">ƒOƒbƒY•<br class="u-show-pc">ƒVƒ‡ƒbƒv</span>
                     <i class="header-bottom-icon">
                       <svg>
   <title>shop</title>
@@ -250,7 +211,7 @@
 
           <div class="header-sub-content-inner header-sub-content-inner-access js-header-sub-content-inner" data-content="#header-sub-access">
 
-  <a class="header-sub-top-button" href="https://www.twinring.jp/twinringmotegi/" target="_blank">ã‚¨ãƒªã‚¢ãƒ»æ–½è¨­TOP</a>
+  <a class="header-sub-top-button" href="/twinringmotegi/" target="_blank">ƒGƒŠƒAEŽ{ÝTOP</a>
 
   <div class="header-sub-inner">
     <div class="header-sub-inner-block">
@@ -259,38 +220,38 @@
           <ul class="header-sub-image-list">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒãƒ­ãƒ¼ã‚¦ãƒƒã‚º</span>
+                <span class="header-sub-image-text">ƒnƒ[ƒEƒbƒY</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/mobipark_m/" target="_blank">
+              <a class="header-sub-image-link" href="/mobipark_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/activity-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒ¢ãƒ“ãƒ‘ãƒ¼ã‚¯</span>
+                <span class="header-sub-image-text">ƒ‚ƒrƒp[ƒN</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img1.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã¨æ˜Ÿç©ºã®ã‚­ãƒ£ãƒ³ãƒ—ãƒ´ã‚£ãƒ¬ãƒƒã‚¸</span>
+                <span class="header-sub-image-text">X‚Æ¯‹ó‚ÌƒLƒƒƒ“ƒvƒ”ƒBƒŒƒbƒW</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hoteltwinring/" target="_blank">
+              <a class="header-sub-image-link" href="/hoteltwinring/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒ›ãƒ†ãƒ«ãƒ„ã‚¤ãƒ³ãƒªãƒ³ã‚¯</span>
+                <span class="header-sub-image-text">ƒzƒeƒ‹ƒcƒCƒ“ƒŠƒ“ƒN</span>
               </a>
             </li>
 
@@ -299,38 +260,38 @@
           <ul class="header-sub-image-list">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/motorsports_m/" target="_blank">
+              <a class="header-sub-image-link" href="/motorsports_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img3.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒ¢ãƒ¼ã‚¿ãƒ¼ã‚¹ãƒãƒ¼ãƒ„</span>
+                <span class="header-sub-image-text">ƒ‚[ƒ^[ƒXƒ|[ƒc</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/collection-hall/" target="_blank">
+              <a class="header-sub-image-link" href="/collection-hall/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img4.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒ›ãƒ³ãƒ€ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ãƒ›ãƒ¼ãƒ«</span>
+                <span class="header-sub-image-text">ƒzƒ“ƒ_ƒRƒŒƒNƒVƒ‡ƒ“ƒz[ƒ‹</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/astp/" target="_blank">
+              <a class="header-sub-image-link" href="/astp/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img5.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å®‰å…¨é‹è»¢ã‚¹ã‚¯ãƒ¼ãƒ«</span>
+                <span class="header-sub-image-text">ˆÀ‘S‰^“]ƒXƒN[ƒ‹</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/map_m/" target="_blank">
+              <a class="header-sub-image-link" href="/map_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img6.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å ´å†…ãƒžãƒƒãƒ—</span>
+                <span class="header-sub-image-text">ê“àƒ}ƒbƒv</span>
               </a>
             </li>
 
@@ -352,8 +313,8 @@
 
           <div class="header-sub-content-inner js-header-sub-content-inner" data-content="#header-sub-attraction">
 
-  <a class="header-sub-top-button" href="https://www.twinring.jp/attraction/#program" target="_blank">
-    ã‚¢ãƒˆãƒ©ã‚¯ã‚·ãƒ§ãƒ³ãƒ» ã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£TOP
+  <a class="header-sub-top-button" href="/attraction/#program" target="_blank">
+    ƒAƒgƒ‰ƒNƒVƒ‡ƒ“E ƒAƒNƒeƒBƒrƒeƒBTOP
   </a>
 
   <div class="header-sub-inner header-sub-inner-attraction">
@@ -363,29 +324,29 @@
           <ul class="header-sub-image-list header-sub-image-list-attraction">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/sumika/" target="_blank">
+              <a class="header-sub-image-link" href="/sumika/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/activity-img1.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å·¨å¤§ãƒãƒƒãƒˆã®æ£® SUMIKA</span>
+                <span class="header-sub-image-text">‹‘åƒlƒbƒg‚ÌX SUMIKA</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/dokidoki/" target="_blank">
+              <a class="header-sub-image-link" href="/dokidoki/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/activity-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®æ„Ÿè¦šã‚¢ã‚¹ãƒ¬ãƒãƒƒã‚¯ DOKIDOKI</span>
+                <span class="header-sub-image-text">XŠ´ŠoƒAƒXƒŒƒ`ƒbƒN DOKIDOKI</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/itadaki/" target="_blank">
+              <a class="header-sub-image-link" href="/itadaki/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/activity-img3.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">è¿·å®®æ£®æ®¿ ITADAKI</span>
+                <span class="header-sub-image-text">–À‹{X“a ITADAKI</span>
               </a>
             </li>
 
@@ -394,38 +355,38 @@
           <ul class="header-sub-image-list header-sub-image-list-attraction">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/attraction/#car" target="_blank">
+              <a class="header-sub-image-link" href="http://twinring-motegi.test-web.asia/mobipark_m/attractions/car-and-bike.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img4.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚¯ãƒ«ãƒžï¼†<br class="u-show-pc">ãƒã‚¤ã‚¯ã®ã‚¢ãƒˆãƒ©ã‚¯ã‚·ãƒ§ãƒ³</span>
+                <span class="header-sub-image-text">ƒNƒ‹ƒ}•<br class="u-show-pc">ƒoƒCƒN‚ÌƒAƒgƒ‰ƒNƒVƒ‡ƒ“</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/mobipark_m/attractions/racingkart/" target="_blank">
+              <a class="header-sub-image-link" href="/mobipark_m/attractions/racingkart/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img5.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å¤§äººã‚‚æ¥½ã—ã‚ã‚‹<br class="u-show-pc">æœ¬æ ¼ãƒ¬ãƒ¼ã‚·ãƒ³ã‚°ã‚«ãƒ¼ãƒˆ</span>
+                <span class="header-sub-image-text">‘ål‚àŠy‚µ‚ß‚é<br class="u-show-pc">–{ŠiƒŒ[ƒVƒ“ƒOƒJ[ƒg</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/collection-hall/pit/" target="_blank">
+              <a class="header-sub-image-link" href="/collection-hall/pit/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img6.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚¯ãƒ«ãƒžã®ãƒ¯ãƒ¼ã‚¯ã‚·ãƒ§ãƒƒãƒ—<br>ï¼ˆãƒ”ãƒƒãƒˆå·¥æˆ¿ï¼‰</span>
+                <span class="header-sub-image-text">ƒNƒ‹ƒ}‚Ìƒ[ƒNƒVƒ‡ƒbƒv<br>iƒsƒbƒgH–[j</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/zip-line/" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/zip-line/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img7.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ç©ºä¸­æ•£æ­©<br class="u-show-pc">ï¼ˆã‚¸ãƒƒãƒ—ãƒ©ã‚¤ãƒ³ï¼‰</span>
+                <span class="header-sub-image-text">X‚Ì‹ó’†ŽU•à<br class="u-show-pc">iƒWƒbƒvƒ‰ƒCƒ“j</span>
               </a>
             </li>
 
@@ -434,38 +395,38 @@
           <ul class="header-sub-image-list header-sub-image-list-attraction">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/program/" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/program/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img8.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®æ•£ç­–ãƒ—ãƒ­ã‚°ãƒ©ãƒ </span>
+                <span class="header-sub-image-text">X‚ÌŽUôƒvƒƒOƒ‰ƒ€</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/program/#hydrobios" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/program/#hydrobios" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img9.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ç”Ÿãã‚‚ã®ã®ç ”ç©¶</span>
+                <span class="header-sub-image-text">¶‚«‚à‚Ì‚ÌŒ¤‹†Žº</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/program/craft.html" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/program/craft.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img10.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ã‚¯ãƒ©ãƒ•ãƒˆä½“é¨“</span>
+                <span class="header-sub-image-text">X‚ÌƒNƒ‰ƒtƒg</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/program/program.html" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/program/program.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img11.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ä½“é¨“ãƒ—ãƒ­ã‚°ãƒ©ãƒ </span>
+                <span class="header-sub-image-text">X‚Ì‘ÌŒ±ƒvƒƒOƒ‰ƒ€</span>
               </a>
             </li>
 
@@ -476,10 +437,10 @@
       <div class="header-sub-right-content">
         <ul>
           <li class="header-sub-right-content-item">
-            <a class="header-sub-right-content-link" href="https://www.twinring.jp/kochira_m/" target="_blank">ã‚³ãƒãƒ©ãƒ¬ãƒ¼ã‚·ãƒ³ã‚°</a>
+            <a class="header-sub-right-content-link" href="/kochira_m/" target="_blank">ƒRƒ`ƒ‰ƒŒ[ƒVƒ“ƒO</a>
           </li>
           <li class="header-sub-right-content-item">
-            <a class="header-sub-right-content-link" href="https://www.twinring.jp/mobipark_m/guide/" target="_blank">ã‚¢ãƒˆãƒ©ã‚¯ã‚·ãƒ§ãƒ³ã®<br class="u-show-pc">ã”åˆ©ç”¨åŸºæº–</a>
+            <a class="header-sub-right-content-link" href="/mobipark_m/guide/" target="_blank">ƒAƒgƒ‰ƒNƒVƒ‡ƒ“‚Ì<br class="u-show-pc">‚²—˜—pŠî€</a>
           </li>
         </ul>
       </div>
@@ -501,14 +462,14 @@
 
   <div class="header-sub-inner">
     <div class="header-sub-inner-block">
-      <a class="header-sub-top-button" href="https://www.twinring.jp/motorsports_m/" target="_blank">ãƒ¢ãƒ¼ã‚¿ãƒ¼ã‚¹ãƒãƒ¼ãƒ„TOP</a>
+      <a class="header-sub-top-button" href="/motorsports_m/" target="_blank">ƒ‚[ƒ^[ƒXƒ|[ƒcTOP</a>
 
       <div class="header-sub-image-list-wrap">
 
           <ul class="header-sub-image-list header-sub-image-list-padding">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/motogp/" target="_blank">
+              <a class="header-sub-image-link" href="/motogp/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img1.jpg);"></div>
                 </div>
@@ -517,16 +478,16 @@
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/wctrial/" target="_blank">
+              <a class="header-sub-image-link" href="/wctrial/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒˆãƒ©ã‚¤ã‚¢ãƒ«ä¸–ç•Œé¸æ‰‹æ¨©</span>
+                <span class="header-sub-image-text">ƒgƒ‰ƒCƒAƒ‹¢ŠE‘IŽèŒ </span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/supergt_m/" target="_blank">
+              <a class="header-sub-image-link" href="/supergt_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img3.jpg);"></div>
                 </div>
@@ -539,29 +500,29 @@
           <ul class="header-sub-image-list header-sub-image-list-padding">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/2and4/" target="_blank">
+              <a class="header-sub-image-link" href="/superformula/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img4.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚¹ãƒ¼ãƒ‘ãƒ¼ãƒ•ã‚©ãƒ¼ãƒŸãƒ¥ãƒ©</span>
+                <span class="header-sub-image-text">ƒX[ƒp[ƒtƒH[ƒ~ƒ…ƒ‰</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/superbike_m/" target="_blank">
+              <a class="header-sub-image-link" href="/superbike_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img5.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å…¨æ—¥æœ¬ãƒ­ãƒ¼ãƒ‰ãƒ¬ãƒ¼ã‚¹</span>
+                <span class="header-sub-image-text">‘S“ú–{ƒ[ƒhƒŒ[ƒX</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/s-taikyu_m/" target="_blank">
+              <a class="header-sub-image-link" href="/s-taikyu_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img6.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚¹ãƒ¼ãƒ‘ãƒ¼è€ä¹…</span>
+                <span class="header-sub-image-text">ƒX[ƒp[‘Ï‹v</span>
               </a>
             </li>
 
@@ -571,19 +532,19 @@
         <ul class="header-sub-bottom-list header-sub-bottom-list-upper">
 
           <li>
-            <a href="https://www.twinring.jp/ajtrial_m/" target="_blank">å…¨æ—¥æœ¬ãƒˆãƒ©ã‚¤ã‚¢ãƒ«</a>
+            <a href="/ajtrial_m/" target="_blank">‘S“ú–{ƒgƒ‰ƒCƒAƒ‹</a>
           </li>
 
           <li>
-            <a href="https://www.twinring.jp/all-j-kart_m/" target="_blank">å…¨æ—¥æœ¬ã‚«ãƒ¼ãƒˆ</a>
+            <a href="/all-j-kart_m/" target="_blank">‘S“ú–{ƒJ[ƒg</a>
           </li>
 
         </ul>
       </div>
     </div>
     <div class="header-sub-inner-block header-sub-inner-block-right">
-      <a class="header-sub-top-button" href="https://www.twinring.jp/motorsports_m/run/" target="_blank">
-        ã‚µãƒ¼ã‚­ãƒƒãƒˆã‚’èµ°ã‚‹TOP
+      <a class="header-sub-top-button" href="/motorsports_m/run/" target="_blank">
+        ƒT[ƒLƒbƒg‚ð‘–‚éTOP
       </a>
 
       <div class="header-sub-image-wrap">
@@ -593,8 +554,8 @@
       <ul class="header-sub-button-list">
 
         <li class="header-sub-button-item">
-          <a class="header-sub-button-link" href="https://www.twinring.jp/motorsports_m/run/step1.html" target="_blank">
-            1. å®¶æ—ã§ãƒ¬ãƒ¼ã‚·ãƒ³ã‚°ã‚³ãƒ¼ã‚¹ã‚’èµ°ã£ã¦ã¿ã‚ˆã†
+          <a class="header-sub-button-link" href="/motorsports_m/run/step1.html" target="_blank">
+            1. ‰Æ‘°‚ÅƒŒ[ƒVƒ“ƒOƒR[ƒX‚ð‘–‚Á‚Ä‚Ý‚æ‚¤
             <i class="header-sub-button-link-icon">
               <svg>
   <title>arrow</title>
@@ -606,8 +567,8 @@
         </li>
 
         <li class="header-sub-button-item">
-          <a class="header-sub-button-link" href="https://www.twinring.jp/motorsports_m/run/step2.html" target="_blank">
-            2. ã‚¹ã‚¯ãƒ¼ãƒ«ã§ãƒ¬ãƒ™ãƒ«ã‚¢ãƒƒãƒ—ã—ã‚ˆã†
+          <a class="header-sub-button-link" href="/motorsports_m/run/step2.html" target="_blank">
+            2. ƒXƒN[ƒ‹‚ÅƒŒƒxƒ‹ƒAƒbƒv‚µ‚æ‚¤
             <i class="header-sub-button-link-icon">
               <svg>
   <title>arrow</title>
@@ -619,8 +580,8 @@
         </li>
 
         <li class="header-sub-button-item">
-          <a class="header-sub-button-link" href="https://www.twinring.jp/motorsports_m/run/step3.html" target="_blank">
-            3. æœ¬æ ¼çš„ãªèµ°ã‚Šã‚’ä½“é¨“ã—ã‚ˆã†
+          <a class="header-sub-button-link" href="/motorsports_m/run/step3.html" target="_blank">
+            3. –{Ši“I‚È‘–‚è‚ð‘ÌŒ±‚µ‚æ‚¤
             <i class="header-sub-button-link-icon">
               <svg>
   <title>arrow</title>
@@ -632,8 +593,8 @@
         </li>
 
         <li class="header-sub-button-item">
-          <a class="header-sub-button-link" href="https://www.twinring.jp/motorsports_m/run/step4.html" target="_blank">
-            4. å…¥é–€ã‚¯ãƒ©ã‚¹ã®ãƒ¬ãƒ¼ã‚¹ã«å‚åŠ ã—ã‚ˆã†
+          <a class="header-sub-button-link" href="/motorsports_m/run/step4.html" target="_blank">
+            4. “ü–åƒNƒ‰ƒX‚ÌƒŒ[ƒX‚ÉŽQ‰Á‚µ‚æ‚¤
             <i class="header-sub-button-link-icon">
               <svg>
   <title>arrow</title>
@@ -645,8 +606,8 @@
         </li>
 
         <li class="header-sub-button-item">
-          <a class="header-sub-button-link" href="https://www.twinring.jp/motorsports_m/run/step5.html" target="_blank">
-            5. æœ¬æ ¼çš„ãªãƒ¬ãƒ¼ã‚¹ã«å‚åŠ ã—ã‚ˆã†
+          <a class="header-sub-button-link" href="/motorsports_m/run/step5.html" target="_blank">
+            5. –{Ši“I‚ÈƒŒ[ƒX‚ÉŽQ‰Á‚µ‚æ‚¤
             <i class="header-sub-button-link-icon">
               <svg>
   <title>arrow</title>
@@ -664,23 +625,19 @@
     <ul class="header-sub-bottom-list">
 
       <li>
-        <a href="https://www.twinring.jp/astp/" target="_blank">å®‰å…¨é‹è»¢ã‚¹ã‚¯ãƒ¼ãƒ«</a>
+        <a href="/astp/" target="_blank">ˆÀ‘S‰^“]ƒXƒN[ƒ‹</a>
       </li>
 
       <li>
-        <a href="https://www.twinring.jp/motorsports_m/driving/" target="_blank">ã‚¹ã‚¯ãƒ¼ãƒ«ãƒ»èµ°è¡Œä¼šã€€ï¼”è¼ª</a>
+        <a href="/motorsports_m/driving/" target="_blank">ƒXƒN[ƒ‹E‘–s‰ï@‚S—Ö</a>
       </li>
 
       <li>
-        <a href="https://www.twinring.jp/motorsports_m/riding/" target="_blank">ã‚¹ã‚¯ãƒ¼ãƒ«ãƒ»èµ°è¡Œä¼šã€€ï¼’è¼ª</a>
+        <a href="/trmc-s/" target="_blank">TRMC-S‰ïˆõ</a>
       </li>
 
       <li>
-        <a href="https://www.twinring.jp/trmc-s/" target="_blank">TRMC-Sä¼šå“¡</a>
-      </li>
-
-      <li>
-        <a href="https://www.twinring.jp/angel/" target="_blank">ãƒ„ã‚¤ãƒ³ãƒªãƒ³ã‚¯ã‚‚ã¦ãŽã‚¨ãƒ³ã‚¸ã‚§ãƒ«</a>
+        <a href="/angel/" target="_blank">ƒcƒCƒ“ƒŠƒ“ƒN‚à‚Ä‚¬ƒGƒ“ƒWƒFƒ‹</a>
       </li>
 
     </ul>
@@ -701,40 +658,40 @@
 
   <div class="header-sub-inner">
     <div class="header-sub-inner-block header-sub-inner-block-col2">
-      <a class="header-sub-top-button" href="https://www.twinring.jp/f-glamping/" target="_blank">æ£®ã¨æ˜Ÿç©ºã®ã‚­ãƒ£ãƒ³ãƒ—ãƒ´ã‚£ãƒ¬ãƒƒã‚¸TOP</a>
+      <a class="header-sub-top-button" href="/f-glamping/" target="_blank">X‚Æ¯‹ó‚ÌƒLƒƒƒ“ƒvƒ”ƒBƒŒƒbƒWTOP</a>
       <div class="header-sub-image-list-wrap">
 
           <ul class="header-sub-image-list header-sub-image-list-col2">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/stay/" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/stay/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img1.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚°ãƒ©ãƒ³ãƒ”ãƒ³ã‚°</span>
+                <span class="header-sub-image-text">ƒOƒ‰ƒ“ƒsƒ“ƒO</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/stay/index.html?id=logcabin" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/stay/index.html?id=logcabin" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒ­ã‚°ã‚­ãƒ£ãƒ“ãƒ³</span>
+                <span class="header-sub-image-text">ƒƒOƒLƒƒƒrƒ“</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/stay/index.html?id=komorebisite" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/stay/index.html?id=komorebisite" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img3.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚­ãƒ£ãƒ³ãƒ—</span>
+                <span class="header-sub-image-text">ƒLƒƒƒ“ƒv</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/bbq/" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/bbq/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img4.jpg);"></div>
                 </div>
@@ -743,11 +700,11 @@
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/activity/" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/activity/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img5.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å®¿æ³Šè€…é™å®šã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£</span>
+                <span class="header-sub-image-text">h”‘ŽÒŒÀ’èƒAƒNƒeƒBƒrƒeƒB</span>
               </a>
             </li>
 
@@ -756,8 +713,8 @@
       </div>
     </div>
     <div class="header-sub-inner-block header-sub-inner-block-right header-sub-inner-block-col2">
-      <a class="header-sub-top-button" href="https://www.twinring.jp/hoteltwinring/" target="_blank">
-        ãƒ›ãƒ†ãƒ«ãƒ„ã‚¤ãƒ³ãƒªãƒ³ã‚¯TOP
+      <a class="header-sub-top-button" href="/hoteltwinring/" target="_blank">
+        ƒzƒeƒ‹ƒcƒCƒ“ƒŠƒ“ƒNTOP
       </a>
 
       <div class="header-sub-image-list-wrap">
@@ -765,47 +722,47 @@
           <ul class="header-sub-image-list header-sub-image-list-col2">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hoteltwinring/renewal/" target="_blank">
+              <a class="header-sub-image-link" href="/hoteltwinring/renewal/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img7.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚¹ãƒ¼ãƒšãƒªã‚¢ãƒ•ã‚¡ãƒŸãƒªãƒ¼ãƒ«ãƒ¼ãƒ </span>
+                <span class="header-sub-image-text">ƒX[ƒyƒŠƒAƒtƒ@ƒ~ƒŠ[ƒ‹[ƒ€</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/motegi/hoteltwinring/" target="_blank">
+              <a class="header-sub-image-link" href="/motegi/hoteltwinring/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img6.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚°ãƒ©ãƒ³ãƒ«ãƒ¼ãƒ </span>
+                <span class="header-sub-image-text">ƒOƒ‰ƒ“ƒ‹[ƒ€</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hoteltwinring/guest/" target="_blank">
+              <a class="header-sub-image-link" href="/hoteltwinring/guest/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img8.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚²ã‚¹ãƒˆãƒ«ãƒ¼ãƒ </span>
+                <span class="header-sub-image-text">ƒQƒXƒgƒ‹[ƒ€</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hoteltwinring/nozominoyu/" target="_blank">
+              <a class="header-sub-image-link" href="/hoteltwinring/nozominoyu/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img9.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã®ãžã¿ã®æ¹¯</span>
+                <span class="header-sub-image-text">‚Ì‚¼‚Ý‚Ì“’</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/marcherant.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/marcherant.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img10.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ãƒ¬ã‚¹ãƒˆãƒ©ãƒ³MARCHERANT</span>
+                <span class="header-sub-image-text">X‚ÌƒŒƒXƒgƒ‰ƒ“MARCHERANT</span>
               </a>
             </li>
 
@@ -827,8 +784,8 @@
 
           <div class="header-sub-content-inner js-header-sub-content-inner" data-content="#header-sub-restaurant">
 
-  <a class="header-sub-top-button" href="https://www.twinring.jp/foods_m/" target="_blank">
-    ãƒ¬ã‚¹ãƒˆãƒ©ãƒ³TOP
+  <a class="header-sub-top-button" href="/foods_m/" target="_blank">
+    ƒŒƒXƒgƒ‰ƒ“TOP
   </a>
 
   <div class="header-sub-inner header-sub-inner-restaurant">
@@ -838,29 +795,29 @@
           <ul class="header-sub-image-list header-sub-image-list-restaurant">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/marcherant.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/marcherant.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img5.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ãƒ¬ã‚¹ãƒˆãƒ©ãƒ³ MARCHERANT</span>
+                <span class="header-sub-image-text">X‚ÌƒŒƒXƒgƒ‰ƒ“ MARCHERANT</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/toya.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/toya.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img6.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">é‡Œå±±æ‡çŸ³ ç™»è°·</span>
+                <span class="header-sub-image-text">—¢ŽR‰ùÎ “o’J</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/oak.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/oak.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img1.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚«ãƒ•ã‚§ãƒ¬ã‚¹ãƒˆãƒ©ãƒ³ ã‚ªãƒ¼ã‚¯</span>
+                <span class="header-sub-image-text">ƒJƒtƒFƒŒƒXƒgƒ‰ƒ“ ƒI[ƒN</span>
               </a>
             </li>
 
@@ -869,29 +826,29 @@
           <ul class="header-sub-image-list header-sub-image-list-restaurant">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/rocco.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/rocco.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ã‚¸ã‚§ãƒ©ãƒ†ãƒªã‚¢ ROCCO</span>
+                <span class="header-sub-image-text">X‚ÌƒWƒFƒ‰ƒeƒŠƒA ROCCO</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/donguri.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/donguri.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img3.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ã‚­ãƒƒãƒãƒ³ ã©ã‚“ãã‚Š</span>
+                <span class="header-sub-image-text">X‚ÌƒLƒbƒ`ƒ“ ‚Ç‚ñ‚®‚è</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/gran-turismo.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/gran-turismo.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img4.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚°ãƒ©ãƒ³ãƒ„ãƒ¼ãƒªã‚¹ãƒ¢ã‚«ãƒ•ã‚§</span>
+                <span class="header-sub-image-text">ƒOƒ‰ƒ“ƒc[ƒŠƒXƒ‚ƒJƒtƒF</span>
               </a>
             </li>
 
@@ -938,13 +895,13 @@
           <ul class="header-bottom-list">
             <li class="header-bottom-item">
               <a class="header-bottom-link" href="/">
-                <span class="header-bottom-link-text">ãƒˆãƒƒãƒ—ãƒšãƒ¼ã‚¸</span>
+                <span class="header-bottom-link-text">ƒgƒbƒvƒy[ƒW</span>
               </a>
             </li>
 
             <li class="header-bottom-item header-bottom-item-location">
               <a class="header-bottom-link header-sp-bottom-link js-header-button-sub" data-target="#header-sub-access" href="#header-sub-access">
-                <span class="header-bottom-link-text">ã‚¨ãƒªã‚¢ãƒ»æ–½è¨­</span>
+                <span class="header-bottom-link-text">ƒGƒŠƒAEŽ{Ý</span>
                 <i class="header-bottom-icon">
                   <svg>
   <title>location</title>
@@ -957,7 +914,7 @@
 
             <li class="header-bottom-item header-bottom-item-activity">
               <a class="header-bottom-link header-sp-bottom-link js-header-button-sub" data-target="#header-sub-attraction" href="#header-sub-attraction">
-                <span class="header-bottom-link-text">ã‚¢ãƒˆãƒ©ã‚¯ã‚·ãƒ§ãƒ³ãƒ»<br class="u-show-pc">ã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£</span>
+                <span class="header-bottom-link-text">ƒAƒgƒ‰ƒNƒVƒ‡ƒ“E<br class="u-show-pc">ƒAƒNƒeƒBƒrƒeƒB</span>
                 <i class="header-bottom-icon">
                   <svg>
   <title>activity</title>
@@ -970,7 +927,7 @@
 
             <li class="header-bottom-item header-bottom-item-motorsports">
               <a class="header-bottom-link header-sp-bottom-link js-header-button-sub" data-target="#header-sub-motorsports" href="#header-sub-motorsports">
-                <span class="header-bottom-link-text">ãƒ¢ãƒ¼ã‚¿ãƒ¼<br class="u-show-pc">ã‚¹ãƒãƒ¼ãƒ„</span>
+                <span class="header-bottom-link-text">ƒ‚[ƒ^[<br class="u-show-pc">ƒXƒ|[ƒc</span>
                 <i class="header-bottom-icon">
                   <svg>
   <title>motorsports</title>
@@ -983,7 +940,7 @@
 
             <li class="header-bottom-item header-bottom-item-camp">
               <a class="header-bottom-link header-sp-bottom-link js-header-button-sub" data-target="#header-sub-camp" href="#header-sub-camp">
-                <span class="header-bottom-link-text">ãƒ›ãƒ†ãƒ«ãƒ»<br class="u-show-pc">ã‚­ãƒ£ãƒ³ãƒ—</span>
+                <span class="header-bottom-link-text">ƒzƒeƒ‹E<br class="u-show-pc">ƒLƒƒƒ“ƒv</span>
                 <i class="header-bottom-icon">
                   <svg>
   <title>camp</title>
@@ -996,7 +953,7 @@
 
             <li class="header-bottom-item header-bottom-item-restaurant">
               <a class="header-bottom-link header-sp-bottom-link js-header-button-sub" data-target="#header-sub-restaurant" href="#header-sub-restaurant">
-                <span class="header-bottom-link-text">ãƒ¬ã‚¹ãƒˆãƒ©ãƒ³</span>
+                <span class="header-bottom-link-text">ƒŒƒXƒgƒ‰ƒ“</span>
                 <i class="header-bottom-icon">
                   <svg>
   <title>restaurant</title>
@@ -1008,8 +965,8 @@
             </li>
 
             <li class="header-bottom-item header-bottom-item-shop">
-              <a class="header-bottom-link header-sp-bottom-link" href="https://www.twinring.jp/goods_m/" target="_blank">
-                <span class="header-bottom-link-text">ã‚°ãƒƒã‚ºï¼†<br class="u-show-pc">ã‚·ãƒ§ãƒƒãƒ—</span>
+              <a class="header-bottom-link header-sp-bottom-link" href="/goods_m/" target="_blank">
+                <span class="header-bottom-link-text">ƒOƒbƒY•<br class="u-show-pc">ƒVƒ‡ƒbƒv</span>
                 <i class="header-bottom-icon">
                   <svg>
   <title>shop</title>
@@ -1025,34 +982,34 @@
         <nav class="header-top-nav">
 
           <li class="header-top-nav-item js-top-nav-button">
-            <a class="header-top-nav-link" href="https://www.twinring.jp/twinringmotegi/plan/adults.html" target="_blank">ã‚‚ã¦ãŽã®æ¥½ã—ã¿æ–¹</a>
+            <a class="header-top-nav-link" href="/twinringmotegi/plan/adults.html" target="_blank">‚à‚Ä‚¬‚ÌŠy‚µ‚Ý•û</a>
 
           </li>
 
           <li class="header-top-nav-item js-top-nav-button">
-            <a class="header-top-nav-link" href="#" target="_blank">ãƒ‹ãƒ¥ãƒ¼ã‚¹ãƒ»ã‚¤ãƒ™ãƒ³ãƒˆ</a>
+            <a class="header-top-nav-link" href="#" target="_blank">ƒjƒ…[ƒXEƒCƒxƒ“ƒg</a>
 
             <div class="header-top-nav-sub js-top-nav-sub">
 
                 <ul>
 
-                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="#" target="_blank">ãƒ‹ãƒ¥ãƒ¼ã‚¹ä¸€è¦§</a></li>
-
-                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/event/" target="_blank">ã‚¤ãƒ™ãƒ³ãƒˆä¸€è¦§</a></li>
+                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/calendar_m/" target="_blank">ƒCƒxƒ“ƒgˆê——</a></li>
 
                 </ul>
 
                 <ul>
 
-                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/season-event/spring/" target="_blank">æ˜¥ã®ã‚¤ãƒ™ãƒ³ãƒˆç‰¹é›†</a></li>
+                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/season-event/spring/" target="_blank">t‚ÌƒCƒxƒ“ƒg“ÁW</a></li>
 
-                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/season-event/gw/" target="_blank">GWã®ã‚¤ãƒ™ãƒ³ãƒˆç‰¹é›†</a></li>
+                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/season-event/gw/" target="_blank">GW‚ÌƒCƒxƒ“ƒg“ÁW</a></li>
 
-                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/season-event/summer/" target="_blank">å¤ã®ã‚¤ãƒ™ãƒ³ãƒˆç‰¹é›†</a></li>
+                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/season-event/summer/" target="_blank">‰Ä‚ÌƒCƒxƒ“ƒg“ÁW</a></li>
 
-                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/season-event/winter/" target="_blank">å†¬ã®ã‚¤ãƒ™ãƒ³ãƒˆç‰¹é›†</a></li>
+                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/season-event/autumn/" target="_blank">H‚ÌƒCƒxƒ“ƒg“ÁW</a></li>
 
-                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="https://www.twinring.jp/fireworks/" target="_blank">èŠ±ç«ã®ç¥­å…¸ã€€å¤/å†¬</a></li>
+                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/season-event/winter/" target="_blank">“~‚ÌƒCƒxƒ“ƒg“ÁW</a></li>
+
+                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="/fireworks/" target="_blank">‰Ô‰Î‚ÌÕ“T@‰Ä/“~</a></li>
 
                 </ul>
 
@@ -1061,22 +1018,22 @@
           </li>
 
           <li class="header-top-nav-item js-top-nav-button">
-            <a class="header-top-nav-link" href="https://www.twinring.jp/hours_m/" target="_blank">å–¶æ¥­æ™‚é–“</a>
+            <a class="header-top-nav-link" href="/hours_m/" target="_blank">‰c‹ÆŽžŠÔ</a>
 
           </li>
 
           <li class="header-top-nav-item js-top-nav-button">
-            <a class="header-top-nav-link" href="https://www.twinring.jp/fee_m/" target="_blank">æ–™é‡‘ãƒ»ãƒã‚±ãƒƒãƒˆ</a>
+            <a class="header-top-nav-link" href="/fee_m/" target="_blank">—¿‹àEƒ`ƒPƒbƒg</a>
 
           </li>
 
           <li class="header-top-nav-item js-top-nav-button">
-            <a class="header-top-nav-link" href="https://www.twinring.jp/service_m/" target="_blank">ã‚ˆãã‚ã‚‹ã”è³ªå•</a>
+            <a class="header-top-nav-link" href="/service_m/" target="_blank">‚æ‚­‚ ‚é‚²Ž¿–â</a>
 
           </li>
 
           <li class="header-top-nav-item js-top-nav-button">
-            <a class="header-top-nav-link" href="https://www.twinring.jp/access_m/" target="_blank">ã‚¢ã‚¯ã‚»ã‚¹</a>
+            <a class="header-top-nav-link" href="/access_m/" target="_blank">ƒAƒNƒZƒX</a>
 
           </li>
 
@@ -1084,19 +1041,19 @@
 
         <ul class="header-lang">
           <li class="header-lang-item">
-            <a href="https://www.twinring.jp/" target="_blank">JP</a>
+            <a href="/" target="_blank">JP</a>
           </li>
           <li class="header-lang-item">
-            <a href="https://www.twinring.jp/english/" target="_blank">EN</a>
+            <a href="/english/" target="_blank">EN</a>
           </li>
           <li class="header-lang-item">
-            <a href="https://www.twinring.jp/tw/" target="_blank">CH</a>
+            <a href="/tw/" target="_blank">CH</a>
           </li>
         </ul>
 
         <div class="header-sub-content-inner header-sub-content-inner-access js-header-sub-content-inner" data-content="#header-sub-access">
 
-  <a class="header-sub-top-button" href="https://www.twinring.jp/twinringmotegi/" target="_blank">ã‚¨ãƒªã‚¢ãƒ»æ–½è¨­TOP</a>
+  <a class="header-sub-top-button" href="/twinringmotegi/" target="_blank">ƒGƒŠƒAEŽ{ÝTOP</a>
 
   <div class="header-sub-inner">
     <div class="header-sub-inner-block">
@@ -1105,38 +1062,38 @@
           <ul class="header-sub-image-list">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒãƒ­ãƒ¼ã‚¦ãƒƒã‚º</span>
+                <span class="header-sub-image-text">ƒnƒ[ƒEƒbƒY</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/mobipark_m/" target="_blank">
+              <a class="header-sub-image-link" href="/mobipark_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/activity-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒ¢ãƒ“ãƒ‘ãƒ¼ã‚¯</span>
+                <span class="header-sub-image-text">ƒ‚ƒrƒp[ƒN</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img1.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã¨æ˜Ÿç©ºã®ã‚­ãƒ£ãƒ³ãƒ—ãƒ´ã‚£ãƒ¬ãƒƒã‚¸</span>
+                <span class="header-sub-image-text">X‚Æ¯‹ó‚ÌƒLƒƒƒ“ƒvƒ”ƒBƒŒƒbƒW</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hoteltwinring/" target="_blank">
+              <a class="header-sub-image-link" href="/hoteltwinring/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒ›ãƒ†ãƒ«ãƒ„ã‚¤ãƒ³ãƒªãƒ³ã‚¯</span>
+                <span class="header-sub-image-text">ƒzƒeƒ‹ƒcƒCƒ“ƒŠƒ“ƒN</span>
               </a>
             </li>
 
@@ -1145,38 +1102,38 @@
           <ul class="header-sub-image-list">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/motorsports_m/" target="_blank">
+              <a class="header-sub-image-link" href="/motorsports_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img3.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒ¢ãƒ¼ã‚¿ãƒ¼ã‚¹ãƒãƒ¼ãƒ„</span>
+                <span class="header-sub-image-text">ƒ‚[ƒ^[ƒXƒ|[ƒc</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/collection-hall/" target="_blank">
+              <a class="header-sub-image-link" href="/collection-hall/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img4.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒ›ãƒ³ãƒ€ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ãƒ›ãƒ¼ãƒ«</span>
+                <span class="header-sub-image-text">ƒzƒ“ƒ_ƒRƒŒƒNƒVƒ‡ƒ“ƒz[ƒ‹</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/astp/" target="_blank">
+              <a class="header-sub-image-link" href="/astp/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img5.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å®‰å…¨é‹è»¢ã‚¹ã‚¯ãƒ¼ãƒ«</span>
+                <span class="header-sub-image-text">ˆÀ‘S‰^“]ƒXƒN[ƒ‹</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/map_m/" target="_blank">
+              <a class="header-sub-image-link" href="/map_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/access-img6.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å ´å†…ãƒžãƒƒãƒ—</span>
+                <span class="header-sub-image-text">ê“àƒ}ƒbƒv</span>
               </a>
             </li>
 
@@ -1190,8 +1147,8 @@
 
         <div class="header-sub-content-inner js-header-sub-content-inner" data-content="#header-sub-attraction">
 
-  <a class="header-sub-top-button" href="https://www.twinring.jp/attraction/#program" target="_blank">
-    ã‚¢ãƒˆãƒ©ã‚¯ã‚·ãƒ§ãƒ³ãƒ» ã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£TOP
+  <a class="header-sub-top-button" href="/attraction/#program" target="_blank">
+    ƒAƒgƒ‰ƒNƒVƒ‡ƒ“E ƒAƒNƒeƒBƒrƒeƒBTOP
   </a>
 
   <div class="header-sub-inner header-sub-inner-attraction">
@@ -1201,29 +1158,29 @@
           <ul class="header-sub-image-list header-sub-image-list-attraction">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/sumika/" target="_blank">
+              <a class="header-sub-image-link" href="/sumika/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/activity-img1.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å·¨å¤§ãƒãƒƒãƒˆã®æ£® SUMIKA</span>
+                <span class="header-sub-image-text">‹‘åƒlƒbƒg‚ÌX SUMIKA</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/dokidoki/" target="_blank">
+              <a class="header-sub-image-link" href="/dokidoki/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/activity-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®æ„Ÿè¦šã‚¢ã‚¹ãƒ¬ãƒãƒƒã‚¯ DOKIDOKI</span>
+                <span class="header-sub-image-text">XŠ´ŠoƒAƒXƒŒƒ`ƒbƒN DOKIDOKI</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/itadaki/" target="_blank">
+              <a class="header-sub-image-link" href="/itadaki/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/activity-img3.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">è¿·å®®æ£®æ®¿ ITADAKI</span>
+                <span class="header-sub-image-text">–À‹{X“a ITADAKI</span>
               </a>
             </li>
 
@@ -1232,38 +1189,38 @@
           <ul class="header-sub-image-list header-sub-image-list-attraction">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/attraction/#car" target="_blank">
+              <a class="header-sub-image-link" href="http://twinring-motegi.test-web.asia/mobipark_m/attractions/car-and-bike.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img4.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚¯ãƒ«ãƒžï¼†<br class="u-show-pc">ãƒã‚¤ã‚¯ã®ã‚¢ãƒˆãƒ©ã‚¯ã‚·ãƒ§ãƒ³</span>
+                <span class="header-sub-image-text">ƒNƒ‹ƒ}•<br class="u-show-pc">ƒoƒCƒN‚ÌƒAƒgƒ‰ƒNƒVƒ‡ƒ“</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/mobipark_m/attractions/racingkart/" target="_blank">
+              <a class="header-sub-image-link" href="/mobipark_m/attractions/racingkart/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img5.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å¤§äººã‚‚æ¥½ã—ã‚ã‚‹<br class="u-show-pc">æœ¬æ ¼ãƒ¬ãƒ¼ã‚·ãƒ³ã‚°ã‚«ãƒ¼ãƒˆ</span>
+                <span class="header-sub-image-text">‘ål‚àŠy‚µ‚ß‚é<br class="u-show-pc">–{ŠiƒŒ[ƒVƒ“ƒOƒJ[ƒg</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/collection-hall/pit/" target="_blank">
+              <a class="header-sub-image-link" href="/collection-hall/pit/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img6.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚¯ãƒ«ãƒžã®ãƒ¯ãƒ¼ã‚¯ã‚·ãƒ§ãƒƒãƒ—<br>ï¼ˆãƒ”ãƒƒãƒˆå·¥æˆ¿ï¼‰</span>
+                <span class="header-sub-image-text">ƒNƒ‹ƒ}‚Ìƒ[ƒNƒVƒ‡ƒbƒv<br>iƒsƒbƒgH–[j</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/zip-line/" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/zip-line/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img7.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ç©ºä¸­æ•£æ­©<br class="u-show-pc">ï¼ˆã‚¸ãƒƒãƒ—ãƒ©ã‚¤ãƒ³ï¼‰</span>
+                <span class="header-sub-image-text">X‚Ì‹ó’†ŽU•à<br class="u-show-pc">iƒWƒbƒvƒ‰ƒCƒ“j</span>
               </a>
             </li>
 
@@ -1272,38 +1229,38 @@
           <ul class="header-sub-image-list header-sub-image-list-attraction">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/program/" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/program/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img8.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®æ•£ç­–ãƒ—ãƒ­ã‚°ãƒ©ãƒ </span>
+                <span class="header-sub-image-text">X‚ÌŽUôƒvƒƒOƒ‰ƒ€</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/program/#hydrobios" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/program/#hydrobios" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img9.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ç”Ÿãã‚‚ã®ã®ç ”ç©¶</span>
+                <span class="header-sub-image-text">¶‚«‚à‚Ì‚ÌŒ¤‹†Žº</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/program/craft.html" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/program/craft.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img10.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ã‚¯ãƒ©ãƒ•ãƒˆä½“é¨“</span>
+                <span class="header-sub-image-text">X‚ÌƒNƒ‰ƒtƒg</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hellowoods/program/program.html" target="_blank">
+              <a class="header-sub-image-link" href="/hellowoods/program/program.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image header-sub-image-small" style="background-image: url(/globalnavi/assets/images/header/activity-img11.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ä½“é¨“ãƒ—ãƒ­ã‚°ãƒ©ãƒ </span>
+                <span class="header-sub-image-text">X‚Ì‘ÌŒ±ƒvƒƒOƒ‰ƒ€</span>
               </a>
             </li>
 
@@ -1314,10 +1271,10 @@
       <div class="header-sub-right-content">
         <ul>
           <li class="header-sub-right-content-item">
-            <a class="header-sub-right-content-link" href="https://www.twinring.jp/kochira_m/" target="_blank">ã‚³ãƒãƒ©ãƒ¬ãƒ¼ã‚·ãƒ³ã‚°</a>
+            <a class="header-sub-right-content-link" href="/kochira_m/" target="_blank">ƒRƒ`ƒ‰ƒŒ[ƒVƒ“ƒO</a>
           </li>
           <li class="header-sub-right-content-item">
-            <a class="header-sub-right-content-link" href="https://www.twinring.jp/mobipark_m/guide/" target="_blank">ã‚¢ãƒˆãƒ©ã‚¯ã‚·ãƒ§ãƒ³ã®<br class="u-show-pc">ã”åˆ©ç”¨åŸºæº–</a>
+            <a class="header-sub-right-content-link" href="/mobipark_m/guide/" target="_blank">ƒAƒgƒ‰ƒNƒVƒ‡ƒ“‚Ì<br class="u-show-pc">‚²—˜—pŠî€</a>
           </li>
         </ul>
       </div>
@@ -1331,14 +1288,14 @@
 
   <div class="header-sub-inner">
     <div class="header-sub-inner-block">
-      <a class="header-sub-top-button" href="https://www.twinring.jp/motorsports_m/" target="_blank">ãƒ¢ãƒ¼ã‚¿ãƒ¼ã‚¹ãƒãƒ¼ãƒ„TOP</a>
+      <a class="header-sub-top-button" href="/motorsports_m/" target="_blank">ƒ‚[ƒ^[ƒXƒ|[ƒcTOP</a>
 
       <div class="header-sub-image-list-wrap">
 
           <ul class="header-sub-image-list header-sub-image-list-padding">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/motogp/" target="_blank">
+              <a class="header-sub-image-link" href="/motogp/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img1.jpg);"></div>
                 </div>
@@ -1347,16 +1304,16 @@
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/wctrial/" target="_blank">
+              <a class="header-sub-image-link" href="/wctrial/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒˆãƒ©ã‚¤ã‚¢ãƒ«ä¸–ç•Œé¸æ‰‹æ¨©</span>
+                <span class="header-sub-image-text">ƒgƒ‰ƒCƒAƒ‹¢ŠE‘IŽèŒ </span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/supergt_m/" target="_blank">
+              <a class="header-sub-image-link" href="/supergt_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img3.jpg);"></div>
                 </div>
@@ -1369,29 +1326,29 @@
           <ul class="header-sub-image-list header-sub-image-list-padding">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/2and4/" target="_blank">
+              <a class="header-sub-image-link" href="/superformula/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img4.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚¹ãƒ¼ãƒ‘ãƒ¼ãƒ•ã‚©ãƒ¼ãƒŸãƒ¥ãƒ©</span>
+                <span class="header-sub-image-text">ƒX[ƒp[ƒtƒH[ƒ~ƒ…ƒ‰</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/superbike_m/" target="_blank">
+              <a class="header-sub-image-link" href="/superbike_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img5.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å…¨æ—¥æœ¬ãƒ­ãƒ¼ãƒ‰ãƒ¬ãƒ¼ã‚¹</span>
+                <span class="header-sub-image-text">‘S“ú–{ƒ[ƒhƒŒ[ƒX</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/s-taikyu_m/" target="_blank">
+              <a class="header-sub-image-link" href="/s-taikyu_m/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/motor-img6.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚¹ãƒ¼ãƒ‘ãƒ¼è€ä¹…</span>
+                <span class="header-sub-image-text">ƒX[ƒp[‘Ï‹v</span>
               </a>
             </li>
 
@@ -1401,19 +1358,19 @@
         <ul class="header-sub-bottom-list header-sub-bottom-list-upper">
 
           <li>
-            <a href="https://www.twinring.jp/ajtrial_m/" target="_blank">å…¨æ—¥æœ¬ãƒˆãƒ©ã‚¤ã‚¢ãƒ«</a>
+            <a href="/ajtrial_m/" target="_blank">‘S“ú–{ƒgƒ‰ƒCƒAƒ‹</a>
           </li>
 
           <li>
-            <a href="https://www.twinring.jp/all-j-kart_m/" target="_blank">å…¨æ—¥æœ¬ã‚«ãƒ¼ãƒˆ</a>
+            <a href="/all-j-kart_m/" target="_blank">‘S“ú–{ƒJ[ƒg</a>
           </li>
 
         </ul>
       </div>
     </div>
     <div class="header-sub-inner-block header-sub-inner-block-right">
-      <a class="header-sub-top-button" href="https://www.twinring.jp/motorsports_m/run/" target="_blank">
-        ã‚µãƒ¼ã‚­ãƒƒãƒˆã‚’èµ°ã‚‹TOP
+      <a class="header-sub-top-button" href="/motorsports_m/run/" target="_blank">
+        ƒT[ƒLƒbƒg‚ð‘–‚éTOP
       </a>
 
       <div class="header-sub-image-wrap">
@@ -1423,8 +1380,8 @@
       <ul class="header-sub-button-list">
 
         <li class="header-sub-button-item">
-          <a class="header-sub-button-link" href="https://www.twinring.jp/motorsports_m/run/step1.html" target="_blank">
-            1. å®¶æ—ã§ãƒ¬ãƒ¼ã‚·ãƒ³ã‚°ã‚³ãƒ¼ã‚¹ã‚’èµ°ã£ã¦ã¿ã‚ˆã†
+          <a class="header-sub-button-link" href="/motorsports_m/run/step1.html" target="_blank">
+            1. ‰Æ‘°‚ÅƒŒ[ƒVƒ“ƒOƒR[ƒX‚ð‘–‚Á‚Ä‚Ý‚æ‚¤
             <i class="header-sub-button-link-icon">
               <svg>
   <title>arrow</title>
@@ -1436,8 +1393,8 @@
         </li>
 
         <li class="header-sub-button-item">
-          <a class="header-sub-button-link" href="https://www.twinring.jp/motorsports_m/run/step2.html" target="_blank">
-            2. ã‚¹ã‚¯ãƒ¼ãƒ«ã§ãƒ¬ãƒ™ãƒ«ã‚¢ãƒƒãƒ—ã—ã‚ˆã†
+          <a class="header-sub-button-link" href="/motorsports_m/run/step2.html" target="_blank">
+            2. ƒXƒN[ƒ‹‚ÅƒŒƒxƒ‹ƒAƒbƒv‚µ‚æ‚¤
             <i class="header-sub-button-link-icon">
               <svg>
   <title>arrow</title>
@@ -1449,8 +1406,8 @@
         </li>
 
         <li class="header-sub-button-item">
-          <a class="header-sub-button-link" href="https://www.twinring.jp/motorsports_m/run/step3.html" target="_blank">
-            3. æœ¬æ ¼çš„ãªèµ°ã‚Šã‚’ä½“é¨“ã—ã‚ˆã†
+          <a class="header-sub-button-link" href="/motorsports_m/run/step3.html" target="_blank">
+            3. –{Ši“I‚È‘–‚è‚ð‘ÌŒ±‚µ‚æ‚¤
             <i class="header-sub-button-link-icon">
               <svg>
   <title>arrow</title>
@@ -1462,8 +1419,8 @@
         </li>
 
         <li class="header-sub-button-item">
-          <a class="header-sub-button-link" href="https://www.twinring.jp/motorsports_m/run/step4.html" target="_blank">
-            4. å…¥é–€ã‚¯ãƒ©ã‚¹ã®ãƒ¬ãƒ¼ã‚¹ã«å‚åŠ ã—ã‚ˆã†
+          <a class="header-sub-button-link" href="/motorsports_m/run/step4.html" target="_blank">
+            4. “ü–åƒNƒ‰ƒX‚ÌƒŒ[ƒX‚ÉŽQ‰Á‚µ‚æ‚¤
             <i class="header-sub-button-link-icon">
               <svg>
   <title>arrow</title>
@@ -1475,8 +1432,8 @@
         </li>
 
         <li class="header-sub-button-item">
-          <a class="header-sub-button-link" href="https://www.twinring.jp/motorsports_m/run/step5.html" target="_blank">
-            5. æœ¬æ ¼çš„ãªãƒ¬ãƒ¼ã‚¹ã«å‚åŠ ã—ã‚ˆã†
+          <a class="header-sub-button-link" href="/motorsports_m/run/step5.html" target="_blank">
+            5. –{Ši“I‚ÈƒŒ[ƒX‚ÉŽQ‰Á‚µ‚æ‚¤
             <i class="header-sub-button-link-icon">
               <svg>
   <title>arrow</title>
@@ -1494,23 +1451,19 @@
     <ul class="header-sub-bottom-list">
 
       <li>
-        <a href="https://www.twinring.jp/astp/" target="_blank">å®‰å…¨é‹è»¢ã‚¹ã‚¯ãƒ¼ãƒ«</a>
+        <a href="/astp/" target="_blank">ˆÀ‘S‰^“]ƒXƒN[ƒ‹</a>
       </li>
 
       <li>
-        <a href="https://www.twinring.jp/motorsports_m/driving/" target="_blank">ã‚¹ã‚¯ãƒ¼ãƒ«ãƒ»èµ°è¡Œä¼šã€€ï¼”è¼ª</a>
+        <a href="/motorsports_m/driving/" target="_blank">ƒXƒN[ƒ‹E‘–s‰ï@‚S—Ö</a>
       </li>
 
       <li>
-        <a href="https://www.twinring.jp/motorsports_m/riding/" target="_blank">ã‚¹ã‚¯ãƒ¼ãƒ«ãƒ»èµ°è¡Œä¼šã€€ï¼’è¼ª</a>
+        <a href="/trmc-s/" target="_blank">TRMC-S‰ïˆõ</a>
       </li>
 
       <li>
-        <a href="https://www.twinring.jp/trmc-s/" target="_blank">TRMC-Sä¼šå“¡</a>
-      </li>
-
-      <li>
-        <a href="https://www.twinring.jp/angel/" target="_blank">ãƒ„ã‚¤ãƒ³ãƒªãƒ³ã‚¯ã‚‚ã¦ãŽã‚¨ãƒ³ã‚¸ã‚§ãƒ«</a>
+        <a href="/angel/" target="_blank">ƒcƒCƒ“ƒŠƒ“ƒN‚à‚Ä‚¬ƒGƒ“ƒWƒFƒ‹</a>
       </li>
 
     </ul>
@@ -1523,40 +1476,40 @@
 
   <div class="header-sub-inner">
     <div class="header-sub-inner-block header-sub-inner-block-col2">
-      <a class="header-sub-top-button" href="https://www.twinring.jp/f-glamping/" target="_blank">æ£®ã¨æ˜Ÿç©ºã®ã‚­ãƒ£ãƒ³ãƒ—ãƒ´ã‚£ãƒ¬ãƒƒã‚¸TOP</a>
+      <a class="header-sub-top-button" href="/f-glamping/" target="_blank">X‚Æ¯‹ó‚ÌƒLƒƒƒ“ƒvƒ”ƒBƒŒƒbƒWTOP</a>
       <div class="header-sub-image-list-wrap">
 
           <ul class="header-sub-image-list header-sub-image-list-col2">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/stay/" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/stay/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img1.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚°ãƒ©ãƒ³ãƒ”ãƒ³ã‚°</span>
+                <span class="header-sub-image-text">ƒOƒ‰ƒ“ƒsƒ“ƒO</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/stay/index.html?id=logcabin" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/stay/index.html?id=logcabin" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ãƒ­ã‚°ã‚­ãƒ£ãƒ“ãƒ³</span>
+                <span class="header-sub-image-text">ƒƒOƒLƒƒƒrƒ“</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/stay/index.html?id=komorebisite" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/stay/index.html?id=komorebisite" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img3.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚­ãƒ£ãƒ³ãƒ—</span>
+                <span class="header-sub-image-text">ƒLƒƒƒ“ƒv</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/bbq/" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/bbq/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img4.jpg);"></div>
                 </div>
@@ -1565,11 +1518,11 @@
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/f-glamping/activity/" target="_blank">
+              <a class="header-sub-image-link" href="/f-glamping/activity/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img5.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">å®¿æ³Šè€…é™å®šã‚¢ã‚¯ãƒ†ã‚£ãƒ“ãƒ†ã‚£</span>
+                <span class="header-sub-image-text">h”‘ŽÒŒÀ’èƒAƒNƒeƒBƒrƒeƒB</span>
               </a>
             </li>
 
@@ -1578,8 +1531,8 @@
       </div>
     </div>
     <div class="header-sub-inner-block header-sub-inner-block-right header-sub-inner-block-col2">
-      <a class="header-sub-top-button" href="https://www.twinring.jp/hoteltwinring/" target="_blank">
-        ãƒ›ãƒ†ãƒ«ãƒ„ã‚¤ãƒ³ãƒªãƒ³ã‚¯TOP
+      <a class="header-sub-top-button" href="/hoteltwinring/" target="_blank">
+        ƒzƒeƒ‹ƒcƒCƒ“ƒŠƒ“ƒNTOP
       </a>
 
       <div class="header-sub-image-list-wrap">
@@ -1587,47 +1540,47 @@
           <ul class="header-sub-image-list header-sub-image-list-col2">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hoteltwinring/renewal/" target="_blank">
+              <a class="header-sub-image-link" href="/hoteltwinring/renewal/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img7.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚¹ãƒ¼ãƒšãƒªã‚¢ãƒ•ã‚¡ãƒŸãƒªãƒ¼ãƒ«ãƒ¼ãƒ </span>
+                <span class="header-sub-image-text">ƒX[ƒyƒŠƒAƒtƒ@ƒ~ƒŠ[ƒ‹[ƒ€</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/motegi/hoteltwinring/" target="_blank">
+              <a class="header-sub-image-link" href="/motegi/hoteltwinring/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img6.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚°ãƒ©ãƒ³ãƒ«ãƒ¼ãƒ </span>
+                <span class="header-sub-image-text">ƒOƒ‰ƒ“ƒ‹[ƒ€</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hoteltwinring/guest/" target="_blank">
+              <a class="header-sub-image-link" href="/hoteltwinring/guest/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img8.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚²ã‚¹ãƒˆãƒ«ãƒ¼ãƒ </span>
+                <span class="header-sub-image-text">ƒQƒXƒgƒ‹[ƒ€</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/hoteltwinring/nozominoyu/" target="_blank">
+              <a class="header-sub-image-link" href="/hoteltwinring/nozominoyu/" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img9.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã®ãžã¿ã®æ¹¯</span>
+                <span class="header-sub-image-text">‚Ì‚¼‚Ý‚Ì“’</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/marcherant.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/marcherant.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/camp-img10.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ãƒ¬ã‚¹ãƒˆãƒ©ãƒ³MARCHERANT</span>
+                <span class="header-sub-image-text">X‚ÌƒŒƒXƒgƒ‰ƒ“MARCHERANT</span>
               </a>
             </li>
 
@@ -1641,8 +1594,8 @@
 
         <div class="header-sub-content-inner js-header-sub-content-inner" data-content="#header-sub-restaurant">
 
-  <a class="header-sub-top-button" href="https://www.twinring.jp/foods_m/" target="_blank">
-    ãƒ¬ã‚¹ãƒˆãƒ©ãƒ³TOP
+  <a class="header-sub-top-button" href="/foods_m/" target="_blank">
+    ƒŒƒXƒgƒ‰ƒ“TOP
   </a>
 
   <div class="header-sub-inner header-sub-inner-restaurant">
@@ -1652,29 +1605,29 @@
           <ul class="header-sub-image-list header-sub-image-list-restaurant">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/marcherant.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/marcherant.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img5.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ãƒ¬ã‚¹ãƒˆãƒ©ãƒ³ MARCHERANT</span>
+                <span class="header-sub-image-text">X‚ÌƒŒƒXƒgƒ‰ƒ“ MARCHERANT</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/toya.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/toya.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img6.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">é‡Œå±±æ‡çŸ³ ç™»è°·</span>
+                <span class="header-sub-image-text">—¢ŽR‰ùÎ “o’J</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/oak.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/oak.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img1.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚«ãƒ•ã‚§ãƒ¬ã‚¹ãƒˆãƒ©ãƒ³ ã‚ªãƒ¼ã‚¯</span>
+                <span class="header-sub-image-text">ƒJƒtƒFƒŒƒXƒgƒ‰ƒ“ ƒI[ƒN</span>
               </a>
             </li>
 
@@ -1683,29 +1636,29 @@
           <ul class="header-sub-image-list header-sub-image-list-restaurant">
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/rocco.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/rocco.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img2.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ã‚¸ã‚§ãƒ©ãƒ†ãƒªã‚¢ ROCCO</span>
+                <span class="header-sub-image-text">X‚ÌƒWƒFƒ‰ƒeƒŠƒA ROCCO</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/donguri.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/donguri.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img3.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">æ£®ã®ã‚­ãƒƒãƒãƒ³ ã©ã‚“ãã‚Š</span>
+                <span class="header-sub-image-text">X‚ÌƒLƒbƒ`ƒ“ ‚Ç‚ñ‚®‚è</span>
               </a>
             </li>
 
             <li class="header-sub-image-item">
-              <a class="header-sub-image-link" href="https://www.twinring.jp/foods_m/gran-turismo.html" target="_blank">
+              <a class="header-sub-image-link" href="/foods_m/gran-turismo.html" target="_blank">
                 <div class="header-sub-image-wrap">
                   <div class="header-sub-image" style="background-image: url(/globalnavi/assets/images/header/restaurant-img4.jpg);"></div>
                 </div>
-                <span class="header-sub-image-text">ã‚°ãƒ©ãƒ³ãƒ„ãƒ¼ãƒªã‚¹ãƒ¢ã‚«ãƒ•ã‚§</span>
+                <span class="header-sub-image-text">ƒOƒ‰ƒ“ƒc[ƒŠƒXƒ‚ƒJƒtƒF</span>
               </a>
             </li>
 
@@ -1722,14 +1675,3 @@
   </div>
 </div>  <!-- end of header sp -->
 </header>
-
-  <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
-  <script src="/globalnavi/assets/js/app.js" async></script>
-  <script src="/globalnavi/assets/js/common-slider.js" async></script>
-  <script src="/globalnavi/assets/js/accordion.js" async></script>
-
-<div class="wrap" id="js-wrap">
-
-
-</body>
-</html>

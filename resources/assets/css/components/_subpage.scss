@@ -469,6 +469,7 @@
     line-height: 1.417;
     letter-spacing: 0.1em;
     cursor: pointer;
+    text-decoration: underline;
 
     @include max-screen($breakpoint-mobile) {
       font-size: 13px;

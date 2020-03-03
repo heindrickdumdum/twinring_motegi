@@ -7,18 +7,48 @@
 ```
 */
 body {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  text-rendering: $text-rendering;
-  font-size: $base-font-size;
-  font-family: $base-font-family;
-  color: $base-font-color;
-  background-color: $base-background-color;
-  min-width: $breakpoint-tablet;
-  overflow-x: hidden;
+  $wrap: '.wrap:not(.client-content)';
+  $client: '.wrap .client-content';
+  
+  #{$wrap} {
+    #lig-preload,
+    #lig-breadcrumbs,
+    #lig-header,
+    #lig-footer {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      text-rendering: $text-rendering;
+      font-size: $base-font-size;
+      font-family: $base-font-family;
+      color: $base-font-color;
+      background-color: $base-background-color;
+      min-width: $breakpoint-tablet;
+      overflow-x: hidden;
+    
+      @media screen and (max-width: $breakpoint-mobile + 1) {
+        min-width: 100%;
+      }
+    }
 
-  @media screen and (max-width: $breakpoint-mobile + 1) {
-    min-width: 100%;
+    .lig-content {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      text-rendering: $text-rendering;
+      font-size: $base-font-size;
+      font-family: $base-font-family;
+      color: $base-font-color;
+      background-color: $base-background-color;
+      min-width: $breakpoint-tablet;
+      overflow-x: hidden;
+    
+      @media screen and (max-width: $breakpoint-mobile + 1) {
+        min-width: 100%;
+      }
+    }
+  }
+
+  #{$client} {
+    box-sizing: initial;
   }
 }
 

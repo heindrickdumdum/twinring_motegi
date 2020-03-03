@@ -6,209 +6,205 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title, topHeading: true }) -%>
 
-<div class="lig-content">
-  <div class="mv mv-top">
-    <div class="mv-buttons">
-      <ul class="mv-buttons-list">
-        <li class="mv-buttons-item">
-          <a class="mv-buttons-link" href="https://www.twinring.jp/fee_m/" target="_blank">
-            <span>料金<br>・チケット</span>
-          </a>
-        </li>
-        <li class="mv-buttons-item">
-          <a class="mv-buttons-link" href="https://www.twinring.jp/access_m/" target="_blank">
-            <span>アクセス</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <ul class="mv-list mv-list-top js-mv-list">
-      <li class="mv-item js-mv-item js-mv-item-first">
-        <div class="mv-image mv-image-pc" style="background-image:url(<%= mix('/assets/images/mv-img1.png') %>);"></div>
-        <div class="mv-image mv-image-sp" style="background-image:url(<%= mix('/assets/images/mv-img1-sp.png') %>);"></div>
+<div class="mv mv-top">
+  <div class="mv-buttons">
+    <ul class="mv-buttons-list">
+      <li class="mv-buttons-item">
+        <a class="mv-buttons-link" href="https://www.twinring.jp/fee_m/" target="_blank">
+          <span>料金<br>・チケット</span>
+        </a>
       </li>
-      <li class="mv-item js-mv-item js-mv-item-first">
-        <div class="mv-image mv-image-pc" style="background-image:url(<%= mix('/assets/images/mv-img2.png') %>);"></div>
-        <div class="mv-image mv-image-sp" style="background-image:url(<%= mix('/assets/images/mv-img2-sp.png') %>);"></div>
-      </li>
-      <li class="mv-item js-mv-item">
-        <div class="mv-image mv-image-pc" style="background-image:url(<%= mix('/assets/images/mv-img3.png') %>);"></div>
-        <div class="mv-image mv-image-sp" style="background-image:url(<%= mix('/assets/images/mv-img3-sp.png') %>);"></div>
+      <li class="mv-buttons-item">
+        <a class="mv-buttons-link" href="https://www.twinring.jp/access_m/" target="_blank">
+          <span>アクセス</span>
+        </a>
       </li>
     </ul>
+  </div>
 
-    <div class="l-container mv-container">
-      <h2 class="mv-heading mv-heading-top">
-        <span class="mv-heading-text">
-          Twin ring Motegi
+  <ul class="mv-list mv-list-top js-mv-list">
+    <li class="mv-item js-mv-item js-mv-item-first">
+      <div class="mv-image mv-image-pc" style="background-image:url(<%= mix('/assets/images/mv-img1.png') %>);"></div>
+      <div class="mv-image mv-image-sp" style="background-image:url(<%= mix('/assets/images/mv-img1-sp.png') %>);"></div>
+    </li>
+    <li class="mv-item js-mv-item js-mv-item-first">
+      <div class="mv-image mv-image-pc" style="background-image:url(<%= mix('/assets/images/mv-img2.png') %>);"></div>
+      <div class="mv-image mv-image-sp" style="background-image:url(<%= mix('/assets/images/mv-img2-sp.png') %>);"></div>
+    </li>
+    <li class="mv-item js-mv-item">
+      <div class="mv-image mv-image-pc" style="background-image:url(<%= mix('/assets/images/mv-img3.png') %>);"></div>
+      <div class="mv-image mv-image-sp" style="background-image:url(<%= mix('/assets/images/mv-img3-sp.png') %>);"></div>
+    </li>
+  </ul>
+
+  <div class="l-container mv-container">
+    <h2 class="mv-heading mv-heading-top">
+      <span class="mv-heading-text">
+        Twin ring Motegi
+      </span>
+      <div class="u-show-pc">
+        <span class="mv-heading-subtext">
+          <img src="<%= mix('/assets/images/mv-heading-pc.svg') %>" alt="家族にちょうどいい冒険を">
         </span>
-        <div class="u-show-pc">
-          <span class="mv-heading-subtext">
-            <img src="<%= mix('/assets/images/mv-heading-pc.svg') %>" alt="家族にちょうどいい冒険を">
-          </span>
-        </div>
-        <div class="u-show-sp">
-          <span class="mv-heading-subtext">
-            <img src="<%= mix('/assets/images/mv-heading-sp.png') %>" alt="家族にちょうどいい冒険を">
-          </span>
-        </div>
-      </h2>
+      </div>
+      <div class="u-show-sp">
+        <span class="mv-heading-subtext">
+          <img src="<%= mix('/assets/images/mv-heading-sp.png') %>" alt="家族にちょうどいい冒険を">
+        </span>
+      </div>
+    </h2>
 
-      <!-- <div class="mv-today mv-today-top">
-        <div class="mv-today-inner">
-          <img class="mv-today-text" src="<%= mix('/assets/images/mv-today-text.png') %>" alt="">
-          <span class="mv-today-time">10:00-17:00</span>
-          <span class="mv-today-degree">
-            <i class="mv-today-degree-icon">
-              <svg>
-                <title>Sun</title>
-                <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-sun') %>"></use>
-              </svg>
-            </i>
-            <span class="mv-today-celcius-value">28</span>
-            <span class="mv-today-celcius">&#176;c</span>
-          </span>
-        </div>
-      </div> -->
-    </div>
+    <!-- <div class="mv-today mv-today-top">
+      <div class="mv-today-inner">
+        <img class="mv-today-text" src="<%= mix('/assets/images/mv-today-text.png') %>" alt="">
+        <span class="mv-today-time">10:00-17:00</span>
+        <span class="mv-today-degree">
+          <i class="mv-today-degree-icon">
+            <svg>
+              <title>Sun</title>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-sun') %>"></use>
+            </svg>
+          </i>
+          <span class="mv-today-celcius-value">28</span>
+          <span class="mv-today-celcius">&#176;c</span>
+        </span>
+      </div>
+    </div> -->
   </div>
 </div>
 
 <main>
-  <div class="lig-content">
-    <div class="l-feature design-feature">
-      <section class="feature">
-        <div class="slider-wrap">
-          <div class="swiper-container slider js-feature-slider feature-container">
-            <ul class="swiper-wrapper slider-wrapper slider-wrapper-feature">
-              <%
-                getData().data.featureContent.forEach( featureItem => {
-              %>
-              <li class="swiper-slide slider-item">
-                <%- include('/partials/article', {
-                  modifier: 'article-feature',
-                  category: featureItem.category,
-                  image: featureItem.image,
-                  heading: featureItem.heading,
-                  date: featureItem.date,
-                  link: featureItem.link
-                }) %>
-              </li>
-              <% }) %>
-            </ul>
-            <div class="swiper-pagination swiper-pagination-feature"></div>
-          </div>
+  <div class="l-feature design-feature">
+    <section class="feature">
+      <div class="slider-wrap">
+        <div class="swiper-container slider js-feature-slider feature-container">
+          <ul class="swiper-wrapper slider-wrapper slider-wrapper-feature">
+            <%
+              getData().data.featureContent.forEach( featureItem => {
+            %>
+            <li class="swiper-slide slider-item">
+              <%- include('/partials/article', {
+                modifier: 'article-feature',
+                category: featureItem.category,
+                image: featureItem.image,
+                heading: featureItem.heading,
+                date: featureItem.date,
+                link: featureItem.link
+              }) %>
+            </li>
+            <% }) %>
+          </ul>
+          <div class="swiper-pagination swiper-pagination-feature"></div>
         </div>
-      </section>
-    </div>
-
-    <div class="l-parkmap design-parkmap">
-      <div class="parkmap design-parkmap-inner">
-        <div class="l-container parkmap-container">
-
-          <div class="u-show-pc">
-            <%- include('/partials/heading', {
-              modifier: 'heading-wrap-parkmap',
-              text: 'Park Map',
-              subtextvg: 'parkmap-subtext',
-              altSubtext: '',
-            }) %>
-          </div>
-
-          <div class="u-show-sp">
-            <%- include('/partials/heading', {
-              modifier: 'heading-wrap-parkmap',
-              text: 'Park Map',
-              subtextvg: 'parkmap-subtext-sp',
-              altSubtext: '',
-            }) %>
-          </div>
-
-
-          <div class="parkmap-inner">
-            <div class="parkmap-image">
-              <ul class="parkmap-image-list">
-                <%
-                  getData().data.parkmapButtons.forEach( button => {
-                %>
-                <li class="parkmap-image-item js-parkmap-number">
-                  <a href="<%- button.link %>" target="_blank"></a>
-                </li>
-                <% }) %>
-              </ul>
-            </div>
-            <div class="parkmap-right">
-              <ul class="parkmap-list">
-                <%
-                  getData().data.parkmapButtons.forEach( button => {
-                %>
-                <li class="parkmap-item js-parkmap-button">
-                  <a class="parkmap-link" href="<%- button.link %>" target="_blank"><%- button.text %>
-                    <i class="parkmap-link-icon">
-                      <%- include('/partials/svg', {
-                        'name': 'arrow'
-                      }) %>
-                    </i>
-                  </a>
-                </li>
-                <% }) %>
-                <li class="parkmap-item parkmap-item-last">
-                  <%- include('/partials/button', {
-                    newTab: true,
-                    modifier: 'button-parkmap',
-                    text: 'エリア・施設一覧を見る',
-                    link: 'https://www.twinring.jp/twinringmotegi/'
-                  }) %>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="l-section l-section-activity design-activity">
-      <%- include('/partials/top/section-activity') -%>
-      <div class="design-activity-inner"></div>
-    </section>
-
-    <section class="l-section design-circle">
-      <%- include('/partials/top/section-mobi-park') -%>
-    </section>
-
-    <section class="l-section design-mount">
-      <%- include('/partials/top/section-motosports') -%>
-
-      <div class="design-petal"></div>
-    </section>
-
-    <section class="l-section design-petals">
-      <%- include('/partials/top/section-twinring') -%>
-    </section>
-
-    <section class="l-section l-section-hotel-twin design-mount design-twinring">
-      <%- include('/partials/top/section-hotel-twin') -%>
-    </section>
-
-    <!-- how-to module -->
-    <%- include('/partials/how-to') -%>
-
-    <section class="information">
-      <div class="l-container information-container">
-        <%- include('/partials/heading', {
-          modifier: 'heading-wrap-information',
-          text: 'Information',
-          subtextvg: 'information-subtext',
-          altSubtext: '',
-        }) %>
-
-        <%- include('/partials/post', {
-          postContent: getData().data.informationContent,
-        }) -%>
       </div>
     </section>
   </div>
+
+  <div class="l-parkmap design-parkmap">
+    <div class="parkmap design-parkmap-inner">
+      <div class="l-container parkmap-container">
+
+        <div class="u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-parkmap',
+            text: 'Park Map',
+            subtextvg: 'parkmap-subtext',
+            altSubtext: '',
+          }) %>
+        </div>
+
+        <div class="u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-parkmap',
+            text: 'Park Map',
+            subtextvg: 'parkmap-subtext-sp',
+            altSubtext: '',
+          }) %>
+        </div>
+
+
+        <div class="parkmap-inner">
+          <div class="parkmap-image">
+            <ul class="parkmap-image-list">
+              <%
+                getData().data.parkmapButtons.forEach( button => {
+              %>
+              <li class="parkmap-image-item js-parkmap-number">
+                <a href="<%- button.link %>" target="_blank"></a>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+          <div class="parkmap-right">
+            <ul class="parkmap-list">
+              <%
+                getData().data.parkmapButtons.forEach( button => {
+              %>
+              <li class="parkmap-item js-parkmap-button">
+                <a class="parkmap-link" href="<%- button.link %>" target="_blank"><%- button.text %>
+                  <i class="parkmap-link-icon">
+                    <%- include('/partials/svg', {
+                      'name': 'arrow'
+                    }) %>
+                  </i>
+                </a>
+              </li>
+              <% }) %>
+              <li class="parkmap-item parkmap-item-last">
+                <%- include('/partials/button', {
+                  newTab: true,
+                  modifier: 'button-parkmap',
+                  text: 'エリア・施設一覧を見る',
+                  link: 'https://www.twinring.jp/twinringmotegi/'
+                }) %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="l-section l-section-activity design-activity">
+    <%- include('/partials/top/section-activity') -%>
+    <div class="design-activity-inner"></div>
+  </section>
+
+  <section class="l-section design-circle">
+    <%- include('/partials/top/section-mobi-park') -%>
+  </section>
+
+  <section class="l-section design-mount">
+    <%- include('/partials/top/section-motosports') -%>
+
+    <div class="design-petal"></div>
+  </section>
+
+  <section class="l-section design-petals">
+    <%- include('/partials/top/section-twinring') -%>
+  </section>
+
+  <section class="l-section l-section-hotel-twin design-mount design-twinring">
+    <%- include('/partials/top/section-hotel-twin') -%>
+  </section>
+
+  <!-- how-to module -->
+  <%- include('/partials/how-to') -%>
+
+  <section class="information">
+    <div class="l-container information-container">
+      <%- include('/partials/heading', {
+        modifier: 'heading-wrap-information',
+        text: 'Information',
+        subtextvg: 'information-subtext',
+        altSubtext: '',
+      }) %>
+
+      <%- include('/partials/post', {
+        postContent: getData().data.informationContent,
+      }) -%>
+    </div>
+  </section>
 </main>
 
 <%- include('/partials/footer', {

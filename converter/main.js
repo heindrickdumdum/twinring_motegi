@@ -2,8 +2,6 @@ var fs = require('fs'); // fs module
 var iconv = require('iconv-lite'); // support Shift-jis
 
 exports.mtgConvert = function (targetFile) {
-	  
-	console.log('hi');
 	
 	// Get html
 	var htmlTags = fs.readFileSync(targetFile);
@@ -28,5 +26,7 @@ exports.mtgConvert = function (targetFile) {
 	  });
 	}
 	writeFile(targetFile, contentsTags);
+
+	console.log('success: ' + targetFile);
 
 };

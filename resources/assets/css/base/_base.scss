@@ -18,8 +18,8 @@ body {
   overflow-x: hidden;
 
   @media screen and (max-width: $breakpoint-mobile + 1) {
-		min-width: 100%;
-	}
+    min-width: 100%;
+  }
 }
 
 * {

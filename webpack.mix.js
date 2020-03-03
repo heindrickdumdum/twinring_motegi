@@ -103,7 +103,7 @@ mix
     `${srcRelativePath}/assets/lib/fonts`,
     `${distRelativePath}/assets/lib/fonts`,
     { base: `${srcRelativePath}/assets/lib/fonts` }
-  )
+	)
   .browserSync({
     open: true,
     host: process.env.MIX_BROWSER_SYNC_HOST || 'localhost',

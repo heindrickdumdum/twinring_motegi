@@ -7,17 +7,16 @@
   <%- include('/partials/meta', { pageId }) %>
 </head>
 <body>
+		<% if (pageId === 'index') { %>
+			<div class="preload js-preload">
+				<div class="preload-image"></div>
+				<img class="preload-text" src="<%= mix('/assets/images/footer-twinring.png') %>" alt="">
+			</div>
+		<% } %>
 
-  <% if (pageId === 'index') { %>
-    <div class="preload js-preload">
-      <div class="preload-image"></div>
-      <img class="preload-text" src="<%= mix('/assets/images/footer-twinring.png') %>" alt="">
-    </div>
-  <% } %>
+ <div class="wrap" id="js-wrap">
 
-  <div class="wrap" id="js-wrap">
-
-  <% var topHeading; %>
-  <%- include('/partials/header', {
-    topHeading: topHeading
-  }) -%>
+		<% var topHeading; %>
+		<%- include('/partials/header', {
+			topHeading: topHeading
+		}) -%>

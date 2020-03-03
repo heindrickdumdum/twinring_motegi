@@ -1,10 +1,15 @@
-<%- include('./meta/index', { 
+<%- include('./meta/index', {
   async: true,
-  meta: getData().data.meta 
+  meta: getData().data.meta
 }) %>
 
+<meta name="format-detection" content="telephone=no">
+
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 <link rel="shortcut icon" href="assets/images/common/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="assets/images/common/apple-touch-icon-precomposed.png">
+
+<!-- LIG CSS -->
 <link rel="stylesheet" href="<%= mix('/assets/css/app.css') %>">
 
 <script>

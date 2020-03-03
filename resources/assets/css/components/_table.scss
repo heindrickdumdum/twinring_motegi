@@ -51,10 +51,10 @@
 
 .table-col-num {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 20px;
 
   @include max-screen($breakpoint-mobile) {
-    margin-right: 20px;
+    margin-right: 15px;
   }
 }
 
@@ -174,7 +174,7 @@
 
   // img {
   //   @include max-screen($breakpoint-mobile) {
-  //     width: auto; 
+  //     width: auto;
   //   }
   // }
 

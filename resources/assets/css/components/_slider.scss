@@ -150,7 +150,6 @@
   .slider-item {
     @include min-screen($breakpoint-mobile) {
       max-width: 369px;
-      overflow: hidden;
     }
 
     @include max-screen($breakpoint-mobile) {

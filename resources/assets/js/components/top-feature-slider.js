@@ -7,8 +7,10 @@ export default function topFeatureSlider(params) {
   const defaultOptions = {
     speed: 1500,
     slidesPerView: 'auto',
-    variableWidth: 'auto',
+    variableWidth: true,
     spaceBetween: 55,
+    centeredSlides: true,
+    initialSlide: 1,
     loop: true,
     autoplay: {
       delay: 4500,
@@ -21,10 +23,7 @@ export default function topFeatureSlider(params) {
     },
 
     breakpoints: {
-      1280: {
-        slidesPerGroup: 3
-      },
-      759: {
+      749: {
         spaceBetween: 10,
         slidesPerView: 1,
         slidesPerGroup: 1

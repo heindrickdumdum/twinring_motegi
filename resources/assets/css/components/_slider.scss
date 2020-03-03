@@ -19,15 +19,11 @@
 
 .slider-wrap {
   max-width: 100%;
-  padding-left: 7%;
+  padding-left: 6%;
   padding-right: 7%;
 
-  // @include max-screen($breakpoint-mobile) {
-  //   max-width: 88%;
-  // }
-
   .slider-item {
-    max-width: calc(100% / 3.56);
+    max-width: calc(100% / 3.53);
     width: 100%;
 
     @include max-screen($breakpoint-mobile) {
@@ -38,23 +34,61 @@
   .slider-wrapper {
     margin-left: 0;
   }
+}
 
-  &.slider-wrap-how-to {
-    @include max-screen($breakpoint-mobile) {
-      max-width: 90%;
-    }
+//MODIFIER
+.slider-wrap-how-to {
+  margin-top: -2px;
+  padding-bottom: 10px;
+
+  @include max-screen($breakpoint-mobile) {
+    max-width: 100%;
+    margin: 0 auto;
   }
 
-  &.slider-wrap-section {
+  .slider-item {
+    max-width: calc(100% / 3.393);
+
     @include max-screen($breakpoint-mobile) {
-      .slider-item {
-        max-width: 100%;
+      max-width: 86.93%;
+    }
+
+    &.swiper-slide-active {
+      @include max-screen($breakpoint-mobile) {
+        //opacity: 1;
+        &::before {
+          background-color: transparent;
+          z-index: -1;
+        }
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba($color-white, .5);
+        transition: background-color 0.5s ease-in;
+        z-index: $z-min;
       }
     }
   }
 }
 
-//MODIFIER
+.slider-wrap-section {
+  padding-left: 7%;
+
+  @include max-screen($breakpoint-mobile) {
+    .slider-item {
+      max-width: 100%;
+    }
+  }
+}
+
 .slider-wrapper-feature {
   margin-left: 0;
 }
@@ -177,41 +211,6 @@
     font-family: $font-hiragino;
     color: $color-black;
     letter-spacing: 0.06em;
-  }
-}
-
-.slider-how-to-enjoy {
-  margin-top: -2px;
-  padding-bottom: 10px;
-
-  .slider-item {
-    //opacity: 0.5;
-
-    &.swiper-slide-active {
-      @include max-screen($breakpoint-mobile) {
-        //opacity: 1;
-        &::before {
-          background-color: transparent;
-          z-index: -1;
-        }
-      }
-    }
-
-    @include max-screen($breakpoint-mobile) {
-      max-width: 96.5%;
-
-      &::before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: rgba($color-white, .5);
-        transition: background-color 0.5s ease-in;
-        z-index: $z-min;
-      }
-    }
   }
 }
 

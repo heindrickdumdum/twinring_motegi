@@ -19,7 +19,7 @@ export default function topSlider(params) {
       1280: {
         slidesPerGroup: 3
       },
-      759: {
+      749: {
         spaceBetween: 10,
         slidesPerGroup: 1,
         slidesPerView: 1,

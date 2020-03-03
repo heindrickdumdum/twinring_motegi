@@ -6,443 +6,445 @@
 <% include('./../partials/data/index') %>
 <%- include('./../partials/head', { title }) -%>
 
-<div class="subpage">
-  <div class="mv mv-inner dokidoki-mv">
-    <ul class="mv-list">
-      <li class="mv-item">
-        <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dokidoki/mv-img.jpg')%>);"></div>
-      </li>
-    </ul>
+<div class="lig-content"></div>
+  <div class="subpage">
+    <div class="mv mv-inner dokidoki-mv">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image" style="background-image:url(<%= mix('/assets/images/dokidoki/mv-img.jpg')%>);"></div>
+        </li>
+      </ul>
 
-    <div class="l-container mv-container">
-      <h2 class="mv-heading mv-heading-dokidoki">
-        <span class="mv-heading-texts">
-          Forest Obstacle Course
-        </span>
-        <span class="mv-heading-subtexts">
-          <svg class="u-show-pc">
-            <title>巨大ネットの森SUMIKA</title>
-            <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-dokidoki-main-title') %>"></use>
-          </svg>
-          <svg class="u-show-sp">
-            <title>巨大ネットの森SUMIKA</title>
-            <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-dokidoki-main-title-sp') %>"></use>
-          </svg>
-        </span>
-      </h2>
-
-      <div class="mv-today">
-        <div class="mv-today-inner"></div>
-      </div>
-    </div>
-  </div>
-
-  <section class="video-mv l-section">
-    <div class="l-container">
-      <div class="heading-wrap  l-heading-main">
-        <h2 class="heading heading-dokidoki">
-          <span class="heading-texts">
-            <img class="u-show-pc" src="<%= mix('/assets/images/dokidoki/dokidoki-color-title2.png') %>" alt="dokidoki">
-            <img class="u-show-sp" src="<%= mix('/assets/images/dokidoki/dokidoki-color-title2-sp.png') %>" alt="dokidoki">
+      <div class="l-container mv-container">
+        <h2 class="mv-heading mv-heading-dokidoki">
+          <span class="mv-heading-texts">
+            Forest Obstacle Course
+          </span>
+          <span class="mv-heading-subtexts">
+            <svg class="u-show-pc">
+              <title>巨大ネットの森SUMIKA</title>
+              <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-dokidoki-main-title') %>"></use>
+            </svg>
+            <svg class="u-show-sp">
+              <title>巨大ネットの森SUMIKA</title>
+              <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-dokidoki-main-title-sp') %>"></use>
+            </svg>
           </span>
         </h2>
-      </div>
 
-      <!-- YOUTUBE -->
-      <div class="l-youtube">
-        <div class="youtube">
-          <div class="youtube-iframe-container">
-            <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+        <div class="mv-today">
+          <div class="mv-today-inner"></div>
         </div>
       </div>
-
-      <h3 class="table-heading table-heading-sp table-heading-attractioninfo">
-        <img src="<%- mix('/assets/images/dokidoki/attraction-title.png') %>" alt="アトラクション情報">
-      </h3>
-
-      <p class="table-subheading">
-        巨大などんぐりの木に隠された多くの難関を乗り越えててっぺんを目指す新感覚の「木登り型アスレチック」
-      </p>
-
-      <table class="table">
-        <tbody>
-          <tr class="table-row">
-            <th class="table-head">場所</th>
-            <td class="table-col">モビパーク内</td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">所要時間</th>
-            <td class="table-col">約30分（受付は営業終了10分前まで）
-            </td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">雨天の運行</th>
-            <td class="table-col">見合わせとなります。
-            </td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">対象者</th>
-            <td class="table-col">小学1年生以上
-            </td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">身長制限</th>
-            <td class="table-col">なし</td>
-          </tr>
-
-          <tr class="table-row">
-            <th class="table-head">料金</th>
-            <td class="table-col">
-              モビパークパスポート対象 <br>
-              アトラクションチケット利用：800円
-            </td>
-          </tr>
-        </tbody>
-      </table>
     </div>
-      <div class="subpage-section subpage-section-collapse">
-        <div class="subpage-collapse-heading js-collapse-button">ご利用にあたっての注意点</div>
-        <div class="subpage-collapse-description">
-          <div class="subpage-collapse-content">
-            <p>服装について :</p>
-            <p>
-              サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。
-            </p>
-            <p>小学生未満のお子さまの利用について：</p>
-            <p>森感覚アスレチック DOKIDOKIは小学生未満のお子さまはご利用いただけません。小さいお子さまはアトラクション前のどきどきひろばにてお楽しみいただけます。</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="collapse">
+    <section class="video-mv l-section">
       <div class="l-container">
-        <div class="collapse-inner">
-          <h3 class="table-heading table-heading-collapse js-collapse-button">
-            <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
-            <span class="accordion-arrow collapse-arrow"></span>
-          </h3>
-          <div class="collapse-content-wrap">
-            <p class="table-subheading">
-              下記の日程は混雑が予想されるため、対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
-            </p>
-
-            <table class="table">
-              <tbody>
-                <tr class="table-row">
-                  <th class="table-head">日程</th>
-                  <td class="table-col">
-                    3月20日（金・祝）、21日（土）、22日（日）、28日（土）、29日（日）
-                  </td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head">対象アトラクション</th>
-                  <td class="table-col">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head">配布場所</th>
-                  <td class="table-col">アトラクション前特設テント</td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head">配布枚数</th>
-                  <td class="table-col">巨大ネットの森 SUMIKA：各回約200枚配布森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI：１時間ごとに約200枚配布</td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head">配布にあたって</th>
-                  <td class="table-col">
-                    ※入場整理券は定員に達し次第、受付を終了いたします。<br>
-                    ※別途、モビパークパスポートまたはのりもの券をお買い求めください。<br>
-                    ※アトラクションには年齢制限がございます。<a href="https://www.twinring.jp/mobipark_m/guide/"> >>詳しくはこちら</a><br>
-                    ※混雑状況や天候などにより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-        </div>
-      </div>
-      </div>
-  </section>
-
-  <section class="how-to-enjoy">
-    <div class="l-container">
-      <div class="l-section-title">
-        <div class="u-show-pc">
-          <%- include('/partials/heading', {
-            modifier: 'heading-howto heading-howto-dokidoki',
-            text: 'How to Enjoy',
-            alt: 'How to Enjoy',
-            subtextvg: 'dokidoki-enjoy-more-title',
-            altSubtext: '',
-          }) %>
-        </div>
-        <div class="u-show-sp">
-          <%- include('/partials/heading', {
-            modifier: 'heading-howto heading-howto-dokidoki',
-            text: 'How to Enjoy',
-            alt: 'How to Enjoy',
-            subtextvg: 'dokidoki-enjoy-more-title-sp',
-            altSubtext: '',
-          }) %>
-        </div>
-      </div>
-
-
-      <div class="how-to-content dokidoki-media">
-        <div class="media u-clear">
-          <div class="media-left">
-            <div class="media-bg">
-              <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
-              </div>
-            </div>
-          </div>
-          <div class="media-right">
-            <h4 class="media-title"><span>ドキドキの連続！39のアスレチック</span></h4>
-            <p class="media-desc">
-              “巨大などんぐりの木”に見立てた５階建ての「森感覚アスレチック DOKIDOKI」には、全部で39のアスレチックがあります。さまざまなアスレチックをクリアしててっぺんをめざしましょう！
-            </p>
-
-            <%- include('/partials/note', {
-              modifier: 'note-message-itadaki-banner-1',
-              imgPath: mix('/assets/images/dokidoki/dokidoki-banner-1.jpg')
-            }) %>
-
-          </div>
-        </div>
-        <div class="media u-clear">
-          <div class="media-left">
-            <div class="media-bg">
-              <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img2.png') %>);"></div>
-              </div>
-            </div>
-          </div>
-          <div class="media-right">
-            <h4 class="media-title">
-              <span>体力と勇気が試される！<br /> 選んで進む2つのコース</span>
-            </h4>
-            <p class="media-desc">
-              森感覚アスレチック DOKIDOKIは小学1年生から高学年、そして大人も楽しめるアスレチックです。 コースを進んで行くと、アスレチックの難易度でコースが分かれ、年齢や体力に応じてコースを選ぶことができます。
-            </p>
-
-            <%- include('/partials/note', {
-              modifier: 'note-message-itadaki-banner-1',
-              imgPath: mix('/assets/images/dokidoki/dokidoki-banner-2.jpg')
-            }) %>
-          </div>
-        </div>
-        <div class="media u-clear">
-          <div class="media-left">
-            <div class="media-bg">
-              <div class="media-thumb">
-                <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img3.png') %>);"></div>
-              </div>
-            </div>
-          </div>
-          <div class="media-right">
-            <h4 class="media-title">
-              <span>小学生未満のお子さまはどきどきひろばで</span>
-            </h4>
-            <p class="media-desc">
-              森感覚アスレチック DOKIDOKIは小学生未満のお子さまはご利用いただけません。小さいお子さまはアトラクション前のどきどきひろばにてお楽しみいただけます。
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="forest l-section">
-    <div class="l-heading">
-      <div class="u-show-pc">
-        <%- include('/partials/heading', {
-        modifier: 'heading-forest',
-        text: 'Exciting athletic',
-        alt: '',
-        subtextvg: 'dokidoki-athletic-title',
-        altSubtext: '',
-      }) %>
-      </div>
-      <div class="u-show-sp">
-        <%- include('/partials/heading', {
-        modifier: 'heading-forest',
-        text: 'Exciting athletic',
-        alt: '',
-        subtextvg: 'dokidoki-copy-title-sp',
-        altSubtext: '',
-      }) %>
-      </div>
-    </div>
-
-    <div class="swiper-container common-slider dokidoki-slider slider js-slider">
-      <ul class="swiper-wrapper top-slide">
-        <% forestSliderData.forEach(item => { %>
-        <li class="swiper-slide slider-item">
-          <div class="top-slider-image">
-            <img src="<%- item.src -%>" alt="<%- item.alt -%>">
-          </div>
-          <span class="top-slider-text">
-            <%- item.desc -%>
-          </span>
-        </li>
-        <% } ) %>
-      </ul>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <section class="youtube-video l-section">
-    <div class="l-container">
-      <div class="l-section-title">
-        <div class="u-show-pc">
-          <%- include('/partials/heading', {
-              modifier: 'heading-video',
-              text: 'Dokidoki Videos',
-              subtextvg: 'dokidoki-video-title',
-              altSubtext: '',
-            }) %>
-        </div>
-        <div class="u-show-sp">
-          <%- include('/partials/heading', {
-              modifier: 'heading-video',
-              text: 'Dokidoki Videos',
-              subtextvg: 'dokidoki-videos-title-sp',
-              altSubtext: '',
-            }) %>
-        </div>
-      </div>
-      <div class="youtube-video-content">
-        <ul class="youtube-video-list row">
-          <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
-            <div class="youtube-video-wrapper">
-              <div class="youtube-video-inner">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cJEgRZ-UMcY" frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
-            </div>
-            <!-- <p class="youtube-video-description">仲間とチャレンジコースに挑戦！</p> -->
-          </li>
-          <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
-            <div class="youtube-video-wrapper">
-              <div class="youtube-video-inner">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
-            </div>
-            <!-- <p class="youtube-video-description">DOKIDOKI タイムアタック映像！</p> -->
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="instagram l-section">
-    <div class="instagram-wrapper l-container">
-      <div class="instagram-inner">
-        <div class="instagram-inner-content">
-          <h2 class="heading l-heading-inner heading-dokidoki-hashtag">
+        <div class="heading-wrap  l-heading-main">
+          <h2 class="heading heading-dokidoki">
             <span class="heading-texts">
-              <img class="u-show-pc " src="<%= mix('/assets/images/dokidoki/dokidoki-hashtag-title.png') %>" alt="dokidoki">
-              <img class="u-show-sp " src="<%= mix('/assets/images/dokidoki/dokidoki-hashtag-title-sp.png') %>" alt="dokidoki">
+              <img class="u-show-pc" src="<%= mix('/assets/images/dokidoki/dokidoki-color-title2.png') %>" alt="dokidoki">
+              <img class="u-show-sp" src="<%= mix('/assets/images/dokidoki/dokidoki-color-title2-sp.png') %>" alt="dokidoki">
             </span>
           </h2>
-          <div class="instagram-content">
-            <ul class="instagram-list">
-              <% instagramDokidoki.forEach(item => { %>
-              <li class="instagram-list-item col-sm-4">
-                <div class="instagram-list-item-image">
-                  <img src="<%- item.image %>" alt="<%- item.alt %>">
+        </div>
+
+        <!-- YOUTUBE -->
+        <div class="l-youtube">
+          <div class="youtube">
+            <div class="youtube-iframe-container">
+              <iframe width="100%" height="587" src="https://www.youtube.com/embed/cR0RnUePzQc" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="table-heading table-heading-sp table-heading-attractioninfo">
+          <img src="<%- mix('/assets/images/dokidoki/attraction-title.png') %>" alt="アトラクション情報">
+        </h3>
+
+        <p class="table-subheading">
+          巨大などんぐりの木に隠された多くの難関を乗り越えててっぺんを目指す新感覚の「木登り型アスレチック」
+        </p>
+
+        <table class="table">
+          <tbody>
+            <tr class="table-row">
+              <th class="table-head">場所</th>
+              <td class="table-col">モビパーク内</td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">所要時間</th>
+              <td class="table-col">約30分（受付は営業終了10分前まで）
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">雨天の運行</th>
+              <td class="table-col">見合わせとなります。
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">対象者</th>
+              <td class="table-col">小学1年生以上
+              </td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">身長制限</th>
+              <td class="table-col">なし</td>
+            </tr>
+
+            <tr class="table-row">
+              <th class="table-head">料金</th>
+              <td class="table-col">
+                モビパークパスポート対象 <br>
+                アトラクションチケット利用：800円
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <div class="subpage-section subpage-section-collapse">
+          <div class="subpage-collapse-heading js-collapse-button">ご利用にあたっての注意点</div>
+          <div class="subpage-collapse-description">
+            <div class="subpage-collapse-content">
+              <p>服装について :</p>
+              <p>
+                サンダルやクロックス、ヒール、または運動に適さない靴ではご利用いただけません。靴の貸し出しがございますので、履き替えてのご利用をお願いいたします。
+              </p>
+              <p>小学生未満のお子さまの利用について：</p>
+              <p>森感覚アスレチック DOKIDOKIは小学生未満のお子さまはご利用いただけません。小さいお子さまはアトラクション前のどきどきひろばにてお楽しみいただけます。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapse">
+        <div class="l-container">
+          <div class="collapse-inner">
+            <h3 class="table-heading table-heading-collapse js-collapse-button">
+              <img src="<%- mix('/assets/images/dokidoki/admission-title.png') %>" alt="title">
+              <span class="accordion-arrow collapse-arrow"></span>
+            </h3>
+            <div class="collapse-content-wrap">
+              <p class="table-subheading">
+                下記の日程は混雑が予想されるため、対象のアトラクションで時間帯ごとの入場整理券（スマートエントリー※以下、入場整理券）を配布いたします。
+              </p>
+
+              <table class="table">
+                <tbody>
+                  <tr class="table-row">
+                    <th class="table-head">日程</th>
+                    <td class="table-col">
+                      3月20日（金・祝）、21日（土）、22日（日）、28日（土）、29日（日）
+                    </td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head">対象アトラクション</th>
+                    <td class="table-col">巨大ネットの森 SUMIKA・森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head">配布場所</th>
+                    <td class="table-col">アトラクション前特設テント</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head">配布枚数</th>
+                    <td class="table-col">巨大ネットの森 SUMIKA：各回約200枚配布森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI：１時間ごとに約200枚配布</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head">配布にあたって</th>
+                    <td class="table-col">
+                      ※入場整理券は定員に達し次第、受付を終了いたします。<br>
+                      ※別途、モビパークパスポートまたはのりもの券をお買い求めください。<br>
+                      ※アトラクションには年齢制限がございます。<a href="https://www.twinring.jp/mobipark_m/guide/"> >>詳しくはこちら</a><br>
+                      ※混雑状況や天候などにより入場整理券の配布を行わない場合は、当日モビパークまたはSNS等でお知らせいたします。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="how-to-enjoy">
+      <div class="l-container">
+        <div class="l-section-title">
+          <div class="u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-howto heading-howto-dokidoki',
+              text: 'How to Enjoy',
+              alt: 'How to Enjoy',
+              subtextvg: 'dokidoki-enjoy-more-title',
+              altSubtext: '',
+            }) %>
+          </div>
+          <div class="u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-howto heading-howto-dokidoki',
+              text: 'How to Enjoy',
+              alt: 'How to Enjoy',
+              subtextvg: 'dokidoki-enjoy-more-title-sp',
+              altSubtext: '',
+            }) %>
+          </div>
+        </div>
+
+
+        <div class="how-to-content dokidoki-media">
+          <div class="media u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img1.png') %>);"></div>
                 </div>
-              </li>
-              <% }) %>
-            </ul>
+              </div>
+            </div>
+            <div class="media-right">
+              <h4 class="media-title"><span>ドキドキの連続！39のアスレチック</span></h4>
+              <p class="media-desc">
+                “巨大などんぐりの木”に見立てた５階建ての「森感覚アスレチック DOKIDOKI」には、全部で39のアスレチックがあります。さまざまなアスレチックをクリアしててっぺんをめざしましょう！
+              </p>
+
+              <%- include('/partials/note', {
+                modifier: 'note-message-itadaki-banner-1',
+                imgPath: mix('/assets/images/dokidoki/dokidoki-banner-1.jpg')
+              }) %>
+
+            </div>
           </div>
-          <div class="l-button">
-            <%- include('/partials/button', {
-              newTab: true,
-              modifier: 'button-instagram',
-              text: 'インスタグラムでもっと見る',
-              link: 'https://www.instagram.com/explore/tags/%E6%A3%AE%E6%84%9F%E8%A6%9A%E3%82%A2%E3%82%B9%E3%83%AC%E3%83%81%E3%83%83%E3%82%AFdokidoki/'
-            }) %>
+          <div class="media u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img2.png') %>);"></div>
+                </div>
+              </div>
+            </div>
+            <div class="media-right">
+              <h4 class="media-title">
+                <span>体力と勇気が試される！<br /> 選んで進む2つのコース</span>
+              </h4>
+              <p class="media-desc">
+                森感覚アスレチック DOKIDOKIは小学1年生から高学年、そして大人も楽しめるアスレチックです。 コースを進んで行くと、アスレチックの難易度でコースが分かれ、年齢や体力に応じてコースを選ぶことができます。
+              </p>
+
+              <%- include('/partials/note', {
+                modifier: 'note-message-itadaki-banner-1',
+                imgPath: mix('/assets/images/dokidoki/dokidoki-banner-2.jpg')
+              }) %>
+            </div>
           </div>
-          <!-- <div class="instagram-banner">
-            <a href="#">
-              <img src="<%- mix('/assets/images/sumika/net-sumika/instagram-banner.jpg')%> ">
-            </a>
-          </div> -->
+          <div class="media u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/dokidoki/enjoy-img3.png') %>);"></div>
+                </div>
+              </div>
+            </div>
+            <div class="media-right">
+              <h4 class="media-title">
+                <span>小学生未満のお子さまはどきどきひろばで</span>
+              </h4>
+              <p class="media-desc">
+                森感覚アスレチック DOKIDOKIは小学生未満のお子さまはご利用いただけません。小さいお子さまはアトラクション前のどきどきひろばにてお楽しみいただけます。
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="faq l-section">
-    <%- include('/partials/accordion', {
-      dataAccordion: getData().data.accordionDokidoki
-    }) %>
-  </section>
+    <section class="forest l-section">
+      <div class="l-heading">
+        <div class="u-show-pc">
+          <%- include('/partials/heading', {
+          modifier: 'heading-forest',
+          text: 'Exciting athletic',
+          alt: '',
+          subtextvg: 'dokidoki-athletic-title',
+          altSubtext: '',
+        }) %>
+        </div>
+        <div class="u-show-sp">
+          <%- include('/partials/heading', {
+          modifier: 'heading-forest',
+          text: 'Exciting athletic',
+          alt: '',
+          subtextvg: 'dokidoki-copy-title-sp',
+          altSubtext: '',
+        }) %>
+        </div>
+      </div>
 
-  <!-- <div class="call-to-action">
-    <div class="l-container">
-      <div class="call-to-action-wrapper">
-        <div class="call-to-action-inner">
-          <h2>
-            <span class="heading-texts">
-              <img src="<%= mix('/assets/images/dokidoki/dokidoki-cta.png') %>" alt="DOKIDOKIをもっと楽しむ">
+      <div class="swiper-container common-slider dokidoki-slider slider js-slider">
+        <ul class="swiper-wrapper top-slide">
+          <% forestSliderData.forEach(item => { %>
+          <li class="swiper-slide slider-item">
+            <div class="top-slider-image">
+              <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+            </div>
+            <span class="top-slider-text">
+              <%- item.desc -%>
             </span>
-          </h2>
-          <div class="call-to-action-description">
-            <p class="call-to-action-description-text">
-              SUMIKAのこだわりポイントや、<br>
-              知っているともっと楽しくなる情報を配信中しています。
-            </p>
+          </li>
+          <% } ) %>
+        </ul>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="youtube-video l-section">
+      <div class="l-container">
+        <div class="l-section-title">
+          <div class="u-show-pc">
+            <%- include('/partials/heading', {
+                modifier: 'heading-video',
+                text: 'Dokidoki Videos',
+                subtextvg: 'dokidoki-video-title',
+                altSubtext: '',
+              }) %>
           </div>
-          <div class="l-button l-button-call-to-action">
-            <%- include('/partials/button', {
-              modifier: 'button-sumika',
-              text: 'もっと見る',
-              link: '#'
-            }) %>
+          <div class="u-show-sp">
+            <%- include('/partials/heading', {
+                modifier: 'heading-video',
+                text: 'Dokidoki Videos',
+                subtextvg: 'dokidoki-videos-title-sp',
+                altSubtext: '',
+              }) %>
           </div>
-          <span class="call-to-action-dot call-to-action-dot-1">
-            <img src="<%- mix('/assets/images/dokidoki/banner-dot-1.png')%> ">
-          </span>
-          <span class="call-to-action-dot call-to-action-dot-2">
-            <img src="<%- mix('/assets/images/dokidoki/banner-dot-2.png')%> ">
-          </span>
-          <span class="call-to-action-dot call-to-action-dot-3">
-            <img src="<%- mix('/assets/images/dokidoki/banner-dot-3.png')%> ">
-          </span>
-          <span class="call-to-action-dot call-to-action-dot-4">
-            <img src="<%- mix('/assets/images/dokidoki/banner-dot-4.png')%> ">
-          </span>
+        </div>
+        <div class="youtube-video-content">
+          <ul class="youtube-video-list row">
+            <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
+              <div class="youtube-video-wrapper">
+                <div class="youtube-video-inner">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/cJEgRZ-UMcY" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+              <!-- <p class="youtube-video-description">仲間とチャレンジコースに挑戦！</p> -->
+            </li>
+            <li class="youtube-video-item col-lg-6 col-md-6 col-sm-12">
+              <div class="youtube-video-wrapper">
+                <div class="youtube-video-inner">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/2S8qG40QPVg" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+              <!-- <p class="youtube-video-description">DOKIDOKI タイムアタック映像！</p> -->
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div> -->
+    </section>
 
-  <%- include('/partials/banner-cta', {
-    link: 'https://www.twinring.jp/mobipark_m/card/',
-    imgPath: mix('/assets/images/subpage-banner-bottom.png'),
-    alt: '上手に乗れたらライセンスカードをつくろう'
-  }) -%>
+    <section class="instagram l-section">
+      <div class="instagram-wrapper l-container">
+        <div class="instagram-inner">
+          <div class="instagram-inner-content">
+            <h2 class="heading l-heading-inner heading-dokidoki-hashtag">
+              <span class="heading-texts">
+                <img class="u-show-pc " src="<%= mix('/assets/images/dokidoki/dokidoki-hashtag-title.png') %>" alt="dokidoki">
+                <img class="u-show-sp " src="<%= mix('/assets/images/dokidoki/dokidoki-hashtag-title-sp.png') %>" alt="dokidoki">
+              </span>
+            </h2>
+            <div class="instagram-content">
+              <ul class="instagram-list">
+                <% instagramDokidoki.forEach(item => { %>
+                <li class="instagram-list-item col-sm-4">
+                  <div class="instagram-list-item-image">
+                    <img src="<%- item.image %>" alt="<%- item.alt %>">
+                  </div>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+            <div class="l-button">
+              <%- include('/partials/button', {
+                newTab: true,
+                modifier: 'button-instagram',
+                text: 'インスタグラムでもっと見る',
+                link: 'https://www.instagram.com/explore/tags/%E6%A3%AE%E6%84%9F%E8%A6%9A%E3%82%A2%E3%82%B9%E3%83%AC%E3%83%81%E3%83%83%E3%82%AFdokidoki/'
+              }) %>
+            </div>
+            <!-- <div class="instagram-banner">
+              <a href="#">
+                <img src="<%- mix('/assets/images/sumika/net-sumika/instagram-banner.jpg')%> ">
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <%- include('/partials/recommendation') -%>
+    <section class="faq l-section">
+      <%- include('/partials/accordion', {
+        dataAccordion: getData().data.accordionDokidoki
+      }) %>
+    </section>
 
-  <%- include('/partials/pickup') -%>
+    <!-- <div class="call-to-action">
+      <div class="l-container">
+        <div class="call-to-action-wrapper">
+          <div class="call-to-action-inner">
+            <h2>
+              <span class="heading-texts">
+                <img src="<%= mix('/assets/images/dokidoki/dokidoki-cta.png') %>" alt="DOKIDOKIをもっと楽しむ">
+              </span>
+            </h2>
+            <div class="call-to-action-description">
+              <p class="call-to-action-description-text">
+                SUMIKAのこだわりポイントや、<br>
+                知っているともっと楽しくなる情報を配信中しています。
+              </p>
+            </div>
+            <div class="l-button l-button-call-to-action">
+              <%- include('/partials/button', {
+                modifier: 'button-sumika',
+                text: 'もっと見る',
+                link: '#'
+              }) %>
+            </div>
+            <span class="call-to-action-dot call-to-action-dot-1">
+              <img src="<%- mix('/assets/images/dokidoki/banner-dot-1.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-2">
+              <img src="<%- mix('/assets/images/dokidoki/banner-dot-2.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-3">
+              <img src="<%- mix('/assets/images/dokidoki/banner-dot-3.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-4">
+              <img src="<%- mix('/assets/images/dokidoki/banner-dot-4.png')%> ">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
+    <%- include('/partials/banner-cta', {
+      link: 'https://www.twinring.jp/mobipark_m/card/',
+      imgPath: mix('/assets/images/subpage-banner-bottom.png'),
+      alt: '上手に乗れたらライセンスカードをつくろう'
+    }) -%>
+
+    <%- include('/partials/recommendation') -%>
+
+    <%- include('/partials/pickup') -%>
+
+  </div>
 </div>
 
 <%- include('/partials/breadcrumbs', {

@@ -7,6 +7,10 @@ var replace = require( 'gulp-replace' );
 var convertEncoding = require( 'gulp-convert-encoding' );
 var del = require('del');
 var rename = require('gulp-rename');
+var htmlsplit = require('gulp-htmlsplit');
+var tagContentReplace = require('gulp-tag-content-replace');
+
+//https://github.com/reinerBa/gulp-tag-content-replace
 
 //cont constData = {};
 
@@ -28,38 +32,15 @@ gulp.task('cp-to-workspace', function() {
     .pipe(gulp.dest('release/'));
 });
 
-gulp.task('cp2', function() {
+gulp.task('cp-tmp', function() {
     return gulp.src('release_STG/**')
-    .pipe(gulp.dest('release_STG2/'));
+    .pipe(gulp.dest('release_STG_TMP/'));
 });
 
-gulp.task('cp3', function() {
-    return gulp.src('release_STG/**')
-    .pipe(gulp.dest('release_STG3/'));
-});
-
-gulp.task('cp3to1', function() {
+gulp.task('cp-tmp-to-current', function() {
     return gulp.src('release_STG3/**')
     .pipe(gulp.dest('release_STG/'));
 });
-
-//gulp.task('build-shift-jis', function() {
-//      return gulp.src([
-//          'release/dokidoki/**',
-//          'release/hellowoods/**',
-//          'release/itadaki/**',
-//          'release/mobipark_m/**',
-//          'release/sumika/**',
-//          'release/*.html'
-//          ],{
-//        base: 'release/'
-//        })
-//        .pipe(replace('UTF-8', 'Shift_JIS'))
-//        .pipe(convertEncoding({to: 'Shift_JIS'}))
-//        //.pipe(replace('/assets/', './'))
-//        //.pipe(replace('assets/', './'))
-//        .pipe(gulp.dest('release_sjis/'));
-//});
 
 gulp.task('cp-html', function() {
     return gulp.src([
@@ -85,6 +66,20 @@ gulp.task('cp-assets', function() {
       .pipe(gulp.dest('release_STG/sumika'));
 });
 
+gulp.task('cp-assets-sjis', function() {
+    return gulp.src([
+        'release/assets/**'
+        ],{
+      base: 'release/'
+      })
+      .pipe(gulp.dest('release_SJIS_STG/'))
+      .pipe(gulp.dest('release_SJIS_STG/dokidoki'))
+      .pipe(gulp.dest('release_SJIS_STG/hellowoods'))
+      .pipe(gulp.dest('release_SJIS_STG/itadaki'))
+      .pipe(gulp.dest('release_SJIS_STG/mobipark_m'))
+      .pipe(gulp.dest('release_SJIS_STG/sumika'));
+});
+
 gulp.task('del-unuse-assets', function(cb) {
     return gulp.del([
         'release_STG/dokidoki',
@@ -103,12 +98,17 @@ gulp.task('del-unuse-assets', function(cb) {
 
 gulp.task('replace-path-css', function() {
     return gulp.src([
-        'release_STG/assets/css/app.css'
+        'release/assets/css/app.css'
         ],{
-      base: 'release_STG/'
+      base: 'release/assets/css/'
       })
-      //.pipe(replace(//assets//g, '../'))
-      .pipe(gulp.dest('release_STG/'));
+      .pipe(replace('/assets/', '../'))
+      .pipe(gulp.dest('release_STG/assets/css.app'))
+      .pipe(gulp.dest('release_STG/dokidoki/assets/css.app'))
+      .pipe(gulp.dest('release_STG/hellowoods/assets/css.app'))
+      .pipe(gulp.dest('release_STG/itadaki/assets/css.app'))
+      .pipe(gulp.dest('release_STG/mobipark_m/assets/css.app'))
+      .pipe(gulp.dest('release_STG/sumika/assets/css.app'));
 });
 
 gulp.task('replace-path-html1', function() {
@@ -186,65 +186,20 @@ gulp.task('create-utf8footer', function() {
 
 
 
-gulp.task('replace-path-sumika', function() {
+gulp.task('del-unuse-contents', function() {
     return gulp.src([
-        'release/sumika/**.html',
-        'release/sumika/**.css'
+        'release_STG/**.html',
+        'release_STG/**/*.html'
         ],{
-      base: 'release/sumika'
+      base: 'release_STG/'
       })
-      .pipe(replace('/assets/', './assets/'))
-      .pipe(replace('assets/', './assets/'))
-      .pipe(replace('../', './'))
-      .pipe(replace('././', './'))
-      //.pipe(replace('assets/css/images', 'assets/images'))
-      .pipe(gulp.dest('release_STG/sumika'));
+    //Sample
+    //.pipe(replace("/*dev*/", "")) // deletes occurence of "/*dev*/ whateverXYZ /*dev*/"
+    //.pipe(replace("//debug", "//debug_end", "")) // deletes occurence of "//debug whateverXYZ //debug_end"
+    //.pipe(replace("<!--", "-->", ""))
+        .pipe(tagContentReplace("<!-- START DELETE CONTENTS -->", "<!-- END DELETE CONTENTS -->", ""))
+        .pipe(gulp.dest('release_STG/'));
 });
-
-gulp.task('replace-path-html', function() {
-    return gulp.src([
-        'release/*.html',
-        'release/**/*.html'
-        ],{
-      base: 'release/'
-      })
-      .pipe(replace('/assets/', './assets/'))
-      .pipe(replace('assets/', './assets/'))
-      .pipe(replace('../', './'))
-      .pipe(replace('././', './'))
-      //.pipe(replace('assets/css/images', 'assets/images'))
-      .pipe(gulp.dest('release_STG/'));
-});
-
-gulp.task('replace-path-css', function() {
-    return gulp.src([
-        'release/assets/css/app.css'
-        ],{
-      base: 'release/assets/css/'
-      })
-      .pipe(replace('/assets/', '../'))
-      .pipe(gulp.dest('release_STG/assets/css.app'))
-      .pipe(gulp.dest('release_STG/dokidoki/assets/css.app'))
-      .pipe(gulp.dest('release_STG/hellowoods/assets/css.app'))
-      .pipe(gulp.dest('release_STG/itadaki/assets/css.app'))
-      .pipe(gulp.dest('release_STG/mobipark_m/assets/css.app'))
-      .pipe(gulp.dest('release_STG/sumika/assets/css.app'));
-});
-
-//gulp.task('replace-path-html-mobipark', function() {
-//    return gulp.src([
-//        'release_STG/**.html',
-//        'release_STG/**/*.html'
-//        ],{
-//      base: 'release/'
-//      })
-//      .pipe(replace('/assets/', './assets/'))
-//      .pipe(replace('assets/', './assets/'))
-//      .pipe(replace('../', './'))
-//      .pipe(replace('././', './'))
-//      //.pipe(replace('assets/css/images', 'assets/images'))
-//      .pipe(gulp.dest('release_STG/'));
-//});
 
 gulp.task('fix-bug', function() {
     return gulp.src([
@@ -264,6 +219,21 @@ gulp.task('fix-bug', function() {
       .pipe(gulp.dest('release_STG/'));
 });
 
+gulp.task('fix-bug2', function() {
+    return gulp.src([
+      'release_STG/*.html',
+      'release_STG/**/*.html',
+      '!release_STG/**/*utf.html'
+      ],{
+      base: 'release_STG/'
+      })
+      // fix code
+      .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
+      .pipe(replace('lig-', 'trm-renewal-'))
+      .pipe(gulp.dest('release_STG/'));
+});
+
+
 gulp.task('fix-bug-index', function() {
     return gulp.src([
       'release_STG/*.html'
@@ -271,6 +241,7 @@ gulp.task('fix-bug-index', function() {
       base: 'release_STG/'
       })
       // fix code
+      .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
       .pipe(replace('<section class="bottom-slider"', '<section class="bottom-slider" style="height: 515px;"'))
       .pipe(replace('<section class="top-slide l-section"', '<section class="top-slide l-section" style="height: 510px;"'))
       .pipe(replace('<section class="forest l-section"', '<section class="forest l-section" style="height: 705px;"'))
@@ -293,7 +264,7 @@ gulp.task('build-shift-jis-stg', function() {
       .pipe(replace('</html>', ''))
       .pipe(replace('UTF-8', 'Shift_JIS'))
       .pipe(convertEncoding({to: 'Shift_JIS'}))
-      .pipe(gulp.dest('release_STG/'));
+      .pipe(gulp.dest('release_SJIS_STG/'));
 });
 
 
@@ -313,6 +284,33 @@ gulp.task('build-shift-jis-stg', function() {
 //        .pipe(ejs({}, {}, { ext: '.html' }))
 //        .pipe( gulp.dest( "./" ) );
 //});
+
+gulp.task('html-split', function() {
+    return gulp.src([
+        'release/**.html',
+        'release/**/*.html'
+        ],{
+      base: 'release/'
+      })
+      .pipe(htmlsplit())
+      .pipe(gulp.dest('release_split/'));
+});
+
+gulp.task('html-tag-replace', function() {
+    return gulp.src([
+        'release/**.html',
+        'release/**/*.html'
+        ],{
+      base: 'release/'
+      })
+    //Sample
+    //.pipe(replace("/*dev*/", "")) // deletes occurence of "/*dev*/ whateverXYZ /*dev*/"
+    //.pipe(replace("//debug", "//debug_end", "")) // deletes occurence of "//debug whateverXYZ //debug_end"
+    //.pipe(replace("<!--", "-->", ""))
+        .pipe(tagContentReplace("<!-- START DELETE CONTENTS -->", "<!-- END DELETE CONTENTS -->", ""))
+        .pipe(gulp.dest('release_tag_replace/'));
+});
+
 
 gulp.task("default",
     gulp.series(

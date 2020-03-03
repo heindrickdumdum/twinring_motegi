@@ -15,5 +15,15 @@ var endLine = htmlTagsSJ.indexOf('</body>');
 var BODY_LENGTH = 6;
 
 // htmlTagsSJ.slice(startLine)
-var contentsTags = htmlTagsSJ.slice(startLine + BODY_LENGTH, endLine)
-console.log(contentsTags);
+var contentsTags = htmlTagsSJ.slice(startLine, endLine)
+// console.log(contentsTags);
+
+//Update html files
+function writeFile(path, data) {
+  fs.writeFile(path, data, function (err) {
+    if (err) {
+        throw err;
+    }
+  });
+}
+writeFile(__dirname + '/public/index.html', contentsTags);

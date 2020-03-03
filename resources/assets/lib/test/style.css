@@ -493,7 +493,7 @@
 	#lineup .custom-slick-arrows .slick-arrow {
 		display: inline-block;
 		appearance: none;
-		background: url(../img/slick-arrow.png) no-repeat 0 0;
+		background: url(../test/top/img/slick-arrow.png) no-repeat 0 0;
 		width: 40px;
 		height: 40px;
 		border: 0;
@@ -940,87 +940,87 @@
     background-size: contain;
   }
   #trm_content_wrap .i-access {
-    background-image: url(../img/i-access.png);
+    background-image: url(../test/top/img/i-access.png);
     width: 50px;
     height: 28px;
   }
   #trm_content_wrap .i-calendar {
-    background-image: url(../img/i-calendar.png);
+    background-image: url(../test/top/img/i-calendar.png);
     width: 31px;
     height: 30px;
   }
   #trm_content_wrap .i-contact {
-    background-image: url(../img/i-contact.png);
+    background-image: url(../test/top/img/i-contact.png);
     width: 35px;
     height: 30px;
   }
   #trm_content_wrap .i-fee {
-    background-image: url(../img/i-fee.png);
+    background-image: url(../test/top/img/i-fee.png);
     width: 30px;
     height: 30px;
   }
   #trm_content_wrap .i-fieldtrip {
-    background-image: url(../img/i-fieldtrip.png);
+    background-image: url(../test/top/img/i-fieldtrip.png);
     width: 35px;
     height: 30px;
   }
   #trm_content_wrap .i-hours {
-    background-image: url(../img/i-hours.png);
+    background-image: url(../test/top/img/i-hours.png);
     width: 30px;
     height: 30px;
   }
   #trm_content_wrap .i-instagram {
-    background-image: url(../img/i-instagram.png);
+    background-image: url(../test/top/img/i-instagram.png);
     width: 25px;
     height: 25px;
   }
   #trm_content_wrap .i-map {
-    background-image: url(../img/i-map.png);
+    background-image: url(../test/top/img/i-map.png);
     width: 30px;
     height: 30px;
   }
   #trm_content_wrap .i-riders {
-    background-image: url(../img/i-riders.png);
+    background-image: url(../test/top/img/i-riders.png);
     width: 25px;
     height: 25px;
   }
   #trm_content_wrap .i-service {
-    background-image: url(../img/i-service.png);
+    background-image: url(../test/top/img/i-service.png);
     width: 30px;
     height: 30px;
   }
   #trm_content_wrap .i-survey {
-    background-image: url(../img/i-survey.png);
+    background-image: url(../test/top/img/i-survey.png);
     width: 27px;
     height: 30px;
   }
   #trm_content_wrap .i-tenki {
-    background-image: url(../img/i-tenki.png);
+    background-image: url(../test/top/img/i-tenki.png);
     width: 42px;
     height: 30px;
   }
   #trm_content_wrap .i-facility {
-    background-image: url(../img/i-facility.png);
+    background-image: url(../test/top/img/i-facility.png);
     width: 24px;
     height: 24px;
   }
   #trm_content_wrap .i-menu {
-    background-image: url(../img/i-menu.png);
+    background-image: url(../test/top/img/i-menu.png);
     width: 24px;
     height: 24px;
   }
   #trm_content_wrap .i-access2 {
-    background-image: url(../img/i-access2.png);
+    background-image: url(../test/top/img/i-access2.png);
     width: 53px;
     height: 31px;
   }
   #trm_content_wrap .i-fee2 {
-    background-image: url(../img/i-fee2.png);
+    background-image: url(../test/top/img/i-fee2.png);
     width: 31px;
     height: 31px;
   }
   #trm_content_wrap .i-hours2 {
-    background-image: url(../img/i-hours2.png);
+    background-image: url(../test/top/img/i-hours2.png);
     width: 31px;
     height: 31px;
   }
@@ -1074,10 +1074,10 @@
   }
   
   #attraction_motorsports .attraction .img {
-    background-image: url(../img/img_am_attraction.jpg);
+    background-image: url(../test/top/img/img_am_attraction.jpg);
   }
   #attraction_motorsports .motorsports .img {
-    background-image: url(../img/img_am_motogp.jpg);
+    background-image: url(../test/top/img/img_am_motogp.jpg);
   }
   #attraction_motorsports.column2 > .column a .txt {
     position: relative;
@@ -1106,7 +1106,7 @@
     display: block;
     width: 21px;
     height: 11px;
-    background: url(../img/i-arrow.png) no-repeat 0 0;
+    background: url(../test/top/img/i-arrow.png) no-repeat 0 0;
     background-size: contain;
   }
   

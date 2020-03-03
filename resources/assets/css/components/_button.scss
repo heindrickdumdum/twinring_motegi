@@ -166,7 +166,7 @@
 
   &.challenge-hellowoods-button {
     @include min-screen ($breakpoint-mobile + 1) {
-      margin-right: 50px;
+      margin-left: 5px;
     }
   }
 }

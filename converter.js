@@ -6,17 +6,14 @@ var iconv = require('iconv-lite'); // support Shift-jis
 
 // Get html
 var htmlTags = fs.readFileSync(__dirname + '/public/index.html');
-var retStr = iconv.decode(htmlTags, 'Shift_JIS');
+var htmlTagsSJ = iconv.decode(htmlTags, 'Shift_JIS');
 
-console.log(retStr);
+// console.log(typeof htmlTagsSJ);
+var startLine = htmlTagsSJ.indexOf('<body>');
+var endLine = htmlTagsSJ.indexOf('</body>');
 
-//Change HTML to STR
-// var htmlTags =  document;
-// var contentsTags = document.getElementsByTagName('body');
-// Get </head>
+var BODY_LENGTH = 6;
 
-// Remove before </head>
-
-// Get </body>
-
-// Remove after </body>
+// htmlTagsSJ.slice(startLine)
+var contentsTags = htmlTagsSJ.slice(startLine + BODY_LENGTH, endLine)
+console.log(contentsTags);

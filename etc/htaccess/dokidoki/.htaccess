@@ -1,0 +1,11 @@
+AddType image/svg+xml .svg .svgz
+
+# For Redirect
+RewriteRule ^campaign/index.html$ https://www.twinring.jp/dokidoki/ [L,R=301]
+RewriteRule ^hellowoods/index.html$ https://www.twinring.jp/dokidoki/ [L,R=301] 
+RewriteRule ^about-dokidoki/index.html$ https://www.twinring.jp/dokidoki/ [L,R=301] 
+RewriteRule ^donguri/index.html$ https://www.twinring.jp/dokidoki/ [L,R=301] 
+RewriteRule ^donguri/index.html$ https://www.twinring.jp/dokidoki/ [L,R=301] 
+RewriteRule ^faq/index.html$ https://www.twinring.jp/dokidoki/ [L,R=301] 
+RewriteRule ^athletic/index.html$ https://www.twinring.jp/dokidoki/ [L,R=301] 
+

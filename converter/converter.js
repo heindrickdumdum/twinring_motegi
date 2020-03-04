@@ -1,4 +1,4 @@
-var fs = require('fs');
+var fs = require('fs-extra');
 var main  = require('./main.js');
 var path = require('path');
 

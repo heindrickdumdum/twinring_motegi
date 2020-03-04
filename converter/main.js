@@ -1,4 +1,4 @@
-var fs = require('fs'); // fs module
+var fs = require('fs-extra'); // fs module
 var iconv = require('iconv-lite'); // support Shift-jis
 
 exports.mtgConvert = function (targetFile) {

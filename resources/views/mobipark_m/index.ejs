@@ -6,36 +6,36 @@
 <%- include('/partials/data/index') -%>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<main>
-  <div class="lig-content">
-    <div class="subpage subpage-mobipark page-mobipark">
-      <div class="mv mv-mobipark">
-        <ul class="mv-list">
-          <li class="mv-item">
-            <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mobipark/mv-img.jpg') %>);"></div>
-          </li>
-        </ul>
+<div class="lig-content">
+  <div class="subpage subpage-mobipark page-mobipark">
+    <div class="mv mv-mobipark">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image" style="background-image:url(<%= mix('/assets/images/mobipark/mv-img.jpg') %>);"></div>
+        </li>
+      </ul>
 
-        <div class="l-container mv-container">
-          <h1 class="mv-heading">
-            <span class="mv-heading-text mv-heading-text-mobipark">
-              Mobipark
-            </span>
-            <span class="mv-heading-subtext mv-heading-subtext-mobipark">
-              <svg>
-                <title>Mobipark</title>
-                <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mobipark-main-title_1') %>"></use>
-              </svg>
-            </span>
-          </h1>
+      <div class="l-container mv-container">
+        <h1 class="mv-heading">
+          <span class="mv-heading-text mv-heading-text-mobipark">
+            Mobipark
+          </span>
+          <span class="mv-heading-subtext mv-heading-subtext-mobipark">
+            <svg>
+              <title>Mobipark</title>
+              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-mobipark-main-title_1') %>"></use>
+            </svg>
+          </span>
+        </h1>
 
-          <div class="mv-today mv-today-mobipark">
-            <div class="mv-today-inner">
-            </div>
+        <div class="mv-today mv-today-mobipark">
+          <div class="mv-today-inner">
           </div>
         </div>
       </div>
+    </div>
 
+    <main>
       <section class="info-container">
         <div class="l-section-title">
           <%- include('/partials/heading', {
@@ -195,9 +195,38 @@
                   <%- include('/partials/button', {
                     modifier: 'button-adventure',
                     text: 'もっと見る',
-                    link: 'https://www.twinring.jp/dokidoki/'
+                    link: 'https://www.twinring.jp/itadaki/'
                   }) %>
                 </div>
+
+              <!-- <div class="l-adventure-sp-container">
+                <div class="l-adventure l-adventure-itadaki">
+                  <div class="l-section-title l-section-title-adventure">
+                    <%- include('/partials/heading', {
+                      modifier: 'adventure-heading heading-title-adventure-itadaki',
+                      subtextvg: 'mobipark-dokidoki-title',
+                      altSubtextvg: 'Adventure Dokidoki'
+                    }) %>
+                  </div>
+
+                  <p class="adventure-content-copy u-show-pc">
+                    森の生態系を表現した立体迷路。<br/>
+                    リアルな生きもののオブジェを観察しながら14ヶ所のスタンプを集め、頂上を目指します。
+                  </p>
+
+                  <p class="adventure-content-copy u-show-sp">
+                    森の生態系を表現した立体迷路。
+                    リアルな生きもののオブジェを観察しながら14ヶ所のスタンプを集め、頂上を目指します。
+                  </p>
+
+                  <div class="l-button">
+                    <%- include('/partials/button', {
+                      modifier: 'button-adventure',
+                      text: 'もっと見る',
+                      link: 'https://www.twinring.jp/itadaki/'
+                    }) %>
+                  </div>
+                </div> -->
               </div>
             </div>
           </li>
@@ -222,12 +251,12 @@
 
                 <p class="adventure-content-copy u-show-pc">
                   森の生態系を表現した立体迷路。<br/>
-                  リアルな生きもののオブジェを観察しながら１４ヶ所のスタンプを集め、頂上を目指します。
+                  リアルな生きもののオブジェを観察しながら14ヶ所のスタンプを集め、頂上を目指します。
                 </p>
 
                 <p class="adventure-content-copy u-show-sp">
                   森の生態系を表現した立体迷路。
-                  リアルな生きもののオブジェを観察しながら１４ヶ所のスタンプを集め、頂上を目指します。
+                  リアルな生きもののオブジェを観察しながら14ヶ所のスタンプを集め、頂上を目指します。
                 </p>
 
                 <div class="l-button">
@@ -381,11 +410,10 @@
 
       <!-- pick up module -->
       <%- include('/partials/pickup') -%>
-
-      <!-- END BOTTOM -->
-    </div>
+    </main>
+    <!-- END BOTTOM -->
   </div>
-</main>
+</div>
 
 <!-- BREADCRUMBS -->
 <%- include('/partials/breadcrumbs', {

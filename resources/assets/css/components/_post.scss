@@ -1,5 +1,6 @@
-.post-wrap {
+.post-list {
   display: flex;
+  flex-wrap: wrap;
   margin: -6px -30px 0;
 
   @include max-screen($breakpoint-mobile) {
@@ -8,9 +9,9 @@
   }
 }
 
-.post-list {
+.post-item {
+  width: calc((100% / 2) - 60px);
   margin: 0 30px;
-  width: calc(100% / 2);
 
   @include max-screen($breakpoint-mobile) {
     width: 100%;
@@ -34,6 +35,7 @@
 .post-link {
   display: block;
   padding: 34px 0 23px;
+  height: 100%;
   font-size: 18px;
   color: $base-font-color;
   border-bottom: 1px dashed $color-primary;
@@ -88,6 +90,14 @@
   background: linear-gradient(to right, $color-blue 0%, $color-green 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  .is-ie & {
+    background: none !important;
+    color: $color-gossamer;
+    -webkit-text-fill-color: $color-gossamer;
+    -moz-text-fill-color: $color-gossamer;
+    -ms-text-fill-color: $color-gossamer;
+  }
 
   @include max-screen($breakpoint-mobile) {
     font-size: 11px;

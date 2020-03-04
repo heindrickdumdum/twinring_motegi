@@ -6,22 +6,22 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<main class="l-main">
-  <div class="lig-content">
-    <div class="subpage">
-      <div class="mv mv-subpage">
-        <ul class="mv-list">
-          <li class="mv-item">
-            <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.jpg') %>);"></div>
-            <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img-sp.jpg') %>);"></div>
-          </li>
-        </ul>
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img.jpg') %>);"></div>
+          <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/deb-den/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
 
-        <h1 class="u-title-hidden">
-          おさんぽでんでん
-        </h1>
-      </div>
+      <h1 class="u-title-hidden">
+        おさんぽでんでん
+      </h1>
+    </div>
 
+    <main>
       <div class="subpage-inner">
         <div class="l-section-title">
           <div class="heading-wrap heading-main heading-main-debden">
@@ -64,7 +64,7 @@
 
             <tr class="table-row">
               <th class="table-head">雨天の運行</th>
-              <td class="table-col">営業いたします
+              <td class="table-col">営業いたします。
               </td>
             </tr>
 
@@ -89,7 +89,7 @@
             <tr class="table-row">
               <th class="table-head">ご利用にあたって</th>
               <td class="table-col">
-                ※1 0歳から2歳までの方：<br>0歳から2歳までのお子さまは中学生以上の同伴者の付添いが必要になります。
+                <span class="table-col-num">※1</span>0歳から2歳までの方：<br>0歳から2歳までのお子さまは中学生以上の同伴者の付添いが必要になります。
               </td>
             </tr>
 
@@ -226,12 +226,10 @@
       <%- include('/partials/recommendation') -%>
 
       <%- include('/partials/pickup') -%>
-
-      <!-- END BOTTOM -->
-    </div>
+    </main>
+    <!-- END BOTTOM -->
   </div>
-</main>
-
+</div>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsDebden

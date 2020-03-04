@@ -43,7 +43,7 @@
     height: 100%;
 
     @include max-screen($breakpoint-mobile) {
-      background: url('../images/bg-leaf.png');
+      // background: url('../images/bg-leaf.png');
       background-image: url('../images/bg-leaf.png');
       background-size: cover;
       background-position-x: center;
@@ -53,6 +53,13 @@
   &.subpage-itadaki {
     &::before {
       background-image: url('../images/itadaki/subpage-bg.png');
+
+      @include max-screen($breakpoint-mobile) {
+        // background: url('../images/bg-leaf.png');
+        background-image: url('../images/bg-leaf.png');
+        background-size: cover;
+        background-position-x: center;
+      }
     }
   }
 
@@ -468,6 +475,8 @@
     font-family: $font-hiragino;
     line-height: 1.417;
     letter-spacing: 0.1em;
+    cursor: pointer;
+    text-decoration: underline;
 
     @include max-screen($breakpoint-mobile) {
       font-size: 13px;
@@ -482,6 +491,37 @@
 
     @include max-screen($breakpoint-mobile) {
       font-size: 12px;
+    }
+  }
+
+  &:after { // modifier for forest walk
+    content: "";
+    display: block;
+    position: absolute;
+    top: 90%;
+    right: 5px;
+    transform-origin: center;
+    transform: translateY(-50%) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5.5px 9px 5.5px;
+    border-color: transparent transparent #719b68 transparent;
+    transition: transform 0.35s ease-in-out;
+  
+    @include min-screen($breakpoint-mobile + 1) {
+      right: 50%;
+      border-width: 0 7px 12.1px 7px;
+    }
+  
+    @include max-screen($breakpoint-mobile) {
+      right: 50%;
+    }
+  }
+
+  &.is-open {
+    &:after {
+      transform: rotate(0);
     }
   }
 }

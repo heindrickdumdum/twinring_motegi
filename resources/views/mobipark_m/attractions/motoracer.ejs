@@ -6,23 +6,23 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<main class="l-main">
-  <div class="lig-content">
-    <div class="subpage">
-      <div class="mv mv-subpage">
-        <ul class="mv-list">
-          <li class="mv-item">
-            <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/motoracer/mv-img.jpg') %>);"></div>
-            <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/motoracer/mv-img-sp.jpg') %>);"></div>
-          </li>
-        </ul>
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/motoracer/mv-img.jpg') %>);"></div>
+          <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/motoracer/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
 
 
-        <h1 class="u-title-hidden">
-          モトレーサー
-        </h1>
-      </div>
+      <h1 class="u-title-hidden">
+        モトレーサー
+      </h1>
+    </div>
 
+    <main>
       <div class="subpage-inner">
         <div class="heading-wrap heading-main heading-main-motoracer">
           <h2 class="heading">
@@ -254,12 +254,10 @@
       <%- include('/partials/recommendation') -%>
 
       <%- include('/partials/pickup') -%>
-
-
-      <!-- END BOTTOM -->
-    </div>
+    </main>
+    <!-- END BOTTOM -->
   </div>
-</main>
+</div>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsMotoracer

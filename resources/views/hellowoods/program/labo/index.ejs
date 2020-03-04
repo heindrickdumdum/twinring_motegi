@@ -4,24 +4,24 @@
 %>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<main>
-  <div class="lig-content">
-    <div class="subpage subpage-labo">
-      <div class="mv mv-subpage mv-subpage-labo">
-        <ul class="mv-list">
-          <li class="mv-item">
-            <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/labo-mv.jpg') %>);"></div>
-            <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/labo-mv-sp.jpg') %>);"></div>
-          </li>
-        </ul>
+<div class="lig-content">
+  <div class="subpage subpage-labo">
+    <div class="mv mv-subpage mv-subpage-labo">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/labo-mv.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hellowoods/labo-mv-sp.jpg') %>);"></div>
+        </li>
+      </ul>
 
-        <h1 class="mv-heading mv-heading-subpage mv-heading-subpage-labo">
-          <span class="mv-heading-text mv-heading-text-labo">
-            生きものの研究室
-          </span>
-        </h1>
-      </div>
+      <h1 class="mv-heading mv-heading-subpage mv-heading-subpage-labo">
+        <span class="mv-heading-text mv-heading-text-labo">
+          生きものの研究室
+        </span>
+      </h1>
+    </div>
 
+    <main>
       <div class="subpage-inner subpage-inner-anchor">
         <div class="l-section-title u-show-pc">
           <%- include('/partials/heading', {
@@ -360,17 +360,16 @@
         </div>
       </section>
 
-    <!-- END BOTTOM -->
+      <!-- END BOTTOM -->
 
-    <!-- recommendation module -->
-    <%- include('/partials/recommendation') -%>
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
 
-    <!-- pick up module -->
-    <%- include('/partials/pickup') -%>
-
-    </div>
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+    </main>
   </div>
-</main>
+</div>
 
 <!-- BREADCRUMBS -->
 <%- include('/partials/breadcrumbs', {

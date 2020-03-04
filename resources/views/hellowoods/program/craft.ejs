@@ -6,24 +6,24 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<main>
-  <div class="lig-content">
-    <div class="subpage subpage-craft">
-      <div class="mv mv-subpage mv-subpage-craft">
-        <ul class="mv-list">
-          <li class="mv-item">
-            <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/craft/mv-img.png') %>);"></div>
-            <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/craft/mv-img-sp.png') %>);"></div>
-          </li>
-        </ul>
+<div class="lig-content">
+  <div class="subpage subpage-craft">
+    <div class="mv mv-subpage mv-subpage-craft">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/craft/mv-img.png') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/craft/mv-img-sp.png') %>);"></div>
+        </li>
+      </ul>
 
-        <h1 class="mv-heading mv-heading-subpage  mv-heading-subpage-labo">
-          <span class="mv-heading-text">
-            森のクラフト体験
-          </span>
-        </h1>
-      </div>
+      <h1 class="mv-heading mv-heading-subpage  mv-heading-subpage-labo">
+        <span class="mv-heading-text">
+          森のクラフト
+        </span>
+      </h1>
+    </div>
 
+    <main>
       <div class="subpage-inner-wrap">
         <div class="subpage-inner">
           <div class="heading-wrap heading-main heading-main-tsubasa heading-main-craft">
@@ -72,7 +72,7 @@
 
               <tr class="table-row">
                 <th class="table-head">雨天の開催</th>
-                <td class="table-col">営業いたします</td>
+                <td class="table-col">営業いたします。</td>
               </tr>
               <tr class="table-row">
                 <th class="table-head">対象者</th>
@@ -248,10 +248,11 @@
       <div class="craft-pick-up">
         <%- include('/partials/pickup') -%>
       </div>
-        <!-- END BOTTOM -->
-    </div>
+    </main>
+    <!-- END BOTTOM -->
   </div>
-</main>
+</div>
+
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsCraft
 }) -%>

@@ -5,40 +5,40 @@
 %>
 <%- include('./../partials/head', { pageId, title }) -%>
 
-<main>
-  <div class="lig-content">
-    <div class="subpage subpage-itadaki">
-      <div class="mv mv-inner itadaki-mv">
-        <ul class="mv-list">
-          <li class="mv-item">
-            <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-itadaki.jpg')%>);"></div>
-          </li>
-        </ul>
+<div class="lig-content">
+  <div class="subpage subpage-itadaki">
+    <div class="mv mv-inner itadaki-mv">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image" style="background-image:url(<%= mix('/assets/images/itadaki/mv-itadaki.jpg')%>);"></div>
+        </li>
+      </ul>
 
-        <div class="l-container mv-container">
-          <h2 class="mv-heading mv-heading-itadaki">
-            <span class="mv-heading-texts">
-              Forest Labyrinth
-            </span>
-            <span class="mv-heading-subtexts">
-              <svg class="u-show-pc">
-                <title>迷宮森殿 ITADAKI</title>
-                <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-itadaki-main-title') %>"></use>
-              </svg>
-              <svg class="u-show-sp">
-                <title>迷宮森殿 ITADAKI</title>
-                <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-itadaki-main-title-sp') %>"></use>
-              </svg>
-            </span>
-          </h2>
+      <div class="l-container mv-container">
+        <h2 class="mv-heading mv-heading-itadaki">
+          <span class="mv-heading-texts">
+            Forest Labyrinth
+          </span>
+          <span class="mv-heading-subtexts">
+            <svg class="u-show-pc">
+              <title>迷宮森殿 ITADAKI</title>
+              <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-itadaki-main-title') %>"></use>
+            </svg>
+            <svg class="u-show-sp">
+              <title>迷宮森殿 ITADAKI</title>
+              <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-itadaki-main-title-sp') %>"></use>
+            </svg>
+          </span>
+        </h2>
 
-          <div class="mv-today">
-            <div class="mv-today-inner">
-            </div>
+        <div class="mv-today">
+          <div class="mv-today-inner">
           </div>
         </div>
       </div>
+    </div>
 
+    <main>
       <section class="main-content l-section">
         <div class="l-container">
             <div class="heading-wrap l-heading-main">
@@ -445,10 +445,9 @@
       <%- include('/partials/recommendation') -%>
 
       <%- include('/partials/pickup') -%>
-
-    </div>
+    </main>
   </div>
-</main>
+</div>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsItadaki

@@ -6,24 +6,24 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<main class="l-main">
-  <div class="lig-content">
-    <div class="subpage">
-      <div class="mv mv-subpage">
-        <ul class="mv-list">
-          <li class="mv-item">
-            <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/motor-cycle-training/mv-img.jpg') %>);"></div>
 
-            <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/motor-cycle-training/mv-img-sp.jpg') %>);"></div>
-          </li>
-        </ul>
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/motor-cycle-training/mv-img.jpg') %>);"></div>
 
-        <h1 class="u-title-hidden">
-          モーターサイクルトレーニング
-        </h1>
-      </div>
+          <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/motor-cycle-training/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
 
+      <h1 class="u-title-hidden">
+        モーターサイクルトレーニング
+      </h1>
+    </div>
 
+    <main>
       <div class="subpage-inner">
         <div class="heading-wrap heading-main heading-main-motorcycle">
           <h2 class="heading">
@@ -122,7 +122,7 @@
                 </p>
 
                 <p class="media-desc u-show-sp">
-                  はじめてのバイクにチャレンジ。ヘルメット、グローブを身につけた子どもの姿にパパとママもドキドキ！
+                  はじめてのバイクにチャレンジ。ヘルメ<br />ット、グローブを身につけた子どもの姿<br />にパパとママもドキドキ！
                 </p>
 
                 <%- include('/partials/note', {
@@ -150,12 +150,10 @@
                   一人で乗れるようにスタッフが丁寧にコーチング。みんなに応援されてバイクに乗れた瞬間の感動は一生の思い出！
                 </p>
 
-                <div class="media-bottom">
-                  <%- include('/partials/note', {
-                    modifier: 'note-motorcycle-training',
-                    imgPath: mix('/assets/images/motor-cycle-training/motorcycle-dekitane-banner-2.jpg')
-                  }) %>
-                </div>
+                <%- include('/partials/note', {
+                  modifier: 'note-motorcycle-training',
+                  imgPath: mix('/assets/images/motor-cycle-training/motorcycle-dekitane-banner-2.png')
+                }) %>
               </div>
             </div>
 
@@ -248,10 +246,10 @@
       <%- include('/partials/recommendation') -%>
 
       <%- include('/partials/pickup') -%>
-      <!-- END BOTTOM -->
-    </div>
+    </main>
+    <!-- END BOTTOM -->
   </div>
-</main>
+</div>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsMotorcycle

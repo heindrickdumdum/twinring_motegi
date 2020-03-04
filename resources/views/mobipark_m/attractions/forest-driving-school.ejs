@@ -6,23 +6,23 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<main class="l-main">
-  <div class="lig-content">
-    <div class="subpage">
-      <div class="mv mv-subpage">
-        <ul class="mv-list">
-          <li class="mv-item">
-            <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.jpg') %>);"></div>
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img.jpg') %>);"></div>
 
-            <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img-sp.jpg') %>);"></div>
-          </li>
-        </ul>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/forest-driving/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
 
-        <h1 class="u-title-hidden">
-          森の教習所
-        </h1>
-      </div>
+      <h1 class="u-title-hidden">
+        森の教習所
+      </h1>
+    </div>
 
+    <main>
       <div class="subpage-inner">
         <div class="heading-wrap heading-main heading-main-forest-driving">
           <h2 class="heading">
@@ -61,13 +61,13 @@
 
             <tr class="table-row">
               <th class="table-head">雨天の運行</th>
-              <td class="table-col">営業いたします
+              <td class="table-col">営業いたします。
               </td>
             </tr>
 
             <tr class="table-row">
               <th class="table-head">対象者</th>
-              <td class="table-col">0歳以上でひとり座りできる方※
+              <td class="table-col">0歳以上でひとり座りできる方※１
               </td>
             </tr>
 
@@ -86,7 +86,8 @@
             <tr class="table-row">
               <th class="table-head">ご利用にあたって</th>
               <td class="table-col">
-                5歳未満のお子さまについて：<br>5歳未満のお子さまは中学生以上の同伴者の付添いが必要になります。
+                <span class="table-col-num">※１</span>5歳未満のお子さまについて：<br>5歳未満のお子さまは中学生以上の同伴者の付添いが必要になります。
+
               </td>
             </tr>
 
@@ -137,7 +138,7 @@
                   家族一緒にはもちろん、子ども一人でも運転できる<br />教習車で挑戦。信号や横断歩道、踏み切りなどが<br />再現された森の教習所で交通ルールを学ぼう！
                 </p>
                 <p class="media-desc u-show-sp">
-                  家族一緒にはもちろん、子ども一人でも運転できる教習車で挑戦。信号や横断歩道、踏み切りなどが再現された森の教習所で交通ルールを学ぼう！
+                  家族一緒にはもちろん、子ども一人でも運転できる教習車で挑戦。信号や横断歩道、踏み切りなどが表現された森の教習所で交通ルールを学ぼう！
                 </p>
               </div>
             </div>
@@ -159,19 +160,19 @@
                 <h4 class="media-title">
                   <div class="u-show-pc">
                     <span>
-                      点数を集めてプラチナ免許をゲット！
+                      点数を集めてプラチナライセンスをゲット！
                     </span>
                   </div>
 
                   <div class="u-show-sp">
-                    <span>点数を集めてプラチナ免許</span>
+                    <span>点数を集めてプラチナライセンス</span>
                     <span>をゲット！</span>
                   </div>
 
 
                 </h4>
                 <p class="media-desc">
-                  交通ルールを守って走行できると得点がアップ。<br>90点以上はゴールド免許、<br>100点満点ならプラチナ免許がゲットできるよ！
+                  交通ルールを守って走行できると得点がアップ。<br>90点以上はゴールドライセンス、<br>100点満点ならプラチナライセンスがゲットできるよ！
                 </p>
 
                 <%- include('/partials/note', {
@@ -247,11 +248,10 @@
       <%- include('/partials/recommendation') -%>
 
       <%- include('/partials/pickup') -%>
-
-      <!-- END BOTTOM -->
-    </div>
+    </main>
+    <!-- END BOTTOM -->
   </div>
-</main>
+</div>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsForestDrivingSchool

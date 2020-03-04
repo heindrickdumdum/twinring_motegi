@@ -6,8 +6,8 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { title, topHeading: true }) -%>
 
-<main>
-	<div class="lig-content">
+<div class="lig-content">
+  <main>
     <div class="l-feature design-feature">
       <section class="feature">
         <div class="slider-wrap">
@@ -33,11 +33,11 @@
         </div>
       </section>
     </div>
-  
+
     <div class="l-parkmap design-parkmap">
       <div class="parkmap design-parkmap-inner">
         <div class="l-container parkmap-container">
-  
+
           <div class="u-show-pc">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-parkmap',
@@ -46,7 +46,7 @@
               altSubtext: '',
             }) %>
           </div>
-  
+
           <div class="u-show-sp">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-parkmap',
@@ -55,8 +55,8 @@
               altSubtext: '',
             }) %>
           </div>
-  
-  
+
+
           <div class="parkmap-inner">
             <div class="parkmap-image">
               <ul class="parkmap-image-list">
@@ -98,11 +98,11 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
+</div>
 
-  <div class="client-content">
-    <%- include('/partials/test/top-content') %>
-  </div>
-</main>
+<div class="client-content">
+  <%- include('/partials/test/top-content') %>
+</div>
 
 <%- include('/partials/footer', { pageId }) -%>

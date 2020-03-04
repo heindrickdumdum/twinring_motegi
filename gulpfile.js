@@ -17,19 +17,19 @@ var tagContentReplace = require('gulp-tag-content-replace');
 
 gulp.task('replace-char', function() {
     return gulp.src([
-      'resources/views/**'
+        'public/*.html',
+        'public/*/*.html'
       ],{
-      base: 'resources/views/'
+      base: 'public/'
       })
       .pipe(replace('™', '&trade;'))
       .pipe(replace('〜', '～'))
-      .pipe(gulp.dest('resources/views/'));
+      .pipe(gulp.dest('public/'));
 });
 
 gulp.task('cp-to-workspace', function() {
     return gulp.src('public/**')
-    .pipe(gulp.dest('release_bk/'))
-    .pipe(gulp.dest('release/'));
+    .pipe(gulp.dest('work/'));
 });
 
 gulp.task('cp-tmp', function() {
@@ -44,19 +44,19 @@ gulp.task('cp-tmp-to-current', function() {
 
 gulp.task('cp-html', function() {
     return gulp.src([
-        'release/**.html',
-        'release/**/*.html'
+        'work/**.html',
+        'work/**/*.html'
         ],{
-      base: 'release/'
+      base: 'work/'
       })
       .pipe(gulp.dest('release_STG/'));
 });
 
 gulp.task('cp-assets', function() {
     return gulp.src([
-        'release/assets/**'
+        'work/assets/**'
         ],{
-      base: 'release/'
+      base: 'work/'
       })
       .pipe(gulp.dest('release_STG/'))
       .pipe(gulp.dest('release_STG/dokidoki'))
@@ -68,9 +68,9 @@ gulp.task('cp-assets', function() {
 
 gulp.task('cp-assets-sjis', function() {
     return gulp.src([
-        'release/assets/**'
+        'work/assets/**'
         ],{
-      base: 'release/'
+      base: 'work/'
       })
       .pipe(gulp.dest('release_SJIS_STG/'))
       .pipe(gulp.dest('release_SJIS_STG/dokidoki'))
@@ -81,7 +81,7 @@ gulp.task('cp-assets-sjis', function() {
 });
 
 gulp.task('del-unuse-assets', function(cb) {
-    return gulp.del([
+    return gulp.src([
         'release_STG/dokidoki',
         'release_STG/hellowoods',
         'release_STG/itadaki',
@@ -98,17 +98,17 @@ gulp.task('del-unuse-assets', function(cb) {
 
 gulp.task('replace-path-css', function() {
     return gulp.src([
-        'release/assets/css/app.css'
+        'work/assets/css/app.css'
         ],{
-      base: 'release/assets/css/'
+      base: 'work/assets/css/'
       })
       .pipe(replace('/assets/', '../'))
-      .pipe(gulp.dest('release_STG/assets/css.app'))
-      .pipe(gulp.dest('release_STG/dokidoki/assets/css.app'))
-      .pipe(gulp.dest('release_STG/hellowoods/assets/css.app'))
-      .pipe(gulp.dest('release_STG/itadaki/assets/css.app'))
-      .pipe(gulp.dest('release_STG/mobipark_m/assets/css.app'))
-      .pipe(gulp.dest('release_STG/sumika/assets/css.app'));
+      .pipe(gulp.dest('release_STG/assets/css'))
+      .pipe(gulp.dest('release_STG/dokidoki/assets/css'))
+      .pipe(gulp.dest('release_STG/hellowoods/assets/css'))
+      .pipe(gulp.dest('release_STG/itadaki/assets/css'))
+      .pipe(gulp.dest('release_STG/mobipark_m/assets/css'))
+      .pipe(gulp.dest('release_STG/sumika/assets/css'));
 });
 
 gulp.task('replace-path-html1', function() {
@@ -160,28 +160,30 @@ gulp.task('create-header-footer-base', function() {
     return gulp.src([
         'release_STG/index.html'
         ])
-      .pipe(rename('trm_header.html'))
-      .pipe(gulp.dest('release_STG/trm_header.html'))
-      .pipe(rename('trm_footer.html'))
-      .pipe(gulp.dest('release_STG/trm_footer.html'));
+        .pipe(rename('header_utf.html'))
+        .pipe(gulp.dest('release_STG/globalnavi/'))
+        .pipe(rename('footer_utf.html'))
+        .pipe(gulp.dest('release_STG/globalnavi/'));
 });
 
-gulp.task('create-utf8header', function() {
+gulp.task('create-sjis-header', function() {
     return gulp.src([
-        'release_STG/trm_header.html'
+        'release_STG/globalnavi/header_stf.html'
         ],{
       base: 'release_STG/'
       })
-      .pipe(gulp.dest('release_STG/header_utf.html'));
+        .pipe(rename('header_utf.html'))
+        .pipe(gulp.dest('release_STG/globalnavi/'));
 });
 
-gulp.task('create-utf8footer', function() {
+gulp.task('create-sjis-footer', function() {
     return gulp.src([
-        'release_STG/trm_footer.html'
+        'release_STG/footer_utf.html'
         ],{
       base: 'release_STG/'
       })
-      .pipe(gulp.dest('release_STG/footer_utf.html'));
+        .pipe(rename('trm_header.html'))
+        .pipe(gulp.dest('release_STG/globalnavi/'));
 });
 
 
@@ -197,7 +199,8 @@ gulp.task('del-unuse-contents', function() {
     //.pipe(replace("/*dev*/", "")) // deletes occurence of "/*dev*/ whateverXYZ /*dev*/"
     //.pipe(replace("//debug", "//debug_end", "")) // deletes occurence of "//debug whateverXYZ //debug_end"
     //.pipe(replace("<!--", "-->", ""))
-        .pipe(tagContentReplace("<!-- START DELETE CONTENTS -->", "<!-- END DELETE CONTENTS -->", ""))
+        .pipe(tagContentReplace("<!-- START DELETE HEADER CONTENTS -->", "<!-- END DELETE HEADER CONTENTS -->", ""))
+        .pipe(tagContentReplace("<!-- START DELETE FOOTER CONTENTS -->", "<!-- END DELETE FOOTER CONTENTS -->", ""))
         .pipe(gulp.dest('release_STG/'));
 });
 
@@ -268,52 +271,16 @@ gulp.task('build-shift-jis-stg', function() {
 });
 
 
-////Sass
-//gulp.task( "sass", function () {
-//    return gulp.src( 'sass/*.scss' )
-//        .pipe( sass().on( 'error', sass.logError ) )
-//        .pipe( autoprefixer( {
-//            browsers: [ 'last 2 version', 'ie >= 9', 'iOS >= 7', 'Android >= 4.2' ],
-//        }))
-//        .pipe( gulp.dest( './css' ));
-//});
-//
-//// EJS
-//gulp.task( "ejs", function () {
-//    return gulp.src(["ejs/**/*.ejs", '!' + "ejs/**/_*.ejs"])
-//        .pipe(ejs({}, {}, { ext: '.html' }))
-//        .pipe( gulp.dest( "./" ) );
-//});
-
-gulp.task('html-split', function() {
-    return gulp.src([
-        'release/**.html',
-        'release/**/*.html'
-        ],{
-      base: 'release/'
-      })
-      .pipe(htmlsplit())
-      .pipe(gulp.dest('release_split/'));
-});
-
-gulp.task('html-tag-replace', function() {
-    return gulp.src([
-        'release/**.html',
-        'release/**/*.html'
-        ],{
-      base: 'release/'
-      })
-    //Sample
-    //.pipe(replace("/*dev*/", "")) // deletes occurence of "/*dev*/ whateverXYZ /*dev*/"
-    //.pipe(replace("//debug", "//debug_end", "")) // deletes occurence of "//debug whateverXYZ //debug_end"
-    //.pipe(replace("<!--", "-->", ""))
-        .pipe(tagContentReplace("<!-- START DELETE CONTENTS -->", "<!-- END DELETE CONTENTS -->", ""))
-        .pipe(gulp.dest('release_tag_replace/'));
-});
-
-
 gulp.task("default",
     gulp.series(
-        "cp-to-workspace"
+        "replace-char",
+        "cp-to-workspace",
+        "cp-html",
+        "replace-path-css",
+        "replace-path-html1",
+        "replace-path-html2",
+        "replace-path-html3",
+        "cp-assets",
+        "del-unuse-assets"
     )
 );

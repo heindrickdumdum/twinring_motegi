@@ -5,3 +5,5 @@ var CONFIG = require('./config.js'); // fs module
 // config();
 
 fs.copySync(CONFIG.dist, CONFIG.release);
+
+// fs.copySync(CONFIG.assets, );

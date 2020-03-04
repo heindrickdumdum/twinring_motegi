@@ -1,9 +1,9 @@
 AddType image/svg+xml .svg .svgz
 
 # For Redirect
-# RewriteRule ^PATH$ URL [L,R=301]
-RewriteRule ^about/index.html$ https://www.twinring.jp/itadaki/ [L,R=301]
-RewriteRule ^hellowoods/index.html$ https://www.twinring.jp/itadaki/ [L,R=301]
-RewriteRule ^faq/index.html$ https://www.twinring.jp/itadaki/ [L,R=301]
-RewriteRule ^secret/index.html$ https://www.twinring.jp/itadaki/ [L,R=301]
+# RewriteRule ^PATH$ URL [R=301,L] 
+RewriteRule ^about/index.html$ /itadaki/ [R=301,L]
+RewriteRule ^hellowoods/index.html$ /itadaki/ [R=301,L]
+RewriteRule ^faq/index.html$ /itadaki/ [R=301,L]
+RewriteRule ^secret/index.html$ /itadaki/ [R=301,L]
 

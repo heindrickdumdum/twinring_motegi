@@ -197,12 +197,9 @@ gulp.task('create-sjis-footer', function() {
         .pipe(gulp.dest('release_UTF8_STG/globalnavi/'));
 });
 
-
-
-gulp.task('del-unuse-contents', function() {
+gulp.task('del-unuse-contents-top', function() {
     return gulp.src([
-        'release_UTF8_STG/**.html',
-        'release_UTF8_STG/**/*.html'
+        'release_UTF8_STG/*.html'
         ],{
       base: 'release_UTF8_STG/'
       })
@@ -212,6 +209,27 @@ gulp.task('del-unuse-contents', function() {
     //.pipe(replace("<!--", "-->", ""))
         .pipe(tagContentReplace("<!-- START DELETE HEADER CONTENTS -->", "<!-- END DELETE HEADER CONTENTS -->", ""))
         .pipe(tagContentReplace("<!-- START DELETE FOOTER CONTENTS -->", "<!-- END DELETE FOOTER CONTENTS -->", ""))
+        //.pipe(replace('<!DOCTYPE html>', ''))
+        .pipe(replace('<html lang="en">', ''))
+        .pipe(replace('</body>', ''))
+        .pipe(replace('</html>', ''))
+        .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
+        .pipe(gulp.dest('release_UTF8_STG/'));
+});
+
+gulp.task('del-unuse-contents-sub', function() {
+    return gulp.src([
+        'release_UTF8_STG/*/**/*.html'
+        ],{
+      base: 'release_UTF8_STG/'
+      })
+    //Sample
+    //.pipe(replace("/*dev*/", "")) // deletes occurence of "/*dev*/ whateverXYZ /*dev*/"
+    //.pipe(replace("//debug", "//debug_end", "")) // deletes occurence of "//debug whateverXYZ //debug_end"
+    //.pipe(replace("<!--", "-->", ""))
+        .pipe(tagContentReplace("<!-- START DELETE HEADER CONTENTS FOR SUB -->", "<!-- END DELETE HEADER CONTENTS FOR SUB -->", ""))
+        .pipe(tagContentReplace("<!-- START DELETE FOOTER CONTENTS -->", "<!-- END DELETE FOOTER CONTENTS -->", ""))
+        .pipe(tagContentReplace("<!-- START DELETE HEADER CONTENTS -->", "<!-- END DELETE HEADER CONTENTS -->", ""))
         .pipe(replace('<!DOCTYPE html>', ''))
         .pipe(replace('<html lang="en">', ''))
         .pipe(replace('</body>', ''))
@@ -239,12 +257,14 @@ gulp.task("default",
         "replace-char",
         "cp-to-workspace",
         "cp-html",
-        //"replace-path-css",
         "replace-path-html1",
         "replace-path-html2",
         "replace-path-html3",
-        //"cp-assets",
+        "cp-assets",
+        "replace-path-css",
         "del-unuse-assets",
-        "del-unuse-contents"
+        "del-unuse-contents-top",
+        "del-unuse-contents-sub",
+        "build-shift-jis-stg"
     )
 );

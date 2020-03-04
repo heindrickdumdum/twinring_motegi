@@ -23,13 +23,16 @@
     "eslint": "^5.16.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-vue": "^5.2.2",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-convert-encoding": "^2.0.1",
     "gulp-replace": "^1.0.0",
-    "gulp-rename": "",
+    "gulp-rename": "^2.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-ejs": "^3.3.0",
     "gulp-sass": "^4.0.2",
+    "gulp-htmlsplit": "^1.1.1",
+    "gulp-tag-content-replace": "^0.0.1",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "laravel-mix": "^4.0.16",
@@ -58,6 +61,8 @@
     "npm": ">=6.4.1"
   },
   "dependencies": {
+    "gulp-htmlsplit": "^1.1.1",
+    "gulp-tag-content-replace": "0.0.1",
     "jquery": "^3.4.1",
     "smooth-scroll": "^16.1.2",
     "swiper": "^4.5.0"

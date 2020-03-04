@@ -23,6 +23,12 @@
     height: 100%;
   }
 
+  &.sns-item-facebook {
+    @include max-screen($breakpoint-mobile) {
+      width: 25px;
+    }
+  }
+
   &.sns-item-twitter {
     margin-left: 9px;
     width: 45px;

@@ -124,6 +124,7 @@ gulp.task('replace-path-css', function() {
 
 gulp.task('replace-path-html1', function() {
     return gulp.src([
+        '!release_UTF8_STG/globalnabi/*.html',
         'release_UTF8_STG/*.html',
         'release_UTF8_STG/*/*.html'
         ],{
@@ -139,6 +140,7 @@ gulp.task('replace-path-html1', function() {
 
 gulp.task('replace-path-html2', function() {
     return gulp.src([
+        '!release_UTF8_STG/globalnabi/*.html',
         'release_UTF8_STG/*/*/*.html'
         ],{
       base: 'release_UTF8_STG/'
@@ -154,6 +156,7 @@ gulp.task('replace-path-html2', function() {
 
 gulp.task('replace-path-html3', function() {
     return gulp.src([
+        '!release_UTF8_STG/globalnabi/*.html',
         'release_UTF8_STG/*/*/*/*.html'
         ],{
       base: 'release_UTF8_STG/'
@@ -167,13 +170,14 @@ gulp.task('replace-path-html3', function() {
       .pipe(gulp.dest('release_UTF8_STG/'));
 });
 
-gulp.task('create-header-footer-base', function() {
+gulp.task('replace-globalnavi', function() {
     return gulp.src([
-        'release_UTF8_STG/index.html'
-        ])
-        .pipe(rename('header_utf.html'))
-        .pipe(gulp.dest('release_UTF8_STG/globalnavi/'))
-        .pipe(rename('footer_utf.html'))
+        'release_UTF8_STG/globalnavi/*.html'
+        ],{
+        base: 'release_UTF8_STG/globalnavi/'
+        })
+        .pipe(replace('/assets/', '/globalnavi/assets/'))
+        .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
         .pipe(gulp.dest('release_UTF8_STG/globalnavi/'));
 });
 
@@ -199,6 +203,7 @@ gulp.task('create-sjis-footer', function() {
 
 gulp.task('del-unuse-contents-top', function() {
     return gulp.src([
+        '!release_UTF8_STG/globalnabi/*.html',
         'release_UTF8_STG/*.html'
         ],{
       base: 'release_UTF8_STG/'
@@ -219,6 +224,7 @@ gulp.task('del-unuse-contents-top', function() {
 
 gulp.task('del-unuse-contents-sub', function() {
     return gulp.src([
+        '!release_UTF8_STG/globalnabi/*.html',
         'release_UTF8_STG/*/**/*.html'
         ],{
       base: 'release_UTF8_STG/'
@@ -260,6 +266,7 @@ gulp.task("default",
         "replace-path-html1",
         "replace-path-html2",
         "replace-path-html3",
+        "replace-globalnavi",
         "cp-assets",
         "replace-path-css",
         "del-unuse-assets",

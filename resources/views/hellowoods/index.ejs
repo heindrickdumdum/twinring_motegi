@@ -90,6 +90,13 @@
                 <p class="desc hellowoods">
                   森を家族で散策しながら、生きものや植物の不思議を見つけよう。ハローウッズには生きものの研究所や絶景・くつろぎスポット、迷路など“発見”につながる仕掛けがいっぱい。ハローウッズは子どもたちが自然とのふれあいを通して、生きるチカラを育める場所です。
                 </p>
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'local',
+                    text: 'もっと見る',
+                    link: '/hellowoods/concept/'
+                  }) %>
+                </div>
 
               </div>
             </div>
@@ -217,7 +224,7 @@
 
       <div class="l-section banner-image">
         <div class="l-container">
-          <a href="https://www.twinring.jp/hellowoods/blog/">
+          <a href="/hellowoods/blog/">
             <div class="banner-image-wrap">
                 <p class="banner-image-text">
                   <span class="heading-text">Blog</span>
@@ -289,7 +296,9 @@
           <ul class="sponsor-list">
             <% sponsorsData.forEach(item => { %>
               <li class="sponsor-item <%- item.alt -%>">
-                <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+                <a href="<%- item.link -%>">
+                  <img src="<%- item.src -%>" alt="<%- item.alt -%>" target="_blank">
+                </a>
               </li>
               <% } ) %>
           </ul>

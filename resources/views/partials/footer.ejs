@@ -75,7 +75,7 @@
             getData().data.footerBottomNav.forEach( bottomLink => {
           %>
           <li class="footer-bottom-item">
-            <a class="footer-bottom-link" href="<%- bottomLink.link %>" target="_blank"><%- bottomLink.text %></a>
+            <a class="footer-bottom-link" href="<%- bottomLink.link %>" target="<%- bottomLink.linkTarget %>"><%- bottomLink.text %></a>
           </li>
           <% }) %>
         </ul>

@@ -10,12 +10,12 @@
   <div class="mv-buttons">
     <ul class="mv-buttons-list">
       <li class="mv-buttons-item">
-        <a class="mv-buttons-link" href="https://www.twinring.jp/fee_m/" target="_blank">
+        <a class="mv-buttons-link" href="/fee_m/">
           <span>料金<br>・チケット</span>
         </a>
       </li>
       <li class="mv-buttons-item">
-        <a class="mv-buttons-link" href="https://www.twinring.jp/access_m/" target="_blank">
+        <a class="mv-buttons-link" href="/access_m/">
           <span>アクセス</span>
         </a>
       </li>
@@ -130,7 +130,7 @@
                 getData().data.parkmapButtons.forEach( button => {
               %>
               <li class="parkmap-image-item js-parkmap-number">
-                <a href="<%- button.link %>" target="_blank"></a>
+                <a href="<%- button.link %>" ></a>
               </li>
               <% }) %>
             </ul>
@@ -141,7 +141,7 @@
                 getData().data.parkmapButtons.forEach( button => {
               %>
               <li class="parkmap-item js-parkmap-button">
-                <a class="parkmap-link" href="<%- button.link %>" target="_blank"><%- button.text %>
+                <a class="parkmap-link" href="<%- button.link %>" ><%- button.text %>
                   <i class="parkmap-link-icon">
                     <%- include('/partials/svg', {
                       'name': 'arrow'
@@ -152,10 +152,10 @@
               <% }) %>
               <li class="parkmap-item parkmap-item-last">
                 <%- include('/partials/button', {
-                  newTab: true,
+                  newTab: false,
                   modifier: 'button-parkmap',
                   text: 'エリア・施設一覧を見る',
-                  link: 'https://www.twinring.jp/twinringmotegi/'
+                  link: '/twinringmotegi/'
                 }) %>
               </li>
             </ul>

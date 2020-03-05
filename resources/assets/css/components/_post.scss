@@ -91,6 +91,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  .is-ie & {
+    background: none !important;
+    color: $color-gossamer;
+    -webkit-text-fill-color: $color-gossamer;
+    -moz-text-fill-color: $color-gossamer;
+    -ms-text-fill-color: $color-gossamer;
+  }
+
   @include max-screen($breakpoint-mobile) {
     font-size: 11px;
   }

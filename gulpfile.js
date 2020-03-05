@@ -214,6 +214,7 @@ gulp.task('replace-globalnavi', function() {
         base: 'release_UTF8_STG/globalnavi/'
         })
         .pipe(replace('/assets/', '/globalnavi/assets/'))
+        .pipe(replace('./globalnavi/', '/globalnavi/'))
         .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
         .pipe(replace('START DELETE FOOTER CONTENTS', ''))
         .pipe(replace('START DELETE HEADER CONTENTS', ''))
@@ -293,7 +294,7 @@ gulp.task('build-shift-jis-stg', function() {
       ],{
       base: 'release_UTF8_STG/'
       })
-      .pipe(replace('UTF-8', 'Shift_JIS'))
+      .pipe(replace('<meta charset="UTF-8">', '<meta charset="Shift_JIS">'))
       .pipe(convertEncoding({to: 'Shift_JIS'}))
       .pipe(gulp.dest('release_STG/'));
 });

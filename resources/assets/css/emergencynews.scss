@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+#emergencynews {
+ border: 2px solid #62857f;
+ background:#fff;
+ padding: 15px;
+ margin: 0 auto 0px auto;
+ max-width: 1166 px;
+ line-height: 1.2em;
+font-family: "MS PGothic","Osaka",Verdana,sans-serif;
+font-size:13px;
+
+ @include max-screen($breakpoint-mobile) {
+    margin-top: 58px;
+    margin-bottom: -55px;
+ }
+}
+#emergencynews p{
+ padding: 0;
+ margin: 0;
+line-height:1.4;
+text-align: left;
+}
+#emergencynews p a{
+color: #1616ef;
+}

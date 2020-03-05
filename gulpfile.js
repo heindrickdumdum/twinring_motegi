@@ -114,17 +114,27 @@ gulp.task('replace-path-css', function() {
       base: 'work/assets/css/'
       })
       .pipe(replace('/assets/', '../'))
+      // for UTF8
       .pipe(gulp.dest('release_UTF8_STG/assets/css'))
+      .pipe(gulp.dest('release_UTF8_STG/globalnavi/assets/css'))
       .pipe(gulp.dest('release_UTF8_STG/dokidoki/assets/css'))
       .pipe(gulp.dest('release_UTF8_STG/hellowoods/assets/css'))
       .pipe(gulp.dest('release_UTF8_STG/itadaki/assets/css'))
       .pipe(gulp.dest('release_UTF8_STG/mobipark_m/assets/css'))
-      .pipe(gulp.dest('release_UTF8_STG/sumika/assets/css'));
+      .pipe(gulp.dest('release_UTF8_STG/sumika/assets/css'))
+      // for SJIS(Release
+      .pipe(gulp.dest('release_STG/assets/css'))
+      .pipe(gulp.dest('release_STG/globalnavi/assets/css'))
+      .pipe(gulp.dest('release_STG/dokidoki/assets/css'))
+      .pipe(gulp.dest('release_STG/hellowoods/assets/css'))
+      .pipe(gulp.dest('release_STG/itadaki/assets/css'))
+      .pipe(gulp.dest('release_STG/mobipark_m/assets/css'))
+      .pipe(gulp.dest('release_STG/sumika/assets/css'));
 });
 
 gulp.task('replace-path-html1', function() {
     return gulp.src([
-        '!release_UTF8_STG/globalnabi/*.html',
+        '!release_UTF8_STG/globalnavi/*.html',
         'release_UTF8_STG/*.html',
         'release_UTF8_STG/*/*.html'
         ],{
@@ -134,13 +144,14 @@ gulp.task('replace-path-html1', function() {
       .pipe(replace('assets/', './assets/'))
       .pipe(replace('../', './'))
       .pipe(replace('././', './'))
+      .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
       //.pipe(replace('assets/css/images', 'assets/images'))
       .pipe(gulp.dest('release_UTF8_STG/'));
 });
 
 gulp.task('replace-path-html2', function() {
     return gulp.src([
-        '!release_UTF8_STG/globalnabi/*.html',
+        '!release_UTF8_STG/globalnavi/*.html',
         'release_UTF8_STG/*/*/*.html'
         ],{
       base: 'release_UTF8_STG/'
@@ -150,13 +161,14 @@ gulp.task('replace-path-html2', function() {
       .pipe(replace('../', './'))
       .pipe(replace('././', './'))
       .pipe(replace('./assets/', './../assets/'))
+      .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
       //.pipe(replace('assets/css/images', 'assets/images'))
       .pipe(gulp.dest('release_UTF8_STG/'));
 });
 
 gulp.task('replace-path-html3', function() {
     return gulp.src([
-        '!release_UTF8_STG/globalnabi/*.html',
+        '!release_UTF8_STG/globalnavi/*.html',
         'release_UTF8_STG/*/*/*/*.html'
         ],{
       base: 'release_UTF8_STG/'
@@ -166,6 +178,7 @@ gulp.task('replace-path-html3', function() {
       .pipe(replace('../', './'))
       .pipe(replace('././', './'))
       .pipe(replace('./assets/', './../../assets/'))
+      .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
       //.pipe(replace('assets/css/images', 'assets/images'))
       .pipe(gulp.dest('release_UTF8_STG/'));
 });
@@ -183,7 +196,7 @@ gulp.task('replace-globalnavi', function() {
 
 gulp.task('create-sjis-header', function() {
     return gulp.src([
-        'release_UTF8_STG/globalnavi/header_stf.html'
+        'release_UTF8_STG/globalnavi/header_utf.html'
         ],{
       base: 'release_UTF8_STG/'
       })
@@ -203,7 +216,7 @@ gulp.task('create-sjis-footer', function() {
 
 gulp.task('del-unuse-contents-top', function() {
     return gulp.src([
-        '!release_UTF8_STG/globalnabi/*.html',
+        '!release_UTF8_STG/globalnavi/*.html',
         'release_UTF8_STG/*.html'
         ],{
       base: 'release_UTF8_STG/'
@@ -224,7 +237,7 @@ gulp.task('del-unuse-contents-top', function() {
 
 gulp.task('del-unuse-contents-sub', function() {
     return gulp.src([
-        '!release_UTF8_STG/globalnabi/*.html',
+        '!release_UTF8_STG/globalnavi/*.html',
         'release_UTF8_STG/*/**/*.html'
         ],{
       base: 'release_UTF8_STG/'

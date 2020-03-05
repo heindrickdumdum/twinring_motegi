@@ -33,3 +33,38 @@ var createCommonParts = function(){
 	}
 };
 createCommonParts();
+
+
+var arrangeHeader = function (targetFile) {
+	
+	// Get html
+	var htmlTags = fs.readFileSync(targetFile);
+
+	// console.log(typeof htmlTags);
+	var startLine = htmlTags.indexOf('<header>');
+	var endLine = htmlTags.indexOf('</header>');
+
+	var HEADER_TAG_LENGTH = 9;
+
+	var contentsTags = htmlTags.slice(startLine, endLine + HEADER_TAG_LENGTH)
+
+	//Update html files
+	function writeFile(path, data) {
+	  fs.writeFile(path, data, function (err) {
+	    if (err) {
+	        throw err;
+	    }
+	  });
+	}
+	writeFile(targetFile, contentsTags);
+
+	console.log('success: ' + targetFile);
+};
+
+var header = {
+	utf8: CONFIG.release + CONFIG.commonParts.directory + CONFIG.commonParts.files[0],
+	shiftjis: CONFIG.release + CONFIG.commonParts.directory + CONFIG.commonParts.files[1]
+};
+
+arrangeHeader(header.utf8);
+arrangeHeader(header.shiftjis);

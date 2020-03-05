@@ -1,31 +1,31 @@
 module.exports = {
-	dist: __dirname + '/../public',
-	release: __dirname + '/../release',
-	assets: __dirname + '/../public/assets',
+	dist: __dirname + '/../public/',
+	release: __dirname + '/../release/',
+	assets: __dirname + '/../public/assets/',
 	directories: [
 		[
-			'/globalnavi',
-			'/dokidoki',
-			'/hellowoods',
-			'/itadaki',
-			'/mobipark_m',
-			'/sumika',
-			'/top'
+			'/globalnavi/',
+			'/dokidoki/',
+			'/hellowoods/',
+			'/itadaki/',
+			'/mobipark_m/',
+			'/sumika/',
+			'/top/'
 		],
 		[
-			'/hellowoods/program',
-			'/hellowoods/zip-line',
-			'/mobipark_m/attractions'
+			'/hellowoods/program/',
+			'/hellowoods/zip-line/',
+			'/mobipark_m/attractions/'
 		]
 	],
 	commonParts: {
-		directory: '/globalnavi',
+		directory: '/globalnavi/',
 		files: [
+			'header_utf.html',
 			'trm_header.html',
 			'footer_utf.html',
-			'header_utf.html',
-			'test.html',
-			'trm_footer.html'
+			'trm_footer.html',
+			'test.html'
 		]
 	}
 }

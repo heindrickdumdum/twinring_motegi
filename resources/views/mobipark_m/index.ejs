@@ -52,7 +52,7 @@
         <ul class="info-list">
           <% mobiparkData.forEach(item => { %>
           <li class="info-item">
-            <a href="/sumika/#information" target="_blank">
+            <a href="/sumika/#information">
               <span><%= item.desc %></span>
             </a>
           </li>
@@ -155,7 +155,7 @@
                 <%- include('/partials/button', {
                   modifier: 'button-adventure',
                   text: 'もっと見る',
-                  link: 'https://www.twinring.jp/sumika/'
+                  link: '/sumika/'
                 }) %>
               </div>
             </div>
@@ -194,7 +194,7 @@
                 <%- include('/partials/button', {
                   modifier: 'button-adventure',
                   text: 'もっと見る',
-                  link: 'https://www.twinring.jp/itadaki/'
+                  link: '/dokidoki/'
                 }) %>
               </div>
 
@@ -222,7 +222,7 @@
                   <%- include('/partials/button', {
                     modifier: 'button-adventure',
                     text: 'もっと見る',
-                    link: 'https://www.twinring.jp/itadaki/'
+                    link: '/itadaki/'
                   }) %>
                 </div>
               </div> -->
@@ -262,7 +262,7 @@
                 <%- include('/partials/button', {
                   modifier: 'button-adventure',
                   text: 'もっと見る',
-                  link: 'https://www.twinring.jp/itadaki/'
+                  link: '/itadaki/'
                 }) %>
               </div>
             </div>
@@ -322,7 +322,7 @@
               <%- include('/partials/button', {
                 modifier: 'button-kids-carbike-attraction',
                 text: 'もっと見る',
-                link: 'https://www.twinring.jp/mobipark_m/attractions/car-and-bike.html'
+                link: '/mobipark_m/attractions/car-and-bike.html'
               }) %>
             </div>
           </div>
@@ -380,7 +380,7 @@
             <%- include('/partials/button', {
               modifier: 'button-adventure button-adventure-racing-kart',
               text: 'もっと見る',
-              link: 'https://www.twinring.jp/mobipark_m/attractions/racingkart/'
+              link: '/mobipark_m/attractions/racingkart/'
             }) %>
           </div>
         </div>
@@ -389,7 +389,7 @@
 
     <!-- BOTTOM -->
     <%- include('/partials/banner-cta', {
-      link: 'https://www.twinring.jp/mobipark_m/card/',
+      link: '/mobipark_m/card/',
       imgPath: mix('/assets/images/mobipark/mobipark-banner-card.png'),
       alt: '上手に乗れたらライセンスカードをつくろう'
     }) -%>
@@ -397,7 +397,7 @@
     <!-- <div class="banner-cta">
       <div class="l-container">
         <div class="banner-cta-bottom-inner">
-          <a href="https://www.twinring.jp/mobipark_m/card/" target="_blank">
+          <a href="/mobipark_m/card/">
             <img src="<%- mix('/assets/images/mobipark/mobipark-banner-card.png')%> " alt="上手に乗れたらライセンスカードをつくろう">
           </a>
         </div>

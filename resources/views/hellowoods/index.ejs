@@ -94,7 +94,7 @@
                   <%- include('/partials/button', {
                     modifier: 'local',
                     text: 'もっと見る',
-                    link: 'https://www.twinring.jp/hellowoods/concept/'
+                    link: '/hellowoods/concept/'
                   }) %>
                 </div>
 
@@ -224,7 +224,7 @@
 
       <div class="l-section banner-image">
         <div class="l-container">
-          <a href="https://www.twinring.jp/hellowoods/blog/">
+          <a href="/hellowoods/blog/">
             <div class="banner-image-wrap">
                 <p class="banner-image-text">
                   <span class="heading-text">Blog</span>
@@ -296,7 +296,9 @@
           <ul class="sponsor-list">
             <% sponsorsData.forEach(item => { %>
               <li class="sponsor-item <%- item.alt -%>">
-                <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+                <a href="<%- item.link -%>">
+                  <img src="<%- item.src -%>" alt="<%- item.alt -%>" target="_blank">
+                </a>
               </li>
               <% } ) %>
           </ul>

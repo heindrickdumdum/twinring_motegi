@@ -1,5 +1,5 @@
-var fs = require('fs-extra'); // fs module
-var CONFIG = require('./config.js'); // fs module
+var fs = require('fs-extra');
+var CONFIG = require('./config.js');
 
 // console.log(config.dist);
 // config();

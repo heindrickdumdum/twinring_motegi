@@ -143,6 +143,10 @@
   overflow: visible;
   margin-left: 0;
 
+  @include max-screen($breakpoint-mobile) {
+    padding: 0 10%;
+  }
+
   .slider-wrapper {
     margin-left: 0;
   }

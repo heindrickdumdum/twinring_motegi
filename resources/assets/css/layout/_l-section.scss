@@ -10,6 +10,12 @@
     padding-bottom: 55px;
   }
 
+  &.l-section-forest-dokidoki {
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 20px;
+    }
+  }
+
   &.l-section-hotel-twin {
     padding-bottom: 47px;
 

@@ -4,8 +4,8 @@ module.exports = {
 	assets: __dirname + '/../public/assets',
 	directories: [
 		[
-			'/dokidoki',
 			'/globalnavi',
+			'/dokidoki',
 			'/hellowoods',
 			'/itadaki',
 			'/mobipark_m',
@@ -17,5 +17,15 @@ module.exports = {
 			'/hellowoods/zip-line',
 			'/mobipark_m/attractions'
 		]
-	]
+	],
+	commonParts: {
+		directory: '/globalnavi',
+		files: [
+			'trm_header.html',
+			'footer_utf.html',
+			'header_utf.html',
+			'test.html',
+			'trm_footer.html'
+		]
+	}
 }

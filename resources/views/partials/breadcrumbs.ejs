@@ -3,7 +3,7 @@
     <div class="l-container">
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="#">
+          <a class="breadcrumbs-link" href="/">
             <span>TOP</span>
           </a>
         </li>
@@ -12,7 +12,7 @@
             <% if(item.link === '') { %>
               <span><%- item.pageTitle %></span>
             <% } else { %>
-              <a class="breadcrumbs-link" href="#">
+              <a class="breadcrumbs-link" href="<%- item.link %>">
                 <span><%- item.pageTitle %></span>
               </a>
             <% } %>

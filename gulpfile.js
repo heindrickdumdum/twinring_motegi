@@ -219,7 +219,6 @@ gulp.task('replace-globalnavi', function() {
         .pipe(replace('START DELETE HEADER CONTENTS', ''))
         .pipe(replace('END DELETE FOOTER CONTENTS', ''))
         .pipe(replace('END DELETE HEADER CONTENTS', ''))
-        .pipe(gulp.dest('release_UTF8_STG_1/globalnavi/'))
         .pipe(gulp.dest('release_UTF8_STG/globalnavi/'));
 });
 

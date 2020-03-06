@@ -44,9 +44,8 @@
 
     @include max-screen($breakpoint-mobile) {
       // background: url('../images/bg-leaf.png');
-      background-image: url('../images/bg-leaf.png');
+      background-image: url('../images/bg-leaf-sp.png');
       background-size: cover;
-      background-position-y: 60px;
       background-position-x: right;
   
     }

@@ -92,6 +92,7 @@
   z-index: $z-max9;
 
   > a {
+    text-decoration: underline;
     transition: opacity 0.3s ease-in;
 
     &:link,

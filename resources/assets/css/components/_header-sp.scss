@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     background-color: $color-white;
-    z-index: $z-max;
+    z-index: 21;
   }
 }
 
@@ -21,6 +21,10 @@
   overflow: hidden;
   overflow-y: auto;
   position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    height: calc(100vh - 56px);
+  }
 }
 
 .header-sp-top {

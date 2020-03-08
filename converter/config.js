@@ -27,5 +27,15 @@ module.exports = {
 			'trm_footer.html',
 			'test.html'
 		]
+	},
+	tag: {
+		header: {
+			start: '<header>',
+			end: '</header>'
+		},
+		footer: {
+			start: '<footer class="footer">',
+			end: '</footer>'
+		}
 	}
 }

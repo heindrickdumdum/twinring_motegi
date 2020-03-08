@@ -10,6 +10,11 @@ if (typeof link === 'undefined') {
 if (typeof type === 'undefined') {
   var type = '';
 }
+
+if (typeof date === 'undefined') {
+  var date = '';
+}
+
 %>
 <article class="article <%- modifier %>">
   <a class="article-link" href="<%- link %>">
@@ -25,8 +30,10 @@ if (typeof type === 'undefined') {
     <% } %>
 
     <h3 class="article-heading"><%- heading %></h3>
+    <% if(date !== '' && typeof date !== 'undefined') { %>
     <p class="article-period">
       開催期間：<time class="article-period-date" datetime="P1D"><%- date %></time>
     </p>
+    <% } %>
   </a>
 </article>

@@ -137,11 +137,14 @@
 }
 
 .slider-pickup,
-.slider-recommendation,
-.slider-howto {
+.slider-recommendation {
   opacity: 1;
   overflow: visible;
   margin-left: 0;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 0 12%;
+  }
 
   .slider-wrapper {
     margin-left: 0;

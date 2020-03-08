@@ -52,10 +52,10 @@
 .header-sub-content-wrap {
   opacity: 0;
   width: $container;
-  max-height: calc(100vh - (180px + 60px));
+  max-height: calc(100vh - (180px + 60px + 52px));
   margin: 0 auto;
   position: absolute;
-  top: 183px;
+  top: calc(183px + 52px);
   left: 0;
   right: 0;
   transition: opacity .5s $ease-in-out;

@@ -3,7 +3,7 @@
 
   &.section-inner-activity {
     @include max-screen($breakpoint-mobile) {
-      margin: 83px 0 90px;
+      margin: 83px 0 14px;
     }
   }
 }
@@ -92,6 +92,7 @@
   z-index: $z-max9;
 
   > a {
+    text-decoration: underline;
     transition: opacity 0.3s ease-in;
 
     &:link,

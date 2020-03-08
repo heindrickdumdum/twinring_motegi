@@ -75,7 +75,7 @@
             getData().data.footerBottomNav.forEach( bottomLink => {
           %>
           <li class="footer-bottom-item">
-            <a class="footer-bottom-link" href="<%- bottomLink.link %>" target="_blank"><%- bottomLink.text %></a>
+            <a class="footer-bottom-link" href="<%- bottomLink.link %>" target="<%- bottomLink.linkTarget %>"><%- bottomLink.text %></a>
           </li>
           <% }) %>
         </ul>
@@ -141,5 +141,48 @@
     <script src="<%= mix('/assets/js/collapse-button.js') %>" async></script>
   <% } %>
 
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+ var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+ _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+ _gaq.push(['_setAccount', 'UA-19391983-1']);
+ _gaq.push(['_trackPageview']);
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+</script>
+
+<!-- Yahoo Code for your Target List 20170627-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var yahoo_ss_retargeting_id = 1000394244;
+var yahoo_sstag_custom_params = window.yahoo_sstag_params;
+var yahoo_ss_retargeting = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//s.yimg.jp/images/listing/tool/cv/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//b97.yahoo.co.jp/pagead/conversion/1000394244/?guid=ON&script=0&disvt=false"/>
+</div>
+</noscript>
+
+<!-- 201802google -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 866763717;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/866763717/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
 </body>
 </html>

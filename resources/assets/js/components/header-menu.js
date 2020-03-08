@@ -18,6 +18,7 @@ export default function headerMenu() {
         headerToggleInner = document.querySelector('#js-header-toggle-inner');
 
   const wrap = document.querySelector('#js-wrap');
+  //const emergencyNews = document.querySelector('#emergencynews');
 
   let mediaQuery = window.matchMedia('(max-width: 749px)');
 
@@ -155,17 +156,18 @@ export default function headerMenu() {
     // burger menu
     headerBurger.addEventListener( 'click', e => {
       e.preventDefault();
+
         e.currentTarget.classList.toggle(CONST.IS_ACTIVE);
         headerToggle.classList.toggle(CONST.IS_ACTIVE);
         headerBurgerWrap.classList.toggle(CONST.IS_ACTIVE);
 
         if(headerToggle.classList.contains(CONST.IS_ACTIVE)) {
           headerToggle.style.maxHeight = headerToggleInner.clientHeight+'px';
-
+          //emergencyNews.style.display = 'none';
           scrollLock();
         } else {
           headerToggle.style.maxHeight = 0;
-
+          //emergencyNews.style.display = 'block';
           scrollAble();
         }
     });

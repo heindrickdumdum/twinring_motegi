@@ -4,19 +4,19 @@
       'category': 'STAY',
       'image': mix('/assets/images/top/twinring/img1.jpg'),
       'title': 'グランピング',
-      'url': 'https://www.twinring.jp/f-glamping/stay/'
+      'url': '/f-glamping/stay/'
     },
     {
       'category': 'BBQ',
       'image': mix('/assets/images/top/twinring/img2.jpg'),
       'title': 'ホテルシェフこだわり食材のBBQ',
-      'url': 'https://www.twinring.jp/f-glamping/bbq/'
+      'url': '/f-glamping/bbq/'
     },
     {
       'category': 'ACTIVITY',
       'image': mix('/assets/images/top/twinring/img3.jpg'),
       'title': '星空観望',
-      'url': 'https://www.twinring.jp/f-glamping/activity/'
+      'url': '/f-glamping/activity/'
     }
   ]
 %>
@@ -25,7 +25,7 @@
   <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/twinring/bg.jpg') %>);"></div>
   <div class="l-container">
     <div class="section-contents">
-      <p class="section-contents-copy">満天の星、鳥のさえずり、心地よい森の中で<br>極上のアウトドア体験を楽しもう。</p>
+      <p class="section-contents-copy">満天の星、鳥のさえずり、心地よい森の中で<br class="u-show-pc">極上のアウトドア体験を楽しもう。</p>
 
       <ul class="section-cards u-show-pc">
         <%
@@ -73,10 +73,10 @@
 
       <div class="section-button">
         <%- include('/partials/button', {
-          newTab: true,
+          newTab: false,
           modifier: '',
           text: 'もっと見る',
-          link: 'https://www.twinring.jp/f-glamping/'
+          link: '/f-glamping/'
         }) %>
       </div>
     </div>

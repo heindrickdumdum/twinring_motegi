@@ -92,9 +92,9 @@
                 </p>
                 <div class="l-button">
                   <%- include('/partials/button', {
-                    modifier: 'challenge-hellowoods-button',
+                    modifier: 'local',
                     text: 'もっと見る',
-                    link: 'https://www.twinring.jp/hellowoods/concept/'
+                    link: '/hellowoods/concept/'
                   }) %>
                 </div>
 
@@ -115,7 +115,7 @@
           }) %>
           <div class="map-wrapper">
             <img class="map-image u-show-pc" src="<%= mix('/assets/images/hellowoods/field-intro-map.png') %>" alt="HALLOWOODS MAP">
-            <img class="map-image u-show-sp" src="<%= mix('/assets/images/hellowoods/field-intro-map.png') %>" alt="HALLOWOODS MAP">
+            <img class="map-image u-show-sp" src="<%= mix('/assets/images/hellowoods/field-intro-map-sp.png') %>" alt="HALLOWOODS MAP">
           </div>
           <div class="section-contents">
             <p class="section-contents-copy">
@@ -224,7 +224,7 @@
 
       <div class="l-section banner-image">
         <div class="l-container">
-          <a href="https://www.twinring.jp/hellowoods/blog/">
+          <a href="/hellowoods/blog/">
             <div class="banner-image-wrap">
                 <p class="banner-image-text">
                   <span class="heading-text">Blog</span>
@@ -241,46 +241,6 @@
         }) %>
       </section>
 
-    <!--
-      <div class="call-to-action call-to-action-hellowoods">
-        <div class="l-container">
-          <div class="call-to-action-wrapper">
-            <div class="call-to-action-inner">
-              <h2 class="heading headig-call-to-action">
-                <span class="heading-text">
-                  ハローウッズをもっと楽しむ
-                </span>
-              </h2>
-              <div class="call-to-action-description">
-                <p class="call-to-action-description-text">
-                  ハローウッズのこだわりポイントや、<br>
-                  知っているともっと楽しくなる情報を配信中しています。
-                </p>
-              </div>
-              <div class="l-button l-button-call-to-action">
-                <%- include('/partials/button', {
-                  modifier: '',
-                  text: 'もっと見る',
-                  link: '#'
-                }) %>
-              </div>
-              <span class="call-to-action-dot call-to-action-dot-1">
-                <img src="<%- mix('/assets/images/hellowoods/bubble-1.png')%> ">
-              </span>
-              <span class="call-to-action-dot call-to-action-dot-2">
-                <img src="<%- mix('/assets/images/hellowoods/bubble-2.png')%> ">
-              </span>
-              <span class="call-to-action-dot call-to-action-dot-3">
-                <img src="<%- mix('/assets/images/hellowoods/bubble-4.png')%> ">
-              </span>
-              <span class="call-to-action-dot call-to-action-dot-4">
-                <img src="<%- mix('/assets/images/hellowoods/bubble-3.png')%> ">
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    -->
 
       <section class="l-section sponsors">
         <div class="l-section-title">
@@ -296,7 +256,9 @@
           <ul class="sponsor-list">
             <% sponsorsData.forEach(item => { %>
               <li class="sponsor-item <%- item.alt -%>">
-                <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+                <a href="<%- item.link -%>">
+                  <img src="<%- item.src -%>" alt="<%- item.alt -%>" target="_blank">
+                </a>
               </li>
               <% } ) %>
           </ul>

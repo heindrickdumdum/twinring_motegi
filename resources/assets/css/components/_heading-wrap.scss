@@ -229,6 +229,7 @@
 
   &.heading-recommend {
     margin-bottom: 40px;
+
     svg {
       width: 513px;
       height: 34px;
@@ -240,6 +241,7 @@
 
   &.heading-pickup {
     margin-bottom: 37px;
+
     .heading-text {
       letter-spacing: 0.05em;
     }
@@ -253,7 +255,7 @@
       max-width: 389px;
       height: 34px;
       @include max-screen($breakpoint-mobile) {
-        width: auto;
+        max-width: 168px;
       }
     }
   }
@@ -270,7 +272,7 @@
     @include max-screen ($breakpoint-mobile) {
       .heading-subtext {
         height: 70px;
-        max-width: 250px;    
+        max-width: 250px;
       }
     }
   }
@@ -525,7 +527,7 @@
   &.heading-comparison {
     text-align: center;
 
-    &-musasabi { //musasabi comparison SP 
+    &-musasabi { //musasabi comparison SP
       .heading-subtext {
         @include max-screen($breakpoint-mobile) {
           height: 60px;

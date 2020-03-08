@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- START DELETE HEADER CONTENTS -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
   <%- include('/partials/meta', { pageId }) %>
 </head>
 <body>
-	<!-- Google Tag Manager 201809-->
+<!-- END DELETE HEADER CONTENTS -->
+<!-- START DELETE HEADER CONTENTS FOR SUB -->	<!-- Google Tag Manager 201809-->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -22,12 +24,12 @@
 
 	<% if (pageId === 'index') { %>
 		<div class="preload js-preload">
-			<div class="preload-image"></div>
-			<img class="preload-text" src="<%= mix('/assets/images/footer-twinring.png') %>" alt="">
-		</div>
-	<% } %>
-
-<!-- START DELETE CONTENTS -->
+				<div class="preload-image"></div>
+				<img class="preload-text" src="<%= mix('/assets/images/footer-twinring.png') %>" alt="">
+			</div>
+		<% } %>
+<!-- END DELETE HEADER CONTENTS FOR SUB -->
+<!-- START DELETE HEADER CONTENTS -->
  <div class="wrap" id="js-wrap">
 
    <!-- for emergency news -->
@@ -39,4 +41,4 @@
 		<%- include('/partials/header', {
 			topHeading: topHeading
 		}) -%>
-<!-- END DELETE CONTENTS -->
+<!-- END DELETE HEADER CONTENTS -->

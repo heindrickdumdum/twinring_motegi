@@ -14,11 +14,22 @@ var tagContentReplace = require('gulp-tag-content-replace');
 
 //cont constData = {};
 
+gulp.task('replace-char-ejs', function() {
+    return gulp.src([
+        'resources/**.ejs'
+      ],{
+      base: 'resources/'
+      })
+      .pipe(replace('™', '&trade;'))
+      .pipe(replace('〜', '～'))
+      .pipe(gulp.dest('resources/'));
+});
+
 
 gulp.task('replace-char', function() {
     return gulp.src([
         'public/*.html',
-        'public/*/*.html'
+        'public/**/*.html'
       ],{
       base: 'public/'
       })
@@ -33,13 +44,13 @@ gulp.task('cp-to-workspace', function() {
 });
 
 gulp.task('cp-tmp', function() {
-    return gulp.src('release_STG/**')
+    return gulp.src('release_UTF8_STG/**')
     .pipe(gulp.dest('release_STG_TMP/'));
 });
 
 gulp.task('cp-tmp-to-current', function() {
     return gulp.src('release_STG3/**')
-    .pipe(gulp.dest('release_STG/'));
+    .pipe(gulp.dest('release_UTF8_STG/'));
 });
 
 gulp.task('cp-html', function() {
@@ -49,7 +60,7 @@ gulp.task('cp-html', function() {
         ],{
       base: 'work/'
       })
-      .pipe(gulp.dest('release_STG/'));
+      .pipe(gulp.dest('release_UTF8_STG/'));
 });
 
 gulp.task('cp-assets', function() {
@@ -58,12 +69,36 @@ gulp.task('cp-assets', function() {
         ],{
       base: 'work/'
       })
-      .pipe(gulp.dest('release_STG/'))
-      .pipe(gulp.dest('release_STG/dokidoki'))
-      .pipe(gulp.dest('release_STG/hellowoods'))
-      .pipe(gulp.dest('release_STG/itadaki'))
-      .pipe(gulp.dest('release_STG/mobipark_m'))
-      .pipe(gulp.dest('release_STG/sumika'));
+      .pipe(gulp.dest('release_UTF8_STG/'))
+      .pipe(gulp.dest('release_UTF8_STG/dokidoki'))
+      .pipe(gulp.dest('release_UTF8_STG/hellowoods'))
+      .pipe(gulp.dest('release_UTF8_STG/itadaki'))
+      .pipe(gulp.dest('release_UTF8_STG/mobipark_m'))
+      .pipe(gulp.dest('release_UTF8_STG/sumika'));
+});
+
+gulp.task('cp-js', function() {
+    return gulp.src([
+        'work/assets/js/*.js'
+        ],{
+      base: 'work/assets/js/'
+      })
+      // for UTF8
+      .pipe(gulp.dest('release_UTF8_STG/assets/js'))
+      .pipe(gulp.dest('release_UTF8_STG/globalnavi/assets/js'))
+      .pipe(gulp.dest('release_UTF8_STG/dokidoki/assets/js'))
+      .pipe(gulp.dest('release_UTF8_STG/hellowoods/assets/js'))
+      .pipe(gulp.dest('release_UTF8_STG/itadaki/assets/js'))
+      .pipe(gulp.dest('release_UTF8_STG/mobipark_m/assets/js'))
+      .pipe(gulp.dest('release_UTF8_STG/sumika/assets/js'))
+      // for SJIS(Release
+      .pipe(gulp.dest('release_STG/assets/js'))
+      .pipe(gulp.dest('release_STG/globalnavi/assets/js'))
+      .pipe(gulp.dest('release_STG/dokidoki/assets/js'))
+      .pipe(gulp.dest('release_STG/hellowoods/assets/js'))
+      .pipe(gulp.dest('release_STG/itadaki/assets/js'))
+      .pipe(gulp.dest('release_STG/mobipark_m/assets/js'))
+      .pipe(gulp.dest('release_STG/sumika/assets/js'));
 });
 
 gulp.task('cp-assets-sjis', function() {
@@ -82,18 +117,18 @@ gulp.task('cp-assets-sjis', function() {
 
 gulp.task('del-unuse-assets', function(cb) {
     return gulp.src([
-        'release_STG/dokidoki',
-        'release_STG/hellowoods',
-        'release_STG/itadaki',
-        'release_STG/mobipark_m',
-        'release_STG/sumika'
+        'release_UTF8_STG/dokidoki',
+        'release_UTF8_STG/hellowoods',
+        'release_UTF8_STG/itadaki',
+        'release_UTF8_STG/mobipark_m',
+        'release_UTF8_STG/sumika'
         ]);
-//      .pipe(gulp.dest('release_STG/'))
-//      .pipe(gulp.dest('release_STG/dokidoki'))
-//      .pipe(gulp.dest('release_STG/hellowoods'))
-//      .pipe(gulp.dest('release_STG/itadaki'))
-//      .pipe(gulp.dest('release_STG/mobipark_m'))
-//      .pipe(gulp.dest('release_STG/sumika'));
+//      .pipe(gulp.dest('release_UTF8_STG/'))
+//      .pipe(gulp.dest('release_UTF8_STG/dokidoki'))
+//      .pipe(gulp.dest('release_UTF8_STG/hellowoods'))
+//      .pipe(gulp.dest('release_UTF8_STG/itadaki'))
+//      .pipe(gulp.dest('release_UTF8_STG/mobipark_m'))
+//      .pipe(gulp.dest('release_UTF8_STG/sumika'));
 });
 
 gulp.task('replace-path-css', function() {
@@ -103,7 +138,17 @@ gulp.task('replace-path-css', function() {
       base: 'work/assets/css/'
       })
       .pipe(replace('/assets/', '../'))
+      // for UTF8
+      .pipe(gulp.dest('release_UTF8_STG/assets/css'))
+      .pipe(gulp.dest('release_UTF8_STG/globalnavi/assets/css'))
+      .pipe(gulp.dest('release_UTF8_STG/dokidoki/assets/css'))
+      .pipe(gulp.dest('release_UTF8_STG/hellowoods/assets/css'))
+      .pipe(gulp.dest('release_UTF8_STG/itadaki/assets/css'))
+      .pipe(gulp.dest('release_UTF8_STG/mobipark_m/assets/css'))
+      .pipe(gulp.dest('release_UTF8_STG/sumika/assets/css'))
+      // for SJIS(Release
       .pipe(gulp.dest('release_STG/assets/css'))
+      .pipe(gulp.dest('release_STG/globalnavi/assets/css'))
       .pipe(gulp.dest('release_STG/dokidoki/assets/css'))
       .pipe(gulp.dest('release_STG/hellowoods/assets/css'))
       .pipe(gulp.dest('release_STG/itadaki/assets/css'))
@@ -113,87 +158,97 @@ gulp.task('replace-path-css', function() {
 
 gulp.task('replace-path-html1', function() {
     return gulp.src([
-        'release_STG/*.html',
-        'release_STG/*/*.html'
+        '!release_UTF8_STG/globalnavi/*.html',
+        'release_UTF8_STG/*.html',
+        'release_UTF8_STG/*/*.html'
         ],{
-      base: 'release_STG/'
+      base: 'release_UTF8_STG/'
       })
       .pipe(replace('/assets/', './assets/'))
       .pipe(replace('assets/', './assets/'))
       .pipe(replace('../', './'))
       .pipe(replace('././', './'))
+      .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
       //.pipe(replace('assets/css/images', 'assets/images'))
-      .pipe(gulp.dest('release_STG/'));
+      .pipe(gulp.dest('release_UTF8_STG/'));
 });
 
 gulp.task('replace-path-html2', function() {
     return gulp.src([
-        'release_STG/*/*/*.html'
+        '!release_UTF8_STG/globalnavi/*.html',
+        'release_UTF8_STG/*/*/*.html'
         ],{
-      base: 'release_STG/'
+      base: 'release_UTF8_STG/'
       })
       .pipe(replace('/assets/', './assets/'))
       .pipe(replace('assets/', './assets/'))
       .pipe(replace('../', './'))
       .pipe(replace('././', './'))
       .pipe(replace('./assets/', './../assets/'))
+      .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
       //.pipe(replace('assets/css/images', 'assets/images'))
-      .pipe(gulp.dest('release_STG/'));
+      .pipe(gulp.dest('release_UTF8_STG/'));
 });
 
 gulp.task('replace-path-html3', function() {
     return gulp.src([
-        'release_STG/*/*/*/*.html'
+        '!release_UTF8_STG/globalnavi/*.html',
+        'release_UTF8_STG/*/*/*/*.html'
         ],{
-      base: 'release_STG/'
+      base: 'release_UTF8_STG/'
       })
       .pipe(replace('/assets/', './assets/'))
       .pipe(replace('assets/', './assets/'))
       .pipe(replace('../', './'))
       .pipe(replace('././', './'))
       .pipe(replace('./assets/', './../../assets/'))
+      .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
       //.pipe(replace('assets/css/images', 'assets/images'))
-      .pipe(gulp.dest('release_STG/'));
+      .pipe(gulp.dest('release_UTF8_STG/'));
 });
 
-gulp.task('create-header-footer-base', function() {
+gulp.task('replace-globalnavi', function() {
     return gulp.src([
-        'release_STG/index.html'
-        ])
-        .pipe(rename('header_utf.html'))
-        .pipe(gulp.dest('release_STG/globalnavi/'))
-        .pipe(rename('footer_utf.html'))
-        .pipe(gulp.dest('release_STG/globalnavi/'));
+        'release_UTF8_STG/globalnavi/*.html'
+        ],{
+        base: 'release_UTF8_STG/globalnavi/'
+        })
+        .pipe(replace('/assets/', '/globalnavi/assets/'))
+        .pipe(replace('./globalnavi/', '/globalnavi/'))
+        .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
+        .pipe(replace('START DELETE FOOTER CONTENTS', ''))
+        .pipe(replace('START DELETE HEADER CONTENTS', ''))
+        .pipe(replace('END DELETE FOOTER CONTENTS', ''))
+        .pipe(replace('END DELETE HEADER CONTENTS', ''))
+        .pipe(gulp.dest('release_UTF8_STG/globalnavi/'));
 });
 
 gulp.task('create-sjis-header', function() {
     return gulp.src([
-        'release_STG/globalnavi/header_stf.html'
+        'release_UTF8_STG/globalnavi/header_utf.html'
         ],{
-      base: 'release_STG/'
+      base: 'release_UTF8_STG/'
       })
         .pipe(rename('header_utf.html'))
-        .pipe(gulp.dest('release_STG/globalnavi/'));
+        .pipe(gulp.dest('release_UTF8_STG/globalnavi/'));
 });
 
 gulp.task('create-sjis-footer', function() {
     return gulp.src([
-        'release_STG/footer_utf.html'
+        'release_UTF8_STG/footer_utf.html'
         ],{
-      base: 'release_STG/'
+      base: 'release_UTF8_STG/'
       })
         .pipe(rename('trm_header.html'))
-        .pipe(gulp.dest('release_STG/globalnavi/'));
+        .pipe(gulp.dest('release_UTF8_STG/globalnavi/'));
 });
 
-
-
-gulp.task('del-unuse-contents', function() {
+gulp.task('del-unuse-contents-top', function() {
     return gulp.src([
-        'release_STG/**.html',
-        'release_STG/**/*.html'
+        '!release_UTF8_STG/globalnavi/*.html',
+        'release_UTF8_STG/*.html'
         ],{
-      base: 'release_STG/'
+      base: 'release_UTF8_STG/'
       })
     //Sample
     //.pipe(replace("/*dev*/", "")) // deletes occurence of "/*dev*/ whateverXYZ /*dev*/"
@@ -201,73 +256,47 @@ gulp.task('del-unuse-contents', function() {
     //.pipe(replace("<!--", "-->", ""))
         .pipe(tagContentReplace("<!-- START DELETE HEADER CONTENTS -->", "<!-- END DELETE HEADER CONTENTS -->", ""))
         .pipe(tagContentReplace("<!-- START DELETE FOOTER CONTENTS -->", "<!-- END DELETE FOOTER CONTENTS -->", ""))
-        .pipe(gulp.dest('release_STG/'));
+        //.pipe(replace('<!DOCTYPE html>', ''))
+        .pipe(replace('<html lang="en">', ''))
+        .pipe(replace('</body>', ''))
+        .pipe(replace('</html>', ''))
+        .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
+        .pipe(gulp.dest('release_UTF8_STG/'));
 });
 
-gulp.task('fix-bug', function() {
+gulp.task('del-unuse-contents-sub', function() {
     return gulp.src([
-      'release_STG/*.html',
-      'release_STG/**/*.html',
-      '!release_STG/**/*utf.html'
-      ],{
-      base: 'release_STG/'
+        '!release_UTF8_STG/globalnavi/*.html',
+        'release_UTF8_STG/*/**/*.html'
+        ],{
+      base: 'release_UTF8_STG/'
       })
-      // fix code
-      .pipe(replace('<section class="bottom-slider"', '<section class="bottom-slider" style="height: 515px;"'))
-      .pipe(replace('<section class="top-slide l-section"', '<section class="top-slide l-section" style="height: 510px;"'))
-      .pipe(replace('<section class="forest l-section"', '<section class="forest l-section" style="height: 705px;"'))
-      .pipe(replace('<section class="bottom-slider bottom-slider-pickup"', '<section class="bottom-slider bottom-slider-pickup" style="height: 510px;"'))
-      .pipe(replace('<div class="subpage-image-gallery"', '<div class="subpage-image-gallery" style="height: 485px; margin-bottom: 100px;"'))
-      .pipe(replace('', ''))
-      .pipe(gulp.dest('release_STG/'));
-});
-
-gulp.task('fix-bug2', function() {
-    return gulp.src([
-      'release_STG/*.html',
-      'release_STG/**/*.html',
-      '!release_STG/**/*utf.html'
-      ],{
-      base: 'release_STG/'
-      })
-      // fix code
-      .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
-      .pipe(replace('lig-', 'trm-renewal-'))
-      .pipe(gulp.dest('release_STG/'));
-});
-
-
-gulp.task('fix-bug-index', function() {
-    return gulp.src([
-      'release_STG/*.html'
-      ],{
-      base: 'release_STG/'
-      })
-      // fix code
-      .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
-      .pipe(replace('<section class="bottom-slider"', '<section class="bottom-slider" style="height: 515px;"'))
-      .pipe(replace('<section class="top-slide l-section"', '<section class="top-slide l-section" style="height: 510px;"'))
-      .pipe(replace('<section class="forest l-section"', '<section class="forest l-section" style="height: 705px;"'))
-      .pipe(replace('<section class="bottom-slider bottom-slider-pickup"', '<section class="bottom-slider bottom-slider-pickup" style="height: 510px;"'))
-      .pipe(replace('<div class="subpage-image-gallery"', '<div class="subpage-image-gallery" style="height: 485px; margin-bottom: 100px;"'))
-      .pipe(replace('', ''))
-      .pipe(gulp.dest('release_STG/'));
+    //Sample
+    //.pipe(replace("/*dev*/", "")) // deletes occurence of "/*dev*/ whateverXYZ /*dev*/"
+    //.pipe(replace("//debug", "//debug_end", "")) // deletes occurence of "//debug whateverXYZ //debug_end"
+    //.pipe(replace("<!--", "-->", ""))
+        .pipe(tagContentReplace("<!-- START DELETE HEADER CONTENTS FOR SUB -->", "<!-- END DELETE HEADER CONTENTS FOR SUB -->", ""))
+        .pipe(tagContentReplace("<!-- START DELETE FOOTER CONTENTS -->", "<!-- END DELETE FOOTER CONTENTS -->", ""))
+        .pipe(tagContentReplace("<!-- START DELETE HEADER CONTENTS -->", "<!-- END DELETE HEADER CONTENTS -->", ""))
+        .pipe(replace('<!DOCTYPE html>', ''))
+        .pipe(replace('<html lang="en">', ''))
+        .pipe(replace('</body>', ''))
+        .pipe(replace('</html>', ''))
+        .pipe(replace('href="https://www.twinring.jp/', 'href="/'))
+        .pipe(gulp.dest('release_UTF8_STG/'));
 });
 
 
 gulp.task('build-shift-jis-stg', function() {
     return gulp.src([
-      'release_STG/**/*.html',
-      '!release_STG/**/*utf.html'
+      'release_UTF8_STG/**/*.html',
+      '!release_UTF8_STG/**/*utf.html'
       ],{
-      base: 'release_STG/'
+      base: 'release_UTF8_STG/'
       })
-      .pipe(replace('<!DOCTYPE html>', ''))
-      .pipe(replace('<html lang="en">', ''))
-      .pipe(replace('</html>', ''))
-      .pipe(replace('UTF-8', 'Shift_JIS'))
+      .pipe(replace('<meta charset="UTF-8">', '<meta charset="Shift_JIS">'))
       .pipe(convertEncoding({to: 'Shift_JIS'}))
-      .pipe(gulp.dest('release_SJIS_STG/'));
+      .pipe(gulp.dest('release_STG/'));
 });
 
 
@@ -276,11 +305,15 @@ gulp.task("default",
         "replace-char",
         "cp-to-workspace",
         "cp-html",
-        "replace-path-css",
         "replace-path-html1",
         "replace-path-html2",
         "replace-path-html3",
+        "replace-globalnavi",
         "cp-assets",
-        "del-unuse-assets"
+        "replace-path-css",
+        "del-unuse-assets",
+        "del-unuse-contents-top",
+        "del-unuse-contents-sub",
+        "build-shift-jis-stg"
     )
 );

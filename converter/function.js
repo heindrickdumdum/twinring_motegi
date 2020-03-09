@@ -12,7 +12,8 @@ module.exports = {
 	  	});
 	},
 	optimizeHtml: function (targetFile, startTag, endTag, endTagLen, utf8) {
-		// Get html
+
+		// Get all html
 		var htmlTags;
 		
 		if(utf8 === true){
@@ -22,18 +23,15 @@ module.exports = {
 			htmlTags = iconv.decode(fs.readFileSync(targetFile), 'Shift_JIS');
 			console.log('decode: Shift_JIS');
 		}
+		
 
-		var startLine = htmlTags.indexOf(startTag);
-		var endLine = htmlTags.indexOf(endTag);
-		var contentsTags = htmlTags.slice(startLine, endLine + endTagLen);
-
-		//Update html files
-		this.writeFile(targetFile, contentsTags);
-
-		console.log('success: ' + targetFile);
+		//DOCTYPE~head
+		// contents
+		//end
+		
 	},
 	optimizeHtmlParts: function (targetFile, startTag, endTag, endTagLen, utf8) {
-		// Get html
+		// Get all html
 		var htmlTags;
 		
 		if(utf8 === true){
@@ -44,13 +42,14 @@ module.exports = {
 			console.log('decode: Shift_JIS');
 		}
 
+		// remove unnecesarry tags
 		var startLine = htmlTags.indexOf(startTag);
 		var endLine = htmlTags.indexOf(endTag);
 		var contentsTags = htmlTags.slice(startLine, endLine + endTagLen);
 
 		//Update html files
 		console.log('startLine', startLine);
-		
+
 		this.writeFile(targetFile, contentsTags);
 
 		console.log('success: ' + targetFile);

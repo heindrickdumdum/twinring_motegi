@@ -1,8 +1,9 @@
 var fs = require('fs-extra');
-var replace = require('replace');
+// var replace = require('replace');
 var path = require('path');
 var depth = require('depth');
 var rootPath = require('app-root-path');
+var replaceFile = require('replace-in-file');
 var CONFIG = require('./config.js');
 var fn = require('./function.js');
 
@@ -14,10 +15,6 @@ module.exports = function(){
 	// console.log('directorySecond', directorySecond);
 	// CONFIG.directories[1]
 
-	
-	function replaceAllPath(array){
-		var index = 0;
-		var len = array.length;
 
 		// //Go to each directory
 		// while (index < len) {
@@ -57,40 +54,38 @@ module.exports = function(){
 		// }
 			
 
-		fn.eachFiles(CONFIG.release, null, function(filePath, rootPath) {
-			var targetFileName = path.basename(filePath);
-			//Target only .html file
-			if(targetFileName.indexOf('.html') !== -1){
-				
+	fn.eachFiles(CONFIG.release, null, function(filePath, rootPath) {
+		var targetFileName = path.basename(filePath);
+		//Target only .html file
+		if(targetFileName.indexOf('.html') !== -1){
+			
+			//arrange clear path
+			var thisPath = path.normalize(filePath);
+			var thisRootPath = path.normalize(rootPath);
+			var thisSimplePath = thisPath.replace(thisRootPath, '');
 
-				var thisPath = path.normalize(filePath);
-				var thisRootPath = path.normalize(rootPath);
+			//get depth -> 0, 1, 2 ...
+			var thisDepth = depth(thisSimplePath);
 
-				var thisSimplePath = thisPath.replace(thisRootPath, '');
+			var relativePath = function(selfDepth){
+				if(selfDepth === 0 || selfDepth === 1){
+					return './assets/';
+				} else if(selfDepth === 2){
+					return './../assets/';
+				} else if(selfDepth === 3){
+					return './../../assets/';
+				}
+			};
 
-				//get depth -> 0, 1, 2 ...
-				var thisDepth = depth(thisSimplePath);
-				console.log(thisDepth);
+			var options = {
+				files: thisPath,
+				from: ['/assets/', 'assets/'],
+				to: relativePath(thisDepth)
+			};
 
-				// console.log(normalPath.replace(normalRootPath, ''));
-
-				// console.log(normalRootPath);
-
-				// console.log(path.normalize(filePath));
-				// console.log(path.dirname(targetFileName));
-				
-				
-				// replace({
-				// 	regex: 'assets/',
-				// 	replacement: '../assets/',
-				// 	paths: filePath
-				// });
-				// Test code
-				// fn.optimizeHtml(__dirname + '/../release/index.html');
-			}
-		});
-	}
-
-	replaceAllPath(directoryThird);
-
+			replaceFile(options);
+			console.log('thisPath', thisPath);
+			console.log('relativePath', relativePath(thisDepth));
+		}
+	});
 };

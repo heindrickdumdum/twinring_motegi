@@ -5,8 +5,10 @@ var path = require('path');
 var CONFIG = require('./config.js');
 var fn = require('./function.js');
 var init = require('./init.js');
+var arrangePath = require('./arrangePath.js');
 
 init();
+arrangePath();
 
 var header = {
 	type: {

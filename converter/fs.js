@@ -67,7 +67,7 @@ var footer = {
 // 	if(path.basename(targetFileName).indexOf('.html') !== -1){
 // 		// fn.optimizeHtml(header.type.utf8, header.startTag, header.endTag, header.endTagLen, true);
 // 		// main.mtgConvert(filePath);
-		fn.optimizeHtml(__dirname + '/../release/index.html', header.endTag, footer.startTag, header.endTagLen, true);
+		fn.optimizeHtml(__dirname + '/../release/index.html');
 // 		// fn.optimizeHtml(filePath, header.endTag, footer.start, header.endTagLen, true);
 // 		// Test code
 // 		// main.mtgConvert(__dirname + '/../release/index.html');
@@ -75,9 +75,9 @@ var footer = {
 // });
 
 
-fn.optimizeHtmlParts(header.type.utf8, header.startTag, header.endTag, header.endTagLen, true);
-fn.optimizeHtmlParts(header.type.shiftjis, header.startTag, header.endTag, header.endTagLen, false);
-fn.optimizeHtmlParts(footer.type.utf8, footer.startTag, footer.endTag, footer.endTagLen, true);
-fn.optimizeHtmlParts(footer.type.shiftjis, footer.startTag, footer.endTag, footer.endTagLen, false);
+// fn.optimizeHtmlParts(header.type.utf8, header.startTag, header.endTag, header.endTagLen, true);
+// fn.optimizeHtmlParts(header.type.shiftjis, header.startTag, header.endTag, header.endTagLen, false);
+// fn.optimizeHtmlParts(footer.type.utf8, footer.startTag, footer.endTag, footer.endTagLen, true);
+// fn.optimizeHtmlParts(footer.type.shiftjis, footer.startTag, footer.endTag, footer.endTagLen, false);
 
 

@@ -1,6 +1,7 @@
 var fs = require('fs-extra'); // fs module
 var iconv = require('iconv-lite'); // support Shift-jis
 var path = require('path');
+var CONFIG = require('./config.js');
 
 module.exports = {
 	writeFile(path, data) {
@@ -11,23 +12,37 @@ module.exports = {
 	    	}
 	  	});
 	},
-	optimizeHtml: function (targetFile, startTag, endTag, endTagLen, utf8) {
+	optimizeHtml: function (targetFile) {
 
 		// Get all html
 		var htmlTags;
 		
-		if(utf8 === true){
-			htmlTags = fs.readFileSync(targetFile);
-			console.log('decode: utf-8');
-		} else {
-			htmlTags = iconv.decode(fs.readFileSync(targetFile), 'Shift_JIS');
-			console.log('decode: Shift_JIS');
+		//Change to Shift-jis
+		htmlTags = iconv.decode(fs.readFileSync(targetFile), 'Shift_JIS');
+
+		//抽出 specific tags
+		function getTags(start, end, endTagLen){
+			var startLine = (typeof start === "number") ? start : htmlTags.indexOf(start);
+			var endLine = (typeof end === "number") ? end : htmlTags.indexOf(end); 
+			var endTagLen = (!endTagLen) ? 0 : endTagLen; 
+			var contentsTags = htmlTags.slice(startLine, endLine + endTagLen);
+			
+			return contentsTags;
 		}
-		
 
 		//DOCTYPE~head
+		var tagTop = getTags(0, CONFIG.tag.header.start, 0);
 		// contents
+		var tagContent = htmlTags.slice(CONFIG.tag.header.end, CONFIG.tag.footer.start);
 		//end
+		var tagBottom = htmlTags.slice(CONFIG.tag.header.end);
+
+		console.log(tagTop);
+
+		//conbine tags
+		var contentsTags = tagTop + tagContent + tagBottom;
+		this.writeFile(targetFile, contentsTags);
+		// console.log('success: ' + targetFile);
 		
 	},
 	optimizeHtmlParts: function (targetFile, startTag, endTag, endTagLen, utf8) {
@@ -48,8 +63,6 @@ module.exports = {
 		var contentsTags = htmlTags.slice(startLine, endLine + endTagLen);
 
 		//Update html files
-		console.log('startLine', startLine);
-
 		this.writeFile(targetFile, contentsTags);
 
 		console.log('success: ' + targetFile);

@@ -44,8 +44,8 @@ function convertHtml(){
 	fn.optimizeHtmlParts(footer.type.shiftjis, footer.startTag, footer.endTag, footer.endTagLen, false);
 }
 
-// init();
-convertHtml();
+init();
+// convertHtml();
 arrangePath();
 
 

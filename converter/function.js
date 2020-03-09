@@ -3,6 +3,14 @@ var iconv = require('iconv-lite'); // support Shift-jis
 var path = require('path');
 
 module.exports = {
+	writeFile(path, data) {
+
+	  	fs.writeFile(path, data, function (err) {
+	    	if (err) {
+	        	throw err;
+	    	}
+	  	});
+	},
 	optimizeHtml: function (targetFile, startTag, endTag, endTagLen, utf8) {
 		// Get html
 		var htmlTags;
@@ -20,15 +28,30 @@ module.exports = {
 		var contentsTags = htmlTags.slice(startLine, endLine + endTagLen);
 
 		//Update html files
-		function writeFile(path, data) {
+		this.writeFile(targetFile, contentsTags);
 
-		  	fs.writeFile(path, data, function (err) {
-		    	if (err) {
-		        	throw err;
-		    	}
-		  	});
+		console.log('success: ' + targetFile);
+	},
+	optimizeHtmlParts: function (targetFile, startTag, endTag, endTagLen, utf8) {
+		// Get html
+		var htmlTags;
+		
+		if(utf8 === true){
+			htmlTags = fs.readFileSync(targetFile);
+			console.log('decode: utf-8');
+		} else {
+			htmlTags = iconv.decode(fs.readFileSync(targetFile), 'Shift_JIS');
+			console.log('decode: Shift_JIS');
 		}
-		writeFile(targetFile, contentsTags);
+
+		var startLine = htmlTags.indexOf(startTag);
+		var endLine = htmlTags.indexOf(endTag);
+		var contentsTags = htmlTags.slice(startLine, endLine + endTagLen);
+
+		//Update html files
+		console.log('startLine', startLine);
+		
+		this.writeFile(targetFile, contentsTags);
 
 		console.log('success: ' + targetFile);
 	},

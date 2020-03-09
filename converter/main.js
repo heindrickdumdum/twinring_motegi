@@ -58,21 +58,17 @@ var footer = {
 	endTag: CONFIG.tag.footer.end,
 	endTagLen: CONFIG.tag.footer.end.length
 };
-//Try only all of .html file
 
-// fn.eachFiles(CONFIG.dist, null, function(filePath, rootPath) {
-
-// 	var targetFileName = path.basename(filePath);
-
-// 	if(path.basename(targetFileName).indexOf('.html') !== -1){
-// 		// fn.optimizeHtml(header.type.utf8, header.startTag, header.endTag, header.endTagLen, true);
-// 		// main.mtgConvert(filePath);
-		fn.optimizeHtml(__dirname + '/../release/index.html');
-// 		// fn.optimizeHtml(filePath, header.endTag, footer.start, header.endTagLen, true);
-// 		// Test code
-// 		// main.mtgConvert(__dirname + '/../release/index.html');
-// 	}
-// });
+// Watch all directories and convert all files
+fn.eachFiles(CONFIG.dist, null, function(filePath, rootPath) {
+	var targetFileName = path.basename(filePath);
+	//Target only .html file
+	if(path.basename(targetFileName).indexOf('.html') !== -1){
+		fn.optimizeHtml(filePath);
+		// Test code
+		// fn.optimizeHtml(__dirname + '/../release/index.html');
+	}
+});
 
 
 // fn.optimizeHtmlParts(header.type.utf8, header.startTag, header.endTag, header.endTagLen, true);

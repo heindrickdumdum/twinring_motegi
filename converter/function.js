@@ -34,12 +34,12 @@ module.exports = {
 		//DOCTYPE~head
 		var tagTop = getTags(0, CONFIG.tag.header.start);
 		// contents
-		var tagContent = htmlTags.slice(CONFIG.tag.header.end, CONFIG.tag.footer.start);
+		var tagContent = getTags(CONFIG.tag.header.end, CONFIG.tag.footer.start, true);
 		//end
 		var tagBottom = getTags(CONFIG.tag.footer.end, CONFIG.tag.closed, true, true);
 		// htmlTags.slice(CONFIG.tag.header.end);
 
-		console.log(tagTop);
+		console.log(tagContent);
 
 		//conbine tags
 		var contentsTags = tagTop + tagContent + tagBottom;

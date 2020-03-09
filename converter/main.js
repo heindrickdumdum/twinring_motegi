@@ -44,6 +44,12 @@ function convertHtml(){
 	fn.optimizeHtmlParts(footer.type.shiftjis, footer.startTag, footer.endTag, footer.endTagLen, false);
 }
 
-init();
+// init();
 convertHtml();
-// arrangePath();
+arrangePath();
+
+
+////ToDo
+//1.Path
+//2.move css and js under body
+//3.separate CSS and JS for header & footer

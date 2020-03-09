@@ -3,6 +3,8 @@ var iconv = require('iconv-lite'); // support Shift-jis
 
 var CONFIG = require('./config.js');
 
+var fn = require('./function.js');
+
 // console.log(config.dist);
 // config();
 fs.copySync(CONFIG.dist, CONFIG.release);
@@ -37,37 +39,7 @@ var createCommonParts = function(){
 createCommonParts();
 
 
-var optimizeHtml = function (targetFile, startTag, endTag, endTagLen, utf8) {
-	
-	// Get html
-	var htmlTags;
-	
-	if(utf8 === true){
-		htmlTags = fs.readFileSync(targetFile);
-		console.log('decode: utf-8');
-	} else {
-		htmlTags = iconv.decode(fs.readFileSync(targetFile), 'Shift_JIS');
-		console.log('decode: Shift_JIS');
-	}
 
-	// console.log(typeof htmlTags);
-	var startLine = htmlTags.indexOf(startTag);
-	var endLine = htmlTags.indexOf(endTag);
-
-	var contentsTags = htmlTags.slice(startLine, endLine + endTagLen)
-
-	//Update html files
-	function writeFile(path, data) {
-	  fs.writeFile(path, data, function (err) {
-	    if (err) {
-	        throw err;
-	    }
-	  });
-	}
-	writeFile(targetFile, contentsTags);
-
-	console.log('success: ' + targetFile);
-};
 
 var header = {
 	type: {
@@ -88,10 +60,10 @@ var footer = {
 	endTagLen: CONFIG.tag.footer.end.length
 };
 
-optimizeHtml(header.type.utf8, header.startTag, header.endTag, header.endTagLen, true);
-optimizeHtml(header.type.shiftjis, header.startTag, header.endTag, header.endTagLen, false);
-optimizeHtml(footer.type.utf8, footer.startTag, footer.endTag, footer.endTagLen, true);
-optimizeHtml(footer.type.shiftjis, footer.startTag, footer.endTag, footer.endTagLen, false);
+fn.optimizeHtml(header.type.utf8, header.startTag, header.endTag, header.endTagLen, true);
+fn.optimizeHtml(header.type.shiftjis, header.startTag, header.endTag, header.endTagLen, false);
+fn.optimizeHtml(footer.type.utf8, footer.startTag, footer.endTag, footer.endTagLen, true);
+fn.optimizeHtml(footer.type.shiftjis, footer.startTag, footer.endTag, footer.endTagLen, false);
 
 
 

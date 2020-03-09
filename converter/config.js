@@ -11,8 +11,7 @@ module.exports = {
 			'/mobipark_m/',
 			'/sumika/',
 			'/top/'
-		],
-		[
+		],[
 			'/hellowoods/program/',
 			'/hellowoods/zip-line/',
 			'/mobipark_m/attractions/'

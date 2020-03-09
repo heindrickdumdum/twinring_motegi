@@ -35,6 +35,7 @@ module.exports = {
 		footer: {
 			start: '<footer class="footer">',
 			end: '</footer>'
-		}
+		},
+		closed: '</html>'
 	}
 }

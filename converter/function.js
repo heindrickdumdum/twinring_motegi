@@ -21,11 +21,12 @@ module.exports = {
 		htmlTags = iconv.decode(fs.readFileSync(targetFile), 'Shift_JIS');
 
 		//抽出 specific tags
-		function getTags(start, end, endTagLen){
-			var startLine = (typeof start === "number") ? start : htmlTags.indexOf(start);
-			var endLine = (typeof end === "number") ? end : htmlTags.indexOf(end); 
-			var endTagLen = (!endTagLen) ? 0 : endTagLen; 
-			var contentsTags = htmlTags.slice(startLine, endLine + endTagLen);
+		function getTags(start, end, startTagLen, endTagLen){
+			var startLine = (typeof start === "string") ? htmlTags.indexOf(start) : start;
+			var endLine = (typeof end === "string") ? htmlTags.indexOf(end) : end;
+			var startTagLen = (!startTagLen) ? 0 : start.length;
+			var endTagLen = (!endTagLen) ? 0 : end.length; 
+			var contentsTags = htmlTags.slice(startLine + startTagLen, endLine + endTagLen);
 			
 			return contentsTags;
 		}
@@ -35,7 +36,8 @@ module.exports = {
 		// contents
 		var tagContent = htmlTags.slice(CONFIG.tag.header.end, CONFIG.tag.footer.start);
 		//end
-		var tagBottom = htmlTags.slice(CONFIG.tag.header.end);
+		var tagBottom = getTags(CONFIG.tag.footer.end, CONFIG.tag.closed, true, true);
+		// htmlTags.slice(CONFIG.tag.header.end);
 
 		console.log(tagTop);
 

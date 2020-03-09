@@ -31,7 +31,7 @@ function convertHtml(){
 	fn.eachFiles(CONFIG.release, null, function(filePath, rootPath) {
 		var targetFileName = path.basename(filePath);
 		//Target only .html file
-		if(path.basename(targetFileName).indexOf('.html') !== -1){
+		if(targetFileName.indexOf('.html') !== -1){
 			fn.optimizeHtml(filePath);
 			// Test code
 			// fn.optimizeHtml(__dirname + '/../release/index.html');
@@ -44,7 +44,7 @@ function convertHtml(){
 	fn.optimizeHtmlParts(footer.type.shiftjis, footer.startTag, footer.endTag, footer.endTagLen, false);
 }
 
-init();
+// init();
 // convertHtml();
 arrangePath();
 

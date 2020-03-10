@@ -55,7 +55,7 @@
   max-height: calc(100vh - (180px + 60px + 52px));
   margin: 0 auto;
   position: absolute;
-  top: calc(183px + 52px);
+  top: calc(183px + 52px + 20px);
   left: 0;
   right: 0;
   transition: opacity .5s $ease-in-out;

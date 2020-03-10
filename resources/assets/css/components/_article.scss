@@ -183,6 +183,11 @@
   }
 
   &.article-no-design {
+    .article-no-design-link {
+      display: block;
+    }
+
+
     .article-heading {
       margin-top: 7px;
       padding-left: 0;

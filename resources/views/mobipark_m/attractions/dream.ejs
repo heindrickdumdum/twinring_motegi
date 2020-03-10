@@ -6,7 +6,7 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<div class="lig-content">
+<main class="l-main">
   <div class="subpage">
     <div class="mv mv-subpage">
       <ul class="mv-list">
@@ -22,226 +22,226 @@
       </h1>
     </div>
 
-    <main>
-      <div class="subpage-inner">
-        <div class="heading-wrap heading-main heading-main-dream">
-          <h2 class="heading">
-            <span class="u-title-hidden">エンジンで動く本格的なカートを操って、モータースポーツにチャレンジ</span>
-            <span class="heading-texts u-show-pc">
-              <img src="<%= mix('/assets/images/dream/dream-color-title.png') %>" alt="エンジンで動く本格的なカートを操って、モータースポーツにチャレンジ">
-            </span>
+    <div class="subpage-inner">
+      <div class="heading-wrap heading-main heading-main-dream">
+        <h2 class="heading">
+          <span class="u-title-hidden">エンジンで動く本格的なカートを操って、モータースポーツにチャレンジ</span>
+          <span class="heading-texts u-show-pc">
+            <img src="<%= mix('/assets/images/dream/dream-color-title.png') %>" alt="エンジンで動く本格的なカートを操って、モータースポーツにチャレンジ">
+          </span>
 
-            <span class="heading-texts u-show-sp">
-              <img src="<%= mix('/assets/images/dream/dream-color-title-sp.png') %>" alt="エンジンで動く本格的なカートを操って、モータースポーツにチャレンジ">
-            </span>
-          </h2>
-        </div>
-
-        <!-- YOUTUBE -->
-        <div class="subpage-banner">
-          <div class="subpage-banner-inner">
-            <img class="" src="<%= mix('/assets/images/dream/subpage-banner.jpg') %>" alt="ドリームカート">
-          </div>
-        </div>
-
-        <h3 class="subpage-title">
-          <span>アトラクション情報</span>
-        </h3>
-
-        <p>初めてのカート走行でライバルと勝負。アクセルとブレーキを使ってエンジンで動くマシンを自由に操り、モータースポーツの醍醐味を体感しよう。</p>
-
-        <table class="table">
-          <tbody>
-            <tr class="table-row">
-              <th class="table-head">場所</th>
-              <td class="table-col">モビパーク内</td>
-            </tr>
-
-            <tr class="table-row">
-              <th class="table-head">所要時間</th>
-              <td class="table-col">約5分（走行時間3分）
-              </td>
-            </tr>
-
-            <tr class="table-row">
-              <th class="table-head">雨天の運行</th>
-              <td class="table-col">見合わせとなります。雨天などにより、コースコンディション悪化の場合、営業見合わせとなる場合がございます。
-              </td>
-            </tr>
-
-            <tr class="table-row">
-              <th class="table-head">対象者</th>
-              <td class="table-col">身長135cm以上
-              </td>
-            </tr>
-
-            <tr class="table-row">
-              <th class="table-head">料金</th>
-              <td class="table-col">
-                モビパークパスポート対象<br />アトラクションチケット利用：600円
-              </td>
-            </tr>
-
-            <tr class="table-row">
-              <th class="table-head">ご利用にあたって</th>
-              <td class="table-col">
-                服装について：<br />半そで・半ズボンの場合は腕カバー・貸し出し用ズボンを装着していただきます。
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
+          <span class="heading-texts u-show-sp">
+            <img src="<%= mix('/assets/images/dream/dream-color-title-sp.png') %>" alt="エンジンで動く本格的なカートを操って、モータースポーツにチャレンジ">
+          </span>
+        </h2>
       </div>
 
-      <section class="subpage-section subpage-section-howto">
-        <div class="subpage-section-howto-inner">
-          <div class="l-section-title">
-            <%- include('/partials/heading', {
-              modifier: 'heading-gradient-tobottom heading-howto heading-howto-dream u-show-pc',
-              text: 'How to Enjoy',
-              alt: 'How to Enjoy',
-              subtextvg: 'dream-enjoy-point-title',
-              altSubtext: '',
-            }) %>
+      <!-- YOUTUBE -->
+      <div class="subpage-banner">
+        <div class="subpage-banner-inner">
+          <img class="" src="<%= mix('/assets/images/dream/subpage-banner.jpg') %>" alt="ドリームカート">
+        </div>
+      </div>
 
-            <%- include('/partials/heading', {
-              modifier: 'heading-gradient-tobottom heading-howto heading-howto-dream u-show-sp',
-              text: 'How to Enjoy',
-              alt: 'How to Enjoy',
-              subtextvg: 'dream-enjoy-point-title-sp',
-              altSubtext: '',
-            }) %>
+      <h3 class="subpage-title">
+        <span>アトラクション情報</span>
+      </h3>
+
+      <p>初めてのカート走行でライバルと勝負。アクセルとブレーキを使ってエンジンで動くマシンを自由に操り、モータースポーツの醍醐味を体感しよう。</p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">場所</th>
+            <td class="table-col">モビパーク内</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">所要時間</th>
+            <td class="table-col">約5分（走行時間3分）
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">雨天の運行</th>
+            <td class="table-col">見合わせとなります。雨天などにより、コースコンディション悪化の場合、営業見合わせとなる場合がございます。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象者</th>
+            <td class="table-col">身長135cm以上
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">料金</th>
+            <td class="table-col">
+              モビパークパスポート対象<br />アトラクションチケット利用：600円
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">ご利用にあたって</th>
+            <td class="table-col">
+              服装について：<br />半そで・半ズボンの場合は腕カバー・貸し出し用ズボンを装着していただきます。
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <section class="subpage-section subpage-section-howto">
+      <div class="subpage-section-howto-inner">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-howto heading-howto-dream u-show-pc',
+            text: 'How to Enjoy',
+            alt: 'How to Enjoy',
+            subtextvg: 'dream-enjoy-point-title',
+            altSubtext: '',
+          }) %>
+
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-howto heading-howto-dream u-show-sp',
+            text: 'How to Enjoy',
+            alt: 'How to Enjoy',
+            subtextvg: 'dream-enjoy-point-title-sp',
+            altSubtext: '',
+          }) %>
+        </div>
+
+        <div class="how-to-content">
+          <div class="media media-subpage u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/dream/enjoy-img1.jpg') %>);"></div>
+                </div>
+              </div>
+            </div>
+            <div class="media-right">
+              <h4 class="media-title"><span>初めてのカートに挑戦！風をきってコースを疾走！</span></h4>
+              <p class="media-desc">
+                レース専用タイヤを装着した本格的なカートアトラクション。ホールド感のあるレーシングシートに座ると気分も最高！
+              </p>
+
+
+            </div>
           </div>
-
-          <div class="how-to-content">
-            <div class="media media-subpage u-clear">
-              <div class="media-left">
-                <div class="media-bg">
-                  <div class="media-thumb">
-                    <div style="background-image: url(<%= mix('/assets/images/dream/enjoy-img1.jpg') %>);"></div>
-                  </div>
+          <div class="media media-subpage u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/dream/enjoy-img2.jpg') %>);"></div>
                 </div>
-              </div>
-              <div class="media-right">
-                <h4 class="media-title"><span>初めてのカートに挑戦！風をきってコースを疾走！</span></h4>
-                <p class="media-desc">
-                  レース専用タイヤを装着した本格的なカートアトラクション。ホールド感のあるレーシングシートに座ると気分も最高！
-                </p>
-
-
               </div>
             </div>
-            <div class="media media-subpage u-clear">
-              <div class="media-left">
-                <div class="media-bg">
-                  <div class="media-thumb">
-                    <div style="background-image: url(<%= mix('/assets/images/dream/enjoy-img2.jpg') %>);"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="media-right">
-                <h4 class="media-title">
-                  <span>
-                    運転テクニックを磨いてコースを攻略！
-                  </span>
-                </h4>
-                <p class="media-desc">
-                  何度か走行してマシンに慣れたら、一番速く走行できるベストラインにチャレンジしてコースを攻略しよう！
-                </p>
+            <div class="media-right">
+              <h4 class="media-title">
+                <span>
+                  運転テクニックを磨いてコースを攻略！
+                </span>
+              </h4>
+              <p class="media-desc">
+                何度か走行してマシンに慣れたら、一番速く走行できるベストラインにチャレンジしてコースを攻略しよう！
+              </p>
 
-                <%- include('/partials/note', {
-                  modifier: 'note-subpage',
-                  imgPath: mix('/assets/images/dream/dekitane-banner-1.jpg')
-                }) %>
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/dream/dekitane-banner-1.jpg')
+              }) %>
+            </div>
+          </div>
+          <div class="media media-subpage u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/dream/enjoy-img3.jpg') %>);"></div>
+                </div>
               </div>
             </div>
-            <div class="media media-subpage u-clear">
-              <div class="media-left">
-                <div class="media-bg">
-                  <div class="media-thumb">
-                    <div style="background-image: url(<%= mix('/assets/images/dream/enjoy-img3.jpg') %>);"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="media-right">
-                <h4 class="media-title"><span>より本格的なカートへステップアップ！</span></h4>
-                <p class="media-desc u-show-pc">
-                  ドリームカートでライセンスをゲットして、<br />さらにハイスピードのチャレンジカートにステップアップしよう！
-                </p>
-                <p class="media-desc u-show-sp">
-                  ドリームカートでライセンスをゲットして、さらにハイスピードのチャレンジカートにステップアップしよう！
-                </p>
+            <div class="media-right">
+              <h4 class="media-title"><span>より本格的なカートへステップアップ！</span></h4>
+              <p class="media-desc u-show-pc">
+                ドリームカートでライセンスをゲットして、<br />さらにハイスピードのチャレンジカートにステップアップしよう！
+              </p>
+              <p class="media-desc u-show-sp">
+                ドリームカートでライセンスをゲットして、さらにハイスピードのチャレンジカートにステップアップしよう！
+              </p>
 
-              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- BOTTOM -->
+    <!-- BOTTOM -->
 
-      <!-- <div class="call-to-action">
-        <div class="l-container">
-          <div class="call-to-action-wrapper">
-            <div class="call-to-action-inner">
-              <%- include('/partials/heading', {
-                modifier: 'heading-banner-more heading-banner-more-dream u-show-pc',
-                imgPath: mix('/assets/images/dream/dream-enjoy-more-title.png'),
-                alt: 'ドリームカートをもっと楽しむ',
-                altSubtext: ''
-              }) %>
-              <%- include('/partials/heading', {
-                modifier: 'heading-banner-more heading-banner-more-dream u-show-sp',
-                imgPath: mix('/assets/images/dream/dream-enjoy-more-title-sp.png'),
-                alt: 'ドリームカートをもっと楽しむ',
-                altSubtext: ''
-              }) %>
-              <div class="call-to-action-description">
-                <p class="call-to-action-description-text u-show-pc">
-                  ドリームカートのこだわりポイントや、知っているともっ<br />と楽しくなる情報を配信中しています。
-                </p>
-                <p class="call-to-action-description-text u-show-sp">
-                  ドリームカートのこだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
-                </p>
+    <!-- <div class="call-to-action">
+      <div class="l-container">
+        <div class="call-to-action-wrapper">
+          <div class="call-to-action-inner">
+            <%- include('/partials/heading', {
+              modifier: 'heading-banner-more heading-banner-more-dream u-show-pc',
+              imgPath: mix('/assets/images/dream/dream-enjoy-more-title.png'),
+              alt: 'ドリームカートをもっと楽しむ',
+              altSubtext: ''
+            }) %>
+            <%- include('/partials/heading', {
+              modifier: 'heading-banner-more heading-banner-more-dream u-show-sp',
+              imgPath: mix('/assets/images/dream/dream-enjoy-more-title-sp.png'),
+              alt: 'ドリームカートをもっと楽しむ',
+              altSubtext: ''
+            }) %>
+            <div class="call-to-action-description">
+              <p class="call-to-action-description-text u-show-pc">
+                ドリームカートのこだわりポイントや、知っているともっ<br />と楽しくなる情報を配信中しています。
+              </p>
+              <p class="call-to-action-description-text u-show-sp">
+                ドリームカートのこだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
+              </p>
 
-              </div>
-              <div class="l-button l-button-call-to-action">
-                <%- include('/partials/button', {
-                  modifier: 'button-banner-more',
-                  text: 'もっと見る',
-                  link: '#'
-                }) %>
-              </div>
-              <span class="call-to-action-dot call-to-action-dot-1">
-                <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
-              </span>
-              <span class="call-to-action-dot call-to-action-dot-2">
-                <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
-              </span>
-              <span class="call-to-action-dot call-to-action-dot-3">
-                <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
-              </span>
-              <span class="call-to-action-dot call-to-action-dot-4">
-                <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
-              </span>
             </div>
+            <div class="l-button l-button-call-to-action">
+              <%- include('/partials/button', {
+                modifier: 'button-banner-more',
+                text: 'もっと見る',
+                link: '#'
+              }) %>
+            </div>
+            <span class="call-to-action-dot call-to-action-dot-1">
+              <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-2">
+              <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-3">
+              <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-4">
+              <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+            </span>
           </div>
         </div>
-      </div> -->
+      </div>
+    </div> -->
 
-      <%- include('/partials/banner-cta', {
-        link: 'https://www.twinring.jp/mobipark_m/card/',
-        imgPath: mix('/assets/images/subpage-banner-bottom.png'),
-        alt: '上手に乗れたらライセンスカードをつくろう'
-      }) -%>
+    <%- include('/partials/banner-cta', {
+      link: '/mobipark_m/card/',
+      imgPath: mix('/assets/images/subpage-banner-bottom.png'),
+      alt: '上手に乗れたらライセンスカードをつくろう'
+    }) -%>
 
-      <%- include('/partials/recommendation') -%>
+    <%- include('/partials/recommendation') -%>
 
-      <%- include('/partials/pickup') -%>
-    </main>
+    <%- include('/partials/pickup') -%>
+
+
     <!-- END BOTTOM -->
   </div>
-</div>
+</main>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsDream

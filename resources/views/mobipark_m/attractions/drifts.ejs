@@ -6,7 +6,7 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<div class="lig-content">
+<main class="l-main">
   <div class="subpage">
     <div class="mv mv-subpage">
       <ul class="mv-list">
@@ -22,214 +22,213 @@
       </h1>
     </div>
 
-    <main>
-      <div class="subpage-inner">
-        <div class="heading-wrap heading-main heading-main-drift">
-          <h2 class="heading">
-            <span class="u-title-hidden">ドリフト走行にチャレンジして、マシンをコントロールする楽しさを体感しよう</span>
-            <span class="heading-texts">
-              <img class="u-show-pc" src="<%= mix('/assets/images/drift/drift-color-title.png') %>" alt="ドリフト走行にチャレンジして、マシンをコントロールする楽しさを体感しよう">
-              <img class="u-show-sp" src="<%= mix('/assets/images/drift/drift-color-title-sp.png') %>" alt="ドリフト走行にチャレンジして、マシンをコントロールする楽しさを体感しよう">
-            </span>
-          </h2>
-        </div>
-
-        <!-- YOUTUBE -->
-        <div class="subpage-banner">
-          <div class="subpage-banner-inner">
-            <img class="" src="<%= mix('/assets/images/drift/subpage-banner.jpg') %>" alt="マシンを運転する少年">
-          </div>
-        </div>
-
-        <h3 class="subpage-title">
-          <span>アトラクション情報</span>
-        </h3>
-
-        <p>最高速度20km/hのエンジンで動くドリフト専用マシンに乗って、左カーブのハンドル操作で本格的なドリフト走行を気軽に楽しもう。</p>
-
-        <table class="table">
-          <tbody>
-            <tr class="table-row">
-              <th class="table-head">場所</th>
-              <td class="table-col">モビパーク内</td>
-            </tr>
-
-            <tr class="table-row">
-              <th class="table-head">所要時間</th>
-              <td class="table-col">約5分（走行時間3分）
-              </td>
-            </tr>
-
-            <tr class="table-row">
-              <th class="table-head">雨天の運行</th>
-              <td class="table-col">見合わせとなります。雨天などにより、コースコンディション悪化の場合、営業見合わせとなる場合がございます。
-              </td>
-            </tr>
-
-            <tr class="table-row">
-              <th class="table-head">対象者</th>
-              <td class="table-col">身長135cm以上
-              </td>
-            </tr>
-
-            <tr class="table-row">
-              <th class="table-head">料金</th>
-              <td class="table-col">
-                モビパークパスポート対象<br />アトラクションチケット利用：600円
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
+    <div class="subpage-inner">
+      <div class="heading-wrap heading-main heading-main-drift">
+        <h2 class="heading">
+          <span class="u-title-hidden">ドリフト走行にチャレンジして、マシンをコントロールする楽しさを体感しよう</span>
+          <span class="heading-texts">
+            <img class="u-show-pc" src="<%= mix('/assets/images/drift/drift-color-title.png') %>" alt="ドリフト走行にチャレンジして、マシンをコントロールする楽しさを体感しよう">
+            <img class="u-show-sp" src="<%= mix('/assets/images/drift/drift-color-title-sp.png') %>" alt="ドリフト走行にチャレンジして、マシンをコントロールする楽しさを体感しよう">
+          </span>
+        </h2>
       </div>
 
-      <section class="subpage-section subpage-section-howto">
-        <div class="subpage-section-howto-inner">
-          <div class="l-section-title">
-            <%- include('/partials/heading', {
-              modifier: 'heading-gradient-tobottom heading-howto heading-howto-drift u-show-pc',
-              text: 'How to Enjoy',
-              alt: '',
-              subtextvg: 'drift-enjoy-point-title',
-              altSubtext: '',
-            }) %>
-            <%- include('/partials/heading', {
-              modifier: 'heading-gradient-tobottom heading-howto heading-howto-drift u-show-sp',
-              text: 'How to Enjoy',
-              alt: '',
-              subtextvg: 'drift-enjoy-point-title-sp',
-              altSubtext: '',
-            }) %>
-          </div>
-
-          <div class="how-to-content">
-            <div class="media media-subpage u-clear">
-              <div class="media-left">
-                <div class="media-bg">
-                  <div class="media-thumb">
-                    <div style="background-image: url(<%= mix('/assets/images/drift/enjoy-img1.jpg') %>);"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="media-right">
-                <h4 class="media-title"><span>ハイパワーエンジンでドリフトバトル！</span></h4>
-                <p class="media-desc">
-                  ハイパワーエンジンの音と振動を感じながら、アクセル全開でドリフト走行にチャレンジしよう！
-                </p>
-                <%- include('/partials/note', {
-                  modifier: 'note-subpage',
-                  imgPath: mix('/assets/images/drift/dekitane-drfit-1-image.jpg')
-                }) %>
-
-
-              </div>
-            </div>
-            <div class="media media-subpage u-clear">
-              <div class="media-left">
-                <div class="media-bg">
-                  <div class="media-thumb">
-                    <div style="background-image: url(<%= mix('/assets/images/drift/enjoy-img2.jpg') %>);"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="media-right">
-                <h4 class="media-title">
-                  <span>
-                    レースは迫力の一斉スタート
-                  </span>
-                </h4>
-                <p class="media-desc">
-                  最大6台のマシンがグリーンフラッグを合図に一斉スタート。大きなエンジン音とともに走り出すシーンは迫力満点！
-                </p>
-                <%- include('/partials/note', {
-                  modifier: 'note-subpage',
-                  imgPath: mix('/assets/images/drift/dekitane-drfit-2-image.jpg')
-                }) %>
-
-              </div>
-            </div>
-            <div class="media media-subpage u-clear">
-              <div class="media-left">
-                <div class="media-bg">
-                  <div class="media-thumb">
-                    <div style="background-image: url(<%= mix('/assets/images/drift/enjoy-img3.jpg') %>);"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="media-right">
-                <h4 class="media-title"><span>家族みんなでレース対決！</span></h4>
-                <p class="media-desc u-show-pc">
-                  大きなマシンに乗ってみんなでレース対決。<br />家族のナンバー１を目指して思いっきり走ろう！
-                </p>
-                <p class="media-desc u-show-sp">
-                  大きなマシンに乗ってみんなでレース対決。家族のナンバー１を目指して思いっきり走ろう！
-                </p>
-
-
-              </div>
-            </div>
-          </div>
+      <!-- YOUTUBE -->
+      <div class="subpage-banner">
+        <div class="subpage-banner-inner">
+          <img class="" src="<%= mix('/assets/images/drift/subpage-banner.jpg') %>" alt="マシンを運転する少年">
         </div>
-      </section>
+      </div>
 
-      <!-- BOTTOM -->
+      <h3 class="subpage-title">
+        <span>アトラクション情報</span>
+      </h3>
 
-      <!-- <div class="call-to-action">
-        <div class="l-container">
-          <div class="call-to-action-wrapper">
-            <div class="call-to-action-inner">
-              <%- include('/partials/heading', {
-                modifier: 'heading-banner-more',
-                imgPath: mix('/assets/images/drift/drift-enjoy-more-title.png'),
-                text: '',
-                alt: 'ドリフトSをもっと楽しむ',
-                altSubtext: ''
+      <p>最高速度20km/hのエンジンで動くドリフト専用マシンに乗って、左カーブのハンドル操作で本格的なドリフト走行を気軽に楽しもう。</p>
+
+      <table class="table">
+        <tbody>
+          <tr class="table-row">
+            <th class="table-head">場所</th>
+            <td class="table-col">モビパーク内</td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">所要時間</th>
+            <td class="table-col">約5分（走行時間3分）
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">雨天の運行</th>
+            <td class="table-col">見合わせとなります。雨天などにより、コースコンディション悪化の場合、営業見合わせとなる場合がございます。
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">対象者</th>
+            <td class="table-col">身長135cm以上
+            </td>
+          </tr>
+
+          <tr class="table-row">
+            <th class="table-head">料金</th>
+            <td class="table-col">
+              モビパークパスポート対象<br />アトラクションチケット利用：600円
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <section class="subpage-section subpage-section-howto">
+      <div class="subpage-section-howto-inner">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-howto heading-howto-drift u-show-pc',
+            text: 'How to Enjoy',
+            alt: '',
+            subtextvg: 'drift-enjoy-point-title',
+            altSubtext: '',
+          }) %>
+          <%- include('/partials/heading', {
+            modifier: 'heading-gradient-tobottom heading-howto heading-howto-drift u-show-sp',
+            text: 'How to Enjoy',
+            alt: '',
+            subtextvg: 'drift-enjoy-point-title-sp',
+            altSubtext: '',
+          }) %>
+        </div>
+
+        <div class="how-to-content">
+          <div class="media media-subpage u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/drift/enjoy-img1.jpg') %>);"></div>
+                </div>
+              </div>
+            </div>
+            <div class="media-right">
+              <h4 class="media-title"><span>ハイパワーエンジンでドリフトバトル！</span></h4>
+              <p class="media-desc">
+                ハイパワーエンジンの音と振動を感じながら、アクセル全開でドリフト走行にチャレンジしよう！
+              </p>
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/drift/dekitane-drfit-1-image.jpg')
               }) %>
-              <div class="call-to-action-description">
-                <p class="call-to-action-description-text u-show-pc">
-                  ドリフトSのこだわりポイントや、知っているともっと楽<br />しくなる情報を配信中しています。
-                </p>
-                <p class="call-to-action-description-text u-show-sp">
-                  ドリフトSのこだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
-                </p>
+
+
+            </div>
+          </div>
+          <div class="media media-subpage u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/drift/enjoy-img2.jpg') %>);"></div>
+                </div>
               </div>
-              <div class="l-button l-button-call-to-action">
-                <%- include('/partials/button', {
-                  modifier: 'button-banner-more',
-                  text: 'もっと見る',
-                  link: '#'
-                }) %>
+            </div>
+            <div class="media-right">
+              <h4 class="media-title">
+                <span>
+                  レースは迫力の一斉スタート
+                </span>
+              </h4>
+              <p class="media-desc">
+                最大6台のマシンがグリーンフラッグを合図に一斉スタート。大きなエンジン音とともに走り出すシーンは迫力満点！
+              </p>
+              <%- include('/partials/note', {
+                modifier: 'note-subpage',
+                imgPath: mix('/assets/images/drift/dekitane-drfit-2-image.jpg')
+              }) %>
+
+            </div>
+          </div>
+          <div class="media media-subpage u-clear">
+            <div class="media-left">
+              <div class="media-bg">
+                <div class="media-thumb">
+                  <div style="background-image: url(<%= mix('/assets/images/drift/enjoy-img3.jpg') %>);"></div>
+                </div>
               </div>
-              <span class="call-to-action-dot call-to-action-dot-1">
-                <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
-              </span>
-              <span class="call-to-action-dot call-to-action-dot-2">
-                <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
-              </span>
-              <span class="call-to-action-dot call-to-action-dot-3">
-                <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
-              </span>
-              <span class="call-to-action-dot call-to-action-dot-4">
-                <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
-              </span>
+            </div>
+            <div class="media-right">
+              <h4 class="media-title"><span>家族みんなでレース対決！</span></h4>
+              <p class="media-desc u-show-pc">
+                大きなマシンに乗ってみんなでレース対決。<br />家族のナンバー１を目指して思いっきり走ろう！
+              </p>
+              <p class="media-desc u-show-sp">
+                大きなマシンに乗ってみんなでレース対決。家族のナンバー１を目指して思いっきり走ろう！
+              </p>
+
+
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
+    </section>
 
-      <%- include('/partials/banner-cta', {
-        link: 'https://www.twinring.jp/mobipark_m/card/',
-        imgPath: mix('/assets/images/subpage-banner-bottom.png'),
-        alt: '上手に乗れたらライセンスカードをつくろう'
-      }) -%>
+    <!-- BOTTOM -->
 
-      <%- include('/partials/recommendation') -%>
+    <!-- <div class="call-to-action">
+      <div class="l-container">
+        <div class="call-to-action-wrapper">
+          <div class="call-to-action-inner">
+            <%- include('/partials/heading', {
+              modifier: 'heading-banner-more',
+              imgPath: mix('/assets/images/drift/drift-enjoy-more-title.png'),
+              text: '',
+              alt: 'ドリフトSをもっと楽しむ',
+              altSubtext: ''
+            }) %>
+            <div class="call-to-action-description">
+              <p class="call-to-action-description-text u-show-pc">
+                ドリフトSのこだわりポイントや、知っているともっと楽<br />しくなる情報を配信中しています。
+              </p>
+              <p class="call-to-action-description-text u-show-sp">
+                ドリフトSのこだわりポイントや、<br />知っているともっと<br />楽しくなる情報を配信中しています。
+              </p>
+            </div>
+            <div class="l-button l-button-call-to-action">
+              <%- include('/partials/button', {
+                modifier: 'button-banner-more',
+                text: 'もっと見る',
+                link: '#'
+              }) %>
+            </div>
+            <span class="call-to-action-dot call-to-action-dot-1">
+              <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-1.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-2">
+              <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-2.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-3">
+              <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-3.png')%> ">
+            </span>
+            <span class="call-to-action-dot call-to-action-dot-4">
+              <img src="<%- mix('/assets/images/sumika/net-sumika/sumika-net-4.png')%> ">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
-      <%- include('/partials/pickup') -%>
-    </main>
+    <%- include('/partials/banner-cta', {
+      link: '/mobipark_m/card/',
+      imgPath: mix('/assets/images/subpage-banner-bottom.png'),
+      alt: '上手に乗れたらライセンスカードをつくろう'
+    }) -%>
+
+    <%- include('/partials/recommendation') -%>
+
+    <%- include('/partials/pickup') -%>
+
     <!-- END BOTTOM -->
   </div>
-</div>
+</main>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsDrift

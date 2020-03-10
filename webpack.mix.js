@@ -29,6 +29,14 @@ mix
     `${distRelativePath}/assets/js`,
   )
   .js(
+    `${srcRelativePath}/assets/js/header.js`,
+    `${distRelativePath}/assets/js`,
+  )
+  .js(
+    `${srcRelativePath}/assets/js/footer.js`,
+    `${distRelativePath}/assets/js`,
+  )
+  .js(
     `${srcRelativePath}/assets/js/index.js`,
     `${distRelativePath}/assets/js`,
   )
@@ -65,6 +73,14 @@ mix
   .eslint()
   .sass(
     `${srcRelativePath}/assets/css/app.scss`,
+    `${distRelativePath}/assets/css`
+  )
+  .sass(
+    `${srcRelativePath}/assets/css/header.scss`,
+    `${distRelativePath}/assets/css`
+  )
+  .sass(
+    `${srcRelativePath}/assets/css/footer.scss`,
     `${distRelativePath}/assets/css`
   )
   .stylelint({ context: srcRelativePath })

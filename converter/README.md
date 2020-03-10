@@ -8,6 +8,7 @@ It can take these items.
 2. Change directories
 3. Extract header/footer and separate html files
 4. Adjust path
+5. Covert utf-8 to shift-jis
 
 ## How to use?
 
@@ -34,12 +35,3 @@ Run this step
 ```
 npm run arrangePath
 ```
-<!-- 
-Run this step
-5. Covert utf-8 to shift-jis
-```
-npm run shiftjis
-```
-
-
- -->

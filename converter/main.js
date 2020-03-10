@@ -50,6 +50,5 @@ arrangePath();
 
 
 ////ToDo
-//1.Path
 //2.move css and js under body
 //3.separate CSS and JS for header & footer

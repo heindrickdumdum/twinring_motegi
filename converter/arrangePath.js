@@ -52,6 +52,15 @@ module.exports = function(){
 			
 		// 	index += 1;
 		// }
+	var relativePath = function(selfDepth){
+		if(selfDepth === 0 || selfDepth === 1){
+			return './assets';
+		} else if(selfDepth === 2){
+			return './../assets';
+		} else if(selfDepth === 3){
+			return './../../assets';
+		}
+	};
 	
 	fn.eachFiles(CONFIG.release, null, function(filePath, rootPath) {
 		var targetFileName = path.basename(filePath);
@@ -66,16 +75,7 @@ module.exports = function(){
 			//get depth -> 0, 1, 2 ...
 			var thisDepth = depth(thisSimplePath);
 
-			var relativePath = function(selfDepth){
-				if(selfDepth === 0 || selfDepth === 1){
-					return './assets';
-				} else if(selfDepth === 2){
-					return './../assets';
-				} else if(selfDepth === 3){
-					return './../../assets';
-				}
-			};
-
+			//Settings for replace 
 			var options = {
 				files: thisPath,
 				from: /\/assets/g,

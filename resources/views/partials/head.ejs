@@ -9,6 +9,51 @@
 </head>
 <body>
 <!-- END DELETE HEADER CONTENTS -->
+
+<!-- START LIG ASSETS(CSS/JS) -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/common/apple-touch-icon-precomposed.png">
+<link rel="shortcut icon" href="/assets/images/common/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+<link rel="stylesheet" href="<%= mix('/assets/css/app.css') %>">
+
+<script>
+  // IE foreach Polyfill
+  if ('NodeList' in window && !NodeList.prototype.forEach) {
+      NodeList.prototype.forEach = function (callback, thisArg) {
+          thisArg = thisArg || window;
+          for (let i = 0; i < this.length; i++) {
+              callback.call(thisArg, this[i], i, this);
+          }
+      };
+  }
+</script>
+
+<script>
+  if (window.screen.width < 375) {
+    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
+  } else if (window.screen.width >= 375) {
+    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=1, user-scalable=yes');
+  }
+</script>
+
+<!-- resize for tab -->
+<script>
+  (function () {
+    var ua = navigator.userAgent;
+    var isIpad = (ua.indexOf('iPad') > 0);
+    var isAndroidTab = (ua.indexOf('Android') > 0 && ua.match(/Mobile/i) == null);
+    var tab = isIpad || isAndroidTab;
+    var minWidth = tab ? 1240 : 'device-width';
+    var initialScale = tab ? window.parent.screen.width / minWidth : 1;
+    if (tab) {
+      document.head.insertAdjacentHTML('beforeend', '<meta name="viewport" content="width=' + minWidth + ',initial-scale=' + initialScale + '">');
+    }
+  })()
+</script>
+
+<script> document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+<!-- END LIG ASSETS(CSS/JS) -->
+
 <!-- START DELETE HEADER CONTENTS FOR SUB -->	<!-- Google Tag Manager 201809-->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -33,6 +78,7 @@
  <div class="wrap" id="js-wrap">
 
    <!-- for emergency news -->
+   <script type="text/javascript" src="//apps.mobilityland.co.jp/system/motegi/header.js" charset="UTF-8"></script>
    <link rel="stylesheet" href="<%= mix('/assets/css/emergencynews.css') %>">
 
 

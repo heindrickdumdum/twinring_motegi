@@ -46,7 +46,7 @@ function convertHtml(){
 
 init();
 // convertHtml();
-// arrangePath();
+arrangePath();
 
 
 ////ToDo

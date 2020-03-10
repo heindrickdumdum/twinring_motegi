@@ -52,8 +52,7 @@ module.exports = function(){
 			
 		// 	index += 1;
 		// }
-			
-
+	
 	fn.eachFiles(CONFIG.release, null, function(filePath, rootPath) {
 		var targetFileName = path.basename(filePath);
 		//Target only .html file
@@ -69,23 +68,37 @@ module.exports = function(){
 
 			var relativePath = function(selfDepth){
 				if(selfDepth === 0 || selfDepth === 1){
-					return './assets/';
+					return './assets';
 				} else if(selfDepth === 2){
-					return './../assets/';
+					return './../assets';
 				} else if(selfDepth === 3){
-					return './../../assets/';
+					return './../../assets';
 				}
 			};
 
+			var fromArray = [
+				new RegExp('assets/'), new RegExp('/assets/')
+			];
+
+			console.log('hi3');
+
+			// var fromStr = '/'+/assets/g;
+
 			var options = {
 				files: thisPath,
-				from: ['/assets/', 'assets/'],
+				from: /"\/assets/g,
 				to: relativePath(thisDepth)
 			};
 
-			replaceFile(options);
+			replaceFile(options)
+				.then(results => {
+					replaceFile(options);
+				})
+				.catch(error => {
+					console.error('done to replace in ' + thisPath, error);
+				});
+
 			console.log('thisPath', thisPath);
-			console.log('relativePath', relativePath(thisDepth));
 		}
 	});
 };

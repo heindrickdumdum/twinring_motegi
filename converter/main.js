@@ -47,8 +47,3 @@ function convertHtml(){
 init();
 convertHtml();
 arrangePath();
-
-
-////ToDo
-//2.move css and js under body
-//3.separate CSS and JS for header & footer

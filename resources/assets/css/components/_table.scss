@@ -198,8 +198,8 @@
   &.table-heading-collapse {
     img {
       @include max-screen($breakpoint-mobile) {
-        width: 90%;
-        height: 15px;
+        width: 85%;
+        // height: 15px;
     }
   }
 }

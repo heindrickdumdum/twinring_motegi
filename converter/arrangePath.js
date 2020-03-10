@@ -86,13 +86,16 @@ module.exports = function(){
 
 			var options = {
 				files: thisPath,
-				from: /"\/assets/g,
+				from: /\/assets/g,
 				to: relativePath(thisDepth)
+				// from: /<meta/g,
+				// to: '<div'
 			};
 
 			replaceFile(options)
 				.then(results => {
 					replaceFile(options);
+					console.log('rep');
 				})
 				.catch(error => {
 					console.error('done to replace in ' + thisPath, error);

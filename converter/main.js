@@ -44,6 +44,13 @@ function convertHtml(){
 	fn.optimizeHtmlParts(footer.type.shiftjis, footer.startTag, footer.endTag, footer.endTagLen, false);
 }
 
-init();
-convertHtml();
-arrangePath();
+module.exports.init = init();
+module.exports.convertHtml = convertHtml();
+module.exports.arrangePath = arrangePath();
+module.exports.convert = function(){
+	init();
+	convertHtml();
+	arrangePath();	
+};
+
+

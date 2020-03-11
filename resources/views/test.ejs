@@ -1,0 +1,108 @@
+<%
+  var title = 'Twin Ring Motegi';
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'test';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { title, topHeading: true }) -%>
+
+<div class="lig-content">
+  <main>
+    <div class="l-feature design-feature">
+      <section class="feature">
+        <div class="slider-wrap">
+          <div class="swiper-container slider js-feature-slider feature-container">
+            <ul class="swiper-wrapper slider-wrapper slider-wrapper-feature">
+              <%
+                getData().data.featureContent.forEach( featureItem => {
+              %>
+              <li class="swiper-slide slider-item">
+                <%- include('/partials/article', {
+                  modifier: 'article-feature',
+                  category: featureItem.category,
+                  image: featureItem.image,
+                  heading: featureItem.heading,
+                  date: featureItem.date,
+                  link: featureItem.link
+                }) %>
+              </li>
+              <% }) %>
+            </ul>
+            <div class="swiper-pagination swiper-pagination-section swiper-pagination-feature"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="l-parkmap design-parkmap">
+      <div class="parkmap design-parkmap-inner">
+        <div class="l-container parkmap-container">
+
+          <div class="u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-parkmap',
+              text: 'Park Map',
+              subtextvg: 'parkmap-subtext',
+              altSubtext: '',
+            }) %>
+          </div>
+
+          <div class="u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-parkmap',
+              text: 'Park Map',
+              subtextvg: 'parkmap-subtext-sp',
+              altSubtext: '',
+            }) %>
+          </div>
+
+
+          <div class="parkmap-inner">
+            <div class="parkmap-image">
+              <ul class="parkmap-image-list">
+                <%
+                  getData().data.parkmapButtons.forEach( button => {
+                %>
+                <li class="parkmap-image-item js-parkmap-number">
+                  <a href="<%- button.link %>" target="_blank"></a>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+            <div class="parkmap-right">
+              <ul class="parkmap-list">
+                <%
+                  getData().data.parkmapButtons.forEach( button => {
+                %>
+                <li class="parkmap-item js-parkmap-button">
+                  <a class="parkmap-link" href="<%- button.link %>" target="_blank"><%- button.text %>
+                    <i class="parkmap-link-icon">
+                      <%- include('/partials/svg', {
+                        'name': 'arrow'
+                      }) %>
+                    </i>
+                  </a>
+                </li>
+                <% }) %>
+                <li class="parkmap-item parkmap-item-last">
+                  <%- include('/partials/button', {
+                    newTab: true,
+                    modifier: 'button-parkmap',
+                    text: 'エリア・施設一覧を見る',
+                    link: 'https://www.twinring.jp/twinringmotegi/'
+                  }) %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="client-content">
+  <%- include('/partials/test/top-content') %>
+</div>
+
+<%- include('/partials/footer', { pageId }) -%>

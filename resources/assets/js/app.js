@@ -4,8 +4,10 @@ import headerMenu from "./components/header-menu";
 import SmoothScroll from 'smooth-scroll';
 import CollapseButton from "./components/collapse-button";
 import ua from './components/ua';
+import screenOrientation from './components/screen-orientation';
 
 ua();
+screenOrientation();
 parkmapButton();
 headerMenu();
 headerTopNav();

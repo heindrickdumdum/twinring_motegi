@@ -12,6 +12,10 @@
 <!-- LIG CSS -->
 <link rel="stylesheet" href="<%= mix('/assets/css/app.css') %>">
 
+<!-- CLIENT CSS -->
+<link rel="stylesheet" href="<%= mix('/assets/lib/test/reset.css') %>">
+<link rel="stylesheet" href="<%= mix('/assets/lib/test/style.css') %>">
+
 <script>
   // IE foreach Polyfill
   if ('NodeList' in window && !NodeList.prototype.forEach) {
@@ -25,10 +29,13 @@
 </script>
 
 <script>
+  var viewport = document.getElementById('js-viewport');
+  
+  // SMALLEST SCREENS
   if (window.screen.width < 375) {
-    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
+    viewport.setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
   } else if (window.screen.width >= 375) {
-    document.getElementById('js-viewport').setAttribute('content', 'width=375, initial-scale=1, user-scalable=yes');
+    viewport.setAttribute('content', 'width=375, initial-scale=1, user-scalable=yes');
   }
 </script>
 

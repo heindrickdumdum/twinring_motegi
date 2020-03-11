@@ -9,7 +9,7 @@
   font-family: "MS PGothic","Osaka",Verdana,sans-serif;
   font-size:13px;
   position: relative;
-  z-index: 21;
+  z-index: 9;
 
  @include max-screen($breakpoint-mobile) {
     margin-top: 58px;

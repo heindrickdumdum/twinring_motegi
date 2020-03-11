@@ -33,7 +33,7 @@ module.exports = {
 			end: '</header>'
 		},
 		footer: {
-			start: '<footer class="footer">',
+			start: '<footer class="footer" id="lig-footer">',
 			end: '</footer>'
 		},
 		closed: '</html>'

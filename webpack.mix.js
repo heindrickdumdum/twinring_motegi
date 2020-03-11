@@ -67,10 +67,6 @@ mix
     `${srcRelativePath}/assets/css/app.scss`,
     `${distRelativePath}/assets/css`
   )
-  .sass(//all footer scss
-    `${srcRelativePath}/assets/css/footer.scss`,
-    `${distRelativePath}/assets/css`
-  )
   .stylelint({ context: srcRelativePath })
   .options({ processCssUrls: false })
   .webpackConfig({

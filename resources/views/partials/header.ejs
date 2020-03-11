@@ -1,6 +1,4 @@
 <% include('/partials/data/index') %>
-<link rel="stylesheet" href="<%= mix('/assets/css/header.css') %>">
-<script src="<%= mix('/assets/js/header.js') %>" async></script>
 
 <header>
   <div class="u-show-pc">
@@ -159,4 +157,9 @@
   <div class="u-show-sp">
     <%- include('/partials/emergency-news') %>
   </div>
+
+  <!-- START LIG ASSETS CSS/JS -->
+  <link rel="stylesheet" href="<%= mix('/assets/css/header.css') %>">
+  <script src="<%= mix('/assets/js/header.js') %>" async></script>
+  <!-- END LIG ASSETS CSS/JS -->
 </header>

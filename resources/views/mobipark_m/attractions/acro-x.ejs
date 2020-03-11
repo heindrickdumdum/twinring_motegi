@@ -6,22 +6,22 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<main class="l-main">
-  <div class="subpage">
-    <div class="mv mv-subpage mv-subpage-acrox">
-      <ul class="mv-list">
-        <li class="mv-item">
-          <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/acro-x/mv-img.jpg') %>);"></div>
+<div class="subpage">
+  <div class="mv mv-subpage mv-subpage-acrox">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/acro-x/mv-img.jpg') %>);"></div>
 
-          <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/acro-x/mv-img-sp.png') %>);"></div>
-        </li>
-      </ul>
+        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/acro-x/mv-img-sp.png') %>);"></div>
+      </li>
+    </ul>
 
-      <h1 class="u-title-hidden">
-        アクロエックス
-      </h1>
-    </div>
+    <h1 class="u-title-hidden">
+      アクロエックス
+    </h1>
+  </div>
 
+  <main>
     <div class="subpage-inner">
       <div class="heading-wrap heading-main heading-main-acrox">
         <h2 class="heading">
@@ -84,7 +84,7 @@
           <tr class="table-row">
             <th class="table-head">ご利用にあたって</th>
             <td class="table-col">
-               <span class="table-col-num">※1</span>2歳から小学2年生までの方：<br>2歳から小学2年生までのお子さまは、中学生以上の付き添いで乗車が可能です。小学3年生以上のお子さまから、お一人で運転していただけます。
+                <span class="table-col-num">※1</span>2歳から小学2年生までの方：<br>2歳から小学2年生までのお子さまは、中学生以上の付き添いで乗車が可能です。小学3年生以上のお子さまから、お一人で運転していただけます。
             </td>
           </tr>
 
@@ -243,11 +243,9 @@
 
     <!-- pick up module -->
     <%- include('/partials/pickup') -%>
-
-    <!-- END BOTTOM -->
-  </div>
-</main>
-
+  </main>
+  <!-- END BOTTOM -->
+</div>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsAcrox

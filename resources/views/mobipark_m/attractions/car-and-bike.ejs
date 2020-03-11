@@ -6,49 +6,49 @@ pageId = 'carAndBike';
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<main class="l-main">
-  <div class="subpage">
-    <div class="mv mv-subpage mv-car-and-bike">
-      <ul class="mv-list">
-        <li class="mv-item">
-          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/car-and-bike/mv-img.jpg') %>);"></div>
-          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/car-and-bike/mv-img-sp.png') %>);"></div>
-        </li>
-      </ul>
+<div class="subpage">
+  <div class="mv mv-subpage mv-car-and-bike">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/car-and-bike/mv-img.jpg') %>);"></div>
+        <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/car-and-bike/mv-img-sp.png') %>);"></div>
+      </li>
+    </ul>
 
-      <div class="mv-container">
-        <h1 class="mv-heading">
-          <span class="mv-heading-texts">
-            <svg>
-              <title>Car and Bike</title>
-              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-text') %>"></use>
-            </svg>
-          </span>
-          <span class="mv-heading-subtexts u-show-pc">
-            <svg>
-              <title>Car and Bike</title>
-              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-carbike-new-title_2') %>"></use>
-            </svg>
+    <div class="mv-container">
+      <h1 class="mv-heading">
+        <span class="mv-heading-texts">
+          <svg>
+            <title>Car and Bike</title>
+            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-car-and-bike-mv-text') %>"></use>
+          </svg>
+        </span>
+        <span class="mv-heading-subtexts u-show-pc">
+          <svg>
+            <title>Car and Bike</title>
+            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-carbike-new-title_2') %>"></use>
+          </svg>
 
 
-          </span>
+        </span>
 
-          <span class="mv-heading-subtexts u-show-sp">
-            <span class="u-title-hidden">Car bike</span>
-            <svg>
-              <title>Car and Bike</title>
-              <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-carbike-new-title_3') %>"></use>
-            </svg>
-          </span>
-        </h1>
+        <span class="mv-heading-subtexts u-show-sp">
+          <span class="u-title-hidden">Car bike</span>
+          <svg>
+            <title>Car and Bike</title>
+            <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-carbike-new-title_3') %>"></use>
+          </svg>
+        </span>
+      </h1>
 
-        <div class="u-show-pc mv-today mv-logo">
-          <div class="mv-l-inner">
-          </div>
+      <div class="u-show-pc mv-today mv-logo">
+        <div class="mv-l-inner">
         </div>
       </div>
     </div>
+  </div>
 
+  <main>
     <section class="subpage-section subpage-section-howto">
       <div class="subpage-section-howto-inner">
         <div class="heading-wrap heading-main heading-main-carbike">
@@ -227,9 +227,8 @@ pageId = 'carAndBike';
     <%- include('/partials/recommendation') -%>
 
     <%- include('/partials/pickup') -%>
-
-  </div>
 </main>
+</div>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsCarbike

@@ -6,22 +6,22 @@
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
 
-<main class="l-main">
-  <div class="subpage">
-    <div class="mv mv-subpage">
-      <ul class="mv-list">
-        <li class="mv-item">
-          <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/drift/mv-img.jpg') %>);"></div>
+<div class="subpage">
+  <div class="mv mv-subpage">
+    <ul class="mv-list">
+      <li class="mv-item">
+        <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/drift/mv-img.jpg') %>);"></div>
 
-          <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/drift/mv-img-sp.jpg') %>);"></div>
-        </li>
-      </ul>
+        <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/drift/mv-img-sp.jpg') %>);"></div>
+      </li>
+    </ul>
 
-      <h1 class="u-title-hidden">
-        ドリフトS
-      </h1>
-    </div>
+    <h1 class="u-title-hidden">
+      ドリフトS
+    </h1>
+  </div>
 
+  <main>
     <div class="subpage-inner">
       <div class="heading-wrap heading-main heading-main-drift">
         <h2 class="heading">
@@ -225,10 +225,9 @@
     <%- include('/partials/recommendation') -%>
 
     <%- include('/partials/pickup') -%>
-
-    <!-- END BOTTOM -->
-  </div>
-</main>
+  </main>
+  <!-- END BOTTOM -->
+</div>
 
 <%- include('/partials/breadcrumbs', {
   breadcrumbs : getData().data.breadcrumbsDrift

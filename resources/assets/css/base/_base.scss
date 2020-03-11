@@ -7,18 +7,36 @@
 ```
 */
 body {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  text-rendering: $text-rendering;
-  font-size: $base-font-size;
-  font-family: $base-font-family;
-  color: $base-font-color;
-  background-color: $base-background-color;
-  min-width: $breakpoint-tablet;
-  overflow-x: hidden;
+  $wrap: '.wrap:not(.client-content)';
+  $client: '.wrap .client-content';
+  
+  #{$wrap} {
+    overflow-x: hidden;
+  }
+  
+  #{$wrap},
+  #lig-header,
+  #lig-preload,
+  #lig-breadcrumbs,
+  #lig-footer,
+  .lig-content
+  {
+    -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      text-rendering: $text-rendering;
+      font-size: $base-font-size;
+      font-family: $base-font-family;
+      color: $base-font-color;
+      background-color: $base-background-color;
+      min-width: $breakpoint-tablet;
+    
+      @media screen and (max-width: $breakpoint-mobile + 1) {
+        min-width: 100%;
+      }
+  }
 
-  @media screen and (max-width: $breakpoint-mobile + 1) {
-    min-width: 100%;
+  #{$client} {
+    box-sizing: initial;
   }
 }
 

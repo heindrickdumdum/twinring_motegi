@@ -26,6 +26,13 @@
       margin-top: -30px;
     }
   } 
+
+  //phase2 areaindex
+  &-campvillage {
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 75px;
+    }
+  }
 }
 
 .l-adventure-sp-container {

@@ -1,0 +1,396 @@
+<%
+  var title = 'Twin Ring Motegi | モビパーク';
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  // pageId = 'twinringmotegi';
+  pageId = 'mobipark';
+%>
+<%- include('/partials/data/index') -%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<main>
+  <div class="subpage subpage-mobipark page-mobipark">
+    <div class="mv mv-subpage mv-subpage-walk">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/twinringmotegi/pc/areaindex-mv.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/twinringmotegi/sp/areaindex-mv.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <h1 class="mv-heading mv-heading-subpage mv-heading-subpage-labo">
+        <span class="mv-heading-text mv-heading-text-walk">
+          森の散策プログラム
+        </span>
+      </h1>
+    </div>
+
+    <div class="l-parkmap design-parkmap">
+      <div class="parkmap design-parkmap-inner">
+        <div class="l-container parkmap-container">
+          
+          <div class="l-section-title">
+
+            <div class="u-show-pc">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-parkmap',
+                text: 'Park Map',
+                subtextvg: 'parkmap-subtext',
+                altSubtext: '',
+              }) %>
+            </div>
+    
+            <div class="u-show-sp">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-parkmap heading-wrap-parkmap-areaindex',
+                text: 'Park Map',
+                subtextvg: 'parkmap-subtext-sp',
+                altSubtext: '',
+              }) %>
+            </div>
+
+          </div>
+  
+  
+          <div class="parkmap-inner">
+            <div class="parkmap-image">
+              <ul class="parkmap-image-list">
+                <%
+                  getData().data.parkmapButtons.forEach( button => {
+                %>
+                <li class="parkmap-image-item js-parkmap-number">
+                  <a href="<%- button.link %>" ></a>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+            <div class="parkmap-right">
+              <ul class="parkmap-list">
+                <%
+                  getData().data.parkmapButtons.forEach( button => {
+                %>
+                <li class="parkmap-item js-parkmap-button">
+                  <a class="parkmap-link" href="<%- button.link %>" ><%- button.text %>
+                    <i class="parkmap-link-icon">
+                      <%- include('/partials/svg', {
+                        'name': 'arrow'
+                      }) %>
+                    </i>
+                  </a>
+                </li>
+                <% }) %>
+                <li class="parkmap-item parkmap-item-last">
+                  <%- include('/partials/button', {
+                    newTab: false,
+                    modifier: 'button-parkmap',
+                    text: 'エリア・施設一覧を見る',
+                    link: '/twinringmotegi/'
+                  }) %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="adventure">
+      <ul class="adventure-container">
+
+        <!-- hellowoods -->
+        <li class="adventure-list">
+          <div class="adventure-bg"
+            style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-hellowoods.jpg') %>);">
+            <div class="adventure-bg-circle"></div>
+            <img class="adventure-image-logo adventure-image-logo-areaindex" src="<%= mix('/assets/images/twinringmotegi/logo_hellowoods.png') %>"
+              alt="hellowoods">
+          </div>
+
+          <div class="l-adventure-sp-container">
+            <div class="l-adventure">
+              <div class="l-section-title l-section-title-adventure">
+                <%- include('/partials/heading', {
+                  modifier: 'adventure-heading heading-title-adventure-sumika',
+                  subtextvg: 'mobipark-sumika-title',
+                  altSubtextvg: 'Adventure Sumika'
+                }) %>
+              </div>
+
+              <p class="adventure-content-copy u-show-pc">
+                森の生きものたちが隠れるすみかをテーマにした、<br/>
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <p class="adventure-content-copy u-show-sp">
+                森の生きものたちが隠れるすみかをテーマにした、
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'もっと見る',
+                  link: '/sumika/'
+                }) %>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- mobipark -->
+        <li class="adventure-list">
+          <div class="adventure-bg"
+            style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-mobipark.jpg') %>);">
+            <div class="adventure-bg-circle"></div>
+            <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-mobipark" src="<%= mix('/assets/images/twinringmotegi/logo-mobipark.png') %>"
+              alt="hellowoods">
+          </div>
+
+          <div class="l-adventure-sp-container">
+            <div class="l-adventure">
+              <div class="l-section-title l-section-title-adventure">
+                <%- include('/partials/heading', {
+                  modifier: 'adventure-heading heading-title-adventure-sumika',
+                  subtextvg: 'mobipark-sumika-title',
+                  altSubtextvg: 'Adventure Sumika'
+                }) %>
+              </div>
+
+              <p class="adventure-content-copy u-show-pc">
+                森の生きものたちが隠れるすみかをテーマにした、<br/>
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <p class="adventure-content-copy u-show-sp">
+                森の生きものたちが隠れるすみかをテーマにした、
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'もっと見る',
+                  link: '/sumika/'
+                }) %>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- twinringmotegi -->
+        <li class="adventure-list">
+          <div class="adventure-bg"
+            style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-camp.jpg') %>);">
+            <div class="adventure-bg-circle"></div>
+            <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-campvillage" src="<%= mix('/assets/images/twinringmotegi/logo-campvillage.png') %>"
+              alt="hellowoods">
+          </div>
+
+          <div class="l-adventure-sp-container">
+            <div class="l-adventure l-adventure-campvillage">
+              <div class="l-section-title l-section-title-adventure">
+                <%- include('/partials/heading', {
+                  modifier: 'adventure-heading heading-title-adventure-sumika',
+                  subtextvg: 'mobipark-sumika-title',
+                  altSubtextvg: 'Adventure Sumika'
+                }) %>
+              </div>
+
+              <p class="adventure-content-copy u-show-pc">
+                森の生きものたちが隠れるすみかをテーマにした、<br/>
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <p class="adventure-content-copy u-show-sp">
+                森の生きものたちが隠れるすみかをテーマにした、
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'もっと見る',
+                  link: '/sumika/'
+                }) %>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- hotel -->
+        <li class="adventure-list">
+          <div class="adventure-bg"
+            style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-twinring.jpg') %>);">
+            <div class="adventure-bg-circle"></div>
+            <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-hotel" src="<%= mix('/assets/images/twinringmotegi/logo-hotel.png') %>"
+              alt="hellowoods">
+          </div>
+
+          <div class="l-adventure-sp-container">
+            <div class="l-adventure">
+              <div class="l-section-title l-section-title-adventure">
+                <%- include('/partials/heading', {
+                  modifier: 'adventure-heading heading-title-adventure-sumika',
+                  subtextvg: 'mobipark-sumika-title',
+                  altSubtextvg: 'Adventure Sumika'
+                }) %>
+              </div>
+
+              <p class="adventure-content-copy u-show-pc">
+                森の生きものたちが隠れるすみかをテーマにした、<br/>
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <p class="adventure-content-copy u-show-sp">
+                森の生きものたちが隠れるすみかをテーマにした、
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'もっと見る',
+                  link: '/sumika/'
+                }) %>
+              </div>
+            </div>
+          </div>
+        </li>   
+        
+        <!-- motorsport -->
+        <li class="adventure-list">
+          <div class="adventure-bg"
+            style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-motorsports.jpg') %>);">
+            <div class="adventure-bg-circle"></div>
+            <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-motorsport" src="<%= mix('/assets/images/twinringmotegi/logo-motorsports.png') %>"
+              alt="hellowoods">
+          </div>
+
+          <div class="l-adventure-sp-container">
+            <div class="l-adventure">
+              <div class="l-section-title l-section-title-adventure">
+                <%- include('/partials/heading', {
+                  modifier: 'adventure-heading heading-title-adventure-sumika',
+                  subtextvg: 'mobipark-sumika-title',
+                  altSubtextvg: 'Adventure Sumika'
+                }) %>
+              </div>
+
+              <p class="adventure-content-copy u-show-pc">
+                森の生きものたちが隠れるすみかをテーマにした、<br/>
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <p class="adventure-content-copy u-show-sp">
+                森の生きものたちが隠れるすみかをテーマにした、
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'もっと見る',
+                  link: '/sumika/'
+                }) %>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <!-- hondacollection -->
+        <li class="adventure-list">
+          <div class="adventure-bg"
+            style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-honda.jpg') %>);">
+            <div class="adventure-bg-circle"></div>
+            <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-hondacollection" src="<%= mix('/assets/images/twinringmotegi/logo-honda.png') %>"
+              alt="hellowoods">
+          </div>
+
+          <div class="l-adventure-sp-container">
+            <div class="l-adventure">
+              <div class="l-section-title l-section-title-adventure">
+                <%- include('/partials/heading', {
+                  modifier: 'adventure-heading heading-title-adventure-sumika',
+                  subtextvg: 'mobipark-sumika-title',
+                  altSubtextvg: 'Adventure Sumika'
+                }) %>
+              </div>
+
+              <p class="adventure-content-copy u-show-pc">
+                森の生きものたちが隠れるすみかをテーマにした、<br/>
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <p class="adventure-content-copy u-show-sp">
+                森の生きものたちが隠れるすみかをテーマにした、
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'もっと見る',
+                  link: '/sumika/'
+                }) %>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- activesafe -->
+        <li class="adventure-list">
+          <div class="adventure-bg"
+            style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-safety.jpg') %>);">
+            <div class="adventure-bg-circle"></div>
+            <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-activesafe" src="<%= mix('/assets/images/twinringmotegi/logo-safety.png') %>"
+              alt="hellowoods">
+          </div>
+
+          <div class="l-adventure-sp-container">
+            <div class="l-adventure">
+              <div class="l-section-title l-section-title-adventure">
+                <%- include('/partials/heading', {
+                  modifier: 'adventure-heading heading-title-adventure-sumika',
+                  subtextvg: 'mobipark-sumika-title',
+                  altSubtextvg: 'Adventure Sumika'
+                }) %>
+              </div>
+
+              <p class="adventure-content-copy u-show-pc">
+                森の生きものたちが隠れるすみかをテーマにした、<br/>
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <p class="adventure-content-copy u-show-sp">
+                森の生きものたちが隠れるすみかをテーマにした、
+                屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
+              </p>
+
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'もっと見る',
+                  link: '/sumika/'
+                }) %>
+              </div>
+            </div>
+          </div>
+        </li>     
+      </ul>
+    </div>
+
+    <!-- recommendation module -->
+    <%- include('/partials/recommendation') -%>
+
+    <!-- pick up module -->
+    <%- include('/partials/pickup') -%>
+
+    <!-- END BOTTOM -->
+  </div>
+</main>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsMobipark
+}) -%>
+
+<%- include('/partials/footer', { pageId }) -%>

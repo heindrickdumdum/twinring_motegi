@@ -95,6 +95,12 @@
       text-align: left;
     }
   }
+
+  .heading-wrap-parkmap-areaindex & { //phase 2 twinringmotegig areaindex
+    @include max-screen($breakpoint-mobile) {
+      text-align: center;
+    }
+  }
 }
 
 .heading-subtext {

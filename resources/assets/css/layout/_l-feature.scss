@@ -1,5 +1,6 @@
 .l-feature {
   padding: 153px 0 0;
+  overflow-x: hidden;
 
   @include max-screen($breakpoint-mobile) {
     padding-top: 132px;

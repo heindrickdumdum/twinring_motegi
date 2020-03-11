@@ -25,6 +25,10 @@ mix
   .setPublicPath(distRelativePath)
   .polyfill()
   .js(
+    `${srcRelativePath}/assets/js/header.js`,
+    `${distRelativePath}/assets/js`,
+  )
+  .js(
     `${srcRelativePath}/assets/js/app.js`,
     `${distRelativePath}/assets/js`,
   )
@@ -64,9 +68,14 @@ mix
 
   .eslint()
   .sass(
+    `${srcRelativePath}/assets/css/header.scss`,
+    `${distRelativePath}/assets/css`
+  )
+  .sass(
     `${srcRelativePath}/assets/css/app.scss`,
     `${distRelativePath}/assets/css`
   )
+ 
   .stylelint({ context: srcRelativePath })
   .options({ processCssUrls: false })
   .webpackConfig({

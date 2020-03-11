@@ -11,4 +11,14 @@
   &.slider-gallery-thumb {
     overflow: hidden;
   }
+
+  &.slider-carbike-container {
+    .slider-carbike {
+      @include min-screen($breakpoint-mobile + 1) {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+      }
+    }
+  }
 }

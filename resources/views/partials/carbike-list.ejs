@@ -1,10 +1,15 @@
+<%
+if (typeof modifier === 'undefined'){
+  var modifier = '';
+}
+%>
 
 <% if(dataCarbikeList) { %>
   <ul class="carbike-list">
     <% dataCarbikeList.forEach( item => { %>
       <li class="carbike-item">
         <a class="carbike-item-link" href="<%- item.link %>">
-          <article class="carbike-article">
+          <article class="carbike-article <%- modifier %>">
             <div class="carbike-article-thumb">
               <div class="carbike-article-thumb-img"
                   style="background-image: url(<%- item.imgPath %>)">

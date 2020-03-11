@@ -4,7 +4,8 @@
 %>
 <%- include('./../partials/data/index') -%>
 <%- include('/partials/head', { pageId, title }) -%>
-<main>
+
+<div class="lig-content">
   <div class="subpage hellowoods-wrapper">
     <div class="mv mv-hellowoods">
       <ul class="mv-list">
@@ -32,7 +33,7 @@
       </div>
     </div>
 
-
+    <main>
       <div class="l-section">
         <section class="info-container info-container-hellowoods">
             <div class="l-section-title">
@@ -164,7 +165,6 @@
         </section>
       </div>
 
-
       <section class="l-section alternate-feature l-section-hellowoods">
         <div class="l-section-title">
           <%- include('/partials/heading', {
@@ -271,9 +271,9 @@
       <!-- pick up module -->
       <%- include('/partials/pickup') -%>
 
-
+    </main>
   </div>
-</main>
+</div>
 
 <!-- BREADCRUMBS -->
 <%- include('/partials/breadcrumbs', {

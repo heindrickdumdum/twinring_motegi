@@ -21,6 +21,9 @@ module.exports = function(){
 	};
 	cloneAssets(directorySecond);
 
+	//Copy index.html to top/
+	fs.copySync(CONFIG.dist + 'index.html', CONFIG.release + 'top/index.html');
+
 	// make directory "/globalnavi"
 	fs.ensureDirSync(CONFIG.release + '/globalnavi');
 

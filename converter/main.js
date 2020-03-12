@@ -6,7 +6,7 @@ var CONFIG = require('./config.js');
 var fn = require('./function.js');
 var init = require('./init.js');
 var arrangePath = require('./arrangePath.js');
-// var shiftjis = require('./shiftjis.js');
+var shiftjis = require('./shiftjis.js');
 
 function convertHtml(){
 	var header = {
@@ -49,11 +49,13 @@ function convertHtml(){
 module.exports.init = init();
 module.exports.convertHtml = convertHtml();
 module.exports.arrangePath = arrangePath();
+module.exports.init = shiftjis();
 // module.exports.shiftjis = shiftjis(process.argv);
 module.exports.convert = function(){
 	init();
 	arrangePath();
 	convertHtml();
+	shiftjis();
 };
 
 

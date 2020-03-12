@@ -61,8 +61,6 @@ module.exports = {
 		//Update html files
 		this.writeFile(targetFile, contentsTags);
 
-		console.log('targetFile: ' + targetFile);
-		// console.log('endLine: ' + endLine);
 	},
 	eachFiles: function(filePath, rootPath, callback) {
 

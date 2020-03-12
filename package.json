@@ -14,7 +14,8 @@
     "convert": "node ./converter/main.js convert",
     "convertInit": "node ./converter/main.js init",
     "convertHtml": "node ./converter/main.js convertHtml",
-    "arrangePath": "node ./converter/main.js arrangePath"
+    "arrangePath": "node ./converter/main.js arrangePath",
+    "shiftjis": "node ./converter/main.js shiftjis"
   },
   "keywords": [],
   "author": "dsktschy",

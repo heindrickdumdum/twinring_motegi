@@ -5,7 +5,6 @@ var CONFIG = require('./config.js');
 
 module.exports = {
 	writeFile(path, data) {
-
 	  	fs.writeFile(path, data, function (err) {
 	    	if (err) {
 	        	throw err;
@@ -62,8 +61,6 @@ module.exports = {
 		//Update html files
 		this.writeFile(targetFile, contentsTags);
 
-		console.log('targetFile: ' + targetFile);
-		// console.log('endLine: ' + endLine);
 	},
 	eachFiles: function(filePath, rootPath, callback) {
 

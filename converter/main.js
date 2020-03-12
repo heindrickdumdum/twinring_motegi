@@ -6,7 +6,7 @@ var CONFIG = require('./config.js');
 var fn = require('./function.js');
 var init = require('./init.js');
 var arrangePath = require('./arrangePath.js');
-// var shiftjis = require('./shiftjis.js');
+var shiftjis = require('./shiftjis.js');
 
 function convertHtml(){
 	var header = {
@@ -39,6 +39,7 @@ function convertHtml(){
 		//Target only .html file
 		if(targetFileName.indexOf('.html') !== -1){
 			fn.optimizeHtml(filePath);
+			iconv.decode(fs.readFileSync(filePath), 'Shift_JIS');
 			// Test code
 			// fn.optimizeHtml(__dirname + '/../release/index.html');
 		}
@@ -48,11 +49,13 @@ function convertHtml(){
 module.exports.init = init();
 module.exports.convertHtml = convertHtml();
 module.exports.arrangePath = arrangePath();
+module.exports.init = shiftjis();
 // module.exports.shiftjis = shiftjis(process.argv);
 module.exports.convert = function(){
 	init();
-	convertHtml();
 	arrangePath();
+	convertHtml();
+	shiftjis();
 };
 
 

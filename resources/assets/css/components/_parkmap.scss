@@ -1,6 +1,4 @@
 .parkmap-inner {
-  position: relative;
-  
   @include max-screen($breakpoint-mobile) {
     margin-top: 64px;
   }

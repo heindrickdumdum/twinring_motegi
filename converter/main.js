@@ -28,6 +28,11 @@ function convertHtml(){
 		endTagLen: CONFIG.tag.footer.end.length
 	};
 
+	fn.optimizeHtmlParts(header.type.utf8, header.startTag, header.endTag, header.endTagLen, true);
+	fn.optimizeHtmlParts(header.type.shiftjis, header.startTag, header.endTag, header.endTagLen, false);
+	fn.optimizeHtmlParts(footer.type.utf8, footer.startTag, footer.endTag, footer.endTagLen, true);
+	fn.optimizeHtmlParts(footer.type.shiftjis, footer.startTag, footer.endTag, footer.endTagLen, false);
+
 	// Watch all directories and convert all files
 	fn.eachFiles(CONFIG.release, null, function(filePath, rootPath) {
 		var targetFileName = path.basename(filePath);
@@ -38,11 +43,6 @@ function convertHtml(){
 			// fn.optimizeHtml(__dirname + '/../release/index.html');
 		}
 	});
-
-	fn.optimizeHtmlParts(header.type.utf8, header.startTag, header.endTag, header.endTagLen, true);
-	fn.optimizeHtmlParts(header.type.shiftjis, header.startTag, header.endTag, header.endTagLen, false);
-	fn.optimizeHtmlParts(footer.type.utf8, footer.startTag, footer.endTag, footer.endTagLen, true);
-	fn.optimizeHtmlParts(footer.type.shiftjis, footer.startTag, footer.endTag, footer.endTagLen, false);
 }
 
 module.exports.init = init();

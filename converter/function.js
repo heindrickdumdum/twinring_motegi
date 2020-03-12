@@ -50,10 +50,8 @@ module.exports = {
 		
 		if(utf8 === true){
 			htmlTags = fs.readFileSync(targetFile);
-			console.log('decode: utf-8');
 		} else {
 			htmlTags = iconv.decode(fs.readFileSync(targetFile), 'Shift_JIS');
-			console.log('decode: Shift_JIS');
 		}
 
 		// remove unnecesarry tags
@@ -64,7 +62,8 @@ module.exports = {
 		//Update html files
 		this.writeFile(targetFile, contentsTags);
 
-		console.log('success: ' + targetFile);
+		console.log('targetFile: ' + targetFile);
+		// console.log('endLine: ' + endLine);
 	},
 	eachFiles: function(filePath, rootPath, callback) {
 

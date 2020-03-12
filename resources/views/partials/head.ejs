@@ -20,19 +20,64 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
+	 	<!-- START LIG ASSETS FILES -->
+ 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="assets/images/common/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="assets/images/common/apple-touch-icon-precomposed.png">
+	<link rel="stylesheet" href="<%= mix('/assets/css/app.css') %>">
+	<script>
+	  // IE foreach Polyfill
+	  if ('NodeList' in window && !NodeList.prototype.forEach) {
+	      NodeList.prototype.forEach = function (callback, thisArg) {
+	          thisArg = thisArg || window;
+	          for (let i = 0; i < this.length; i++) {
+	              callback.call(thisArg, this[i], i, this);
+	          }
+	      };
+	  }
+	</script>
+
+	<script>
+	  var viewport = document.getElementById('js-viewport');
+	  
+	  // SMALLEST SCREENS
+	  if (window.screen.width < 375) {
+	    viewport.setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
+	  } else if (window.screen.width >= 375) {
+	    viewport.setAttribute('content', 'width=375, initial-scale=1, user-scalable=yes');
+	  }
+	</script>
+
+	<!-- resize for tab -->
+	<script>
+	  (function () {
+	    var ua = navigator.userAgent;
+	    var isIpad = (ua.indexOf('iPad') > 0);
+	    var isAndroidTab = (ua.indexOf('Android') > 0 && ua.match(/Mobile/i) == null);
+	    var tab = isIpad || isAndroidTab;
+	    var minWidth = tab ? 1240 : 'device-width';
+	    var initialScale = tab ? window.parent.screen.width / minWidth : 1;
+	    if (tab) {
+	      document.head.insertAdjacentHTML('beforeend', '<meta name="viewport" content="width=' + minWidth + ',initial-scale=' + initialScale + '">');
+	    }
+	  })()
+	</script>
+
+	<script> document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+	<!-- END LIG ASSETS FILES -->
+
+	<!-- START for emergency news -->
+   	<link rel="stylesheet" href="<%= mix('/assets/css/emergencynews.css') %>">
+   	<!-- END for emergency news -->
+
 	<% if (pageId === 'index') { %>
-		<div class="preload js-preload" id="lig-preload">
-			<div class="preload-image"></div>
-			<img class="preload-text" src="<%= mix('/assets/images/footer-twinring.png') %>" alt="">
-		</div>
+	<div class="preload js-preload" id="lig-preload">
+		<div class="preload-image"></div>
+		<img class="preload-text" src="<%= mix('/assets/images/footer-twinring.png') %>" alt="">
+	</div>
 	<% } %>
 
- <div class="wrap" id="js-wrap">
-
-   <!-- for emergency news -->
-   <link rel="stylesheet" href="<%= mix('/assets/css/emergencynews.css') %>">
-
-
+	 <div class="wrap" id="js-wrap">
 		<% var topHeading; %>
 		<%- include('/partials/header', {
 			topHeading: topHeading

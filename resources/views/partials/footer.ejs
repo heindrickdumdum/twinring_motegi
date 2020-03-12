@@ -28,7 +28,7 @@
   'tsubasa'
   ]
 %>
-
+  
   <footer class="footer" id="lig-footer">
     <nav class="footer-top-nav-list-wrap">
       <div class="l-container">
@@ -107,12 +107,14 @@
       </div>
     </div>
 
+    <!-- START LIG ASSETS CSS/JS -->
+    <link rel="stylesheet" href="<%= mix('/assets/css/footer.css') %>">
+    <!-- END LIG ASSETS CSS/JS -->
   </footer>
 
 </div><!-- end of wrap -->
 
   <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
-  <script src="<%= mix('/assets/js/header.js') %>" async></script>
   <script src="<%= mix('/assets/js/app.js') %>" async></script>
 
   <% if(pageId == 'mobipark') { %>

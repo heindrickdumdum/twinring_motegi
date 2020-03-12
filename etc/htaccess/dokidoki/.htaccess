@@ -1,0 +1,11 @@
+AddType image/svg+xml .svg .svgz
+
+# For Redirect
+RewriteRule ^campaign/index.html$ /dokidoki/ [R=301,L]
+RewriteRule ^hellowoods/index.html$ /dokidoki/ [R=301,L] 
+RewriteRule ^about-dokidoki/index.html$ /dokidoki/ [R=301,L] 
+RewriteRule ^donguri/index.html$ /dokidoki/ [R=301,L] 
+RewriteRule ^donguri/index.html$ /dokidoki/ [R=301,L] 
+RewriteRule ^faq/index.html$ /dokidoki/ [R=301,L] 
+RewriteRule ^athletic/index.html$ /dokidoki/ [R=301,L] 
+

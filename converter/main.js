@@ -39,6 +39,7 @@ function convertHtml(){
 		//Target only .html file
 		if(targetFileName.indexOf('.html') !== -1){
 			fn.optimizeHtml(filePath);
+			iconv.decode(fs.readFileSync(filePath), 'Shift_JIS');
 			// Test code
 			// fn.optimizeHtml(__dirname + '/../release/index.html');
 		}
@@ -51,8 +52,8 @@ module.exports.arrangePath = arrangePath();
 // module.exports.shiftjis = shiftjis(process.argv);
 module.exports.convert = function(){
 	init();
-	convertHtml();
 	arrangePath();
+	convertHtml();
 };
 
 

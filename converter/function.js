@@ -5,7 +5,6 @@ var CONFIG = require('./config.js');
 
 module.exports = {
 	writeFile(path, data) {
-
 	  	fs.writeFile(path, data, function (err) {
 	    	if (err) {
 	        	throw err;

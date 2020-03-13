@@ -139,11 +139,13 @@
 .slider-pickup,
 .slider-recommendation {
   opacity: 1;
-  overflow: visible;
+  // sass-lint:disable-block no-important
+  overflow: visible !important;
   margin-left: 0;
 
   @include max-screen($breakpoint-mobile) {
-    padding: 0 12%;
+    // sass-lint:disable-block no-important
+    padding: 0 12% !important;
   }
 
   .slider-wrapper {

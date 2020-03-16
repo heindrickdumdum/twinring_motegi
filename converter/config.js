@@ -29,12 +29,12 @@ module.exports = {
 	},
 	tag: {
 		header: {
-			start: '<header id="lig-header">',
-			end: '</header>'
+			start: '<!-- START GLOBAL HEADER -->',
+			end: '<!-- END GLOBAL HEADER -->'
 		},
 		footer: {
-			start: '<footer class="footer" id="lig-footer">',
-			end: '</footer>'
+			start: '<!-- START GLOBAL FOOTER -->',
+			end: '<!-- END GLOBAL FOOTER -->'
 		},
 		closed: '</html>'
 	}

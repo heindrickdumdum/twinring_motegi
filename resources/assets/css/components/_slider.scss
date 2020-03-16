@@ -95,7 +95,8 @@
 
 .slider-gallery {
   overflow: hidden;
-  margin-bottom: 25px;
+  // sass-lint:disable-block no-important
+  margin-bottom: 25px !important;
 
   .slider-item {
     width: 100%;

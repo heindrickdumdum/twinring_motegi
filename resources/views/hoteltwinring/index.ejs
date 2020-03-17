@@ -1,0 +1,298 @@
+<%
+  var title = 'Twin Ring Motegi';
+  pageId = 'hellowoods';
+%>
+<%- include('./../partials/data/index') -%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+
+<div class="lig-content">
+  <div class="subpage hellowoods-wrapper">
+    <div class="mv mv-hellowoods">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hoteltwinring/mv-img.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hoteltwinring/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <h2 class="mv-heading hellowoods-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            text: 'Hotel Twinring',
+            alt: '',
+            subtextvg: 'hellowoods-main-title',
+            altSubtext: ''
+          }) %>
+        </h2>
+
+        <div class="u-show-pc mv-today mv-log mv-hoteltwinring-logo">
+          <div class="mv-l-inner">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="l-section">
+        <section class="info-container info-container-hellowoods">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-mobipark',
+                text: 'Information',
+                alt: 'information',
+                altSubtext: '',
+                subtextvg: 'info-subtext'
+              }) %>
+            </div>
+
+            <div class="l-container">
+              <ul class="info-list">
+                <% hoteltwinringInfo.forEach(item => { %>
+                <li class="info-item">
+                  <a href="<%- item.link %>">
+                    <span><%= item.desc %></span>
+                  </a>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+        </section>
+      </div>
+
+      <div class="l-section">
+        <div class="challenge hellowoods">
+          <div class="l-container">
+            <div class="row">
+              <div class="challenge-left">
+                <div class="challenge-img u-show-pc">
+                  <div class="challenge-img1">
+                    <img src="<%- mix('/assets/images/hoteltwinring/overflow-img-1.png') -%>" alt="梟">
+                  </div>
+                  <div class="challenge-img2">
+                    <img src="<%- mix('/assets/images/hoteltwinring/overflow-img-2.png') -%>" alt="女の子">
+                  </div>
+                </div>
+
+                <div class="challenge-img u-show-sp">
+                  <img src="<%- mix('/assets/images/hoteltwinring/life-overflow-images-sp.png') -%>" alt="梟">
+                </div>
+
+
+              </div>
+              <div class="challenge-right">
+                <p class="heading-text">
+                  <img src="<%- mix('/assets/images/hoteltwinring/life-overflow-heading.png') -%>" alt="身近な自然に「溢れる生命」を見つけよう
+                  ">
+                </p>
+                <p class="desc hellowoods">
+                  小高い丘の上、フィトンチッド溢れる森に囲まれたホテルで寛ぎと癒しの時間を過ごそう。満天の星を眺めながら優雅に疲れを癒す露天風呂、ここでしか味わえない地元素材を使ったこだわりグルメ、宿泊者限定のアクティビティ、そのすべてが特別な体験としてあなたとご家族をおもてなしします。
+                </p>
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'local',
+                    text: 'もっと見る',
+                    link: '/hellowoods/concept/'
+                  }) %>
+                </div>
+
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="l-section">
+        <section class="adventure">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-wrap-hellowoods',
+              text: 'Room Type',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'hoteltwinring-room-type'
+            }) %>
+          </div>
+
+          <div class="forest-container">
+            <%- include('/partials/hoteltwinring/section-forest') -%>
+          </div>
+        </section>
+      </div>
+
+      <section class="l-section alternate-feature l-section-hellowoods">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-wrap-hellowoods',
+            text: 'Restaurant',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'hoteltwinring-restaurant'
+          }) %>
+        </div>
+
+        <div class="l-container-m">
+          <%- include('/partials/hoteltwinring/section-alt-features-resto') -%>
+        </div>
+      </section>
+
+      <section class="l-section racing-kart">
+        <div class="l-container">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-racing-kart',
+              text: 'Facility',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'hoteltwinring-facility',
+              altSubtextvg: 'Racing Kart'
+            }) %>
+          </div>
+        </div>
+
+        <div class="adventure-bg adventure-bg-racing-kart u-show-pc"
+          style="background-image: url(<%= mix('/assets/images/hoteltwinring/facility-bg-1.jpg') %>);">
+        </div>
+
+        <div class="adventure-bg adventure-bg-racing-kart u-show-sp"
+          style="background-image: url(<%= mix('/assets/images/hoteltwinring/facility-bg-1-sp.jpg') %>);">
+        </div>
+
+        <div class="l-adventure-sp-container">
+          <div class="l-adventure l-racing-kart">
+            <div class="l-section-title">
+              <img class="logo-racing-kart" src="<%= mix('/assets/images/hoteltwinring/logo_nozominoyu.png') %>" alt="本格的にレース気分を体感">
+            </div>
+
+            <p class="adventure-content-copy">
+              昼は広大な森とレーシングコース、夜は満天の星を眺めながら、ごゆっくりとお過ごしください。
+            </p>
+
+            <div class="l-button">
+              <%- include('/partials/button', {
+                modifier: 'button-adventure button-adventure-racing-kart',
+                text: 'もっと見る',
+                link: '/mobipark_m/attractions/racingkart/'
+              }) %>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="l-section banner-info">
+        <div class="block-image-inner hoteltwinring" style="background-image: url(/assets/images/hoteltwinring/lounge-bg.jpg);">
+          <div class="block-image-text-wrap hoteltwinring">
+            <p class="block-image-text block-image-text-hellowoods">
+              <span class="heading-text">Lobby Lounge</span>
+              <span class="heading-text heading-text-default">ロビーラウンジ</span>
+              <span class="block-image-subtext">大人はくつろぎ、子どもは楽しむ。<br>
+                森で過ごすひとときをイメージしたロビーラウンジは、<br>
+                家族で一緒にリラックスしてお過ごしいただけます。</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="l-section block-image">
+        <div class="l-container">
+          <ul class="block-image-list block-image-list-hellowoods">
+            <%
+            hoteltwinringGallery.forEach( block => {
+            %>
+            <li class="block-image-item block-image-item-hellowoods image-border <%- block.modifier %>">
+              <a href="<%- block.url %>" class="block-image-item-link">
+                <div class="block-image-inner" style="background-image: url(<%- block.bg %>);">
+                  <div class="block-image-text-wrap">
+                    <p class="block-image-text block-image-text-hellowoods">
+                      <span class="heading-text"><%- block.title %></span>
+                      <span class="block-image-subtext"><%- block.subtext %></span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <%
+              })
+            %>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="l-section banner-image hoteltwinring-banner-image-1">
+        <div class="l-container">
+          <a href="/hellowoods/blog/">
+            <div class="banner-image-wrap">
+                <p class="banner-image-text">
+                  <span class="heading-text">宿泊者限定アクティビティ</span>
+                  <span class="banner-image-subtext">星空観望など宿泊者限定イベントをご用意しております </span>
+                </p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="l-section banner-image hoteltwinring-banner-image-2">
+        <div class="l-container">
+          <a href="/hellowoods/blog/">
+            <div class="banner-image-wrap">
+                <p class="banner-image-text">
+                  <span class="heading-text">団体プランのご紹介</span>
+                </p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="l-section hotel-reservation">
+        <div class="hotel-reservation-wrap" style="background-image: url(/assets/images/hoteltwinring/reservation-bg.jpg);">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-reservation',
+              text: 'Reservation',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'reservation-white',
+              altSubtextvg: 'Reservation'
+            }) %>
+          </div>
+          <div class="l-button">
+            <%- include('/partials/button', {
+              modifier: 'reserve-button',
+              text: 'ホテルツインリンクもてぎのご予約はこちら',
+              link: '/hellowoods/concept/'
+            }) %>
+          </div>
+        </div>
+        <div class="l-container">
+          <div class="hotel-reservation-qna">
+            <div class="l-button">
+              <%- include('/partials/button', {
+                modifier: 'local',
+                text: 'よくある質問',
+                link: '/hellowoods/concept/'
+              }) %>
+            </div>
+            <div class="l-button">
+              <%- include('/partials/button', {
+                modifier: 'local',
+                text: 'お問い合わせ',
+                link: '/hellowoods/concept/'
+              }) %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsMobipark
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

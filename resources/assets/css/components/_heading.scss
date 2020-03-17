@@ -95,6 +95,12 @@
       text-align: left;
     }
   }
+
+  &.heading-text-default {
+    font-family: none;
+    background: none;
+    -webkit-text-fill-color: $color-black;
+  }
 }
 
 .heading-subtext {

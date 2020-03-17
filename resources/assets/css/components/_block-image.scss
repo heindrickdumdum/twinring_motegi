@@ -101,6 +101,11 @@
   background-size: cover;
   background-position: center;
 
+  &.hoteltwinring {
+    height: auto;
+    padding: 10% 0;
+  }
+
   @include max-screen($breakpoint-mobile) {
     height: auto;
     padding: 10% 0;
@@ -115,6 +120,13 @@
   width: 216px;
   height: 136px;
   background-color: rgba($color-white, .89);
+
+  &.hoteltwinring {
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 50px;
+  }
 
   @include max-screen($breakpoint-mobile) {
     width: 141px;

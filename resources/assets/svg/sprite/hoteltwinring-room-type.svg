@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="289" height="33" viewBox="0 0 289 33">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 36px;
+        fill: #333;
+        text-anchor: middle;
+        font-family: RoHMinSinkPro-Md, RoHMinSinkPro;
+      }
+    </style>
+  </defs>
+  <text id="お部屋のタイプ" class="cls-1" transform="translate(144.5 29.923)"><tspan x="0">お部屋のタイプ</tspan></text>
+</svg>

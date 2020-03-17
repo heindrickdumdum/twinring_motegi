@@ -30,3 +30,29 @@
     background-color: #f9f9f9;
   }
 }
+
+.hoteltwinring-banner-image-1 {
+  .banner-image-wrap {
+    padding: 15%;
+    background-image: url(../images/hoteltwinring/banner-image-1.jpg);
+    .heading-text {
+      background: none;
+      -webkit-text-fill-color: $color-white;
+    }
+    .banner-image-subtext {
+      color: $color-white;
+    }
+  }
+}
+
+.hoteltwinring-banner-image-2 {
+  .banner-image-wrap {
+    padding: 7%;
+    background-image: url(../images/hoteltwinring/banner-image-2.jpg);
+    .heading-text {
+      background: none;
+      -webkit-text-fill-color: $color-white;
+      line-height: 3;
+    }
+  }
+}

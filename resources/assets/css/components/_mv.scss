@@ -328,6 +328,13 @@
     max-width: 270px;
   }
 
+  &.mv-hoteltwinring-logo {
+    
+    background: url(#{$image-path}hoteltwinring/hotel-twinring-logo.png) no-repeat;
+    background-size: contain;
+    max-width: 270px;
+  }
+
   @include max-screen($breakpoint-mobile) {
     display: none;
   }

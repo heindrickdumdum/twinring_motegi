@@ -10,8 +10,37 @@
   padding-left: 90px;
   padding-right: 90px;
 
+  .adventure-ribbon {
+    position: absolute;
+    top: -50px;
+    left: -30px;
+    height: 150px;
+    width: 150px;
+    background: url(/assets/images/article/category-bg.png) no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+
+    .adventure-ribbon-inner {
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+
+      .heading-text {
+        background: none;
+        -webkit-text-fill-color: black;
+        font-size: 50px;
+        line-height: 1.2;
+      }
+    }
+  }
+
   &.hellowoods {
     padding-top: 140px;
+  }
+
+  &.hoteltwinring {
+    padding-top: 30px;
   }
 
   @include max-screen ($breakpoint-mobile) {

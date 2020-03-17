@@ -25,7 +25,8 @@
   'craft',
   'labo',
   'musasabi',
-  'tsubasa'
+  'tsubasa',
+  'granroom'
   ]
 %>
   
@@ -136,7 +137,7 @@
     <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'labo') { %>
+  <% if(pageId == 'labo' || pageId == 'granroom') { %>
     <script src="<%= mix('/assets/js/labo.js') %>" async></script>
   <% } %>
 

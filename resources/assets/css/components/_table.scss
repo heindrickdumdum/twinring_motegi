@@ -120,6 +120,10 @@
 }
 
 .table-solid {//hotel granroom
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;  
+  }
+
   .table-row-solid {
     > * {
       &:after {

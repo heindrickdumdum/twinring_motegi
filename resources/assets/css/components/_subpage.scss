@@ -780,6 +780,10 @@
 
   .subpage-inner {
     padding-bottom: 146px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 69px;
+    }
   }
 
   .subpage-desc {

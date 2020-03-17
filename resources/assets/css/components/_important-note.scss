@@ -21,6 +21,10 @@
   &-granroomactivity {
     color: $color-white;
     font-size: 15px;
-    line-height: 2;    
+    line-height: 2;   
+    
+    @include max-screen($breakpoint-mobile) {
+      line-height: 1.5;
+    }
   }
 }

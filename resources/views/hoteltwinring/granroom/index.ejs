@@ -12,7 +12,7 @@
         <ul class="mv-buttons-list">
           <li class="mv-buttons-item">
             <a class="mv-buttons-link" href="/fee_m/">
-              <span>料金<br>・チケ ッ ト</span>
+              <span>ご予約</span>
             </a>
           </li>
         </ul>
@@ -46,10 +46,18 @@
 
     <main>
       
-      <div class="l-section-title">
+      <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
           modifier: 'heading-main heading-main-subpage heading-main-subpage-granroom',
           subtextvg: 'granroom-maintitle',
+          altSubtextvg: '木の温もりを感じる ３室限定の特別なお部屋'
+        }); -%>
+      </div>
+      
+      <div class="l-section-title u-show-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-main heading-main-subpage heading-main-subpage-granroom',
+          subtextvg: 'granroom-main-title-sp',
           altSubtextvg: '木の温もりを感じる ３室限定の特別なお部屋'
         }); -%>
       </div>
@@ -81,13 +89,18 @@
             </div>
           </div>
 
-          <p class="subpage-desc">
+          <p class="subpage-desc u-show-pc">
             通常の2倍ある広々とした部屋には幅4mのワイドベッドをはじめロッキングチェア、ハンモックが設けられ、心地よい木の香りに包まれながら森の中のようにリラックスしてお過ごしいただけます。
           </p>
 
           <h3 class="subpage-title">
-            <span>客室詳細</span>
+            <span class="u-show-pc">客室詳細</span>
+            <span class="u-show-sp">アトラクション情報</span>
           </h3>
+
+          <p class="subpage-desc u-show-sp">
+            通常の2倍ある広々とした部屋には幅4mのワイドベッドをはじめロッキングチェア、ハンモックが設けられ、心地よい木の香りに包まれながら森の中のようにリラックスしてお過ごしいただけます。
+          </p>
 
           <table class="table">
             <tbody>
@@ -97,7 +110,7 @@
                 <td class="table-col">
                   3室、広さ69m² ･ 床面フローリング（定員4〜6名）、禁煙
                   <br/>
-                  <a href="javascript:;">> 間取りを見る</a>
+                  <a class="u-show-pc" href="javascript:;">> 間取りを見る</a>
                 </td>
               </tr>
 
@@ -160,7 +173,55 @@
             <span>ルームチャージ（4名利用のみ）</span>
           </h3>
 
-          <table class="table table-solid">
+          <p class="u-show-sp">
+            <strong>
+              １〜4名ご利用
+            </strong>
+          </p>
+
+          <table class="table table-solid u-show-sp">
+            <tbody>
+              <tr class="table-row table-row-solid">
+                <th class="table-head">平日</th>
+                <td class="table-col">34,600円～</td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head">休前日</th>
+                <td class="table-col">52,900円～</td>
+              </tr>
+              <tr class="table-row table-row-last">
+                <th class="table-head">GW・夏休み <br/>
+                  など　</th>
+                <td class="table-col">62,100円〜</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="u-show-sp">
+            <strong>
+              6名利用 （エキストラベ ッド2台利用）
+            </strong>
+          </p>
+
+          <table class="table table-solid u-show-sp">
+            <tbody>
+              <tr class="table-row table-row-solid">
+                <th class="table-head">平日</th>
+                <td class="table-col">48,200円</td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head">休前日</th>
+                <td class="table-col">66,500円～</td>
+              </tr>
+              <tr class="table-row table-row-last">
+                <th class="table-head">GW・夏休み <br/>
+                  など　</th>
+                <td class="table-col">75,700円〜</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table table-solid u-show-pc">
             <tbody>
 
               <tr class="table-row table-row-solid">
@@ -200,7 +261,11 @@
             </tbody>
           </table>
 
-          <small class="important-note important-note-left">※1室最大6名様まで利用可。幼児は添い寝無料。人数・エキストラベッドの利用台数により料金が異なります。</small>
+          <small class="important-note important-note-left u-show-pc">※1室最大6名様まで利用可。幼児は添い寝無料。人数・エキストラベッドの利用台数により料金が異なります。</small>
+
+          <small class="important-note important-note-left u-show-sp">※1室最大4名まで利用可。<br/>
+            　幼児（0歳～未就学児）は添い寝無料。<br/>
+            ※ご宿泊人数により料金が異なります。</small>
 
         </div>
       </section>
@@ -313,12 +378,8 @@
                 <div class="media-list-thumb" style="background-image: url('<%- mix('/assets/images/granroom/teatime-img1.jpg') -%>');"></div>
                 <div class="media-list-text">
                   <h3 class="subpage-title">
-                    <span class="u-show-pc">
+                    <span class="">
                       道の駅もてぎ<br/>
-                      「バウム工房 ゆずの木」のバウムクーヘン
-                    </span>
-                    <span class="u-show-sp">
-                      道の駅もてぎ
                       「バウム工房 ゆずの木」のバウムクーヘン
                     </span>
                   </h3>
@@ -389,13 +450,19 @@
               modifier: 'heading-main heading-main-subpage heading-main-subpage-granroomactivity heading-main-subpage-granroomactivity-onecolor',
               text: `Activity`,
               altSubtext: ``,
-              subtextvg: `granroom-activity-subtitle`,
+              subtextvg: `granroom-activity-subtitle-sp`,
               altSubtextvg: `Activity`
             }); -%>
           </div>
 
-          <p class="subpage-desc">
+          <p class="subpage-desc u-show-pc">
             グランルームにご宿泊の方にだけ、特別な体験プログラムをご用意しました。<br/>
+            ※要予約。開催日程は決まり次第掲載いたします。
+          </p>
+
+          <p class="subpage-desc u-show-sp">
+            グランルームにご宿泊の方にだけ、<br/>
+            特別な体験プログラムをご用意しました。<br/>
             ※要予約。開催日程は決まり次第掲載いたします。
           </p>
 
@@ -459,7 +526,10 @@
 
           </div>
 
-          <small class="important-note important-note-granroomactivity important-note-center">その他、各季節ごとに様々なアクティビティがございます。</small>
+          <small class="important-note important-note-granroomactivity important-note-center u-show-pc">その他、各季節ごとに様々なアクティビティがございます。</small>
+
+          <small class="important-note important-note-granroomactivity important-note-center u-show-sp">※その他、シーズンにより開催する<br/>
+            アクティビティがございます。</small>
 
         </div>
       </section>
@@ -480,7 +550,10 @@
           <div class="media-grid">
 
             <div class="media-grid-item">
-              <div class="media-grid-img media-grid-img-rounded" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img1.jpg') -%>);">
+              <div class="media-grid-img media-grid-img-rounded u-show-pc" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img1.jpg') -%>);">
+              </div>
+
+              <div class="media-grid-img media-grid-img-rounded u-show-sp" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img1.jpg') -%>);">
               </div>
 
               <h3 class="media-grid-title subpage-title">

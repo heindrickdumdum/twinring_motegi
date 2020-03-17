@@ -116,9 +116,11 @@
 
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important
-      width: 227px !important;
+      width: 344px !important;
       // sass-lint:disable-block no-important
-      height: 41px !important;
+      height: 65px !important;
+      // sass-lint:disable-block no-important
+      margin-top: 106px !important;
       
     }
   }
@@ -129,9 +131,9 @@
 
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important
-      width: 106px !important;
+      width: 145px !important;
       // sass-lint:disable-block no-important
-      height: 18.5px !important;
+      height: 26px !important;
       
     }
   }
@@ -166,9 +168,9 @@
 
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important
-      width: 335px !important;
+      width: 338px !important;
       // sass-lint:disable-block no-important
-      height: 17.5px !important;
+      height: 63px !important;
     }
   }
 

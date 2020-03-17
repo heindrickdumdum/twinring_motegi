@@ -44,6 +44,13 @@
   padding-top: 21px;
   padding-bottom: 21px;
 
+  &:first-child {
+    .table-solid & {//hotel granroom
+      border-right: 0px;
+      border-left: 1px solid #d1c0a5;
+    }
+  }
+
   @include min-screen($breakpoint-mobile + 1) {
     width: 220px;
   }
@@ -80,6 +87,18 @@
   min-height: 32px;
   line-height: 2.15;
 
+  .table-solid & {//hotel granroom
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: 1px solid #d1c0a5;
+    vertical-align: middle;
+  }
+
+  .col-small {//hotel granroom
+    display: block;
+  }
+
   @include min-screen($breakpoint-mobile + 1) {
     padding: 17px 40px;
   }
@@ -95,6 +114,10 @@
     background-image: url(/assets/images/img-dash.png);
     background-repeat: repeat-x;
     opacity: 0.2;
+
+    .table-solid & {//hotel granroom
+      content: none;
+    }
   }
 
   .table-craft & {
@@ -133,9 +156,21 @@
 .table-row {
   width: 100%;
 
+  .table-solid & {//hotel granroom
+    border-top: 1px solid #d1c0a5;
+  }
+
+  &:last-child {
+    .table-solid & {//hotel granroom
+      border-bottom: 1px solid #d1c0a5;
+    }
+  }
+
   &:first-child {
+
     .table-head, .table-col {
       position: relative;
+
       &:after {
         position: absolute;
         content: '';
@@ -147,6 +182,10 @@
         background-image: url(/assets/images/img-dash.png);
         background-repeat: repeat-x;
         opacity: 0.2;
+
+        .table-solid & {//hotel granroom
+          content: none; 
+        }
       }
     }
   }

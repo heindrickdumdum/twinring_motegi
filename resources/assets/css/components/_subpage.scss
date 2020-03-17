@@ -5,6 +5,13 @@
   height: auto;
   margin-bottom: 50px;
 
+  &-hotel {//hotel granroom
+    &:after {
+      // sass-lint:disable-block no-important    
+      content: none !important;
+    }
+  }
+
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 120px;
   }
@@ -97,6 +104,10 @@
   margin: 0 auto 60px;
   padding: 0 20px;
   width: 100%;
+
+  .subpage-hotel & {
+    z-index: $z-min2;
+  }
 
   @include min-screen($breakpoint-mobile + 1) {
     // margin-bottom: 120px;
@@ -342,6 +353,10 @@
 
 .subpage-image-gallery {
   margin-bottom: 30px;
+
+  &-roomdetails {//hotel granroom
+    margin-bottom: 40px;
+  }
 }
 
 
@@ -800,3 +815,53 @@
     margin-bottom: 120px;
   }
 }
+
+//hotel granroom
+.subpage-section-amenity {
+  .hotel-subtext {
+    text-align: center;
+    font-size: 15px;
+    font-family: $font-hiragino-w3;
+    line-height: 2;    
+  }
+}
+
+.subpage-section-teatime {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 636px;
+    background-image: url('/assets/images/granroom/teatime-bg.png');
+    top: -33%;
+    z-index: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 636px;
+    background-image: url('/assets/images/granroom/teatime-bg.png');
+    bottom: -20%;
+    z-index: 0;
+  }
+}
+
+.subpage-section-granroomactivity {
+  background-image: url('/assets/images/granroom/activity-bg.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  padding-top: 105px;
+
+  .subpage-inner {
+    padding-bottom: 146px;
+  }
+
+  .subpage-desc {
+    text-align: center;
+    color: $color-white;
+  }
+}
+//hotel granroom end

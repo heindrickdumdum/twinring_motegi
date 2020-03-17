@@ -73,6 +73,14 @@
   letter-spacing: 0.1em;
   font-size: 36px;
 
+  .heading-main-subpage-granroomactivity-onecolor & {//hotel granroom
+    background: none !important;
+    color: $color-white;
+    -webkit-text-fill-color: $color-white;
+    -moz-text-fill-color: $color-white;
+    -ms-text-fill-color: $color-white;
+  }
+
   .is-ie & {
     background: none !important;
     color: $color-gossamer;
@@ -101,6 +109,31 @@
   display: inline-block;
   margin-top: 20px;
   height: 36px;
+
+  .heading-main-subpage-granroom & {//hotel granroom
+    width: 454px;
+    height: 82px;
+  }
+
+  .heading-main-subpage-amenity & {//hotel granroom
+    width: 674px;
+    height: 37px;
+  }
+
+  .heading-main-subpage-teatime & {//hotel granroom
+    width: 726px;
+    height: 37px;
+  }
+
+  .heading-main-subpage-granroomactivity & {//hotel granroom
+    width: 670px;
+    height: 35px;
+  }
+
+  .heading-main-subpage-other & {//hotel granroom
+    width: 303px;
+    height: 37px;
+  }
 
   // additional
   position: relative;
@@ -796,3 +829,20 @@
     height: auto;
   }
 }
+
+//hotel granroom
+.heading-main-subpage-granroom {
+  // sass-lint:disable-block no-important
+  margin-bottom: 30px !important;
+}
+
+.heading-main-subpage-amenity {
+  // sass-lint:disable-block no-important
+  margin-bottom: 28px !important;
+}
+
+.heading-main-subpage-granroomactivity {
+  // sass-lint:disable-block no-important
+  margin-bottom: 19px !important;
+}
+//hotel granroom end

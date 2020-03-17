@@ -200,6 +200,16 @@
     left: 15px;
   }
 
+  &.granroom-mv-heading {
+
+    .heading-subtext {
+      // sass-lint:disable-block no-important    
+      width: 352px !important;
+      // sass-lint:disable-block no-important    
+      height: 56px !important;
+    }
+  }
+
   &.hellowoods-mv-heading {
     bottom: 5px;
     width: 100%;
@@ -320,6 +330,16 @@
     height: 225px;
     right: -23px;
     bottom: -70px;
+  }
+
+  &.mv-granroom-logo {
+    background: url(#{$image-path}granroom/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 247px;
+    
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: -155px;
+    }
   }
 
   &.mv-hellowoods-logo {

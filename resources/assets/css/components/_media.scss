@@ -50,6 +50,64 @@
   }
 }
 
+//media-grid
+.media-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+  }
+
+  &-item {
+    width: 442px;
+    
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-img {
+    border: 1px solid #bbbbbb;
+
+    &-rounded {
+      max-width: 470px;
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 0px;
+    }
+  }
+
+  &-title {
+    margin-top: 27px;
+
+    span {
+      display: block;
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      min-height: 72px;
+    }
+  }
+
+  &-desc {
+    font-size: 15px;
+    line-height: 2;
+    text-align: left;  
+  }
+}
+//media-grid end
+
 .media-bg {
   position: relative;
   padding: 5px;
@@ -814,6 +872,10 @@
     &:last-child {
       margin-bottom: 0px;
     }
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+    }
   }
 
   &-thumb {
@@ -821,12 +883,22 @@
     height: 360px;
     background-size: cover;
     background-position: center;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+    }
   }
 
   &-text {
     width: calc( 100% - 511px );
     padding-left: 38px;
     padding-right: 38px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      padding: 0 28px 50px; 
+      margin-top: 50px;
+    }
 
     h3 {
       font-size: 24px;
@@ -837,60 +909,23 @@
       @include min-screen($breakpoint-mobile + 1) {
         white-space: nowrap;
       }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 18px;
+      }
     }
 
     p {
       font-size: 15px;
       line-height: 2;
-      text-align: left;      
+      text-align: left;   
+      
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+      }
     }
   }
 }
 
 //hotel-granroom end
 
-
-//media-grid
-.media-grid {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 64px;
-
-  &-item {
-    max-width: 442px;
-    width: 100%;
-  }
-
-  &-img {
-    border: 1px solid #bbbbbb;
-
-    &-rounded {
-      width: 470px;
-      height: 300px;
-      border-radius: 10px;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      border: 0px;
-    }
-  }
-
-  &-title {
-    margin-top: 27px;
-
-    span {
-      display: block;
-    }
-
-    @include min-screen($breakpoint-mobile + 1) {
-      min-height: 72px;
-    }
-  }
-
-  &-desc {
-    font-size: 15px;
-    line-height: 2;
-    text-align: left;  
-  }
-}
-//media-grid end

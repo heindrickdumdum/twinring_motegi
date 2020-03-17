@@ -44,24 +44,8 @@
   padding-top: 21px;
   padding-bottom: 21px;
 
-  &:first-child {
-    .table-solid & {//hotel granroom
-      border-right: 0px;
-      border-left: 1px solid #d1c0a5;
-    }
-  }
-
   @include min-screen($breakpoint-mobile + 1) {
     width: 220px;
-  }
-}
-
-.table-col-num {
-  display: inline-block;
-  margin-right: 20px;
-
-  @include max-screen($breakpoint-mobile) {
-    margin-right: 15px;
   }
 }
 
@@ -86,14 +70,6 @@
   vertical-align: top;
   min-height: 32px;
   line-height: 2.15;
-
-  .table-solid & {//hotel granroom
-    text-align: center;
-    padding-left: 0;
-    padding-right: 0;
-    border-right: 1px solid #d1c0a5;
-    vertical-align: middle;
-  }
 
   .col-small {//hotel granroom
     display: block;
@@ -143,28 +119,48 @@
   }
 }
 
-.table-dokidoki {
-  .table-head {
-    background: transparent;
+.table-solid {//hotel granroom
+  .table-row-solid {
+    > * {
+      &:after {
+        // sass-lint:disable-block no-important
+        content: none !important;
+      }
+    }
   }
 
-  .table-col {
-    width: calc(100% - 220px);
+  .table-row-last {
+    border-bottom: 1px solid #d1c0a5;
+  }
+
+  .table-head, .table-col {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: 1px solid #d1c0a5;
+    vertical-align: middle;
+    border-top: 1px solid #d1c0a5;
+  }
+
+  .table-head {
+    &:first-child {
+      border-right: 0px;
+      border-left: 1px solid #d1c0a5;
+    }
+  }
+}
+
+.table-col-num {
+  display: inline-block;
+  margin-right: 20px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-right: 15px;
   }
 }
 
 .table-row {
   width: 100%;
-
-  .table-solid & {//hotel granroom
-    border-top: 1px solid #d1c0a5;
-  }
-
-  &:last-child {
-    .table-solid & {//hotel granroom
-      border-bottom: 1px solid #d1c0a5;
-    }
-  }
 
   &:first-child {
 
@@ -182,10 +178,6 @@
         background-image: url(/assets/images/img-dash.png);
         background-repeat: repeat-x;
         opacity: 0.2;
-
-        .table-solid & {//hotel granroom
-          content: none; 
-        }
       }
     }
   }

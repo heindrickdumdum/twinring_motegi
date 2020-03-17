@@ -1,6 +1,10 @@
 .subpage-section-roomdetails { //hotel granroom
   .subpage-desc {
     margin-bottom: 99px;
+    
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 49.5px;
+    }
   }
 
   .subpage-title {

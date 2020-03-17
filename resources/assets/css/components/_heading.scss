@@ -113,26 +113,75 @@
   .heading-main-subpage-granroom & {//hotel granroom
     width: 454px;
     height: 82px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 227px !important;
+      // sass-lint:disable-block no-important
+      height: 41px !important;
+      
+    }
+  }
+
+  .heading-main-subpage-usagefee & {//hotel granroom
+    width: 212px;
+    height: 37px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 106px !important;
+      // sass-lint:disable-block no-important
+      height: 18.5px !important;
+      
+    }
   }
 
   .heading-main-subpage-amenity & {//hotel granroom
     width: 674px;
     height: 37px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 337px !important;
+      // sass-lint:disable-block no-important
+      height: 18.5px !important;
+    }
   }
 
   .heading-main-subpage-teatime & {//hotel granroom
     width: 726px;
     height: 37px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 363px !important;
+      // sass-lint:disable-block no-important
+      height: 18.5px !important;
+    }
   }
 
   .heading-main-subpage-granroomactivity & {//hotel granroom
     width: 670px;
     height: 35px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 335px !important;
+      // sass-lint:disable-block no-important
+      height: 17.5px !important;
+    }
   }
 
   .heading-main-subpage-other & {//hotel granroom
     width: 303px;
     height: 37px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 151px !important;
+      // sass-lint:disable-block no-important
+      height: 18.5px !important;
+    }
   }
 
   // additional
@@ -844,5 +893,10 @@
 .heading-main-subpage-granroomactivity {
   // sass-lint:disable-block no-important
   margin-bottom: 19px !important;
+}
+
+.heading-main-subpage-other {
+  // sass-lint:disable-block no-important
+  margin-bottom: -11px !important;
 }
 //hotel granroom end

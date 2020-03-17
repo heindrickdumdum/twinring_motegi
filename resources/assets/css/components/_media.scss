@@ -75,6 +75,16 @@
 
   &-img {
     border: 1px solid #bbbbbb;
+    width: 442px;
+    min-height: 273px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      min-height: 273px;
+    }
 
     &-rounded {
       max-width: 470px;

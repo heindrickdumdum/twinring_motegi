@@ -66,6 +66,11 @@ mix
     `${distRelativePath}/assets/js`,
   )
 
+  .js(
+    `${srcRelativePath}/assets/js/granroom.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
   .eslint()
   .sass(
     `${srcRelativePath}/assets/css/header.scss`,

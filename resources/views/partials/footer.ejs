@@ -137,12 +137,16 @@
     <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'labo' || pageId == 'granroom') { %>
+  <% if(pageId == 'labo') { %>
     <script src="<%= mix('/assets/js/labo.js') %>" async></script>
   <% } %>
 
   <% if(pageId == 'tsubasa') { %>
     <script src="<%= mix('/assets/js/collapse-button.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'granroom') { %>
+    <script src="<%= mix('/assets/js/granroom.js') %>" async></script>
   <% } %>
 
 <script type="text/javascript">

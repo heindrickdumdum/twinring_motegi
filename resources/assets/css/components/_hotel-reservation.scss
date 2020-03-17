@@ -1,4 +1,14 @@
 .hotel-reservation {
+  .button {
+    border: 1px solid #333;
+    width: auto;
+    max-width: 400px;
+
+    &::before {
+      display: none;
+    }
+  }
+
   .hotel-reservation-wrap {
     padding: 14%;
 
@@ -13,13 +23,18 @@
       background-color: $color-white;
     }
   }
+  .hotel-reservation-qna-wrap {
+    background-color: #f2f2f2;
 
-  .hotel-reservation-qna {
-    display: flex;
-    justify-content: center;
+    .hotel-reservation-ctas {
+      display: flex;
+      justify-content: center;
+  
+      .l-button {
+        width: 100%;
+        margin-bottom: 50px;
 
-    .l-button {
-      width: 100%;
+      }
     }
   }
 }

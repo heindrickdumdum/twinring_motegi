@@ -1,0 +1,86 @@
+// .nozominoyu {}
+
+.nozominoyu-paragraph {
+  font-size: 15px;
+  line-height: 2;
+  font-family: $font-hiragino;
+  letter-spacing: 0.229em;
+
+  &.nozominoyu-paragraph-note {
+    letter-spacing: 0.245em;  
+  }
+
+  &.nozominoyu-subheading {
+  	margin-top: 18px;
+    letter-spacing: 0.28em;
+  }
+}
+
+.nozominoyu-race {
+	margin-top: 37px;
+}
+
+.nozominoyu-race-inner {
+	text-align: center;
+	background-color: #f5f6fa;
+	padding: 59px;
+}
+
+.nozominoyu-heading {
+	img {
+		width: 61%;
+	}
+
+	&.nozominoyu-time-table-heading {
+		img {
+			width: 10%;
+		}
+	}
+}
+
+.nozominoyu-article {
+	margin: 32px -15px 0;
+}
+
+.nozominoyu-article-list-item {
+	padding: 0 15px;
+}
+
+.nozominoyu-article-link {
+	color: $base-font-color;
+}
+
+.nozominoyu-article-thumbnail {
+	padding-bottom: 63%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.nozominoyu-article-title {
+	margin-top: 13px;
+	font-size: 15px;
+  line-height: 2;
+  font-family: $font-hiragino;
+  letter-spacing: 0.229em;
+}
+
+.nozominoyu-time-table {
+	display: table;
+  width: 100%;
+  margin-top: 10px;
+
+  th,td {
+		border: 1px solid $color-gray;
+		text-align: center;
+	}
+
+	th {
+		&:first-child {
+			width: 21%;
+	    background-color: #f5f6fa;
+	    padding: 30px 0;
+		}
+	}
+
+}

@@ -62,6 +62,41 @@
       }
     }
   }
+
+  .heading-subtext {
+    display: inline-block;
+    margin-top: 20px;
+    height: 36px;
+  
+    // additional
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  
+    @include max-screen($breakpoint-mobile) {
+      height: 22px;
+      display: block;
+    }
+  
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.heading-nozominoyu {
+    svg {
+      width: 713px;
+      height: 83px;
+    }
+  }
+
+  &.heading-nozominoyu-summary {
+    svg {
+      width: 200px;
+      height: 37px;
+    }
+  }
 }
 
 .heading-text {
@@ -97,26 +132,7 @@
   }
 }
 
-.heading-subtext {
-  display: inline-block;
-  margin-top: 20px;
-  height: 36px;
 
-  // additional
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-
-  @include max-screen($breakpoint-mobile) {
-    height: 22px;
-    display: block;
-  }
-
-  svg {
-    width: 100%;
-    height: 100%;
-  }
-}
 
 //modifier for SP walk program and labo
 .subpage-walk,

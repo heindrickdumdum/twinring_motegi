@@ -49,15 +49,6 @@
   }
 }
 
-.table-col-num {
-  display: inline-block;
-  margin-right: 20px;
-
-  @include max-screen($breakpoint-mobile) {
-    margin-right: 15px;
-  }
-}
-
 .table-col {
   width: calc(100% - 93px);
   letter-spacing: 0.1em;
@@ -80,6 +71,10 @@
   min-height: 32px;
   line-height: 2.15;
 
+  .col-small {//hotel granroom
+    display: block;
+  }
+
   @include min-screen($breakpoint-mobile + 1) {
     padding: 17px 40px;
   }
@@ -95,6 +90,10 @@
     background-image: url(/assets/images/img-dash.png);
     background-repeat: repeat-x;
     opacity: 0.2;
+
+    .table-solid & {//hotel granroom
+      content: none;
+    }
   }
 
   .table-craft & {
@@ -120,13 +119,56 @@
   }
 }
 
-.table-dokidoki {
-  .table-head {
-    background: transparent;
+.table-solid {//hotel granroom
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;  
+    margin-bottom: 44px;
+
+    &-last {
+      margin-bottom: 0px;
+    }
   }
 
-  .table-col {
-    width: calc(100% - 220px);
+  .table-row-solid {
+    > * {
+      &:after {
+        // sass-lint:disable-block no-important
+        content: none !important;
+      }
+    }
+  }
+
+  .table-row-last {
+    border-bottom: 1px solid #d1c0a5;
+  }
+
+  .table-head, .table-col {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: 1px solid #d1c0a5;
+    vertical-align: middle;
+    border-top: 1px solid #d1c0a5;
+  }
+
+  .table-head {
+    @include max-screen($breakpoint-mobile) {
+      width: 110px;
+    }
+
+    &:first-child {
+      border-right: 0px;
+      border-left: 1px solid #d1c0a5;
+    }
+  }
+}
+
+.table-col-num {
+  display: inline-block;
+  margin-right: 20px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-right: 15px;
   }
 }
 
@@ -134,8 +176,10 @@
   width: 100%;
 
   &:first-child {
+
     .table-head, .table-col {
       position: relative;
+
       &:after {
         position: absolute;
         content: '';

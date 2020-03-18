@@ -13,6 +13,7 @@
 
 @import "components/attraction";
 @import "components/fonts";
+@import "components/lightbox";
 
 @import "components/wrap";
 @import "components/preload";
@@ -77,6 +78,9 @@
 @import "components/breadcrumbs";
 @import "components/custom-swiper";
 @import "components/collapse";
+
+@import "components/roomdetails";
+@import "components/important-note";
 
 @import 'layout/grid';
 @import "layout/l-container";

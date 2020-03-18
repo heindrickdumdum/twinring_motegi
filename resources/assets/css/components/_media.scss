@@ -50,10 +50,113 @@
   }
 }
 
+//media-grid
+.media-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .subpage-section-otherroom & {//hotel granroom
+      margin-top: 39px;
+    }
+  }
+
+  &-item {
+    width: 442px;
+    
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      margin-bottom: 59px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-img {
+    border: 1px solid #bbbbbb;
+    width: 442px;
+    min-height: 273px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      min-height: 210px;
+    }
+
+    &-rounded {
+      max-width: 470px;
+      width: 100%;
+      min-height: 300px;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 0px;
+
+      @include max-screen($breakpoint-mobile) {
+        min-height: 224px;
+
+        .subpage-section-otherroom & {//hotel granroom
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  &-title {
+    margin-top: 27px;
+
+    span {
+      display: block;
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      min-height: 72px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      line-height: 1.846;     
+
+      .subpage-section-otherroom & {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &-desc {
+    font-size: 15px;
+    line-height: 2;
+    text-align: left;  
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.75;      
+    }
+  }
+}
+//media-grid end
+
 .media-bg {
   position: relative;
   padding: 5px;
   // margin-left: 68px;
+
+  &.media-nobg { //hotel granroom
+    &:after {
+      background-image: none;
+      content: none;
+    }
+  }
 
   &:after {
     position: absolute;
@@ -789,3 +892,101 @@
   }
 }
 //modifier forest labo end
+
+//hotel-granroom
+.media-list {
+  @include max-screen($breakpoint-mobile) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+    background-color: $color-white;
+    align-items: center;
+
+    &-teatime {
+      background-color: transparent;
+      align-items: start;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+      margin-bottom: 0;
+
+      .subpage-section-granroomactivity & {//hotel granroom
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  &-thumb {
+    width: 511px;
+    min-height: 360px;
+    background-size: cover;
+    background-position: center;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      min-height: 206px;
+
+      .subpage-section-granroomactivity & {//hotel granroom
+        min-height: 235px;
+      }
+    }
+  }
+
+  &-text {
+    width: calc( 100% - 511px );
+    padding-left: 38px;
+    padding-right: 38px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      padding: 0 28px 48px; 
+      margin-top: 25px;
+
+      .subpage-section-teatime & {//hotel granroom
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      font-family: $font-hiragino;
+      line-height: 1.417;
+      margin-bottom: 34px;
+      
+      @include min-screen($breakpoint-mobile + 1) {
+        white-space: nowrap;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 13px;
+        margin-bottom: 17px;
+        line-height: 1.615;        
+      }
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 2;
+      text-align: left;   
+      
+      @include max-screen($breakpoint-mobile) {
+        font-size: 13px;
+        line-height: 1.75;        
+      }
+    }
+  }
+}
+
+//hotel-granroom end
+

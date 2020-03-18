@@ -1,0 +1,36 @@
+.important-note {
+  font-size: 13px;
+  font-family: $font-hiragino;
+  line-height: 2;
+  display: block;
+  margin-top: 26px;
+  letter-spacing: 0.03em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 11px;
+    margin-top: 18px;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-granroomactivity {
+    color: $color-white;
+    font-size: 15px;
+    line-height: 2;   
+    
+    @include max-screen($breakpoint-mobile) {
+      line-height: 1.5;
+      font-size: 12px;
+    }
+  }
+}

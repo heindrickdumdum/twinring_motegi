@@ -25,7 +25,8 @@
   'craft',
   'labo',
   'musasabi',
-  'tsubasa'
+  'tsubasa',
+  'granroom'
   ]
 %>
   
@@ -142,6 +143,10 @@
 
   <% if(pageId == 'tsubasa') { %>
     <script src="<%= mix('/assets/js/collapse-button.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'granroom') { %>
+    <script src="<%= mix('/assets/js/granroom.js') %>" async></script>
   <% } %>
 
 <script type="text/javascript">

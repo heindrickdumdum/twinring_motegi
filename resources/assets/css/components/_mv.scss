@@ -142,6 +142,11 @@
 
   @include max-screen($breakpoint-mobile) {
     display: none;
+
+    .mv-subpage-hotel & {//hotel granroom
+      display: flex;
+      width: 34px;
+    }
   }
 }
 
@@ -165,6 +170,14 @@
   background: url(#{$image-path}mv-button-bg.jpg) repeat left top;
   background-size: cover;
   border-radius: 5px 0 0 5px;
+
+  @include max-screen($breakpoint-mobile) {
+    .mv-subpage-hotel & {//hotel granroom
+      font-size: 12px;
+      min-height: 116px;
+      padding-left: 10px;
+    }
+  }
 
   span {
     display: inline-block;
@@ -198,6 +211,25 @@
 
   @include max-screen($breakpoint-mobile) {
     left: 15px;
+  }
+
+  &.granroom-mv-heading {
+
+    .heading-subtext {
+      // sass-lint:disable-block no-important    
+      width: 352px !important;
+      // sass-lint:disable-block no-important    
+      height: 56px !important;
+      fill: $color-white;
+
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important    
+        width: 176px !important;
+        // sass-lint:disable-block no-important    
+        height: 28px !important;
+        
+      }
+    }
   }
 
   &.hellowoods-mv-heading {
@@ -329,6 +361,16 @@
     height: 225px;
     right: -23px;
     bottom: -70px;
+  }
+
+  &.mv-granroom-logo {
+    background: url(#{$image-path}granroom/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 247px;
+    
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: -155px;
+    }
   }
 
   &.mv-hellowoods-logo {

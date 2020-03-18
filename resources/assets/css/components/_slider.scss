@@ -113,6 +113,15 @@
   }
 }
 
+.slider-gallery-nozominoyu {
+  // sass-lint:disable-block no-important
+  margin-bottom: 41px !important;
+
+  .slider-gallery-img {
+    padding-bottom: 46.4444%;
+  }
+} 
+
 .slider-mobipark-attraction {
   .slider-item {
     transition-property: opacity;

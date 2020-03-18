@@ -1,0 +1,48 @@
+.reminder {
+  width: 886px;
+  background-color: #f5f6fa;
+  padding: 59px 97px 51px;
+  margin: auto;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.reminder-frame {
+  position: absolute;
+  top: 2px;
+  left: 77px;
+
+  @include max-screen($breakpoint-mobile) {
+    left: 12px;
+    width: 94%;
+    height: 100%;
+  }
+}
+
+.reminder-heading {
+ font-size: 13px;
+  letter-spacing: 0.1em;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 24px;
+  }
+
+  span {
+    background: linear-gradient(to right, #027cc3 0%, #09a046 100%);
+  	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+}
+
+.reminder-description {
+  font-size: 13px;
+  color: #333333;
+  line-height: 2.308;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+  padding-left: 3px;
+}

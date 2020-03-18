@@ -118,6 +118,27 @@
   }
 }
 
+.column-link-reserve {
+  margin-top: 90px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 35px;
+  }
+
+  .link-container {
+    max-width: 579px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    left: 4px;
+  }
+
+  & img {
+    width: 170px;
+    height: 171px;
+  }
+}
+
 //modifier anchor
 .subpage-inner-anchor {
   @include min-screen($breakpoint-mobile + 1) {

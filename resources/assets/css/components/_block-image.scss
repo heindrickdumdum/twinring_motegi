@@ -101,9 +101,16 @@
   background-size: cover;
   background-position: center;
 
-  &.hoteltwinring {
+  &.hoteltwinring-lounge {
     height: auto;
     padding: 10% 0;
+    background-image: url(/assets/images/hoteltwinring/lounge-bg.jpg);
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 100px;
+      padding-bottom: 105px;
+      background-image: url(/assets/images/hoteltwinring/lounge-bg-sp.jpg);
+    }
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -126,6 +133,24 @@
     height: auto;
     text-align: center;
     padding: 50px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding: 20px;
+      padding-top: 13px;  
+
+      .heading-text {
+        font-size: 26px;
+
+        &.heading-text-default {
+          font-size: 14px;
+          letter-spacing: 6px;
+          font-weight: bold;
+        }
+      }
+      .block-image-subtext {
+        font-size: 13px;
+      }
+    }
   }
 
   @include max-screen($breakpoint-mobile) {

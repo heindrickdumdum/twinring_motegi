@@ -42,6 +42,10 @@
     .banner-image-subtext {
       color: $color-white;
     }
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url(../images/hoteltwinring/banner-image-1-sp.jpg);
+    }
   }
 }
 
@@ -53,6 +57,10 @@
       background: none;
       -webkit-text-fill-color: $color-white;
       line-height: 3;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url(../images/hoteltwinring/banner-image-2-sp.jpg);
     }
   }
 }

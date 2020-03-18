@@ -28,10 +28,27 @@
 
       .heading-text {
         background: none;
-        -webkit-text-fill-color: black;
+        -webkit-text-fill-color: $color-black;
         font-size: 50px;
         line-height: 1.2;
+
+        @include max-screen($breakpoint-mobile) {
+          font-size: 30px;
+        }
       }
+
+      .ribbon-date {
+        @include max-screen($breakpoint-mobile) {
+          font-size: 9px;
+        }
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      height: 80px;
+      width: 80px;
+      top: -50px;
+      left: -15px;
     }
   }
 
@@ -41,6 +58,12 @@
 
   &.hoteltwinring {
     padding-top: 30px;
+
+    .adventure-sub-heading {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: initial;
+    }
   }
 
   @include max-screen ($breakpoint-mobile) {

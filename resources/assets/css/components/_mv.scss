@@ -218,6 +218,7 @@
       max-width: 385px;
       height: 90px;
       margin-top: 0;
+      fill: $color-white;
 
       @include max-screen ($breakpoint-mobile) {
         height: 60px;
@@ -247,6 +248,14 @@
 
       .heading {
         margin-bottom: 12px;
+      }
+    }
+
+    &.hoteltwinring {
+      @include max-screen ($breakpoint-mobile) {
+        .heading-subtext {
+          width: 100%;
+        }
       }
     }
   }

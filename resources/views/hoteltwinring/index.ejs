@@ -8,7 +8,16 @@
 
 <div class="lig-content">
   <div class="subpage hellowoods-wrapper">
-    <div class="mv mv-hellowoods">
+    <div class="mv mv-hellowoods mv-subpage-hotel">
+      <div class="mv-buttons">
+        <ul class="mv-buttons-list">
+          <li class="mv-buttons-item">
+            <a class="mv-buttons-link" href="/fee_m/">
+              <span>ご予約</span>
+            </a>
+          </li>
+        </ul>
+      </div>
       <ul class="mv-list">
         <li class="mv-item">
           <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hoteltwinring/mv-img.jpg') %>);"></div>
@@ -17,12 +26,13 @@
       </ul>
 
       <div class="l-container mv-container">
-        <h2 class="mv-heading hellowoods-mv-heading">
+        <h2 class="mv-heading hellowoods-mv-heading hoteltwinring">
           <%- include('/partials/heading', {
             modifier: 'heading-hellowoods',
+            heading_level: 1,
             text: 'Hotel Twinring',
-            alt: '',
-            subtextvg: 'hellowoods-main-title',
+            alt: 'ホテルツインリンク',
+            subtextvg: 'hoteltwinring-top-title',
             altSubtext: ''
           }) %>
         </h2>
@@ -104,7 +114,7 @@
       </div>
 
 
-      <div class="l-section">
+      <div class="">
         <section class="adventure">
           <div class="l-section-title">
             <%- include('/partials/heading', {
@@ -156,7 +166,7 @@
           style="background-image: url(<%= mix('/assets/images/hoteltwinring/facility-bg-1.jpg') %>);">
         </div>
 
-        <div class="adventure-bg adventure-bg-racing-kart u-show-sp"
+        <div class="adventure-bg adventure-bg-racing-kart u-show-sp hoteltwinring"
           style="background-image: url(<%= mix('/assets/images/hoteltwinring/facility-bg-1-sp.jpg') %>);">
         </div>
 
@@ -182,10 +192,10 @@
       </section>
 
       <section class="l-section banner-info">
-        <div class="block-image-inner hoteltwinring" style="background-image: url(/assets/images/hoteltwinring/lounge-bg.jpg);">
-          <div class="block-image-text-wrap hoteltwinring">
+        <div class="block-image-inner hoteltwinring-lounge">
+          <div class="block-image-text-wrap hoteltwinring l-container-m">
             <p class="block-image-text block-image-text-hellowoods">
-              <span class="heading-text">Lobby Lounge</span>
+              <span class="heading-text">Lobby lounge</span>
               <span class="heading-text heading-text-default">ロビーラウンジ</span>
               <span class="block-image-subtext">大人はくつろぎ、子どもは楽しむ。<br>
                 森で過ごすひとときをイメージしたロビーラウンジは、<br>
@@ -227,7 +237,13 @@
           <a href="/hellowoods/blog/">
             <div class="banner-image-wrap">
                 <p class="banner-image-text">
-                  <span class="heading-text">宿泊者限定アクティビティ</span>
+                  <%- include('/partials/heading', {
+                    modifier: 'fill-white svg-block',
+                    text: '',
+                    alt: '',
+                    altSubtext: '',
+                    subtextvg: 'hoteltwinring-big-banner-title'
+                  }) %>
                   <span class="banner-image-subtext">星空観望など宿泊者限定イベントをご用意しております </span>
                 </p>
             </div>
@@ -240,52 +256,21 @@
           <a href="/hellowoods/blog/">
             <div class="banner-image-wrap">
                 <p class="banner-image-text">
-                  <span class="heading-text">団体プランのご紹介</span>
+                  <%- include('/partials/heading', {
+                    modifier: 'fill-white svg-block',
+                    text: '',
+                    alt: '',
+                    altSubtext: '',
+                    subtextvg: 'hoteltwinring-big-banner-2-title'
+                  }) %>
                 </p>
             </div>
           </a>
         </div>
       </div>
 
-      <div class="l-section hotel-reservation">
-        <div class="hotel-reservation-wrap" style="background-image: url(/assets/images/hoteltwinring/reservation-bg.jpg);">
-          <div class="l-section-title">
-            <%- include('/partials/heading', {
-              modifier: 'heading-reservation',
-              text: 'Reservation',
-              alt: '',
-              altSubtext: '',
-              subtextvg: 'reservation-white',
-              altSubtextvg: 'Reservation'
-            }) %>
-          </div>
-          <div class="l-button">
-            <%- include('/partials/button', {
-              modifier: 'reserve-button',
-              text: 'ホテルツインリンクもてぎのご予約はこちら',
-              link: '/hellowoods/concept/'
-            }) %>
-          </div>
-        </div>
-        <div class="hotel-reservation-qna-wrap">
-          <div class="l-container hotel-reservation-ctas">
-            <div class="l-button">
-              <%- include('/partials/button', {
-                modifier: 'local',
-                text: 'よくある質問',
-                link: '/hellowoods/concept/'
-              }) %>
-            </div>
-            <div class="l-button">
-              <%- include('/partials/button', {
-                modifier: 'local',
-                text: 'お問い合わせ',
-                link: '/hellowoods/concept/'
-              }) %>
-            </div>
-          </div>
-        </div>
-      </div>
+      <%- include('/partials/hotel-reservation') -%>
+
 
     </main>
   </div>

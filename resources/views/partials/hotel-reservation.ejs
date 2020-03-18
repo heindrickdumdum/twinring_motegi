@@ -1,0 +1,46 @@
+<div class="l-section hotel-reservation">
+  <div class="hotel-reservation-wrap">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-reservation',
+        text: 'Reservation',
+        alt: '',
+        altSubtext: '',
+        subtextvg: 'reservation-white',
+        altSubtextvg: 'Reservation'
+      }) %>
+    </div>
+    <div class="l-button u-show-pc">
+      <%- include('/partials/button', {
+        modifier: 'reserve-button',
+        text: 'ホテルツインリンクもてぎのご予約はこちら',
+        link: '/hellowoods/concept/'
+      }) %>
+    </div>
+    <div class="l-button u-show-sp">
+      <%- include('/partials/button', {
+        modifier: 'reserve-button',
+        text: 'ご予約はこちら',
+        link: '/hellowoods/concept/'
+      }) %>
+    </div>
+  </div>
+  <div class="hotel-reservation-qna-wrap">
+    <div class="l-container hotel-reservation-ctas">
+      <div class="l-button">
+        <%- include('/partials/button', {
+          modifier: 'local',
+          text: 'よくある質問',
+          link: '/hellowoods/concept/'
+        }) %>
+      </div>
+      <div class="l-button">
+        <%- include('/partials/button', {
+          modifier: 'local',
+          text: 'お問い合わせ',
+          link: '/hellowoods/concept/'
+        }) %>
+      </div>
+    </div>
+  </div>
+</div>

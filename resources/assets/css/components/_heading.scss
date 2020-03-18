@@ -229,6 +229,35 @@
   }
 }
 
+
+.heading-reservation {
+
+  .heading {
+    position: relative;
+    left: -6px;
+  }
+
+  .heading-text {
+    @include min-screen($breakpoint-mobile + 1) {
+      letter-spacing: 0.09em;
+    }
+  }
+
+  .heading-subtext {
+    width: 695px;
+    height: 42px;
+    margin-top: 11px;
+    position: relative;
+    left: 13px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      left: 50%;
+      transform: translateX(-48%);
+    }
+  }
+}
+
 //modifier for SP
 .page-mobipark {
   .heading-subtext {
@@ -794,33 +823,5 @@
 .heading-auto-height {
   p.heading-subtext {
     height: auto;
-  }
-}
-
-.heading-reservation {
-
-  .heading {
-    position: relative;
-    left: -6px;
-  }
-
-  .heading-text {
-    @include min-screen($breakpoint-mobile + 1) {
-      letter-spacing: 0.09em;
-    }
-  }
-
-  .heading-subtext {
-    width: 695px;
-    height: 42px;
-    margin-top: 11px;
-    position: relative;
-    left: 13px;
-
-    @include max-screen($breakpoint-mobile) {
-      width: 100%;
-      left: 50%;
-      transform: translateX(-48%);
-    }
   }
 }

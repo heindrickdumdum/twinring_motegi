@@ -131,11 +131,20 @@
     margin: auto;
     position: relative;
     left: 4px;
-  }
 
-  & img {
-    width: 170px;
-    height: 171px;
+   .link-item {
+     a {
+      img {
+        width: 170px;
+        height: 171px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 112px;
+          height: 111.5px;
+        }
+      }
+     }
+   }
   }
 }
 

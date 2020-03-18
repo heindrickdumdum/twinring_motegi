@@ -28,12 +28,12 @@
         letter-spacing: 0.1em;
       }
     }
+  }
 
-    &.heading-reservation {
-      .heading-text {
-        @include min-screen($breakpoint-mobile + 1) {
-          letter-spacing: 0.09em;
-        }
+  &.heading-reservation {
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: 0.09em;
       }
     }
   }

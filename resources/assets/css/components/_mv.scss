@@ -143,7 +143,7 @@
   @include max-screen($breakpoint-mobile) {
     display: none;
 
-    .mv-subpage-granroom & {//hotel granroom
+    .mv-subpage-hotel & {//hotel granroom
       display: flex;
       width: 34px;
     }
@@ -172,9 +172,10 @@
   border-radius: 5px 0 0 5px;
 
   @include max-screen($breakpoint-mobile) {
-    .mv-subpage-granroom & {//hotel granroom
+    .mv-subpage-hotel & {//hotel granroom
       font-size: 12px;
       min-height: 116px;
+      padding-left: 10px;
     }
   }
 

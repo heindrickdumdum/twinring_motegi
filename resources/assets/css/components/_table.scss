@@ -122,6 +122,11 @@
 .table-solid {//hotel granroom
   @include max-screen($breakpoint-mobile) {
     width: 100%;  
+    margin-bottom: 44px;
+
+    &-last {
+      margin-bottom: 0px;
+    }
   }
 
   .table-row-solid {
@@ -147,6 +152,10 @@
   }
 
   .table-head {
+    @include max-screen($breakpoint-mobile) {
+      width: 110px;
+    }
+
     &:first-child {
       border-right: 0px;
       border-left: 1px solid #d1c0a5;

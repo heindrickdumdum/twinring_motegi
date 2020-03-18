@@ -58,6 +58,13 @@
 
   @include max-screen($breakpoint-mobile) {
     display: block;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .subpage-section-otherroom & {//hotel granroom
+      margin-top: 39px;
+    }
   }
 
   &-item {
@@ -65,7 +72,7 @@
     
     @include max-screen($breakpoint-mobile) {
       width: 100%;
-      margin-bottom: 35px;
+      margin-bottom: 59px;
 
       &:last-child {
         margin-bottom: 0;
@@ -83,7 +90,7 @@
 
     @include max-screen($breakpoint-mobile) {
       width: 100%;
-      min-height: 273px;
+      min-height: 210px;
     }
 
     &-rounded {
@@ -98,6 +105,10 @@
 
       @include max-screen($breakpoint-mobile) {
         min-height: 224px;
+
+        .subpage-section-otherroom & {//hotel granroom
+          border-radius: 5px;
+        }
       }
     }
   }
@@ -114,6 +125,8 @@
     }
 
     @include max-screen($breakpoint-mobile) {
+      line-height: 1.846;     
+
       .subpage-section-otherroom & {
         margin-top: 12px;
       }
@@ -124,6 +137,11 @@
     font-size: 15px;
     line-height: 2;
     text-align: left;  
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.75;      
+    }
   }
 }
 //media-grid end
@@ -900,7 +918,11 @@
 
     @include max-screen($breakpoint-mobile) {
       display: block;
-      margin-bottom: 29px;
+      margin-bottom: 0;
+
+      .subpage-section-granroomactivity & {//hotel granroom
+        margin-bottom: 26px;
+      }
     }
   }
 
@@ -912,7 +934,11 @@
 
     @include max-screen($breakpoint-mobile) {
       width: 100%;
-      min-height: 231px;
+      min-height: 206px;
+
+      .subpage-section-granroomactivity & {//hotel granroom
+        min-height: 235px;
+      }
     }
   }
 
@@ -923,7 +949,7 @@
 
     @include max-screen($breakpoint-mobile) {
       width: 100%;
-      padding: 0 28px 50px; 
+      padding: 0 28px 48px; 
       margin-top: 25px;
 
       .subpage-section-teatime & {//hotel granroom
@@ -945,6 +971,7 @@
       @include max-screen($breakpoint-mobile) {
         font-size: 13px;
         margin-bottom: 17px;
+        line-height: 1.615;        
       }
     }
 
@@ -955,6 +982,7 @@
       
       @include max-screen($breakpoint-mobile) {
         font-size: 13px;
+        line-height: 1.75;        
       }
     }
   }

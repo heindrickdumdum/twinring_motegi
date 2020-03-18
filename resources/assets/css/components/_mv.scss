@@ -142,6 +142,11 @@
 
   @include max-screen($breakpoint-mobile) {
     display: none;
+
+    .mv-subpage-granroom & {//hotel granroom
+      display: flex;
+      width: 34px;
+    }
   }
 }
 
@@ -165,6 +170,13 @@
   background: url(#{$image-path}mv-button-bg.jpg) repeat left top;
   background-size: cover;
   border-radius: 5px 0 0 5px;
+
+  @include max-screen($breakpoint-mobile) {
+    .mv-subpage-granroom & {//hotel granroom
+      font-size: 12px;
+      min-height: 116px;
+    }
+  }
 
   span {
     display: inline-block;
@@ -207,6 +219,7 @@
       width: 352px !important;
       // sass-lint:disable-block no-important    
       height: 56px !important;
+      fill: $color-white;
 
       @include max-screen($breakpoint-mobile) {
         // sass-lint:disable-block no-important    

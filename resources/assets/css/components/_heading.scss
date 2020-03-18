@@ -144,9 +144,9 @@
 
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important
-      width: 337px !important;
+      width: 270px !important;
       // sass-lint:disable-block no-important
-      height: 18.5px !important;
+      height: 68px !important;
     }
   }
 
@@ -154,11 +154,15 @@
     width: 726px;
     height: 37px;
 
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 40px;
+    }
+
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important
-      width: 363px !important;
+      width: 295px !important;
       // sass-lint:disable-block no-important
-      height: 18.5px !important;
+      height: 67px !important;
     }
   }
 
@@ -180,9 +184,10 @@
 
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important
-      width: 151px !important;
+      width: 205px !important;
       // sass-lint:disable-block no-important
-      height: 18.5px !important;
+      height: 25px !important;
+      margin-top: 10px;
     }
   }
 
@@ -199,6 +204,10 @@
   svg {
     width: 100%;
     height: 100%;
+
+    .subpage-section-granroomactivity & {//hotel granroom
+      fill: $color-white;
+    }
   }
 }
 

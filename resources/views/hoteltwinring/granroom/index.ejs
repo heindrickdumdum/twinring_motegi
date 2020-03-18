@@ -32,7 +32,7 @@
             heading_level: 1,
             text: 'Gran Room',
             alt: '',
-            subtextvg: 'granroom-main-title',
+            subtextvg: 'granroom-top-title',
             altSubtext: ''
           }) %>
         </h1>
@@ -49,7 +49,7 @@
       <div class="l-section-title u-show-pc">
         <%- include('/partials/heading', {
           modifier: 'heading-main heading-main-subpage heading-main-subpage-granroom',
-          subtextvg: 'granroom-maintitle',
+          subtextvg: 'granroom-main-title',
           altSubtextvg: '木の温もりを感じる ３室限定の特別なお部屋'
         }); -%>
       </div>
@@ -179,23 +179,25 @@
             </strong>
           </p>
 
-          <table class="table table-solid u-show-sp">
-            <tbody>
-              <tr class="table-row table-row-solid">
-                <th class="table-head">平日</th>
-                <td class="table-col">34,600円～</td>
-              </tr>
-              <tr class="table-row">
-                <th class="table-head">休前日</th>
-                <td class="table-col">52,900円～</td>
-              </tr>
-              <tr class="table-row table-row-last">
-                <th class="table-head">GW・夏休み <br/>
-                  など　</th>
-                <td class="table-col">62,100円〜</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="u-show-sp">
+            <table class="table table-solid">
+              <tbody>
+                <tr class="table-row table-row-solid">
+                  <th class="table-head">平日</th>
+                  <td class="table-col">34,600円～</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">休前日</th>
+                  <td class="table-col">52,900円～</td>
+                </tr>
+                <tr class="table-row table-row-last">
+                  <th class="table-head">GW・夏休み <br/>
+                    など　</th>
+                  <td class="table-col">62,100円〜</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <p class="u-show-sp">
             <strong>
@@ -203,63 +205,67 @@
             </strong>
           </p>
 
-          <table class="table table-solid u-show-sp">
-            <tbody>
-              <tr class="table-row table-row-solid">
-                <th class="table-head">平日</th>
-                <td class="table-col">48,200円</td>
-              </tr>
-              <tr class="table-row">
-                <th class="table-head">休前日</th>
-                <td class="table-col">66,500円～</td>
-              </tr>
-              <tr class="table-row table-row-last">
-                <th class="table-head">GW・夏休み <br/>
-                  など　</th>
-                <td class="table-col">75,700円〜</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="u-show-sp">
+            <table class="table table-solid table-solid-last">
+              <tbody>
+                <tr class="table-row table-row-solid">
+                  <th class="table-head">平日</th>
+                  <td class="table-col">48,200円</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">休前日</th>
+                  <td class="table-col">66,500円～</td>
+                </tr>
+                <tr class="table-row table-row-last">
+                  <th class="table-head">GW・夏休み <br/>
+                    など　</th>
+                  <td class="table-col">75,700円〜</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <table class="table table-solid u-show-pc">
-            <tbody>
+          <div class="u-show-pc">
+            <table class="table table-solid">
+              <tbody>
 
-              <tr class="table-row table-row-solid">
-                <th class="table-head">ご利用人数</th>
-                <th class="table-col">平日</th>
-                <th class="table-col">休前日</th>
-                <th class="table-col">GW・夏休みなど</th>
-              </tr>
+                <tr class="table-row table-row-solid">
+                  <th class="table-head">ご利用人数</th>
+                  <th class="table-col">平日</th>
+                  <th class="table-col">休前日</th>
+                  <th class="table-col">GW・夏休みなど</th>
+                </tr>
 
-              <tr class="table-row">
-                <th class="table-head">１〜4名</th>
-                <td class="table-col">
-                  34,600円～
-                </td>
-                <td class="table-col">
-                  52,900円～
-                </td>
-                <td class="table-col">
-                  62,100円～
-                </td>
-              </tr>
+                <tr class="table-row">
+                  <th class="table-head">１〜4名</th>
+                  <td class="table-col">
+                    34,600円～
+                  </td>
+                  <td class="table-col">
+                    52,900円～
+                  </td>
+                  <td class="table-col">
+                    62,100円～
+                  </td>
+                </tr>
 
-              <tr class="table-row table-row-last">
-                <th class="table-head">6名利用
-                  <small class="col-small">（エキストラベッド2台利用）</small></th>
-                <td class="table-col">
-                  48,200円～
-                </td>
-                <td class="table-col">
-                  66,500円～
-                </td>
-                <td class="table-col">
-                  75,700円～
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
+                <tr class="table-row table-row-last">
+                  <th class="table-head">6名利用
+                    <small class="col-small">（エキストラベッド2台利用）</small></th>
+                  <td class="table-col">
+                    48,200円～
+                  </td>
+                  <td class="table-col">
+                    66,500円～
+                  </td>
+                  <td class="table-col">
+                    75,700円～
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
 
           <small class="important-note important-note-left u-show-pc">※1室最大6名様まで利用可。幼児は添い寝無料。人数・エキストラベッドの利用台数により料金が異なります。</small>
 
@@ -278,7 +284,7 @@
               modifier: 'heading-main heading-main-subpage heading-main-subpage-amenity',
               text: `Amenity`,
               altSubtext: ``,
-              subtextvg: `amenity-subtitle`,
+              subtextvg: `granroom-amenity-subtitle`,
               altSubtextvg: `Amenity`
             }); -%>
           </div>
@@ -288,7 +294,7 @@
               modifier: 'heading-main heading-main-subpage heading-main-subpage-amenity',
               text: `Amenity`,
               altSubtext: ``,
-              subtextvg: `amenity-subtitle`,
+              subtextvg: `granroom-amenity-subtitle-sp`,
               altSubtextvg: `Amenity`
             }); -%>
           </div>
@@ -299,8 +305,9 @@
               森を感じさせるとっておきのアメニティをご用意しました。
             </span>
             <span class="u-show-sp">
-              グランルームだけに特別にご提供する、
-              森を感じさせるとっておきのアメニティをご用意しました。
+              グランルームだけに特別にご提供する、<br/>
+              森を感じさせるとっておきの <br/>
+              アメニティをご用意しました。
             </span>
           </p>
           
@@ -317,7 +324,7 @@
                   クロモジの香りアメニティ
                 </span>
                 <span class="u-show-sp">
-                  KOTOHA with yuica
+                  KOTOHA with yuica <br/>
                   クロモジの香りアメニティ
                 </span>
               </h3>
@@ -366,7 +373,7 @@
               modifier: 'heading-main heading-main-subpage heading-main-subpage-teatime',
               text: `Teatime`,
               altSubtext: ``,
-              subtextvg: `granroom-teatime-subtitle`,
+              subtextvg: `granroom-teatime-subtitle-sp`,
               altSubtextvg: `Teatime`
             }); -%>
           </div>
@@ -416,7 +423,7 @@
                       「おひさま堂」のコーヒー
                     </span>
                     <span class="u-show-sp">
-                      那須の自家焙煎珈琲の店
+                      那須の自家焙煎珈琲の店<br/>
                       「おひさま堂」のコーヒー
                     </span>
                   </h3>
@@ -494,7 +501,7 @@
                     石窯ピザ焼　シェフ体験
                     </span>
                     <span class="u-show-sp">
-                      森のレストランMARCHERANT
+                      森のレストランMARCHERANT <br/>
                       石窯ピザ焼　シェフ体験
                     </span>
                   </h3>
@@ -536,12 +543,22 @@
       <section class="subpage-section subpage-section-otherroom subpage-section-aqua-labo">
         <div class="subpage-inner">
       
-          <div class="l-section-title">
+          <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
               modifier: 'heading-main heading-main-subpage heading-main-subpage-other',
               text: `Other rooms`,
               altSubtext: ``,
               subtextvg: `granroom-other-subtitle`,
+              altSubtextvg: `Other rooms`
+            }); -%>
+          </div>
+      
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-main heading-main-subpage heading-main-subpage-other',
+              text: `Other rooms`,
+              altSubtext: ``,
+              subtextvg: `granroom-otherroom-subtitle-sp`,
               altSubtextvg: `Other rooms`
             }); -%>
           </div>
@@ -552,7 +569,7 @@
               <div class="media-grid-img media-grid-img-rounded u-show-pc" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img1.jpg') -%>);">
               </div>
 
-              <div class="media-grid-img media-grid-img-rounded u-show-sp" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img1.jpg') -%>);">
+              <div class="media-grid-img media-grid-img-rounded u-show-sp" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img1-sp.jpg') -%>);">
               </div>
 
               <h3 class="media-grid-title subpage-title">
@@ -579,11 +596,7 @@
         </div>
       </section>
 
-      <!-- recommendation module -->
-      <!-- <%- include('/partials/recommendation') -%> -->
-
-      <!-- pick up module -->
-      <!-- <%- include('/partials/pickup') -%> -->
+      <!-- reservation module -->
 
     </main>
   </div>

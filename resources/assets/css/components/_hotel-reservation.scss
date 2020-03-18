@@ -12,6 +12,7 @@
   .hotel-reservation-wrap {
     background-image: url(/assets/images/hoteltwinring/reservation-bg.jpg);
     padding: 14%;
+    position: relative;
 
     .heading-text {
       background: none;
@@ -26,6 +27,18 @@
       @include max-screen($breakpoint-mobile) {
         height: 70px;
         font-size: 16px;
+      }
+    }
+
+    .floating-banner {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-width: 260px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 115px;
+        right: 35px;
       }
     }
 

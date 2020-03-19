@@ -344,6 +344,12 @@
     width: 100%;
   }
 
+  &.subpage-banner-standardroom {
+    .subpage-banner-inner {
+      margin-bottom: 10px;
+    }
+  }
+
   &.subpage-banner-craft {
     @include min-screen($breakpoint-mobile + 1) {
       margin-bottom: 26px;

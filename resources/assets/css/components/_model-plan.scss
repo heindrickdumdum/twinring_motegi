@@ -1,0 +1,34 @@
+.model-plan {
+  text-align: center;
+  margin-bottom: 111px;
+
+  &-frame {
+    border: 25px solid transparent;
+    border-image: url('/assets/images/model-plan-frame.png') 30 round;
+    padding-top: 24px;
+    padding-bottom: 17px;
+  }
+
+  &-desc {
+    font-size: 15px;
+    line-height: 1.667;
+    letter-spacing: 0.16em;
+  }
+
+  .heading-model-plan {
+    margin-bottom: 0px;
+
+    .heading-subtext {
+      width: 423px;
+      height: auto;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &-note {
+    font-size: 12px;
+    line-height: 2.083;
+    letter-spacing: 0.1em;
+  }
+}

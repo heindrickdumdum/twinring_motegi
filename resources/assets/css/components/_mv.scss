@@ -218,7 +218,49 @@
     left: 15px;
   }
 
+  &.familyroom-mv-heading {//hotel familyroom
+    // .heading-text {
+    //   .is-ie & {//ie modifier
+    //     background: none;
+    //     color: $color-white;
+    //     -webkit-text-fill-color: $color-white;
+    //     -moz-text-fill-color: $color-white;
+    //     -ms-text-fill-color: $color-white;
+    //   }
+    // }
+    @include min-screen($breakpoint-mobile + 1) {
+      // sass-lint:disable-block no-important   
+      bottom: 33px !important;
+    }
+
+    .heading-subtext {
+      // sass-lint:disable-block no-important    
+      max-width: 743px !important;
+      // sass-lint:disable-block no-important    
+      height: 52px !important;
+      // sass-lint:disable-block no-important    
+      margin-top: 15px !important;
+      fill: $color-white;
+  
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important    
+        max-width: 176px !important;
+        // sass-lint:disable-block no-important    
+        height: 28px !important;
+      }
+    }
+  }
+
   &.granroom-mv-heading {
+    // .heading-text {
+    //   .is-ie & {//ie modifier
+    //     background: none;
+    //     color: $color-white;
+    //     -webkit-text-fill-color: $color-white;
+    //     -moz-text-fill-color: $color-white;
+    //     -ms-text-fill-color: $color-white;
+    //   }
+    // }
 
     .heading-subtext {
       // sass-lint:disable-block no-important    

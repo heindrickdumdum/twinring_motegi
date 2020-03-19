@@ -1,8 +1,10 @@
-.hotel-reservation {
+.hoteltwinring-reservation {
   .button {
     border: 1px solid #333;
     width: auto;
     max-width: 400px;
+    height: 70px;
+    
 
     &::before {
       display: none;
@@ -11,18 +13,37 @@
 
   .hotel-reservation-wrap {
     background-image: url(/assets/images/hoteltwinring/reservation-bg.jpg);
-    padding: 14%;
+    padding: 120px;
     position: relative;
+    background-size: cover;
+
+    .hoteltwinring-heading-reservation {
+      .heading {
+        margin-bottom: 20px;
+      }
+    }
+
+    .l-button {
+      &.u-show-pc {
+        margin-top: 0;
+      }
+    }
 
     .heading-text {
       background: none;
       -webkit-text-fill-color: $color-white;
     }
 
+    .heading-subtext {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
     .reserve-button {
       width: auto;
-      max-width: 700px;
+      max-width: 730px;
       background-color: $color-white;
+      height: 95px;
 
       @include max-screen($breakpoint-mobile) {
         height: 70px;
@@ -59,10 +80,12 @@
     .hotel-reservation-ctas {
       display: flex;
       justify-content: center;
+      max-width: 1070px;
   
       .l-button {
         width: 100%;
-        margin-bottom: 50px;
+        margin-top: 65px;
+        margin-bottom: 62px;
 
         @include max-screen($breakpoint-mobile) {
           margin-top: 0;

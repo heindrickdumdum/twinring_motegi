@@ -407,6 +407,11 @@
 
   &-roomdetails {//hotel granroom
     margin-bottom: 40px;
+<<<<<<< HEAD
+=======
+  }
+  
+>>>>>>> develop
   &.subpage-image-gallery-nozominoyu {
     margin-bottom: 36px;
   }
@@ -950,7 +955,6 @@
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 120px;
   }
-}
 }
 
 .subpage-inner-anchor-reserve {

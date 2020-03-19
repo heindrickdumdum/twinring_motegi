@@ -287,6 +287,14 @@
       font-size: 45px;
       -webkit-text-fill-color: $color-white;
 
+      .is-ie & {//ie modifier
+        background: none;
+        color: $color-white;
+        -webkit-text-fill-color: $color-white;
+        -moz-text-fill-color: $color-white;
+        -ms-text-fill-color: $color-white;
+      }
+
       @include max-screen ($breakpoint-mobile) {
         text-align: left;
         font-size: 23px;

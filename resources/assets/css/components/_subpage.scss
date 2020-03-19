@@ -240,6 +240,14 @@
   }
 }
 
+.subpage-inner-reserve-reminder {
+  margin-bottom: 118px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 78px;
+  }
+}
+
 .subpage-button-link {
   color: #fff;
   background: #333;
@@ -399,6 +407,8 @@
 
   &-roomdetails {//hotel granroom
     margin-bottom: 40px;
+  &.subpage-image-gallery-nozominoyu {
+    margin-bottom: 36px;
   }
 }
 
@@ -920,6 +930,18 @@
     }
   }
 }
+
+.subpage-reserve {
+
+  &::before {
+    background-image: url('../images/subpage-bg-reserve.png');
+    top: 320px;
+  }
+
+  &::after {
+    display: none;
+  }
+}
 //modifier forest labo end
 
 .subpage-section-course,
@@ -928,4 +950,21 @@
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 120px;
   }
+}
+}
+
+.subpage-inner-anchor-reserve {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 148px;
+  }
+}
+
+.subpage-inner-reserve {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 161px;
+  }
+}
+
+.subpage-title-reserve {
+  margin-bottom: 11px;
 }

@@ -30,6 +30,14 @@
     }
   }
 
+  &.heading-reservation {
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: 0.09em;
+      }
+    }
+  }
+
   &.heading-gradient-toright {
     .heading-text {
       background: linear-gradient(to right, #027cc3 0%, #099f48 100%);

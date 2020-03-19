@@ -76,6 +76,11 @@
     }
   }
 
+  .mv-subpage-nozominoyu & {
+    padding-bottom: 31.4%;
+    background-position-y: 64%;
+  }
+
   &.mv-image-sp {
     display: none;
 
@@ -977,6 +982,10 @@
         font-family: $font-hiragino-w3;
       }
 
+      &.mv-heading-text-reserve {
+        font-family: $base-font-family;
+      }
+
       @include min-screen($breakpoint-mobile + 1) {
         font-size: 46px;
       }
@@ -1089,6 +1098,14 @@
 
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 127px;
+  }
+}
+
+.mv-subpage-reserve {
+  overflow: hidden;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 95px;
   }
 }
 

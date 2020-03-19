@@ -117,8 +117,16 @@
   // sass-lint:disable-block no-important
   margin-bottom: 41px !important;
 
+  @include max-screen($breakpoint-mobile) {
+     // sass-lint:disable-block no-important
+    margin-bottom: 18px !important;
+  }
+
   .slider-gallery-img {
     padding-bottom: 46.4444%;
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 56.4444%;
+    }
   }
 } 
 

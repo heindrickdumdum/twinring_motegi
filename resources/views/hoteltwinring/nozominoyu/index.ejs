@@ -11,8 +11,8 @@ pageId = 'nozominoyu';
       <div class="mv mv-subpage mv-subpage-nozominoyu">
         <ul class="mv-list">
           <li class="mv-item">
-            <div class="mv-image mv-image-subpage" style="background-image:url(<%= mix('/assets/images/nozominoyu/nozominoyu-mv.jpg') %>);"></div>
-            <!-- <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/craft/mv-img-sp.png') %>);"></div> -->
+            <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/nozominoyu/nozominoyu-mv.jpg') %>);"></div>
+            <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/nozominoyu/nozominoyu-mv-sp.jpg') %>);"></div>
           </li>
         </ul>
         <h1 class="mv-heading mv-heading-subpage">
@@ -35,7 +35,7 @@ pageId = 'nozominoyu';
         </h2>
       </div>
       
-      <section class="l-section l-container-inner">
+      <section class="l-section l-container-inner-nozominoyu">
         <div class="subpage-image-gallery subpage-image-gallery-nozominoyu">
           <div class="swiper-container slider-gallery slider-gallery-nozominoyu js-gallery">
             <div class="swiper-wrapper">
@@ -60,25 +60,29 @@ pageId = 'nozominoyu';
           </div>
         </div>
 
-        <p class="nozominoyu-paragraph">露天風呂では星空を眺めながらゆったりした時間を過ごし、内湯では浴槽全体が白くやわらかな感覚が特徴のシルキーバス<br>
-          と疲れを癒すジェットバスの2種類を楽しむことができます。</p>
-        <p class="nozominoyu-paragraph nozominoyu-paragraph-note"> ※シルキーバスとジェットバスは時間帯により男女入替制となります。</p>
+        <div class="l-container-inner">
+          <p class="nozominoyu-paragraph">露天風呂では星空を眺めながらゆったりした時間を過ごし、内湯では浴槽全体が白くやわらかな感覚が特徴のシルキーバス<br>
+            と疲れを癒すジェットバスの2種類を楽しむことができます。</p>
+          <p class="nozominoyu-paragraph nozominoyu-paragraph-note"> ※シルキーバスとジェットバスは時間帯により男女入替制となります。</p>
+        </div>
 
       </section>
 
       <section class="nozominoyu-race">
         <div class="l-container-inner">
           <div class="nozominoyu-race-inner">
-            <h3 class="nozominoyu-heading">
+            <h3 class="nozominoyu-heading u-show-pc">
               <img src="<%= mix('/assets/images/nozominoyu/race-title.png') %>" alt="レジャー来場、レース観戦でものぞみの湯を楽しもう">
             </h3>
+            <h3 class="nozominoyu-heading u-show-sp">
+              <img src="<%= mix('/assets/images/nozominoyu/race-title-sp.png') %>" alt="レジャー来場、レース観戦でものぞみの湯を楽しもう">
+            </h3>
             <p class="nozominoyu-paragraph nozominoyu-subheading">
-              のぞみの湯はツインリンクもてぎ宿泊施設ご利用者以外の方も、<br>
-            「日帰り入浴」としてご利用いただけます。
+              のぞみの湯はツインリンクもてぎ宿泊施設ご利用者以外の方も、<br class="u-show-pc">「日帰り入浴」としてご利用いただけます。
             </p>
             <div class="nozominoyu-article">
               <ul class="nozominoyu-article-list row">
-                <li class="nozominoyu-article-list-item col-lg-4 col-md-4 col-sm-12">
+                <li class="nozominoyu-article-list-item col-lg-4 col-md-4 col-sm-6">
                   <article class="nozominoyu-article-card">
                     <a href="#" class="nozominoyu-article-link">
                       <div class="nozominoyu-article-thumbnail" style="background-image:url(<%- mix('/assets/images/nozominoyu/attraction-image-1.jpg') -%>)"></div>
@@ -86,7 +90,7 @@ pageId = 'nozominoyu';
                     </a>
                   </article>
                 </li>
-                 <li class="nozominoyu-article-list-item col-lg-4 col-md-4 col-sm-12">
+                 <li class="nozominoyu-article-list-item col-lg-4 col-md-4 col-sm-6">
                   <article class="nozominoyu-article-card">
                     <a href="#" class="nozominoyu-article-link">
                       <div class="nozominoyu-article-thumbnail" style="background-image:url(<%- mix('/assets/images/nozominoyu/attraction-image-2.jpg') -%>)"></div>
@@ -94,7 +98,7 @@ pageId = 'nozominoyu';
                     </a>
                   </article>
                 </li>
-                 <li class="nozominoyu-article-list-item col-lg-4 col-md-4 col-sm-12">
+                 <li class="nozominoyu-article-list-item col-lg-4 col-md-4 col-sm-6">
                   <article class="nozominoyu-article-card">
                     <a href="#" class="nozominoyu-article-link">
                       <div class="nozominoyu-article-thumbnail" style="background-image:url(<%- mix('/assets/images/nozominoyu/attraction-image-3.jpg') -%>)"></div>
@@ -123,7 +127,7 @@ pageId = 'nozominoyu';
           </h3>
 
           <div class="nozominoyu-time">
-            <table class="nozominoyu-time-table">
+            <table class="nozominoyu-time-table u-show-pc">
               <tbody>
                 <tr>
                   <th>&nbsp</th>
@@ -144,7 +148,55 @@ pageId = 'nozominoyu';
                   <td>受付なし</td>
                 </tr>
               </tbody>
-            </table>  
+            </table>
+            <!-- SP table -->
+            <ul class="nozominoyu-time-table-list-sp u-show-sp">
+              <li class="nozominoyu-time-table-list-item-sp">
+                <p class="nozominoyu-paragraph">日帰り入浴</p>
+                <table class="nozominoyu-time-table-sp">
+                  <tbody>
+                    <tr>
+                      <th class="time-table-th-sp">時間</th>
+                      <td>11：00～19：00 <br>※受付は18:40まで</td>
+                    </tr>
+                    <tr>
+                      <th class="time-table-th-sp">受付</th>
+                      <td>ロビーショップ<br>（ホテル1階）</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li class="nozominoyu-time-table-list-item-sp">
+                <p class="nozominoyu-paragraph">ホテル宿泊者</p>
+                <table class="nozominoyu-time-table-sp">
+                  <tbody>
+                    <tr>
+                      <th class="time-table-th-sp">時間</th>
+                      <td>15：00～24：00、<br>翌朝6：00～9：30</td>
+                    </tr>
+                    <tr>
+                      <th class="time-table-th-sp">受付</th>
+                      <td>受付なし</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li class="nozominoyu-time-table-list-item-sp">
+                <p class="nozominoyu-paragraph">森と星空のキャンプヴィレッジ宿泊者 （＊1）</p>
+                <table class="nozominoyu-time-table-sp">
+                  <tbody>
+                    <tr>
+                      <th class="time-table-th-sp">時間</th>
+                      <td>15：00～22：00<br>翌朝6：00～9：30</td>
+                    </tr>
+                    <tr>
+                      <th class="time-table-th-sp">受付</th>
+                      <td>受付なし</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li> 
+            </ul>
             <p class="nozominoyu-paragraph nozominoyu-paragraph-note">（※１）一部レース・イベント開催日は、木もれ陽サイト・林間サイトにご宿泊のお客様はご利用できません。</p>      
           </div>
 
@@ -153,7 +205,7 @@ pageId = 'nozominoyu';
             <h3 class="nozominoyu-heading nozominoyu-fee-table-heading">
               <img src="<%= mix('/assets/images/nozominoyu/fee-title.png') %>" alt="ご利用料金">
             </h3>
-            <table class="nozominoyu-time-table">
+            <table class="nozominoyu-time-table u-show-pc">
               <tbody>
                 <tr>
                   <th>のぞみの湯利用料</th>
@@ -192,7 +244,70 @@ pageId = 'nozominoyu';
                   <td>300円～350円</td>
                 </tr>
               </tbody>
-            </table>  
+            </table>
+             <ul class="nozominoyu-fee-table-list-sp u-show-sp">
+               <li class="nozominoyu-fee-table-list-sp">
+                 <table class="nozominoyu-fee-table-sp">
+                   <tbody>
+                     <tr>
+                       <th class="fee-table-th-sp">利用料</th>
+                       <td>日帰り入浴</td>
+                       <td>ホテル宿泊者</td>
+                     </tr>
+                     <tr>
+                      <th class="fee-table-th-sp">大人</th>
+                      <td>700円</td>
+                      <td rowspan="3">チェックイン～<br>チェックアウト<br>まで無料</td>
+                    </tr>
+                    <tr>
+                      <th class="fee-table-th-sp">子供<br>３歳〜中学生</th>
+                      <td>360円</td>
+                    </tr>
+                    <tr>
+                      <th class="fee-table-th-sp">幼児(３歳未満)</th>
+                      <td>無料</td>
+                    </tr>
+                    <tr>
+                      <th class="fee-table-th-sp">レンタルタオル</th>
+                      <td>250円</td>
+                      <td rowspan="2">ゲストルーム内の<br>タオルを利用可</td>
+                    </tr>
+                    <tr>
+                      <th class="fee-table-th-sp">ゲストルーム内の<br>タオルを利用可</th>
+                      <td>300円~350円</td>
+                    </tr>
+                   </tbody>
+                 </table>
+               </li>
+               <li class="nozominoyu-fee-table-list-sp">
+                <table class="nozominoyu-fee-table-sp">
+                  <tbody>
+                    <tr>
+                      <th class="fee-table-th-sp">利用料</th>
+                      <td>森と星空のキャンプヴィレッジ<br>宿泊者 （＊1）</td>
+                    </tr>
+                    <tr>
+                      <th class="fee-table-th-sp">大人</th>
+                      <td rowspan="3">チェックイン～<br>チェックアウトまで無料</td>
+                    </tr>
+                    <tr>
+                      <th class="fee-table-th-sp">子供<br>３歳〜中学生</th>
+                    </tr>
+                    <tr>
+                      <th class="fee-table-th-sp">幼児(３歳未満)</th>
+                    </tr>
+                    <tr>
+                      <th class="fee-table-th-sp">レンタルタオル</th>
+                      <td>250円</td>
+                    </tr>
+                    <tr>
+                      <th class="fee-table-th-sp">フェイスタオル<br>(販売)</th>
+                      <td>300円~350円</td>
+                    </tr>
+                  </tbody>
+                </table>
+               </li>
+             </ul>
             <p class="nozominoyu-paragraph nozominoyu-paragraph-note">（※１）一部レース・イベント開催日は、木もれ陽サイト・林間サイトにご宿泊のお客様はご利用できません。</p>      
           </div>
 
@@ -200,10 +315,10 @@ pageId = 'nozominoyu';
             <h3 class="nozominoyu-heading nozominoyu-amenity-table-heading">
               <img src="<%= mix('/assets/images/nozominoyu/amenity-title.png') %>" alt="ご利用料金">
             </h3>
-            <table class="nozominoyu-amenity-table">
+            <table class="nozominoyu-amenity-table u-show-pc">
               <tbody>
                 <tr>
-                  <th>設備</th>
+                  <th class="time-table-th-sp">設備</th>
                   <th>アメニティ</th>
                 </tr>
                 <tr>
@@ -211,8 +326,21 @@ pageId = 'nozominoyu';
                   <td>シャンプー/リンス/ボディーソープ（ベビー用あ<br>り）/ヘアブラシ/綿棒/洗顔料/化粧水/乳液</td>
                 </tr>
               </tbody>
+            </table>
+
+            <table class="nozominoyu-amenity-table-sp u-show-sp">
+              <tbody>
+                <tr>
+                  <th class="amenity-table-th-sp">設備</th>
+                  <td>ロッカー/飲料用自動販売機/アメニティ用自動販売機（歯ブラシ・カミソリ・フェイスタオル・男性用肌着＆パンツ・女性用ショーツ）/お子さま用バスチェア/オムツ交換台/体重計/ドライヤー</td> 
+                </tr>
+                <tr>
+                  <th class="amenity-table-th-sp">アメニティ</th>
+                  <td>シャンプー/リンス/ボディーソープ（ベビー用あり）/ヘアブラシ/綿棒/洗顔料/化粧水/乳液</td>
+                </tr>
+              </tbody>
             </table>  
-            <p class="nozominoyu-paragraph nozominoyu-paragraph-note">（※１）一部レース・イベント開催日は、木もれ陽サイト・林間サイトにご宿泊のお客様はご利用できません。</p>      
+            <p class="nozominoyu-paragraph nozominoyu-paragraph-note u-show-pc">（※１）一部レース・イベント開催日は、木もれ陽サイト・林間サイトにご宿泊のお客様はご利用できません。</p>      
           </div>
 
         </div>

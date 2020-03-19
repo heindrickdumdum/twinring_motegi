@@ -3,11 +3,15 @@
     margin-bottom: 99px;
     
     @include max-screen($breakpoint-mobile) {
-      margin-bottom: 49.5px;
+      margin-bottom: 30px;
     }
   }
 
   .subpage-title {
     margin-bottom: 23px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 11px;
+    }
   }
 }

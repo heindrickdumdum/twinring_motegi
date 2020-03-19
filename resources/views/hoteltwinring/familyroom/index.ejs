@@ -26,13 +26,23 @@
       </ul>
 
       <div class="l-container mv-container">
-        <h1 class="mv-heading hellowoods-mv-heading familyroom-mv-heading">
+        <h1 class="mv-heading hellowoods-mv-heading familyroom-mv-heading u-show-pc">
           <%- include('/partials/heading', {
             modifier: 'heading-hellowoods',
             heading_level: 1,
             text: 'Superior Family Room',
             alt: '',
             subtextvg: 'familyroom-top-title',
+            altSubtextvg: 'スーぺリアファミリールーム'
+          }) %>
+        </h1>
+        <h1 class="mv-heading hellowoods-mv-heading familyroom-mv-heading u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Superior Family Room',
+            alt: '',
+            subtextvg: 'familyroom-top-title-sp',
             altSubtextvg: 'スーぺリアファミリールーム'
           }) %>
         </h1>
@@ -163,7 +173,7 @@
         </div>
       </section>
 
-      <section class="subpage-section subpage-section-usagefee subpage-section-aqua-labo">
+      <section class="subpage-section subpage-section-usagefee subpage-section-usagefee-familyroom subpage-section-aqua-labo">
         <div class="subpage-inner">
       
           <div class="l-section-title">
@@ -180,16 +190,34 @@
 
           <div class="model-plan">
             <div class="model-plan-frame">
-              <p class="model-plan-desc">
+              <p class="model-plan-desc u-show-pc">
                 大人2名、小学生1名、幼児1名で、休前日宿泊の場合
               </p>
-              <%- include('/partials/heading', {
-                modifier: 'heading-main heading-main-subpage heading-model-plan',
-                imgPath: mix('/assets/images/familyroom/model-plan-text.png'),
-                alt: `スタンダードプラン 1泊2食付きプラン(4名) 合計 55,800円`
-              }) -%>
-              <small class="model-plan-note">
+              <p class="model-plan-desc u-show-sp">
+                大人2名、小学生1名、幼児1名で、<br/>
+                休前日宿泊の場合
+              </p>
+              <div class="l-section-title u-show-pc">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-main heading-main-subpage heading-model-plan',
+                  imgPath: mix('/assets/images/familyroom/model-plan-text.png'),
+                  alt: `スタンダードプラン 1泊2食付きプラン(4名) 合計 55,800円`
+                }) -%>
+              </div>
+              <div class="l-section-title u-show-sp">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-main heading-main-subpage heading-model-plan',
+                  imgPath: mix('/assets/images/familyroom/model-plan-text-sp.png'),
+                  alt: `スタンダードプラン 1泊2食付きプラン(4名) 合計 55,800円`
+                }) -%>
+              </div>
+              <small class="model-plan-note u-show-pc">
                 <料金内訳> 大人:19,000円 × 2名、小学生:13,300円 × 1名、幼児:4,500円 × 1名 <br/>
+                ※宿泊プラン、時期によって料金が異なります。
+              </small>
+              <small class="model-plan-note u-show-sp">
+                <料金内訳> 大人:19,000円 × 2名、<br/>
+                小学生:13,300円 × 1名、幼児:4,500円 × 1名 <br/>
                 ※宿泊プラン、時期によって料金が異なります。
               </small>
             </div>
@@ -206,7 +234,7 @@
           </p>
 
           <div class="u-show-sp">
-            <table class="table table-solid">
+            <table class="table table-solid table-solid-last">
               <tbody>
                 <tr class="table-row table-row-solid">
                   <th class="table-head">平日</th>

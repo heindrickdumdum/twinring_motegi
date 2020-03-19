@@ -302,9 +302,9 @@
 
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important
-      width: 344px !important;
+      width: 320px !important;
       // sass-lint:disable-block no-important
-      height: 65px !important;
+      height: 136px !important;
       // sass-lint:disable-block no-important
       margin-top: 106px !important; 
     }

@@ -244,9 +244,9 @@
   
       @include max-screen($breakpoint-mobile) {
         // sass-lint:disable-block no-important    
-        max-width: 176px !important;
+        max-width: 200px !important;
         // sass-lint:disable-block no-important    
-        height: 28px !important;
+        height: 55px !important;
       }
     }
   }

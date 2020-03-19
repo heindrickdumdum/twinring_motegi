@@ -728,6 +728,9 @@
   }
 
   &.hoteltwinring {
+    .heading-subtext {
+      display: block;
+    }
     .heading {
       margin-bottom: 20px;
     }

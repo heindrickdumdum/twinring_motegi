@@ -122,6 +122,10 @@
 
     @include min-screen($breakpoint-mobile + 1) {
       min-height: 72px;
+
+      .subpage-section-otherroom & {
+        margin-top: 15px;
+      }
     }
 
     @include max-screen($breakpoint-mobile) {
@@ -905,7 +909,7 @@
     justify-content: space-between;
     margin-bottom: 38px;
     background-color: $color-white;
-    align-items: center;
+    // align-items: center;
 
     &-teatime {
       background-color: transparent;
@@ -947,6 +951,13 @@
     padding-left: 38px;
     padding-right: 38px;
 
+    @include min-screen($breakpoint-mobile + 1) {
+      .subpage-section-granroomactivity & {//hotel granroom
+        padding-top: 57px;
+        padding-bottom: 57px;
+      }
+    }
+
     @include max-screen($breakpoint-mobile) {
       width: 100%;
       padding: 0 28px 48px; 
@@ -966,6 +977,10 @@
       
       @include min-screen($breakpoint-mobile + 1) {
         white-space: nowrap;
+
+        .subpage-section-granroomactivity & {//hotel granroom
+          margin-bottom: 24px;
+        }
       }
 
       @include max-screen($breakpoint-mobile) {

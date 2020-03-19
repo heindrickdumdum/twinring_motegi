@@ -6,6 +6,15 @@
   margin-bottom: 50px;
 
   &-hotel {//hotel granroom
+    @include min-screen($breakpoint-mobile + 1) {
+      // sass-lint:disable-block no-important   
+      margin-bottom: 13px !important;
+    }
+    
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 14px;
+    }
+
     &:after {
       // sass-lint:disable-block no-important    
       content: none !important;
@@ -15,7 +24,6 @@
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 120px;
   }
-
 
   > * {
     position: relative;
@@ -407,6 +415,10 @@
 
   &-roomdetails {//hotel granroom
     margin-bottom: 40px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 31px;
+    }
   }
   
   &.subpage-image-gallery-nozominoyu {

@@ -103,87 +103,6 @@
       height: 37px;
     }
   }
-
-  .heading-main-subpage-granroom & {//hotel granroom
-    width: 454px;
-    height: 82px;
-
-    @include max-screen($breakpoint-mobile) {
-      // sass-lint:disable-block no-important
-      width: 344px !important;
-      // sass-lint:disable-block no-important
-      height: 65px !important;
-      // sass-lint:disable-block no-important
-      margin-top: 106px !important;
-      
-    }
-  }
-
-  .heading-main-subpage-usagefee & {//hotel granroom
-    width: 212px;
-    height: 37px;
-
-    @include max-screen($breakpoint-mobile) {
-      // sass-lint:disable-block no-important
-      width: 145px !important;
-      // sass-lint:disable-block no-important
-      height: 26px !important;
-      
-    }
-  }
-
-  .heading-main-subpage-amenity & {//hotel granroom
-    width: 674px;
-    height: 37px;
-
-    @include max-screen($breakpoint-mobile) {
-      // sass-lint:disable-block no-important
-      width: 270px !important;
-      // sass-lint:disable-block no-important
-      height: 68px !important;
-    }
-  }
-
-  .heading-main-subpage-teatime & {//hotel granroom
-    width: 726px;
-    height: 37px;
-
-    @include min-screen($breakpoint-mobile + 1) {
-      margin-top: 40px;
-    }
-
-    @include max-screen($breakpoint-mobile) {
-      // sass-lint:disable-block no-important
-      width: 295px !important;
-      // sass-lint:disable-block no-important
-      height: 67px !important;
-    }
-  }
-
-  .heading-main-subpage-granroomactivity & {//hotel granroom
-    width: 670px;
-    height: 35px;
-
-    @include max-screen($breakpoint-mobile) {
-      // sass-lint:disable-block no-important
-      width: 338px !important;
-      // sass-lint:disable-block no-important
-      height: 63px !important;
-    }
-  }
-
-  .heading-main-subpage-other & {//hotel granroom
-    width: 303px;
-    height: 37px;
-
-    @include max-screen($breakpoint-mobile) {
-      // sass-lint:disable-block no-important
-      width: 205px !important;
-      // sass-lint:disable-block no-important
-      height: 25px !important;
-      margin-top: 10px;
-    }
-  }
 }
 
 .heading-text {
@@ -346,7 +265,6 @@
 
 
 .heading-reservation {
-
   .heading {
     position: relative;
     left: -6px;
@@ -372,6 +290,122 @@
     }
   }
 }
+
+//hotel granroom
+.heading-main-subpage-granroom {
+  // sass-lint:disable-block no-important
+  margin-bottom: 30px !important;
+
+  .heading-subtext {
+    width: 454px;
+    height: 82px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 344px !important;
+      // sass-lint:disable-block no-important
+      height: 65px !important;
+      // sass-lint:disable-block no-important
+      margin-top: 106px !important;
+      
+    }
+
+  }
+}
+
+.heading-main-subpage-usagefee {//hotel granroom
+  .heading-subtext {
+    width: 212px;
+    height: 37px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 145px !important;
+      // sass-lint:disable-block no-important
+      height: 26px !important;
+      
+    }
+
+  }
+}
+
+.heading-main-subpage-amenity {
+  // sass-lint:disable-block no-important
+  margin-bottom: 28px !important;
+
+  .heading-subtext {
+    width: 674px;
+    height: 37px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 270px !important;
+      // sass-lint:disable-block no-important
+      height: 68px !important;
+    }
+  }
+}
+
+.heading-main-subpage-teatime {//hotel granroom
+  .heading-subtext {
+    width: 726px;
+    height: 37px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 40px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 295px !important;
+      // sass-lint:disable-block no-important
+      height: 67px !important;
+    }
+
+  }
+}
+
+.heading-main-subpage-granroomactivity {
+  // sass-lint:disable-block no-important
+  margin-bottom: 19px !important;
+
+  .heading-subtext {
+    width: 670px;
+    height: 35px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 338px !important;
+      // sass-lint:disable-block no-important
+      height: 63px !important;
+
+      svg {
+        fill: $color-white;
+      }
+    }
+
+  }
+}
+
+.heading-main-subpage-other {
+  // sass-lint:disable-block no-important
+  margin-bottom: -11px !important;
+
+  .heading-subtext {
+    width: 303px;
+    height: 37px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 205px !important;
+      // sass-lint:disable-block no-important
+      height: 25px !important;
+      margin-top: 10px;
+    }
+
+  }
+}
+//hotel granroom end
 
 //modifier for SP
 .page-mobipark {
@@ -952,24 +986,3 @@
     display: block;
   }
 }
-//hotel granroom
-.heading-main-subpage-granroom {
-  // sass-lint:disable-block no-important
-  margin-bottom: 30px !important;
-}
-
-.heading-main-subpage-amenity {
-  // sass-lint:disable-block no-important
-  margin-bottom: 28px !important;
-}
-
-.heading-main-subpage-granroomactivity {
-  // sass-lint:disable-block no-important
-  margin-bottom: 19px !important;
-}
-
-.heading-main-subpage-other {
-  // sass-lint:disable-block no-important
-  margin-bottom: -11px !important;
-}
-//hotel granroom end

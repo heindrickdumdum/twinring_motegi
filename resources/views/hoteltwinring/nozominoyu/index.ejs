@@ -150,25 +150,65 @@ pageId = 'nozominoyu';
 
 
           <div class="nozominoyu-fee">
-            <table class="nozominoyu-fee-table">
+            <h3 class="nozominoyu-heading nozominoyu-fee-table-heading">
+              <img src="<%= mix('/assets/images/nozominoyu/fee-title.png') %>" alt="ご利用料金">
+            </h3>
+            <table class="nozominoyu-time-table">
               <tbody>
                 <tr>
-                  <th>&nbsp</th>
+                  <th>のぞみの湯利用料</th>
                   <th>日帰り入浴</th>
-                  <th>日帰り入浴</th>
-                  <th>森と星空のキャンプ<br>ヴィレッジ宿泊者 （＊1）</th>
+                  <th>ホテル宿泊者</th>
+                  <th>森と星空のキャンプ<br>
+                    ヴィレッジ宿泊者 （＊1）</th>
                 </tr>
                 <tr>
-                   <th>時間</th>
-                   <td>11：00～19：00<br>※受付は18:40まで</td>
-                   <td>15：00～24：00、<br>翌朝6：00～9：30</td>
-                   <td>15：00～22：00<br>翌朝6：00～9：30</td>
+                   <th>大人</th>
+                   <td>700円</td>
+                   <td rowspan="3">チェックイン～<br>
+                    チェックアウトまで無料</td>
+                   <td rowspan="3">チェックイン～<br>
+                    チェックアウトまで無料</td>
                 </tr>
                 <tr>
-                  <th>受付</th>
-                  <td>ロビーショップ<br>（ホテル1階）</td>
-                  <td>受付なし</td>
-                  <td>受付なし</td>
+                  <th>子ども<br>
+                    （3歳～中学生）</th>
+                  <td>360円</td>
+                </tr>
+                <tr>
+                  <th>幼児（3歳未満</th>
+                  <td>無料</td>
+                </tr>
+                <tr>
+                  <th>レンタルタオル</th>
+                  <td>250円/枚</td>
+                  <td rowspan="2">ゲストルーム内の<br>
+                    タオルを利用可</td>
+                  <td>250円/枚</td>
+                </tr>
+                <tr>
+                  <th>フェイスタオル<br>（販売）</th>
+                  <td>300円～350円</td>
+                  <td>300円～350円</td>
+                </tr>
+              </tbody>
+            </table>  
+            <p class="nozominoyu-paragraph nozominoyu-paragraph-note">（※１）一部レース・イベント開催日は、木もれ陽サイト・林間サイトにご宿泊のお客様はご利用できません。</p>      
+          </div>
+
+          <div class="nozominoyu-amenity">
+            <h3 class="nozominoyu-heading nozominoyu-amenity-table-heading">
+              <img src="<%= mix('/assets/images/nozominoyu/amenity-title.png') %>" alt="ご利用料金">
+            </h3>
+            <table class="nozominoyu-amenity-table">
+              <tbody>
+                <tr>
+                  <th>設備</th>
+                  <th>アメニティ</th>
+                </tr>
+                <tr>
+                  <td>ロッカー/飲料用自動販売機/アメニティ用自動販<br>売機（歯ブラシ・カミソリ・フェイスタオル・男<br>性用肌着＆パンツ・女性用ショーツ）/お子さま用<br>バスチェア/オムツ交換台/体重計/ドライヤー</td>
+                  <td>シャンプー/リンス/ボディーソープ（ベビー用あ<br>り）/ヘアブラシ/綿棒/洗顔料/化粧水/乳液</td>
                 </tr>
               </tbody>
             </table>  
@@ -177,7 +217,7 @@ pageId = 'nozominoyu';
 
         </div>
       </section>
-
+      <%- include('/partials/hotel-reservation') -%>
     </div>
   </main>
 </div>

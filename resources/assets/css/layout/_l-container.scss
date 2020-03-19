@@ -25,3 +25,14 @@
     padding: 0 20px;
   }
 }
+
+.l-container-inner-nozominoyu {
+  padding: 0 30px;
+  width: $container-inner + 60;
+  margin: 0 auto;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    padding: 0;
+  }
+}

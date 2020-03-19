@@ -121,6 +121,14 @@
     z-index: $z-min2;
   }
 
+  // .subpage-section-usagefee-familyroom & {//hotel fmailyroom
+  //   @include max-screen($breakpoint-mobile) {
+  //     // sass-lint:disable-block no-important
+  //     margin-bottom: 76px !important;
+  //   }
+
+  // }
+
   .subpage-section-usagefee & {//hotel granroom
     // sass-lint:disable-block no-important
     @include min-screen($breakpoint-mobile + 1) {
@@ -129,7 +137,7 @@
 
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important
-      margin-bottom: 145px !important;
+      margin-bottom: 76px !important;
     }
   }
 
@@ -346,6 +354,12 @@
 
   iframe {
     width: 100%;
+  }
+
+  &.subpage-banner-standardroom {
+    .subpage-banner-inner {
+      margin-bottom: 10px;
+    }
   }
 
   &.subpage-banner-craft {

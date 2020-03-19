@@ -62,59 +62,47 @@
       }
     }
   }
-}
 
-.heading-text {
-  display: block;
-  font-family: $font-holland;
-  background: linear-gradient(to bottom, #027cc3 10%, #099f48 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 0.1em;
-  font-size: 36px;
-
-  .heading-main-subpage-granroomactivity-onecolor & {//hotel granroom
-    background: none !important;
-    color: $color-white;
-    -webkit-text-fill-color: $color-white;
-    -moz-text-fill-color: $color-white;
-    -ms-text-fill-color: $color-white;
-  }
-
-  .is-ie & {
-    background: none !important;
-    color: $color-gossamer;
-    -webkit-text-fill-color: $color-gossamer;
-    -moz-text-fill-color: $color-gossamer;
-    -ms-text-fill-color: $color-gossamer;
-  }
-
-  @include max-screen($breakpoint-mobile) {
-    letter-spacing: 0.01em;
-    font-size: 24px;
-    text-align: center;
-    background: linear-gradient(to bottom, #027cc4 0%, #09a045 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .heading-wrap-parkmap & {
-    @include max-screen($breakpoint-mobile) {
-      text-align: left;
+  .subpage-section-granroomactivity {//hotel granroom
+    svg {
+      fill: $color-white;
     }
   }
 
-  &.heading-text-default {
-    font-family: none;
-    background: none;
-    -webkit-text-fill-color: $color-black;
+  .heading-subtext {
+    display: inline-block;
+    margin-top: 20px;
+    height: 36px;
+  
+    // additional
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  
+    @include max-screen($breakpoint-mobile) {
+      height: 22px;
+      display: block;
+    }
+  
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
-}
 
-.heading-subtext {
-  display: inline-block;
-  margin-top: 20px;
-  height: 36px;
+  &.heading-nozominoyu {
+    svg {
+      width: 713px;
+      height: 83px;
+    }
+  }
+
+  &.heading-nozominoyu-summary {
+    svg {
+      width: 200px;
+      height: 37px;
+    }
+  }
 
   .heading-main-subpage-granroom & {//hotel granroom
     width: 454px;
@@ -196,24 +184,52 @@
       margin-top: 10px;
     }
   }
+}
 
-  // additional
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+.heading-text {
+  display: block;
+  font-family: $font-holland;
+  background: linear-gradient(to bottom, #027cc3 10%, #099f48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.1em;
+  font-size: 36px;
 
-  @include max-screen($breakpoint-mobile) {
-    height: 22px;
-    display: block;
+  .heading-main-subpage-granroomactivity-onecolor & {//hotel granroom
+    background: none !important;
+    color: $color-white;
+    -webkit-text-fill-color: $color-white;
+    -moz-text-fill-color: $color-white;
+    -ms-text-fill-color: $color-white;
   }
 
-  svg {
-    width: 100%;
-    height: 100%;
+  .is-ie & {
+    background: none !important;
+    color: $color-gossamer;
+    -webkit-text-fill-color: $color-gossamer;
+    -moz-text-fill-color: $color-gossamer;
+    -ms-text-fill-color: $color-gossamer;
+  }
 
-    .subpage-section-granroomactivity & {//hotel granroom
-      fill: $color-white;
+  @include max-screen($breakpoint-mobile) {
+    letter-spacing: 0.01em;
+    font-size: 24px;
+    text-align: center;
+    background: linear-gradient(to bottom, #027cc4 0%, #09a045 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .heading-wrap-parkmap & {
+    @include max-screen($breakpoint-mobile) {
+      text-align: left;
     }
+  }
+
+  &.heading-text-default {
+    font-family: none;
+    background: none;
+    -webkit-text-fill-color: $color-black;
   }
 }
 
@@ -324,6 +340,35 @@
   .heading-subtext {
     @include max-screen($breakpoint-mobile) {
       height: 55px;
+    }
+  }
+}
+
+
+.heading-reservation {
+
+  .heading {
+    position: relative;
+    left: -6px;
+  }
+
+  .heading-text {
+    @include min-screen($breakpoint-mobile + 1) {
+      letter-spacing: 0.09em;
+    }
+  }
+
+  .heading-subtext {
+    width: 695px;
+    height: 42px;
+    margin-top: 11px;
+    position: relative;
+    left: 13px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      left: 50%;
+      transform: translateX(-48%);
     }
   }
 }

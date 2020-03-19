@@ -291,6 +291,27 @@
   }
 }
 
+//hotel familyroom
+.heading-main-subpage-familyroom {
+  // sass-lint:disable-block no-important
+  margin-bottom: 30px !important;
+
+  .heading-subtext {
+    width: 652px;
+    height: 82px;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      width: 320px !important;
+      // sass-lint:disable-block no-important
+      height: 136px !important;
+      // sass-lint:disable-block no-important
+      margin-top: 106px !important; 
+    }
+  }
+}
+//hotel familyroom end
+
 //hotel granroom
 .heading-main-subpage-granroom {
   // sass-lint:disable-block no-important

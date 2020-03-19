@@ -26,7 +26,8 @@
   'labo',
   'musasabi',
   'tsubasa',
-  'granroom'
+  'granroom',
+  'familyroom'
   ]
 %>
   
@@ -145,7 +146,7 @@
     <script src="<%= mix('/assets/js/collapse-button.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'granroom') { %>
+  <% if(pageId == 'granroom' || pageId == 'familyroom') { %>
     <script src="<%= mix('/assets/js/granroom.js') %>" async></script>
   <% } %>
 

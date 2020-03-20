@@ -34,6 +34,7 @@
   text-align: center;
   letter-spacing: 0.05em;
   padding: 10px;
+  background-color: #ffffff;
 
   & span {
     position: relative;
@@ -44,6 +45,7 @@
 .table-info-link-description {
   color: #09a30d;
   position: relative;
+  background-color: #ffffff;
 
   &::after {
     content: '';

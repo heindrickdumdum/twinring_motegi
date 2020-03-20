@@ -45,7 +45,20 @@
 
     @include max-screen($breakpoint-mobile) {
       background-image: url(../images/hoteltwinring/banner-image-1-sp.jpg);
+      padding: 54px 0px 90px;
+
+      .heading {
+        margin-bottom: 5px;
+      }
+
+      .heading-subtext {
+        height: 50px;
+      }
     }
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    padding-bottom: 25px;
   }
 }
 
@@ -53,14 +66,24 @@
   .banner-image-wrap {
     padding: 40px 0;
     background-image: url(../images/hoteltwinring/banner-image-2.jpg);
+    
+
     .heading-text {
       background: none;
       -webkit-text-fill-color: $color-white;
       line-height: 3;
     }
 
+   
+
     @include max-screen($breakpoint-mobile) {
       background-image: url(../images/hoteltwinring/banner-image-2-sp.jpg);
+      padding: 30px 0;
+
+
+      .heading-subtext {
+        height: 22px;
+      }
     }
   }
 }

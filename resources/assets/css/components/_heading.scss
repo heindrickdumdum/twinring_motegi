@@ -783,6 +783,22 @@
       margin-bottom: 13px;
     }
   }
+
+  @include max-screen ($breakpoint-mobile) {
+    &.room-gran {
+      .heading-subtext {
+        margin-bottom: 13px;
+        height: 20px;
+      }
+    }
+    &.room-standard {
+      .heading-subtext {
+        margin-bottom: 13px;
+        height: 16px;
+      }
+    } 
+  }
+  
 }
 
 .dokidoki-video,
@@ -1049,17 +1065,31 @@
   &.room-superior {
     p.heading-subtext {
       height: 16px;
+
+      @include max-screen ($breakpoint-mobile) {
+        top: -21px;
+      }
     }
   }
   &.room-gran {
     p.heading-subtext {
       max-width: 140px;
+
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 105px;
+        top: -11px;
+      }
     }
   }
 
   &.room-standard {
     p.heading-subtext {
       max-width: 290px;
+
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 150px;
+        top: -9px;
+      }
     }
   }
 }

@@ -108,14 +108,22 @@
 
     .hoteltwinring {
       width: 100%;
-      max-width: 500px;
-      min-height: 300px;
+
+      @include min-screen ($breakpoint-mobile + 1) {
+        max-width: 500px;
+        min-height: 300px;
+      }
     }
 
     .svg-subtext {
       .heading-subtext {
         max-width: 270px;
         height: 65px;  
+
+        @include max-screen ($breakpoint-mobile) {
+          max-width: 137px;
+          height: 28px;
+        }
       }
     }
 

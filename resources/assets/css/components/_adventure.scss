@@ -131,6 +131,10 @@
 
   &.logo-nozomi {
     margin-bottom: 67px;
+    @include max-screen($breakpoint-mobile) {
+      max-width: 180px;
+      margin-bottom: 16px;
+    }
   }
   
   @include max-screen($breakpoint-mobile) {

@@ -94,6 +94,12 @@
     svg {
       width: 713px;
       height: 83px;
+      margin: 0 auto;
+
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+        height: auto;
+      }
     }
   }
 
@@ -101,6 +107,10 @@
     svg {
       width: 200px;
       height: 37px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 137px;
+      }
     }
   }
 }
@@ -120,6 +130,10 @@
     -webkit-text-fill-color: $color-white;
     -moz-text-fill-color: $color-white;
     -ms-text-fill-color: $color-white;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 13px;
+    }
   }
 
   .is-ie & {
@@ -378,17 +392,27 @@
 
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important
-      width: 295px !important;
+      width: 271px !important;
       // sass-lint:disable-block no-important
-      height: 67px !important;
+      height: 61px !important;
+      // sass-lint:disable-block no-important
+      margin-top: 14px !important;
     }
 
   }
 }
 
 .heading-main-subpage-granroomactivity {
-  // sass-lint:disable-block no-important
-  margin-bottom: 19px !important;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    // sass-lint:disable-block no-important
+    margin-bottom: 19px !important;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    // sass-lint:disable-block no-important
+    margin-bottom: 26px !important;
+  }
 
   .heading-subtext {
     width: 670px;
@@ -399,6 +423,8 @@
       width: 338px !important;
       // sass-lint:disable-block no-important
       height: 63px !important;
+      // sass-lint:disable-block no-important
+      margin-top: 15px !important;
 
       svg {
         fill: $color-white;

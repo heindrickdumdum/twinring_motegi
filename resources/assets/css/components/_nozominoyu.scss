@@ -1,14 +1,25 @@
+// sass-lint:disable no-descending-specificity
+
 // .nozominoyu {}
 
 .nozominoyu-summary {
 	margin-bottom: 60px;
+	margin-top: 111px;
+}
+
+.nozominoyu-summary-inner {
+	padding-top: 21px;
 }
 
 .nozominoyu-paragraph {
   font-size: 15px;
   line-height: 2;
   font-family: $font-hiragino;
-  letter-spacing: 0.229em;
+	letter-spacing: 0.229em;
+	
+	@include max-screen($breakpoint-mobile) {
+		font-size: 12px;
+	}
 
   &.nozominoyu-paragraph-note {
     letter-spacing: 0.245em;  
@@ -16,7 +27,7 @@
 
   &.nozominoyu-subheading {
   	margin-top: 18px;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.24em;
   }
 }
 
@@ -28,38 +39,70 @@
 	text-align: center;
 	background-color: #f5f6fa;
 	padding: 59px;
+
+	@include max-screen($breakpoint-mobile) {
+		padding: 38px 20px;
+	}
 }
 
 .nozominoyu-heading {
 	img {
-		width: 61%;
+		width: 69%;
 	}
 
 	&.nozominoyu-time-table-heading {
 		img {
 			width: 10%;
+
+			@include max-screen($breakpoint-mobile) {
+				width: 17%;
+			}
 		}
 	}
 
 	&.nozominoyu-fee-table-heading {
 		img {
 			width: 12%;
+
+
+			@include max-screen($breakpoint-mobile) {
+				width: 21%;
+			}
 		}
 	}
 
 	&.nozominoyu-amenity-table-heading {
 		img {
 			width: 36%;
+
+
+			@include max-screen($breakpoint-mobile) {
+				width: 60%;
+			}
 		}
 	}
 }
 
 .nozominoyu-article {
 	margin: 32px -15px 0;
+
+	@include max-screen($breakpoint-mobile) {
+		margin: 32px -7px 0;
+	}
 }
 
 .nozominoyu-article-list-item {
 	padding: 0 15px;
+
+	@include max-screen($breakpoint-mobile) {
+		padding: 0 7px;
+	}
+
+	&:last-child {
+		@include max-screen($breakpoint-mobile) {
+			margin-top: 20px;
+		}
+	}
 }
 
 .nozominoyu-article-link {
@@ -78,7 +121,13 @@
 	font-size: 15px;
   line-height: 2;
   font-family: $font-hiragino;
-  letter-spacing: 0.229em;
+	letter-spacing: 0.229em;
+	
+	@include max-screen($breakpoint-mobile) {
+		font-size: 12px;
+		line-height: 1.5;
+		margin-top: 5px;
+	}
 }
 
 .nozominoyu-amenity-table {
@@ -109,9 +158,11 @@
 .nozominoyu-time-table {
 	display: table;
   width: 100%;
-  margin-top: 10px;
+	margin-top: 10px;
 
-  th,td {
+
+	.nozominoyu-time-table-header,
+	.nozominoyu-time-table-data {
 		border: 1px solid $color-gray;
 		text-align: center;
 		background-color: $color-white;
@@ -120,25 +171,118 @@
 		}
 	}
 
-	th {
+	.nozominoyu-time-table-header {
 		&:first-child {
-			width: 21%;
+			width: 20%;
+			height: 86px;
 	    background-color: #f5f6fa;
-			padding: 30px 0;
+			// padding: 30px 0;
 			border-right: 1px solid transparent;
+			@include max-screen($breakpoint-mobile) {
+				height: auto;
+			}
 		}
 	}
 
-	td {
-		width: 256px;
-			@include max-screen($breakpoint-mobile) {
-				width: 100%;
-			}
+	.nozominoyu-time-table-data {
+	&:first-of-type {
+			width: 24.5%;
+		}
+	&:nth-of-type(2) {
+		width: 24.5%;
+		}
 	}
 
 }
 
+
 .nozominoyu-fee,
 .nozominoyu-amenity {
 	margin-top: 60px;
+}
+// SP TABLES 
+.nozominoyu-time-table-sp {
+	display: table;
+	width: 100%;
+
+	td {
+		border: 1px solid $color-gray;
+		text-align: center;
+		background-color: $color-white;
+		font-size: 12px;
+	}
+
+	.time-table-th-sp {
+		border: 1px solid $color-gray;
+		text-align: center;
+		border-right: 1px solid transparent;
+		background-color: #f5f6fa;
+		padding: 20px 0;
+		width: 110px;
+		font-size: 12px;
+	}
+}
+
+.nozominoyu-fee-table-sp {
+	display: table;
+	width: 100%;
+
+	td {
+		border: 1px solid $color-gray;
+		text-align: center;
+		background-color: $color-white;
+		font-size: 12px;
+	}
+
+	.fee-table-th-sp {
+		border: 1px solid $color-gray;
+		text-align: center;
+		border-right: 1px solid transparent;
+		background-color: #f5f6fa;
+		padding: 20px 0;
+		width: 110px;
+		font-size: 12px;
+	}
+
+}
+
+.nozominoyu-amenity-table-sp {
+	display: table;
+	width: 100%;
+
+	td {
+		border: 1px solid $color-gray;
+		text-align: center;
+		background-color: $color-white;
+		font-size: 12px;
+		padding: 25px 27px;
+
+		&:nth-of-type(2) {
+			max-height: 177px;
+		}
+	}
+
+	.amenity-table-th-sp {
+		border: 1px solid $color-gray;
+		text-align: center;
+		border-right: 1px solid transparent;
+		background-color: #f5f6fa;
+		padding: 20px 0;
+		width: 110px;
+		font-size: 12px;
+		vertical-align: top;
+	}
+
+}
+
+.nozominoyu-time-table-list-item-sp {
+	margin-top: 43px;
+
+	&:first-child {
+		margin-top: 31px;
+	}
+}
+
+.nozominoyu-fee-table-list-sp {
+	margin-top: 20px;
 }

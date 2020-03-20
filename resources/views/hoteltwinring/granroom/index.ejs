@@ -26,16 +26,14 @@
       </ul>
 
       <div class="l-container mv-container">
-        <h1 class="mv-heading hellowoods-mv-heading granroom-mv-heading">
+        <div class="mv-heading hellowoods-mv-heading granroom-mv-heading">
           <%- include('/partials/heading', {
-            modifier: 'heading-hellowoods',
+            modifier: 'heading-hellowoods heading-granroom',
             heading_level: 1,
             text: 'Gran Room',
-            alt: '',
-            subtextvg: 'granroom-top-title',
-            altSubtext: ''
+            subtextvg: 'granroom-top-title'
           }) %>
-        </h1>
+        </div>
 
         <div class="u-show-pc mv-today mv-log mv-granroom-logo">
           <div class="mv-l-inner">
@@ -480,7 +478,7 @@
                 <div class="media-list-text">
                   <h3 class="subpage-title">
                     <span class="u-show-pc">
-                      サーキットの夜空に輝
+                      サーキットの夜空に輝く
                     </span>  
                     <br/>
                     <span class="u-show-pc">
@@ -573,27 +571,36 @@
           <div class="media-grid">
 
             <div class="media-grid-item">
-              <div class="media-grid-img media-grid-img-rounded u-show-pc" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img1.jpg') -%>);">
-              </div>
+              <a href="/hoteltwinring/familyroom/">
+                <div class="media-grid-img media-grid-img-rounded u-show-pc" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img1.jpg') -%>);">
+                </div>
 
-              <div class="media-grid-img media-grid-img-rounded u-show-sp" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img1-sp.jpg') -%>);">
-              </div>
+                <div class="media-grid-img media-grid-img-rounded u-show-sp" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img1-sp.jpg') -%>);">
+                </div>
+              </a>
 
               <h3 class="media-grid-title subpage-title">
-                <span>スーベニアファミリールーム
-                </span>
+                <a href="/hoteltwinring/familyroom/">
+                  <span>
+                    スーベニアファミリールーム
+                  </span>
+                </a>
               </h3>
               
             </div>
 
             <div class="media-grid-item">
-              <div class="media-grid-img media-grid-img-rounded" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img2.jpg') -%>);">
-              </div>
+              <a href="/hoteltwinring/standerdroom/">
+                <div class="media-grid-img media-grid-img-rounded" style="background-image: url(<%- mix('/assets/images/granroom/otherroom-img2.jpg') -%>);">
+                </div>
+              </a>
 
               <h3 class="media-grid-title subpage-title">
-                <span>
-                  スタンダードルーム
-                </span>
+                <a href="/hoteltwinring/standerdroom/">
+                  <span>
+                    スタンダードルーム
+                  </span>
+                </a>
               </h3>
               
             </div>

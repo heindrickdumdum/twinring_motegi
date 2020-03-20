@@ -104,6 +104,9 @@
   }
 
   &.heading-nozominoyu-summary {
+    @include max-screen($breakpoint-mobile) {
+      margin: 24px 0 0;
+    }
     svg {
       width: 200px;
       height: 37px;

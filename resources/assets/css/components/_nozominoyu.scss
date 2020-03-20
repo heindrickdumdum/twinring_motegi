@@ -4,6 +4,11 @@
 
 .nozominoyu-summary {
 	margin-bottom: 60px;
+	margin-top: 111px;
+}
+
+.nozominoyu-summary-inner {
+	padding-top: 21px;
 }
 
 .nozominoyu-paragraph {
@@ -22,7 +27,7 @@
 
   &.nozominoyu-subheading {
   	margin-top: 18px;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.24em;
   }
 }
 
@@ -42,7 +47,7 @@
 
 .nozominoyu-heading {
 	img {
-		width: 61%;
+		width: 69%;
 	}
 
 	&.nozominoyu-time-table-heading {
@@ -153,9 +158,11 @@
 .nozominoyu-time-table {
 	display: table;
   width: 100%;
-  margin-top: 10px;
+	margin-top: 10px;
 
-  th,td {
+
+	.nozominoyu-time-table-header,
+	.nozominoyu-time-table-data {
 		border: 1px solid $color-gray;
 		text-align: center;
 		background-color: $color-white;
@@ -164,23 +171,30 @@
 		}
 	}
 
-	th {
+	.nozominoyu-time-table-header {
 		&:first-child {
-			width: 21%;
+			width: 20%;
+			height: 86px;
 	    background-color: #f5f6fa;
-			padding: 30px 0;
+			// padding: 30px 0;
 			border-right: 1px solid transparent;
+			@include max-screen($breakpoint-mobile) {
+				height: auto;
+			}
 		}
 	}
 
-	td {
-		width: 256px;
-			@include max-screen($breakpoint-mobile) {
-				width: 100%;
-			}
+	.nozominoyu-time-table-data {
+	&:first-of-type {
+			width: 24.5%;
+		}
+	&:nth-of-type(2) {
+		width: 24.5%;
+		}
 	}
 
 }
+
 
 .nozominoyu-fee,
 .nozominoyu-amenity {

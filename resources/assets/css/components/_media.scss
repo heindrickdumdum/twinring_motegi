@@ -56,6 +56,13 @@
   justify-content: space-between;
   margin-top: 64px;
 
+  @include min-screen($breakpoint-mobile + 1) {
+    .subpage-section-otherroom & {//hotel granroom/familyroom
+      padding-left: 27px;
+      padding-right: 27px;
+    }
+  }
+
   @include max-screen($breakpoint-mobile) {
     display: block;
     margin-top: 30px;
@@ -918,6 +925,18 @@
 
     &:last-child {
       margin-bottom: 0px;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        .subpage-section-granroomactivity & {//hotel granroom
+          margin-bottom: 45px;
+        }
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      .subpage-section-granroomactivity & {//hotel granroom
+        margin-bottom: 50px;
+      }
     }
 
     @include max-screen($breakpoint-mobile) {
@@ -942,6 +961,7 @@
 
       .subpage-section-granroomactivity & {//hotel granroom
         min-height: 235px;
+        background-position: center bottom;
       }
     }
   }

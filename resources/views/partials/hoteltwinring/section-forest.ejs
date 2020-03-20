@@ -24,10 +24,17 @@
             }) %>
           </div>
           
-          <p class="adventure-sub-heading">Superior Family Room</p>
+          <div class="adventure-sub-heading">
+            <%- include('/partials/heading', {
+              modifier: 'room-type svg-block room-superior',
+              subtextvg: 'superior-title-english',
+            }) %>
+          </div>
+
+          
         </div>
         
-        <p class="adventure-content-copy">
+        <p class="adventure-content-copy hoteltwinring">
           木の温もりを感じながら、ゆったりした時間を過ごせる3部屋だけの特別室「グランルーム」<br>
 広々とした部屋には幅4mのワイドベッドをはじめロッキングチェア、ハンモックがあり、<br>
 森の中のようにリラックスしてお過ごしいただけます。
@@ -62,10 +69,13 @@
             }) %>
           </div>
           
-          <p class="adventure-sub-heading">Gran Room</p>
+          <div class="adventure-sub-heading"><%- include('/partials/heading', {
+            modifier: 'room-type svg-block room-gran',
+            subtextvg: 'gran-room-english',
+          }) %></div>
         </div>
         
-        <p class="adventure-content-copy">
+        <p class="adventure-content-copy hoteltwinring">
           木の温もりを感じながら、ゆったりした時間を過ごせる3部屋だけの特別室「グランルーム」<br>
 広々とした部屋には幅4mのワイドベッドをはじめロッキングチェア、ハンモックがあり、<br>
 森の中のようにリラックスしてお過ごしいただけます。
@@ -101,10 +111,15 @@
               }) %>
             </div>
             
-            <p class="adventure-sub-heading">Standard Room</p>
+            <div class="adventure-sub-heading">
+              <%- include('/partials/heading', {
+              modifier: 'room-type svg-block svg-subtext',
+              subtextvg: 'standard-room-english',
+            }) %>
+          </div>
           </div>
           
-          <p class="adventure-content-copy">
+          <p class="adventure-content-copy hoteltwinring">
             広大な森とレーシングコースを一望しながら、優雅な気分でゆったりとした時間をお過ごしください。
           </p>
   

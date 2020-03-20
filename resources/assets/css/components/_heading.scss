@@ -751,9 +751,10 @@
   &.hoteltwinring {
     .heading-subtext {
       display: block;
+      height: 31px;
     }
     .heading {
-      margin-bottom: 20px;
+      margin-bottom: 13px;
     }
   }
 }
@@ -1008,5 +1009,31 @@
 .svg-block {
   p.heading-subtext {
     display: block;
+  }
+}
+
+.room-type {
+  div.heading {
+    margin: 0;
+  }
+  p.heading-subtext {
+    margin: 0 auto;
+  }
+
+  &.room-superior {
+    p.heading-subtext {
+      height: 16px;
+    }
+  }
+  &.room-gran {
+    p.heading-subtext {
+      max-width: 140px;
+    }
+  }
+
+  &.room-standard {
+    p.heading-subtext {
+      max-width: 290px;
+    }
   }
 }

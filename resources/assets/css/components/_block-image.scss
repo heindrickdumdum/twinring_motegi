@@ -103,8 +103,21 @@
 
   &.hoteltwinring-lounge {
     height: auto;
-    padding: 10% 0;
+    padding: 150px 0;
     background-image: url(/assets/images/hoteltwinring/lounge-bg.jpg);
+
+    .hoteltwinring {
+      width: 100%;
+      max-width: 500px;
+      min-height: 300px;
+    }
+
+    .svg-subtext {
+      .heading-subtext {
+        max-width: 270px;
+        height: 65px;  
+      }
+    }
 
     @include max-screen($breakpoint-mobile) {
       padding-top: 100px;

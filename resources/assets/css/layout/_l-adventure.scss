@@ -12,10 +12,10 @@
 
   .adventure-ribbon {
     position: absolute;
-    top: -50px;
-    left: -30px;
-    height: 150px;
-    width: 150px;
+    top: -53px;
+    left: -10px;
+    height: 170px;
+    width: 170px;
     background: url(/assets/images/hoteltwinring/NEW-icon-image.png) no-repeat;
     background-size: contain;
     display: flex;
@@ -56,13 +56,27 @@
     padding-top: 140px;
   }
 
+  &.l-hoteltwinring {
+    padding-top: 65px;
+
+    .l-button {
+      margin-top: 60px;
+    }
+  }
+
   &.hoteltwinring {
-    padding-top: 30px;
+    padding-top: 7px;
+    margin-top: -60px;
+
+    .l-button {
+      margin-top: 37px;
+    }
 
     .adventure-sub-heading {
       font-size: 20px;
       font-weight: bold;
       font-family: initial;
+      letter-spacing: 5px;
     }
   }
 

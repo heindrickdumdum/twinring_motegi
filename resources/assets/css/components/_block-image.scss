@@ -112,6 +112,7 @@
       @include min-screen ($breakpoint-mobile + 1) {
         max-width: 500px;
         min-height: 300px;
+        padding-top: 20px;
       }
     }
 

@@ -787,20 +787,26 @@
     }
   }
 
-  @include max-screen ($breakpoint-mobile) {
-    &.room-gran {
-      .heading-subtext {
+  &.room-gran {
+    .heading-subtext {
+      height: 33px;
+      @include max-screen ($breakpoint-mobile) {
         margin-bottom: 13px;
         height: 20px;
       }
+      
     }
-    &.room-standard {
-      .heading-subtext {
+  }
+  &.room-standard {
+    .heading-subtext {
+      height: 33px;
+      @include max-screen ($breakpoint-mobile) {
         margin-bottom: 13px;
         height: 16px;
       }
-    } 
-  }
+    }
+  } 
+  
   
 }
 
@@ -1067,16 +1073,18 @@
 
   &.room-superior {
     p.heading-subtext {
-      height: 16px;
+      height: 20px;
 
       @include max-screen ($breakpoint-mobile) {
         top: -21px;
+        height: 16px;
       }
     }
   }
   &.room-gran {
     p.heading-subtext {
       max-width: 140px;
+      height: 32px;
 
       @include max-screen ($breakpoint-mobile) {
         max-width: 105px;
@@ -1087,7 +1095,9 @@
 
   &.room-standard {
     p.heading-subtext {
-      max-width: 290px;
+      max-width: 195px;
+      height: 20px;
+      top: -3px;  
 
       @include max-screen ($breakpoint-mobile) {
         max-width: 150px;

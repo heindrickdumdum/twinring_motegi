@@ -129,10 +129,10 @@
 
   .heading-main-subpage-granroomactivity-onecolor & {//hotel granroom
     background: none !important;
-    color: $color-white;
-    -webkit-text-fill-color: $color-white;
-    -moz-text-fill-color: $color-white;
-    -ms-text-fill-color: $color-white;
+    color: $color-white !important;
+    -webkit-text-fill-color: $color-white !important;
+    -moz-text-fill-color: $color-white !important;
+    -ms-text-fill-color: $color-white !important;
 
     @include min-screen($breakpoint-mobile + 1) {
       margin-bottom: 13px;

@@ -30,8 +30,11 @@
     }
 
     .heading-text {
-      background: none;
-      -webkit-text-fill-color: $color-white;
+      background: none !important;
+      color: $color-white !important;
+      -webkit-text-fill-color: $color-white !important;
+      -moz-text-fill-color: $color-white !important;
+      -ms-text-fill-color: $color-white !important;
     }
 
     .heading-subtext {

@@ -180,6 +180,14 @@
   background-size: cover;
   border-radius: 5px 0 0 5px;
 
+  .mv-subpage-hotel & {//hotel granroom/familyroom
+    .is-ie & {
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 150px;
+      }
+    }
+  }
+
   @include max-screen($breakpoint-mobile) {
     .mv-subpage-hotel & {//hotel granroom
       font-size: 12px;
@@ -191,6 +199,12 @@
   span {
     display: inline-block;
     width: 16px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      .mv-subpage-hotel & {//hotel granroom
+        display: inline;
+      }
+    }
   }
 }
 

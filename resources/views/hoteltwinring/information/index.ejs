@@ -21,118 +21,118 @@
       </h1>
     </div>
     <main>
-      <section class="subpage-section">
-        <div class="subpage-inner subpage-inner-reserve-reminder">
-          <div class="reminder">
-            <img class="reminder-frame" src="<%= mix('/assets/images/reserve/reserve-reminder-frame.png') %>" alt="">
-            <h2 class="reminder-heading"><span>ご予約の前に</span></h2>
-            <p class="reminder-description">
-              ・ご予約の際は、事前にお客様情報の登録が必要となります。<br>
-              ・インターネット予約と電話予約でそれぞれ受付開始日が異なっております。<br>
-              ・キャンセル待ちにつきましては、電話予約開始日より承ります。<br>
-              ・レース/イベント開催期間はご予約をお受けできない、または別途ご予約日を設ける場合がございます。<br>
-              ・内容は予告なく変更になる場合がございます。</p>
+        <section class="subpage-section">
+          <div class="subpage-inner subpage-inner-reserve-reminder">
+            <div class="reminder">
+              <img class="reminder-frame" src="<%= mix('/assets/images/reserve/reserve-reminder-frame.png') %>" alt="">
+              <h2 class="reminder-heading"><span>ご予約の前に</span></h2>
+              <p class="reminder-description">
+                ・ご予約の際は、事前にお客様情報の登録が必要となります。<br>
+                ・インターネット予約と電話予約でそれぞれ受付開始日が異なっております。<br>
+                ・キャンセル待ちにつきましては、電話予約開始日より承ります。<br>
+                ・レース/イベント開催期間はご予約をお受けできない、または別途ご予約日を設ける場合がございます。<br>
+                ・内容は予告なく変更になる場合がございます。</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="subpage-inner subpage-inner-anchor subpage-inner-anchor-reserve">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-gradient-tobottom heading-reservation',
+              text: 'Reservation',
+              alt: '',
+              subtextvg: 'reservation-title',
+              altSubtextvg: 'Reservation',
+              altSubtext: ''
+            }); -%>
+          </div>
+
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-gradient-tobottom heading-reservation',
+              text: 'Reservation',
+              alt: '',
+              subtextvg: 'reservation-title',
+              altSubtextvg: 'Reservation',
+              altSubtext: ''
+            }); -%>
+          </div>
+
+          <div class="column-link l-column-link column-link-reserve">
+            <ul class="link-container">
+              <li class="link-item">
+                <a class="js-scroll" href="#internet-reservation">
+                  <img src="<%- mix('/assets/images/reserve/reserve-icon-pc.png') -%>" alt="インターネット予約">
+                  <span>インターネット予約</span>
+                </a>
+              </li>
+              <li class="link-item">
+                <a class="js-scroll" href="#phone-reservation">
+                  <img src="<%- mix('/assets/images/reserve/reserve-icon-tel.png') -%>" alt="電話予約">
+                  <span>電話予約</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
 
-      <div class="subpage-inner subpage-inner-anchor subpage-inner-anchor-reserve">
-        <div class="l-section-title u-show-pc">
-          <%- include('/partials/heading', {
-            modifier: 'heading-gradient-tobottom heading-reservation',
-            text: 'Reservation',
-            alt: '',
-            subtextvg: 'reservation-title',
-            altSubtextvg: 'Reservation',
-            altSubtext: ''
-          }); -%>
-        </div>
+        <section id="internet-reservation" class="subpage-section">
+          <div class="subpage-inner subpage-inner-reserve">
+            <h3 class="subpage-title subpage-title-reserve">
+              <span>インターネット予約</span>
+            </h3>
+            <%
+              let tableInternetReserve = [
+                {
+                  tableHeading: '2020年3月1日（日）～ 6月28日（日）',
+                  tableLinkDesc: 'https://asp.hotel-story.ne.jp/ver3d/planlist.asp?hcod1=61730&hcod2=001&c2plan=9001&clrmode=true',
+                  tableDescription: 'プラン一覧はこちら'
+                },
+                {
+                  tableHeading: '2020年6月29日（月）～ 9月27日（日）',
+                  tableLinkDesc: 'https://asp.hotel-story.ne.jp/ver3d/planlist.asp?hcod1=61730&hcod2=001&c2plan=9001&clrmode=true',
+                  tableDescription: 'プラン一覧はこちら'
+                },
+                {
+                  tableHeading: '2020年9月28日（月）～ 2021年2月28日（日）',
+                  tableDescription: '受付開始日が確定次第ご案内いたします'
+                }
+              ]
+            %>
+            <%- include('/partials/table-info', { tableInfoList: tableInternetReserve, 'tableModifier': '' }); %>
+          </div>
+        </section>
+        <section id="phone-reservation" class="subpage-section">
+          <div class="subpage-inner subpage-inner-reserve">
+            <h3 class="subpage-title subpage-title-reserve">
+              <span>電話予約</span>
+            </h3>
+            <%
+              let tablePhoneReserve = [
+                {
+                  tableHeading: '2020年3月1日（日）～ 6月28日（日）',
+                  tableDescription: '<a class="table-info-link-description table-info-link-large" href="tel:028-564-0489">TEL 0285-64-0489</a><br><span>（10:00～17:30）</span>',
+                  rowSpan: '2'
+                },
+                {
+                  tableHeading: '2020年6月29日（月）～ 9月27日（日）',
+                },
+                {
+                  tableHeading: '2020年9月28日（月）～ 2021年2月28日（日）',
+                  tableDescription: '受付開始日が確定次第ご案内いたします'
+                }
+              ]
+            %>
+            <%- include('/partials/table-info', { tableInfoList: tablePhoneReserve, 'tableModifier': '' }); %>
+          </div>
+        </section>
 
-        <div class="l-section-title u-show-sp">
-          <%- include('/partials/heading', {
-            modifier: 'heading-gradient-tobottom heading-reservation',
-            text: 'Reservation',
-            alt: '',
-            subtextvg: 'reservation-title',
-            altSubtextvg: 'Reservation',
-            altSubtext: ''
-          }); -%>
-        </div>
+      <%- include('/partials/recommendation') -%>
 
-        <div class="column-link l-column-link column-link-reserve">
-          <ul class="link-container">
-            <li class="link-item">
-              <a class="js-scroll" href="#internet-reservation">
-                <img src="<%- mix('/assets/images/reserve/reserve-icon-pc.png') -%>" alt="インターネット予約">
-                <span>インターネット予約</span>
-              </a>
-            </li>
-            <li class="link-item">
-              <a class="js-scroll" href="#phone-reservation">
-                <img src="<%- mix('/assets/images/reserve/reserve-icon-tel.png') -%>" alt="電話予約">
-                <span>電話予約</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <section id="internet-reservation" class="subpage-section">
-        <div class="subpage-inner subpage-inner-reserve">
-          <h3 class="subpage-title subpage-title-reserve">
-            <span>インターネット予約</span>
-          </h3>
-          <%
-            let tableInternetReserve = [
-              {
-                tableHeading: '2020年3月1日（日）～ 6月28日（日）',
-                tableLinkDesc: 'https://asp.hotel-story.ne.jp/ver3d/planlist.asp?hcod1=61730&hcod2=001&c2plan=9001&clrmode=true',
-                tableDescription: 'プラン一覧はこちら'
-              },
-              {
-                tableHeading: '2020年6月29日（月）～ 9月27日（日）',
-                tableLinkDesc: 'https://asp.hotel-story.ne.jp/ver3d/planlist.asp?hcod1=61730&hcod2=001&c2plan=9001&clrmode=true',
-                tableDescription: 'プラン一覧はこちら'
-              },
-              {
-                tableHeading: '2020年9月28日（月）～ 2021年2月28日（日）',
-                tableDescription: '受付開始日が確定次第ご案内いたします'
-              }
-            ]
-          %>
-          <%- include('/partials/table-info', { tableInfoList: tableInternetReserve, 'tableModifier': '' }); %>
-        </div>
-      </section>
-      <section id="phone-reservation" class="subpage-section">
-        <div class="subpage-inner subpage-inner-reserve">
-          <h3 class="subpage-title subpage-title-reserve">
-            <span>電話予約</span>
-          </h3>
-          <%
-            let tablePhoneReserve = [
-              {
-                tableHeading: '2020年3月1日（日）～ 6月28日（日）',
-                tableDescription: '<a class="table-info-link-description table-info-link-large" href="tel:028-564-0489">TEL 0285-64-0489</a><br><span>（10:00～17:30）</span>',
-                rowSpan: '2'
-              },
-              {
-                tableHeading: '2020年6月29日（月）～ 9月27日（日）',
-              },
-              {
-                tableHeading: '2020年9月28日（月）～ 2021年2月28日（日）',
-                tableDescription: '受付開始日が確定次第ご案内いたします'
-              }
-            ]
-          %>
-          <%- include('/partials/table-info', { tableInfoList: tablePhoneReserve, 'tableModifier': '' }); %>
-        </div>
-      </section>
-    </div>
-
-    <%- include('/partials/recommendation') -%>
-
-    <%- include('/partials/pickup') -%>
-  </main>
+      <%- include('/partials/pickup') -%>
+    </main>
+  </div>
 </div>
 
 <!-- BREADCRUMBS -->

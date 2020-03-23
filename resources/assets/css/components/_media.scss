@@ -114,6 +114,7 @@
 
       @include max-screen($breakpoint-mobile) {
         min-height: 224px;
+        max-width: 100%;
 
         .subpage-section-otherroom & {//hotel granroom
           border-radius: 5px;

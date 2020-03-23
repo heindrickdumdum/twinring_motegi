@@ -7,6 +7,7 @@ var fn = require('./function.js');
 var init = require('./init.js');
 var arrangePath = require('./arrangePath.js');
 var shiftjis = require('./shiftjis.js');
+var scpContents = require('./scpContents.js');
 
 function convertHtml(){
 	var header = {
@@ -51,11 +52,13 @@ module.exports.convertHtml = convertHtml();
 module.exports.arrangePath = arrangePath();
 module.exports.init = shiftjis();
 // module.exports.shiftjis = shiftjis(process.argv);
+module.exports.scpContents = scpContents();
 module.exports.convert = function(){
 	init();
 	arrangePath();
 	convertHtml();
 	shiftjis();
+	scpContents();
 };
 
 

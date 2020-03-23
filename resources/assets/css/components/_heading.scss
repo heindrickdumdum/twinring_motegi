@@ -104,6 +104,9 @@
   }
 
   &.heading-nozominoyu-summary {
+    @include max-screen($breakpoint-mobile) {
+      margin: 24px 0 0;
+    }
     svg {
       width: 200px;
       height: 37px;
@@ -126,10 +129,14 @@
 
   .heading-main-subpage-granroomactivity-onecolor & {//hotel granroom
     background: none !important;
-    color: $color-white;
-    -webkit-text-fill-color: $color-white;
-    -moz-text-fill-color: $color-white;
-    -ms-text-fill-color: $color-white;
+    color: $color-white !important;
+    -webkit-text-fill-color: $color-white !important;
+    -moz-text-fill-color: $color-white !important;
+    -ms-text-fill-color: $color-white !important;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 13px;
+    }
   }
 
   .is-ie & {
@@ -388,17 +395,27 @@
 
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important
-      width: 295px !important;
+      width: 271px !important;
       // sass-lint:disable-block no-important
-      height: 67px !important;
+      height: 61px !important;
+      // sass-lint:disable-block no-important
+      margin-top: 14px !important;
     }
 
   }
 }
 
 .heading-main-subpage-granroomactivity {
-  // sass-lint:disable-block no-important
-  margin-bottom: 19px !important;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    // sass-lint:disable-block no-important
+    margin-bottom: 19px !important;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    // sass-lint:disable-block no-important
+    margin-bottom: 26px !important;
+  }
 
   .heading-subtext {
     width: 670px;
@@ -409,6 +426,8 @@
       width: 338px !important;
       // sass-lint:disable-block no-important
       height: 63px !important;
+      // sass-lint:disable-block no-important
+      margin-top: 15px !important;
 
       svg {
         fill: $color-white;
@@ -761,11 +780,34 @@
   &.hoteltwinring {
     .heading-subtext {
       display: block;
+      height: 31px;
     }
     .heading {
-      margin-bottom: 20px;
+      margin-bottom: 13px;
     }
   }
+
+  &.room-gran {
+    .heading-subtext {
+      height: 33px;
+      @include max-screen ($breakpoint-mobile) {
+        margin-bottom: 13px;
+        height: 20px;
+      }
+      
+    }
+  }
+  &.room-standard {
+    .heading-subtext {
+      height: 33px;
+      @include max-screen ($breakpoint-mobile) {
+        margin-bottom: 13px;
+        height: 16px;
+      }
+    }
+  } 
+  
+  
 }
 
 .dokidoki-video,
@@ -1018,5 +1060,49 @@
 .svg-block {
   p.heading-subtext {
     display: block;
+  }
+}
+
+.room-type {
+  div.heading {
+    margin: 0;
+  }
+  p.heading-subtext {
+    margin: 0 auto;
+  }
+
+  &.room-superior {
+    p.heading-subtext {
+      height: 20px;
+
+      @include max-screen ($breakpoint-mobile) {
+        top: -21px;
+        height: 16px;
+      }
+    }
+  }
+  &.room-gran {
+    p.heading-subtext {
+      max-width: 140px;
+      height: 32px;
+
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 105px;
+        top: -11px;
+      }
+    }
+  }
+
+  &.room-standard {
+    p.heading-subtext {
+      max-width: 195px;
+      height: 20px;
+      top: -3px;  
+
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 150px;
+        top: -9px;
+      }
+    }
   }
 }

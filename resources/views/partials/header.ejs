@@ -6,161 +6,162 @@
 <script src="<%= mix('/assets/js/header.js') %>" defer></script>
 <!-- END LIG ASSETS CSS/JS -->
 
-<header id="lig-header">
-  <div class="u-show-pc">
-    <div class="header-sub-content-overlay" id="js-overlay"></div>
-    <div class="header-wrap">
-      <div class="l-container" id="js-header-container">
-          <div class="l-header-top">
-            <% if(typeof topHeading === 'undefined') { %>
-              <div class="l-header-top-logo">
-                <a class="header-logo" href="/">
-                  <img src="<%= mix('/assets/images/logo.png') %>" alt="Twin Ring Motegi">
-                </a>
-              </div>
-            <% } else { %>
-              <h1 class="l-header-top-logo">
-                <a class="header-logo" href="/">
-                  <img src="<%= mix('/assets/images/logo.png') %>" alt="Twin Ring Motegi">
-                </a>
-              </h1>
-            <% } %>
-            <div class="l-header-top-right">
-              <ul class="header-top-others">
-                <li class="header-top-others-item header-top-others-item-logo">
-                  <a class="header-top-others-link" href="/motogp/">
-                    <img src="<%= mix('/assets/images/logo-motogp.png') %>" alt="MotoGP">
+<div class="wrap" id="js-wrap"> <!-- STG FIX -->
+  <header id="lig-header">
+    <div class="u-show-pc">
+      <div class="header-sub-content-overlay" id="js-overlay"></div>
+      <div class="header-wrap">
+        <div class="l-container" id="js-header-container">
+            <div class="l-header-top">
+              <% if(typeof topHeading === 'undefined') { %>
+                <div class="l-header-top-logo">
+                  <a class="header-logo" href="/">
+                    <img src="<%= mix('/assets/images/logo.png') %>" alt="Twin Ring Motegi">
                   </a>
-                </li>
-                <li class="header-top-others-item">
-                  <a class="header-top-others-link js-button-lang" href="#">
-                    <span class="header-top-others-lang-text">LANGUAGE
-                      <i class="header-top-others-lang-icon">
+                </div>
+              <% } else { %>
+                <h1 class="l-header-top-logo">
+                  <a class="header-logo" href="/">
+                    <img src="<%= mix('/assets/images/logo.png') %>" alt="Twin Ring Motegi">
+                  </a>
+                </h1>
+              <% } %>
+              <div class="l-header-top-right">
+                <ul class="header-top-others">
+                  <li class="header-top-others-item header-top-others-item-logo">
+                    <a class="header-top-others-link" href="/motogp/">
+                      <img src="<%= mix('/assets/images/logo-motogp.png') %>" alt="MotoGP">
+                    </a>
+                  </li>
+                  <li class="header-top-others-item">
+                    <a class="header-top-others-link js-button-lang" href="#">
+                      <span class="header-top-others-lang-text">LANGUAGE
+                        <i class="header-top-others-lang-icon">
+                          <%- include('/partials/svg', {
+                            name: 'arrow-down'
+                          }) %>
+                        </i>
+                      </span>
+                    </a>
+                    <ul class="header-lang js-header-lang">
+                      <li class="header-lang-item">
+                        <a href="/" >JP</a>
+                      </li>
+                      <li class="header-lang-item">
+                        <a href="/english/">EN</a>
+                      </li>
+                      <li class="header-lang-item">
+                        <a href="/tw/">CH</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <nav class="header-top-nav">
+                  <% getData().data.headerTopNav.forEach( topNavItem => { %>
+                  <li class="header-top-nav-item js-top-nav-button">
+                    <a class="header-top-nav-link" href="<%- topNavItem.link %>"><%- topNavItem.text %></a>
+                    <% if(typeof topNavItem.sub === 'object') { %>
+                    <div class="header-top-nav-sub">
+                      <% topNavItem.sub.forEach( subItem => { %>
+                        <ul>
+                        <% if(typeof subItem === 'object') {
+                          subItem.forEach( item => { %>
+                          <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="<%- item.link %>"><%- item.text %></a></li>
+                        <% });
+                          } %>
+                        </ul>
+                      <% }) %>
+                    </div>
+                    <% } %>
+                  </li>
+                  <% }) %>
+                </nav>
+              </div>
+            </div>
+
+            <div class="l-header-bottom">
+              <nav>
+                <ul class="header-bottom-list">
+                  <% getData().data.headerBottomNav.forEach( bottomNavItem => { %>
+                  <li class="header-bottom-item<%- ' '+bottomNavItem.modifier %>">
+                    <a class="header-bottom-link js-header-button" data-target="<%- bottomNavItem.link %>" href="#">
+                      <span class="header-bottom-link-text"><%- bottomNavItem.text %></span>
+                      <i class="header-bottom-icon">
                         <%- include('/partials/svg', {
-                          name: 'arrow-down'
+                          name: bottomNavItem.icon
                         }) %>
                       </i>
-                    </span>
-                  </a>
-                  <ul class="header-lang js-header-lang">
-                    <li class="header-lang-item">
-                      <a href="/" >JP</a>
-                    </li>
-                    <li class="header-lang-item">
-                      <a href="/english/">EN</a>
-                    </li>
-                    <li class="header-lang-item">
-                      <a href="/tw/">CH</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <nav class="header-top-nav">
-                <% getData().data.headerTopNav.forEach( topNavItem => { %>
-                <li class="header-top-nav-item js-top-nav-button">
-                  <a class="header-top-nav-link" href="<%- topNavItem.link %>"><%- topNavItem.text %></a>
-                  <% if(typeof topNavItem.sub === 'object') { %>
-                  <div class="header-top-nav-sub">
-                    <% topNavItem.sub.forEach( subItem => { %>
-                      <ul>
-                      <% if(typeof subItem === 'object') {
-                        subItem.forEach( item => { %>
-                        <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="<%- item.link %>"><%- item.text %></a></li>
-                      <% });
-                        } %>
-                      </ul>
-                    <% }) %>
-                  </div>
-                  <% } %>
-                </li>
-                <% }) %>
+                    </a>
+                  </li>
+                  <% }) %>
+                  <li class="header-bottom-item header-bottom-item-shop">
+                    <a class="header-bottom-link" href="/goods_m/">
+                      <span class="header-bottom-link-text">グッズ＆<br class="u-show-pc">ショップ</span>
+                      <i class="header-bottom-icon">
+                        <%- include('/partials/svg', {
+                          name: 'shop'
+                        }) %>
+                      </i>
+                    </a>
+                  </li>
+                </ul>
               </nav>
             </div>
+
+          <%- include('/partials/emergency-news') %>
+        </div>
+      </div>
+
+      <div class="header-sub-content-wrap js-header-sub" data-content="#header-sub-access">
+        <div class="header-sub-content js-header-sub-content">
+          <div class="header-sub-content-inner-wrap">
+            <span class="header-sub-close js-header-close">CLOSE</span>
+
+            <%- include('/partials/header-content-access') %>
           </div>
+        </div>
+      </div>
+      <div class="header-sub-content-wrap js-header-sub" data-content="#header-sub-attraction">
+        <div class="header-sub-content js-header-sub-content">
+          <div class="header-sub-content-inner-wrap">
+            <span class="header-sub-close js-header-close">CLOSE</span>
 
-          <div class="l-header-bottom">
-            <nav>
-              <ul class="header-bottom-list">
-                <% getData().data.headerBottomNav.forEach( bottomNavItem => { %>
-                <li class="header-bottom-item<%- ' '+bottomNavItem.modifier %>">
-                  <a class="header-bottom-link js-header-button" data-target="<%- bottomNavItem.link %>" href="#">
-                    <span class="header-bottom-link-text"><%- bottomNavItem.text %></span>
-                    <i class="header-bottom-icon">
-                      <%- include('/partials/svg', {
-                        name: bottomNavItem.icon
-                      }) %>
-                    </i>
-                  </a>
-                </li>
-                <% }) %>
-                <li class="header-bottom-item header-bottom-item-shop">
-                  <a class="header-bottom-link" href="/goods_m/">
-                    <span class="header-bottom-link-text">グッズ＆<br class="u-show-pc">ショップ</span>
-                    <i class="header-bottom-icon">
-                      <%- include('/partials/svg', {
-                        name: 'shop'
-                      }) %>
-                    </i>
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <%- include('/partials/header-content-attraction') %>
           </div>
-
-        <%- include('/partials/emergency-news') %>
+        </div>
       </div>
-    </div>
+      <div class="header-sub-content-wrap js-header-sub" data-content="#header-sub-motorsports">
+        <div class="header-sub-content js-header-sub-content">
+          <div class="header-sub-content-inner-wrap">
+            <span class="header-sub-close js-header-close">CLOSE</span>
 
-    <div class="header-sub-content-wrap js-header-sub" data-content="#header-sub-access">
-      <div class="header-sub-content js-header-sub-content">
-        <div class="header-sub-content-inner-wrap">
-          <span class="header-sub-close js-header-close">CLOSE</span>
+            <%- include('/partials/header-content-motorsports') %>
+          </div>
+        </div>
+      </div>
+      <div class="header-sub-content-wrap js-header-sub" data-content="#header-sub-camp">
+        <div class="header-sub-content js-header-sub-content">
+          <div class="header-sub-content-inner-wrap">
+            <span class="header-sub-close js-header-close">CLOSE</span>
 
-          <%- include('/partials/header-content-access') %>
+            <%- include('/partials/header-content-camp') %>
+          </div>
+        </div>
+      </div>
+      <div class="header-sub-content-wrap js-header-sub" data-content="#header-sub-restaurant">
+        <div class="header-sub-content js-header-sub-content">
+          <div class="header-sub-content-inner-wrap">
+            <span class="header-sub-close js-header-close">CLOSE</span>
+
+            <%- include('/partials/header-content-restaurant') %>
+          </div>
         </div>
       </div>
     </div>
-    <div class="header-sub-content-wrap js-header-sub" data-content="#header-sub-attraction">
-      <div class="header-sub-content js-header-sub-content">
-        <div class="header-sub-content-inner-wrap">
-          <span class="header-sub-close js-header-close">CLOSE</span>
 
-          <%- include('/partials/header-content-attraction') %>
-        </div>
-      </div>
+    <%- include('/partials/header-sp') -%>
+    <div class="u-show-sp">
+      <%- include('/partials/emergency-news') %>
     </div>
-    <div class="header-sub-content-wrap js-header-sub" data-content="#header-sub-motorsports">
-      <div class="header-sub-content js-header-sub-content">
-        <div class="header-sub-content-inner-wrap">
-          <span class="header-sub-close js-header-close">CLOSE</span>
-
-          <%- include('/partials/header-content-motorsports') %>
-        </div>
-      </div>
-    </div>
-    <div class="header-sub-content-wrap js-header-sub" data-content="#header-sub-camp">
-      <div class="header-sub-content js-header-sub-content">
-        <div class="header-sub-content-inner-wrap">
-          <span class="header-sub-close js-header-close">CLOSE</span>
-
-          <%- include('/partials/header-content-camp') %>
-        </div>
-      </div>
-    </div>
-    <div class="header-sub-content-wrap js-header-sub" data-content="#header-sub-restaurant">
-      <div class="header-sub-content js-header-sub-content">
-        <div class="header-sub-content-inner-wrap">
-          <span class="header-sub-close js-header-close">CLOSE</span>
-
-          <%- include('/partials/header-content-restaurant') %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <%- include('/partials/header-sp') -%>
-  <div class="u-show-sp">
-    <%- include('/partials/emergency-news') %>
-  </div>
-</header>
+  </header>
 <!-- END GLOBAL HEADER -->

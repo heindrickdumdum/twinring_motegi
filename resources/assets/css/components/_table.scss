@@ -120,6 +120,8 @@
 }
 
 .table-solid {//hotel granroom
+  background-color: $color-white;
+
   @include max-screen($breakpoint-mobile) {
     width: 100%;  
     margin-bottom: 44px;
@@ -149,6 +151,10 @@
     border-right: 1px solid #d1c0a5;
     vertical-align: middle;
     border-top: 1px solid #d1c0a5;
+  }
+
+  td {
+    font-weight: 300;
   }
 
   .table-head {

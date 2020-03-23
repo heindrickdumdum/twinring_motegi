@@ -1,6 +1,6 @@
 <%
   var title = 'Twin Ring Motegi';
-  pageId = 'hellowoods';
+  pageId = 'hoteltwinring';
 %>
 <%- include('./../partials/data/index') -%>
 <%- include('/partials/head', { pageId, title }) -%>
@@ -12,7 +12,7 @@
       <div class="mv-buttons">
         <ul class="mv-buttons-list">
           <li class="mv-buttons-item">
-            <a class="mv-buttons-link" href="/fee_m/">
+            <a class="mv-buttons-link" href="/hoteltwinring/information/">
               <span>ご予約</span>
             </a>
           </li>
@@ -78,15 +78,15 @@
               <div class="challenge-left">
                 <div class="challenge-img u-show-pc">
                   <div class="challenge-img1">
-                    <img src="<%- mix('/assets/images/hoteltwinring/overflow-img-1.png') -%>" alt="梟">
+                    <img src="<%- mix('/assets/images/hoteltwinring/overflow-img-1.png') -%>" alt="">
                   </div>
                   <div class="challenge-img2">
-                    <img src="<%- mix('/assets/images/hoteltwinring/overflow-img-2.png') -%>" alt="女の子">
+                    <img src="<%- mix('/assets/images/hoteltwinring/overflow-img-2.png') -%>" alt="">
                   </div>
                 </div>
 
                 <div class="challenge-img u-show-sp">
-                  <img src="<%- mix('/assets/images/hoteltwinring/life-overflow-images-sp.png') -%>" alt="梟">
+                  <img src="<%- mix('/assets/images/hoteltwinring/life-overflow-images-sp.png') -%>" alt="">
                 </div>
 
 
@@ -98,13 +98,7 @@
                 <p class="desc hellowoods">
                   小高い丘の上、フィトンチッド溢れる森に囲まれたホテルで寛ぎと癒しの時間を過ごそう。満天の星を眺めながら優雅に疲れを癒す露天風呂、ここでしか味わえない地元素材を使ったこだわりグルメ、宿泊者限定のアクティビティ、そのすべてが特別な体験としてあなたとご家族をおもてなしします。
                 </p>
-                <div class="l-button">
-                  <%- include('/partials/button', {
-                    modifier: 'local',
-                    text: 'もっと見る',
-                    link: '/hellowoods/concept/'
-                  }) %>
-                </div>
+                
 
               </div>
             </div>
@@ -121,7 +115,7 @@
               text: 'Room Type',
               alt: '',
               altSubtext: '',
-              subtextvg: 'hoteltwinring-room-type'
+              subtextvg: 'room-type-title'
             }) %>
           </div>
 
@@ -147,7 +141,7 @@
         </div>
       </section>
 
-      <section class="l-section racing-kart">
+      <section class="l-section racing-kart nozomi">
         <div class="l-container">
           <div class="l-section-title">
             <%- include('/partials/heading', {
@@ -155,8 +149,8 @@
               text: 'Facility',
               alt: '',
               altSubtext: '',
-              subtextvg: 'hoteltwinring-facility',
-              altSubtextvg: 'Racing Kart'
+              subtextvg: 'facility-title',
+              altSubtextvg: 'Facility'
             }) %>
           </div>
         </div>
@@ -170,9 +164,9 @@
         </div>
 
         <div class="l-adventure-sp-container">
-          <div class="l-adventure l-racing-kart">
+          <div class="l-adventure l-hoteltwinring">
             <div class="l-section-title">
-              <img class="logo-racing-kart" src="<%= mix('/assets/images/hoteltwinring/logo_nozominoyu.png') %>" alt="nozominoyu">
+              <img class="logo-racing-kart logo-nozomi" src="<%= mix('/assets/images/hoteltwinring/logo_nozominoyu.png') %>" alt="のぞみの湯">
             </div>
 
             <p class="adventure-content-copy">
@@ -183,7 +177,7 @@
               <%- include('/partials/button', {
                 modifier: 'button-adventure button-adventure-racing-kart',
                 text: 'もっと見る',
-                link: '/mobipark_m/attractions/racingkart/'
+                link: '/hoteltwinring/nozominoyu/'
               }) %>
             </div>
           </div>
@@ -193,13 +187,19 @@
       <section class="l-section banner-info">
         <div class="block-image-inner hoteltwinring-lounge">
           <div class="block-image-text-wrap hoteltwinring l-container-m">
-            <p class="block-image-text block-image-text-hellowoods">
+            <div class="block-image-text block-image-text-hellowoods">
               <span class="heading-text">Lobby lounge</span>
-              <span class="heading-text heading-text-default">ロビーラウンジ</span>
+              <div class="heading-text heading-text-default">
+                
+                <%- include('/partials/heading', {
+                  modifier: 'room-type svg-block svg-subtext',
+                  subtextvg: 'lobby-lounge-title',
+                }) %>
+              </div>
               <span class="block-image-subtext">大人はくつろぎ、子どもは楽しむ。<br>
                 森で過ごすひとときをイメージしたロビーラウンジは、<br>
                 家族で一緒にリラックスしてお過ごしいただけます。</span>
-            </p>
+            </div>
           </div>
         </div>
       </section>
@@ -232,16 +232,23 @@
 
 
       <div class="l-section banner-image hoteltwinring-banner-image-1">
-        <div class="l-container">
-          <a href="https://www.twinring.jp/hoteltwinring/activity">
+        <div class="l-container-m">
+          <a href="/hoteltwinring/granroom/#granroom-activity">
             <div class="banner-image-wrap">
                 <p class="banner-image-text">
                   <%- include('/partials/heading', {
-                    modifier: 'fill-white svg-block',
+                    modifier: 'fill-white svg-block u-show-pc',
                     text: '',
                     alt: '',
                     altSubtext: '',
                     subtextvg: 'hoteltwinring-big-banner-title'
+                  }) %>
+                  <%- include('/partials/heading', {
+                    modifier: 'fill-white svg-block u-show-sp',
+                    text: '',
+                    alt: '',
+                    altSubtext: '',
+                    subtextvg: 'big-banner-title-sp'
                   }) %>
                   <span class="banner-image-subtext">星空観望など宿泊者限定イベントをご用意しております </span>
                 </p>
@@ -251,16 +258,23 @@
       </div>
 
       <div class="l-section banner-image hoteltwinring-banner-image-2">
-        <div class="l-container">
-          <a href="https://www.twinring.jp/hoteltwinring/activity/">
+        <div class="l-container-m">
+          <a href="https://www.twinring.jp/fieldtrip_m/">
             <div class="banner-image-wrap">
                 <p class="banner-image-text">
                   <%- include('/partials/heading', {
-                    modifier: 'fill-white svg-block',
+                    modifier: 'fill-white svg-block u-show-pc',
                     text: '',
                     alt: '',
                     altSubtext: '',
                     subtextvg: 'hoteltwinring-big-banner-2-title'
+                  }) %>
+                  <%- include('/partials/heading', {
+                    modifier: 'fill-white svg-block u-show-sp',
+                    text: '',
+                    alt: '',
+                    altSubtext: '',
+                    subtextvg: 'big-banner-2-title-sp'
                   }) %>
                 </p>
             </div>
@@ -270,7 +284,9 @@
 
       <%- include('/partials/hotel-reservation') -%>
 
+      <%- include('/partials/recommendation') -%>
 
+      <%- include('/partials/pickup') -%>
     </main>
   </div>
 </div>

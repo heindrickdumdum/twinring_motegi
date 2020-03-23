@@ -9,5 +9,9 @@
 .racing-kart {
   @include min-screen($breakpoint-mobile + 1) {
     margin-top: 0;
+
+    &.nozomi {
+      padding-bottom: 160px;
+    }
   }
 }

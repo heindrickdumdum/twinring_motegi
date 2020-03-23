@@ -4,6 +4,10 @@
 
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 73px;
+
+    .subpage-section-usagefee & {//hotel granroom/familyroom
+      margin-bottom: 77px;
+    }
   }
 
   &-subpage {

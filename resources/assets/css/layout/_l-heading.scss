@@ -10,6 +10,12 @@
   @include max-screen($breakpoint-mobile) {
     margin: 40px 0 49px;
   }
+
+  &.l-heading-main-nozominoyu-summary {
+    @include max-screen($breakpoint-mobile) {
+      margin: 40px 0 0;
+    }
+  }
 }
 
 .l-heading-inner {

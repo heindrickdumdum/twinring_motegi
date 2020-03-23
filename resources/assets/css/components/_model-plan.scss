@@ -11,6 +11,11 @@
     border-image: url('/assets/images/model-plan-frame.png') 30 round;
     padding-top: 24px;
     padding-bottom: 17px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 13px;
+      padding-bottom: 0px;
+    }
   }
 
   &-desc {
@@ -33,7 +38,7 @@
       margin-bottom: 16px;
 
       @include max-screen($breakpoint-mobile) {
-        width: 225px;
+        width: 196px;
       }
     }
   }

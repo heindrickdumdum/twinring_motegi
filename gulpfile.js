@@ -1,6 +1,6 @@
-var gulp = require( 'gulp' ),
-    replace = require( 'gulp-replace' ),
-    convertEncoding = require( 'gulp-convert-encoding' );
+var gulp = require( 'gulp' );
+var replace = require( 'gulp-replace' );
+var convertEncoding = require( 'gulp-convert-encoding' );
 
 gulp.task('build-shift-jis', function() {
       return gulp.src('public/')

@@ -1,5 +1,4 @@
 var fs = require('fs-extra');
-var iconv = require('iconv-lite'); // support Shift-jis
 var path = require('path');
 var depth = require('depth');
 var rootPath = require('app-root-path');
@@ -20,12 +19,12 @@ module.exports = function(){
 			return './../../assets';
 		}
 	};
-	
+
 	fn.eachFiles(CONFIG.release, null, function(filePath, rootPath) {
 		var targetFileName = path.basename(filePath);
 		//Target only .html file
 		if(targetFileName.indexOf('.html') !== -1){
-			
+
 			//arrange clear path
 			var thisPath = path.normalize(filePath);
 			var thisRootPath = path.normalize(rootPath);
@@ -34,7 +33,7 @@ module.exports = function(){
 			//get depth -> 0, 1, 2 ...
 			var thisDepth = depth(thisSimplePath);
 
-			//Settings for replace 
+			//Settings for replace
 			var options = {
 				files: thisPath,
 				from: [/\/assets/g, /<meta charset="UTF-8">/g, /<meta property="og:image" content="https:\/\/www.twinring.jp\/home.\/assets\/top\/img\/ogp.png">/g],

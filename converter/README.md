@@ -9,10 +9,11 @@ It can take these items.
 3. Extract header/footer and separate html files
 4. Adjust path
 5. Covert utf-8 to shift-jis
+6. Transfer data to STG by SCP
 
 ## How to use?
 
-Run all 1-5 steps
+Run all 1-6 steps
 ```
 npm run convert
 ```

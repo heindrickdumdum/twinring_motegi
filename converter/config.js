@@ -37,5 +37,41 @@ module.exports = {
 			end: '<!-- END GLOBAL FOOTER -->'
 		},
 		closed: '</html>'
+	},
+	scp: {
+
+	    host: process.env.MOTEGI_SCP_HOST,
+	    username: process.env.MOTEGI_SCP_USERNAME,
+	    password: process.env.MOTEGI_SCP_PASSWORD,
+	    top: {
+	        src: '',
+	        dist:''
+	    },
+            sumika: {
+                src: '',
+                dist:''
+            },
+            itadaki: {
+                src: '',
+                dist:''
+            },
+            dokidoki: {
+                src: '',
+                dist:''
+            },
+            hellowoods: {
+                src: '',
+                dist:''
+            },
+            mobipark_m: {
+                src: '',
+                dist:''
+            },
+            hoteltwinring: {
+                src: '',
+                dist:''
+            }
+
+	    //path: process.env.MOTEGI_SCP_DIST_PATH
 	}
 }

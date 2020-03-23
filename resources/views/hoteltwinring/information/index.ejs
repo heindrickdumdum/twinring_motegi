@@ -1,26 +1,26 @@
 <%
   var title = 'ご宿泊予約｜ホテルツインリンク｜ツインリンクもてぎ';
-  pageId = 'reserve';
+  pageId = 'information';
 %>
 <%- include('/partials/head', { pageId, title }) -%>
 
 <div class="lig-content">
-  <main>
-    <div class="subpage subpage-reserve">
-      <div class="mv mv-subpage mv-subpage-reserve">
-        <ul class="mv-list">
-          <li class="mv-item">
-            <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/reserve/reserve-mv.png') %>);"></div>
-            <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/reserve/reserve-mv.png') %>);"></div>
-          </li>
-        </ul>
+  <div class="subpage subpage-reserve">
+    <div class="mv mv-subpage mv-subpage-reserve">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/reserve/reserve-mv.png') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/reserve/reserve-mv.png') %>);"></div>
+        </li>
+      </ul>
 
-        <h1 class="mv-heading mv-heading-subpage">
-          <span class="mv-heading-text mv-heading-text-reserve">
-            ご宿泊予約
-          </span>
-        </h1>
-      </div>
+      <h1 class="mv-heading mv-heading-subpage">
+        <span class="mv-heading-text mv-heading-text-reserve">
+          ご宿泊予約
+        </span>
+      </h1>
+    </div>
+    <main>
       <section class="subpage-section">
         <div class="subpage-inner subpage-inner-reserve-reminder">
           <div class="reminder">
@@ -128,6 +128,7 @@
         </div>
       </section>
     </div>
+
     <%- include('/partials/recommendation') -%>
 
     <%- include('/partials/pickup') -%>

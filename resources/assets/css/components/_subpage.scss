@@ -482,6 +482,8 @@
 
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 31px;
+      margin-left: -20px;
+      margin-right: -20px;
     }
   }
   

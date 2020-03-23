@@ -120,6 +120,8 @@
 }
 
 .table-solid {//hotel granroom
+  background-color: $color-white;
+
   @include max-screen($breakpoint-mobile) {
     width: 100%;  
     margin-bottom: 44px;

@@ -39,7 +39,7 @@ module.exports = function(){
 				from: [/\/assets/g, /<meta charset="UTF-8">/g, /<meta property="og:image" content="https:\/\/www.twinring.jp\/home.\/assets\/top\/img\/ogp.png">/g],
 				to: [relativePath(thisDepth), '<meta charset="SHIFT-JIS">', '<meta property="og:image" content="https://www.twinring.jp/assets/top/img/ogp.png">']
 			};
-			replaceFile(options);
+			replaceFile.sync(options);
 		}
 	});
 };

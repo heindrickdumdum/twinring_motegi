@@ -35,4 +35,28 @@ gulp.task('build-shift-jis-stg', function() {
       .pipe(gulp.dest('public/'));
 });
 
+gulp.task('replace-char-ejs', function() {
+    return gulp.src([
+        'resources/*.ejs',
+        'resources/**/*.ejs'
+      ],{
+      base: 'resources/'
+      })
+      .pipe(replace('™', '&trade;'))
+      .pipe(replace('〜', '～'))
+      .pipe(gulp.dest('resources/'));
+});
+
+gulp.task('replace-char', function() {
+    return gulp.src([
+        'public/*.html',
+        'public/**/*.html'
+      ],{
+      base: 'public/'
+      })
+      .pipe(replace('™', '&trade;'))
+      .pipe(replace('〜', '～'))
+      .pipe(gulp.dest('public/'));
+});
+
 //gulp.task('default', ['task2']);

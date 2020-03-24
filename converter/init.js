@@ -2,7 +2,7 @@ var fs = require('fs-extra');
 var CONFIG = require('./config.js');
 
 module.exports = function(){
-	
+
 	//copy /public to /release
 	fs.copySync(CONFIG.dist, CONFIG.release);
 

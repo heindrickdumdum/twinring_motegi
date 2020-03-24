@@ -39,7 +39,9 @@ if(cmd === CMD.init) {
     console.log('shiftjis done');
 
 } else if(cmd === CMD.scpContents) {
-    //scpContents();
+    console.log(process.env);
+    console.log(CONFIG);
+    scpContents();
     console.log('scpContents done');
 
 } else if(cmd === CMD.convertInit) {

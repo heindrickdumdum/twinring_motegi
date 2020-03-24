@@ -80,7 +80,7 @@
     padding-bottom: 31.4%;
     background-position-y: 64%;
     @include max-screen($breakpoint-mobile) {
-      padding-bottom: 100%;
+      padding-bottom: 96%;
       background-position: center;
     }
   }
@@ -147,7 +147,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 21;
+  z-index: 20;
 
   @include max-screen($breakpoint-mobile) {
     display: none;
@@ -461,6 +461,17 @@
   @include max-screen($breakpoint-mobile) {
     display: none;
   }
+
+  &.mv-nozominoyu-logo {
+    background: url(#{$image-path}nozominoyu/nozominoyu-logo.png) no-repeat;
+    background-size: contain;
+    max-width: 247px;
+    
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: -144px;
+    }
+  }
+
 }
 
 .mv-today-top {

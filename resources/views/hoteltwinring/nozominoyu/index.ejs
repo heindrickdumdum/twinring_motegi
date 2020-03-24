@@ -7,36 +7,45 @@ pageId = 'nozominoyu';
 <%- include('/partials/head', { pageId, title }) -%>
 
 <div class="lig-content">
-  <main>
-    <div class="subpage subpage-nozominoyu">
+  <div class="subpage subpage-nozominoyu">
+    <div class="mv mv-subpage mv-subpage-nozominoyu">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/nozominoyu/nozominoyu-mv.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/nozominoyu/nozominoyu-mv-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading granroom-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-nozominoyu-text',
+            heading_level: 1,
+            text: 'nozominoyu',
+            subtextvg: 'nozominoyu-top-title'
+          }) %>
+        </div>
 
-      <div class="mv mv-subpage mv-subpage-nozominoyu">
-        <ul class="mv-list">
-          <li class="mv-item">
-            <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/nozominoyu/nozominoyu-mv.jpg') %>);"></div>
-            <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/nozominoyu/nozominoyu-mv-sp.jpg') %>);"></div>
-          </li>
-        </ul>
-        <h1 class="mv-heading mv-heading-subpage">
-          <span class="mv-heading-text">
-            のぞみの湯
-          </span>
-        </h1>
+        <div class="u-show-pc mv-today mv-log mv-nozominoyu-logo">
+          <div class="mv-l-inner">
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div class="heading-wrap l-heading-main">
-        <h2 class="heading heading-nozominoyu">
-          <svg class="u-show-pc">
-            <title>昼は広大な森とレーシングコース、 夜は満天の星をのぞむ癒しのひととき</title>
-            <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-catch-copy') %>"></use>
-          </svg>
-          <svg class="u-show-sp">
-            <title>昼は広大な森とレーシングコース、 夜は満天の星をのぞむ癒しのひととき</title>
-            <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-catch-copy-sp') %>"></use>
-          </svg>
-        </h2>
-      </div>
-      
+    <div class="heading-wrap l-heading-main">
+      <h2 class="heading heading-nozominoyu">
+        <svg class="u-show-pc">
+          <title>昼は広大な森とレーシングコース、 夜は満天の星をのぞむ癒しのひととき</title>
+          <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-catch-copy') %>"></use>
+        </svg>
+        <svg class="u-show-sp">
+          <title>昼は広大な森とレーシングコース、 夜は満天の星をのぞむ癒しのひととき</title>
+          <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-catch-copy-sp') %>"></use>
+        </svg>
+      </h2>
+    </div>
+  
+    <main> 
       <section class="l-section l-container-inner-nozominoyu">
         <div class="subpage-image-gallery subpage-image-gallery-nozominoyu">
           <div class="swiper-container slider-gallery slider-gallery-nozominoyu js-gallery">
@@ -49,7 +58,7 @@ pageId = 'nozominoyu';
               </div>
             </div>
           </div>
-  
+
           <div class="swiper-container slider-gallery-thumb js-gallery-thumb">
             <div class="swiper-wrapper">
               <div class="swiper-slide slider-item">
@@ -90,13 +99,13 @@ pageId = 'nozominoyu';
                     <p class="nozominoyu-article-title">アトラクションで遊んだあとに</p>                   
                   </article>
                 </li>
-                 <li class="nozominoyu-article-list-item col-lg-4 col-md-4 col-sm-6">
+                  <li class="nozominoyu-article-list-item col-lg-4 col-md-4 col-sm-6">
                   <article class="nozominoyu-article-card">
                     <div class="nozominoyu-article-thumbnail" style="background-image:url(<%- mix('/assets/images/nozominoyu/attraction-image-2.jpg') -%>)"></div>
                     <p class="nozominoyu-article-title">スポーツ走行のあとに</p>
                   </article>
                 </li>
-                 <li class="nozominoyu-article-list-item col-lg-4 col-md-4 col-sm-6">
+                  <li class="nozominoyu-article-list-item col-lg-4 col-md-4 col-sm-6">
                   <article class="nozominoyu-article-card">
                     <div class="nozominoyu-article-thumbnail" style="background-image:url(<%- mix('/assets/images/nozominoyu/attraction-image-3.jpg') -%>)"></div>
                     <p class="nozominoyu-article-title">レース観戦で<br>車中泊・キャンプの際に</p>
@@ -106,7 +115,7 @@ pageId = 'nozominoyu';
             </div>
           </div>
         </div>
-      </section>
+      </section>  
 
       <section class="nozominoyu-summary">
         <div class="heading-wrap l-heading-main l-heading-main-nozominoyu-summary">
@@ -348,12 +357,10 @@ pageId = 'nozominoyu';
       </div>
       </section>
       <%- include('/partials/hotel-reservation') -%>
-    </div>
-
-    <%- include('/partials/recommendation') -%>
-
-    <%- include('/partials/pickup') -%>
-  </main>
+      <%- include('/partials/recommendation') -%>
+      <%- include('/partials/pickup') -%>
+    </main>
+  </div>
 </div>
 
 <!-- BREADCRUMBS -->

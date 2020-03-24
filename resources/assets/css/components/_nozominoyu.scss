@@ -19,7 +19,7 @@
 .nozominoyu-paragraph {
   font-size: 15px;
   line-height: 2;
-  font-family: $font-hiragino;
+  // font-family: $font-hiragino;
 	letter-spacing: 0.229em;
 	
 	@include max-screen($breakpoint-mobile) {

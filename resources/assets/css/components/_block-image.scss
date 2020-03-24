@@ -37,6 +37,7 @@
   &.block-image-list-hellowoods {
     margin: 0;
     justify-content: center;
+    padding-bottom: 34px;
   }
   @include max-screen($breakpoint-mobile) {
     margin: 0;
@@ -106,6 +107,7 @@
     height: auto;
     padding: 150px 0;
     background-image: url(/assets/images/hoteltwinring/lounge-bg.jpg);
+    display: block;
 
     .hoteltwinring {
       width: 100%;

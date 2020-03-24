@@ -14,7 +14,7 @@
     width: 100%;
     max-height: 320px;
     margin: 58px auto 0;
-    overflow-y: scroll;
+    overflow-y: auto;
     -ms-overflow-style: none;
 
     @include max-screen($breakpoint-mobile) {

@@ -532,6 +532,29 @@
     }
   }
 
+  &.heading-nozominoyu-text {
+
+    .heading-text {  
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important
+        font-size: 38px !important;
+        position: relative;
+        left: 13px;
+      }
+    }
+
+    .heading-subtext {
+      svg {
+        width: 293px;
+        height: 57px;
+        @include max-screen($breakpoint-mobile) {
+          width: 212px;
+          height: 40px;
+        }
+      }
+    }  
+  }
+
   &.heading-comparison {
     text-align: center;
 

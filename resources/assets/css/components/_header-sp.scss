@@ -24,6 +24,7 @@
 
   @include max-screen($breakpoint-mobile) {
     height: calc(100vh - 56px);
+    padding-bottom: 100px;
   }
 }
 

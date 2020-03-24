@@ -22,7 +22,7 @@
   }
 
   @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 120px;
+    margin-bottom: 30px;
   }
 
   > * {

@@ -147,7 +147,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 21;
+  z-index: 20;
 
   @include max-screen($breakpoint-mobile) {
     display: none;

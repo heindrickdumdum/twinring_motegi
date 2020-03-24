@@ -104,6 +104,10 @@
   cursor: pointer;
   z-index: $z-min;
 
+  .is-ie & {
+    padding-top: 3px;
+  }
+
   &::before,
   &::after {
     content: '';

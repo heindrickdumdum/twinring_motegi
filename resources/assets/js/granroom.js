@@ -55,7 +55,7 @@ new galleryLabo();
 var SimpleLightbox = require('simple-lightbox');
 
 new SimpleLightbox({
-  elements: '#js-lightbox',
+  elements: '.js-lightbox',
   beforeSetContent: function() {
     document.querySelector('.slbCloseBtn').innerHTML = '&times;';
   }

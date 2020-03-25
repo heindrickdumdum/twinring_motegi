@@ -1025,7 +1025,6 @@
     background-image: url('../images/subpage-bg-reserve.png');
     background-repeat: no-repeat;
     // top: 14%;
-
     @include max-screen($breakpoint-mobile) {
       top: 20%;
     }

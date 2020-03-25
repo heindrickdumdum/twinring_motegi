@@ -30,5 +30,13 @@ module.exports = function(){
         fn.optimizeHtmlParts(footer.type.utf8, footer.startTag, footer.endTag, footer.endTagLen, true);
         fn.optimizeHtmlParts(footer.type.shiftjis, footer.startTag, footer.endTag, footer.endTagLen, false);
 
+        // Watch all directories and convert all files
+        fn.eachFiles(CONFIG.release, null, function(filePath, rootPath) {
+                var targetFileName = path.basename(filePath);
+                //Target only .html file
+                if(targetFileName.indexOf('.html') !== -1){
+                        fn.optimizeHtml(filePath);
+                }
+        });
 }
 

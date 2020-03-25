@@ -40,6 +40,8 @@ module.exports = function(){
 				to: [relativePath(thisDepth), '<meta charset="SHIFT-JIS">', '<meta property="og:image" content="https://www.twinring.jp/assets/top/img/ogp.png">']
 			};
 			replaceFile.sync(options);
+
+
 		}
 	});
 };

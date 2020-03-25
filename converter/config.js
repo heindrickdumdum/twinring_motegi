@@ -2,6 +2,7 @@ module.exports = {
 	dist: __dirname + '/../public/',
 	release: __dirname + '/../release/',
 	assets: __dirname + '/../public/assets/',
+	assets_copy: process.env.MOTEGI_ASSETS_CP ? false : true,
 	directories: [
 		[
 			'/globalnavi/',
@@ -10,11 +11,17 @@ module.exports = {
 			'/itadaki/',
 			'/mobipark_m/',
 			'/sumika/',
+                        '/hoteltwinring/',
 			'/top/'
 		],[
 			'/hellowoods/program/',
 			'/hellowoods/zip-line/',
-			'/mobipark_m/attractions/'
+			'/mobipark_m/attractions/',
+                        '/hoteltwinring/familyroom/',
+                        '/hoteltwinring/granroom/',
+                        '/hoteltwinring/information/',
+                        '/hoteltwinring/nozominoyu/',
+                        '/hoteltwinring/standardroom/'
 		]
 	],
 	commonParts: {
@@ -44,8 +51,8 @@ module.exports = {
 	    username: process.env.MOTEGI_SCP_USERNAME,
 	    password: process.env.MOTEGI_SCP_PASSWORD,
 	    top: {
-	        src: '',
-	        dist:''
+	        src: './release/top',
+	        dist:'top'
 	    },
             sumika: {
                 src: '',
@@ -56,8 +63,8 @@ module.exports = {
                 dist:''
             },
             dokidoki: {
-                src: '',
-                dist:''
+                src: './release/dokidoki',
+                dist:'dokidoki-test'
             },
             hellowoods: {
                 src: '',

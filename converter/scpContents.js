@@ -3,13 +3,7 @@ var path = require('path');
 var CONFIG = require('./config.js');
 var fn = require('./function.js');
 var scpClient = require('scp2')
-
-var scpConfig ={
-    host: CONFIG.scp.host,
-    username: CONFIG.scp.username,
-    password: CONFIG.scp.password,
-    path: ''
-};
+var async = require('async');
 
 module.exports.createSCPConfig = function() {
 
@@ -18,11 +12,19 @@ module.exports.createSCPConfig = function() {
 
 module.exports = function(){
 
-    //console.log(process.env);
 
+    var scpConfig ={
+            host: CONFIG.scp.host,
+            username: CONFIG.scp.username,
+            password: CONFIG.scp.password,
+            path: CONFIG.scp.dokidoki.dist
+        };
 
+    //scpConfig.path = CONFIG.scp.itadaki.dist;
+
+    console.log(scpConfig)
     scpClient.scp(
-            'src path',
+            CONFIG.scp.dokidoki.src,
             scpConfig,
             function(err) {
                 console.log(err);

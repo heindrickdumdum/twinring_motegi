@@ -123,6 +123,18 @@
 
   <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
   <script src="<%= mix('/assets/js/app.js') %>" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(function() {
+        if( document.querySelector('html').classList.contains('is-edge') ) {
+          svg4everybody({
+            polyfill: true
+          });
+        }  
+      }, 1000);    
+    });
+  </script>
 
   <% if(pageId == 'mobipark') { %>
     <script src="<%= mix('/assets/js/mobipark.js') %>" async></script>

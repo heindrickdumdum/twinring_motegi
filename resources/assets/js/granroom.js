@@ -56,5 +56,5 @@ var SimpleLightbox = require('simple-lightbox');
 
 new SimpleLightbox({
   elements: '#js-lightbox',
-  closeBtnCaption: '&#10005;'
+  closeBtnCaption: '&times;'
 });

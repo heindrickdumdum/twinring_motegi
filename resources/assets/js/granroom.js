@@ -55,5 +55,6 @@ new galleryLabo();
 var SimpleLightbox = require('simple-lightbox');
 
 new SimpleLightbox({
-  elements: '#js-lightbox'
+  elements: '#js-lightbox',
+  closeBtnCaption: '&#10005;'
 });

@@ -11,17 +11,17 @@ module.exports = {
 			'/itadaki/',
 			'/mobipark_m/',
 			'/sumika/',
-                        '/hoteltwinring/',
+						'/hoteltwinring/',
 			'/top/'
 		],[
 			'/hellowoods/program/',
 			'/hellowoods/zip-line/',
 			'/mobipark_m/attractions/',
-                        '/hoteltwinring/familyroom/',
-                        '/hoteltwinring/granroom/',
-                        '/hoteltwinring/information/',
-                        '/hoteltwinring/nozominoyu/',
-                        '/hoteltwinring/standardroom/'
+						'/hoteltwinring/familyroom/',
+						'/hoteltwinring/granroom/',
+						'/hoteltwinring/information/',
+						'/hoteltwinring/nozominoyu/',
+						'/hoteltwinring/standardroom/'
 		]
 	],
 	commonParts: {
@@ -47,38 +47,38 @@ module.exports = {
 	},
 	scp: {
 
-	    host: process.env.MOTEGI_SCP_HOST,
-	    username: process.env.MOTEGI_SCP_USERNAME,
-	    password: process.env.MOTEGI_SCP_PASSWORD,
-	    top: {
-	        src: './release/top',
-	        dist:'top'
-	    },
-            sumika: {
-                src: '',
-                dist:''
-            },
-            itadaki: {
-                src: '',
-                dist:''
-            },
-            dokidoki: {
-                src: './release/dokidoki',
-                dist:'dokidoki-test'
-            },
-            hellowoods: {
-                src: '',
-                dist:''
-            },
-            mobipark_m: {
-                src: '',
-                dist:''
-            },
-            hoteltwinring: {
-                src: '',
-                dist:''
-            }
+		host: process.env.MOTEGI_SCP_HOST,
+		username: process.env.MOTEGI_SCP_USERNAME,
+		password: process.env.MOTEGI_SCP_PASSWORD,
+		top: {
+			src: './release/top',
+			dist:'top'
+		},
+			sumika: {
+				src: '',
+				dist:''
+			},
+			itadaki: {
+				src: '',
+				dist:''
+			},
+			dokidoki: {
+				src: './release/dokidoki',
+				dist:'dokidoki-test'
+			},
+			hellowoods: {
+				src: '',
+				dist:''
+			},
+			mobipark_m: {
+				src: '',
+				dist:''
+			},
+			hoteltwinring: {
+				src: '',
+				dist:''
+			}
 
-	    //path: process.env.MOTEGI_SCP_DIST_PATH
+		//path: process.env.MOTEGI_SCP_DIST_PATH
 	}
 }

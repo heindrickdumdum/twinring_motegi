@@ -6,9 +6,9 @@ var CONFIG = require('./config.js');
 module.exports = {
 	writeFile(path, data) {
 	  	fs.writeFileSync(path, data, function (err) {
-	    	if (err) {
-	        	throw err;
-	    	}
+			if (err) {
+				throw err;
+			}
 	  	});
 	},
 	optimizeHtml: function (targetFile) {
@@ -68,37 +68,37 @@ module.exports = {
 
 		var self = this;
 
-	    if (!rootPath) {
-	        rootPath = filePath;
-	    }
-	    var stat = fs.statSync(filePath);
-	    if (!stat) {
+		if (!rootPath) {
+			rootPath = filePath;
+		}
+		var stat = fs.statSync(filePath);
+		if (!stat) {
 
-	    } else if (stat.isDirectory()) {
-	        try {
-	            var files = fs.readdirSync(filePath, '');
+		} else if (stat.isDirectory()) {
+			try {
+				var files = fs.readdirSync(filePath, '');
 
-	            if (!files) {
+				if (!files) {
 
-	            } else {
-	                for (var _i in files)(function (i) {
-	                    var file = files[i];
-	                    if (filePath.match(/.*\/$/)) {
-	                        self.eachFiles(filePath + file, rootPath, callback);
-	                    } else {
-	                        self.eachFiles(filePath + "/" + file, rootPath, callback);
-	                    }
-	                }(_i));
-	            }
-	        } catch (e1) {
-	            console.error("Directory " + filePath + " is unreadable.");
-	        }
-	    } else if (stat.isFile()) {
-	        if (callback) {
-	            callback.call(this, filePath, rootPath);
-	        }
-	    } else {
-	        console.error(filePath + " is not file or directory");
-	    }
+				} else {
+					for (var _i in files)(function (i) {
+						var file = files[i];
+						if (filePath.match(/.*\/$/)) {
+							self.eachFiles(filePath + file, rootPath, callback);
+						} else {
+							self.eachFiles(filePath + "/" + file, rootPath, callback);
+						}
+					}(_i));
+				}
+			} catch (e1) {
+				console.error("Directory " + filePath + " is unreadable.");
+			}
+		} else if (stat.isFile()) {
+			if (callback) {
+				callback.call(this, filePath, rootPath);
+			}
+		} else {
+			console.error(filePath + " is not file or directory");
+		}
 	}
 };

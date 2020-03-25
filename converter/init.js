@@ -21,7 +21,7 @@ module.exports = function(){
 		}
 	};
 	if(CONFIG.assets_copy) {
-	        cloneAssets(directorySecond);
+			cloneAssets(directorySecond);
 	}
 
 	//Copy index.html to top/

@@ -13,22 +13,22 @@ module.exports.createSCPConfig = function() {
 module.exports = function(){
 
 
-    var scpConfig ={
-            host: CONFIG.scp.host,
-            username: CONFIG.scp.username,
-            password: CONFIG.scp.password,
-            path: CONFIG.scp.dokidoki.dist
-        };
+	var scpConfig ={
+			host: CONFIG.scp.host,
+			username: CONFIG.scp.username,
+			password: CONFIG.scp.password,
+			path: CONFIG.scp.dokidoki.dist
+		};
 
-    //scpConfig.path = CONFIG.scp.itadaki.dist;
+	//scpConfig.path = CONFIG.scp.itadaki.dist;
 
-    console.log(scpConfig)
-    scpClient.scp(
-            CONFIG.scp.dokidoki.src,
-            scpConfig,
-            function(err) {
-                console.log(err);
-            }
-    );
+	console.log(scpConfig)
+	scpClient.scp(
+			CONFIG.scp.dokidoki.src,
+			scpConfig,
+			function(err) {
+				console.log(err);
+			}
+	);
 
 };

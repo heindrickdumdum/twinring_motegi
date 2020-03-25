@@ -11,49 +11,49 @@ var shiftjis = require('./shiftjis.js');
 var scpContents = require('./scpContents.js');
 
 const CMD = {
-        init: 'init',
-        convertHtml: 'convertHtml',
-        arrangePath: 'arrangePath',
-        shiftjis: 'shiftjis',
-        scpContents: 'scpContents',
-        convertInit: 'convertInit',
-        convert: 'convert'
+		init: 'init',
+		convertHtml: 'convertHtml',
+		arrangePath: 'arrangePath',
+		shiftjis: 'shiftjis',
+		scpContents: 'scpContents',
+		convertInit: 'convertInit',
+		convert: 'convert'
 };
 
 var cmd = process.argv[2];
 
 if(cmd === CMD.init) {
-    init();
-    console.log('init done');
+	init();
+	console.log('init done');
 
 } else if(cmd === CMD.arrangePath) {
-    arrangePath();
-    console.log('arrangePath done');
+	arrangePath();
+	console.log('arrangePath done');
 
 } else if(cmd === CMD.convertHtml) {
-    convertHtml();
-    console.log('convertHtml done');
+	convertHtml();
+	console.log('convertHtml done');
 
 } else if(cmd === CMD.shiftjis) {
-    shiftjis();
-    console.log('shiftjis done');
+	shiftjis();
+	console.log('shiftjis done');
 
 } else if(cmd === CMD.scpContents) {
-    console.log(process.env);
-    console.log(CONFIG);
-    scpContents();
-    console.log('scpContents done');
+	console.log(process.env);
+	console.log(CONFIG);
+	scpContents();
+	console.log('scpContents done');
 
 } else if(cmd === CMD.convertInit) {
-    init();
-    arrangePath();
-    console.log('convertInit done');
+	init();
+	arrangePath();
+	console.log('convertInit done');
 
 } else if(cmd === CMD.convert) {
-    init();
-    arrangePath();
-    convertHtml();
-    shiftjis();
-    //scpContents();
-    console.log('convert done');
+	init();
+	arrangePath();
+	convertHtml();
+	shiftjis();
+	//scpContents();
+	console.log('convert done');
 }

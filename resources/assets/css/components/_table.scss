@@ -43,6 +43,7 @@
   width: 93px;
   padding-top: 21px;
   padding-bottom: 21px;
+  background-clip: padding-box;
 
   @include min-screen($breakpoint-mobile + 1) {
     width: 220px;
@@ -119,7 +120,7 @@
   }
 }
 
-.table-solid {//hotel granroom
+.table-solid {//hotel granroom/familyroom
   background-color: $color-white;
 
   @include max-screen($breakpoint-mobile) {

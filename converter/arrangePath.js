@@ -41,6 +41,16 @@ module.exports = function(){
 			};
 			replaceFile.sync(options);
 
+		} else if (filePath.indexOf('globalnavi') !== -1 && targetFileName.indexOf('.css') !== -1){
+			//Settings for replace
+			console.log('replace css file path: %s', filePath);
+			console.log('replace css file: %s', targetFileName);
+			var options = {
+				files: filePath,
+				from: [/\/assets/g],
+				to: ['/globalnavi/assets']
+			};
+			replaceFile.sync(options);
 
 		} else if (targetFileName.indexOf('.css') !== -1){
 			//Settings for replace
@@ -49,7 +59,7 @@ module.exports = function(){
 			var options = {
 				files: filePath,
 				from: [/\/assets/g],
-				to: ['../']
+				to: ['..']
 			};
 			replaceFile.sync(options);
 		}

@@ -1,6 +1,6 @@
 <%
   var title = 'Twin Ring Motegi';
-  pageId = 'granroom';
+  pageId = 'standardroom';
 %>
 <%- include('/partials/data/index') -%>
 <%- include('/partials/head', { pageId, title }) -%>
@@ -15,11 +15,18 @@
         </li>
       </ul>
 
-      <h1 class="mv-heading mv-heading-subpage">
-        <span class="mv-heading-text mv-heading-text-reserve">
-          スタンダードルーム
-        </span>
-      </h1>
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading standardroom-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Standard Room',
+            alt: '',
+            subtextvg: 'standardroom-top-title',
+            altSubtextvg: 'スーぺリアファミリールーム'
+          }) %>
+        </div>
+      </div>
     </div>
     
     <main>
@@ -62,9 +69,9 @@
               <tr class="table-row">
                 <th class="table-head">ルームタイプ</th>
                 <td class="table-col">
-                  121室、客室33m²＋バス付き（定員1名～4名）、禁煙 ＆ 喫煙ルームあり
+                  121室、客室33m<sup><small>2</small></sup>＋バス付き（定員1名&#126;4名）、禁煙 ＆ 喫煙ルームあり
                   <br/>
-                  <a class="u-show-pc" href="/assets/images/granroom/granroom-floorplan.png" title="3室、広さ69m² ･ 床面フローリング（定員4〜6名）、禁煙" id="js-lightbox">> 間取りを見る</a>
+                  <a class="js-lightbox" href="/assets/images/granroom/granroom-floorplan.png" title="121室、客室33m<sup><small>2</small></sup>＋バス付き（定員1名&#126;4名）、禁煙 ＆ 喫煙ルームあり">> 間取りを見る</a>
                 </td>
               </tr>
 
@@ -87,7 +94,7 @@
               <tr class="table-row">
                 <th class="table-head">客室設備</th>
                 <td class="table-col">
-                  エアコン／浴室／ウォシュレット機能付トイレ／冷蔵庫／TV／BS TV／ヘアドライヤー／電気ポット／セーフティボックス／加湿空気清浄機／電話／無料Wi-fi／アラーム付ナイトパネル
+                  エアコン／浴室／ウォシュレット機能付トイレ／冷蔵庫／TV(BS視聴可）／ヘアドライヤー／電気ポット／セーフティボックス／加湿空気清浄機／電話／無料Wi-fi／アラーム付ナイトパネル
                 </td>
               </tr>
 
@@ -315,27 +322,35 @@
           <div class="media-grid">
 
             <div class="media-grid-item">
-              <div class="media-grid-img media-grid-img-rounded u-show-pc" style="background-image: url(<%- mix('/assets/images/standardroom/other-room-1.jpg') -%>);">
-              </div>
+              <a href="/hoteltwinring/familyroom/">
+                <div class="media-grid-img media-grid-img-rounded u-show-pc" style="background-image: url(<%- mix('/assets/images/standardroom/other-room-1.jpg') -%>);">
+                </div>
 
-              <div class="media-grid-img media-grid-img-rounded u-show-sp" style="background-image: url(<%- mix('/assets/images/standardroom/other-room-1.jpg') -%>);">
-              </div>
+                <div class="media-grid-img media-grid-img-rounded u-show-sp" style="background-image: url(<%- mix('/assets/images/standardroom/other-room-1.jpg') -%>);">
+                </div>
+              </a>
 
-              <h3 class="media-grid-title subpage-title">
-                <span>スーベニアファミリールーム</span>
-              </h3>
+              <a href="/hoteltwinring/familyroom/">
+                <h3 class="media-grid-title subpage-title">
+                  <span>スーベニアファミリールーム</span>
+                </h3>
+              </a>
               
             </div>
 
             <div class="media-grid-item">
-              <div class="media-grid-img media-grid-img-rounded" style="background-image: url(<%- mix('/assets/images/standardroom/other-room-2.jpg') -%>);">
-              </div>
+              <a href="/hoteltwinring/granroom/">
+                <div class="media-grid-img media-grid-img-rounded" style="background-image: url(<%- mix('/assets/images/standardroom/other-room-2.jpg') -%>);">
+                </div>
+              </a>
 
-              <h3 class="media-grid-title subpage-title">
-                <span>
-                  グランルーム
-                </span>
-              </h3>
+              <a href="/hoteltwinring/granroom/">
+                <h3 class="media-grid-title subpage-title">
+                  <span>
+                    グランルーム
+                  </span>
+                </h3>
+              </a>
               
             </div>
 

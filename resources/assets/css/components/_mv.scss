@@ -262,7 +262,7 @@
   }
 
   &.granroom-mv-heading {
-    
+
     @include min-screen($breakpoint-mobile + 1) {
       // sass-lint:disable-block no-important   
       bottom: 37px !important;
@@ -293,6 +293,13 @@
         // sass-lint:disable-block no-important    
         margin-top: 9px !important;
       }
+    }
+  }
+
+  &.reservation-mv-heading {
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important    
+      padding: 15px 20px !important;
     }
   }
 
@@ -385,6 +392,7 @@
       }
     }
   }
+
 }
 
 .mv-heading-text {
@@ -1092,6 +1100,22 @@
     }
   }
 
+&.mv-subpage-reserve {
+  overflow: hidden;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 95px;
+  }
+
+  .mv-image {
+    padding-bottom: 43%;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 96%;
+    }
+  }
+}
+
   &.mv-musasabi {
     .mv-heading-texts{
       width: 100%;
@@ -1183,14 +1207,6 @@
 
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 127px;
-  }
-}
-
-.mv-subpage-reserve {
-  overflow: hidden;
-
-  @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 95px;
   }
 }
 

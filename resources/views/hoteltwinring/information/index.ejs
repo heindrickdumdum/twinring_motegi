@@ -10,15 +10,32 @@
       <ul class="mv-list">
         <li class="mv-item">
           <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/reserve/reserve-mv.png') %>);"></div>
-          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/reserve/reserve-mv.png') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/reserve/reserve-mv-sp.jpg') %>);"></div>
         </li>
       </ul>
 
-      <h1 class="mv-heading mv-heading-subpage">
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading reservation-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-reservation',
+            heading_level: 1,
+            text: 'Reservation',
+            subtextvg: 'information-title'
+          }) %>
+        </div>
+
+        <!-- <div class="u-show-pc mv-today mv-log mv-granroom-logo">
+          <div class="mv-l-inner">
+          </div>
+        </div> -->
+      </div>
+
+      <!-- <h1 class="mv-heading mv-heading-subpage">
         <span class="mv-heading-text mv-heading-text-reserve">
           ご宿泊予約
         </span>
-      </h1>
+      </h1> -->
     </div>
     <main>
         <section class="subpage-section">

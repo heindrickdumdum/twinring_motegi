@@ -5,7 +5,7 @@
       <%if (item.tableDescription) { %>
         <%if (item.tableLinkDesc) { %>
           <td class="table-info-description" <%if (item.rowSpan) { %> rowspan="<%- item.rowSpan  %>" <% } %>>
-            <a class="table-info-link-description" href="<%- item.tableLinkDesc  %>"><%- item.tableDescription  %></a>
+            <a class="table-info-link-description" href="<%- item.tableLinkDesc  %>" target="<%- item.tableLinkTarget = item.tableLinkTarget == '' ? '_self': item.tableLinkTarget -%>"><%- item.tableDescription  %></a>
           </td>
         <% } else {%>
           <td class="table-info-description" <%if (item.rowSpan) { %> rowspan="<%- item.rowSpan  %>" <% } %>><%- item.tableDescription  %></td>

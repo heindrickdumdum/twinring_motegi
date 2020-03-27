@@ -11,7 +11,12 @@ parkmapButton();
 new SmoothScroll('a[href^="#"]', {
   topOnEmptyHash: true,
   speed: 900,
-  easing: 'easeInOutCubic'
+  easing: 'easeInOutCubic',
+  offset: function() {
+    if( window.matchMedia('(max-width: 749px)') ) {
+      return 67;
+    }
+  }
 });
 
 new CollapseButton('.js-collapse-button');

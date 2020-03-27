@@ -24,7 +24,7 @@ module.exports = function(){
 		var targetFileName = path.basename(filePath);
 		//Target only .html file
 		if(targetFileName.indexOf('.html') !== -1){
-
+			console.log('replace html file path: %s', filePath);
 			//arrange clear path
 			var thisPath = path.normalize(filePath);
 			var thisRootPath = path.normalize(rootPath);
@@ -42,6 +42,16 @@ module.exports = function(){
 			replaceFile.sync(options);
 
 
+		} else if (targetFileName.indexOf('.css') !== -1){
+			//Settings for replace
+			console.log('replace css file path: %s', filePath);
+			console.log('replace css file: %s', targetFileName);
+			var options = {
+				files: filePath,
+				from: [/\/assets/g],
+				to: ['../']
+			};
+			replaceFile.sync(options);
 		}
 	});
 };

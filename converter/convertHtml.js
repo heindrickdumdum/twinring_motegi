@@ -34,7 +34,10 @@ module.exports = function(){
 		fn.eachFiles(CONFIG.release, null, function(filePath, rootPath) {
 				var targetFileName = path.basename(filePath);
 				//Target only .html file
-				if(targetFileName.indexOf('.html') !== -1){
+				if(targetFileName.indexOf('.html') !== -1
+						&& targetFileName.indexOf('header') === -1
+						&& targetFileName.indexOf('footer') === -1){
+						console.log('convert html:%s', targetFileName)
 						fn.optimizeHtml(filePath);
 				}
 		});

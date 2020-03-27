@@ -3,6 +3,8 @@ var CONFIG = require('./config.js');
 
 module.exports = function(){
 
+	fs.remove(CONFIG.release);
+
 	//copy /public to /release
 	fs.copySync(CONFIG.dist, CONFIG.release);
 

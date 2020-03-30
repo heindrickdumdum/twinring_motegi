@@ -7,7 +7,8 @@
   }
 
   &-frame {
-    border: 25px solid transparent;
+    border-style: solid;
+    border-width: 30px;
     border-image: url('/assets/images/model-plan-frame.png') 30 round;
     padding-top: 24px;
     padding-bottom: 17px;

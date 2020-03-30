@@ -1,4 +1,12 @@
+<% if(typeof svgtext === 'undefined') {
+    var svgtitle = '';
+} %>
 <svg xmlns="http://www.w3.org/2000/svg">
+  <% if( svgtitle === '' ) { %>
   <title><%- name %></title>
+  <% } %>
+  <% if( svgtitle !== '' ) { %>
+  <title><%- svgtitle %></title>
+  <% } %>
   <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-'+name) %>"></use>
 </svg>

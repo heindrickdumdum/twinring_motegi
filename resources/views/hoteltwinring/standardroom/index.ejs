@@ -37,7 +37,7 @@
           text: `Standard Room`,
           altSubtext: ``,
           subtextvg: `standardroom-standard-content-title`,
-          altSubtextvg: `森を感じさせる癒しのアメニティ`
+          altSubtextvg: `スランダードルーム`
         }); -%>
       </div>
 
@@ -146,14 +146,14 @@
                 <%- include('/partials/heading', {
                   modifier: 'heading-main heading-main-subpage heading-model-plan',
                   imgPath: mix('/assets/images/standardroom/model-plan-price.png'),
-                  alt: `スタンダードプラン 1泊2食付きプラン(4名) 合計 55,800円`
+                  alt: `モデルプラン スタンダードプラン 1泊2食付きプラン(4名) 合計 47,910円`
                 }) -%>
               </div>
               <div class="l-section-title u-show-sp">
                 <%- include('/partials/heading', {
                   modifier: 'heading-main heading-main-subpage heading-model-plan',
                   imgPath: mix('/assets/images/standardroom/model-plan-price-sp.png'),
-                  alt: `スタンダードプラン 1泊2食付きプラン(4名) 合計 55,800円`
+                  alt: `モデルプラン スタンダードプラン 1泊2食付きプラン(4名) 合計 47,910円`
                 }) -%>
               </div>
               <small class="model-plan-note u-show-pc">
@@ -303,7 +303,7 @@
               modifier: 'heading-main heading-main-subpage heading-main-subpage-other svg-block',
               text: `Other rooms`,
               altSubtext: ``,
-              subtextvg: `granroom-other-subtitle`,
+              subtextvg: `otherroom-subtitle`,
               altSubtextvg: `その他のお部屋`
             }); -%>
           </div>
@@ -313,7 +313,7 @@
               modifier: 'heading-main heading-main-subpage heading-main-subpage-other svg-block',
               text: `Other Rooms`,
               altSubtext: ``,
-              subtextvg: `granroom-otherroom-subtitle-sp`,
+              subtextvg: `otherroom-subtitle-sp`,
               altSubtextvg: `その他のお部屋`
             }); -%>
           </div>
@@ -362,12 +362,16 @@
       <!-- reservation module -->
       <%- include('/partials/hotel-reservation') -%>
 
+      <%- include('/partials/recommendation') -%>
+
+      <%- include('/partials/pickup') -%>
+
     </main>
   </div>
 </div>
 
 <!-- BREADCRUMBS -->
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsGranroom
+  breadcrumbs : getData().data.breadcrumbsStandardroom
 }) -%>
 <%- include('/partials/footer', { pageId }) -%>

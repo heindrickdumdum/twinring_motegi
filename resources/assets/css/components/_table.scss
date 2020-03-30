@@ -160,7 +160,7 @@
 
   .table-head {
     @include max-screen($breakpoint-mobile) {
-      width: 110px;
+      width: 130px;
     }
 
     &:first-child {

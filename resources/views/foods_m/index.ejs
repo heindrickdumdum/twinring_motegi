@@ -1,102 +1,88 @@
 <%
-  var title = 'Twin Ring Motegi | エリア・施設';
-  SPRITE_SVG = '/assets/svg/sprite.svg';
-  pageId = 'areaindex';
+  var title = 'Twin Ring Motegi';
+  pageId = 'foodsm';
 %>
-<%- include('/partials/data/index') -%>
+<%- include('./../partials/data/index') -%>
 <%- include('/partials/head', { pageId, title }) -%>
 
+
 <div class="lig-content">
-  <div class="subpage subpage-mobipark page-mobipark">
-    <div class="mv mv-subpage mv-subpage-walk">
+  <div class="subpage hellowoods-wrapper restaurant-wrapper">
+    <div class="mv mv-hellowoods mv-subpage-hotel">
+      <div class="mv-buttons">
+        <ul class="mv-buttons-list">
+          <li class="mv-buttons-item">
+            <a class="mv-buttons-link" href="/hoteltwinring/information/">
+              <span>ご予約</span>
+            </a>
+          </li>
+        </ul>
+      </div>
       <ul class="mv-list">
         <li class="mv-item">
-          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/twinringmotegi/pc/areaindex-mv.jpg') %>);"></div>
-          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/twinringmotegi/sp/areaindex-mv.jpg') %>);"></div>
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hoteltwinring/mv-img.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hoteltwinring/mv-img-sp.jpg') %>);"></div>
         </li>
       </ul>
 
-      <h1 class="mv-heading mv-heading-subpage mv-heading-subpage-labo">
-        <span class="mv-heading-text mv-heading-text-walk">
-          エリア・施設
-        </span>
-      </h1>
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading hoteltwinring">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Restaurant',
+            alt: 'ホテルツインリンク',
+            subtextvg: 'hoteltwinring-top-title',
+            altSubtext: ''
+          }) %>
+        </div>
+
+        <!-- <div class="u-show-pc mv-today mv-log mv-hoteltwinring-logo">
+          <div class="mv-l-inner">
+          </div>
+        </div> -->
+      </div>
     </div>
 
     <main>
-      <div class="l-parkmap design-parkmap">
-        <div class="parkmap design-parkmap-inner">
-          <div class="l-container parkmap-container">
-            
-            <div class="l-section-title">
-
-              <div class="u-show-pc">
-                <%- include('/partials/heading', {
-                  modifier: 'heading-wrap-parkmap',
-                  text: 'Park Map',
-                  subtextvg: 'parkmap-subtext',
-                  altSubtext: '',
-                }) %>
-              </div>
-      
-              <div class="u-show-sp">
-                <%- include('/partials/heading', {
-                  modifier: 'heading-wrap-parkmap heading-wrap-parkmap-areaindex',
-                  text: 'Park Map',
-                  subtextvg: 'parkmap-subtext-sp',
-                  altSubtext: '',
-                }) %>
-              </div>
-
-            </div>
-    
-    
-            <div class="parkmap-inner">
-              <div class="parkmap-image">
-                <ul class="parkmap-image-list">
-                  <%
-                    getData().data.parkmapButtons.forEach( button => {
-                  %>
-                  <li class="parkmap-image-item js-parkmap-number">
-                    <a href="<%- button.link %>" ></a>
-                  </li>
-                  <% }) %>
-                </ul>
-              </div>
-              <div class="parkmap-right">
-                <ul class="parkmap-list">
-                  <%
-                    getData().data.parkmapButtons.forEach( button => {
-                  %>
-                  <li class="parkmap-item js-parkmap-button">
-                    <a class="parkmap-link" href="<%- button.link %>" ><%- button.text %>
-                      <i class="parkmap-link-icon">
-                        <%- include('/partials/svg', {
-                          'name': 'arrow'
-                        }) %>
-                      </i>
-                    </a>
-                  </li>
-                  <% }) %>
-                  <li class="parkmap-item parkmap-item-last">
-                    <%- include('/partials/button', {
-                      newTab: false,
-                      modifier: 'button-parkmap',
-                      text: 'エリア・施設一覧を見る',
-                      link: '/twinringmotegi/'
-                    }) %>
-                  </li>
-                </ul>
-              </div>
-            </div>
+      <section class="info-container info-container-hellowoods">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-mobipark',
+              text: 'Information',
+              alt: 'information',
+              altSubtext: '',
+              subtextvg: 'info-subtext'
+            }) %>
           </div>
-        </div>
-      </div>
 
-      <div class="adventure">
+          <div class="l-container">
+            <ul class="info-list">
+              <% hoteltwinringInfo.forEach(item => { %>
+              <li class="info-item">
+                <a href="<%- item.link %>">
+                  <span><%= item.desc %></span>
+                </a>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+      </section>
+
+      <section class="adventure">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-mobipark heading-foodsm',
+            text: 'Restaurant',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'info-subtext'
+          }) %>
+        </div>
+
         <ul class="adventure-container">
 
-          <!-- hellowoods -->
+          <!-- marcherant -->
           <li class="adventure-list">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-hellowoods.jpg') %>);">
@@ -112,6 +98,14 @@
                     modifier: 'adventure-heading heading-title-adventure-sumika',
                     subtextvg: 'mobipark-sumika-title',
                     altSubtextvg: 'Adventure Sumika'
+                  }) %>
+                </div>
+
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'restaurant-gradient-subtext',
+                    imgPath: mix('https://via.placeholder.com/100x25'),
+                    alt: 'alt1'
                   }) %>
                 </div>
 
@@ -136,7 +130,7 @@
             </div>
           </li>
 
-          <!-- mobipark -->
+          <!-- diningtoya -->
           <li class="adventure-list">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-mobipark.jpg') %>);">
@@ -176,7 +170,7 @@
             </div>
           </li>
 
-          <!-- twinringmotegi -->
+          <!-- caferestaurant -->
           <li class="adventure-list">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-camp.jpg') %>);">
@@ -216,7 +210,7 @@
             </div>
           </li>
 
-          <!-- hotel -->
+          <!-- granturismo -->
           <li class="adventure-list">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-twinring.jpg') %>);">
@@ -256,7 +250,7 @@
             </div>
           </li>   
           
-          <!-- motorsport -->
+          <!-- ramen -->
           <li class="adventure-list">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-motorsports.jpg') %>);">
@@ -296,7 +290,7 @@
             </div>
           </li>
           
-          <!-- hondacollection -->
+          <!-- gelateria -->
           <li class="adventure-list">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-honda.jpg') %>);">
@@ -335,64 +329,26 @@
               </div>
             </div>
           </li>
-
-          <!-- activesafe -->
-          <li class="adventure-list">
-            <div class="adventure-bg"
-              style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-safety.jpg') %>);">
-              <div class="adventure-bg-circle"></div>
-              <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-activesafe" src="<%= mix('/assets/images/twinringmotegi/logo-safety.png') %>"
-                alt="hellowoods">
-            </div>
-
-            <div class="l-adventure-sp-container">
-              <div class="l-adventure">
-                <div class="l-section-title l-section-title-adventure">
-                  <%- include('/partials/heading', {
-                    modifier: 'adventure-heading heading-title-adventure-sumika',
-                    subtextvg: 'mobipark-sumika-title',
-                    altSubtextvg: 'Adventure Sumika'
-                  }) %>
-                </div>
-
-                <p class="adventure-content-copy u-show-pc">
-                  森の生きものたちが隠れるすみかをテーマにした、<br/>
-                  屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
-                </p>
-
-                <p class="adventure-content-copy u-show-sp">
-                  森の生きものたちが隠れるすみかをテーマにした、
-                  屋内の巨大ネットアスレチック。光と音の多彩な空間演出で森の1年を表現しています。
-                </p>
-
-                <div class="l-button">
-                  <%- include('/partials/button', {
-                    modifier: 'button-adventure',
-                    text: 'もっと見る',
-                    link: '/astp/'
-                  }) %>
-                </div>
-              </div>
-            </div>
-          </li>     
         </ul>
+      </section>
+
+      <div class="l-section">
+        <%- include('/partials/button', {
+          modifier: 'restaurant-button',
+          link: '',
+          text: 'sample'
+        }) -%>
       </div>
 
-      <!-- recommendation module -->
       <%- include('/partials/recommendation') -%>
 
-      <!-- pick up module -->
       <%- include('/partials/pickup') -%>
-
-      <!-- END BOTTOM -->
     </main>
   </div>
 </div>
 
-
 <!-- BREADCRUMBS -->
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsAreaindex
+  breadcrumbs : getData().data.breadcrumbsFoodsM
 }) -%>
-
 <%- include('/partials/footer', { pageId }) -%>

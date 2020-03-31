@@ -1,0 +1,19 @@
+.restaurant-wrapper {
+  .restaurant-button {
+    width: auto;
+    max-width: 730px;
+    background-color: $color-white;
+    height: 95px;
+    border: 1px solid $color-black;
+
+    &:before {
+      content: none;
+      display: none;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      height: 70px;
+      font-size: 16px;
+    }
+  }
+}

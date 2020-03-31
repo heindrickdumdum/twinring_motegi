@@ -1,0 +1,72 @@
+<%
+  var title = 'Twin Ring Motegi';
+  pageId = 'zipline';
+%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage hellowoods-wrapper">
+    <div class="mv mv-tsubasa">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/zipline/mv-img.png') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/zipline/mv-img-sp.png') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <h2 class="u-show-pc mv-heading hellowoods-mv-heading">
+          <%- include('/partials/heading', {
+            'modifier': 'heading-tsubasa',
+            'text': 'Zipline',
+            'alt': 'Zipline',
+            'subtextvg': 'tsubasa-main-title',
+            'altSubtext': ''
+          }) %>
+        </h2>
+
+        
+      </div>
+    </div>
+    
+    <main>
+      <div class="page-description text-center">
+        <p>
+          ハローウッズの森～国際レーシングコースまでの往復を駆け抜ける<br>
+          <b>「メガジップラインつばさ」</b>と<br>
+          ハローウッズの森の中をガイドと一緒に巡る<br>
+          <b>「森のジップラインムササビ」</b>の<br>
+          2種類のジップラインがございます。
+        </p>
+      </div>
+
+      <section class="l-section alternate-feature l-section-hellowoods">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-wrap-hellowoods',
+            text: 'Category',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'hellowoods-new2-title'
+          }) %>
+        </div>
+
+        <div class="l-container-m">
+          <%- include('/partials/zipline/section-alt-features-cat') -%>
+        </div>
+      </section>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+        <!-- END BOTTOM -->
+    </main>
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsTsubasa
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

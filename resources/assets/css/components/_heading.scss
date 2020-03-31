@@ -73,6 +73,12 @@
     display: inline-block;
     margin-top: 20px;
     height: 36px;
+
+    &.heading-text-default {
+      font-family: none;
+      background: none;
+      -webkit-text-fill-color: $color-black;
+    }
   
     // additional
     position: relative;
@@ -163,12 +169,18 @@
     }
   }
 
-  &.heading-text-default {
-    font-family: none;
-    background: none;
-    -webkit-text-fill-color: $color-black;
+  .heading-wrap-parkmap-areaindex & { //phase 2 twinringmotegig areaindex
+    @include max-screen($breakpoint-mobile) {
+      text-align: center;
+    }
   }
 }
+
+// .heading-subtext {
+//   display: inline-block;
+//   margin-top: 20px;
+//   height: 36px;
+// }
 
 //modifier for SP walk program and labo
 .subpage-walk,

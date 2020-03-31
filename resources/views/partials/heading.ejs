@@ -49,10 +49,10 @@ if (typeof heading_level === 'undefined'){
     <% if(subtextvg || imgPath) { %>
     <p class="heading-subtext">
       <% if(subtextvg || altSubtextvg) { %>
-        <svg>
-          <title><%- altSubtextvg = altSubtextvg != '' ?  altSubtextvg : subtextvg %></title>
-          <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-'+subtextvg) %>"></use>
-        </svg>
+        <%- include('/partials/svg', {
+          name: subtextvg,
+          svgtitle: altSubtextvg
+        }) -%>
       <% } %>
 
       <% if(imgPath) { %>

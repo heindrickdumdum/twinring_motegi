@@ -1,0 +1,298 @@
+<%
+  var title = 'Twin Ring Motegi';
+  pageId = 'hoteltwinring';
+%>
+<%- include('./../partials/data/index') -%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+
+<div class="lig-content">
+  <div class="subpage hellowoods-wrapper">
+    <div class="mv mv-hellowoods mv-subpage-hotel">
+      <div class="mv-buttons">
+        <ul class="mv-buttons-list">
+          <li class="mv-buttons-item">
+            <a class="mv-buttons-link" href="/hoteltwinring/information/">
+              <span>ご予約</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hoteltwinring/mv-img.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hoteltwinring/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <h2 class="mv-heading hellowoods-mv-heading hoteltwinring">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Hotel Twinring',
+            alt: 'ホテルツインリンク',
+            subtextvg: 'hoteltwinring-top-title',
+            altSubtext: ''
+          }) %>
+        </h2>
+
+        <div class="u-show-pc mv-today mv-log mv-hoteltwinring-logo">
+          <div class="mv-l-inner">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="l-section">
+        <section class="info-container info-container-hellowoods">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-mobipark',
+                text: 'Information',
+                alt: 'information',
+                altSubtext: '',
+                subtextvg: 'info-subtext'
+              }) %>
+            </div>
+
+            <div class="l-container">
+              <ul class="info-list">
+                <% hoteltwinringInfo.forEach(item => { %>
+                <li class="info-item">
+                  <a href="<%- item.link %>">
+                    <span><%= item.desc %></span>
+                  </a>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+        </section>
+      </div>
+
+      <div class="l-section">
+        <div class="challenge hellowoods">
+          <div class="l-container">
+            <div class="row">
+              <div class="challenge-left">
+                <div class="challenge-img u-show-pc">
+                  <div class="challenge-img1">
+                    <img src="<%- mix('/assets/images/hoteltwinring/overflow-img-1.png') -%>" alt="">
+                  </div>
+                  <div class="challenge-img2">
+                    <img src="<%- mix('/assets/images/hoteltwinring/overflow-img-2.png') -%>" alt="">
+                  </div>
+                </div>
+
+                <div class="challenge-img u-show-sp">
+                  <img src="<%- mix('/assets/images/hoteltwinring/life-overflow-images-sp.png') -%>" alt="">
+                </div>
+
+
+              </div>
+              <div class="challenge-right">
+                <p class="heading-text">
+                  <img src="<%- mix('/assets/images/hoteltwinring/life-overflow-heading.png') -%>" alt="フィトンチッド溢れる森にたたずむホテルで癒やしのひとときを。">
+                </p>
+                <p class="desc hellowoods">
+                  小高い丘の上、フィトンチッド溢れる森に囲まれたホテルで寛ぎと癒しの時間を過ごそう。満天の星を眺めながら優雅に疲れを癒す露天風呂、ここでしか味わえない地元素材を使ったこだわりグルメ、宿泊者限定のアクティビティ、そのすべてが特別な体験としてあなたとご家族をおもてなしします。
+                </p>
+                
+
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="">
+        <section class="adventure">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-wrap-hellowoods',
+              text: 'Room Type',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'room-type-title'
+            }) %>
+          </div>
+
+          <div class="forest-container">
+            <%- include('/partials/hoteltwinring/section-forest') -%>
+          </div>
+        </section>
+      </div>
+
+      <section class="l-section alternate-feature l-section-hellowoods">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-wrap-hellowoods',
+            text: 'Restaurant',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'hoteltwinring-restaurant'
+          }) %>
+        </div>
+
+        <div class="l-container-m">
+          <%- include('/partials/hoteltwinring/section-alt-features-resto') -%>
+        </div>
+      </section>
+
+      <section class="l-section racing-kart nozomi">
+        <div class="l-container">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-racing-kart',
+              text: 'Facility',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'facility-title',
+              altSubtextvg: 'Facility'
+            }) %>
+          </div>
+        </div>
+
+        <div class="adventure-bg adventure-bg-racing-kart u-show-pc"
+          style="background-image: url(<%= mix('/assets/images/hoteltwinring/facility-bg-1.jpg') %>);">
+        </div>
+
+        <div class="adventure-bg adventure-bg-racing-kart u-show-sp hoteltwinring"
+          style="background-image: url(<%= mix('/assets/images/hoteltwinring/facility-bg-1-sp.jpg') %>);">
+        </div>
+
+        <div class="l-adventure-sp-container">
+          <div class="l-adventure l-hoteltwinring">
+            <div class="l-section-title">
+              <img class="logo-racing-kart logo-nozomi" src="<%= mix('/assets/images/hoteltwinring/logo_nozominoyu.png') %>" alt="のぞみの湯">
+            </div>
+
+            <p class="adventure-content-copy">
+              昼は広大な森とレーシングコース、夜は満天の星を眺めながら、ごゆっくりとお過ごしください。
+            </p>
+
+            <div class="l-button">
+              <%- include('/partials/button', {
+                modifier: 'button-adventure button-adventure-racing-kart',
+                text: 'もっと見る',
+                link: '/hoteltwinring/nozominoyu/'
+              }) %>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="l-section banner-info">
+        <div class="block-image-inner hoteltwinring-lounge">
+          <div class="block-image-text-wrap hoteltwinring l-container-m">
+            <div class="block-image-text block-image-text-hellowoods">
+              <span class="heading-text">Lobby lounge</span>
+              <div class="heading-text heading-text-default">
+                
+                <%- include('/partials/heading', {
+                  modifier: 'room-type svg-block svg-subtext',
+                  subtextvg: 'lobby-lounge-title',
+                }) %>
+              </div>
+              <span class="block-image-subtext">大人はくつろぎ、子どもは楽しむ。<br>
+                森で過ごすひとときをイメージしたロビーラウンジは、<br>
+                家族で一緒にリラックスしてお過ごしいただけます。</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="l-section block-image">
+        <div class="l-container">
+          <ul class="block-image-list block-image-list-hellowoods">
+            <%
+            hoteltwinringGallery.forEach( block => {
+            %>
+            <li class="block-image-item block-image-item-hellowoods image-border <%- block.modifier %>">
+              <a href="<%- block.url %>" class="block-image-item-link">
+                <div class="block-image-inner" style="background-image: url(<%- block.bg %>);">
+                  <div class="block-image-text-wrap">
+                    <p class="block-image-text block-image-text-hellowoods">
+                      <span class="heading-text"><%- block.title %></span>
+                      <span class="block-image-subtext"><%- block.subtext %></span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <%
+              })
+            %>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="l-section banner-image hoteltwinring-banner-image-1">
+        <div class="l-container-m">
+          <a href="/hoteltwinring/granroom/#granroom-activity">
+            <div class="banner-image-wrap">
+                <p class="banner-image-text">
+                  <%- include('/partials/heading', {
+                    modifier: 'fill-white svg-block u-show-pc',
+                    text: '',
+                    alt: '',
+                    altSubtext: '',
+                    subtextvg: 'hoteltwinring-big-banner-title'
+                  }) %>
+                  <%- include('/partials/heading', {
+                    modifier: 'fill-white svg-block u-show-sp',
+                    text: '',
+                    alt: '',
+                    altSubtext: '',
+                    subtextvg: 'big-banner-title-sp'
+                  }) %>
+                  <span class="banner-image-subtext">星空観望など宿泊者限定イベントをご用意しております </span>
+                </p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="l-section banner-image hoteltwinring-banner-image-2">
+        <div class="l-container-m">
+          <a href="/fieldtrip_m/">
+            <div class="banner-image-wrap">
+                <p class="banner-image-text">
+                  <%- include('/partials/heading', {
+                    modifier: 'fill-white svg-block u-show-pc',
+                    text: '',
+                    alt: '',
+                    altSubtext: '',
+                    subtextvg: 'hoteltwinring-big-banner-2-title'
+                  }) %>
+                  <%- include('/partials/heading', {
+                    modifier: 'fill-white svg-block u-show-sp',
+                    text: '',
+                    alt: '',
+                    altSubtext: '',
+                    subtextvg: 'big-banner-2-title-sp'
+                  }) %>
+                </p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <%- include('/partials/hotel-reservation') -%>
+
+      <%- include('/partials/recommendation') -%>
+
+      <%- include('/partials/pickup') -%>
+    </main>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsMobipark
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

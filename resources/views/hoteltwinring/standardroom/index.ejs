@@ -1,0 +1,377 @@
+<%
+  var title = 'Twin Ring Motegi';
+  pageId = 'standardroom';
+%>
+<%- include('/partials/data/index') -%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-hotel hotel-wrapper">
+    <div class="mv mv-subpage mv-subpage-reserve">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/standardroom/mv-img.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/standardroom/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading standardroom-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Standard Room',
+            alt: '',
+            subtextvg: 'standardroom-top-title',
+            altSubtextvg: 'スーぺリアファミリールーム'
+          }) %>
+        </div>
+      </div>
+    </div>
+    
+    <main>
+      
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-main svg-block',
+          text: `Standard Room`,
+          altSubtext: ``,
+          subtextvg: `standardroom-standard-content-title`,
+          altSubtextvg: `スタンダードルーム`
+        }); -%>
+      </div>
+
+      <section class="subpage-section subpage-section-roomdetails subpage-section-aqua-labo">
+        <div class="subpage-inner">
+
+          <div class="subpage-banner subpage-banner-standardroom">
+            <div class="subpage-banner-inner">
+              <img src="<%= mix('/assets/images/standardroom/content-image.jpg') %>" alt="スタンダードルーム">
+            </div>
+
+            <p class="subpage-banner-desc u-show-pc bold">
+              窓からは広大な森またはレーシングコースを見渡すことができ、優雅な気分でゆったりとした時間をお過ごしいただけます。
+            </p>
+          </div>
+          
+          <h3 class="subpage-title">
+            <span>客室詳細</span>
+          </h3>
+
+          <p class="subpage-desc u-show-sp bold">
+            窓からは広大な森またはレーシングコースを見渡すことができ、優雅な気分でゆったりとした時間をお過ごしいただけます。
+          </p>
+
+          <table class="table">
+            <tbody>
+
+              <tr class="table-row">
+                <th class="table-head">ルームタイプ</th>
+                <td class="table-col">
+                  121室、客室33m<sup><small>2</small></sup>＋バス付き（定員1名&#126;4名）、禁煙 ＆ 喫煙ルームあり
+                  <br/>
+                  <a class="js-lightbox" href="/assets/images/standardroom/standard-floorplan.jpg" title="121室、客室33m<sup><small>2</small></sup>＋バス付き（定員1名&#126;4名）、禁煙 ＆ 喫煙ルームあり">> 間取りを見る</a>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">ベッド</th>
+                <td class="table-col">
+                  セミダブルベッド（幅1200mm × 長さ 2000mm）2台<br/>
+                  ※3名～4名利用時は、エキストラベッドを使用
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">展望</th>
+                <td class="table-col">
+                  レーシングコースを見渡せるサーキットビュー<br/>
+                  広大な森で癒されるマウントビュー
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">客室設備</th>
+                <td class="table-col">
+                  エアコン／浴室／ウォシュレット機能付トイレ／冷蔵庫／TV(BS視聴可）／ヘアドライヤー／電気ポット／セーフティボックス／加湿空気清浄機／電話／無料Wi-fi／アラーム付ナイトパネル
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">アメニティ</th>
+                <td class="table-col">
+                  作務衣（ルームウェア）／スリッパ／バスタオル／フェイスタオル／石鹸／シャンプー／リンス／ボディーソープ／歯ブラシ／カミソリ／ヘアブラシ／コットンセット／綿棒
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">お子様向け<br/>
+                  アメニティ</th>
+                <td class="table-col">
+                  オリジナル歯ブラシ／歯磨き粉（いちご味）／オリジナルスポンジ／作務衣（ルームウェア）／スリッパ
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+        </div>
+      </section>
+
+      <section class="subpage-section svg-block">
+        <div class="subpage-inner">
+      
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-main heading-main-subpage heading-main-subpage-nogradient-onecolor heading-main-subpage-usagefee',
+              subtextvg: 'granroom-usagefee-subtitle',
+              altSubtextvg: 'ご利用料金'
+            }); -%>
+          </div>
+
+          <h3 class="subpage-title">
+            <span>モデルプラン</span>
+          </h3>
+          
+          <div class="model-plan">
+            <div class="model-plan-frame">
+              <p class="model-plan-desc u-show-pc">
+                大人2名、小学生1名、幼児1名で、休前日宿泊の場合
+              </p>
+              <p class="model-plan-desc u-show-sp">
+                大人2名、小学生1名、幼児1名で、<br/>
+                休前日宿泊の場合
+              </p>
+              <div class="l-section-title u-show-pc">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-main heading-main-subpage heading-model-plan',
+                  imgPath: mix('/assets/images/standardroom/model-plan-price.png'),
+                  alt: `スタンダードプラン 1泊2食付きプラン(4名) 合計 47,910円`
+                }) -%>
+              </div>
+              <div class="l-section-title u-show-sp">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-main heading-main-subpage heading-model-plan',
+                  imgPath: mix('/assets/images/standardroom/model-plan-price-sp.png'),
+                  alt: `スタンダードプラン 1泊2食付きプラン(4名) 合計 47,910円`
+                }) -%>
+              </div>
+              <small class="model-plan-note u-show-pc">
+                <料金内訳> 大人:16,300円 × 2名、小学生:11,410円 × 1名、幼児3900円 × 1名 <br/>
+                ※宿泊プラン、時期によって料金が異なります。
+              </small>
+              <small class="model-plan-note u-show-sp">
+                <料金内訳> 大人:16,300円 × 2名、<br/>
+                小学生:11,410円 × 1名、幼児3,900円 × 1名<br/>
+                ※宿泊プラン、時期によって料金が異なります。
+              </small>
+            </div>
+          </div>
+
+
+          <h3 class="subpage-title">
+            <span>家族4名　1泊2食付プラン基本料金 ※大人2名、子ども１名、幼児1名</span>
+          </h3>
+
+          <p class="u-show-sp">
+            <strong>
+              １&#126;4名ご利用
+            </strong>
+          </p>
+
+          <div class="u-show-sp">
+            <table class="table table-solid">
+              <tbody>
+                <tr class="table-row table-row-solid">
+                  <th class="table-head">お1人様料金</th>
+                  <td class="table-col">平日</td>
+                  <td class="table-col">休前日</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">大人<br>
+                    (中学生以上)</th>
+                  <td class="table-col">12,500円</td>
+                  <td class="table-col">16,300円</td>
+                </tr>
+                <tr class="table-row table-row-last">
+                  <th class="table-head">子ども<br>
+                    （小学生）</th>
+                  <td class="table-col">8,750円</td>
+                  <td class="table-col">11,410円&#126;</td>
+                </tr>
+                <tr class="table-row table-row-last">
+                  <th class="table-head">幼児<br>
+                    （3歳未満）</th>
+                  <td class="table-col">3,900円</td>
+                  <td class="table-col">3,900円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="u-show-sp">
+            <table class="table table-solid table-solid-last">
+              <tbody>
+                <tr class="table-row table-row-solid">
+                  <th class="table-head">お1人様料金</th>
+                  <td class="table-col">GW・夏休みなど</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">大人<br/>
+                    (中学生以上)</th>
+                  <td class="table-col">18,000円&#126;</td>
+                </tr>
+                <tr class="table-row table-row-last">
+                  <th class="table-head">子ども<br>
+                    （小学生）</th>
+                  <td class="table-col">12,600円&#126;</td>
+                </tr>
+                <tr class="table-row table-row-last">
+                  <th class="table-head">幼児<br>
+                    （3歳未満）</th>
+                  <td class="table-col">3,900円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="u-show-pc">
+            <table class="table table-solid">
+              <tbody>
+
+                <tr class="table-row table-row-solid">
+                  <th class="table-head">1泊2食付きプラン<br/>
+                    (お1人様料金)</th>
+                  <th class="table-col">平日</th>
+                  <th class="table-col">休前日</th>
+                  <th class="table-col">GW・夏休みなど</th>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head">大人(中学生以上)</th>
+                  <td class="table-col">
+                    12,500円
+                  </td>
+                  <td class="table-col">
+                    16,300円
+                  </td>
+                  <td class="table-col">
+                    18,000円&#126;
+                  </td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head">子ども（小学生</th>
+                  <td class="table-col">
+                    8,750円
+                  </td>
+                  <td class="table-col">
+                    11,410円&#126;
+                  </td>
+                  <td class="table-col">
+                    12,600円&#126;
+                  </td>
+                </tr>
+                <tr class="table-row table-row-last">
+                  <th class="table-head">幼児（3歳未満）</th>
+                  <td class="table-col">
+                    3,900円
+                  </td>
+                  <td class="table-col">
+                    3,900円
+                  </td>
+                  <td class="table-col">
+                    3,900円
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          <small class="important-note important-note-left">
+            ※宿泊プランにより異なります。<br>
+※宿泊料金には、のぞみの湯利用料・ツインリンクもてぎ入場料・駐車料が含まれています。
+          </small>
+        </div>
+      </section>
+
+      <section class="subpage-section subpage-section-otherroom subpage-section-aqua-labo">
+        <div class="subpage-inner">
+      
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-main heading-main-subpage heading-main-subpage-other svg-block',
+              text: `Other rooms`,
+              altSubtext: ``,
+              subtextvg: `otherroom-subtitle`,
+              altSubtextvg: `その他のお部屋`
+            }); -%>
+          </div>
+      
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-main heading-main-subpage heading-main-subpage-other svg-block',
+              text: `Other Rooms`,
+              altSubtext: ``,
+              subtextvg: `otherroom-subtitle-sp`,
+              altSubtextvg: `その他のお部屋`
+            }); -%>
+          </div>
+          
+          <div class="media-grid">
+
+            <div class="media-grid-item">
+              <a href="/hoteltwinring/familyroom/">
+                <div class="media-grid-img media-grid-img-rounded u-show-pc" style="background-image: url(<%- mix('/assets/images/standardroom/family-img.png') -%>);">
+                </div>
+                <div class="media-grid-img media-grid-img-rounded u-show-sp" style="background-image: url(<%- mix('/assets/images/standardroom/family-img-sp.png') -%>);">
+                </div>
+              </a>
+
+              <a href="/hoteltwinring/familyroom/">
+                <h3 class="media-grid-title subpage-title">
+                  <span>スーペリアファミリールーム</span>
+                </h3>
+              </a>
+              
+            </div>
+
+            <div class="media-grid-item">
+              <a href="/hoteltwinring/granroom/">
+                <div class="media-grid-img media-grid-img-rounded u-show-pc" style="background-image: url(<%- mix('/assets/images/standardroom/granroom-img.png') -%>);">
+                </div>
+                <div class="media-grid-img media-grid-img-rounded u-show-sp" style="background-image: url(<%- mix('/assets/images/standardroom/granroom-img-sp.png') -%>);">
+                </div>
+              </a>
+
+              <a href="/hoteltwinring/granroom/">
+                <h3 class="media-grid-title subpage-title">
+                  <span>
+                    グランルーム
+                  </span>
+                </h3>
+              </a>
+              
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- reservation module -->
+      <%- include('/partials/hotel-reservation') -%>
+
+      <%- include('/partials/recommendation') -%>
+
+      <%- include('/partials/pickup') -%>
+
+    </main>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsStandardroom
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

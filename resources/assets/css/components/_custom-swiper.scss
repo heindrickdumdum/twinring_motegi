@@ -1,5 +1,6 @@
 .swiper-container {
-  overflow: visible;
+  // sass-lint:disable-block no-important
+  overflow: visible !important;
 
   background-color: $color-white;
 

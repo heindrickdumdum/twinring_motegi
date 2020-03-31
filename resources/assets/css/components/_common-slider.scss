@@ -3,7 +3,8 @@
   margin: 0 -176px;
 
   @include max-screen($breakpoint-mobile) {
-    margin: 0 -214px;
+    // sass-lint:disable-block no-important
+    margin: 0 -214px !important;
   }
 
   .swiper-wrapper {

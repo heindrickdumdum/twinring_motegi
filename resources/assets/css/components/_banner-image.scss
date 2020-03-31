@@ -30,3 +30,75 @@
     background-color: #f9f9f9;
   }
 }
+
+.hoteltwinring-banner-image-1 {
+  .banner-image-wrap {
+    padding: 120px 0 105px;
+    background-image: url(../images/hoteltwinring/banner-image-1.jpg);
+    .heading {
+      @include min-screen ($breakpoint-mobile + 1) {
+        margin-bottom: 36px;
+      }
+    }
+
+    .heading-text {
+      background: none;
+      -webkit-text-fill-color: $color-white;
+    }
+    .banner-image-subtext {
+      color: $color-white;
+      letter-spacing: 3px;
+    }
+
+    .heading-subtext {
+      max-width: 450px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url(../images/hoteltwinring/banner-image-1-sp.jpg);
+      padding: 54px 0px 90px;
+
+      .heading {
+        margin-bottom: 5px;
+      }
+
+      .heading-subtext {
+        height: 50px;
+      }
+    }
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    padding-bottom: 25px;
+  }
+}
+
+.hoteltwinring-banner-image-2 {
+  .banner-image-wrap {
+    padding: 40px 0;
+    background-image: url(../images/hoteltwinring/banner-image-2.jpg);
+    
+
+    .heading-text {
+      background: none;
+      -webkit-text-fill-color: $color-white;
+      line-height: 3;
+    }
+
+   
+    .heading-subtext {
+      max-width: 350px;
+      height: 35px;  
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url(../images/hoteltwinring/banner-image-2-sp.jpg);
+      padding: 30px 0;
+
+
+      .heading-subtext {
+        height: 22px;
+      }
+    }
+  }
+}

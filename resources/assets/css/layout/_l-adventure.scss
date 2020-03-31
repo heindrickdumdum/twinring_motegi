@@ -10,8 +10,83 @@
   padding-left: 90px;
   padding-right: 90px;
 
+  .adventure-ribbon {
+    position: absolute;
+    top: -53px;
+    left: -10px;
+    height: 170px;
+    width: 170px;
+    background: url(/assets/images/hoteltwinring/NEW-icon-image.png) no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+
+    .adventure-ribbon-inner {
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+
+      .heading-text {
+        background: none;
+        -webkit-text-fill-color: $color-black;
+        font-size: 50px;
+        line-height: 1.2;
+
+        @include max-screen($breakpoint-mobile) {
+          font-size: 30px;
+        }
+      }
+
+      .ribbon-date {
+        @include max-screen($breakpoint-mobile) {
+          font-size: 9px;
+        }
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      height: 70px;
+      width: 70px;
+      top: -34px;
+      left: -30px;  
+    }
+  }
+
   &.hellowoods {
     padding-top: 140px;
+  }
+
+  &.l-hoteltwinring {
+    padding-top: 65px;
+
+    .l-button {
+      margin-top: 60px;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      padding-top: 30px;
+    }
+  }
+
+  &.hoteltwinring {
+    padding-top: 7px;
+    margin-top: -60px;
+
+    .l-button {
+      margin-top: 37px;
+    }
+
+    .adventure-sub-heading {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: initial;
+      letter-spacing: 5px;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      padding-top: 5px;
+      margin-top: -32px;
+    }
   }
 
   @include max-screen ($breakpoint-mobile) {

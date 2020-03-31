@@ -41,13 +41,13 @@ if (typeof buttonLink === 'undefined') {
       </p>
 
     <% } %>
-
-    <% if(buttonText) { %>
-    <%- include('/partials/button-gradient', {
-      modifier: 'button-gradient-cmn',
-      text: buttonText,
-      link: buttonLink
-    }) %>
-    <% } %>
   </a>
+
+  <% if(buttonText) { %>
+  <%- include('/partials/button-gradient', {
+    modifier: 'button-gradient-cmn',
+    text: buttonText,
+    link: buttonLink
+  }) %>
+  <% } %>
 </article>

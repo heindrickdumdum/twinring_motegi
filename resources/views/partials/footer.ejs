@@ -25,10 +25,17 @@
   'craft',
   'labo',
   'musasabi',
-  'tsubasa'
+  'tsubasa',
+  'granroom',
+  'familyroom',
+  'standardroom',
+  'hoteltwinring',
+  'nozominoyu',
+  'information'
   ]
 %>
   
+  <!-- START GLOBAL FOOTER -->
   <footer class="footer" id="lig-footer">
     <nav class="footer-top-nav-list-wrap">
       <div class="l-container">
@@ -111,11 +118,24 @@
     <link rel="stylesheet" href="<%= mix('/assets/css/footer.css') %>">
     <!-- END LIG ASSETS CSS/JS -->
   </footer>
+  <!-- END GLOBAL FOOTER -->
 
 </div><!-- end of wrap -->
 
   <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
   <script src="<%= mix('/assets/js/app.js') %>" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(function() {
+        if( document.querySelector('html').classList.contains('is-edge') ) {
+          svg4everybody({
+            polyfill: true
+          });
+        }  
+      }, 500);
+    });
+  </script>
 
   <% if(pageId == 'mobipark') { %>
     <script src="<%= mix('/assets/js/mobipark.js') %>" async></script>
@@ -134,12 +154,16 @@
     <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'labo') { %>
+  <% if(pageId == 'labo' || pageId == "nozominoyu") { %>
     <script src="<%= mix('/assets/js/labo.js') %>" async></script>
   <% } %>
 
   <% if(pageId == 'tsubasa') { %>
     <script src="<%= mix('/assets/js/collapse-button.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'granroom' || pageId == 'familyroom' || pageId == 'standardroom') { %>
+    <script src="<%= mix('/assets/js/granroom.js') %>" async></script>
   <% } %>
 
 <script type="text/javascript">

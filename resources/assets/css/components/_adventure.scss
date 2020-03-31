@@ -209,6 +209,12 @@
   margin-top: 30px;
   font-weight: 500;
   
+  &.hoteltwinring {
+    letter-spacing: 0.19em;
+    margin-top: 32px;
+  }
+
+
   @include max-screen($breakpoint-mobile) {
     font-size: 12px;
     margin-top: 14px;
@@ -221,11 +227,20 @@
   max-width: 320px;
   margin-bottom: 31px;
 
+  &.logo-nozomi {
+    margin-bottom: 67px;
+    @include max-screen($breakpoint-mobile) {
+      max-width: 180px;
+      margin-bottom: 16px;
+    }
+  }
+  
   @include max-screen($breakpoint-mobile) {
     max-width: 151px;
     margin-bottom: 16px;
   }
 }
+
 
 .racing-kart {
   .adventure-content-copy {
@@ -241,5 +256,9 @@
   @include max-screen($breakpoint-mobile) {
     margin-top: -8px;
     background-position: right top;
+
+    &.hoteltwinring {
+      height: 180px;
+    }
   }
 }

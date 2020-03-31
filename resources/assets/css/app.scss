@@ -13,6 +13,7 @@
 
 @import "components/attraction";
 @import "components/fonts";
+@import "components/lightbox";
 
 @import "components/wrap";
 @import "components/preload";
@@ -36,6 +37,7 @@
 @import "components/faq";
 @import "components/call-to-action";
 @import "components/table";
+@import "components/table-info";
 @import "components/media";
 @import "components/bottom-slider";
 @import "components/accordion";
@@ -55,13 +57,13 @@
 // @import "components/footer";
 // @import "components/footer-top";
 // @import "components/footer-bottom";
-@import "components/sns";
 @import "components/slider";
 @import "components/sponsors";
 @import "components/top-slider";
 @import "components/hellowoods";
 @import "components/note";
 @import "components/hellowoods-information";
+@import "components/hotel-reservation";
 @import "components/alternate-feature";
 @import "components/step";
 @import "components/step-item";
@@ -77,10 +79,15 @@
 @import "components/breadcrumbs";
 @import "components/custom-swiper";
 @import "components/collapse";
+@import "components/reminder";
+@import "components/nozominoyu";
+
+@import "components/roomdetails";
+@import "components/important-note";
+@import "components/model-plan";
 
 @import 'layout/grid';
 @import "layout/l-container";
-@import "layout/l-header";
 @import "layout/l-heading";
 @import "layout/l-feature";
 @import "layout/l-parkmap";

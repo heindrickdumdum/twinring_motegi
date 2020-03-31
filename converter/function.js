@@ -5,29 +5,28 @@ var CONFIG = require('./config.js');
 
 module.exports = {
 	writeFile(path, data) {
-
-	  	fs.writeFile(path, data, function (err) {
-	    	if (err) {
-	        	throw err;
-	    	}
+	  	fs.writeFileSync(path, data, function (err) {
+			if (err) {
+				throw err;
+			}
 	  	});
 	},
 	optimizeHtml: function (targetFile) {
 
 		// Get all html
 		var htmlTags;
-		
-		//Change to Shift-jis
-		htmlTags = iconv.decode(fs.readFileSync(targetFile), 'Shift_JIS');
+
+		// Read html file
+		htmlTags = iconv.decode(fs.readFileSync(targetFile), 'utf8');
 
 		//抽出 specific tags
 		function getTags(start, end, startTagLen, endTagLen){
 			var startLine = (typeof start === "string") ? htmlTags.indexOf(start) : start;
 			var endLine = (typeof end === "string") ? htmlTags.indexOf(end) : end;
 			var startTagLen = (!startTagLen) ? 0 : start.length;
-			var endTagLen = (!endTagLen) ? 0 : end.length; 
+			var endTagLen = (!endTagLen) ? 0 : end.length;
 			var contentsTags = htmlTags.slice(startLine + startTagLen, endLine + endTagLen);
-			
+
 			return contentsTags;
 		}
 
@@ -40,20 +39,18 @@ module.exports = {
 
 		//conbine tags
 		var contentsTags = tagTop + tagContent + tagBottom;
-		this.writeFile(targetFile, contentsTags);
+		fs.writeFileSync(targetFile, contentsTags);
 		// console.log('success: ' + targetFile);
-		
+
 	},
 	optimizeHtmlParts: function (targetFile, startTag, endTag, endTagLen, utf8) {
 		// Get all html
 		var htmlTags;
-		
+
 		if(utf8 === true){
 			htmlTags = fs.readFileSync(targetFile);
-			console.log('decode: utf-8');
 		} else {
-			htmlTags = iconv.decode(fs.readFileSync(targetFile), 'Shift_JIS');
-			console.log('decode: Shift_JIS');
+			htmlTags = iconv.decode(fs.readFileSync(targetFile), 'utf8');
 		}
 
 		// remove unnecesarry tags
@@ -61,46 +58,47 @@ module.exports = {
 		var endLine = htmlTags.indexOf(endTag);
 		var contentsTags = htmlTags.slice(startLine, endLine + endTagLen);
 
-		//Update html files
-		this.writeFile(targetFile, contentsTags);
+		console.log('targetFile:%s \n startLine: %s endLine: %s', targetFile, startLine, endLine);
 
-		console.log('success: ' + targetFile);
+		//Update html files
+		fs.writeFileSync(targetFile, contentsTags);
+
 	},
 	eachFiles: function(filePath, rootPath, callback) {
 
 		var self = this;
 
-	    if (!rootPath) {
-	        rootPath = filePath;
-	    }
-	    var stat = fs.statSync(filePath);
-	    if (!stat) {
+		if (!rootPath) {
+			rootPath = filePath;
+		}
+		var stat = fs.statSync(filePath);
+		if (!stat) {
 
-	    } else if (stat.isDirectory()) {
-	        try {
-	            var files = fs.readdirSync(filePath, '');
-	            
-	            if (!files) {
+		} else if (stat.isDirectory()) {
+			try {
+				var files = fs.readdirSync(filePath, '');
 
-	            } else {
-	                for (var _i in files)(function (i) {
-	                    var file = files[i];
-	                    if (filePath.match(/.*\/$/)) {
-	                        self.eachFiles(filePath + file, rootPath, callback);
-	                    } else {
-	                        self.eachFiles(filePath + "/" + file, rootPath, callback);
-	                    }
-	                }(_i));
-	            }
-	        } catch (e1) {
-	            console.error("Directory " + filePath + " is unreadable.");
-	        }
-	    } else if (stat.isFile()) {
-	        if (callback) {
-	            callback.call(this, filePath, rootPath);
-	        }
-	    } else {
-	        console.error(filePath + " is not file or directory");
-	    }
+				if (!files) {
+
+				} else {
+					for (var _i in files)(function (i) {
+						var file = files[i];
+						if (filePath.match(/.*\/$/)) {
+							self.eachFiles(filePath + file, rootPath, callback);
+						} else {
+							self.eachFiles(filePath + "/" + file, rootPath, callback);
+						}
+					}(_i));
+				}
+			} catch (e1) {
+				console.error("Directory " + filePath + " is unreadable.");
+			}
+		} else if (stat.isFile()) {
+			if (callback) {
+				callback.call(this, filePath, rootPath);
+			}
+		} else {
+			console.error(filePath + " is not file or directory");
+		}
 	}
 };

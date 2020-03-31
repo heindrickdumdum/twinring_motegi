@@ -2,12 +2,16 @@ var fs = require('fs-extra');
 var CONFIG = require('./config.js');
 
 module.exports = function(){
-	
+
+	//fs.renameSync(CONFIG.release, '_old');
+	//fs.remove(CONFIG.release + '_old')
+
 	//copy /public to /release
 	fs.copySync(CONFIG.dist, CONFIG.release);
 
 	var directorySecond = CONFIG.directories[0];
 	// var directoryThird = CONFIG.directories[1];
+
 
 	// Clone assets directory to each 2nd directory
 	var cloneAssets = function(target){
@@ -19,7 +23,9 @@ module.exports = function(){
 			index++;
 		}
 	};
-	cloneAssets(directorySecond);
+	if(CONFIG.assets_copy) {
+			cloneAssets(directorySecond);
+	}
 
 	//Copy index.html to top/
 	fs.copySync(CONFIG.dist + 'index.html', CONFIG.release + 'top/index.html');

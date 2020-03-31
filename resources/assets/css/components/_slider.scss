@@ -95,7 +95,8 @@
 
 .slider-gallery {
   overflow: hidden;
-  margin-bottom: 25px;
+  // sass-lint:disable-block no-important
+  margin-bottom: 25px !important;
 
   .slider-item {
     width: 100%;
@@ -111,6 +112,23 @@
     background-size: cover;
   }
 }
+
+.slider-gallery-nozominoyu {
+  // sass-lint:disable-block no-important
+  margin-bottom: 41px !important;
+
+  @include max-screen($breakpoint-mobile) {
+     // sass-lint:disable-block no-important
+    margin-bottom: 18px !important;
+  }
+
+  .slider-gallery-img {
+    padding-bottom: 46.4444%;
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 56.4444%;
+    }
+  }
+} 
 
 .slider-mobipark-attraction {
   .slider-item {
@@ -139,11 +157,13 @@
 .slider-pickup,
 .slider-recommendation {
   opacity: 1;
-  overflow: visible;
+  // sass-lint:disable-block no-important
+  overflow: visible !important;
   margin-left: 0;
 
   @include max-screen($breakpoint-mobile) {
-    padding: 0 12%;
+    // sass-lint:disable-block no-important
+    padding: 0 12% !important;
   }
 
   .slider-wrapper {

@@ -10,11 +10,12 @@
     "prod": "npm run production",
     "build:shift-js": "gulp build-shift-jis",
     "build-dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "build-stg": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && gulp",
+    "build-stg": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npm run convert",
     "convert": "node ./converter/main.js convert",
     "convertInit": "node ./converter/main.js init",
     "convertHtml": "node ./converter/main.js convertHtml",
-    "arrangePath": "node ./converter/main.js arrangePath"
+    "arrangePath": "node ./converter/main.js arrangePath",
+    "shiftjis": "node ./converter/main.js shiftjis"
   },
   "keywords": [],
   "author": "dsktschy",
@@ -52,12 +53,14 @@
     "resolve-url-loader": "^2.3.2",
     "sass": "^1.20.1",
     "sass-loader": "^7.1.0",
+    "scp2": "^0.5.0",
     "screen-orientation": "^1.0.3",
+    "simple-lightbox": "^2.1.0",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-scss": "^3.6.1",
     "stylelint-webpack-plugin": "^0.10.5",
-    "svg-spritemap-webpack-plugin": "<=3.3.5",
+    "svg-spritemap-webpack-plugin": "^3.5.4",
     "vue-template-compiler": "^2.6.10"
   },
   "repository": {

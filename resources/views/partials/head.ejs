@@ -22,8 +22,8 @@
 
 	 	<!-- START LIG ASSETS FILES -->
  	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
-	<link rel="shortcut icon" href="assets/images/common/favicon.ico">
-	<link rel="apple-touch-icon-precomposed" href="assets/images/common/apple-touch-icon-precomposed.png">
+	<link rel="shortcut icon" href="/assets/images/common/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="/assets/images/common/apple-touch-icon-precomposed.png">
 	<link rel="stylesheet" href="<%= mix('/assets/css/app.css') %>">
 	<script>
 	  // IE foreach Polyfill
@@ -66,10 +66,6 @@
 	<script> document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
 	<!-- END LIG ASSETS FILES -->
 
-	<!-- START for emergency news -->
-   	<link rel="stylesheet" href="<%= mix('/assets/css/emergencynews.css') %>">
-   	<!-- END for emergency news -->
-
 	<% if (pageId === 'index') { %>
 	<div class="preload js-preload" id="lig-preload">
 		<div class="preload-image"></div>
@@ -77,7 +73,7 @@
 	</div>
 	<% } %>
 
-	 <div class="wrap" id="js-wrap">
+	<!-- <div class="wrap" id="js-wrap"> -->
 		<% var topHeading; %>
 		<%- include('/partials/header', {
 			topHeading: topHeading

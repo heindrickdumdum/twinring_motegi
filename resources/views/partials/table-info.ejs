@@ -1,0 +1,16 @@
+<table class="table-info table-info-<%- tableModifier  %>">
+  <% tableInfoList.forEach( item => { %>
+    <tr class="table-info-row">
+      <th class="table-info-heading"><%- item.tableHeading  %></th>
+      <%if (item.tableDescription) { %>
+        <%if (item.tableLinkDesc) { %>
+          <td class="table-info-description" <%if (item.rowSpan) { %> rowspan="<%- item.rowSpan  %>" <% } %>>
+            <a class="table-info-link-description" href="<%- item.tableLinkDesc  %>" target="<%- item.tableLinkTarget = item.tableLinkTarget == '' ? '_self': item.tableLinkTarget -%>"><%- item.tableDescription  %></a>
+          </td>
+        <% } else {%>
+          <td class="table-info-description" <%if (item.rowSpan) { %> rowspan="<%- item.rowSpan  %>" <% } %>><%- item.tableDescription  %></td>
+        <% } %>
+      <% } %>
+    </tr>
+  <% }); %>
+</table>

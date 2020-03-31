@@ -27,6 +27,12 @@ $ npm run dev
 ```
 $ npm run prod
 ```
+Specialized Motegi
+6. STG環境へリリースするコンテンツを作成する場合、以下のコマンドを実行してください。
+```
+$ npm run build-stg
+```
+
 
 ## Usage
 
@@ -54,4 +60,10 @@ $ npm run dev
 5. Before deploying, run command for production.
 ```
 $ npm run prod
+```
+
+Specialized Motegi
+6. Run command for create release data for STG.
+```
+$ npm run build-stg
 ```

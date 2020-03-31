@@ -51,6 +51,14 @@
       padding-bottom: 60px;
       background-color: $color-light-gray;
     }
+
+    &.hoteltwinring-banner-image-1,
+    &.hoteltwinring-banner-image-2 {
+      .l-container-m {
+        max-width: none;
+        padding: 0 20px;
+      }
+    }
   }
 }
 

@@ -76,6 +76,15 @@
     }
   }
 
+  .mv-subpage-nozominoyu & {
+    padding-bottom: 43%;
+    background-position-y: 64%;
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 96%;
+      background-position: center;
+    }
+  }
+
   &.mv-image-sp {
     display: none;
 
@@ -138,10 +147,15 @@
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 21;
+  z-index: 20;
 
   @include max-screen($breakpoint-mobile) {
     display: none;
+
+    .mv-subpage-hotel & {//hotel granroom
+      display: flex;
+      width: 34px;
+    }
   }
 }
 
@@ -166,9 +180,31 @@
   background-size: cover;
   border-radius: 5px 0 0 5px;
 
+  .mv-subpage-hotel & {//hotel granroom/familyroom
+    .is-ie & {
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 150px;
+      }
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    .mv-subpage-hotel & {//hotel granroom
+      font-size: 12px;
+      min-height: 116px;
+      padding-left: 10px;
+    }
+  }
+
   span {
     display: inline-block;
     width: 16px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      .mv-subpage-hotel & {//hotel granroom
+        display: inline;
+      }
+    }
   }
 }
 
@@ -200,6 +236,103 @@
     left: 15px;
   }
 
+  &.standardroom-mv-heading {//hotel familyroom
+
+    @include min-screen($breakpoint-mobile + 1) {
+      // sass-lint:disable-block no-important   
+      bottom: 50px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important   
+      bottom: -5px !important;
+    }
+
+    .heading-subtext {
+      // sass-lint:disable-block no-important    
+      max-width: 491px !important;
+      // sass-lint:disable-block no-important    
+      height: 52px !important;
+      // sass-lint:disable-block no-important    
+      margin-top: 15px !important;
+      fill: $color-white;
+  
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important    
+        max-width: 207px !important;
+        // sass-lint:disable-block no-important    
+        height: 22px !important;
+      }
+    }
+  }
+
+  &.familyroom-mv-heading {//hotel familyroom
+
+    @include min-screen($breakpoint-mobile + 1) {
+      // sass-lint:disable-block no-important   
+      bottom: 33px !important;
+    }
+
+    .heading-subtext {
+      // sass-lint:disable-block no-important    
+      max-width: 743px !important;
+      // sass-lint:disable-block no-important    
+      height: 52px !important;
+      // sass-lint:disable-block no-important    
+      margin-top: 15px !important;
+      fill: $color-white;
+  
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important    
+        max-width: 200px !important;
+        // sass-lint:disable-block no-important    
+        height: 55px !important;
+      }
+    }
+  }
+
+  &.granroom-mv-heading {
+
+    @include min-screen($breakpoint-mobile + 1) {
+      // sass-lint:disable-block no-important   
+      bottom: 37px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important   
+      bottom: 7px !important;
+    }
+
+    .heading-subtext {
+      // sass-lint:disable-block no-important    
+      width: 352px !important;
+      // sass-lint:disable-block no-important    
+      height: 56px !important;
+      fill: $color-white;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        // sass-lint:disable-block no-important   
+        margin-top: 10px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important    
+        width: 227px !important;
+        // sass-lint:disable-block no-important    
+        height: 37px !important;
+        // sass-lint:disable-block no-important    
+        margin-top: 9px !important;
+      }
+    }
+  }
+
+  &.reservation-mv-heading {
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important    
+      padding: 15px 20px !important;
+    }
+  }
+
   &.hellowoods-mv-heading {
     bottom: 5px;
     width: 100%;
@@ -207,6 +340,14 @@
     .heading-text {
       font-size: 45px;
       -webkit-text-fill-color: $color-white;
+
+      .is-ie & {//ie modifier
+        background: none;
+        color: $color-white;
+        -webkit-text-fill-color: $color-white;
+        -moz-text-fill-color: $color-white;
+        -ms-text-fill-color: $color-white;
+      }
 
       @include max-screen ($breakpoint-mobile) {
         text-align: left;
@@ -218,6 +359,7 @@
       max-width: 385px;
       height: 90px;
       margin-top: 0;
+      fill: $color-white;
 
       @include max-screen ($breakpoint-mobile) {
         height: 60px;
@@ -249,6 +391,14 @@
         margin-bottom: 12px;
       }
     }
+
+    &.hoteltwinring {
+      @include max-screen ($breakpoint-mobile) {
+        .heading-subtext {
+          width: 100%;
+        }
+      }
+    }
   }
 
   span {
@@ -272,6 +422,7 @@
       }
     }
   }
+
 }
 
 .mv-heading-text {
@@ -322,8 +473,25 @@
     bottom: -70px;
   }
 
+  &.mv-granroom-logo {
+    background: url(#{$image-path}granroom/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 247px;
+    
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: -144px;
+    }
+  }
+
   &.mv-hellowoods-logo {
     background: url(#{$image-path}hellowoods/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 270px;
+  }
+
+  &.mv-hoteltwinring-logo {
+    
+    background: url(#{$image-path}hoteltwinring/hotel-twinring-logo.png) no-repeat;
     background-size: contain;
     max-width: 270px;
   }
@@ -331,6 +499,17 @@
   @include max-screen($breakpoint-mobile) {
     display: none;
   }
+
+  &.mv-nozominoyu-logo {
+    background: url(#{$image-path}nozominoyu/nozominoyu-logo.png) no-repeat;
+    background-size: contain;
+    max-width: 247px;
+    
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: -144px;
+    }
+  }
+
 }
 
 .mv-today-top {
@@ -919,6 +1098,10 @@
         font-family: $font-hiragino-w3;
       }
 
+      &.mv-heading-text-reserve {
+        font-family: $base-font-family;
+      }
+
       @include min-screen($breakpoint-mobile + 1) {
         font-size: 46px;
       }
@@ -946,6 +1129,22 @@
       }
     }
   }
+
+&.mv-subpage-reserve {
+  overflow: hidden;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 95px;
+  }
+
+  .mv-image {
+    padding-bottom: 43%;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 96%;
+    }
+  }
+}
 
   &.mv-musasabi {
     .mv-heading-texts{
@@ -1021,6 +1220,13 @@
         width: auto;
       }
     }
+  }
+}
+
+.mv-subpage-hotel {//hotel granroom / familyroom
+  @include min-screen($breakpoint-mobile + 1) {
+    // sass-lint:disable-block no-important
+    margin-bottom: 52px !important;
   }
 }
 

@@ -39,6 +39,18 @@ module.exports = {
 
 		//conbine tags
 		var contentsTags = tagTop + tagContent + tagBottom;
+
+		//remove gtm tags
+		htmlTags = contentsTags;
+		var contentsTagsTop = getTags(0, CONFIG.tag.gtmHeader.start);
+		var contentsTagsBottom = getTags(CONFIG.tag.gtmHeader.end, CONFIG.tag.closed);
+		contentsTags = contentsTagsTop + contentsTagsBottom;
+
+		htmlTags = contentsTags;
+		contentsTagsTop = getTags(0, CONFIG.tag.gtmFooter.start);
+		contentsTagsBottom = getTags(CONFIG.tag.gtmFooter.end, CONFIG.tag.closed);
+		contentsTags = contentsTagsTop + contentsTagsBottom;
+
 		fs.writeFileSync(targetFile, contentsTags);
 		// console.log('success: ' + targetFile);
 

@@ -43,6 +43,14 @@ module.exports = {
 			start: '<!-- START GLOBAL FOOTER -->',
 			end: '<!-- END GLOBAL FOOTER -->'
 		},
+		gtmHeader: {
+			start: '<!-- START GTM HEADER -->',
+			end: '<!-- END GTM HEADER -->'
+		},
+		gtmFooter: {
+			start: '<!-- START GTM FOOTER -->',
+			end: '<!-- END GTM FOOTER -->'
+		},
 		closed: '</html>'
 	},
 	scp: {

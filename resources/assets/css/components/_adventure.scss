@@ -21,6 +21,16 @@
     left: 50%;
     transform: translateX(-50%);
 
+    .subpage-restaurant & {//restaurant page
+      z-index: $z-min;
+      background-size: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 165px;
+        height: 125px;
+      }
+    }
+
     @include max-screen($breakpoint-mobile) {
       max-width: 110px;
       bottom: -45px;
@@ -36,6 +46,12 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+
+  &.restaurant {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 35px;
+    }
+  }
 
   @include max-screen($breakpoint-mobile) {
     margin-bottom: 90px;
@@ -127,8 +143,8 @@
 
     @include max-screen($breakpoint-mobile) {
       height: auto;
-      max-width: 125px;
-      bottom: -20px;
+      max-width: 152px;
+      bottom: -28px;
     }
 
     &-mobipark {
@@ -137,8 +153,8 @@
 
       @include max-screen($breakpoint-mobile) {
         height: auto;
-        max-width: 95px;
-        bottom: -20px;
+        max-width: 122px;
+        bottom: -40px;
       }
     }
 
@@ -159,7 +175,7 @@
 
       @include max-screen($breakpoint-mobile) {
         height: auto;
-        max-width: 125px;
+        max-width: 152px;
         bottom: -20px;
       }
     }

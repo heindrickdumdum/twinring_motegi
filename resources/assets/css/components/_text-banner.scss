@@ -1,0 +1,38 @@
+.text-banner {
+  padding: 67px 55px;
+
+  .banner-heading {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &.bg-green {
+    background-color: #00a004;
+    color: $color-white;
+  }
+
+  &.zipline {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: none;
+      margin: 0 20px;
+      font-size: 11px;
+      line-height: 24px;
+      letter-spacing: 3px;
+    }
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    padding: 35px 23px;
+  }
+}

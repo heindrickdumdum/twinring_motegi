@@ -44,22 +44,54 @@
       text-align: center;
       position: relative;
 
-      &.new::before {
-        content: "NEW!";
-        background-color: #51ca30;
+      &::before {
         position: absolute;
-        top: 10px;
-        left: 12px;
         padding: 5px 10px;
         color: $color-white;
         font-size: 12px;
         font-weight: bold;
         line-height: 1;
+      }
+
+      &.new::before {
+        content: "NEW!";
+        background-color: #51ca30;
+        top: 10px;
+        left: 12px;
+        
 
         @include max-screen ($breakpoint-mobile) {
           top: 5px;
           left: 5px;
           font-size: 9px;
+        }
+      }
+
+      &.zipline-green-label::before {
+        content: "モビパークパスポート対象";
+        background-color: #4fae32;
+        top: -15px;
+        left: 0;
+        font-size: 17px;
+        padding: 9px 18px;
+        border-radius: 5px;
+
+        @include max-screen ($breakpoint-mobile) {
+          display: none;
+        }
+      }
+
+      &.zipline-grey-label::before {
+        content: "モビパークパスポート対象外";
+        background-color: #9c9c9c;
+        top: -15px;
+        left: 0;
+        font-size: 17px;
+        padding: 9px 18px;
+        border-radius: 5px;
+
+        @include max-screen ($breakpoint-mobile) {
+          display: none;
         }
       }
 

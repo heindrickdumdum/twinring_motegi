@@ -212,6 +212,18 @@
     }
   }
 
+  &.heading-main-pit {
+    text-align: center;
+
+    svg {
+      width: 813px;
+      height: 41px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
+    }
+  }
+
   &.heading-reservation {
     .heading-text {
       @include min-screen($breakpoint-mobile + 1) {

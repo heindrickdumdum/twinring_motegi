@@ -21,7 +21,7 @@
       <ul class="mv-list">
         <li class="mv-item">
           <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/restaurant/mv-img.jpg') %>);"></div>
-          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/restaurant/mv-img.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/restaurant/mv-img-sp.jpg') %>);"></div>
         </li>
       </ul>
 
@@ -81,9 +81,22 @@
 
           <!-- marcherant -->
           <li class="adventure-list">
-            <div class="adventure-bg"
-              style="background-image: url(<%= mix('/assets/images/restaurant/bg-marcherant.jpg') %>);">
-              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/marcherant-logo.png') %>);"></div>
+            <div class="adventure-bg">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-marcherant">
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.marcherant.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="adventure-bg-circle u-show-pc" style="background-image: url(<%= mix('/assets/images/restaurant/marcherant-logo.png') %>);"></div>
+
+              <div class="adventure-bg-circle u-show-sp" style="background-image: url(<%= mix('/assets/images/restaurant/marcherant-logo-sp.png') %>);"></div>
             </div>
 
             <div class="l-adventure-sp-container">
@@ -121,9 +134,22 @@
 
           <!-- diningtoya -->
           <li class="adventure-list">
-            <div class="adventure-bg"
-              style="background-image: url(<%= mix('/assets/images/restaurant/bg-diningtoya.jpg') %>);">
-              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/diningtoya-logo.png') %>);"></div>
+            <div class="adventure-bg">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-toya">
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.toya.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="adventure-bg-circle u-show-pc" style="background-image: url(<%= mix('/assets/images/restaurant/diningtoya-logo.png') %>);"></div>
+
+              <div class="adventure-bg-circle u-show-sp" style="background-image: url(<%= mix('/assets/images/restaurant/diningtoya-logo-sp.png') %>);"></div>
             </div>
 
             <div class="l-adventure-sp-container">
@@ -159,11 +185,23 @@
             </div>
           </li>
 
-          <!-- caferestaurant -->
+          <!-- oak -->
           <li class="adventure-list">
-            <div class="adventure-bg"
-              style="background-image: url(<%= mix('/assets/images/restaurant/bg-oak.jpg') %>);">
-              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/oak-logo.png') %>);"></div>
+            <div class="adventure-bg"">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-oak">
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.oak.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="adventure-bg-circle u-show-pc" style="background-image: url(<%= mix('/assets/images/restaurant/oak-logo.png') %>);"></div>
+              <div class="adventure-bg-circle u-show-sp" style="background-image: url(<%= mix('/assets/images/restaurant/oak-logo-sp.png') %>);"></div>
             </div>
 
             <div class="l-adventure-sp-container">
@@ -206,9 +244,21 @@
 
           <!-- granturismo -->
           <li class="adventure-list">
-            <div class="adventure-bg"
-              style="background-image: url(<%= mix('/assets/images/restaurant/bg-granturismo.jpg') %>);">
+            <div class="adventure-bg">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-granturismo">
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.turismo.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
               <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/granturismo-logo.png') %>);"></div>
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/granturismo-logo-sp.png') %>);"></div>
             </div>
 
             <div class="l-adventure-sp-container">
@@ -246,9 +296,21 @@
           
           <!-- forestkitchen -->
           <li class="adventure-list">
-            <div class="adventure-bg"
-              style="background-image: url(<%= mix('/assets/images/restaurant/bg-forestkitchen.jpg') %>);">
+            <div class="adventure-bg">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-toya">
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.kitchen.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
               <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/forestkitchen-logo.png') %>);"></div>
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/forestkitchen-logo-sp.png') %>);"></div>
             </div>
 
             <div class="l-adventure-sp-container">
@@ -286,9 +348,21 @@
           
           <!-- rocco -->
           <li class="adventure-list">
-            <div class="adventure-bg"
-              style="background-image: url(<%= mix('/assets/images/restaurant/bg-rocco.jpg') %>);">
+            <div class="adventure-bg">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-rocco">
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.rocco.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
               <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/rocco-logo.png') %>);"></div>
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/rocco-logo-sp.png') %>);"></div>
             </div>
 
             <div class="l-adventure-sp-container">

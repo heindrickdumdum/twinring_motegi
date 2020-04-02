@@ -24,11 +24,6 @@
     .subpage-restaurant & {//restaurant page
       z-index: $z-min;
       background-size: 100%;
-
-      @include max-screen($breakpoint-mobile) {
-        max-width: 165px;
-        height: 125px;
-      }
     }
 
     @include max-screen($breakpoint-mobile) {
@@ -108,9 +103,14 @@
   height: 460px;
   position: relative;
   background-size: cover;
+  background-position: center;
 
   @include max-screen ($breakpoint-mobile) {
     height: 157px;
+
+    .subpage-restaurant & {//restaurant page
+      height: 209px;
+    }
   }
 }
 

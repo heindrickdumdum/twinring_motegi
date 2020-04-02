@@ -37,6 +37,12 @@
     border-right: 25px solid transparent;
     width: 0;
     margin: 20px auto;
+
+    @include max-screen ($breakpoint-mobile) {
+      border-top: 12px solid #4fae32;
+      border-left: 17px solid transparent;
+      border-right: 17px solid transparent;
+    }
   }
 
   &:hover {
@@ -240,6 +246,7 @@
 
 .carbike-article-more {
   width: 100%;
+  display: none;
 }
 
 .carbike-article-more-link {
@@ -281,10 +288,21 @@
 
 .carbike-article {
   &.carbike-article-attractions {
+    .carbike-article-cat {
+      border-radius: 5px;
+      right: -10px;
+      bottom: -10px;
+      padding: 5px 30px;
+
+      @include max-screen ($breakpoint-mobile) {
+        right: -5px;
+        bottom: -5px;
+        padding: 5px 14px;
+      }
+    }
     .carbike-article-list {
       border-top: none;
     }
-
     .carbike-article-list-item {
       padding-bottom: 10px;
       margin-bottom: 10px;
@@ -293,10 +311,19 @@
         border-bottom: none;
       }
     }
-
+    .carbike-article-thumb {
+      @include max-screen ($breakpoint-mobile) {
+        margin-bottom: 12px;
+      }
+    }
     .carbike-article-title {
       @include min-screen($breakpoint-mobile + 1) {
         font-size: 20px;
+      }
+    }
+    .ico-carbike-family {
+      @include max-screen ($breakpoint-mobile) {
+        display: none;
       }
     }
     .carbike-article-list-label {
@@ -306,6 +333,9 @@
     }
     .carbike-article-list-desc {
       padding: 0 5px;
+    }
+    .carbike-article-more {
+      display: block;
     }
   }
 }

@@ -32,6 +32,68 @@
     }
   }
 
+  &.attraction-top {
+    padding: 36px 0;
+    border: 1px solid #a6a5a5;
+    overflow: hidden;
+    margin-top: 66px;
+    margin-bottom: 135px;
+
+    .icon {
+      margin-bottom: 10px;
+
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 22px;
+        margin-bottom: 6px;
+      }
+    }
+
+    .banner-heading {
+      letter-spacing: 2px;
+      font-size: 25px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .banner-text {
+      letter-spacing: 4px;
+      font-size: 14px;
+
+      @include max-screen ($breakpoint-mobile) {
+        letter-spacing: 2px;
+        font-size: 12px;
+        line-height: 1.7;
+      }
+    }
+
+    &::after {
+      content: " ";
+      width: 50px;
+      height: 75px;
+      background-color: #67b436;
+      position: absolute;
+      right: -13px;
+      bottom: -38px;
+      transform: rotate(53deg);  
+
+      @include max-screen ($breakpoint-mobile) {
+        right: -25px;
+        bottom: -42px;
+        transform: rotate(46deg);
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 336px;
+      padding: 18px 40px 13px;
+      margin-top: 33px;
+      margin-bottom: 70px;
+    }
+  }
   @include max-screen ($breakpoint-mobile) {
     padding: 35px 23px;
   }

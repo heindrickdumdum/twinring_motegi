@@ -1,0 +1,22 @@
+$pit-green: #4fae32;
+
+.pit-slider {
+  position: relative;
+}
+
+.pit-slider-price {
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 0;
+  font-size: 15px;
+  color: $color-white;
+  background-color: $pit-green;
+  padding: 12px 19px;
+  letter-spacing: 0.2em;
+  
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}

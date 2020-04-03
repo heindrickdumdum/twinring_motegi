@@ -809,6 +809,7 @@
           @include min-screen($breakpoint-mobile + 1) {
             width: 425px;
             height: 38px;
+            margin-top: 35px;
           }
 
           @include max-screen($breakpoint-mobile) {
@@ -823,6 +824,7 @@
           @include min-screen($breakpoint-mobile + 1) {
             width: 514px;
             height: 38px;
+            margin-top: 15px;
           }
 
           @include max-screen($breakpoint-mobile) {

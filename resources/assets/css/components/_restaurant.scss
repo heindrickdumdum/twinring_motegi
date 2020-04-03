@@ -14,7 +14,7 @@
     @include max-screen($breakpoint-mobile) {
       height: 60px;
       font-size: 12px;
-      max-width: 315px;
+      max-width: 345px;
     }
   }
 
@@ -54,7 +54,7 @@
         cursor: pointer;
 
         @include max-screen($breakpoint-mobile) {
-          margin-right: 5px;
+          margin-right: 8px;
         }
 
         &.swiper-pagination-bullet-active {

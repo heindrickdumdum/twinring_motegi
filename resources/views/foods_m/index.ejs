@@ -81,11 +81,11 @@
 
           <!-- marcherant -->
           <li class="adventure-list">
-            <div class="adventure-bg">
+            <div class="adventure-bg slide-container">
               <div class="swiper-container slider-restaurant js-slider-restaurant-marcherant">
-                <ul class="swiper-wrapper slider-wrapper">
+                <ul class="swiper-wrapper">
                   <% getData().data.restaurantSlider.marcherant.forEach( slide => { %>
-                  <li class="swiper-slide slider-item">
+                  <li class="swiper-slide">
                     <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
                     <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
                   </li>
@@ -101,10 +101,18 @@
 
             <div class="l-adventure-sp-container">
               <div class="l-adventure">
-                <div class="l-section-title l-section-title-adventure">
+                <div class="l-section-title l-section-title-adventure u-show-pc">
                   <%- include('/partials/heading', {
                     modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-marcherant',
                     subtextvg: 'restaurant-marcherant-title',
+                    altSubtextvg: '森のレストラン MARCHERANT'
+                  }) %>
+                </div>
+
+                <div class="l-section-title l-section-title-adventure u-show-sp">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-marcherant',
+                    subtextvg: 'restaurant-marcherant-title-sp',
                     altSubtextvg: '森のレストラン MARCHERANT'
                   }) %>
                 </div>

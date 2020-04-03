@@ -336,6 +336,16 @@
   letter-spacing: 0.11em;
   margin-bottom: 8px;
 
+  &-safety {//areaindex page
+    text-align: center;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 28px !important;
+      line-height: 1.462;   
+      margin-bottom: 0px; 
+    }
+  }
+
   .subpage-section-usagefee & {//hotel granroom/familyroom
     @include min-screen($breakpoint-mobile + 1) {
       margin-bottom: 11px;

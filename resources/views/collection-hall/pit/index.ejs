@@ -1,0 +1,258 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'craft';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc"
+            style="background-image:url(<%= mix('/assets/images/pit/top-image.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp"
+            style="background-image:url(<%= mix('/assets/images/pit/top-image-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <h1 class="mv-heading mv-heading-subpage">
+        <span class="mv-heading-text">
+          ピット工房
+        </span>
+      </h1>
+    </div>
+
+    <main>
+      <div class="subpage-inner-wrap">
+        <div class="subpage-inner">
+          <div class="heading-wrap heading-main heading-main-pit">
+            <h2 class="heading heading-pit">
+              <%- include('/partials/svg', {
+                'name': 'pit-top-title'
+              }) %>
+            </h2>
+          </div>
+
+          <div class="subpage-banner">
+            <div class="subpage-banner-inner">
+              <img class="u-show-pc" src="<%= mix('/assets/images/pit/content-image.jpg') %>" alt="森のクラフト体験">
+              <img class="u-show-sp" src="<%= mix('/assets/images/pit/content-image-sp.jpg') %>" alt="森のクラフト体験">
+            </div>
+          </div>
+
+          <h3 class="subpage-title">
+            <span>アクティビティ情報</span>
+          </h3>
+
+          <p>電動モーターで走る乗り物を自分で組み立てて走らせることができます。乗り心地やスピードがどう変わるか？本物の工具を使って組み立てを楽しみながら、クルマの構造を学ぶことができるプログラムです。</p>
+
+          <table class="table">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">場所</th>
+                <td class="table-col">
+                  ホンダコレクションホール別棟ピット工房
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">開催日</th>
+                <td class="table-col">
+                  営業スケジュールはこちらからご確認ください。
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">所要時間</th>
+                <td class="table-col">約60分（受付は営業終了60分前まで）</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">雨天の開催</th>
+                <td class="table-col">雨天でも営業しております。</td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head">対象者</th>
+                <td class="table-col">
+                  全年齢対象
+                </td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head">身長制限</th>
+                <td class="table-col">
+                  走行は身長100cm以上の方が対象となります。
+                </td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head">料金</th>
+                <td class="table-col">
+                  モビパークパスポート特典<br>
+                  アトラクションチケット利用：1,100円<br>
+                  モビパークパスポートをお持ちの方は、<br>
+                  特典として通常1,100円のところ900円でご利用いただけます！
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <section class="how-to-enjoy l-section">
+        <div class="l-container">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-enjoy heading-wrap-craft',
+              text: 'How to Play',
+              alt: 'How to Play',
+              subtextvg: 'pit-play',
+              altSubtext: '',
+            }) %>
+          </div>
+
+          <div class="how-to-content">
+            <div class="media u-clear">
+              <div class="media-left">
+                <div class="media-bg">
+                  <div class="media-thumb">
+                    <div style="background-image: url(<%= mix('/assets/images/craft/how-to-play-1.jpg') %>);"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="media-right">
+                <p class="step-word-no "><span class="step-word">STEP</span><span class="step-no">1</span></p>
+                <h4 class="media-title"><span>本物の工具を使って組み立て</span></h4>
+                <p class="media-desc">
+                  本物の工具を使って組み立てていきます。はじめてでの組み立てでは、
+                  硬さの違う3種類のサスペンションと2種類のタイヤから自由に選んで取り付けします。
+                </p>
+              </div>
+            </div>
+            <div class="media u-clear">
+              <div class="media-left">
+                <div class="media-bg">
+                  <div class="media-thumb">
+                    <div style="background-image: url(<%= mix('/assets/images/craft/how-to-play-2.jpg') %>);"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="media-right">
+                <p class="step-word-no"><span class="step-word">STEP</span><span class="step-no">2</span></p>
+                <h4 class="media-title">
+                  <span>組み立てた車で走行</span>
+                </h4>
+                <p class="media-desc">
+                  組み立てが終わったら実際に走行してみましょう。
+                </p>
+              </div>
+            </div>
+            <div class="media u-clear">
+              <div class="media-left">
+                <div class="media-bg">
+                  <div class="media-thumb">
+                    <div style="background-image: url(<%= mix('/assets/images/craft/how-to-play-3.jpg') %>);"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="media-right">
+                <p class="step-word-no"><span class="step-word">STEP</span><span class="step-no">3</span></p>
+                <h4 class="media-title">
+                  <span>パーツを交換</span>
+                </h4>
+                <p class="media-desc">
+                  走行後、にサスペンションとタイヤを違う硬さのものに組み替えをします。パーツ交換についての説明が入ります。パーツ交換についての説明が入ります。
+                </p>
+              </div>
+            </div>
+            <div class="media u-clear">
+              <div class="media-left">
+                <div class="media-bg">
+                  <div class="media-thumb">
+                    <div style="background-image: url(<%= mix('/assets/images/craft/how-to-play-4.jpg') %>);"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="media-right">
+                <p class="step-word-no"><span class="step-word">STEP</span><span class="step-no">4</span></p>
+                <h4 class="media-title">
+                  <span>
+                    もう一度走行して違いを実感
+                  </span>
+                </h4>
+                <p class="media-desc">
+                  パーツ交換のあとに、もう一度走行します。パーツを交換することで、乗り心地やスピードがどう変わるかを体感できます。
+                </p>
+                <%- include('/partials/note', {
+                  modifier: 'note-craft',
+                  imgPath: mix('/assets/images/craft/craft-dekitane-banner-2.jpg')
+                }) %>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="forest l-section">
+        <div class="l-container">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-forest heading-forest-craft',
+              text: 'Step up program',
+              alt: 'Step up program',
+              subtextvg: 'pit-step-up-title',
+              altSubtext: '',
+            }) %>
+          </div>
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-forest heading-forest-craft',
+              text: 'Step up program',
+              alt: 'Step up program',
+              subtextvg: 'pit-step-up-title',
+              altSubtext: '',
+            }) %>
+          </div>
+        </div>
+        <div class="swiper-container slider js-slider common-slider" id="commonSlider">
+          <ul class="swiper-wrapper top-slide top-slide-craft">
+            <% forestPit.forEach(item => { %>
+            <li class="swiper-slide slider-item">
+              <div class="top-slider-image pit-slider">
+                <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+                <p class="pit-slider-price"><%- item.price -%></p>
+              </div>
+              <span class="top-slider-text">
+                <%- item.desc -%>
+              </span>
+            </li>
+            <% } ) %>
+          </ul>
+        </div>
+      </section>
+
+      <section class="l-menu u-show-sp">
+
+        <%- include('/partials/hellowoods/section-menu') -%>
+
+      </section>
+
+      <!-- recommendation module -->
+      <div class="pit-recommendation">
+        <%- include('/partials/recommendation') -%>
+      </div>
+
+      <!-- pick up module -->
+      <div class="pit-pick-up">
+        <%- include('/partials/pickup') -%>
+      </div>
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsCraft
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

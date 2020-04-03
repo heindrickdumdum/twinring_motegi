@@ -1,0 +1,430 @@
+<%
+  var title = 'Twin Ring Motegi';
+  pageId = 'foodsm';
+%>
+<%- include('./../partials/data/index') -%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+
+<div class="lig-content">
+  <div class="subpage subpage-restaurant restaurant-wrapper">
+    <div class="mv mv-restaurant mv-subpage-restaurant">
+      <div class="mv-buttons">
+        <ul class="mv-buttons-list">
+          <li class="mv-buttons-item">
+            <a class="mv-buttons-link" href="/hoteltwinring/information/">
+              <span>ご予約</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/restaurant/mv-img.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/restaurant/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading restaurant-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Restaurant',
+            subtextvg: 'restaurant-top-title',
+            altSubtextvg: 'レストラン'
+          }) %>
+        </div>
+
+        <!-- <div class="u-show-pc mv-today mv-log mv-hoteltwinring-logo">
+          <div class="mv-l-inner">
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <main>
+      <section class="info-container info-container-restaurant">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant',
+              text: 'Information',
+              subtextvg: 'info-subtext',
+              altSubtextvg: `お知らせ`
+            }) %>
+          </div>
+
+          <div class="l-container">
+            <ul class="info-list">
+              <% restaurantInfo.forEach(item => { %>
+              <li class="info-item">
+                <a href="<%- item.link %>">
+                  <span><%= item.desc %></span>
+                </a>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+      </section>
+
+      <section class="adventure">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-adventure-restaurant',
+            text: 'Restaurant',
+            subtextvg: 'restaurant-subtext',
+            altSubtextvg: 'レストラン'
+          }) %>
+        </div>
+
+        <ul class="adventure-container restaurant">
+
+          <!-- marcherant -->
+          <li class="adventure-list">
+            <div class="adventure-bg slide-container">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-marcherant">
+                <ul class="swiper-wrapper">
+                  <% getData().data.restaurantSlider.marcherant.forEach( slide => { %>
+                  <li class="swiper-slide">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="adventure-bg-circle u-show-pc" style="background-image: url(<%= mix('/assets/images/restaurant/marcherant-logo.png') %>);"></div>
+
+              <div class="adventure-bg-circle u-show-sp" style="background-image: url(<%= mix('/assets/images/restaurant/marcherant-logo-sp.png') %>);"></div>
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure">
+                <div class="l-section-title l-section-title-adventure u-show-pc">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-marcherant',
+                    subtextvg: 'restaurant-marcherant-title',
+                    altSubtextvg: '森のレストラン MARCHERANT'
+                  }) %>
+                </div>
+
+                <div class="l-section-title l-section-title-adventure u-show-sp">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-marcherant',
+                    subtextvg: 'restaurant-marcherant-title-sp',
+                    altSubtextvg: '森のレストラン MARCHERANT'
+                  }) %>
+                </div>
+
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'heading-title-adventure-restaurant-gradient heading-title-adventure-restaurant-gradient-marcherant',
+                    imgPath: mix('/assets/images/restaurant/marcherant-gradient-subtext.png'),
+                    alt: 'ホテルツインリンク'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  栃木県・茨城県の食材を使った和洋中の料理と石窯料理が味わえるレストラン
+                </p>
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/hellowoods/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- diningtoya -->
+          <li class="adventure-list">
+            <div class="adventure-bg">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-toya">
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.toya.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="adventure-bg-circle u-show-pc" style="background-image: url(<%= mix('/assets/images/restaurant/diningtoya-logo.png') %>);"></div>
+
+              <div class="adventure-bg-circle u-show-sp" style="background-image: url(<%= mix('/assets/images/restaurant/diningtoya-logo-sp.png') %>);"></div>
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-diningtoya',
+                    subtextvg: 'restaurant-diningtoya-title',
+                    altSubtextvg: '里山懐石 登谷'
+                  }) %>
+                </div>
+
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'heading-title-adventure-restaurant-gradient heading-title-adventure-restaurant-gradient-diningtoya',
+                    imgPath: mix('/assets/images/restaurant/diningtoya-gradient-subtext.png'),
+                    alt: 'ホテルツインリンク'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  地元の旬な素材を活かした料理長谷田部の上質な里山懐石が堪能できる料亭
+                </p>
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/mobipark_m/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- oak -->
+          <li class="adventure-list">
+            <div class="adventure-bg"">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-oak">
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.oak.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="adventure-bg-circle u-show-pc" style="background-image: url(<%= mix('/assets/images/restaurant/oak-logo.png') %>);"></div>
+              <div class="adventure-bg-circle u-show-sp" style="background-image: url(<%= mix('/assets/images/restaurant/oak-logo-sp.png') %>);"></div>
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-oak',
+                    subtextvg: 'restaurant-oak-title',
+                    altSubtextvg: 'カフェレストラン オーク'
+                  }) %>
+                </div>
+
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'heading-title-adventure-restaurant-gradient heading-title-adventure-restaurant-gradient-oak',
+                    imgPath: mix('/assets/images/restaurant/oak-gradient-subtext.png'),
+                    alt: 'モビパークエリア'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy u-show-pc">
+                  オムライスやハンバーガー、スイーツなどの洋食をメインとした <br/>
+                  センターキッチン
+                </p>
+
+                <p class="adventure-content-copy u-show-sp">
+                  オムライスやハンバーガー、スイーツなどの洋食をメインとした センターキッチン
+                </p>
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/f-glamping/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- granturismo -->
+          <li class="adventure-list">
+            <div class="adventure-bg">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-granturismo">
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.turismo.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/granturismo-logo.png') %>);"></div>
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/granturismo-logo-sp.png') %>);"></div>
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-granturismo',
+                    subtextvg: 'restaurant-granturismo-title',
+                    altSubtextvg: 'グランツーリスモ カフェ'
+                  }) %>
+                </div>
+
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'heading-title-adventure-restaurant-gradient heading-title-adventure-restaurant-gradient-granturismo',
+                    imgPath: mix('/assets/images/restaurant/granturismo-gradient-subtext.png'),
+                    alt: 'レーシングコースエリア'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  カレーや麺類が揃ったパドック内にあるカフェレストラン
+                </p>
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/hoteltwinring/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>   
+          
+          <!-- forestkitchen -->
+          <li class="adventure-list">
+            <div class="adventure-bg">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-toya">
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.kitchen.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/forestkitchen-logo.png') %>);"></div>
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/forestkitchen-logo-sp.png') %>);"></div>
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-forestkitchen',
+                    subtextvg: 'restaurant-forestkitchen-title',
+                    altSubtextvg: '森のキッチン どんぐり'
+                  }) %>
+                </div>
+
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'heading-title-adventure-restaurant-gradient heading-title-adventure-restaurant-gradient-forestkitchen',
+                    imgPath: mix('/assets/images/restaurant/forestkitchen-gradient-subtext.png'),
+                    alt: 'ハローウッズエリア'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  ゆず塩ラーメンや彩り野菜カレーがおすすめのお食事処
+                </p>
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/motorsports_m/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <!-- rocco -->
+          <li class="adventure-list">
+            <div class="adventure-bg">
+              <div class="swiper-container slider-restaurant js-slider-restaurant-rocco">
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.rocco.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/rocco-logo.png') %>);"></div>
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/rocco-logo-sp.png') %>);"></div>
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-rocco',
+                    subtextvg: 'restaurant-rocco-title',
+                    altSubtextvg: '森のジェラテリア ROCCO'
+                  }) %>
+                </div>
+
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'heading-title-adventure-restaurant-gradient heading-title-adventure-restaurant-gradient-rocco',
+                    imgPath: mix('/assets/images/restaurant/rocco-gradient-subtext.png'),
+                    alt: 'モビパークエリア'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  ゆず塩ラーメンや彩り野菜カレーがおすすめのお食事処
+                </p>
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/collection-hall/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <div class="l-section">
+        <%- include('/partials/button', {
+          modifier: 'restaurant-button',
+          link: '#',
+          text: 'レストラン場内エリアマップはこちら'
+        }) -%>
+      </div>
+
+      <%- include('/partials/recommendation') -%>
+
+      <%- include('/partials/pickup') -%>
+    </main>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsFoodsM
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

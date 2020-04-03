@@ -180,6 +180,12 @@
   background-size: cover;
   border-radius: 5px 0 0 5px;
 
+  .is-ie & {//ie modifier
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 150px;
+    }
+  }
+
   .mv-subpage-hotel & {//hotel granroom/familyroom
     .is-ie & {
       @include min-screen($breakpoint-mobile + 1) {
@@ -234,6 +240,18 @@
 
   @include max-screen($breakpoint-mobile) {
     left: 15px;
+  }
+
+  &.restaurant-mv-heading {//restaurant page
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 270px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 190px !important;
+      }
+    }
   }
 
   &.standardroom-mv-heading {//hotel familyroom

@@ -1,0 +1,70 @@
+.restaurant-wrapper {
+  .restaurant-button {
+    width: auto;
+    max-width: 730px;
+    background-color: $color-white;
+    height: 95px;
+    border: 1px solid $color-black;
+
+    &:before {
+      content: none;
+      display: none;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      height: 60px;
+      font-size: 12px;
+      max-width: 345px;
+    }
+  }
+
+  .slider-restaurant {
+    overflow-x: hidden !important;
+    z-index: 0 !important;
+
+    .swiper-wrapper {
+      margin-left: 0 !important;
+      z-index: 0 !important;
+    }
+
+    .slide-restaurant {
+      width: 100%;
+      height: 460px;
+      position: relative;
+      background-size: cover;
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      right: 69px;
+      bottom: 50px;
+
+      @include max-screen($breakpoint-mobile) {
+        right: 34px;
+        bottom: 30px
+      }
+
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: $color-white;
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 10px;
+        cursor: pointer;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-right: 8px;
+        }
+
+        &.swiper-pagination-bullet-active {
+          background-color: $color-green;
+        }
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}

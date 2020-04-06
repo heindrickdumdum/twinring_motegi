@@ -331,6 +331,12 @@
 
 .heading-restaurant-menu {//oak page
   .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 165px;
+      height: 28px;
+      line-height: normal;
+    }
+
     @include max-screen($breakpoint-mobile) {
       margin-top: 0px;
       width: 110px;

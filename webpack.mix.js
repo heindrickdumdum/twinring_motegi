@@ -104,7 +104,8 @@ mix
             },
             svgo: {
               plugins: [
-                { addClassesToSVGElement: { className: 'svg-sprite' } }
+                { addClassesToSVGElement: { className: 'svg-sprite' } },
+                { removeTitle: true }
               ]
             },
             svg4everybody: true

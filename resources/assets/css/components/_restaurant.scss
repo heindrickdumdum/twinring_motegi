@@ -1,4 +1,68 @@
 .restaurant-wrapper {
+  .subpage-inner {
+    margin-bottom: 70px;
+  }
+
+  .other-restaurant {//other restaurant section
+    .swiper-container {
+      position: relative;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-bottom: 68px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-bottom: 31px;
+      }
+  
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        background-color: #f2f2f2;
+        bottom: -2px;
+
+        @include min-screen($breakpoint-mobile + 1) {
+          height: 300px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          height: 150px;
+        }
+      }
+    }
+  }
+
+  .subpage-title {
+    margin-bottom: 34px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .oak-button {
+    a {
+      @include max-screen($breakpoint-mobile) {
+        max-width: 315px;
+        height: 70px; 
+      }
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 2.267;      
+      letter-spacing: 0.16em;
+      margin-bottom: 20px;
+      text-align: center;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+        line-height: 1.792;        
+      }
+    }
+  }
+
   .restaurant-button {
     width: auto;
     max-width: 730px;

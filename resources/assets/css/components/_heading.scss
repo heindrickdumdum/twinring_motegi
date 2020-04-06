@@ -329,6 +329,20 @@
   }
 }
 
+.heading-other-restaurant {//other restaurant section
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 415px;
+      height: 39px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 280px;
+      height: 26px;
+    }
+  }
+}
+
 .heading-restaurant-menu {//oak page
   .heading-subtext {
     @include min-screen($breakpoint-mobile + 1) {

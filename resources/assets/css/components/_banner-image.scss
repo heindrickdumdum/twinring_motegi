@@ -1,6 +1,14 @@
 .banner-image {
   background-color: #f9f9f9;
 
+  &.program {
+    position: relative;
+    height: 230px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+
   .banner-image-wrap {
     border: 1px solid #d2d2d2;
     background-image: url(../images/hellowoods/blog-banner.png);
@@ -9,8 +17,28 @@
     background-size: cover;
     background-color: $color-white;
     
+    &.program {
+      background-image: url(../images/program/banner-bg.png);
+      padding: 38px 0px 45px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: -75px;
+      max-width: 1060px;
+      margin: auto;
+
+      .banner-image-heading {
+        margin-bottom: 10px;
+      }
+    }
+
     .banner-image-subtext {
       color: $color-black;
+
+      &.program {
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
 
       @include max-screen ($breakpoint-mobile) {
         font-size: 10px;

@@ -340,6 +340,33 @@
   }
 }
 
+
+.program-item {
+  position: relative;
+
+  .ribbon-text {
+    position: absolute;
+    z-index: 999;
+    background-color: $color-white;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 50px 4px;
+    transform: rotate(-45deg);
+    left: -73px;
+    top: -10px;
+    font-size: 19px;
+    letter-spacing: 0px;
+    border-radius: 70px 79px 0 0px;
+  }
+  
+  .program-cat {
+    left: 0;
+    right: initial;
+    bottom: -13px;
+    padding: 5px 13px;
+    min-height: auto;
+  }
+}
+
 @keyframes movearrow {
   0% {
     transform: translateY(0);

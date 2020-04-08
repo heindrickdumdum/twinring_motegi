@@ -6,6 +6,10 @@
     height: 230px;
     margin-top: 70px;
     margin-bottom: 70px;
+
+    @include max-screen ($breakpoint-mobile) {
+      height: 140px;
+    }
   }
 
 
@@ -27,8 +31,22 @@
       max-width: 1060px;
       margin: auto;
 
+      @include max-screen ($breakpoint-mobile) {
+        background-image: url(../images/program/banner-bg-sp.png);
+        padding: 20px 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+        background-color: #fff;
+        top: -63px;
+      }
+
       .banner-image-heading {
         margin-bottom: 10px;
+
+        @include max-screen ($breakpoint-mobile) {
+          margin-bottom: 6px;
+          font-size: 17px;      
+        }
       }
     }
 
@@ -38,6 +56,11 @@
       &.program {
         font-size: 20px;
         letter-spacing: 1px;
+
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 13px;
+          line-height: 1.9;
+        }
       }
 
       @include max-screen ($breakpoint-mobile) {

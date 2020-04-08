@@ -346,7 +346,7 @@
 
   .ribbon-text {
     position: absolute;
-    z-index: 999;
+    z-index: 1;
     background-color: $color-white;
     border-bottom: 1px solid #ddd;
     padding: 30px 50px 4px;
@@ -356,15 +356,37 @@
     font-size: 19px;
     letter-spacing: 0px;
     border-radius: 70px 79px 0 0px;
+
+    @include max-screen ($breakpoint-mobile) {
+      padding: 30px 26px 1px;
+      font-size: 10px;
+      left: -45px;
+      top: -20px;
+    }
   }
   
   .program-cat {
-    left: 0;
-    right: initial;
-    bottom: -13px;
     padding: 5px 13px;
-    min-height: auto;
+    @include min-screen ($breakpoint-mobile + 1) {
+      left: 0;
+      right: initial;
+      bottom: -13px;
+      padding: 5px 13px;
+      min-height: auto;
+    }
   }
+
+  .period {
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 12px;
+    }
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 47px;
+  }
+
+
 }
 
 @keyframes movearrow {

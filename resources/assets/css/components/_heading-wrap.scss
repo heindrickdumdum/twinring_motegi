@@ -224,6 +224,32 @@
     }
   }
 
+  &.heading-main-program {
+    margin-bottom: 70px;
+    svg {
+      height: 54px;
+
+      @include min-screen ($breakpoint-mobile+1) {
+        height: 41px;
+        width: 900px;
+      }
+    }
+
+    .heading-program {
+      margin-bottom: 32px;
+    }
+
+    .heading-sub-program {
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 1.8;  
+    }
+
+    .heading-sub-program-sp {
+      line-height: 1.7em;
+    }
+  }
+
   &.heading-reservation {
     .heading-text {
       @include min-screen($breakpoint-mobile + 1) {

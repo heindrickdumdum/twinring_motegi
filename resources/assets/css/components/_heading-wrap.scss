@@ -647,6 +647,14 @@
     }
   }
 
+  &.heading-zipline {
+    .heading {
+      .heading-subtext {
+        max-width: 330px;
+      }
+    }
+  }
+
   @include max-screen($breakpoint-mobile) {
     .subpage-section-family-walk {
       margin-top: 72px;

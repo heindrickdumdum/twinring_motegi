@@ -329,6 +329,62 @@
   }
 }
 
+.heading-other-restaurant {//other restaurant section
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 415px;
+      height: 39px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 280px;
+      height: 26px;
+    }
+  }
+}
+
+.heading-restaurant-menu {//oak page
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 165px;
+      height: 28px;
+      line-height: normal;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 0px;
+      width: 110px;
+      height: 19px;
+    }
+  }
+}
+
+.heading-oak {//oak page
+  .heading {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 79px;
+      margin-bottom: 40px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 55px;
+      margin-bottom: 59px;
+    }
+  }
+
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 823px;
+      height: 81px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 305px;
+      height: 133px;
+    }
+  }
+}
+
 .restaurant-gradient-subtext {//foods_m
   .heading {
     margin-top: 10px;

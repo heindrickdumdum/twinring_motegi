@@ -23,6 +23,7 @@
   'wildRacer',
   'hellowoods',
   'program',
+  'programDetails',
   'craft',
   'labo',
   'musasabi',
@@ -160,6 +161,10 @@
 
   <% if(pageId == 'labo' || pageId == "nozominoyu") { %>
     <script src="<%= mix('/assets/js/labo.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'programDetails') { %>
+    <script src="<%= mix('/assets/js/program-details.js') %>" async></script>
   <% } %>
 
   <% if(pageId == 'tsubasa') { %>

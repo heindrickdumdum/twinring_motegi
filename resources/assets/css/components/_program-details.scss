@@ -1,0 +1,41 @@
+.work-introduction {
+  .media-title-work-intro {
+    font-size: 21px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+  }
+
+  .work-intro-item {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    margin-bottom: 45px;
+
+    .bold {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 17px;
+      letter-spacing: 4px;
+    }
+  }
+
+  .work-intro-desc {
+    margin-bottom: 10px;
+  }
+
+  .media-subpage-work-intro {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .media-box-work {
+    // sass-lint:disable-block no-important
+    margin: 0 !important;
+    padding: 18px 15px;
+
+    .media-thumb-work {
+      width: 400px;
+    }
+  }
+}

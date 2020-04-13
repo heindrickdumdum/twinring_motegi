@@ -1,0 +1,303 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'programDetails';
+%>
+
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc"
+            style="background-image:url(<%= mix('/assets/images/program/mv.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp"
+            style="background-image:url(<%= mix('/assets/images/program/mv-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <h1 class="mv-heading mv-heading-subpage">
+        <span class="mv-heading-text">
+          森の体験プログラム（予約制）
+        </span>
+      </h1>
+    </div>
+
+    <main>
+      <section class="subpage-section subpage-section-aqua-labo" id="aqua-labo">
+        <div class="subpage-inner">
+          
+          <div class="subpage-image-gallery">
+            <div class="swiper-container slider-gallery js-gallery swiper-container-horizontal">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/hellowoods/labo-aqua-banner.jpg') -%>)"></div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/hellowoods/labo-aqua-banner2.jpg') -%>)"></div>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+             <div class="swiper-pagination swiper-pagination-bullets"></div>
+            </div>
+
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="subpage-section">
+        <div class="subpage-inner">
+          <h3 class="subpage-title">
+            <span>貴重な自然木を思い思いのカタチにくりぬき、漆塗りの逸品を手づくりで！</span>
+          </h3>
+
+          <p>
+            日々の生活で使うものを自分の思うカタチに彫り込んでみませんか。ケヤキやトチノキなどの広葉樹を材料に、<br>
+            時間をかけ思いを込めながら、ノミやカンナなどの道具を使ってひと彫り・ひと削り…丹念に木を削っていきます。<br>
+            初めての方には1日で完成できるよう、スタッフがお手伝いをしますので安心してご参加いただけます。<br>
+            彫り終えた作品には講師が漆塗りを施し、丈夫で長く使えるようにしてお渡しします。
+          </p>
+
+          <p class="media-title alt-feature-heading">
+            <span class="media-title-text">体験概要</span>
+          </p>
+
+          <table class="table">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">場所</th>
+                <td class="table-col">
+                  ハローウッズの森内
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">開催日</th>
+                <td class="table-col">
+                  毎日開催
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">所要時間</th>
+                <td class="table-col">
+                  <!-- 自由にお楽しみいただけます。 -->
+                  入山終了30分前まで営業　※入山終了時間は日没時間により異なります。
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">雨天の開催</th>
+                <td class="table-col">
+                  営業いたします。
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">対象者</th>
+                <td class="table-col">
+                  全年齢対象 <br>
+                  ※小学生以下は保護者（成人）の同伴が必要です
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">料金</th>
+                <td class="table-col">
+                  無料
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">予約受付</th>
+                <td class="table-col">
+                  予約や受付は必要ございません。
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="subpage-section">
+        <div class="subpage-inner">
+          <p class="media-title alt-feature-heading">
+            <span class="media-title-text">体験概要</span>
+          </p>
+
+          <table class="table">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">場所</th>
+                <td class="table-col">
+                  ハローウッズの森内
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">開催日</th>
+                <td class="table-col">
+                  毎日開催
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">所要時間</th>
+                <td class="table-col">
+                  <!-- 自由にお楽しみいただけます。 -->
+                  入山終了30分前まで営業　※入山終了時間は日没時間により異なります。
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">雨天の開催</th>
+                <td class="table-col">
+                  営業いたします。
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">対象者</th>
+                <td class="table-col">
+                  全年齢対象 <br>
+                  ※小学生以下は保護者（成人）の同伴が必要です
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">料金</th>
+                <td class="table-col">
+                  無料
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">予約受付</th>
+                <td class="table-col">
+                  予約や受付は必要ございません。
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </section>
+
+      <section class="subpage-section work-introduction">
+        <div class="subpage-inner">
+          <p class="media-title media-title-work-intro">
+            <span class="media-title-text">作品紹介</span>
+          </p>
+          <div class="work-intro-item">
+            <p class="work-intro-desc">
+              <span class="bold">大切な人へ「ありがとうの感謝を込めて」</span>
+              時間をかけてつくるから思いが伝わる・・・<br>
+              結婚記念日や誕生日などの記念日に、大切な人へのプレゼントとしても最適です。
+            </p>
+            <div class="media media-subpage media-subpage-work-intro u-clear">
+              <div class="media-box media-box-work">
+                <div class="">
+                  <div class="media-thumb media-thumb-work">
+                    <div class="no-radius" style="background-image: url(/assets/images/hellowoods/labo-aqua-img1.jpg);"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="media-box media-box-work">
+                <div class="">
+                  <div class="media-thumb media-thumb-work">
+                    <div class="no-radius" style="background-image: url(/assets/images/hellowoods/labo-aqua-img2.jpg);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-intro-item">
+            <p class="work-intro-desc">
+              <span class="bold">大切な人へ「ありがとうの感謝を込めて」</span>
+              時間をかけてつくるから思いが伝わる・・・<br>
+              結婚記念日や誕生日などの記念日に、大切な人へのプレゼントとしても最適です。
+            </p>
+            <div class="media media-subpage media-subpage-work-intro u-clear">
+              <div class="media-box media-box-work">
+                <div class="">
+                  <div class="media-thumb media-thumb-work">
+                    <div class="no-radius" style="background-image: url(/assets/images/hellowoods/labo-aqua-img1.jpg);"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="media-box media-box-work">
+                <div class="">
+                  <div class="media-thumb media-thumb-work">
+                    <div class="no-radius" style="background-image: url(/assets/images/hellowoods/labo-aqua-img2.jpg);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-intro-item">
+            <p class="work-intro-desc">
+              <span class="bold">大切な人へ「ありがとうの感謝を込めて」</span>
+              時間をかけてつくるから思いが伝わる・・・<br>
+              結婚記念日や誕生日などの記念日に、大切な人へのプレゼントとしても最適です。
+            </p>
+            <div class="media media-subpage media-subpage-work-intro u-clear">
+              <div class="media-box media-box-work">
+                <div class="">
+                  <div class="media-thumb media-thumb-work">
+                    <div class="no-radius" style="background-image: url(/assets/images/hellowoods/labo-aqua-img1.jpg);"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="media-box media-box-work">
+                <div class="">
+                  <div class="media-thumb media-thumb-work">
+                    <div class="no-radius" style="background-image: url(/assets/images/hellowoods/labo-aqua-img2.jpg);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subpage-section">
+        <div class="subpage-inner">
+          <ul class="image-list">
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/attractions/category-athletic.jpg') %>" alt="">
+              <p class="image-list-desc">【角皿】</p>
+            </li>
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/attractions/category-athletic.jpg') %>" alt="">
+              <p class="image-list-desc">【ぐい飲み】</p>
+            </li>
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/attractions/category-athletic.jpg') %>" alt="">
+              <p class="image-list-desc">【重箱】</p>
+            </li>
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/attractions/category-athletic.jpg') %>" alt="">
+              <p class="image-list-desc">【丸皿】</p>
+            </li>
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/attractions/category-athletic.jpg') %>" alt="">
+              <p class="image-list-desc">【丸皿と小皿】</p>
+            </li>
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/attractions/category-athletic.jpg') %>" alt="">
+              <p class="image-list-desc">【船皿】</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+
+<%- include('/partials/footer', { pageId } ) -%>

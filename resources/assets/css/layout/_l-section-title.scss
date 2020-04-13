@@ -1,5 +1,12 @@
 .l-section-title {
   text-align: center;
+
+  &.program-dropdown-title {
+    svg {
+      height: 17px;
+      margin-bottom: 21px;  
+    }
+  }
 }
 
 .l-section-title-adventure {

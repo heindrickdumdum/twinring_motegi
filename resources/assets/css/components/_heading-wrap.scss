@@ -212,6 +212,44 @@
     }
   }
 
+  &.heading-main-pit {
+    text-align: center;
+
+    svg {
+      width: 813px;
+      height: 41px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
+    }
+  }
+
+  &.heading-main-program {
+    margin-bottom: 70px;
+    svg {
+      height: 54px;
+
+      @include min-screen ($breakpoint-mobile+1) {
+        height: 41px;
+        width: 900px;
+      }
+    }
+
+    .heading-program {
+      margin-bottom: 32px;
+    }
+
+    .heading-sub-program {
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 1.8;  
+    }
+
+    .heading-sub-program-sp {
+      line-height: 1.7em;
+    }
+  }
+
   &.heading-reservation {
     .heading-text {
       @include min-screen($breakpoint-mobile + 1) {
@@ -605,6 +643,14 @@
     .heading-mammal-labo {
       .heading-subtext {
         height: 55px;
+      }
+    }
+  }
+
+  &.heading-zipline {
+    .heading {
+      .heading-subtext {
+        max-width: 330px;
       }
     }
   }

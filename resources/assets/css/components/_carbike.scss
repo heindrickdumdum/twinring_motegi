@@ -37,6 +37,12 @@
     border-right: 25px solid transparent;
     width: 0;
     margin: 20px auto;
+
+    @include max-screen ($breakpoint-mobile) {
+      border-top: 12px solid #4fae32;
+      border-left: 17px solid transparent;
+      border-right: 17px solid transparent;
+    }
   }
 
   &:hover {
@@ -208,6 +214,20 @@
   font-weight: 600;
   align-self: stretch;
 
+  &.program {
+    width: 102px;
+    padding: 8px 0;
+    margin-right: 0;
+
+    @include max-screen ($breakpoint-mobile) {
+      text-align: left;
+      justify-content: left;
+      padding: 10px 8px;
+      width: 68px;
+      margin-right: 0;
+    }
+  }
+
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 15px;
     margin-right: 35px;
@@ -220,6 +240,19 @@
   font-weight: 600;
   width: calc(100% - 90px);
   padding: 11.5px 0;
+
+  &.program {
+    width: calc(100% - 102px);
+    padding: 9px 18px;
+    letter-spacing: 0px;
+    font-size: 15px;
+    line-height: 1.7;
+
+    @include max-screen ($breakpoint-mobile) {
+      padding: 10px 12px;
+      width: calc(100% - 68px);
+    }
+  }
 
   @include min-screen($breakpoint-mobile + 1) {
     width: calc(100% - 170px);
@@ -240,6 +273,7 @@
 
 .carbike-article-more {
   width: 100%;
+  display: none;
 }
 
 .carbike-article-more-link {
@@ -281,10 +315,21 @@
 
 .carbike-article {
   &.carbike-article-attractions {
+    .carbike-article-cat {
+      border-radius: 5px;
+      right: -10px;
+      bottom: -10px;
+      padding: 5px 30px;
+
+      @include max-screen ($breakpoint-mobile) {
+        right: -5px;
+        bottom: -5px;
+        padding: 5px 14px;
+      }
+    }
     .carbike-article-list {
       border-top: none;
     }
-
     .carbike-article-list-item {
       padding-bottom: 10px;
       margin-bottom: 10px;
@@ -293,10 +338,19 @@
         border-bottom: none;
       }
     }
-
+    .carbike-article-thumb {
+      @include max-screen ($breakpoint-mobile) {
+        margin-bottom: 12px;
+      }
+    }
     .carbike-article-title {
       @include min-screen($breakpoint-mobile + 1) {
         font-size: 20px;
+      }
+    }
+    .ico-carbike-family {
+      @include max-screen ($breakpoint-mobile) {
+        display: none;
       }
     }
     .carbike-article-list-label {
@@ -307,7 +361,59 @@
     .carbike-article-list-desc {
       padding: 0 5px;
     }
+    .carbike-article-more {
+      display: block;
+    }
   }
+}
+
+
+.program-item {
+  position: relative;
+
+  .ribbon-text {
+    position: absolute;
+    z-index: 1;
+    background-color: $color-white;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 50px 4px;
+    transform: rotate(-45deg);
+    left: -73px;
+    top: -10px;
+    font-size: 19px;
+    letter-spacing: 0px;
+    border-radius: 70px 79px 0 0px;
+
+    @include max-screen ($breakpoint-mobile) {
+      padding: 30px 26px 1px;
+      font-size: 10px;
+      left: -45px;
+      top: -20px;
+    }
+  }
+  
+  .program-cat {
+    padding: 5px 13px;
+    @include min-screen ($breakpoint-mobile + 1) {
+      left: 0;
+      right: initial;
+      bottom: -13px;
+      padding: 5px 13px;
+      min-height: auto;
+    }
+  }
+
+  .period {
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 12px;
+    }
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 47px;
+  }
+
+
 }
 
 @keyframes movearrow {

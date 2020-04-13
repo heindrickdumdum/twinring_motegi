@@ -58,35 +58,48 @@ module.exports = {
 		host: process.env.MOTEGI_SCP_HOST,
 		username: process.env.MOTEGI_SCP_USERNAME,
 		password: process.env.MOTEGI_SCP_PASSWORD,
-		top: {
-			src: './release/top',
-			dist:'top'
-		},
-			sumika: {
-				src: '',
-				dist:''
+		contents: [
+			{
+				contentName: 'top',
+				src: './release/top',
+				dist:'top'
 			},
-			itadaki: {
-				src: '',
-				dist:''
-			},
-			dokidoki: {
-				src: './release/dokidoki',
+			{
+				contentName: 'dokidoki',
+				src: './release/',
 				dist:'dokidoki-test'
 			},
-			hellowoods: {
-				src: '',
-				dist:''
+			{
+				contentName: 'itadaki',
+				src: './release/itadaki',
+				dist:'itadaki-test'
 			},
-			mobipark_m: {
-				src: '',
-				dist:''
+			{
+				contentName: 'sumika',
+				src: './release/sumika',
+				dist:'sumika-test'
 			},
-			hoteltwinring: {
-				src: '',
-				dist:''
-			}
-
+			{
+				contentName: 'hellowoods',
+				src: './release/hellowoods',
+				dist:'hellowoods-test'
+			},
+			{
+				contentName: 'mobipark_m',
+				src: './release/mobipark_m',
+				dist:'mobipark_m-test'
+			},
+			{
+				contentName: 'hoteltwinring',
+				src: './release/hoteltwinring',
+				dist:'hoteltwinring-test'
+			},
+			{
+				contentName: 'globalnavi',
+				src: './release/globalnavi',
+				dist:'globalnavi-test'
+			},
+		]
 		//path: process.env.MOTEGI_SCP_DIST_PATH
 	}
 }

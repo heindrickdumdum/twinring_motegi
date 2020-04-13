@@ -33,7 +33,9 @@
   'hoteltwinring',
   'nozominoyu',
   'information',
-  'zipline'
+  'foodsm',
+  'zipline',
+  'oak'
   ]
 %>
 
@@ -166,6 +168,10 @@
 
   <% if(pageId == 'granroom' || pageId == 'familyroom' || pageId == 'standardroom') { %>
     <script src="<%= mix('/assets/js/granroom.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'foodsm') { %>
+    <script src="<%= mix('/assets/js/restaurant-slider.js') %>" async></script>
   <% } %>
 
 <!-- START GTM FOOTER -->

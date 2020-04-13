@@ -5,6 +5,12 @@
   height: auto;
   margin-bottom: 50px;
 
+  &-restaurant {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 20px;
+    }
+  }
+
   &-hotel {//hotel granroom
     @include min-screen($breakpoint-mobile + 1) {
       // sass-lint:disable-block no-important   
@@ -335,6 +341,16 @@
   font-size: 13px;
   letter-spacing: 0.11em;
   margin-bottom: 8px;
+
+  &-safety {//areaindex page
+    text-align: center;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 28px !important;
+      line-height: 1.462;   
+      margin-bottom: 0px; 
+    }
+  }
 
   .subpage-section-usagefee & {//hotel granroom/familyroom
     @include min-screen($breakpoint-mobile + 1) {

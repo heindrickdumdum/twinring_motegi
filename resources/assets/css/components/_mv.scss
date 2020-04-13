@@ -180,6 +180,12 @@
   background-size: cover;
   border-radius: 5px 0 0 5px;
 
+  .is-ie & {//ie modifier
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 150px;
+    }
+  }
+
   .mv-subpage-hotel & {//hotel granroom/familyroom
     .is-ie & {
       @include min-screen($breakpoint-mobile + 1) {
@@ -222,6 +228,7 @@
 
 .mv-heading {
   position: absolute;
+
   &:not(.mv-heading-subpage) {
     bottom: -92px;
     left: 35px;
@@ -234,6 +241,41 @@
 
   @include max-screen($breakpoint-mobile) {
     left: 15px;
+  }
+
+  &.oak-mv-heading {//oak page
+    bottom: 40px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -5px !important;
+    }
+
+    .heading-subtext {
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 643px !important;
+        height: 54px !important;
+        margin-top: 20px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 273px !important;
+        height: 60px !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
+  &.restaurant-mv-heading {//restaurant page
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 270px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 190px !important;
+      }
+    }
   }
 
   &.standardroom-mv-heading {//hotel familyroom

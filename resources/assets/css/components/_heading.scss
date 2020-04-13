@@ -63,6 +63,14 @@
     }
   }
 
+  &-adventure-restaurant {//restaurant page
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 30px !important;
+      }
+    }
+  }
+
   .subpage-section-granroomactivity {//hotel granroom
     svg {
       fill: $color-white;
@@ -318,6 +326,74 @@
       left: 50%;
       transform: translateX(-48%);
     }
+  }
+}
+
+.heading-other-restaurant {//other restaurant section
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 415px;
+      height: 39px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 280px;
+      height: 26px;
+    }
+  }
+}
+
+.heading-restaurant-menu {//oak page
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 165px;
+      height: 28px;
+      line-height: normal;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 0px;
+      width: 110px;
+      height: 19px;
+    }
+  }
+}
+
+.heading-oak {//oak page
+  .heading {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 79px;
+      margin-bottom: 40px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 55px;
+      margin-bottom: 59px;
+    }
+  }
+
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 823px;
+      height: 81px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 305px;
+      height: 133px;
+    }
+  }
+}
+
+.restaurant-gradient-subtext {//foods_m
+  .heading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .heading-subtext {
+    margin-top: 0px;
+    height: 100%;
   }
 }
 
@@ -606,9 +682,317 @@
         margin-top: 0;
         padding: 0;
       }
+    }
+
+    &-restaurant {//restaurant page
+      height: auto;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 25px;
       }
 
-      &-sumika {
+      .heading {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      .heading-subtext {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-top: 0px;
+        }
+      }
+
+      &-gradient {//restaurant gradient section
+        .heading {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+
+        .heading-subtext {
+          @include min-screen($breakpoint-mobile + 1) {
+            margin-top: 0px;
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            margin-top: 10px;
+          }
+        }
+
+        &-marcherant {
+          .heading-subtext {
+            @include min-screen($breakpoint-mobile + 1) {
+              width: 205px;
+              height: 23px;
+            }
+
+            @include max-screen($breakpoint-mobile) {
+              width: 160px;
+              height: 22px;
+            }
+          }
+        }
+
+        &-diningtoya {
+          .heading-subtext {
+            @include min-screen($breakpoint-mobile + 1) {
+              width: 205px;
+              height: 23px;
+            }
+
+            @include max-screen($breakpoint-mobile) {
+              width: 170px;
+              height: 22px;
+            }
+          }
+        }
+
+        &-oak {
+          .heading-subtext {
+            @include min-screen($breakpoint-mobile + 1) {
+              width: 183px;
+              height: 23px;             
+            }
+
+            @include max-screen($breakpoint-mobile) {
+              width: 145px;
+              height: 22px;
+            }
+          }
+        }
+
+        &-granturismo {
+          .heading-subtext {
+            @include min-screen($breakpoint-mobile + 1) {
+              width: 252px;
+              height: 23px;
+            }
+
+            @include max-screen($breakpoint-mobile) {
+              width: 175px;
+              height: 22px;
+            }
+          }
+        }
+
+        &-forestkitchen {
+          .heading-subtext {
+            @include min-screen($breakpoint-mobile + 1) {
+              width: 207px;
+              height: 23px;
+            }
+
+            @include max-screen($breakpoint-mobile) {
+              width: 160px;
+              height: 22px;
+            }
+          }
+        }
+
+        &-rocco {
+          .heading-subtext {
+            @include min-screen($breakpoint-mobile + 1) {
+              width: 183px;
+              height: 23px;
+            }
+            
+            @include max-screen($breakpoint-mobile) {
+              width: 150px;
+              height: 22px;
+            }
+          }
+        }
+      }//restaurant gradient section
+
+      &-marcherant {//restaurant section
+        .heading-subtext {
+          @include min-screen($breakpoint-mobile + 1) {
+            width: 655px;
+            height: 37px;
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            width: 165px;
+            height: 45px;
+          }
+        }
+      }
+
+      &-diningtoya {//restaurant section
+        .heading-subtext {
+          @include min-screen($breakpoint-mobile + 1) {
+            width: 263px;
+            height: 38px;
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            width: 135px;
+            height: 24px;
+            margin-top: 35px;
+          }
+        }
+      }
+
+      &-oak {//restaurant section
+        .heading-subtext {
+          @include min-screen($breakpoint-mobile + 1) {
+            width: 465px;
+            height: 34px;
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            width: 220px;
+            height: 24px;
+          }
+        }
+      }
+
+      &-granturismo {//restaurant section
+        .heading-subtext {
+          @include min-screen($breakpoint-mobile + 1) {
+            width: 467px;
+            height: 35px;
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            width: 210px;
+            height: 24px;
+          }
+        }
+      }
+
+      &-forestkitchen {//restaurant section
+        .heading-subtext {
+          @include min-screen($breakpoint-mobile + 1) {
+            width: 425px;
+            height: 38px;
+            margin-top: 35px;
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            width: 205px;
+            height: 24px;
+          }
+        }
+      }
+
+      &-rocco {//restaurant section
+        .heading-subtext {
+          @include min-screen($breakpoint-mobile + 1) {
+            width: 514px;
+            height: 38px;
+            margin-top: 15px;
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            width: 240px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    &-twinringmotegi {//twinringmotegi page
+      .heading {
+        @include max-screen($breakpoint-mobile) {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        padding-top: 20px;
+      }
+    }
+
+    &-hellowoods {//twinringmotegi page
+      .heading-subtext {
+        width: 309px;
+        height: 35px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 154px;
+          height: 24px;
+          min-height: 24px;
+        }
+      }
+    }
+
+    &-mobipark {//twinringmotegi page
+      .heading-subtext {
+        width: 187px;
+        height: 31px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 114px;
+          height: 24px;
+          min-height: 24px;
+          margin-top: 35px;
+        }
+      }
+    }
+
+    &-campvillage {//twinringmotegi page
+      .heading-subtext {
+        width: 543px;
+        height: 35px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 240px;
+          height: 25px;
+        }
+      }
+    }
+
+    &-hoteltwinring {//twinringmotegi page
+      .heading-subtext {
+        width: 340px;
+        height: 32px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 200px;
+          height: 22px;
+        }
+      }
+    }
+
+    &-motorsport {//twinringmotegi page
+      .heading-subtext {
+        width: 303px;
+        height: 33px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 155px;
+          height: 23px;
+        }
+      }
+    }
+
+    &-hondacollection {//twinringmotegi page
+      .heading-subtext {
+        width: 462px;
+        height: 33px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 235px;
+          height: 24px;
+        }
+      }
+    }
+
+    &-activesafe {//twinringmotegi page
+      .heading-subtext {
+        width: 312px;
+        height: 35px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 155px;
+          height: 24px;
+        }
+      }
+    }
+
+    &-sumika {
       .heading-subtext {
         @include min-screen($breakpoint-mobile + 1) {
           width: 443px;

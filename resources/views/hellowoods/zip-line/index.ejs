@@ -6,7 +6,7 @@
 
 <div class="lig-content">
   <div class="subpage hellowoods-wrapper">
-    <div class="mv mv-tsubasa">
+    <div class="mv">
       <ul class="mv-list">
         <li class="mv-item">
           <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/zipline/mv-img.png') %>);"></div>
@@ -15,12 +15,12 @@
       </ul>
 
       <div class="l-container mv-container">
-        <h2 class="u-show-pc mv-heading hellowoods-mv-heading">
+        <h2 class="mv-heading hellowoods-mv-heading">
           <%- include('/partials/heading', {
-            'modifier': 'heading-tsubasa',
+            'modifier': 'heading-zipline',
             'text': 'Zipline',
             'alt': 'Zipline',
-            'subtextvg': 'tsubasa-main-title',
+            'subtextvg': 'zipline-main-title',
             'altSubtext': ''
           }) %>
         </h2>
@@ -30,7 +30,7 @@
     </div>
     
     <main>
-      <div class="page-description text-center">
+      <div class="page-description text-center l-container-m">
         <p>
           ハローウッズの森～国際レーシングコースまでの往復を駆け抜ける<br>
           <b>「メガジップラインつばさ」</b>と<br>
@@ -47,12 +47,193 @@
             text: 'Category',
             alt: '',
             altSubtext: '',
-            subtextvg: 'hellowoods-new2-title'
+            subtextvg: 'zipline-category-sub'
           }) %>
         </div>
 
         <div class="l-container-m">
           <%- include('/partials/zipline/section-alt-features-cat') -%>
+        </div>
+      </section>
+
+      <div class="text-banner l-container-m bg-green zipline">
+        <h3 class="banner-heading">【同意書・受付整理券について】</h3>
+        <p>
+          ・ご利用に際しては、同意書へのご本人の署名が必要です。未成年の方は保護者の署名も必要です。<br>
+          ・お申込は、参加される方全員お揃いのうえ、ハローウッズインフォメーションにお越しください。<br>
+          ・ご利用希望のお客様が多数の場合、受付整理券を配布させていただきます。<br>
+          　また、定員に達し次第、整理券の発行を終了いたします。あらかじめご了承ください。
+        </p>
+      </div>
+
+
+      <section class="subpage-section subpage-section-comparison l-section">
+        <div class="l-section-title heading-tsubasa">
+          <div class="u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-gradient-tobottom heading-comparison',
+              text: 'Comparison',
+              alt: 'Comparison',
+              altSubtext: '',
+              subtextvg: 'zipline-compare-sub'
+            }) %>
+          </div>
+          <div class="u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-gradient-tobottom heading-comparison',
+              text: 'Comparison',
+              alt: 'Comparison',
+              altSubtext: '',
+              subtextvg: 'tsubasa-comparison-title-sp'
+            }) %>
+          </div>
+        </div>
+
+        <div class="comparison">
+          <div class="comparison-inner">
+            <div class="comparison-row">
+              <div class="comparison-col">
+                <!-- mid -->
+              </div>
+              <div class="comparison-col">
+                <img class="comparison-img-1" src="<%= mix('/assets/images/tsubasa/compare-1.png') %>" alt="メガジップラインつばさ">
+                <img src="<%= mix('/assets/images/tsubasa/zipline-1.png') %>" alt="メガジップラインつばさ">
+              </div>
+              <div class="comparison-col">
+                <img class="comparison-img-2" src="<%= mix('/assets/images/tsubasa/compare-2.png') %>" alt="森のジップラインムササビ">
+                <img src="<%= mix('/assets/images/tsubasa/zipline-2.png') %>" alt="森のジップラインムササビ">
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-col">
+                <!-- <p>特徴</p> -->
+              </div>
+              <div class="comparison-col">
+                <ul>
+                  <li>森からサーキットへ大空を羽ばたく、全長５６１ｍの空中散歩！</li>
+                </ul>
+              </div>
+              <div class="comparison-col">
+                <ul>
+                  <li>ガイドが案内しながら森を飛びまわる自然観察ツアー！</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-col">
+                <p>こんな方に <br class="u-show-pc">おすすめ</p>
+              </div>
+              <div class="comparison-col">
+                <ul>
+                  <li>・ジップライン初心者の方</li>
+                  <li>・大空に飛び出して壮大な空中散歩を楽しみたい方</li>
+                </ul>
+              </div>
+              <div class="comparison-col">
+                <ul>
+                  <li>・ガイドから森のことをじっくり聞きたい方</li>
+                  <li>・家族や仲間と一緒に森の冒険を楽しみたい方</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-col">
+                <p>ジップライン数</p>
+              </div>
+              <div class="comparison-col">
+                <p>2本（343mと218m）</p>
+              </div>
+              <div class="comparison-col">
+                <p>6本（全長620m） ※最長は133m</p>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-col">
+                <p>ガイド</p>
+              </div>
+              <div class="comparison-col">
+                <p>なし</p>
+              </div>
+              <div class="comparison-col">
+                <p>あり</p>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-col">
+                <p>体験時間</p>
+              </div>
+              <div class="comparison-col">
+                <p>約30分</p>
+              </div>
+              <div class="comparison-col">
+                <p>約90分</p>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-col">
+                <p>料金</p>
+              </div>
+              <div class="comparison-col">
+                <span class="comparison-label comparison-label-green">モビパークパスポート対象</span>
+                <p>1,400円/ 1名</p>
+              </div>
+              <div class="comparison-col">
+                <span class="comparison-label comparison-label-grey">モビパークパスポート対象外</span>
+                <p>2,200円/ 1名</p>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-col">
+                <p>ご利用制限</p>
+                <span>※詳細なご利用条件は<br />各アトラクションペー<br />ジをご覧ください</span>
+              </div>
+              <div class="comparison-col">
+                <p>1. 小学1年生以上<br>
+                  2.体重30kg以上〜90kg以下<br>
+                  1.2. 全ての条件を満たす方</p>
+              </div>
+              <div class="comparison-col">
+                <ol>
+                  <li>1. 小学4年生以上</li>
+                  <li>2. 身長135cm以上</li>
+                  <li>3. 体重～100kg以下</li>
+                  <li>1. 2. 3. 全ての条件を満たす方</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="comparison-btn comparison-btn-tsubasa">
+            <%- include('/partials/button', {
+              modifier: 'button-comparison',
+              text: 'ムササビの<br />詳細を見る',
+              link: '/hellowoods/zip-line/musasabi.html'
+            }) %>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="field-introduction">
+        <div class="field-introduction-container">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-how-to heading-wrap-center heading-wrap-hellowoods',
+            text: 'Map',
+            alt: '',
+            subtextvg: 'map',
+            altSubtext: ''
+          }) %>
+          <div class="map-wrapper">
+            <img class="map-image u-show-pc" src="<%= mix('/assets/images/zipline/map.png') %>" alt="Zipline Map">
+            <img class="map-image u-show-sp" src="<%= mix('/assets/images/zipline/map-sp.png') %>" alt="Zipline Map">
+          </div>
         </div>
       </section>
 

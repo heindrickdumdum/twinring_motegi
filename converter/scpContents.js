@@ -12,20 +12,40 @@ module.exports.createSCPConfig = function() {
 
 module.exports = function(){
 
-	var scpConfig ={
-			host: CONFIG.scp.host,
-			username: CONFIG.scp.username,
-			password: CONFIG.scp.password,
-			path: ''
-		};
+	var sendContentsList = CONFIG.scp.contents;
 
-	console.log(scpConfig)
-	scpClient.scp(
-			CONFIG.scp.dokidoki.src,
+	console.log(sendContentsList);
+
+	async.each(sendContentsList, function(sendContents, callback) {
+		console.log(sendContents);
+
+		var scpConfig ={
+				host: CONFIG.scp.host,
+				username: CONFIG.scp.username,
+				password: CONFIG.scp.password,
+				path: sendContents.dist
+			};
+
+		console.log(scpConfig);
+
+
+		scpClient.scp(
+			sendContents.src,
 			scpConfig,
 			function(err) {
 				console.log(err);
-			}
-	);
+				callback(err);
+			});
+
+		callback(null);
+
+	},
+	function(err) {
+		if(err) {
+			console.log(err);
+		} else {
+			console.log("Finish to transfer contents");
+		}
+	});
 
 };

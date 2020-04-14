@@ -3,6 +3,12 @@
     font-size: 21px;
     letter-spacing: 4px;
     margin-bottom: 25px;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 14px;
+      letter-spacing: 4px;
+      margin-bottom: 8px;
+    }
   }
 
   .work-intro-item {
@@ -17,11 +23,23 @@
       margin-bottom: 16px;
       font-size: 17px;
       letter-spacing: 4px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 6px;
+      }
     }
   }
 
   .work-intro-desc {
     margin-bottom: 10px;
+
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 13px;
+      letter-spacing: 1px;
+      line-height: 1.8;
+    }
   }
 
   .media-subpage-work-intro {
@@ -37,5 +55,44 @@
     .media-thumb-work {
       width: 400px;
     }
+  }
+}
+
+.section-profile {
+  .media-title-profile {
+    font-size: 23px;
+    letter-spacing: 3px;
+    margin-bottom: 23px;
+  }
+  .desc-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 77px;
+
+    ul {
+      list-style: initial;
+    }
+
+    .bold {
+      display: block;
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+    }
+    .profile-img {
+      
+      @include min-screen ($breakpoint-mobile + 1) {
+        order: 2;
+      }
+    }
+
+    .profile-desc {
+      max-width: 700px;
+    }
+  }
+
+  .l-button {
+    padding-bottom: 58px;
   }
 }

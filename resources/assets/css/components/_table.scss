@@ -17,6 +17,14 @@
     }
   }
 
+  &.table-programdetails {
+    margin-bottom: 70px;
+    
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 29px;
+    }
+  }
+
   &.table-craft {
     &::before {
       @include max-screen($breakpoint-mobile) {

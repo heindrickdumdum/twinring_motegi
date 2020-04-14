@@ -163,6 +163,10 @@
     <script src="<%= mix('/assets/js/labo.js') %>" async></script>
   <% } %>
 
+  <% if(pageId == 'program') { %>
+    <script src="<%= mix('/assets/js/tabs.js') %>" async></script>
+  <% } %>
+
   <% if(pageId == 'programDetails') { %>
     <script src="<%= mix('/assets/js/program-details.js') %>" async></script>
   <% } %>

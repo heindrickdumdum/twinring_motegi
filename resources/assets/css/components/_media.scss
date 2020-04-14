@@ -303,6 +303,17 @@
 
 
   }
+
+  &.media-title-programdetails {
+    font-size: 22px;
+    margin-bottom: 27px;
+
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 15px;
+      margin-bottom: 16px;
+      margin-top: 14px;
+    }
+  }
 }
 
 .media-title-nohighlight {

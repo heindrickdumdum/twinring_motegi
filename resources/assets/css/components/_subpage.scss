@@ -382,6 +382,20 @@
       -ms-text-fill-color: $color-gossamer;
     }
   }
+
+  &.subpage-title-programdetails {
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 1;
+    margin-bottom: 16px;
+
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      padding: 0 20px;
+    }
+  }
 }
 
 .subpage-title-musasabi {
@@ -461,7 +475,6 @@
       margin-bottom: 30px;
     }
   }
-
 }
 
 .subpage-section {
@@ -1070,6 +1083,18 @@
 .subpage-inner-reserve {
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 161px;
+  }
+}
+
+.subpage-inner-programdetails {
+  &.full-width-sp {
+    @include max-screen ($breakpoint-mobile) {
+      padding: 0;
+    }
+  }
+
+  @include min-screen ($breakpoint-mobile + 1) {
+    margin-bottom: 97px;
   }
 }
 

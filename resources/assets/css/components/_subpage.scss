@@ -480,6 +480,24 @@
 .subpage-section {
   position: relative;
   width: 100%;
+
+  &.section-profile::after {
+    background: #dfdfdf;
+    content: '';
+    display: block;
+    height: 1px;
+    max-width: 1220px;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 257px;
+    }
+  }
 }
 
 .subpage-section-inner {
@@ -1087,9 +1105,22 @@
 }
 
 .subpage-inner-programdetails {
+  
   &.full-width-sp {
     @include max-screen ($breakpoint-mobile) {
       padding: 0;
+    }
+  }
+
+  &.work-intro {
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &.img-list {
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 0;
     }
   }
 

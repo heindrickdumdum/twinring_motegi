@@ -173,7 +173,7 @@
       </section>
 
       <section class="subpage-section work-introduction">
-        <div class="subpage-inner subpage-inner-programdetails">
+        <div class="subpage-inner subpage-inner-programdetails work-intro">
           <p class="media-title media-title-work-intro">
             <span class="media-title-text">作品紹介</span>
           </p>
@@ -203,9 +203,10 @@
 
           <div class="work-intro-item">
             <p class="work-intro-desc">
-              <span class="bold">大切な人へ「ありがとうの感謝を込めて」</span>
-              時間をかけてつくるから思いが伝わる・・・<br>
-              結婚記念日や誕生日などの記念日に、大切な人へのプレゼントとしても最適です。
+              <span class="bold">自分の手づくり作品で「みんなをおもてなし」</span>
+              つかうたびに味のある作品に・・・<br>
+              みんなとのお茶や食事などで披露して、<br>
+              楽しい時間を過ごしましょう。
             </p>
             <div class="media media-subpage media-subpage-work-intro u-clear">
               <div class="media-box media-box-work">
@@ -227,9 +228,8 @@
 
           <div class="work-intro-item">
             <p class="work-intro-desc">
-              <span class="bold">大切な人へ「ありがとうの感謝を込めて」</span>
-              時間をかけてつくるから思いが伝わる・・・<br>
-              結婚記念日や誕生日などの記念日に、大切な人へのプレゼントとしても最適です。
+              <span class="bold">経験に合わせたものづくり</span>
+              はじめての方には一回で完成するお皿などがおすすめ、回を重ねるたびに様々な器などにチャレンジ できます。
             </p>
             <div class="media media-subpage media-subpage-work-intro u-clear">
               <div class="media-box media-box-work">
@@ -252,7 +252,7 @@
       </section>
 
       <section class="subpage-section">
-        <div class="subpage-inner subpage-inner-programdetails">
+        <div class="subpage-inner subpage-inner-programdetails img-list">
           <ul class="image-list">
             <li class="image-list-item">
               <img src="<%= mix('/assets/images/program-details/work-intro-1.jpg') %>" alt="">
@@ -294,7 +294,7 @@
             </div>
             <p class="profile-desc">
               <span class="bold">松崎　融　（まつざき　とおる）</span>
-              時間をかけてつくるから思いが伝わる・・・<br>
+              <span class="u-show-pc">時間をかけてつくるから思いが伝わる・・・<br></span>
               1944年　東京生まれ<br>
               茂木町在住　木漆工芸作家　国画会工芸部監査委員長<br>
               国画会とは : 創立精神である「創作の自由」をモットーに活動する総合美術団体。<br>
@@ -308,7 +308,7 @@
             </p>
           </div>  
 
-          <p class="media-title media-title-profile">
+          <p class="media-title media-title-profile desc-2">
             <span class="media-title-text">特記事項</span>
           </p>
           <div class="desc-container">
@@ -339,6 +339,12 @@
           </div>
         </div>
       </section>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
     </main>
   </div>
 </div>

@@ -382,6 +382,20 @@
       -ms-text-fill-color: $color-gossamer;
     }
   }
+
+  &.subpage-title-programdetails {
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 1;
+    margin-bottom: 16px;
+
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      padding: 0 20px;
+    }
+  }
 }
 
 .subpage-title-musasabi {
@@ -461,12 +475,29 @@
       margin-bottom: 30px;
     }
   }
-
 }
 
 .subpage-section {
   position: relative;
   width: 100%;
+
+  &.section-profile::after {
+    background: #dfdfdf;
+    content: '';
+    display: block;
+    height: 1px;
+    max-width: 1220px;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 257px;
+    }
+  }
 }
 
 .subpage-section-inner {
@@ -1070,6 +1101,31 @@
 .subpage-inner-reserve {
   @include min-screen($breakpoint-mobile + 1) {
     margin-bottom: 161px;
+  }
+}
+
+.subpage-inner-programdetails {
+  
+  &.full-width-sp {
+    @include max-screen ($breakpoint-mobile) {
+      padding: 0;
+    }
+  }
+
+  &.work-intro {
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &.img-list {
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include min-screen ($breakpoint-mobile + 1) {
+    margin-bottom: 97px;
   }
 }
 

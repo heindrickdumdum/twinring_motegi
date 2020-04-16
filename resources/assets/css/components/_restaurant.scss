@@ -107,6 +107,8 @@
       position: absolute;
       right: 69px;
       bottom: 50px;
+      text-align: right;
+      width: auto;
 
       @include max-screen($breakpoint-mobile) {
         right: 34px;
@@ -121,6 +123,7 @@
         border-radius: 50%;
         margin-right: 10px;
         cursor: pointer;
+        opacity: 1;
 
         @include max-screen($breakpoint-mobile) {
           margin-right: 8px;

@@ -1,7 +1,7 @@
 .image-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   text-align: center;
 
   .image-list-item {
@@ -25,5 +25,9 @@
       max-width: 160px;
       margin-bottom: 18px;
     }
+  }
+  
+  @include max-screen ($breakpoint-mobile) {
+    justify-content: space-evenly;
   }
 }

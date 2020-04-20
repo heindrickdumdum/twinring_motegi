@@ -323,8 +323,8 @@
 
     @include max-screen($breakpoint-mobile) {
       width: 100%;
-      left: 50%;
-      transform: translateX(-48%);
+      left: 10px;
+      top: 10px;
     }
   }
 }

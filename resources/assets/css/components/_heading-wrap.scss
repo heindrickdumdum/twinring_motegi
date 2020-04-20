@@ -265,16 +265,12 @@
       }
 
       svg {
-        // sass-lint:disable-block no-important
-        width: 272px !important;
-        // sass-lint:disable-block no-important
-        height: 53px !important;
-        position: relative;
-        left: -17px;
+        width: 600px;
 
         @include max-screen($breakpoint-mobile) {
-          width: 226px !important;
-          height: 40px !important;
+          width: 320px;
+          height: 40px;
+          left: 0;
         }
       }
     }

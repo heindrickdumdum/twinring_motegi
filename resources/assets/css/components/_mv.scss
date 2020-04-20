@@ -369,6 +369,23 @@
   }
 
   &.reservation-mv-heading {
+    .heading-subtext {
+      left: 0;
+
+      @include max-screen ($breakpoint-mobile) {
+        top: 10px;
+        transform: none;
+      }
+      * {
+        width: 300px !important;
+
+        @include max-screen ($breakpoint-mobile) {
+           // sass-lint:disable-block no-important    
+          width: 207px !important;
+        }
+      }
+    }
+
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important    
       padding: 15px 20px !important;

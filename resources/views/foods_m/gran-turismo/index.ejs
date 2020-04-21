@@ -1,7 +1,7 @@
 <%
   var title = 'Twin Ring Motegi | 森の教習所'
   SPRITE_SVG = '/assets/svg/sprite.svg';
-  pageId = 'oak';
+  pageId = 'granTurismo';
 %>
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
@@ -21,32 +21,32 @@
 
       <ul class="mv-list">
         <li class="mv-item">
-          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/oak/mv-img.jpg') %>);"></div>
-          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/oak/mv-img-sp.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/granturismo/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/granturismo/mv-img-sp.jpg') %>);"></div>
         </li>
       </ul>
 
       <div class="l-container mv-container">
-        <div class="mv-heading hellowoods-mv-heading oak-mv-heading u-show-pc">
+        <div class="mv-heading hellowoods-mv-heading granturismo-mv-heading u-show-pc">
           <%- include('/partials/heading', {
             modifier: 'heading-hellowoods',
             heading_level: 1,
-            text: 'Cafe Restaurant OAK',
-            subtextvg: 'oak-top-title',
-            altSubtextvg: 'カフェレストラン オーク'
+            text: 'Gran Turismo Cafe',
+            subtextvg: 'granturismo-top-title',
+            altSubtextvg: 'グランツーリスモカフェ'
           }) %>
         </div>
-        <div class="mv-heading hellowoods-mv-heading oak-mv-heading u-show-sp">
+        <div class="mv-heading hellowoods-mv-heading granturismo-mv-heading u-show-sp">
           <%- include('/partials/heading', {
             modifier: 'heading-hellowoods',
             heading_level: 1,
-            text: 'Cafe Restaurant OAK',
-            subtextvg: 'oak-top-title-sp',
-            altSubtextvg: 'カフェレストラン オーク'
+            text: 'Gran Turismo Cafe',
+            subtextvg: 'granturismo-top-title-sp',
+            altSubtextvg: 'グランツーリスモカフェ'
           }) %>
         </div>
 
-        <div class="u-show-pc mv-today mv-logo mv-granroom-logo" style="background-image: url(<%= mix('/assets/images/oak/mv-logo.png') %>);">
+        <div class="u-show-pc mv-today mv-logo mv-granroom-logo" style="background-image: url(<%= mix('/assets/images/granturismo/mv-logo.png') %>);">
           <div class="mv-l-inner">
           </div>
         </div>
@@ -58,26 +58,34 @@
         <div class="subpage-inner">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant heading-oak',
-              subtextvg: 'oak-main-title',
-              altSubtextvg: `家族みんなで楽しめる『森』をテーマにした オリジナルメニューが盛りだくさん!!`
+              modifier: 'heading-wrap-center heading-restaurant heading-granturismo',
+              subtextvg: 'granturismo-main-title',
+              altSubtextvg: `プレイステーションの
+カーレースゲーム「グランツーリスモ」の
+世界観を楽しみながら食事ができるレストランです`
             }) %>
           </div>
 
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant heading-oak',
-              subtextvg: 'oak-main-title-sp',
-              altSubtextvg: `家族みんなで楽しめる『森』をテーマにした オリジナルメニューが盛りだくさん!!`
+              modifier: 'heading-wrap-center heading-restaurant heading-granturismo',
+              subtextvg: 'granturismo-main-title-sp',
+              altSubtextvg: `プレイステーションの
+カーレースゲーム「グランツーリスモ」の
+世界観を楽しみながら食事ができるレストランです`
             }) %>
           </div>
 
           <div class="subpage-banner subpage-banner-craft">
             <div class="subpage-banner-inner">
-              <img class="u-show-pc" src="<%= mix('/assets/images/oak/subpage-banner.jpg') %>" alt="家族みんなで楽しめる『森』をテーマにした オリジナルメニューが盛りだくさん!!">
-              <img class="u-show-sp" src="<%= mix('/assets/images/oak/subpage-banner-sp.jpg') %>" alt="家族みんなで楽しめる『森』をテーマにした オリジナルメニューが盛りだくさん!!">
+              <img class="" src="<%= mix('/assets/images/granturismo/subpage-banner.jpg') %>" alt="無料で体験できるグランツーリスモSPORT。好きな車を選んで、様々なコースに挑戦しよう！">
+              <!-- <img class="u-show-sp" src="<%= mix('/assets/images/granturismo/subpage-banner-sp.jpg') %>" alt="無料で体験できるグランツーリスモSPORT。好きな車を選んで、様々なコースに挑戦しよう！"> -->
             </div>
           </div>
+
+          <p class="suboage-desc">
+            <span>無料で体験できるグランツーリスモSPORT。好きな車を選んで、様々なコースに挑戦しよう！</span>
+          </p>
 
           <h2 class="subpage-title">
             <span>店舗情報</span>
@@ -88,20 +96,23 @@
               <tr class="table-row">
                 <th class="table-head">場所</th>
                 <td class="table-col">
-                  中央エントランス（最寄の駐車場：N1）
+                  パドック（最寄の駐車場 : 第1パドック駐車場）
                 </td>
               </tr>
 
               <tr class="table-row">
                 <th class="table-head">営業時間</th>
                 <td class="table-col">
-                  ツインリンクもてぎ営業時間内
+                  ツインリンクもてぎ営業時間内 <br/>
+                  ※平日は11:00&#126;15:00まで営業
                 </td>
               </tr>
 
               <tr class="table-row">
                 <th class="table-head">座席数</th>
-                <td class="table-col">店内：98 　テラス：120</td>
+                <td class="table-col">
+                  店内: 90　テラス: 31
+                </td>
               </tr>
             </tbody>
           </table>
@@ -110,7 +121,7 @@
 
       <!-- restaurant menu -->
       <%- include('/partials/restaurant/section-menu', {
-        data: getData().data.oakMenu
+        data: getData().data.granTurismoMenu
       }) -%>
 
       <div class="l-section oak-button">
@@ -149,6 +160,6 @@
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsOak
+  breadcrumbs : getData().data.breadcrumbsGranturismo
 }) -%>
 <%- include('/partials/footer', { pageId } ) -%>

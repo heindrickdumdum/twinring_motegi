@@ -57,6 +57,14 @@
           letter-spacing: 0.16em;
           margin-bottom: 13px;
         }
+
+        .price {
+          font-size: 16px;   
+          
+          @include max-screen($breakpoint-mobile) {
+            font-size: 13px;
+          }
+        }
         
         span {
           background: linear-gradient(to right, #027cc3 0%, #09a046 100%);

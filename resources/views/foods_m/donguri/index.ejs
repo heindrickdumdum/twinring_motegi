@@ -1,0 +1,146 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'oak';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-restaurant restaurant-wrapper">
+    <div class="mv mv-restaurant mv-subpage-restaurant">
+      <div class="mv-buttons">
+        <ul class="mv-buttons-list">
+          <li class="mv-buttons-item">
+            <a class="mv-buttons-link" href="/foods_m/">
+              <span>ご予約</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/donguri/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/donguri/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading oak-mv-heading u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Forest Kitchen Donguri',
+            subtextvg: 'oak-top-title',
+            altSubtextvg: 'カフェレストラン オーク'
+          }) %>
+        </div>
+        <div class="mv-heading hellowoods-mv-heading oak-mv-heading u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Forest Kitchen Donguri',
+            subtextvg: 'oak-top-title-sp',
+            altSubtextvg: 'カフェレストラン オーク'
+          }) %>
+        </div>
+
+        <div class="u-show-pc mv-today mv-logo mv-granroom-logo" style="background-image: url(<%= mix('/assets/images/donguri/mv-logo.png') %>);">
+          <div class="mv-l-inner">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner-wrap">
+        <div class="subpage-inner">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant heading-oak',
+              subtextvg: 'oak-main-title',
+              altSubtextvg: `家族みんなで楽しめる『森』をテーマにした オリジナルメニューが盛りだくさん!!`
+            }) %>
+          </div>
+
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant heading-oak',
+              subtextvg: 'oak-main-title-sp',
+              altSubtextvg: `家族みんなで楽しめる『森』をテーマにした オリジナルメニューが盛りだくさん!!`
+            }) %>
+          </div>
+
+          <div class="subpage-banner subpage-banner-craft">
+            <div class="subpage-banner-inner">
+              <img class="u-show-pc" src="<%= mix('/assets/images/donguri/subpage-banner.jpg') %>" alt="">
+              <img class="u-show-sp" src="<%= mix('/assets/images/donguri/subpage-banner-sp.jpg') %>" alt="">
+            </div>
+          </div>
+
+          <h2 class="subpage-title">
+            <span>店舗情報</span>
+          </h2>
+
+          <table class="table table-donguri">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">場所</th>
+                <td class="table-col">
+                  ハローウッズ  > <a class="link" href="#">MAP</a>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">営業時間</th>
+                <td class="table-col">
+                  ツインリンクもてぎ営業時間内（L.O.営業終了30分前）<br>
+                  <a class="link" href="https://www.twinring.jp/hours_m/">https://www.twinring.jp/hours_m/</a>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">座席数</th>
+                <td class="table-col">店内：36<br>
+                  ※クレジットカードはご利用いただけません。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- restaurant menu -->
+      <%- include('/partials/donguri/section-menu') -%>
+
+      <div class="l-section oak-button">
+        <div class="u-show-pc">
+          <%- include('/partials/button', {
+            modifier: 'restaurant-button donguri-button',
+            link: '#',
+            text: '冬のおすすめメニューはこちら (PDF:4.1MB)'
+          }) -%>
+        </div>
+
+        <div class="u-show-sp">
+          <%- include('/partials/button', {
+            modifier: 'restaurant-button donguri-button',
+            link: '#',
+            text: '冬のおすすめメニューは<br/>こちら (PDF:4.1MB)'
+          }) -%>
+        </div>
+      </div>
+
+      <!-- other restaurant module-->
+      <%- include('/partials/restaurant/section-other-restaurant') -%>
+      
+
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsOak
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

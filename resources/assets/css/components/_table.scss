@@ -44,6 +44,12 @@
       position: relative;
     }
   }
+
+  &.table-donguri {
+    .link {
+      color: #00a040;
+    }
+  }
 }
 
 .table-head {

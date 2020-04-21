@@ -416,8 +416,10 @@
 
   &.donguri-mv-heading {
     .heading-subtext {
-      max-width: 595px;
-      height: 100px;
+      // sass-lint:disable-block no-important    
+      max-width: 595px !important;
+      // sass-lint:disable-block no-important    
+      height: 100px !important;
       @include min-screen ($breakpoint-mobile + 1) {
         left: -6px;
         top: 6px;

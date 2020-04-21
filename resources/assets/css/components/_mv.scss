@@ -414,6 +414,17 @@
     }
   }
 
+  &.donguri-mv-heading {
+    .heading-subtext {
+      max-width: 595px;
+      height: 100px;
+      @include min-screen ($breakpoint-mobile + 1) {
+        left: -6px;
+        top: 6px;
+      }
+    }
+  }
+
   &.hellowoods-mv-heading {
     bottom: 5px;
     width: 100%;
@@ -481,6 +492,8 @@
       }
     }
   }
+
+  
 
   span {
     display: block;

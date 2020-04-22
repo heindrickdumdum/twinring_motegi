@@ -1,7 +1,7 @@
 <%
   var title = 'Twin Ring Motegi | 森の教習所'
   SPRITE_SVG = '/assets/svg/sprite.svg';
-  pageId = 'oak';
+  pageId = 'donguri';
 %>
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
@@ -9,15 +9,7 @@
 <div class="lig-content">
   <div class="subpage subpage-restaurant restaurant-wrapper">
     <div class="mv mv-restaurant mv-subpage-restaurant">
-      <div class="mv-buttons">
-        <ul class="mv-buttons-list">
-          <li class="mv-buttons-item">
-            <a class="mv-buttons-link" href="/foods_m/">
-              <span>ご予約</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      
 
       <ul class="mv-list">
         <li class="mv-item">
@@ -144,6 +136,6 @@
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsOak
+  breadcrumbs : getData().data.breadcrumbsDonguri
 }) -%>
 <%- include('/partials/footer', { pageId } ) -%>

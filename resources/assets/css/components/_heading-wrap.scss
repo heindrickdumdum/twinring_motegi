@@ -1,5 +1,15 @@
 .heading-wrap {
-
+  &.heading-donguri {
+    .heading-subtext {
+      height: 85px;
+      width: 100%;
+      @include max-screen ($breakpoint-mobile) {
+        height: 216px;
+        padding-top: 10px;
+        margin-bottom: 59px;
+      }
+    }
+  }
   &.heading-wrap-information {
     .heading-text {
       letter-spacing: 0.01em;

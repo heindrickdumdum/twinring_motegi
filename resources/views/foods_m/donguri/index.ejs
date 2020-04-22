@@ -58,7 +58,7 @@
         <div class="subpage-inner">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant heading-oak',
+              modifier: 'heading-wrap-center heading-donguri',
               subtextvg: 'donguri-main-title',
               altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
             }) %>
@@ -66,8 +66,8 @@
 
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant heading-oak',
-              subtextvg: 'oak-main-title-sp',
+              modifier: 'heading-wrap-center heading-donguri',
+              subtextvg: 'donguri-main-title-sp',
               altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
             }) %>
           </div>
@@ -114,10 +114,13 @@
       <%- include('/partials/donguri/section-menu') -%>
 
       <div class="l-section oak-button">
+        <p class="u-show-sp">
+          この他にも、様々なメニューを<br>ご用意しております。
+        </p>
         <div class="u-show-pc">
           <%- include('/partials/button', {
             modifier: 'restaurant-button donguri-button',
-            link: '#',
+            link: 'https://www.twinring.jp/foods_m/pdf/donguri_menu_202003.pdf',
             text: '冬のおすすめメニューはこちら (PDF:4.1MB)'
           }) -%>
         </div>

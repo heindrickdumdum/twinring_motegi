@@ -116,6 +116,16 @@
   }
 }
 
+.subpage-banner-rocco {//rocco
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: 86px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 43px;
+  }
+}
+
 .subpage-section-otherroom {//hotel granroom/familyroom
   position: relative;
 

@@ -329,6 +329,134 @@
   }
 }
 
+.heading-rocco-ad {//rocco
+  .heading {
+    margin: 0 !important;
+  }
+
+  .heading-subtext {
+    margin-top: 0px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 707px;
+      height: 91px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 276px;
+      height: 74px;
+    }
+
+    svg {
+      display: block;
+    }
+  }
+}
+
+.heading-menu-drink-jp {//rocco
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 30px !important;
+      width: auto !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
+
+.heading-menu-drink-en {//rocco
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 20px !important;
+      width: 250px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
+
+.heading-gelatopop-jp {//rocco
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 29px !important;
+      width: 265px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      height: 28px;
+      width: 150px;
+    }
+  }
+}
+
+.heading-gelatopop-en {//rocco
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 25px !important;
+      width: 200px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      height: 28px;
+      width: 190px;
+    }
+  }
+}
+
+.heading-restaurant-menu-gelato-jp {//rocco
+  margin-bottom: 14px;
+
+  .heading {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .heading-subtext {
+    margin-top: 0px !important;
+    margin-bottom: 0px;
+    height: 28px;
+    width: 150px;
+
+    @include max-screen($breakpoint-mobile) {
+      height: 22px;
+    }
+
+    svg {
+      display: block;
+    }
+  }
+}
+
+.heading-restaurant-menu-gelato-en {//rocco
+  .heading {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .heading-subtext {
+    margin-top: 0px !important;
+    margin-bottom: 0px;
+    height: 20px;
+    width: 200px;
+    background-color: $color-white;
+
+    @include max-screen($breakpoint-mobile) {
+      height: 18px;
+      width: 150px;
+    }
+
+    svg {
+      display: block;
+    }
+  }
+}
+
 .heading-granturismo {//granturismo page
   .heading-subtext {
     @include min-screen($breakpoint-mobile + 1) {

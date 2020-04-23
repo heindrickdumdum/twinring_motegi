@@ -243,6 +243,29 @@
     left: 15px;
   }
 
+  &.rocco-mv-heading {//rocco page
+    bottom: 40px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -5px !important;
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 740px !important;
+        height: 58px !important;
+        margin-top: 20px !important;
+        
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 230px !important;
+        height: 55px !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
   &.granturismo-mv-heading {//granturismo page
     bottom: 40px !important;
 

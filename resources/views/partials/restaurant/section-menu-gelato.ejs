@@ -1,0 +1,54 @@
+<div class="menu-gelato">
+  <div class="subpage-inner">
+    <div class="restaurant-menu-img">
+      <img src="<%- icon -%>" alt="<%- iconalt -%>">
+    </div>
+
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-wrap-center ' + modifierjp,
+        subtextvg: svgjp,
+        altSubtextvg: svgjpalt
+      }) %>
+    </div>
+
+    <div class="l-section-title dotted-bg">
+      <%- include('/partials/heading', {
+        modifier: 'heading-wrap-center ' + modifieren,
+        subtextvg: svgen,
+        altSubtextvg: svgenalt
+      }) %>
+    </div>
+  </div>
+
+  <ul class="menu-container menu-container-gelato">
+    <% data.forEach(item => { %>
+      <li class="menu-item">
+        <div class="menu-image menu-image-gelato" style="background-image: url(<%- item.img -%>);"></div>
+        <div class="menu-title menu-title-gelato">
+          <span class="title">
+            <%- item.title -%>
+          </span>
+          <% if( item.tag === 'new' ) { %>
+            <span class="tag tag-<%- item.tag -%>">
+              NEW!
+            </span>
+          <% } %>
+          <% if( item.tag === 'limited' ) { %>
+            <span class="tag tag-<%- item.tag -%>">
+              ツインリングもてぎ限定
+            </span>
+          <% } %>
+        </div>
+        <% if( item.subText !== '' ) { %> 
+          <div class="menu-subtext">
+            <%- item.subText -%>
+          </div>
+        <% } %>
+        <div class="menu-desc menu-desc-gelato">
+          <%- item.desc -%>
+        </div>
+      </li>
+    <% }); %>
+  </ul>
+</div>

@@ -55,6 +55,35 @@
     border: 1px dotted $color-primary;
   }
 
+  &-rocco {//rocco
+    &:before {
+      content: none;
+    }
+
+    border-width: 0px;
+    background: #532525;
+    color: $color-white;
+    width: 446px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 33px;
+      width: 295px;
+    }
+
+    .button-icon {
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &:hover {
+      .button-icon {
+        transform: translate(5px, -50%);
+      }
+    }
+  }
+
   &.button-parkmap {
     width: 98%;
 

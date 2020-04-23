@@ -304,7 +304,9 @@
         }
 
         .price {
-          font-size: 16px;   
+          font-size: 16px;
+          letter-spacing: 4px;
+          padding-left: 2px; 
           
           @include max-screen($breakpoint-mobile) {
             font-size: 13px;

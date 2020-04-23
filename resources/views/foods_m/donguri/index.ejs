@@ -1,7 +1,7 @@
 <%
   var title = 'Twin Ring Motegi | 森の教習所'
   SPRITE_SVG = '/assets/svg/sprite.svg';
-  pageId = 'oak';
+  pageId = 'donguri';
 %>
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
@@ -9,15 +9,7 @@
 <div class="lig-content">
   <div class="subpage subpage-restaurant restaurant-wrapper">
     <div class="mv mv-restaurant mv-subpage-restaurant">
-      <div class="mv-buttons">
-        <ul class="mv-buttons-list">
-          <li class="mv-buttons-item">
-            <a class="mv-buttons-link" href="/foods_m/">
-              <span>ご予約</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      
 
       <ul class="mv-list">
         <li class="mv-item">
@@ -58,7 +50,7 @@
         <div class="subpage-inner">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant heading-oak',
+              modifier: 'heading-wrap-center heading-donguri',
               subtextvg: 'donguri-main-title',
               altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
             }) %>
@@ -66,8 +58,8 @@
 
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant heading-oak',
-              subtextvg: 'oak-main-title-sp',
+              modifier: 'heading-wrap-center heading-donguri',
+              subtextvg: 'donguri-main-title-sp',
               altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
             }) %>
           </div>
@@ -114,10 +106,13 @@
       <%- include('/partials/donguri/section-menu') -%>
 
       <div class="l-section oak-button">
+        <p class="u-show-sp">
+          この他にも、様々なメニューを<br>ご用意しております。
+        </p>
         <div class="u-show-pc">
           <%- include('/partials/button', {
             modifier: 'restaurant-button donguri-button',
-            link: '#',
+            link: 'https://www.twinring.jp/foods_m/pdf/donguri_menu_202003.pdf',
             text: '冬のおすすめメニューはこちら (PDF:4.1MB)'
           }) -%>
         </div>
@@ -141,6 +136,6 @@
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsOak
+  breadcrumbs : getData().data.breadcrumbsDonguri
 }) -%>
 <%- include('/partials/footer', { pageId } ) -%>

@@ -972,7 +972,7 @@
 
 .mv-tsubasa,
 .mv-musasabi {
-  margin-bottom: 80px;
+  margin-bottom: 80px ;
   position: relative;
   .mv-heading {
     bottom: 5px;
@@ -982,6 +982,7 @@
       left: 0;
       right: 0;
       padding: 30px;
+      margin-bottom: 20px ;
     }
   }
 
@@ -1044,7 +1045,7 @@
     bottom: -60px;
 
     @include max-screen($breakpoint-mobile) {
-      background-image: url(../images/musasabi/mv-logo-sp.png);
+      background-image: url(../images/musasabi/mv-logo.png);
     }
   }
 }
@@ -1379,7 +1380,7 @@
     .mv-logo-musasabi {
       display: block;
       max-width: 130px;
-      bottom: -140px;
+      bottom: -160px;
       right: 10px;
     }
   }

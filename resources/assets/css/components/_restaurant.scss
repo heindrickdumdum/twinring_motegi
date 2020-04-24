@@ -1,3 +1,13 @@
+.recommended-restaurant {//recommended restaurant
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 89px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 69px;
+  }
+}
+
 .restaurant-wrapper {
   .subpage-inner {
     margin-bottom: 70px;

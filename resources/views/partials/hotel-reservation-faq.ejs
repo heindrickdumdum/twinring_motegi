@@ -1,0 +1,57 @@
+<div class="hoteltwinring-reservation">
+  <div class="hotel-reservation-wrap">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'hoteltwinring-heading-reservation fill-white',
+        text: 'Reservation',
+        alt: '',
+        altSubtext: '',
+        subtextvg: 'hoteltwinring-reservation-white',
+        altSubtextvg: 'Reservation'
+      }) %>
+    </div>
+    <div class="l-button u-show-pc">
+      <%- include('/partials/button', {
+        modifier: 'reserve-button',
+        text: 'ホテルツインリンクのご予約はこちら',
+        link: '/hoteltwinring/information/'
+      }) %>
+    </div>
+    <div class="l-button u-show-sp">
+      <%- include('/partials/button', {
+        modifier: 'reserve-button',
+        text: 'ご予約はこちら',
+        link: '/hoteltwinring/information/'
+      }) %>
+    </div>
+    <div class="floating-banner">
+      <!-- <img class="u-show-pc" src="<%- mix('/assets/images/hoteltwinring/tripai-banner.png') -%>" alt="梟">
+      <img class="u-show-sp" src="<%- mix('/assets/images/hoteltwinring/tripai-banner-sp.png') -%>" alt="梟"> -->
+      <!-- AI concierge -->
+      <script>(function(){
+        var d=document;
+        d['__tripai_domain']='trip-ai.jp';
+        d['__tripai_id']='332182';
+        var s='https://trip-ai.jp/trip-ai-banner/js/tripai_banner.js',
+        a=d.createElement('script'), m=d.getElementsByTagName('script')[0];
+        a.async=true,a.src=s,m.parentNode.insertBefore(a,m);})();</script>
+      <!-- AI concierge -->
+    </div>
+  </div>
+  <div class="hotel-reservation-qna-wrap faq-tabs-wrap">
+    <div class="l-heading">
+      <%- include('/partials/heading', {
+        modifier: 'heading-sumika-faq',
+        text: 'よくあるご質問',
+        alt: '',
+        subtextvg: '',
+        altSubtext: ''
+      }) %>
+    </div>
+    <section class="subpage-section subpage-section-carbike" id="">
+      <%- include('/partials/hoteltwinring/faq-tabs', {
+        dataFaqList: getData().data.faqList
+      }) -%>
+    </section>
+  </div>
+</div>

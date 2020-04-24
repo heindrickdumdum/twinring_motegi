@@ -82,6 +82,11 @@ mix
   )
 
   .js(
+    `${srcRelativePath}/assets/js/tabs-faq.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
     `${srcRelativePath}/assets/js/program-details.js`,
     `${distRelativePath}/assets/js`,
   )

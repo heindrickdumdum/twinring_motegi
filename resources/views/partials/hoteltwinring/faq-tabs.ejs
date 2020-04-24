@@ -16,22 +16,17 @@ if (typeof modifier === 'undefined'){
                 <input type="radio" id="tab-<%- item.tabId %>" name="tab-tabId" class="tab-tabId" value="<%- item.tabId %>" <%- checked %>>
                 <label class="lblTab" for="tab-<%- item.tabId %>"><%- item.tabName %></label>
               </li>
-            <% arrTabs.push(item.tabId) %>
+            <% arrTabs.push([item.tabId,item.tabName]) %>
         <% } %>
       <% }) %>
     </ol>
   </div>
 
-  <div class="l-section-title u-show-sp program-dropdown-title">
-    <%- include('/partials/svg', {
-      'name': 'program-dropdown-title'
-    }) %>
-  </div>
   <div class="custom-select u-show-sp">
     <div id="customSelect" class="select-selected"><%- arrTabs[0] %>月</div>
     <div id="customSelectItems" class="select-items select-hide">
       <% arrTabs.forEach( item => { %>
-        <div class="option" value="<%- item %>"><%- item %>月</div>
+        <div class="option" value="<%- item[0] %>"><%- item[1] %></div>
       <% }) %>
     </div>
   </div>

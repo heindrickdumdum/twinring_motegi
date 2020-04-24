@@ -154,6 +154,20 @@
   }
 }
 
+.slider-recommendation-restaurant {//recommended restaurant
+  .slider-wrapper {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-left: -280px !important;
+    }
+  }
+
+  .slider-item {
+    @include min-screen($breakpoint-mobile + 1) {
+      max-width: 468px !important;
+    }
+  }
+}
+
 .slider-pickup,
 .slider-recommendation {
   opacity: 1;

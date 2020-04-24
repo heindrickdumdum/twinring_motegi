@@ -1,0 +1,33 @@
+<section class="recommended-restaurant">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      modifier: 'heading-hellowoods heading-other-restaurant',
+      heading_level: 1,
+      text: 'Restaurant',
+      subtextvg: 'recommended-restaurant-top-title',
+      altSubtextvg: 'その他のレストラン'
+    }) %>
+  </div>
+
+  <div class="swiper-container slider-recommendation slider-recommendation-restaurant slider js-slider-recommended-restaurant">
+    <ul class="swiper-wrapper slider-wrapper">
+      <% getData().data.restaurantRecommended.forEach(item => { %>
+      <li class="swiper-slide slider-item">
+          <div class="top-slider-image">
+            <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+          </div>
+          <a href="<%- item.link -%>">
+            <span class="top-slider-text">
+              <h2 class="subpage-title">
+                <span>
+                  <%- item.title -%>
+                </span>
+              </h2>
+            </span>
+          </a>
+      </li>
+      <% } ) %>
+    </ul>
+    <!-- <div class="swiper-pagination"></div> -->
+  </div>
+</section>

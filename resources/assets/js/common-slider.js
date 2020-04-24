@@ -60,6 +60,34 @@ slider({
   }
 })
 
+// recommended restaurant slide
+slider({
+  id: 'recommendedRestaurantSlider', // REQUIRED
+  target: '.js-slider-recommended-restaurant',// REQUIRED
+
+  options: {
+    speed: 1500,
+    slidesPerView: 'auto',
+    variableWidth: true,
+    spaceBetween: 43,
+    centeredSlides: false,
+    initialSlide: 1,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+
+    breakpoints: {
+      749: {
+        slidesPerView: 'auto',
+        spaceBetween: 25,
+        centeredSlides: true
+      }
+    }
+  }
+})
+
 // SUMIKA , ITADAKI, AND DOKIDOKI BOTTOM SLIDER
 // slider({
 //   id: 'commonSliderBottom', // REQUIRED

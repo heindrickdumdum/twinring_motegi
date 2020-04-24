@@ -39,6 +39,15 @@
     </div>
   </div>
   <div class="hotel-reservation-qna-wrap faq-tabs-wrap">
+    <div class="l-heading">
+      <%- include('/partials/heading', {
+        modifier: 'heading-sumika-faq',
+        text: 'よくあるご質問',
+        alt: '',
+        subtextvg: '',
+        altSubtext: ''
+      }) %>
+    </div>
     <section class="subpage-section subpage-section-carbike" id="">
       <%- include('/partials/hoteltwinring/faq-tabs', {
         dataFaqList: getData().data.faqList

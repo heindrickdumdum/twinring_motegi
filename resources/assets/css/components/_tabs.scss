@@ -15,11 +15,33 @@
     background-image: url('../images/program/underline.png');
     bottom: 0;
   }
+
+  &.tabs-faq {
+    .lblTab {
+      font-size: 12px;
+      height: 60px;
+      line-height: 15px;
+      padding: 10px;
+    }
+
+    [name="tab-tabId"] {  
+      &:checked ~ .lblTab {
+        font-size: 12px;
+        height: 80px;
+        line-height: 15px;
+        padding: 10px;
+      }
+    }
+  }
 }
 
 .tab {
   width: 100%;
   margin-right: 20px;
+
+  &.tab-faq {
+    margin-right: 10px;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -66,7 +88,16 @@
 @for $i from 1 through 12 {
   [data-tab="#{$i}"] .program-item[data-month="#{$i}"] {display: block;}
 }
-
+ 
+.faq-item {
+  display:none;
+  &>div {
+    width: auto;
+  }
+}
+@for $i from 1 through 12 {
+  [data-tab="#{$i}"] .faq-item[data-faqid="#{$i}"] {display: block;}
+}
 
 .custom-select {
   background-color: #4fae32;

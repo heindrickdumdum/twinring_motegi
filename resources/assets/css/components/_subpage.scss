@@ -129,6 +129,16 @@
 .subpage-section-otherroom {//hotel granroom/familyroom
   position: relative;
 
+  > * {//subpage inner
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 10px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 56px !important;
+    }
+  }
+
   &:before {
     position: absolute;
     content: '';

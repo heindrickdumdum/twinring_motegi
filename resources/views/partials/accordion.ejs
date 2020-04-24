@@ -1,13 +1,18 @@
 
-<% if(dataAccordion) { %>
+<% if(dataAccordion) { 
+    if (typeof dataHeading === 'undefined'){
+      var dataHeading = 'FAQ';
+      var dataSVG = 'faq-title';
+    }
+  %>
   <div class="l-container">
     <div class="faq-inner">
       <div class="l-heading">
         <%- include('/partials/heading', {
           modifier: 'heading-sumika-faq',
-          text: 'FAQ',
+          text: dataHeading,
           alt: 'faq',
-          subtextvg: 'faq-title',
+          subtextvg: dataSVG,
           altSubtext: ''
         }) %>
       </div>

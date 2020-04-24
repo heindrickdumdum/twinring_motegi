@@ -106,6 +106,13 @@
       }
     }
 
+    &.faq-tabs-wrap {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+
     @include max-screen($breakpoint-mobile) {
       padding-top: 40px;
       padding-bottom: 40px;

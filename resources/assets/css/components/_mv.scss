@@ -516,6 +516,11 @@
         max-width: 600px;
         height: 80px;
         fill: $color-white;
+
+        @include max-screen ($breakpoint-mobile) {
+          height: 55px;
+          width: 100%;
+        }
       }
     }
 
@@ -995,17 +1000,16 @@
 
 .mv-tsubasa,
 .mv-musasabi {
-  margin-bottom: 80px ;
+  margin-bottom: 80px;
   position: relative;
   .mv-heading {
     bottom: 5px;
 
     @include max-screen($breakpoint-mobile) {
-      top: 50%;
+      
       left: 0;
       right: 0;
       padding: 30px;
-      margin-bottom: 20px ;
     }
   }
 
@@ -1068,7 +1072,7 @@
     bottom: -60px;
 
     @include max-screen($breakpoint-mobile) {
-      background-image: url(../images/musasabi/mv-logo.png);
+      background-image: url(../images/musasabi/mv-logo-sp.png);
     }
   }
 }
@@ -1382,6 +1386,7 @@
 
 .mv-tsubasa {
   @include max-screen ($breakpoint-mobile) {
+    top: 50%;
     max-height: 265px;
 
     .mv-image {
@@ -1403,7 +1408,7 @@
     .mv-logo-musasabi {
       display: block;
       max-width: 130px;
-      bottom: -160px;
+      bottom: -140px;
       right: 10px;
     }
   }

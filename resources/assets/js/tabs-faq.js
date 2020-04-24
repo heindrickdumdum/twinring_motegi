@@ -20,7 +20,7 @@ function tabsFaq(){
   var o;
   for (o = 0; o < optionSP.length; o++) {
     optionSP[o].addEventListener('click',function(){
-      tabSPselect.innerText = this.getAttribute('value')+"月";
+      tabSPselect.innerText = this.innerText;
       document.getElementById('faq-list').setAttribute("data-tab", this.getAttribute('value'));
       document.getElementById('customSelect').classList.toggle('open');
       document.getElementById('customSelectItems').classList.toggle('select-hide');

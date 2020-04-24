@@ -13,18 +13,18 @@
     <ul class="swiper-wrapper slider-wrapper">
       <% getData().data.restaurantRecommended.forEach(item => { %>
       <li class="swiper-slide slider-item">
+        <a href="<%- item.link -%>">
           <div class="top-slider-image">
             <img src="<%- item.src -%>" alt="<%- item.alt -%>">
           </div>
-          <a href="<%- item.link -%>">
-            <span class="top-slider-text">
-              <h2 class="subpage-title">
-                <span>
-                  <%- item.title -%>
-                </span>
-              </h2>
-            </span>
-          </a>
+          <span class="top-slider-text">
+            <h2 class="subpage-title">
+              <span>
+                <%- item.title -%>
+              </span>
+            </h2>
+          </span>
+        </a>
       </li>
       <% } ) %>
     </ul>

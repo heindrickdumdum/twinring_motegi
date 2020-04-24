@@ -329,6 +329,22 @@
   }
 }
 
+.heading-granturismo {//granturismo page
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 948px;
+      height: 128px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: auto;
+      height: 260px;
+      margin-left: -20px !important;
+      margin-right: -20px !important;
+    }
+  }
+}
+
 .heading-other-restaurant {//other restaurant section
   .heading-subtext {
     @include min-screen($breakpoint-mobile + 1) {

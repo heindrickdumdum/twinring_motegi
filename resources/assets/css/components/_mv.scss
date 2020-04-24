@@ -243,6 +243,28 @@
     left: 15px;
   }
 
+  &.granturismo-mv-heading {//granturismo page
+    bottom: 40px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -5px !important;
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 639px !important;
+        height: 56px !important;
+        margin-top: 20px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 273px !important;
+        height: 66px !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
   &.oak-mv-heading {//oak page
     bottom: 40px !important;
 
@@ -369,9 +391,59 @@
   }
 
   &.reservation-mv-heading {
+    .heading-subtext {
+      left: 0;
+
+      @include max-screen ($breakpoint-mobile) {
+        top: 10px;
+        transform: none;
+      }
+      * {
+        width: 300px !important;
+
+        @include max-screen ($breakpoint-mobile) {
+           // sass-lint:disable-block no-important    
+          width: 207px !important;
+        }
+      }
+    }
+
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important    
       padding: 15px 20px !important;
+    }
+  }
+
+  &.donguri-mv-heading {
+    .heading-text {
+      @include max-screen ($breakpoint-mobile) {
+        letter-spacing: 3px;
+        word-spacing: -1px;    
+      }
+    }
+    .heading-subtext {
+      // sass-lint:disable-block no-important    
+      max-width: 595px !important; 
+      height: 99px !important;
+      width: 241px !important;
+
+      top: -6px;
+      left: -10px;
+      @include min-screen ($breakpoint-mobile + 1) {
+        // sass-lint:disable-block no-important    
+        height: 100px !important;
+        // sass-lint:disable-block no-important    
+        width: 100% !important;
+        width: 237px;
+        left: -6px;
+        top: 6px;
+        
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      // sass-lint:disable-block no-important   
+      bottom: -22px !important;
     }
   }
 
@@ -421,6 +493,11 @@
         max-width: 600px;
         height: 80px;
         fill: $color-white;
+
+        @include max-screen ($breakpoint-mobile) {
+          height: 55px;
+          width: 100%;
+        }
       }
     }
 
@@ -442,6 +519,8 @@
       }
     }
   }
+
+  
 
   span {
     display: block;
@@ -904,7 +983,7 @@
     bottom: 5px;
 
     @include max-screen($breakpoint-mobile) {
-      top: 50%;
+      
       left: 0;
       right: 0;
       padding: 30px;
@@ -1284,6 +1363,7 @@
 
 .mv-tsubasa {
   @include max-screen ($breakpoint-mobile) {
+    top: 50%;
     max-height: 265px;
 
     .mv-image {

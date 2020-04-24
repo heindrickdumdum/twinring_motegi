@@ -109,7 +109,9 @@
       </div>
 
       <!-- restaurant menu -->
-      <%- include('/partials/restaurant/section-menu') -%>
+      <%- include('/partials/restaurant/section-menu', {
+        data: getData().data.oakMenu
+      }) -%>
 
       <div class="l-section oak-button">
         <p class="u-show-pc">

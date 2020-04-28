@@ -1,0 +1,14 @@
+<% if (typeof texts === 'undefined') {
+  var texts = '';
+}
+
+var newTab = newTab === true ? ' target="_blank"' : '';
+%>
+
+<a class="button <%- modifier %>" href="<%- link %>" <%- newTab %>><%- text %>
+<i class="button-icon">
+  <%- include('/partials/svg', {
+    name: 'arrow-white'
+  }) %>
+</i>
+</a>

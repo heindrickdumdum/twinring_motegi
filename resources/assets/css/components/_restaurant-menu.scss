@@ -1,4 +1,176 @@
+.dotted-bg {//rocco
+  background-image: url(/assets/images/rocco/dotted-bg.png);
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: 50%;
+}
+
+.restaurant-drink-menu {//rocco
+  .subpage-inner {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 140px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 70px;
+    }
+  }
+}
+
+.menu-drink-container {//rocco
+  display: flex;
+  justify-content: space-between;
+
+  .menu-drink-box {
+    width: 433px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+    }
+
+    &:nth-child(1) {
+      @include max-screen($breakpoint-mobile) {
+        padding-top: 43px;
+      }
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+}
+
+.menu-drink-list {//rocco
+
+  .drink-menu-item {
+    border-bottom: 1px solid #d8cdcd;
+    
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 55px;
+      padding-bottom: 8px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 20px;
+      padding-bottom: 8px;
+    }
+  }
+
+  .drink-menu2-item {
+    border-bottom: 0 solid #d8cdcd;
+
+    &:first-child {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 55px;
+        padding-bottom: 0px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 28px;
+        padding-bottom: 0px;
+      }
+    }
+    
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 21px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 28px;
+    }
+  }
+
+  .drink-menu-title {
+    font-size: 20px;
+    line-height: 2;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-hiragino;
+
+    @include max-screen($breakpoint-mobile) {
+      * {
+        &:first-child {
+          font-size: 13px;
+        }
+
+        &:last-child {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .drink-menu2-title {
+    font-size: 18px;
+  }
+
+  .drink-menu-subtext {
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: $font-hiragino;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 13px;
+    }
+  }
+
+  .drink-menu2-subtext {
+    font-size: 18px;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 13px;
+    }
+  }
+
+  .drink-menu-desc {
+    font-size: 15px;
+    line-height: 2;    
+    letter-spacing: 0.16em;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 11px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 11px;
+      font-size: 12px;
+    }
+  }
+}
+
 .restaurant-menu {
+
+  .restaurant-menu-img {//rocco
+    margin-bottom: 19px;
+
+    img {
+      width: 63px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 43px;
+      }
+    }
+  }
+
+  .menu-gelato {//rocco
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 112px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 56px;
+    }
+  }
 
   .menu-container {
     display: flex;
@@ -16,6 +188,20 @@
       display: block;
       width: 100%;
       margin-top: 35px;
+    }
+
+    &-gelato {//rocco
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 42px;
+        padding-right: 42px;
+        margin-top: -35px;
+      }
+
+      .menu-item {
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 34px !important;
+        }
+      }
     }
 
     .menu-item {
@@ -42,6 +228,15 @@
           height: 183px;
           margin-bottom: 22px;
         }
+
+        &-gelato {//gelato
+          background-size: contain;
+          height: 343px;
+
+          @include max-screen($breakpoint-mobile) {
+            height: 171px;
+          }
+        }
       }
 
       .menu-title {
@@ -56,6 +251,56 @@
           line-height: 1.497;
           letter-spacing: 0.16em;
           margin-bottom: 13px;
+        }
+
+        &-gelato {//gelato
+          margin-bottom: 0px;
+          line-height: normal;
+          font-family: $font-hiragino;
+          display: flex;
+          align-items: center;
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 13px;
+          }
+
+          .tag {
+            font-size: 13.5px;
+            color: $color-white;
+            -webkit-text-fill-color: $color-white;
+            -moz-text-fill-color: $color-white;
+            -ms-text-fill-color: $color-white;
+            padding: 4px 8px;         
+            letter-spacing: 0.025em;
+            margin-left: 10px;
+
+            .is-ie & {//ie modifier
+              color: $color-white;
+              -webkit-text-fill-color: $color-white;
+              -moz-text-fill-color: $color-white;
+              -ms-text-fill-color: $color-white;
+            }
+
+            @include max-screen($breakpoint-mobile) {
+              font-size: 10px;
+            }
+          }
+
+          .tag-new {
+            background: #e8328a;
+
+            .is-ie & {//ie modifier
+              background: #e8328a;
+            }
+          }
+
+          .tag-limited {
+            background: #32bfe8;
+
+            .is-ie & {//ie modifier
+              background: #32bfe8;
+            }
+          }
         }
 
         .price {
@@ -81,6 +326,35 @@
             -moz-text-fill-color: $color-gossamer;
             -ms-text-fill-color: $color-gossamer;
           }
+
+          &.title {//gelato
+            font-size: 20px;
+            line-height: 2;     
+            letter-spacing: 0.12em;
+            background: none;
+            color: $color-black;
+            -webkit-text-fill-color: $color-black;
+            -moz-text-fill-color: $color-black;
+            -ms-text-fill-color: $color-black;
+
+            @include max-screen($breakpoint-mobile) {
+              font-size: 13px;
+            }
+          }
+
+          &.price {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .menu-subtext {
+        font-size: 15px;
+        line-height: normal;
+        letter-spacing: 0.12em; 
+
+        @include max-screen($breakpoint-mobile) {
+          font-size: 11px;
         }
       }
 
@@ -93,7 +367,132 @@
           font-size: 12px;
           line-height: 2;
         }
+
+        &-gelato {//gelato
+          border-top: 1px solid #d8cdcd;
+          margin-top: 10px;
+          padding-top: 15px;
+        }
       }
+    }
+  }
+}
+
+.restaurant-sub-menu {//rocco sub menu
+  .sub-menu-container {
+    background-color: #f8f7e7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  .sub-menu-list {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 57px;
+    padding-right: 57px;
+    flex-wrap: wrap;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-left: 19px;
+      padding-right: 19px;
+    }
+  }
+
+  .sub-menu-image {
+    img {
+      height: 91px;
+    }
+  }
+
+  .sub-menu-item {
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 30px !important;
+      width: 100%;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+    
+    &:nth-child(1) {
+      margin-bottom: 20px;
+
+      @include max-screen($breakpoint-mobile) {
+        order: 1;
+      }
+    }
+
+    &:nth-child(2) {
+      @include max-screen($breakpoint-mobile) {
+        order: 3;
+        margin-bottom: 0 !important;
+      }
+    }
+
+    &:nth-child(3) {
+      .sub-menu-image {
+        img {
+          width: 139px;
+          height: auto;
+        }
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        order: 2;
+      }
+    }
+  }
+  
+  .menu-item-container {
+    display: flex;
+    align-items: center;
+    font-family: $font-hiragino;
+
+    @include max-screen($breakpoint-mobile) {
+      justify-content: space-between;
+    }
+  }
+
+  .sub-menu-title {
+    margin-left: 10px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-left: 0px;
+
+    }
+    
+    .main-text {
+      font-size: 20px;
+      display: block;  
+      
+      @include max-screen($breakpoint-mobile) {
+        font-size: 13px;
+      }
+    }
+
+    .sub-text {
+      font-size: 16px;  
+      display: block;    
+      
+      @include max-screen($breakpoint-mobile) {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .sub-menu-price {
+    font-size: 18px;
+    margin-left: 35px;  
+
+    @include max-screen($breakpoint-mobile) {
+      margin-left: 0px;
+      font-size: 12px;
     }
   }
 }

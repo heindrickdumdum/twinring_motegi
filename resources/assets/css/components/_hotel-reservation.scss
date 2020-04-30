@@ -48,6 +48,10 @@
       background-color: $color-white;
       height: 95px;
 
+      @at-root .camp-wrapper & {
+        background-color: rgba($color: $color-white, $alpha: 0.8);
+      }
+
       @include max-screen($breakpoint-mobile) {
         height: 70px;
         font-size: 16px;

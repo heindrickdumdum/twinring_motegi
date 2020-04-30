@@ -82,6 +82,29 @@
     margin-top: 20px;
     height: 36px;
 
+    @at-root .banner-info-camp & {//f-glamping camp page
+      color: $color-black;
+      max-width: 100% !important;
+      height: auto !important;
+
+      margin: {
+        top: 10px;
+        bottom: 10px;
+      }
+
+      font: {
+        family: 'Noto Serif JP', serif;
+      }
+
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 36px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 26px;
+      }
+    }
+
     &.heading-text-default {
       font-family: none;
       background: none;
@@ -325,6 +348,40 @@
       width: 100%;
       left: 50%;
       transform: translateX(-48%);
+    }
+  }
+}
+
+.section-camp-title {//f-glamping campsite page
+  .heading-text {
+    font-family: 'Noto Serif JP', serif;
+    background: none;
+    color: inherit;
+    -webkit-text-fill-color: inherit;
+    -ms-text-fill-color: inherit;
+    -moz-text-fill-color: inherit;
+    font-size: 36px;
+    font-weight: 300;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 24px;
+    }
+  }
+}
+
+.main-camp-title {//f-glamping campsite page
+  .heading-text {
+    font-family: 'Noto Serif JP', serif;
+    background: none;
+    color: inherit;
+    -webkit-text-fill-color: inherit;
+    -ms-text-fill-color: inherit;
+    -moz-text-fill-color: inherit;
+    font-weight: bold;
+    font-size: 44px;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 30px;
     }
   }
 }

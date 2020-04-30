@@ -243,6 +243,21 @@
     left: 15px;
   }
 
+  &-camp {//f-glamping camp page
+    .heading-subtext {
+      font-size: 42px;
+      color: $color-white;
+      font-family: 'Noto Serif JP', serif;
+      max-width: 100% !important;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 26px;
+        width: auto !important;
+        height: auto !important;
+      }
+    }
+  }
+
   &.rocco-mv-heading {//rocco page
     bottom: 40px !important;
 

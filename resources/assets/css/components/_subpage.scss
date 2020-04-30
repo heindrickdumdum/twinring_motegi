@@ -72,6 +72,13 @@
     }
   }
 
+  .link-border-bottom {
+    color: #333333;
+    border-bottom: 2px solid #333333;
+    padding-bottom: 3px;
+    transition: all 0.5s;
+  }
+
   &.subpage-itadaki {
     &::before {
       background-image: url('../images/itadaki/subpage-bg.png');
@@ -238,6 +245,42 @@
     text-align: left;
     letter-spacing: 0.16em;
     margin-bottom: 33px;
+
+    @at-root .section-camp {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 100px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 50px;
+      }
+
+      .subpage-section-usagefee {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-top: 70px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          margin-top: 50px;
+        }
+      }
+    }
+    
+    @at-root .section-camp & {//f-glamping camp page
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 24px !important;
+        margin-bottom: 99px;
+
+        text: {
+          align: center;
+        }
+      }
+      
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 30px;
+      }
+    }
 
     @include min-screen($breakpoint-mobile + 1) {
       font-size: 15px;

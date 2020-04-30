@@ -79,6 +79,10 @@
   .hotel-reservation-qna-wrap {
     background-color: #f2f2f2;
 
+    @at-root .camp-wrapper & {//f-glamping camp page
+      display: none;
+    }
+
 
     .hotel-reservation-ctas {
       display: flex;

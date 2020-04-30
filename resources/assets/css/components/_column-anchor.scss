@@ -8,6 +8,38 @@
     }
   }
 
+  &-camp {//f-glamping camp
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 50px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 30px;
+    }
+
+    .link-container {
+      max-width: 840px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      flex-wrap: wrap;
+
+      .link-item {
+        flex-basis: 33.33% !important;
+        margin-bottom: 70px;
+
+        @at-root & {
+          &:nth-child(4),
+          &:nth-child(5) {
+            @include max-screen($breakpoint-mobile) {
+              margin-bottom: 20px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
   &-labo { //forest lab
     .link-container {
       max-width: 600px;

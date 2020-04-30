@@ -39,7 +39,8 @@
   'oak',
   'granTurismo',
   'rocco',
-  'donguri'
+  'donguri',
+  'bbq'
   ]
 %>
   
@@ -188,6 +189,10 @@
 
   <% if(pageId == 'foodsm') { %>
     <script src="<%= mix('/assets/js/restaurant-slider.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'bbq') { %>
+    <script src="<%= mix('/assets/js/bbq.js') %>" async></script>
   <% } %>
 
 <script type="text/javascript">

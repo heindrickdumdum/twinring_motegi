@@ -7,6 +7,30 @@
   font-weight: 700;
   text-align: left;
 
+  @at-root .table-wrap {
+    p {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @at-root .section-camp & {//f-glamping camp page
+    margin-bottom: 26px;
+
+    &:last-child {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 0px;
+      }
+    }
+
+    a {
+      text: {
+        decoration: none;
+      }
+    }
+  }
+
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 15px;
   }

@@ -52,6 +52,28 @@ export default class galleryLabo {
         swiper: galleryThumb2
       }
     })
+
+    let galleryThumb3 = new Swiper('.js-gallery-thumb3', {
+      spaceBetween: 10,
+      variableWidth: true,
+      slidesPerView: 'auto',
+      // centeredSlides: true,
+      allowTouchMove: false,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      noSwiping: true
+    })
+
+    new Swiper('.js-gallery3', {
+      speed: 2000,
+      slidesPerView: 1,
+      fadeEffect: { crossFade: true },
+      effect: 'fade',
+      thumbs: {
+        swiper: galleryThumb3
+      }
+    })
   }
 }
 

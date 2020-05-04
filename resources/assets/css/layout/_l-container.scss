@@ -7,6 +7,15 @@
     width: 100%;
     padding: 0 20px;
   }
+
+  @at-root .camp-wrapper & {
+    &-m {
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+  }
 }
 
 .l-container-kids-attraction {

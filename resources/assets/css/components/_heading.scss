@@ -1598,6 +1598,28 @@
   }
 }
 
+.heading-two-lines {
+  p.heading-subtext {
+    height: auto;
+    width: 600px;
+    max-height: 130px;
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 375px;
+    }
+  }
+}
+
+.heading-one-line {
+  p.heading-subtext {
+    width: 600px;
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 375px;
+    }
+  }
+}
+
 .svg-block {
   p.heading-subtext {
     display: block;

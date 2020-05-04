@@ -585,8 +585,16 @@
   }
 }
 
-.subpage-image-gallery {
+.subpage-image-gallery {// camp page
   margin-bottom: 30px;
+
+  @at-root .camp-wrapper & {
+    small {
+      font-size: 10px;
+      position: relative;
+      top: -20px;
+    }
+  }
 
   &-roomdetails {//hotel granroom
     margin-bottom: 40px;

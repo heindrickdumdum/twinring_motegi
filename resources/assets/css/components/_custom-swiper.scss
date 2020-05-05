@@ -27,34 +27,42 @@
     }
   }
 
-  @at-root .toya-wrapper & {//toya page
-    position: relative;
+  @at-root .toya-wrapper {//toya page
+    .swiper {
+      position: relative;
 
-    .swiper-button {
-      &-prev,
-      &-next {
-        position: absolute;
+      .swiper-button {
+        &-prev,
+        &-next {
+          position: absolute;
+          cursor: pointer;
 
-        svg {
-          height: 113px;
+          svg {
+            width: 60px;
+            height: 113px;
+          }
         }
-      }
 
-      &-prev {
-        left: -25%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+        &-prev {
+          left: -13%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
 
-      &-next {
-        right: -25%;
-        top: 50%;
-        transform: translateY(-50%);
+        &-next {
+          right: -13%;
+          top: 50%;
+          transform: translateY(-50%);
 
-        svg {
-          transform: rotate(180deg);
+          svg {
+            transform: rotate(180deg);
+          }
         }
       }
     }
+  }
+
+  @at-root .toya-wrapper & {//toya page
+    overflow: hidden !important;
   }
 }

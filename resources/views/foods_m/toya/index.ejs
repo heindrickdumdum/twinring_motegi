@@ -266,10 +266,10 @@
 
             <div class="tab-toya">
               <ul class="tab-list">
-                <li class="tab-item js-tab-link" data-tab="spring-menu">
+                <li class="tab-item js-tab-link is-active" data-tab="spring-menu">
                   <span>・春の御献立</span>
                 </li>
-                <li class="tab-item js-tab-link is-active" data-tab="summer-menu">
+                <li class="tab-item js-tab-link " data-tab="summer-menu">
                   <span>・夏の御献立</span>
                 </li>
                 <li class="tab-item js-tab-link" data-tab="autumn-menu">
@@ -280,156 +280,43 @@
                 </li>
               </ul>
               <div class="tab-container">
+                <!-- spring gallery -->
                 <div class="tab-content js-tab-content" id="spring-menu">
                   <div class="menu-gallery">
-                    <div class="swiper-container js-spring-gallery">
-                      <ul class="swiper-wrapper">
-                        <% getData().data.toyaSpringGallery.forEach(item => { %>
-                          <li class="swiper-slide">
-                            <ul class="gallery-list">
-                              <% item.gallery.forEach(elem => { %>
-                                <li class="gallery-item">
-                                  <div class="gallery-image">
-                                    <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
-                                  </div>
-                                </li>
-                              <% }); %>
-                            </ul>
-                          </li>
-                        <% }); %>
-                      </ul>
-
-                      <div class="swiper-button-next">
-                        <i class="caret-right">
-                          <svg>
-                            <use xlink:href="
-                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
-                          </svg>
-                        </i>
-                      </div>
-                      <div class="swiper-button-prev">
-                        <i class="caret-left">
-                          <svg>
-                            <use xlink:href="
-                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
-                          </svg>
-                        </i>
-                      </div>
-                    </div>
+                    <%- include('/partials/section-gallery', {
+                      modifier: 'js-spring-gallery',
+                      toyaGallery: getData().data.toyaSpringGallery
+                    }) -%>
                   </div>
                 </div>
+
+                <!-- summer gallery -->
                 <div class="tab-content js-tab-content" id="summer-menu">
                   <div class="menu-gallery">
-                    <div class="swiper-container js-summer-gallery">
-                      <ul class="swiper-wrapper">
-                        <% getData().data.toyaSummerGallery.forEach(item => { %>
-                          <li class="swiper-slide">
-                            <ul class="gallery-list">
-                              <% item.gallery.forEach(elem => { %>
-                                <li class="gallery-item">
-                                  <div class="gallery-image">
-                                    <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
-                                  </div>
-                                </li>
-                              <% }); %>
-                            </ul>
-                          </li>
-                        <% }); %>
-                      </ul>
-
-                      <div class="swiper-button-next">
-                        <i class="caret-right">
-                          <svg>
-                            <use xlink:href="
-                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
-                          </svg>
-                        </i>
-                      </div>
-                      <div class="swiper-button-prev">
-                        <i class="caret-left">
-                          <svg>
-                            <use xlink:href="
-                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
-                          </svg>
-                        </i>
-                      </div>
-                    </div>
+                    <%- include('/partials/section-gallery', {
+                      modifier: 'js-summer-gallery',
+                      toyaGallery: getData().data.toyaSummerGallery
+                    }) -%>
                   </div>
                 </div>
+
+                <!-- autumn gallery -->
                 <div class="tab-content js-tab-content" id="autumn-menu">
                   <div class="menu-gallery">
-                    <div class="swiper-container js-autumn-gallery">
-                      <ul class="swiper-wrapper">
-                        <% getData().data.toyaAutumnGallery.forEach(item => { %>
-                          <li class="swiper-slide">
-                            <ul class="gallery-list">
-                              <% item.gallery.forEach(elem => { %>
-                                <li class="gallery-item">
-                                  <div class="gallery-image">
-                                    <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
-                                  </div>
-                                </li>
-                              <% }); %>
-                            </ul>
-                          </li>
-                        <% }); %>
-                      </ul>
-
-                      <div class="swiper-button-next">
-                        <i class="caret-right">
-                          <svg>
-                            <use xlink:href="
-                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
-                          </svg>
-                        </i>
-                      </div>
-                      <div class="swiper-button-prev">
-                        <i class="caret-left">
-                          <svg>
-                            <use xlink:href="
-                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
-                          </svg>
-                        </i>
-                      </div>
-                    </div>
+                    <%- include('/partials/section-gallery', {
+                      modifier: 'js-autumn-gallery',
+                      toyaGallery: getData().data.toyaAutumnGallery
+                    }) -%>
                   </div>
                 </div>
+
+                <!-- winter gallery -->
                 <div class="tab-content js-tab-content" id="winter-menu">
                   <div class="menu-gallery">
-                    <div class="swiper-container js-winter-gallery">
-                      <ul class="swiper-wrapper">
-                        <% getData().data.toyaWinterGallery.forEach(item => { %>
-                          <li class="swiper-slide">
-                            <ul class="gallery-list">
-                              <% item.gallery.forEach(elem => { %>
-                                <li class="gallery-item">
-                                  <div class="gallery-image">
-                                    <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
-                                  </div>
-                                </li>
-                              <% }); %>
-                            </ul>
-                          </li>
-                        <% }); %>
-                      </ul>
-
-                      <div class="swiper-button-next">
-                        <i class="caret-right">
-                          <svg>
-                            <use xlink:href="
-                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
-                          </svg>
-                        </i>
-                      </div>
-                      <div class="swiper-button-prev">
-                        <i class="caret-left">
-                          <svg>
-                            <use xlink:href="
-                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
-                          </svg>
-                        </i>
-                      </div>
-                    </div>
+                    <%- include('/partials/section-gallery', {
+                      modifier: 'js-winter-gallery',
+                      toyaGallery: getData().data.toyaWinterGallery
+                    }) -%>
                   </div>
                 </div>
               </div>

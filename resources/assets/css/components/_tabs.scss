@@ -151,9 +151,17 @@
 
 
 .tab-toya {//toya page
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: 140px;
+  }
+
   .tab-list {
     display: flex;
     justify-content: center;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 56px;
+    }
   }
 
   .tab-item {
@@ -182,6 +190,6 @@
   }
 
   .tab-content {
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 1s ease-in;
   }
 }

@@ -198,4 +198,23 @@
       margin-left: 5px;
     }
   }
+
+  &.download-pdf {
+      width: auto;
+      max-width: 730px;
+      background-color: $color-white;
+      height: 95px;
+      border: 1px solid $color-black;
+  
+      &:before {
+        content: none;
+        display: none;
+      }
+  
+      @include max-screen($breakpoint-mobile) {
+        height: 60px;
+        font-size: 12px;
+        max-width: 345px;
+      }
+  }
 }

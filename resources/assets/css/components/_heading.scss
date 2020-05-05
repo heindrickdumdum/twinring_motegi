@@ -1714,6 +1714,28 @@
   }
 }
 
+.heading-two-lines {
+  p.heading-subtext {
+    height: auto;
+    width: 600px;
+    max-height: 130px;
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 375px;
+    }
+  }
+}
+
+.heading-one-line {
+  p.heading-subtext {
+    width: 600px;
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 375px;
+    }
+  }
+}
+
 .svg-block {
   p.heading-subtext {
     display: block;
@@ -1760,6 +1782,13 @@
         max-width: 150px;
         top: -9px;
       }
+    }
+  }
+
+  &.glamping-morino {
+    p.heading-subtext {
+      max-width: 373px;
+      height: 20px;
     }
   }
 }

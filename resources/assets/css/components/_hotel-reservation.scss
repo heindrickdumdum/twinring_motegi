@@ -17,6 +17,10 @@
     position: relative;
     background-size: cover;
 
+    &.bbq-reservation-wrap {
+      background-image: url(/assets/images/bbq/reservation.png);
+    }
+
     .hoteltwinring-heading-reservation {
       .heading {
         margin-bottom: 20px;

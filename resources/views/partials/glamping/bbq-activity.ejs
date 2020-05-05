@@ -1,0 +1,82 @@
+<ul class="adventure-container adventure-container-hellowoods">
+  <!-- Musasabi -->
+  <li class="adventure-list ">
+    <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/glamping-top/bbq.jpg') %>);">
+    </div>
+
+    <div class="l-adventure-sp-container">
+      <div class="l-adventure hoteltwinring">
+        <div class="l-section-title l-section-title-adventure hellowoods">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'hellowoods-adventure-title hoteltwinring room-gran',
+              text: '',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'glamping-bbq-activity-1'
+            }) %>
+          </div>
+          
+          <div class="adventure-sub-heading"><%- include('/partials/heading', {
+            modifier: '',
+            subtextvg: '',
+          }) %></div>
+        </div>
+        
+        <p class="adventure-content-copy hoteltwinring">
+          地元ならではの食材と、季節の採れたて野菜によるこだわりのBBQ。準備と片付けはスタッフにお<br>任せください。
+        </p>
+
+        <div class="l-button">
+          <%- include('/partials/button', {
+            modifier: 'button-adventure',
+            text: 'もっと見る',
+            link: '/f-glamping/stay/'
+          }) %>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="adventure-list ">
+    <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/glamping-top/star.png') %>);">
+    </div>
+
+    <div class="l-adventure-sp-container">
+      <div class="l-adventure hoteltwinring">
+        <div class="l-section-title l-section-title-adventure hellowoods">
+          
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'hellowoods-adventure-title hoteltwinring room-superior',
+              text: '',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'glamping-bbq-activity-2'
+            }) %>
+          </div>
+          
+          <div class="adventure-sub-heading">
+            <%- include('/partials/heading', {
+              modifier: '',
+              subtextvg: '',
+            }) %>
+          </div>
+
+          
+        </div>
+        
+        <p class="adventure-content-copy hoteltwinring">
+          星のソムリエがナビゲートする星空観望では、都会とはまるで違う満天の星をご覧いただけます。
+        </p>
+
+        <div class="l-button">
+          <%- include('/partials/button', {
+            modifier: 'button-adventure',
+            text: 'もっと見る',
+            link: '/f-glamping/stay/'
+          }) %>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

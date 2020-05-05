@@ -4,6 +4,10 @@
 
   background-color: $color-white;
 
+  @at-root .toya-menu & {
+    background-color: transparent !important;
+  }
+
   &-mobipark {
     background-color: transparent;
   }
@@ -19,6 +23,37 @@
         flex-wrap: wrap;
         height: auto;
         justify-content: center;
+      }
+    }
+  }
+
+  @at-root .toya-wrapper & {//toya page
+    position: relative;
+
+    .swiper-button {
+      &-prev,
+      &-next {
+        position: absolute;
+
+        svg {
+          height: 113px;
+        }
+      }
+
+      &-prev {
+        left: -25%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &-next {
+        right: -25%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        svg {
+          transform: rotate(180deg);
+        }
       }
     }
   }

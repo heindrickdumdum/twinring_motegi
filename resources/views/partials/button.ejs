@@ -2,13 +2,23 @@
     var texts = '';
 }
 
+if (typeof arrowColor === 'undefined') {
+    var arrowColor = '';
+}
+
 var newTab = newTab === true ? ' target="_blank"' : '';
 %>
 
 <a class="button <%- modifier %>" href="<%- link %>" <%- newTab %>><%- text %>
   <i class="button-icon">
+    <% if( arrowColor !== '' ) { %>
+      <%- include('/partials/svg', {
+        name: 'arrow-' + arrowColor
+      }) %>
+    <% } else { %>
     <%- include('/partials/svg', {
       name: 'arrow'
     }) %>
+    <% } %>
   </i>
 </a>

@@ -35,6 +35,12 @@
     position: relative;
   }
 
+  @at-root &.toya-wrapper {//toya page
+    &:before {
+      display: none;
+    }
+  }
+
   &::after {
     background: #dfdfdf;
     content: '';
@@ -123,6 +129,13 @@
   }
 }
 
+.subpage-banner-toya {
+  @include min-screen($breakpoint-mobile + 1) {
+    padding-top: 86px;
+    margin-top: 0;
+  }
+}
+
 .subpage-banner-rocco {//rocco
   @include min-screen($breakpoint-mobile + 1) {
     margin-top: 86px;
@@ -176,6 +189,12 @@
   margin: 0 auto 60px;
   padding: 0 20px;
   width: 100%;
+
+  @at-root .toya-wrapper & {//toya page
+    margin: {
+      bottom: 0px;
+    }
+  }
 
   .subpage-hotel & {//hotel granroom
     z-index: $z-min2;
@@ -336,6 +355,24 @@
 }
 
 .subpage-inner-wrap {
+  .toya-menu {//toya page
+    .toya-text {
+      color: $color-white;
+      text-align: center;
+      margin-top: 44px;
+    }
+  }
+
+  .toya-bg-mountain {//toya page
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-bottom: 102px;
+    }
+  }
+
   .subpage-craft & {
     &::before {
       @include min-screen($breakpoint-mobile + 1) {

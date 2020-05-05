@@ -352,6 +352,65 @@
   }
 }
 
+.heading-menu-toya {//toya page
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: {
+      top: 148px;
+    };  
+  }
+
+  .heading {
+    margin: {
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  .heading-text {
+    background: none;
+    color: $color-white;
+    -webkit-text-fill-color: $color-white;
+    -moz-text-fill-color: $color-white;
+    -ms-text-fill-color: $color-white;
+  }
+
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 35px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      height: 25px !important;
+    }
+  }
+}
+
+.heading-food {//toya page
+  .heading {
+    margin: {
+      top: 0 !important;
+      bottom: 0 !important
+    }
+  }
+
+  .heading-subtext {
+    width: 100%;
+
+    svg {
+      display: block;
+    }
+  }
+}
+
+.heading-main-toya {//toya page
+  .heading-subtext { 
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 306px;
+      width: 832px;
+    }
+  }
+}
+
 .section-camp-title {//f-glamping campsite page
   .heading-text {
     font-family: 'Noto Serif JP', serif;

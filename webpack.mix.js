@@ -91,6 +91,11 @@ mix
     `${distRelativePath}/assets/js`,
   )
 
+  .js(
+    `${srcRelativePath}/assets/js/toya.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
   .eslint()
   .sass(
     `${srcRelativePath}/assets/css/header.scss`,

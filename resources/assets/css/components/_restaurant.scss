@@ -198,6 +198,23 @@
     height: 95px;
     border: 1px solid $color-black;
 
+    @at-root &.toya-menu-button {//toya page
+      border-color: $color-white;
+      color: $color-white;
+      background-color: transparent;
+    }
+
+    @at-root &.toya-button {//toya page
+      border-color: #a38737;
+      color: #a38737;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        margin: {
+          top: 102px;
+        }
+      }
+    }
+
     &:before {
       content: none;
       display: none;

@@ -16,6 +16,10 @@
     background: url(#{$image-path}mv-curve.png) no-repeat center top;
     background-size: cover;
 
+    @at-root .toya-wrapper & {//toya page
+      background-image: url(#{$image-path}mv-curve-black.png) !important;
+    }
+
     @include max-screen($breakpoint-mobile) {
       bottom: -33px;
       height: 50px;
@@ -270,13 +274,22 @@
         max-width: 740px !important;
         height: 58px !important;
         margin-top: 20px !important;
-        
       }
 
       @include max-screen($breakpoint-mobile) {
         width: 230px !important;
         height: 55px !important;
         margin-top: 10px !important;
+      }
+      
+      @at-root .toya-wrapper & {//toya page
+        @include min-screen($breakpoint-mobile + 1) {
+          max-width: 383px !important;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          max-width: 183px !important;
+        }
       }
     }
   }

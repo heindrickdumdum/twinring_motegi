@@ -148,3 +148,40 @@
   display: none;
 }
 
+
+
+.tab-toya {//toya page
+  .tab-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tab-item {
+    width: 25px;
+    font-size: 24px;
+    font-family: serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: center;  
+    font-weight: bold;  
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &.is-active {
+      color: #422603;
+    }
+
+    &:hover {
+      color: #422603;
+    }
+  }
+
+  .tab-content {
+    transition: opacity 0.3s ease-in-out;
+  }
+}

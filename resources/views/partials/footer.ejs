@@ -39,6 +39,7 @@
   'oak',
   'granTurismo',
   'rocco',
+  'toya',
   'donguri',
   'camp',
   'stay'
@@ -164,7 +165,7 @@
     <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'labo' || pageId == "nozominoyu" || pageId == 'stay') { %>
+  <% if(pageId == 'labo' || pageId == "nozominoyu" || pageId == 'stay' || pageId == 'toya') { %>
     <script src="<%= mix('/assets/js/labo.js') %>" async></script>
   <% } %>
 
@@ -190,6 +191,10 @@
 
   <% if(pageId == 'foodsm') { %>
     <script src="<%= mix('/assets/js/restaurant-slider.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'toya') { %>
+    <script src="<%= mix('/assets/js/toya.js') %>" async></script>
   <% } %>
 
 <script type="text/javascript">

@@ -41,7 +41,37 @@
     }
   }
 
-  &.table-rocco {
+  &.table-toya {//toya page
+    background-color: #000000;
+
+    @at-root & {
+      .link {
+        color: $color-white;
+      }
+
+      .table-head {
+        background-color: #312911;
+        color: $color-white;
+        border-color: #987e33;
+
+        &:first-child {
+          border-left: 0px solid;
+        }
+      }
+
+      .table-col {
+       color: $color-white;
+       text-align: left;
+       padding: {
+        left: 54px;
+       }
+       border-right: 0px solid;
+       border-color: #987e33;
+      }
+    }
+  }
+
+  &.table-rocco {//rocco page
     .link {
       color: #00a040;
     }

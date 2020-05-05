@@ -1,0 +1,453 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'toya';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-restaurant restaurant-wrapper toya-wrapper">
+    <div class="mv mv-restaurant mv-subpage-restaurant">
+      <div class="mv-buttons">
+        <ul class="mv-buttons-list">
+          <li class="mv-buttons-item">
+            <a class="mv-buttons-link" href="/foods_m/">
+              <span>ご予約</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/toya/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/toya/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading rocco-mv-heading u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Japanese Dining Toya',
+            subtextvg: 'toya-top-title',
+            altSubtextvg: '里山懐石 登谷'
+          }) %>
+        </div>
+
+        <div class="u-show-pc mv-today mv-logo mv-granroom-logo" style="background-image: url(<%= mix('/assets/images/toya/mv-logo.png') %>);">
+          <div class="mv-l-inner">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner-wrap">
+
+        <!-- top content -->
+        <div class="bg-black toya-bg-mountain" style="background-image: url(<%= mix('/assets/images/toya/bg-mountain.png') %>);">
+          <div class="subpage-inner">
+
+            <div class="subpage-banner subpage-banner-toya">
+              <div class="subpage-banner-inner">
+                <img class="" src="<%= mix('/assets/images/toya/subpage-banner.jpg') %>" alt="森のジェラテリア　ROCCO">
+              </div>
+            </div>
+            
+            <div class="l-section-title u-show-pc">
+              <%- include('/partials/heading', {
+                modifier: 'heading-main-toya',
+                subtextvg: 'toya-main-title',
+                altSubtextvg: `茂木町や近隣の
+                              旬な食材を活用し、
+                              素材の持ち味を生かし
+                              一品一品丁寧に仕上げた
+                              里山ならではの
+                              “滋味”を
+                              ご堪能いただける料理で
+                              おもてなしいたします。
+
+
+                              茂木町や近隣の
+                              旬な食材を活用し、
+                              素材の持ち味を生かし
+                              一品一品丁寧に仕上げた
+                              里山ならではの
+                              “滋味”を
+                              ご堪能いただける料理で
+                              おもてなしいたします。`
+              }) -%>
+            </div>
+            
+            <div class="l-section-title u-show-sp">
+              <%- include('/partials/heading', {
+                modifier: 'heading-main-toya',
+                subtextvg: 'toya-main-title-sp',
+                altSubtextvg: `茂木町や近隣の
+                              旬な食材を活用し、
+                              素材の持ち味を生かし
+                              一品一品丁寧に仕上げた
+                              里山ならではの
+                              “滋味”を
+                              ご堪能いただける料理で
+                              おもてなしいたします。
+
+
+                              茂木町や近隣の
+                              旬な食材を活用し、
+                              素材の持ち味を生かし
+                              一品一品丁寧に仕上げた
+                              里山ならではの
+                              “滋味”を
+                              ご堪能いただける料理で
+                              おもてなしいたします。`
+              }) -%>
+            </div>
+          </div>
+
+          <div class="food">
+            <div class="subpage-inner">
+              <ul class="food-list">
+                <% getData().data.restaurantToyaFood.forEach(item => { %>
+                  <li class="food-item">
+                    <div class="food-image">
+                      <img src="<%- item.image -%>" alt="<%- item.alt -%>">
+                    </div>
+                    <div class="food-text">
+                      <div class="food-title">
+                        <%- include('/partials/heading', {
+                          modifier: 'heading-food',
+                          subtextvg: item.svgtext,
+                          altSubtextvg: item.alt
+                        }) -%>
+                      </div>
+                      <p class="food-desc">
+                        <%- item.desc -%>
+                      </p>
+                    </div>
+                  </li>
+                <% }); %>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subpage-inner">
+  
+            <table class="table table-solid table-toya">
+              <tbody>
+                <tr class="table-row table-row-solid">
+                  <th class="table-head">営業時間</th>
+                  <td class="table-col">
+                    17: 30&#126;21: 00（最終入店 19: 30 / L.O. 20: 45）<br/>
+                    ※イベント特別営業日は除く
+                  </td>
+                </tr>
+    
+                <tr class="table-row">
+                  <th class="table-head">場所</th>
+                  <td class="table-col">
+                    ホテルツインリンク離れ (<a class="link" href="#">MAP</a>)
+                  </td>
+                </tr>
+    
+                <tr class="table-row">
+                  <th class="table-head">定員</th>
+                  <td class="table-col">
+                    １日３組限定
+                  </td>
+                </tr>
+    
+                <tr class="table-row">
+                  <th class="table-head">座席数</th>
+                  <td class="table-col">
+                    4テーブル22席
+                  </td>
+                </tr>
+    
+                <tr class="table-row">
+                  <th class="table-head">ご予約</th>
+                  <td class="table-col">
+                    ご利用の3日前までに要予約（宿泊者でないお客様もご予約可能）
+                  </td>
+                </tr>
+    
+                <tr class="table-row">
+                  <th class="table-head">お子様メニュー</th>
+                  <td class="table-col">
+                    有 （お子様御膳2,800円 &#183; 幼児御膳1,550円）
+                  </td>
+                </tr>
+    
+                <tr class="table-row table-row-last">
+                  <th class="table-head">個室</th>
+                  <td class="table-col">
+                    無
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="buttton">
+              <%- include('/partials/button', {
+                modifier: 'restaurant-button toya-button',
+                text: '食物アレルギーをお持ちのお客様へ',
+                link: '#',
+                arrowColor: 'yellow'
+              }) -%>
+            </div>
+          </div>
+        </div>
+
+        <!-- toya menu -->
+        <section class="toya-menu">
+          <div class="subpage-inner">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-restaurant-menu heading-menu-toya svg-block',
+                text: 'Menu',
+                subtextvg: 'toya-menu-subtext',
+                altSubtextvg: '御献立'
+              }) %>
+            </div>
+
+            <p class="toya-text">
+              ※食材の入荷状況によりメニューが一部変更になる場合がございます。
+            </p>
+
+            <div class="subpage-image-gallery">
+              <div class="swiper-container slider-gallery js-gallery">
+                <div class="swiper-wrapper">
+                  <% getData().data.restaurantToyaGallery.forEach(item => { %>
+                    <div class="swiper-slide slider-item">
+                      <div class="slider-gallery-img" style="background-image:url(<%- item.image -%>)"></div>
+                    </div>
+                  <% }); %>
+                </div>
+              </div>
+  
+              <div class="swiper-container slider-gallery-thumb js-gallery-thumb">
+                <div class="swiper-wrapper">
+                  <% getData().data.restaurantToyaGallery.forEach(item => { %>
+                    <div class="swiper-slide slider-item">
+                      <div class="slider-gallery-thumb-img" style="background-image:url(<%- item.image -%>)"></div>
+                    </div>
+                  <% }); %>
+                </div>
+              </div>
+            </div>
+
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-toya-menu-course svg-block',
+                subtextvg: 'toya-subtext-course',
+                altSubtextvg: '里山懐石コース'
+              }) -%>
+
+              <%- include('/partials/heading', {
+                modifier: 'heading-toya-menu-course2 svg-block',
+                subtextvg: 'toya-subtext-course2',
+                altSubtextvg: '8,200円'
+              }) -%>
+            </div>
+
+            <p class="toya-text">
+              益子焼の陶器に盛り付けた、春夏秋冬のおまかせコースをご用意いたします。
+            </p>
+            
+            <%- include('/partials/button', {
+              modifier: 'restaurant-button toya-menu-button',
+              text: '御献立一例(PDF)',
+              link: '#',
+              arrowColor: 'white'
+            })-%>
+
+            <div class="tab-toya">
+              <ul class="tab-list">
+                <li class="tab-item js-tab-link" data-tab="spring-menu">
+                  <span>・春の御献立</span>
+                </li>
+                <li class="tab-item js-tab-link is-active" data-tab="summer-menu">
+                  <span>・夏の御献立</span>
+                </li>
+                <li class="tab-item js-tab-link" data-tab="autumn-menu">
+                  <span>・秋の御献立</span>
+                </li>
+                <li class="tab-item js-tab-link" data-tab="winter-menu">
+                  <span>・冬の御献立</span>
+                </li>
+              </ul>
+              <div class="tab-container">
+                <div class="tab-content js-tab-content" id="spring-menu">
+                  <div class="menu-gallery">
+                    <div class="swiper-container js-spring-gallery">
+                      <ul class="swiper-wrapper">
+                        <% getData().data.toyaSpringGallery.forEach(item => { %>
+                          <li class="swiper-slide">
+                            <ul class="gallery-list">
+                              <% item.gallery.forEach(elem => { %>
+                                <li class="gallery-item">
+                                  <div class="gallery-image">
+                                    <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                                  </div>
+                                </li>
+                              <% }); %>
+                            </ul>
+                          </li>
+                        <% }); %>
+                      </ul>
+
+                      <div class="swiper-button-next">
+                        <i class="caret-right">
+                          <svg>
+                            <use xlink:href="
+                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
+                          </svg>
+                        </i>
+                      </div>
+                      <div class="swiper-button-prev">
+                        <i class="caret-left">
+                          <svg>
+                            <use xlink:href="
+                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
+                          </svg>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-content js-tab-content" id="summer-menu">
+                  <div class="menu-gallery">
+                    <div class="swiper-container js-summer-gallery">
+                      <ul class="swiper-wrapper">
+                        <% getData().data.toyaSummerGallery.forEach(item => { %>
+                          <li class="swiper-slide">
+                            <ul class="gallery-list">
+                              <% item.gallery.forEach(elem => { %>
+                                <li class="gallery-item">
+                                  <div class="gallery-image">
+                                    <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                                  </div>
+                                </li>
+                              <% }); %>
+                            </ul>
+                          </li>
+                        <% }); %>
+                      </ul>
+
+                      <div class="swiper-button-next">
+                        <i class="caret-right">
+                          <svg>
+                            <use xlink:href="
+                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
+                          </svg>
+                        </i>
+                      </div>
+                      <div class="swiper-button-prev">
+                        <i class="caret-left">
+                          <svg>
+                            <use xlink:href="
+                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
+                          </svg>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-content js-tab-content" id="autumn-menu">
+                  <div class="menu-gallery">
+                    <div class="swiper-container js-autumn-gallery">
+                      <ul class="swiper-wrapper">
+                        <% getData().data.toyaAutumnGallery.forEach(item => { %>
+                          <li class="swiper-slide">
+                            <ul class="gallery-list">
+                              <% item.gallery.forEach(elem => { %>
+                                <li class="gallery-item">
+                                  <div class="gallery-image">
+                                    <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                                  </div>
+                                </li>
+                              <% }); %>
+                            </ul>
+                          </li>
+                        <% }); %>
+                      </ul>
+
+                      <div class="swiper-button-next">
+                        <i class="caret-right">
+                          <svg>
+                            <use xlink:href="
+                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
+                          </svg>
+                        </i>
+                      </div>
+                      <div class="swiper-button-prev">
+                        <i class="caret-left">
+                          <svg>
+                            <use xlink:href="
+                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
+                          </svg>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-content js-tab-content" id="winter-menu">
+                  <div class="menu-gallery">
+                    <div class="swiper-container js-winter-gallery">
+                      <ul class="swiper-wrapper">
+                        <% getData().data.toyaWinterGallery.forEach(item => { %>
+                          <li class="swiper-slide">
+                            <ul class="gallery-list">
+                              <% item.gallery.forEach(elem => { %>
+                                <li class="gallery-item">
+                                  <div class="gallery-image">
+                                    <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                                  </div>
+                                </li>
+                              <% }); %>
+                            </ul>
+                          </li>
+                        <% }); %>
+                      </ul>
+
+                      <div class="swiper-button-next">
+                        <i class="caret-right">
+                          <svg>
+                            <use xlink:href="
+                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
+                          </svg>
+                        </i>
+                      </div>
+                      <div class="swiper-button-prev">
+                        <i class="caret-left">
+                          <svg>
+                            <use xlink:href="
+                            <%= svgSprite('/assets/svg/sprite.svg', '#sprite-caret') %>"></use>
+                          </svg>
+                        </i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+      </div>
+
+      <!-- other restaurant module-->
+      <%- include('/partials/restaurant/section-other-restaurant') -%>
+      
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsToya
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

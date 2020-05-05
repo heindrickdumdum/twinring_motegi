@@ -68,6 +68,18 @@ if (typeof modifier === 'undefined'){
 
               </h3>
 
+              <p class="period">
+                <span class="period-icon">
+                  <%- include('/partials/svg', {
+                    name: 'calendar',
+                    svgtitle: 'calendar'
+                  }) -%>
+                </span>
+                <span class="period-text">
+                  <%- item.period %>
+                </span>
+              </p>
+
               <ul class="carbike-article-list">
                 <% item.dataList.forEach( dataitem => { %>
                   <li class="carbike-article-list-item program">
@@ -83,10 +95,6 @@ if (typeof modifier === 'undefined'){
                 </div>
               </div>
             </div>
-
-            <p class="period">
-              開催期間：<%- item.period %>
-            </p>
           </article>
         </a>
       </li>

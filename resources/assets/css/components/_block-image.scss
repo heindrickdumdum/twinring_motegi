@@ -91,6 +91,16 @@
         margin-bottom: 4px;
       }
     }
+
+    &-program {//program page
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 20px;
+      }
+
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
   }
 }
 
@@ -102,6 +112,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  &-program {
+    @include max-screen($breakpoint-mobile) {
+      height: 156px !important;
+    }
+  }
 
   &.hoteltwinring-lounge {
     height: auto;

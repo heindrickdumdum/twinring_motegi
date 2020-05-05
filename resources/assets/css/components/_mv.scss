@@ -271,7 +271,7 @@
 
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
-        max-width: 740px !important;
+        max-width: 725px !important;
         height: 58px !important;
         margin-top: 20px !important;
       }

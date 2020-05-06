@@ -51,9 +51,11 @@ if (typeof modifier === 'undefined'){
               <div class="carbike-article-thumb-img"
                   style="background-image: url(<%- item.imgPath %>)">
                 </div>
-              <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %> program-cat">
-                <%- item.category %>
-              </span>
+              <% if(item.category !== '') { %>
+                <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %> program-cat">
+                  <%- item.category %>
+                </span>
+              <% } %>
             </div>
 
             <div class="carbike-article-content">

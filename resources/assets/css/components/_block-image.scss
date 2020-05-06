@@ -3,6 +3,16 @@
   padding-bottom: 126px;
   position: relative;
 
+  &-hellowoods-program {//program experience page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -4px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -12px !important;
+    }
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -19,6 +29,16 @@
 
   &.block-image-hellowoods {
     padding-bottom: 0;
+
+    &-program {//program experience page
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-bottom: 60px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-bottom: 0px !important;
+      }
+    }
   }
 
   @include max-screen($breakpoint-mobile) {

@@ -11,7 +11,7 @@
 
   <div class="swiper-container slider-recommendation slider-recommendation-restaurant slider js-slider-recommended-restaurant">
     <ul class="swiper-wrapper slider-wrapper">
-      <% getData().data.restaurantRecommended.forEach(item => { %>
+      <% getData().data.restaurantOtherMenu.forEach(item => { %>
       <li class="swiper-slide slider-item">
         <a href="<%- item.link -%>">
           <div class="top-slider-image">
@@ -28,7 +28,6 @@
       </li>
       <% } ) %>
     </ul>
-    <!-- <div class="swiper-pagination"></div> -->
   </div>
 
   <!-- <div class="swiper-container common-slider dokidoki-slider slider js-slider-other-restaurant">
@@ -50,6 +49,5 @@
       </li>
       <% } ) %>
     </ul>
-    <!-- <div class="swiper-pagination"></div> -->
   </div> -->
 </section>

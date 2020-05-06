@@ -1,4 +1,5 @@
 .heading-wrap {
+
   &.heading-donguri {
     .heading-subtext {
       height: 85px;
@@ -235,7 +236,13 @@
   }
 
   &.heading-main-program {
-    margin-bottom: 70px;
+    // margin-bottom: 70px;
+    margin-bottom: 14px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 42px;
+    }
+
     svg {
       height: 54px;
 
@@ -247,6 +254,14 @@
 
     .heading-program {
       margin-bottom: 32px;
+
+      img {
+        height: 110px;
+
+        @include max-screen($breakpoint-mobile) {
+          height: 54px;
+        }
+      }
     }
 
     .heading-sub-program {

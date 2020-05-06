@@ -3,6 +3,16 @@
   padding-bottom: 126px;
   position: relative;
 
+  &-hellowoods-program {//program experience page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -4px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -12px !important;
+    }
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -19,6 +29,16 @@
 
   &.block-image-hellowoods {
     padding-bottom: 0;
+
+    &-program {//program experience page
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-bottom: 60px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-bottom: 0px !important;
+      }
+    }
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -91,6 +111,16 @@
         margin-bottom: 4px;
       }
     }
+
+    &-program {//program page
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 20px;
+      }
+
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
   }
 }
 
@@ -102,6 +132,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  &-program {
+    @include max-screen($breakpoint-mobile) {
+      height: 156px !important;
+    }
+  }
 
   &.hoteltwinring-lounge {
     height: auto;

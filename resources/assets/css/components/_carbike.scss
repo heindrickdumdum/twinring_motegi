@@ -124,6 +124,11 @@
     font-size: 15px;
   }
 
+  @include max-screen($breakpoint-mobile) {
+    right: inherit;
+    left: 0;
+  }
+
   &.carbike-article-cat-bg-green-1 {
     background-color: #4fae32;
   }
@@ -151,18 +156,48 @@
 
 .carbike-article-content {
   position: relative;
+
+  .period {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: rgb(18, 41, 15);
+    letter-spacing: 0.06em;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 20px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 10px;
+    }
+
+    &-icon {
+      display: inline-block;
+      margin-right: 10px;
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
 }
 
 .carbike-article-title {
   font-size: 13px;
   font-weight: 600;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
   position: relative;
   letter-spacing: 0.16em;
 
   @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 24px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 15px;
   }
 
   span {
@@ -396,7 +431,7 @@
     padding: 5px 13px;
     @include min-screen ($breakpoint-mobile + 1) {
       left: 0;
-      right: initial;
+      right: inherit;
       bottom: -13px;
       padding: 5px 13px;
       min-height: auto;

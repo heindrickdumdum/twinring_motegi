@@ -262,6 +262,28 @@
     }
   }
 
+  &.forest-program-mv-heading {//program page
+    bottom: 40px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -5px !important;
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 725px !important;
+        height: 58px !important;
+        margin-top: 20px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 230px !important;
+        height: 69px !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
   &.rocco-mv-heading {//rocco page
     bottom: 40px !important;
 
@@ -274,7 +296,6 @@
         max-width: 740px !important;
         height: 58px !important;
         margin-top: 20px !important;
-        
       }
 
       @include max-screen($breakpoint-mobile) {

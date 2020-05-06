@@ -191,19 +191,19 @@
     }
 
     &-motorsport {
-      max-width: 222px;
-      bottom: -68px;
+      max-width: 195px;
+      bottom: -5px;
 
       @include max-screen($breakpoint-mobile) {
         height: auto;
-        max-width: 92px;
-        bottom: -15px;
+        max-width: 80px;
+        bottom: 8px;
       }
     }
 
     &-hondacollection {
-      max-width: 186px;
-      bottom: -56px;
+      max-width: 160px;
+      bottom: 0px;
 
       @include max-screen($breakpoint-mobile) {
         height: auto;

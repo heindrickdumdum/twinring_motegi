@@ -1167,6 +1167,7 @@
         @include max-screen($breakpoint-mobile) {
           width: 155px;
           height: 23px;
+          margin-top: 15px;
         }
       }
     }
@@ -1179,6 +1180,7 @@
         @include max-screen($breakpoint-mobile) {
           width: 235px;
           height: 24px;
+          margin-top: 15px;
         }
       }
     }

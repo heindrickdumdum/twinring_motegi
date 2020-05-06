@@ -27,6 +27,22 @@
     }
   }
 
+  &-motorsport {
+    padding-top: 15px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 0px !important;
+    }
+  }
+
+  &-hondacollection {
+    padding-top: 15px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 0px;
+    }
+  }
+
   .restaurant-container & {
     @include min-screen($breakpoint-mobile + 1) {
       padding-left: 60px;

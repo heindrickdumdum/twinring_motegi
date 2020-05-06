@@ -9,15 +9,7 @@
 <div class="lig-content">
   <div class="subpage subpage-restaurant restaurant-wrapper">
     <div class="mv mv-restaurant mv-subpage-restaurant">
-      <div class="mv-buttons">
-        <ul class="mv-buttons-list">
-          <li class="mv-buttons-item">
-            <a class="mv-buttons-link" href="/foods_m/">
-              <span>ご予約</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      
 
       <ul class="mv-list">
         <li class="mv-item">
@@ -88,14 +80,14 @@
               <tr class="table-row">
                 <th class="table-head">場所</th>
                 <td class="table-col">
-                  中央エントランス（最寄の駐車場：N1）
+                  中央エントランス（最寄の駐車場：<a href="/map_m/">N1</a>）
                 </td>
               </tr>
 
               <tr class="table-row">
                 <th class="table-head">営業時間</th>
                 <td class="table-col">
-                  ツインリンクもてぎ営業時間内
+                  <a href="/hours_m/">ツインリンクもてぎ営業時間</a>
                 </td>
               </tr>
 
@@ -126,7 +118,7 @@
           <%- include('/partials/button', {
             modifier: 'restaurant-button',
             link: '#',
-            text: '冬のおすすめメニューはこちら (PDF:4.1MB)'
+            text: '春のおすすめメニューはこちら（PDF:4.3MB）'
           }) -%>
         </div>
 
@@ -134,13 +126,14 @@
           <%- include('/partials/button', {
             modifier: 'restaurant-button',
             link: '#',
-            text: '冬のおすすめメニューは<br/>こちら (PDF:4.1MB)'
+            text: '春のおすすめメニューは<br/>こちら (PDF:4.3MB)'
           }) -%>
         </div>
       </div>
 
       <!-- other restaurant module-->
       <%- include('/partials/restaurant/section-other-restaurant') -%>
+      <%- include('/partials/restaurant/section-recommended-restaurant') -%>
       
 
     </main>

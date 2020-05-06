@@ -55,9 +55,7 @@
             <div class="parkmap-inner">
               <div class="parkmap-image">
                 <ul class="parkmap-image-list">
-                  <%
-                    getData().data.parkmapButtons.forEach( button => {
-                  %>
+                  <% getData().data.parkmapButtonsAreaList.forEach( button => { %>
                   <li class="parkmap-image-item js-parkmap-number">
                     <a href="<%- button.link %>" ></a>
                   </li>
@@ -66,9 +64,7 @@
               </div>
               <div class="parkmap-right">
                 <ul class="parkmap-list">
-                  <%
-                    getData().data.parkmapButtons.forEach( button => {
-                  %>
+                  <% getData().data.parkmapButtonsAreaList.forEach( button => { %>
                   <li class="parkmap-item js-parkmap-button">
                     <a class="parkmap-link" href="<%- button.link %>" ><%- button.text %>
                       <i class="parkmap-link-icon">
@@ -79,14 +75,14 @@
                     </a>
                   </li>
                   <% }) %>
-                  <li class="parkmap-item parkmap-item-last">
+                  <!-- <li class="parkmap-item parkmap-item-last">
                     <%- include('/partials/button', {
                       newTab: false,
                       modifier: 'button-parkmap',
                       text: 'エリア・施設一覧を見る',
                       link: '/twinringmotegi/'
                     }) %>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -98,16 +94,16 @@
         <ul class="adventure-container restaurant-container">
 
           <!-- hellowoods -->
-          <li class="adventure-list">
+          <li class="adventure-list" id="hellowoods">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-hellowoods.jpg') %>);">
               <div class="adventure-bg-circle"></div>
-              <img class="adventure-image-logo adventure-image-logo-areaindex" src="<%= mix('/assets/images/twinringmotegi/logo_hellowoods.png') %>"
+              <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-hellowoods" src="<%= mix('/assets/images/twinringmotegi/logo_hellowoods.png') %>"
                 alt="ハローウッズの森">
             </div>
 
             <div class="l-adventure-sp-container">
-              <div class="l-adventure">
+              <div class="l-adventure l-adventure-hellowoods">
                 <div class="l-section-title l-section-title-adventure">
                   <%- include('/partials/heading', {
                     modifier: 'adventure-heading heading-title-adventure-twinringmotegi heading-title-adventure-hellowoods',
@@ -137,7 +133,7 @@
           </li>
 
           <!-- mobipark -->
-          <li class="adventure-list">
+          <li class="adventure-list" id="mobipark">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-mobipark.jpg') %>);">
               <div class="adventure-bg-circle"></div>
@@ -146,7 +142,7 @@
             </div>
 
             <div class="l-adventure-sp-container">
-              <div class="l-adventure">
+              <div class="l-adventure l-adventure-mobipark">
                 <div class="l-section-title l-section-title-adventure">
                   <%- include('/partials/heading', {
                     modifier: 'adventure-heading heading-title-adventure-twinringmotegi heading-title-adventure-mobipark',
@@ -177,7 +173,7 @@
           </li>
 
           <!-- twinringmotegi -->
-          <li class="adventure-list">
+          <li class="adventure-list" id="twinringmotegi">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-camp.jpg') %>);">
               <div class="adventure-bg-circle"></div>
@@ -218,7 +214,7 @@
           </li>
 
           <!-- hotel -->
-          <li class="adventure-list">
+          <li class="adventure-list" id="hoteltwinring">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-twinring.jpg') %>);">
               <div class="adventure-bg-circle"></div>
@@ -227,7 +223,7 @@
             </div>
 
             <div class="l-adventure-sp-container">
-              <div class="l-adventure">
+              <div class="l-adventure l-adventure-hotel">
                 <div class="l-section-title l-section-title-adventure">
                   <%- include('/partials/heading', {
                     modifier: 'adventure-heading heading-title-adventure-twinringmotegi heading-title-adventure-hoteltwinring',
@@ -256,7 +252,7 @@
           </li>   
           
           <!-- motorsport -->
-          <li class="adventure-list">
+          <li class="adventure-list" id="motorsport">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-motorsports.jpg') %>);">
               <div class="adventure-bg-circle"></div>
@@ -294,7 +290,7 @@
           </li>
           
           <!-- hondacollection -->
-          <li class="adventure-list">
+          <li class="adventure-list" id="hondacollection">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-honda.jpg') %>);">
               <div class="adventure-bg-circle"></div>
@@ -333,7 +329,7 @@
           </li>
 
           <!-- activesafe -->
-          <li class="adventure-list">
+          <li class="adventure-list" id="activesafe">
             <div class="adventure-bg"
               style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-safety.jpg') %>);">
               <div class="adventure-bg-circle"></div>

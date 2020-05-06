@@ -15,6 +15,8 @@ new SmoothScroll('a[href^="#"]', {
   offset: function() {
     if( window.matchMedia('(max-width: 749px)') ) {
       return 67;
+    } else {
+      return 0;
     }
   }
 });

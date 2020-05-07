@@ -16,12 +16,17 @@
         </li>
       </ul>
 
-      <h1 class="mv-heading mv-heading-subpage mv-heading-twinringmotegi">
-        <span class="mv-heading-text mv-heading-text-twinringmotegi">
-          エリア・施設
-          <!-- <img src="<%= mix() %>" alt="エリア・施設"> -->
-        </span>
-      </h1>
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading twinringmotegi-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Area & Facility',
+            subtextvg: 'twinringmotegi-top-title',
+            altSubtextvg: 'エリア・施設'
+          }) %>
+        </div>
+      </div>
     </div>
 
     <main>
@@ -108,7 +113,7 @@
                   <%- include('/partials/heading', {
                     modifier: 'adventure-heading heading-title-adventure-twinringmotegi heading-title-adventure-hellowoods',
                     subtextvg: 'twinringmotegi-hellowoods-title',
-                    altSubtextvg: 'ハローウッズの森'
+                    altSubtextvg: 'ハローウッズ'
                   }) %>
                 </div>
 

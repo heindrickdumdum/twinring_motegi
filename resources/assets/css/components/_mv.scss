@@ -580,6 +580,7 @@
         fill: $color-white;
 
         @include max-screen ($breakpoint-mobile) {
+          max-width: 300px;
           height: 55px;
           width: 100%;
         }

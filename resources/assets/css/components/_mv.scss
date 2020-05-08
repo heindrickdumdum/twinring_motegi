@@ -102,6 +102,10 @@
   }
 }
 
+.mv-list-glamping-top {
+  max-height: 600px;
+}
+
 .mv-list-top {
   opacity: 0;
   transition: opacity 1s ease-in;
@@ -243,6 +247,65 @@
     left: 15px;
   }
 
+  &-camp {//f-glamping camp page
+    .heading-subtext {
+      font-size: 42px;
+      color: $color-white;
+      font-family: 'Noto Serif JP', serif;
+      max-width: 100% !important;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 26px;
+        width: auto !important;
+        height: auto !important;
+      }
+    }
+  }
+
+  &.twinringmotegi-mv-heading {//twinring page
+    bottom: 40px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -5px !important;
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 324px !important;
+        height: 51px !important;
+        margin-top: 20px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 210px !important;
+        height: 33px !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
+  &.forest-program-mv-heading {//program page
+    bottom: 40px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -5px !important;
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 725px !important;
+        height: 58px !important;
+        margin-top: 20px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 230px !important;
+        height: 69px !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
   &.rocco-mv-heading {//rocco page
     bottom: 40px !important;
 
@@ -255,7 +318,6 @@
         max-width: 740px !important;
         height: 58px !important;
         margin-top: 20px !important;
-        
       }
 
       @include max-screen($breakpoint-mobile) {
@@ -518,6 +580,7 @@
         fill: $color-white;
 
         @include max-screen ($breakpoint-mobile) {
+          max-width: 300px;
           height: 55px;
           width: 100%;
         }

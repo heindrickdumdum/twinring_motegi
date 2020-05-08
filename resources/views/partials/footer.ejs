@@ -39,7 +39,10 @@
   'oak',
   'granTurismo',
   'rocco',
-  'donguri'
+  'donguri',
+  'bbq',
+  'camp',
+  'stay'
   ]
 %>
 
@@ -162,7 +165,7 @@
     <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'labo' || pageId == "nozominoyu") { %>
+  <% if(pageId == 'labo' || pageId == "nozominoyu" || pageId == 'stay') { %>
     <script src="<%= mix('/assets/js/labo.js') %>" async></script>
   <% } %>
 
@@ -191,6 +194,10 @@
   <% } %>
 
 <!-- START GTM FOOTER -->
+  <% if(pageId == 'bbq') { %>
+    <script src="<%= mix('/assets/js/bbq.js') %>" async></script>
+  <% } %>
+
 <script type="text/javascript">
  var _gaq = _gaq || [];
  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

@@ -18,11 +18,33 @@
         </li>
       </ul>
 
-      <h1 class="mv-heading mv-heading-subpage">
+      <!-- <h1 class="mv-heading mv-heading-subpage u-show-sp">
         <span class="mv-heading-text">
-          森の体験プログラム（予約制）
+          予約制森の体験プログラム
         </span>
-      </h1>
+      </h1> -->
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading forest-program-mv-heading u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Forest Experience Program',
+            subtextvg: 'forest-program-top-title',
+            altSubtextvg: '予約制森の体験プログラム'
+          }) %>
+        </div>
+
+        <div class="mv-heading hellowoods-mv-heading forest-program-mv-heading u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Forest Experience Program',
+            subtextvg: 'forest-program-top-title-sp',
+            altSubtextvg: '予約制森の体験プログラム'
+          }) %>
+        </div>
+      </div>
     </div>
 
     <main>
@@ -30,26 +52,20 @@
         <div class="">
           <div class="heading-wrap heading-main heading-main-pit heading-main-program">
             <h2 class="heading heading-program">
-              <span class="u-show-pc">
-                <%- include('/partials/svg', {
-                  'name': 'program-top-title-pc'
-                }) %>
-              </span>
-              <span class="u-show-sp">
-                <%- include('/partials/svg', {
-                  'name': 'program-top-title'
-                }) %>
+              <span class="">
+                <img src="<%= mix('/assets/images/program/program-top-title-pc.png') %>" alt="予約制森の体験プログラム">
               </span>
             </h2>
             <p class="heading-sub u-show-pc heading-sub-program">
-              ハローウッズでは、より多くの方々に自然に対する興味を持っていただきたい、<br>
-              人と自然との共生を考えるきっかけとしたいという願いから、</br>
-              四季を通して楽しんでいただける様々な体験プログラムを用意しています。
+              森を知り尽くしたハローウッズのキャストが、みなさんを大自然の中にエスコート。<br/>
+              四季折々のプログラムは、都会では決して味わうことのできない驚きと発見の連続です。
             </p>
             <p class="heading-sub u-show-sp heading-sub-program-sp">
-              ハローウッズでは、より多くの方々に自然に対する興味を持っていただきたい、人と自然との共生を <br>
-              考えるきっかけとしたいという願いから、<br>
-              四季を通して楽しんでいただける様々な体験プログラムを用意しています。
+              森を知り尽くしたハローウッズのキャストが、<br/>
+              みなさんを大自然の中にエスコート。<br/>
+              四季折々のプログラムは、<br/>
+              都会では決して味わうことのできない<br/>
+              驚きと発見の連続です。
             </p>
             
           </div>
@@ -62,17 +78,24 @@
         }) -%>
       </section>
 
-      <div class="l-section banner-image program">
-        <div class="subpage-section-carbike">
-          <a href="/hellowoods/blog/">
-            <div class="banner-image-wrap program">
-                <p class="banner-image-text">
-                  <span class="heading-text banner-image-heading">Adventure Program</span>
-                  <span class="banner-image-subtext program">学校団体・子ども会の方向け森の冒険教育プログラム<br>
-                    「もてぎスキルアップアドベンチャー」 </span>
-                </p>
-            </div>
-          </a>
+      <div class=" block-image block-image-hellowoods block-image-hellowoods-program">
+        <div class="l-container">
+          <ul class="block-image-list block-image-list-hellowoods">
+            <% forest_programGallery.forEach( block => { %>
+            <li class="block-image-item block-image-item-hellowoods block-image-item-hellowoods-program image-border <%- block.modifier %>">
+              <a href="<%- block.url %>" class="block-image-item-link">
+                <div class="block-image-inner block-image-inner-program" style="background-image: url(<%- block.bg %>);">
+                  <!-- <div class="block-image-text-wrap">
+                    <p class="block-image-text block-image-text-hellowoods">
+                      <span class="heading-text"><%- block.title %></span>
+                      <span class="block-image-subtext"><%- block.subtext %></span>
+                    </p>
+                  </div> -->
+                </div>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
         </div>
       </div>
 

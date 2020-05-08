@@ -17,6 +17,10 @@
     position: relative;
     background-size: cover;
 
+    &.bbq-reservation-wrap {
+      background-image: url(/assets/images/bbq/reservation.png);
+    }
+
     .hoteltwinring-heading-reservation {
       .heading {
         margin-bottom: 20px;
@@ -48,6 +52,10 @@
       background-color: $color-white;
       height: 95px;
 
+      @at-root .camp-wrapper & {
+        background-color: rgba($color: $color-white, $alpha: 0.8);
+      }
+
       @include max-screen($breakpoint-mobile) {
         height: 70px;
         font-size: 16px;
@@ -78,6 +86,10 @@
   }
   .hotel-reservation-qna-wrap {
     background-color: #f2f2f2;
+
+    @at-root .camp-wrapper & {//f-glamping camp page
+      display: none;
+    }
 
 
     .hotel-reservation-ctas {

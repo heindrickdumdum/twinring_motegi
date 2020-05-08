@@ -8,7 +8,7 @@ if (typeof modifier === 'undefined'){
 
 
 <% if(dataProgramList) { var arrTabs = [];var checked="checked" %>
-  <div class="u-show-pc">
+  <div class="u-show-pc tab-underline">
     <ol id="tabs" class="tabs u-show-pc" >
       <% dataProgramList.forEach( item => { %>
             <% if(arrTabs.indexOf(item.month) === -1) { %>
@@ -51,9 +51,11 @@ if (typeof modifier === 'undefined'){
               <div class="carbike-article-thumb-img"
                   style="background-image: url(<%- item.imgPath %>)">
                 </div>
-              <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %> program-cat">
-                <%- item.category %>
-              </span>
+              <% if(item.category !== '') { %>
+                <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %> program-cat">
+                  <%- item.category %>
+                </span>
+              <% } %>
             </div>
 
             <div class="carbike-article-content">
@@ -67,6 +69,18 @@ if (typeof modifier === 'undefined'){
 
 
               </h3>
+
+              <p class="period">
+                <span class="period-icon">
+                  <%- include('/partials/svg', {
+                    name: 'calendar',
+                    svgtitle: 'calendar'
+                  }) -%>
+                </span>
+                <span class="period-text">
+                  <%- item.period %>
+                </span>
+              </p>
 
               <ul class="carbike-article-list">
                 <% item.dataList.forEach( dataitem => { %>
@@ -83,10 +97,6 @@ if (typeof modifier === 'undefined'){
                 </div>
               </div>
             </div>
-
-            <p class="period">
-              開催期間：<%- item.period %>
-            </p>
           </article>
         </a>
       </li>

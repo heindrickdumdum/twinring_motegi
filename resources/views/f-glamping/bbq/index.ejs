@@ -1,0 +1,408 @@
+<%
+  var title = 'ご宿泊予約｜ホテルツインリンク｜ツインリンクもてぎ';
+  pageId = 'bbq';
+%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage mv-subpage-reserve">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/bbq/mv-img.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/bbq/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading reservation-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-reservation',
+            heading_level: 1,
+            text: 'BBQ',
+            subtextvg: 'bbq-main-title'
+          }) %>
+        </div>
+
+        <!-- <div class="u-show-pc mv-today mv-log mv-granroom-logo">
+          <div class="mv-l-inner">
+          </div>
+        </div> -->
+      </div>
+
+      <!-- <h1 class="mv-heading mv-heading-subpage">
+        <span class="mv-heading-text mv-heading-text-reserve">
+          ご宿泊予約
+        </span>
+      </h1> -->
+    </div>
+    <main>
+        <div class="subpage-section">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-gradient-tobottom heading-reservation',
+              text: 'BBQ',
+              alt: '',
+              subtextvg: 'reservation-title',
+              altSubtextvg: 'Reservation',
+              altSubtext: ''
+            }); -%>
+          </div>
+
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-gradient-tobottom heading-reservation',
+              text: 'BBQ',
+              alt: '',
+              subtextvg: 'reservation-title',
+              altSubtextvg: 'Reservation',
+              altSubtext: ''
+            }); -%>
+          </div>
+
+          
+        </div>
+
+        <section class="subpage-section">
+          <div class="subpage-inner">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-two-lines',
+                text: '',
+                alt: '',
+                subtextvg: 'bbq-plan-glamping-wide',
+                altSubtext: '',
+                altSubtextvg: ''
+              }); -%>
+            </div>
+  
+            <div class="subpage-image-gallery">
+              <div class="swiper-container slider-gallery js-gallery">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/bbq/premium-bbq1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/bbq/premium-bbq2.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/bbq/premium-bbq3.jpg') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="swiper-container slider-gallery-thumb js-gallery-thumb">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/bbq/premium-bbq1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/bbq/premium-bbq2.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/bbq/premium-bbq3.jpg') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p>ホテルツインリンクのシェフがこだわり抜いた旬の食材を使って、お客様1人1人に合わせたメニューを目の前で調理します。出来立てを楽しめる贅を尽くした最上級のBBQプランです。</p>
+          </div>
+        </section>
+
+        <section class="subpage-section">
+          <div class="subpage-inner">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-two-lines',
+                text: '',
+                alt: '',
+                subtextvg: 'bbq-plan-special',
+                altSubtext: '',
+                altSubtextvg: ''
+              }); -%>
+            </div>
+
+            <div class="subpage-image-gallery">
+              <div class="swiper-container slider-gallery js-gallery2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/bbq/special-bbq2.png') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/bbq/special-bbq3.png') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="swiper-container slider-gallery-thumb js-gallery-thumb2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/bbq/special-bbq2-thumb.png') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/bbq/special-bbq3-thumb.png') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p>ホテルツインリンクのシェフが厳選した旬の食材を使って、お客様自身で調理を楽しめるプランです。家族みんなで作ったBBQは最高の味と思い出に。</p>
+
+            <div class="">
+              <p class="u-show-sp">
+                この他にも、様々なメニューを<br>ご用意しております。
+              </p>
+              <div class="u-show-pc">
+                <%- include('/partials/button', {
+                  modifier: 'download-pdf',
+                  link: 'https://www.twinring.jp/foods_m/pdf/donguri_menu_202003.pdf',
+                  text: '冬のおすすめメニューはこちら (PDF:4.1MB)'
+                }) -%>
+              </div>
+      
+              <div class="u-show-sp">
+                <%- include('/partials/button', {
+                  modifier: 'download-pdf',
+                  link: 'https://www.twinring.jp/foods_m/pdf/donguri_menu_202003.pdf',
+                  text: '冬のおすすめメニューは<br/>こちら (PDF:4.1MB)'
+                }) -%>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subpage-section">
+          <div class="subpage-inner">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-one-line',
+                text: '',
+                alt: '',
+                subtextvg: 'bbq-plan-easy',
+                altSubtext: '',
+                altSubtextvg: ''
+              }); -%>
+            </div>
+
+            <div class="subpage-image-gallery">
+              <div class="swiper-container slider-gallery js-gallery3">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/bbq/rakuraku-bbq1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/bbq/rakuraku-bbq2.png') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/bbq/rakuraku-bbq3.png') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="swiper-container slider-gallery-thumb js-gallery-thumb3">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/bbq/rakuraku-bbq1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/bbq/rakuraku-bbq2.png') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/bbq/rakuraku-bbq3.png') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p>ホテルツインリンクのシェフが厳選した旬の食材を使って、お客様自身で調理を楽しめるプランです。家族みんなで作ったBBQは最高の味と思い出に。</p>
+
+            <div class="">
+              <p class="u-show-sp">
+                この他にも、様々なメニューを<br>ご用意しております。
+              </p>
+              <div class="u-show-pc">
+                <%- include('/partials/button', {
+                  modifier: 'download-pdf',
+                  link: 'https://www.twinring.jp/foods_m/pdf/donguri_menu_202003.pdf',
+                  text: '冬のおすすめメニューはこちら (PDF:4.1MB)'
+                }) -%>
+              </div>
+      
+              <div class="u-show-sp">
+                <%- include('/partials/button', {
+                  modifier: 'download-pdf',
+                  link: 'https://www.twinring.jp/foods_m/pdf/donguri_menu_202003.pdf',
+                  text: '冬のおすすめメニューは<br/>こちら (PDF:4.1MB)'
+                }) -%>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subpage-section">
+          <div class="subpage-inner">
+            <div class="text-banner l-container-m bg-grey">
+              <p>
+                ・BBQの食材は16：30～17：00の間で順番にお届けし、火おこしいたします。<br>
+                ・お食事時間は20：00までとさせていただきます。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="subpage-section">
+          <div class="subpage-inner">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-one-line',
+                text: 'Anniversary Cake',
+                alt: '',
+                subtextvg: 'bbq-anniv-cake',
+                altSubtext: '',
+                altSubtextvg: ''
+              }); -%>
+            </div>
+
+            <div class="subpage-banner">
+              <div class="subpage-banner-inner text-center">
+                <img src="<%= mix('/assets/images/bbq/annive-cake.jpg') %>" alt="森の教習所">
+              </div>
+            </div>
+      
+            <p>家族の記念日や誕生日には、BBQだけでなくケーキでのお祝いも人気です。</p>
+      
+            <table class="table text-center">
+              <thead>
+                <tr class="table-row">
+                  <th class="table-head" colspan="3">苺サンドケーキ</th>
+                  <th class="table-head" colspan="1">チョコレートケーキ</th>
+                </tr>
+                
+              </thead>
+              <tbody>
+                <tr class="table-row">
+                  <td class="table-col">13cm</td>
+                  <td class="table-col">15cm</td>
+                  <td class="table-col">18cm</td>
+                  <td class="table-col">18cm</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="table-col">2.650円</td>
+                  <td class="table-col">2.960円</td>
+                  <td class="table-col">3.470円</td>
+                  <td class="table-col">2.860円</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+
+            <p>※ご予約・キャンセルは、5日前まで承ります。<br>
+              4日前～当日はキャンセル料100%となります。<br>
+            </p>
+            <p>
+              ご予約<br>
+              TEL 0285-64-0489（10:00～17:30）
+            </p>
+          </div>
+        </section>
+
+        <section class="subpage-section">
+          <div class="subpage-inner">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-one-line',
+                text: 'Breakfast',
+                alt: '',
+                subtextvg: 'bbq-breakfast',
+                altSubtext: '',
+                altSubtextvg: ''
+              }); -%>
+            </div>
+  
+            <div class="subpage-image-gallery">
+              <div class="swiper-container slider-gallery js-gallery4">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/bbq/marcherant-1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/bbq/marcherant-2.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/bbq/marcherant-3.jpg') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="swiper-container slider-gallery-thumb js-gallery-thumb4">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/bbq/marcherant-1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/bbq/marcherant-2.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/bbq/marcherant-3.jpg') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p>いずれかのBBQプランをご予約いただいたお客様は朝食に「森のレストラン MARCHERANT」のビュッフェを楽しめます。新鮮な朝採れ野菜をはじめ、豊富なメニューが特別な朝を演出します。</p>
+          
+            <div class="l-button">
+              <%- include('/partials/button', {
+                newTab: true,
+                modifier: '',
+                text: 'もっと見る',
+                link: 'https://www.instagram.com/explore/tags/%E8%BF%B7%E5%AE%AE%E6%A3%AE%E6%AE%BFitadaki'
+              }) %>
+            </div>
+          </div>
+        </section>
+
+        
+        <div class="hoteltwinring-reservation">
+          <div class="hotel-reservation-wrap bbq-reservation-wrap">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'hoteltwinring-heading-reservation fill-white',
+                text: 'Reservation',
+                alt: '',
+                altSubtext: '',
+                subtextvg: 'bbq-reservation',
+                altSubtextvg: 'Reservation'
+              }) %>
+            </div>
+            <div class="l-button u-show-pc">
+              <%- include('/partials/button', {
+                modifier: 'reserve-button',
+                text: '森と星空のキャンプヴィレッジのご予約はこちら',
+                link: 'https://www.twinring.jp/f-glamping/plan/'
+              }) %>
+            </div>
+            <div class="l-button u-show-sp">
+              <%- include('/partials/button', {
+                modifier: 'reserve-button',
+                text: '森と星空のキャンプヴィレッジのご予約はこちら',
+                link: 'https://www.twinring.jp/f-glamping/plan/'
+              }) %>
+            </div>
+          </div>
+        </div>
+
+      <%- include('/partials/recommendation') -%>
+
+      <%- include('/partials/pickup') -%>
+    </main>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsReserve
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

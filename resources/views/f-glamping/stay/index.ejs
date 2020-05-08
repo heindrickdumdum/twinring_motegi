@@ -1,0 +1,965 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'stay';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-camp camp-wrapper">
+    <div class="mv">
+      <div class="mv-buttons">
+        <ul class="mv-buttons-list">
+          <li class="mv-buttons-item">
+            <a class="mv-buttons-link" href="/f-glamping/plan/">
+              <span>ご予約</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/stay/mv-img.png') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/stay/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading mv-heading-camp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Glamping',
+            headingSubtext: 'グランピング'
+          }) %>
+        </div>
+        
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner-wrap">
+        <div class="subpage-inner">
+
+          <!-- title only -->
+          <div class="l-section-title">
+            <div>
+              <%- include('/partials/heading', {
+                modifier: 'main-camp-title',
+                heading_level: 2,
+                text: "森の中、<br/>快適で贅沢なグランピングを"
+              }) -%>
+            </div>
+          </div>
+
+          <!-- anchor links -->
+          <div class="column-link column-link-camp l-column-link">
+            <ul class="link-container">
+              <% getData().data.campAnchorStay.forEach(item => { %>
+                <li class="link-item">
+                  <a class="js-scroll" href="<%- item.link -%>">
+                    <img src="<%- item.image -%>" alt="<%- item.alt -%>">
+                    <span><%- item.alt -%></span>
+                  </a>
+                </li>
+              <% }) %>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- section terrace -->
+        <section class="section-camp" id="terrace">
+          <div class="subpage-inner">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'section-camp-title',
+                heading_level: 3,
+                text: "グランピング・ワイド 森のテラス"
+              }) -%>
+            </div>
+
+            <div class="subpage-image-gallery">
+              <div class="swiper-container slider-gallery js-gallery">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/stay/terrace-banner1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/stay/terrace-banner2.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/stay/terrace-banner3.jpg') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+
+              <small class="important-note important-note-left">
+                ※３枚目のスペシャルBBQプランはイメージとなります。
+              </small>
+  
+              <div class="swiper-container slider-gallery-thumb js-gallery-thumb">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/stay/terrace-banner1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/stay/terrace-banner2.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/stay/terrace-banner3.jpg') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              <span>
+                1日1組だけのプライベート空間で最上級のグランピング体験を。ホテルシェフがこだわり抜いた食材による贅沢なBBQも堪能できます。
+              </span>
+            </p>
+
+            <h4 class="subpage-title">
+              <span>客室詳細</span>
+            </h4>
+
+            <table class="table">
+              <tbody>
+      
+                <tr class="table-row">
+                  <th class="table-head">サイト数</th>
+                  <td class="table-col">
+                    1サイト（1区画：14m×10m）
+                    <br>
+                    <!-- <a class="u-show-pc" href="/assets/images/granroom/granroom-floorplan.png" title="3室、広さ69m2 ･ 床面フローリング（定員4?6名）、禁煙" id="js-lightbox">&gt; 間取りを見る</a> -->
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">チェックイン・<br>チェックアウト</th>
+                  <td class="table-col">
+                     チェックイン 15:00～18:00／<br>チェックアウト ～10:00
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">定員</th>
+                  <td class="table-col">
+                    4名
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">お食事</th>
+                  <td class="table-col u-show-pc">
+                    夕食：<a href="/f-glamping/bbq/#premium-bbq-pc"><span class="link-border-bottom">プレミアムBBQプラン</span></a>　or　
+                    <a href="/f-glamping/bbq/#special-bbq-pc"><span class="link-border-bottom">スペシャルBBQプラン</span></a>
+                    <br>
+                    朝食：ホテルツインリンク　<a href="/foods_m/marcherant.html"><span class="link-border-bottom">森のレストラン MARCHERANT</span></a>
+                    <p>※素泊まりプランは受け付けておりません。</p>
+                  </td>
+                  <td class="table-col u-show-sp table-width">
+                    夕食：<a href="/f-glamping/bbq/#premium-bbq-sp"><span class="link-border-bottom">プレミアムBBQプラン</span></a>　or
+                    <a href="/f-glamping/bbq/#special-bbq-sp"><span class="link-border-bottom">スペシャルBBQプラン</span></a>
+                    <br>
+                    朝食：ホテルツインリンク　<br><a href="/foods_m/marcherant.html"><span class="link-border-bottom">森のレストラン MARCHERANT</span></a>
+                    <p>※素泊まりプランは受け付けて<br>おりません。</p>
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">設備</th>
+                  <td class="table-col">
+                    室内：コットン製グランピングテント（タープ付き）／ セミダブルベット２台／ソファー／テーブル／ 冷蔵庫（冷凍庫付き）／電気ケトル／照明器具／ 電源／ 無料Wi-Fi
+                    室外：ハンモック／ ローチェアー（4脚）／ テーブル／イス／焚き火エリア／BBQコンロ（網付き）<br>
+                     夏季のみ：扇風機／サーキュレーター<br>
+                     冬季のみ：こたつ／加湿機能付ファンヒーター／電気毛布
+      
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">アメニティ</th>
+                  <td class="table-col">
+                    フェイスタオル／バスタオル<br>
+                    ※歯ブラシ・カミソリをご希望のお客様は、<br>
+                    チェックイン時キャンプ場受付にてお渡しいたします。
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">持参すると<br>
+                    よいもの</th>
+                  <td class="table-col">
+                    通年：コップ類(売店で紙コップ販売有り) ／ウエットティッシュ<br>
+                    夏：虫よけスプレー／虫さされ薬／フェイスタオル／日焼け止め／帽子<br>
+                    冬：厚手の靴下／ネックウォーマー／ニット帽／耳あて／ブランケット
+                  </td>
+                </tr>
+      
+              </tbody>
+            </table>
+            
+            <!-- camp usage fee -->
+            <div class="subpage-section subpage-section-usagefee">
+      
+              <div class="l-section-title">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-main heading-main-subpage heading-main-subpage-nogradient-onecolor heading-main-subpage-usagefee',
+                  subtextvg: 'granroom-usagefee-subtitle',
+                  altSubtextvg: 'ご利用料金'
+                }); -%>
+              </div>
+
+              <div class="table-wrap u-show-pc">
+
+                <h3 class="subpage-title">
+                  <span>ご宿泊料金＋プレミアムBBQプラン（夕食・朝食付き）</span>
+                </h3>
+
+                <table class="table table-solid">
+                  <tbody>
+    
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">ご利用人数	</th>
+                      <th class="table-col">オールシーズン</th>
+                    </tr>
+    
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">
+                        大人2名	
+                      </th>
+                      <td class="table-col">
+                        82.600円
+                      </td>
+                    </tr>
+    
+                    <tr class="table-row table-row-last">
+                      <th class="table-head">
+                        ４名 <br/>
+                        <small>（大人２名＋小学生or幼児２名）</small>	
+                      </th>
+                      <td class="table-col">
+                        97,860円
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+
+                <h3 class="subpage-title">
+                  <span>
+                    ご宿泊料金＋スペシャルBBQプラン（夕食・朝食付き）
+                  </span>
+                </h3>
+
+                <table class="table table-solid">
+                  <tbody>
+    
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">ご利用人数</th>
+                      <th class="table-col">平日</th>
+                      <th class="table-col">休前日</th>
+                      <th class="table-col">GW・夏休みなど</th>
+                    </tr>
+    
+                    <tr class="table-row table-row-last">
+                      <th class="table-head">
+                        ４名 <br/>
+                        <small>（大人２名＋小学生２名）</small>
+                      </th>
+                      <td class="table-col">
+                        75,380円&#126;
+                      </td>
+                      <td class="table-col">
+                        82.380円&#126;
+                      </td>
+                      <td class="table-col">
+                        85,580円&#126;
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="table-wrap u-show-sp">
+
+                <h3 class="subpage-title">
+                  <span>ご宿泊料金＋プレミアムBBQプラン（夕食・朝食付き）</span>
+                </h3>
+
+                <p>
+                  <strong>
+                    大人2名	
+                  </strong>
+                </p>
+
+                <table class="table table-solid table-solid-last">
+                  <tbody>
+                    <tr class="table-row table-row-solid table-row-last">
+                      <th class="table-head">オールシーズン</th>
+                      <td class="table-col">82.600円</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>
+                  <strong>
+                    ４名（大人２名＋小学生or幼児２名）	
+                  </strong>
+                </p>
+
+                <table class="table table-solid table-solid-last">
+                  <tbody>
+                    <tr class="table-row table-row-solid table-row-last">
+                      <th class="table-head">オールシーズン</th>
+                      <td class="table-col">97,860円</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h3 class="subpage-title">
+                  <span>ご宿泊料金＋スペシャルBBQプラン（夕食・朝食付き）</span>
+                </h3>
+
+                <p>
+                  <strong>
+                    ４名（大人２名＋小学生２名）
+                  </strong>
+                </p>
+
+                <table class="table table-solid table-solid-last">
+                  <tbody>
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">平日</th>
+                      <td class="table-col">75,380円&#126;</td>
+                    </tr>
+                    <tr class="table-row">
+                      <th class="table-head">休前日</th>
+                      <td class="table-col">82.380&#126;</td>
+                    </tr>
+                    <tr class="table-row table-row-last">
+                      <th class="table-head">GW・夏休みなど</th>
+                      <td class="table-col">85,580円&#126;</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+              </div>
+
+              <small class="important-note important-note-left">※各プランは、大人・小学生・幼児の人数により料金が異なります。
+              </small>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- section wide -->
+        <section class="section-camp" id="wide">
+          <div class="subpage-inner">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'section-camp-title',
+                heading_level: 3,
+                text: "グランピング・ワイド"
+              }) -%>
+            </div>
+
+            <div class="subpage-image-gallery">
+              <div class="swiper-container slider-gallery js-gallery2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/stay/wide-banner1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/stay/wide-banner2.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/stay/wide-banner3.jpg') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+
+              <small class="important-note important-note-left">
+                ※３枚目のらくらくBBQプランはイメージとなります。
+              </small>
+  
+              <div class="swiper-container slider-gallery-thumb js-gallery-thumb2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/stay/wide-banner1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/stay/wide-banner2.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/stay/wide-banner3.jpg') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              <span>
+                1日1組だけのプライベート空間で最上級のグランピング体験を。ホテルシェフがこだわり抜いた食材による贅沢なBBQも堪能できます。
+              </span>
+            </p>
+
+            <h4 class="subpage-title">
+              <span>客室詳細</span>
+            </h4>
+
+            <table class="table">
+              <tbody>
+      
+                <tr class="table-row">
+                  <th class="table-head">サイト数</th>
+                  <td class="table-col">
+                    1サイト（1区画：14m×10m）
+                    <br>
+                    <!-- <a class="u-show-pc" href="/assets/images/granroom/granroom-floorplan.png" title="3室、広さ69m2 ･ 床面フローリング（定員4?6名）、禁煙" id="js-lightbox">&gt; 間取りを見る</a> -->
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">チェックイン・<br>チェックアウト</th>
+                  <td class="table-col">
+                     チェックイン 15:00～18:00／<br>チェックアウト ～10:00
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">定員</th>
+                  <td class="table-col">
+                    4名
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">お食事</th>
+                  <td class="table-col u-show-pc">
+                    夕食：<a href="/f-glamping/bbq/#premium-bbq-pc"><span class="link-border-bottom">プレミアムBBQプラン</span></a>　or　
+                    <a href="/f-glamping/bbq/#special-bbq-pc"><span class="link-border-bottom">スペシャルBBQプラン</span></a>
+                    <br>
+                    朝食：ホテルツインリンク　<a href="/foods_m/marcherant.html"><span class="link-border-bottom">森のレストラン MARCHERANT</span></a>
+                    <p>※素泊まりプランは受け付けておりません。</p>
+                  </td>
+                  <td class="table-col u-show-sp table-width">
+                    夕食：<a href="/f-glamping/bbq/#premium-bbq-sp"><span class="link-border-bottom">プレミアムBBQプラン</span></a>　or
+                    <a href="/f-glamping/bbq/#special-bbq-sp"><span class="link-border-bottom">スペシャルBBQプラン</span></a>
+                    <br>
+                    朝食：ホテルツインリンク　<br><a href="/foods_m/marcherant.html"><span class="link-border-bottom">森のレストラン MARCHERANT</span></a>
+                    <p>※素泊まりプランは受け付けて<br>おりません。</p>
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">設備</th>
+                  <td class="table-col">
+                    室内：コットン製グランピングテント（タープ付き）／ セミダブルベット２台／ソファー／テーブル／ 冷蔵庫（冷凍庫付き）／電気ケトル／照明器具／ 電源／ 無料Wi-Fi
+                    室外：ハンモック／ ローチェアー（4脚）／ テーブル／イス／焚き火エリア／BBQコンロ（網付き）<br>
+                     夏季のみ：扇風機／サーキュレーター<br>
+                     冬季のみ：こたつ／加湿機能付ファンヒーター／電気毛布
+      
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">アメニティ</th>
+                  <td class="table-col">
+                    フェイスタオル／バスタオル<br>
+                    ※歯ブラシ・カミソリをご希望のお客様は、<br>
+                    チェックイン時キャンプ場受付にてお渡しいたします。
+                  </td>
+                </tr>
+      
+                <tr class="table-row">
+                  <th class="table-head">持参すると<br>
+                    よいもの</th>
+                  <td class="table-col">
+                    通年：コップ類(売店で紙コップ販売有り) ／ウエットティッシュ<br>
+                    夏：虫よけスプレー／虫さされ薬／フェイスタオル／日焼け止め／帽子<br>
+                    冬：厚手の靴下／ネックウォーマー／ニット帽／耳あて／ブランケット
+                  </td>
+                </tr>
+      
+              </tbody>
+            </table>
+            
+            <!-- camp usage fee -->
+            <div class="subpage-section subpage-section-usagefee">
+      
+              <div class="l-section-title">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-main heading-main-subpage heading-main-subpage-nogradient-onecolor heading-main-subpage-usagefee',
+                  subtextvg: 'granroom-usagefee-subtitle',
+                  altSubtextvg: 'ご利用料金'
+                }); -%>
+              </div>
+
+              <div class="table-wrap u-show-pc">
+
+                <h3 class="subpage-title">
+                  <span>ご宿泊料金＋プレミアムBBQプラン（夕食・朝食付き）</span>
+                </h3>
+
+                <table class="table table-solid">
+                  <tbody>
+    
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">ご利用人数	</th>
+                      <th class="table-col">オールシーズン</th>
+                    </tr>
+    
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">
+                        大人2名	
+                      </th>
+                      <td class="table-col">
+                        82.600円
+                      </td>
+                    </tr>
+    
+                    <tr class="table-row table-row-last">
+                      <th class="table-head">
+                        ４名 <br/>
+                        <small>（大人２名＋小学生or幼児２名）</small>	
+                      </th>
+                      <td class="table-col">
+                        97,860円
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+
+                <h3 class="subpage-title">
+                  <span>
+                    ご宿泊料金＋スペシャルBBQプラン（夕食・朝食付き）
+                  </span>
+                </h3>
+
+                <table class="table table-solid">
+                  <tbody>
+    
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">ご利用人数</th>
+                      <th class="table-col">平日</th>
+                      <th class="table-col">休前日</th>
+                      <th class="table-col">GW・夏休みなど</th>
+                    </tr>
+    
+                    <tr class="table-row table-row-last">
+                      <th class="table-head">
+                        ４名 <br/>
+                        <small>（大人２名＋小学生２名）</small>
+                      </th>
+                      <td class="table-col">
+                        75,380円&#126;
+                      </td>
+                      <td class="table-col">
+                        82.380円&#126;
+                      </td>
+                      <td class="table-col">
+                        85,580円&#126;
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="table-wrap u-show-sp">
+
+                <h3 class="subpage-title">
+                  <span>ご宿泊料金＋プレミアムBBQプラン（夕食・朝食付き）</span>
+                </h3>
+
+                <p>
+                  <strong>
+                    大人2名	
+                  </strong>
+                </p>
+
+                <table class="table table-solid table-solid-last">
+                  <tbody>
+                    <tr class="table-row table-row-solid table-row-last">
+                      <th class="table-head">オールシーズン</th>
+                      <td class="table-col">82.600円</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>
+                  <strong>
+                    ４名（大人２名＋小学生or幼児２名）	
+                  </strong>
+                </p>
+
+                <table class="table table-solid table-solid-last">
+                  <tbody>
+                    <tr class="table-row table-row-solid table-row-last">
+                      <th class="table-head">オールシーズン</th>
+                      <td class="table-col">97,860円</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h3 class="subpage-title">
+                  <span>ご宿泊料金＋スペシャルBBQプラン（夕食・朝食付き）</span>
+                </h3>
+
+                <p>
+                  <strong>
+                    ４名（大人２名＋小学生２名）
+                  </strong>
+                </p>
+
+                <table class="table table-solid table-solid-last">
+                  <tbody>
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">平日</th>
+                      <td class="table-col">75,380円&#126;</td>
+                    </tr>
+                    <tr class="table-row">
+                      <th class="table-head">休前日</th>
+                      <td class="table-col">82.380&#126;</td>
+                    </tr>
+                    <tr class="table-row table-row-last">
+                      <th class="table-head">GW・夏休みなど</th>
+                      <td class="table-col">85,580円&#126;</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+              </div>
+
+              <small class="important-note important-note-left">※各プランは、大人・小学生・幼児の人数により料金が異なります。
+              </small>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- section site -->
+        <section class="section-camp" id="site">
+          <div class="subpage-inner">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'section-camp-title',
+                heading_level: 3,
+                text: "グランピング・ワイド"
+              }) -%>
+            </div>
+
+            <div class="subpage-image-gallery">
+              <div class="swiper-container slider-gallery js-gallery3">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/stay/site-banner1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/stay/site-banner2.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/stay/site-banner3.jpg') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+
+              <small class="important-note important-note-left">
+                ※３枚目のらくらくBBQプランはイメージとなります。
+              </small>
+  
+              <div class="swiper-container slider-gallery-thumb js-gallery-thumb3">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/stay/site-banner1.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/stay/site-banner2.jpg') -%>)"></div>
+                  </div>
+                  <div class="swiper-slide slider-item">
+                    <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/stay/site-banner3.jpg') -%>)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              <span>
+                はじめてのグランピング体験におすすめ。小さなお子さま連れの家族や、大切な人と２人でゆったりとくつろぐことができます。
+              </span>
+            </p>
+
+            <h4 class="subpage-title">
+              <span>客室詳細</span>
+            </h4>
+            
+            <table class="table">
+              <tbody>
+  
+                <tr class="table-row">
+                  <th class="table-head">サイト数</th>
+                  <td class="table-col">
+                    10サイト（1区画: 10m×10m）
+                    <br>
+                    <!-- <a class="u-show-pc" href="/assets/images/granroom/granroom-floorplan.png" title="3室、広さ69m2 ･ 床面フローリング（定員4?6名）、禁煙" id="js-lightbox">&gt; 間取りを見る</a> -->
+                  </td>
+                </tr>
+  
+                <tr class="table-row">
+                  <th class="table-head">チェックイン &#183; <br>チェックアウト</th>
+                  <td class="table-col">
+                     チェックイン 15:00&#126;18:00／<br>チェックアウト &#126;10:00
+                  </td>
+                </tr>
+  
+                <tr class="table-row">
+                  <th class="table-head">定員</th>
+                  <td class="table-col">
+                    4名
+                  </td>
+                </tr>
+  
+                <tr class="table-row">
+                  <th class="table-head">お食事</th>
+                  <td class="table-col">
+                    夕食：<a href="/f-glamping/bbq/#rakuraku-bbq-pc"><span class="link-border-bottom">らくらくBBQプラン</span></a><br>
+                    朝食：ホテルツインリンク　<a href="/foods_m/marcherant.html"><span class="link-border-bottom">森のレストラン MARCHERANT</span></a>
+                    <p>※素泊まりプランもございます。</p>
+                  </td>
+                </tr>
+  
+                <tr class="table-row">
+                  <th class="table-head">設備</th>
+                  <td class="table-col">
+                    室内: コットン製グランピングテント（タープ付き）／セミダブルベット２台／ソファー／テーブル／ 冷蔵庫（冷凍庫付き）／電気ケトル／照明器具／電源／ 無料Wi-Fi
+                    室外: ハンモック／ ローチェアー（4脚）／ テーブル／イス／焚き火台／BBQコンロ（網付き）<br>
+                     夏季のみ: 扇風機／サーキュレーター<br>
+                     冬季のみ: こたつ／加湿機能付ファンヒーター／電気毛布
+  
+                  </td>
+                </tr>
+  
+                <tr class="table-row">
+                  <th class="table-head">アメニティ</th>
+                  <td class="table-col">
+                    フェイスタオル／バスタオル<br>
+                    ※歯ブラシ &#183; カミソリをご希望のお客様は、<br>
+                    チェックイン時（キャンプ場受付にて）お渡しいたします。
+                  </td>
+                </tr>
+  
+                <tr class="table-row">
+                  <th class="table-head">持参すると<br>
+                    よいもの</th>
+                  <td class="table-col">
+                    通年: コップ類(売店で紙コップ販売有り)／ウエットティッシュ<br>
+                    夏: 虫よけスプレー／虫さされ薬／フェイスタオル／日焼け止め／帽子<br>
+                    冬: 厚手の靴下／ネックウォーマー／ニット帽／耳あて／ブランケット
+                  </td>
+                </tr>
+  
+              </tbody>
+            </table>
+            
+            <!-- camp usage fee -->
+            <div class="subpage-section subpage-section-usagefee">
+      
+              <div class="l-section-title">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-main heading-main-subpage heading-main-subpage-nogradient-onecolor heading-main-subpage-usagefee',
+                  subtextvg: 'granroom-usagefee-subtitle',
+                  altSubtextvg: 'ご利用料金'
+                }); -%>
+              </div>
+
+              <div class="table-wrap u-show-pc">
+
+                <h3 class="subpage-title">
+                  <span>ご宿泊料金＋らくらくBBQプラン（夕食&#183;朝食付き）</span>
+                </h3>
+
+                <table class="table table-solid">
+                  <tbody>
+    
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">ご利用人数	</th>
+                      <th class="table-col">平日</th>
+                      <th class="table-col">休前日</th>
+                      <th class="table-col">GW・夏休みなど</th>
+                    </tr>
+    
+                    <tr class="table-row table-row-last">
+                      <th class="table-head">
+                        ４名 <br/>
+                        <small>（大人２名＋小学生２名）</small>
+                      </th>
+                      <td class="table-col">
+                        47,780円&#126;
+                      </td>
+                      <td class="table-col">
+                        52,860円&#126;
+                      </td>
+                      <td class="table-col">
+                        57,980円&#126;
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+
+                <h3 class="subpage-title">
+                  <span>
+                    素泊まりプラン
+                  </span>
+                </h3>
+
+                <table class="table table-solid">
+                  <tbody>
+    
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">ご利用人数</th>
+                      <th class="table-col">平日</th>
+                      <th class="table-col">休前日</th>
+                      <th class="table-col">GW・夏休みなど</th>
+                    </tr>
+    
+                    <tr class="table-row table-row-last">
+                      <th class="table-head">
+                        ４名 <br/>
+                        <small>（大人２名＋小学生２名）</small>
+                      </th>
+                      <td class="table-col">
+                        20,400円&#126;
+                      </td>
+                      <td class="table-col">
+                        25,500円&#126;
+                      </td>
+                      <td class="table-col">
+                        30,600円&#126;
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="table-wrap u-show-sp">
+
+                <h3 class="subpage-title">
+                  <span>ご宿泊料金＋らくらくBBQプラン（夕食&#183;朝食付き）</span>
+                </h3>
+
+                <p>
+                  <strong>
+                    ４名（大人２名＋小学生２名）
+                  </strong>
+                </p>
+
+                <table class="table table-solid table-solid-last">
+                  <tbody>
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">平日</th>
+                      <td class="table-col">47,780円&#126;</td>
+                    </tr>
+                    <tr class="table-row">
+                      <th class="table-head">休前日</th>
+                      <td class="table-col">52,860円&#126;</td>
+                    </tr>
+                    <tr class="table-row table-row-last">
+                      <th class="table-head">GW・夏休みなど</th>
+                      <td class="table-col">57,980円&#126;</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h3 class="subpage-title">
+                  <span>素泊まりプラン</span>
+                </h3>
+
+                <p>
+                  <strong>
+                    ４名（大人２名＋小学生２名）
+                  </strong>
+                </p>
+
+                <table class="table table-solid table-solid-last">
+                  <tbody>
+                    <tr class="table-row table-row-solid">
+                      <th class="table-head">平日</th>
+                      <td class="table-col">20,400円&#126;</td>
+                    </tr>
+                    <tr class="table-row">
+                      <th class="table-head">休前日</th>
+                      <td class="table-col">25,500円&#126;</td>
+                    </tr>
+                    <tr class="table-row table-row-last">
+                      <th class="table-head">GW・夏休みなど</th>
+                      <td class="table-col">30,600円&#126;</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+
+              <small class="important-note important-note-left">
+                ※各プランは、大人・小学生・幼児の人数により料金が異なります。
+              </small>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- banner info -->
+        <section class="l-section banner-info banner-info-camp">
+          <a href="/hoteltwinring/">
+            <div class="block-image-inner hoteltwinring-lounge" style="background-image: url(<%= mix('/assets/images/camp/hotel-banner.jpg') %>);">
+              <div class="block-image-text-wrap hoteltwinring l-container-m">
+                <div class="block-image-text block-image-text-hellowoods">
+                  <span class="heading-text">Hotel Twinring</span>
+                  <%- include('/partials/heading', {
+                    modifier: 'room-type heading-banner-camp',
+                    headingSubtext: 'ホテルツインリンク'
+                  }) %>
+                  <span class="block-image-subtext">
+                    森を感じるホテルのコンセプトルーム
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+
+        <!-- END BOTTOM -->
+
+        <!-- hotel reservation -->
+        <%- include('/partials/f-glamping-reservation') -%>
+    
+        <!-- recommendation module -->
+        <%- include('/partials/recommendation') -%>
+    
+        <!-- pick up module -->
+        <%- include('/partials/pickup') -%>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsStay
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

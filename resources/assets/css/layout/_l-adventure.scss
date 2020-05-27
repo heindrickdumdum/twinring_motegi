@@ -10,6 +10,39 @@
   padding-left: 90px;
   padding-right: 90px;
 
+  &-hellowoods,
+  &-mobipark {
+    padding-top: 20px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 0px !important;
+    }
+  }
+
+  &-hotel {
+    padding-top: 1px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 0px !important;
+    }
+  }
+
+  &-motorsport {
+    padding-top: 15px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 0px !important;
+    }
+  }
+
+  &-hondacollection {
+    padding-top: 15px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 0px;
+    }
+  }
+
   .restaurant-container & {
     @include min-screen($breakpoint-mobile + 1) {
       padding-left: 60px;

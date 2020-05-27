@@ -147,14 +147,24 @@
       bottom: -28px;
     }
 
+    &-hellowoods {
+      max-width: 210px;
+      bottom: 0px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 85px;
+        bottom: 15px;
+      }
+    }
+
     &-mobipark {
-      max-width: 206px;
-      bottom: -67px;
+      max-width: 180px;
+      bottom: 0px;
 
       @include max-screen($breakpoint-mobile) {
         height: auto;
-        max-width: 122px;
-        bottom: -40px;
+        max-width: 85px;
+        bottom: 0x;
       }
     }
 
@@ -170,30 +180,30 @@
     }
 
     &-hotel {
-      max-width: 311px;
-      bottom: -60px;
+      max-width: 215px;
+      bottom: 25px;
 
       @include max-screen($breakpoint-mobile) {
         height: auto;
-        max-width: 152px;
-        bottom: -20px;
+        max-width: 95px;
+        bottom: 20px;
       }
     }
 
     &-motorsport {
-      max-width: 222px;
-      bottom: -68px;
+      max-width: 195px;
+      bottom: -5px;
 
       @include max-screen($breakpoint-mobile) {
         height: auto;
-        max-width: 92px;
-        bottom: -15px;
+        max-width: 80px;
+        bottom: 8px;
       }
     }
 
     &-hondacollection {
-      max-width: 186px;
-      bottom: -56px;
+      max-width: 160px;
+      bottom: 0px;
 
       @include max-screen($breakpoint-mobile) {
         height: auto;

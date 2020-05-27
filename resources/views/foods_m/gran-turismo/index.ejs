@@ -9,7 +9,7 @@
 <div class="lig-content">
   <div class="subpage subpage-restaurant restaurant-wrapper">
     <div class="mv mv-restaurant mv-subpage-restaurant">
-      <div class="mv-buttons">
+      <!-- <div class="mv-buttons">
         <ul class="mv-buttons-list">
           <li class="mv-buttons-item">
             <a class="mv-buttons-link" href="/foods_m/">
@@ -17,7 +17,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <ul class="mv-list">
         <li class="mv-item">
@@ -78,8 +78,7 @@
 
           <div class="subpage-banner subpage-banner-craft">
             <div class="subpage-banner-inner">
-              <img class="" src="<%= mix('/assets/images/granturismo/subpage-banner.jpg') %>" alt="無料で体験できるグランツーリスモSPORT。好きな車を選んで、様々なコースに挑戦しよう！">
-              <!-- <img class="u-show-sp" src="<%= mix('/assets/images/granturismo/subpage-banner-sp.jpg') %>" alt="無料で体験できるグランツーリスモSPORT。好きな車を選んで、様々なコースに挑戦しよう！"> -->
+              <img class="" src="<%= mix('/assets/images/granturismo/subpage-banner.jpg') %>" alt="プレイステーションのカーレースゲーム「グランツーリスモ」の世界観を楽しみながら食事ができるレストランです。">
             </div>
           </div>
 
@@ -91,12 +90,12 @@
             <span>店舗情報</span>
           </h2>
 
-          <table class="table table-craft">
+          <table class="table table-rocco">
             <tbody>
               <tr class="table-row">
                 <th class="table-head">場所</th>
                 <td class="table-col">
-                  パドック（最寄の駐車場 : 第1パドック駐車場）
+                  パドック（最寄の駐車場 : <a class="link" href="/map_m/">第1パドック駐車場</a>）
                 </td>
               </tr>
 
@@ -104,7 +103,7 @@
                 <th class="table-head">営業時間</th>
                 <td class="table-col">
                   ツインリンクもてぎ営業時間内 <br/>
-                  ※平日は11:00&#126;15:00まで営業
+                  <a class="link" href="/hours_m/">※平日は11:00&#126;15:00まで営業</a>
                 </td>
               </tr>
 
@@ -136,16 +135,18 @@
         <div class="u-show-pc">
           <%- include('/partials/button', {
             modifier: 'restaurant-button',
-            link: '#',
-            text: '冬のおすすめメニューはこちら (PDF:4.1MB)'
+            link: '/assets/images/granturismo/gtcafe_menu_202003.pdf',
+            text: '春のおすすめメニューはこちら (PDF:2.4MB)',
+            newTab: true
           }) -%>
         </div>
 
         <div class="u-show-sp">
           <%- include('/partials/button', {
             modifier: 'restaurant-button',
-            link: '#',
-            text: '冬のおすすめメニューは<br/>こちら (PDF:4.1MB)'
+            link: '/assets/images/granturismo/gtcafe_menu_202003.pdf',
+            text: '春のおすすめメニューはこちら (PDF:2.4MB)',
+            newTab: true
           }) -%>
         </div>
       </div>

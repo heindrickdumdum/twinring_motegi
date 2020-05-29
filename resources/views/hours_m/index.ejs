@@ -1,6 +1,6 @@
 <%
   var title = 'ご宿泊予約｜ホテルツインリンク｜ツインリンクもてぎ';
-  pageId = 'information';
+  pageId = 'businessHours';
 %>
 <%- include('/partials/head', { pageId, title }) -%>
 
@@ -30,9 +30,9 @@
       <section class="l-section">
         <div class="l-section-title">
           <%- include('/partials/heading', {
-            modifier: 'heading-wrap-center',
+            modifier: 'heading-wrap-center heading-wrap-business-hours-guide',
             text: 'Business Hours Guide',
-            alt: 'information',
+            alt: 'Business Hours Guide',
             altSubtext: '',
             subtextvg: 'guide-title'
           }) %>
@@ -55,6 +55,6 @@
 
 <!-- BREADCRUMBS -->
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsReserve
+  breadcrumbs : getData().data.breadcrumbsBusinessHours
 }) -%>
 <%- include('/partials/footer', { pageId }) -%>

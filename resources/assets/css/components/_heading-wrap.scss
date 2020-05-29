@@ -341,6 +341,12 @@
     }
   }
 
+  &.heading-wrap-business-hours-guide {
+    .heading-text {
+      font-size: 40px;
+    }
+  }
+
   &.heading-wrap-hellowoods {
     .heading-subtext {
       @include max-screen ($breakpoint-mobile) {

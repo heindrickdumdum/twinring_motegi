@@ -1,0 +1,119 @@
+.section-concept {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+
+  .concept-content {
+    display: flex;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+    }
+  }
+
+  .concept {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 611px;
+    }
+
+    &-item {
+      display: flex;
+      margin-bottom: 54px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 41px;
+      }
+    }
+
+    &-image {
+      img {
+        max-width: 160px;
+
+        @include max-screen($breakpoint-mobile) {
+          max-width: 100px;
+        }
+      }
+    }
+
+    &-text {
+      margin-left: 42px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-left: 18px;
+      }
+
+      .heading {
+        margin: 0;
+
+        .heading-subtext {
+          margin-top: 0px;
+          margin-bottom: 18px;
+          height: 27px;
+          width: 100px;
+
+          @include max-screen($breakpoint-mobile) {
+            width: 60px;
+            height: 17px;
+            margin: {
+              left: 0px;
+              right: 0px;
+              bottom: 14px;
+            }
+          }
+
+          svg {
+            display: block;
+          }
+        }
+      }
+
+      .concept-desc {
+        font-size: 15px;
+        color: $color-white;
+        line-height: 2;      
+        letter-spacing: 0.1em;  
+
+        @include max-screen($breakpoint-mobile) {
+          font-size: 13px;
+          line-height: 1.615;
+        }
+      }
+    }
+
+    &-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      .gallery-item {
+        width: 272px;
+        margin-right: 20px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: calc(50% - 5px);
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+
+        &:nth-child(2) {
+          margin-right: 0px;
+        }
+
+        &:nth-child(3) {
+          width: 561px;
+          margin-right: 0px;
+        }
+
+        &:nth-child(5) {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}

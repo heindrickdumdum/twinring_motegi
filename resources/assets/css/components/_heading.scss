@@ -63,6 +63,21 @@
     }
   }
 
+  @at-root .toya-main-title-heading & {//toya
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile) {
+        width: 455px;
+        height: 367px;
+      }
+
+      @include max-screen($breakpoint-mobile + 1) {
+        width: 263px;
+        height: 276px;
+        margin-top: 101px;
+      }
+    }
+  }
+
   &-adventure-restaurant {//restaurant page
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
@@ -164,6 +179,14 @@
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.1em;
   font-size: 36px;
+
+  @at-root .heading-white & {//white text for dark background
+    background: none !important;
+    color: $color-white !important;
+    -webkit-text-fill-color: $color-white !important;
+    -moz-text-fill-color: $color-white !important;
+    -ms-text-fill-color: $color-white !important;
+  }
 
   .heading-main-subpage-granroomactivity-onecolor & {//hotel granroom
     background: none !important;
@@ -352,13 +375,70 @@
   }
 }
 
-.heading-menu-toya {//toya page
-  @include min-screen($breakpoint-mobile + 1) {
-    padding: {
-      top: 148px;
-    };  
+.heading-toya-concept {//toya page
+  .heading {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin: {
+        top: 135px;
+        bottom: 75px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin: {
+        top: 93px;
+        bottom: 53px;
+      }
+    }
   }
 
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 322px;
+      height: 35px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 228.5px;
+      height: 25px;
+    }
+  }
+}
+
+.toya-main-title-heading {//toya page
+  .heading {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin: {
+        top: 150px;
+      }
+    }
+  }
+}
+
+.heading-toya-experience {//toya page
+  .heading {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin: {
+        top: 0px;
+        bottom: 60px;
+      }
+    }
+  }
+
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 411px;
+      height: 35px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 292px;
+      height: 25px;
+    }
+  }
+}
+
+.heading-menu-toya {//toya page
   .heading {
     margin: {
       top: 0;

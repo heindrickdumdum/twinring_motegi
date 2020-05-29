@@ -39,6 +39,28 @@
     &:before {
       display: none;
     }
+
+    main {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1000px;
+        background-image: url('/assets/images/toya/wrapper-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        top: -320px;
+        z-index: 0;
+        background-position: center bottom;
+
+        @include max-screen($breakpoint-mobile) {
+          height: 683px;
+          background-image: url('/assets/images/toya/wrapper-bg-sp.jpg');
+        }
+      }
+    }
   }
 
   &::after {
@@ -189,6 +211,33 @@
   margin: 0 auto 60px;
   padding: 0 20px;
   width: 100%;
+
+  &-toya-menu {//toya page
+    & > .subpage-inner {
+      padding-bottom: 20px !important;
+    }
+  }
+
+  @at-root .toya-menu & {//toya page
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 5px;
+        right: 5px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0px;
+        padding-bottom: 51px;
+      }
+    }
+  }
+
+  @at-root &-toya {//toya page
+    max-width: 1222px;
+    padding: 0px;
+  }
 
   @at-root .toya-wrapper & {//toya page
     margin: {

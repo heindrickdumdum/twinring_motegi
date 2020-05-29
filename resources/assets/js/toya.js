@@ -3,6 +3,8 @@ let i, j, tabContent, tabLink;
 tabContent = document.querySelectorAll('.js-tab-content');
 tabLink = document.querySelectorAll('.js-tab-link');
 
+tabLink[0].classList.add('is-active');
+
 tabContent.forEach(item => {
   item.style.height = "0px";
   item.style.opacity = 0;
@@ -43,9 +45,14 @@ slider({
   options: {
     speed: 1500,
     spaceBetween: 20,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    loop: true,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
     }
   }
 });

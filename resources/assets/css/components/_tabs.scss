@@ -177,41 +177,97 @@
 
 
 .tab-toya {//toya page
-  @include min-screen($breakpoint-mobile + 1) {
-    margin-top: 140px;
+  background-color: $color-black;
+  padding: 60px 40px;
+  margin-top: 40px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 39px 17px;
   }
 
   .tab-list {
     display: flex;
     justify-content: center;
 
-    @include min-screen($breakpoint-mobile + 1) {
-      margin-bottom: 56px;
+    @include max-screen($breakpoint-mobile) {
+      flex-wrap: wrap;
     }
   }
 
   .tab-item {
-    width: 25px;
-    font-size: 24px;
-    font-family: serif;
-    color: rgb(255, 255, 255);
-    line-height: 1.2;
-    text-align: center;  
-    font-weight: bold;  
+    font-size: 13px;
+    color: $color-white;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     cursor: pointer;
-    transition: color 0.3s ease-in-out;
-    margin-right: 80px;
+    width: 25%;
+    padding: {
+      top: 16px;
+      bottom: 16px;
+    }
+    border: 1px solid $color-dark-yellow;
+    border-right-width: 0px;
+    background-size: 105%;
+    background-position: center;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 50%;
+      background-size: 170%;
+      border-right-width: 1px;
+      border-bottom-width: 0px;
+      align-items: center;
+    }
+
+    &:nth-child(3) {
+      @include max-screen($breakpoint-mobile) {
+        border-bottom-width: 1px;
+      }
+    }
 
     &:last-child {
-      margin-right: 0px;
+      border-right: 1px solid $color-dark-yellow;
+      @include max-screen($breakpoint-mobile) {
+        border-bottom-width: 1px;
+      }
     }
 
-    &.is-active {
-      color: #422603;
+    svg {
+      width: 23px;
+      height: 23px;
     }
 
-    &:hover {
-      color: #422603;
+    span {
+      margin-left: 15px;
+    }
+
+    @at-root &:nth-child(4) {//winter
+      &.is-active,
+      &:hover {
+        background-image: url('/assets/images/toya/winter-tab-on.jpg') !important;
+      }
+    }
+
+    @at-root &:nth-child(3) {//autumn
+      &.is-active,
+      &:hover {
+        background-image: url('/assets/images/toya/autumn-tab-on.jpg') !important;
+      }
+    }
+
+    @at-root &:nth-child(2) {//summer
+      &.is-active,
+      &:hover {
+        background-image: url('/assets/images/toya/summer-tab-on.jpg') !important;
+      }
+    }
+
+    @at-root &:nth-child(1) {//spring
+      &.is-active,
+      &:hover {
+        background-image: url('/assets/images/toya/spring-tab-on.jpg') !important;
+      }
     }
   }
 

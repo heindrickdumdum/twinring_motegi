@@ -42,7 +42,8 @@
   }
 
   &.table-toya {//toya page
-    background-color: #000000;
+    background-color: transparent;
+    margin-top: 120px;
 
     @at-root & {
       .link {
@@ -50,12 +51,19 @@
       }
 
       .table-head {
-        background-color: #312911;
+        background-color: rgba($color: $color-dark-yellow, $alpha: 0.30);
         color: $color-white;
-        border-color: #987e33;
+        border-color: $color-dark-yellow;
 
         &:first-child {
           border-left: 0px solid;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          padding-left: 11px;
+          text-align: left;
+          vertical-align: top;
+          font-size: 12px;          
         }
       }
 
@@ -66,7 +74,16 @@
         left: 54px;
        }
        border-right: 0px solid;
-       border-color: #987e33;
+       border-color: $color-dark-yellow;
+
+       @include max-screen($breakpoint-mobile) {
+        padding-left: 11px;
+        font-size: 12px;
+       }
+      }
+
+      .table-row-last {
+        border-bottom-color: $color-dark-yellow !important;
       }
     }
   }

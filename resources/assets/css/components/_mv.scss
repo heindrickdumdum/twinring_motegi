@@ -6,6 +6,10 @@
     height: 350px;
   }
 
+  @at-root .toya-wrapper & {//toya page
+    z-index: 1;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -17,7 +21,7 @@
     background-size: cover;
 
     @at-root .toya-wrapper & {//toya page
-      background-image: url(#{$image-path}mv-curve-black.png) !important;
+      display: none;
     }
 
     @include max-screen($breakpoint-mobile) {
@@ -332,11 +336,13 @@
       
       @at-root .toya-wrapper & {//toya page
         @include min-screen($breakpoint-mobile + 1) {
-          max-width: 383px !important;
+          width: 396px !important;
+          height: 61px !important;
         }
 
         @include max-screen($breakpoint-mobile) {
-          max-width: 183px !important;
+          max-width: 231px !important;
+          height: 35px !important;
         }
       }
     }
@@ -1417,6 +1423,10 @@
 
 .mv-image-subpage {
   background-position-y: 25%;
+
+  @at-root .toya-wrapper & {//toya page
+    background-position-y: bottom;
+  }
 }
 
 .mv-top {

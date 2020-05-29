@@ -131,3 +131,77 @@
     }
   }
 }
+
+.toya-reservation {//toya page
+  .hotel-reservation-wrap {
+    background-image: url('/assets/images/toya/toya-reservation-bg.jpg');
+  }
+
+  .reservation-desc {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    color: $color-white;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .reservation-cta {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 1020px
+    }
+
+    .cta-btn {
+      width: 50%;
+      padding: {
+        left: 42px;
+        right: 42px;
+      }
+
+      &:first-child {
+        padding-left: 0px;
+      }
+
+      &:last-child {
+        padding-right: 0px;
+      }
+
+      .reservation-button {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+        border-width: 0px;
+        background-color: $color-white;
+        font-size: 26px;
+        font-weight: bold;
+        height: 110px;
+
+        .button-icon {
+          display: none;
+        }
+
+        @at-root & span {
+          color: $base-font-color;
+          font-size: 26px;
+          letter-spacing: 0.1em;
+
+          small {
+            display: block;
+            font-size: 13px !important;
+          }
+        }
+      }
+    }
+
+    span {
+      font-size: 18px;
+      color: $color-white;
+      font-weight: bold;
+      display: block;
+      text-align: center;
+    }
+  }
+}

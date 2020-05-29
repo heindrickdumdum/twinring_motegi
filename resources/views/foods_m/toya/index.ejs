@@ -9,25 +9,25 @@
 <div class="lig-content">
   <div class="subpage subpage-restaurant restaurant-wrapper toya-wrapper">
     <div class="mv mv-restaurant mv-subpage-restaurant">
-      <div class="mv-buttons">
-        <ul class="mv-buttons-list">
-          <li class="mv-buttons-item">
-            <a class="mv-buttons-link" href="/foods_m/">
-              <span>ご予約</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
       <ul class="mv-list">
         <li class="mv-item">
-          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/toya/mv-img.jpg') %>);"></div>
-          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/toya/mv-img-sp.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/toya/mv-img.png') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/toya/mv-img-sp.png') %>);"></div>
         </li>
       </ul>
 
       <div class="l-container mv-container">
         <div class="mv-heading hellowoods-mv-heading rocco-mv-heading u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Japanese Dining Toya',
+            subtextvg: 'toya-top-title',
+            altSubtextvg: '里山懐石 登谷'
+          }) %>
+        </div>
+
+        <div class="mv-heading hellowoods-mv-heading rocco-mv-heading u-show-sp">
           <%- include('/partials/heading', {
             modifier: 'heading-hellowoods',
             heading_level: 1,
@@ -46,96 +46,277 @@
 
     <main>
       <div class="subpage-inner-wrap">
+        <div class="bg-black">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'toya-main-title-heading',
+              subtextvg: 'toya-main-title',
+              altSubtextvg: '1日3組限定、 もてぎ最上級の 食材・器・空間とともに 里山ならではの ”滋味”をご堪能いただける 「里山懐石」で おもてなし'
+            }) -%>
+          </div>
 
-        <!-- top content -->
-        <div class="bg-black toya-bg-mountain" style="background-image: url(<%= mix('/assets/images/toya/bg-mountain.png') %>);">
-          <div class="subpage-inner">
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'toya-main-title-heading',
+              subtextvg: 'toya-main-title-sp',
+              altSubtextvg: '1日3組限定、 もてぎ最上級の 食材・器・空間とともに 里山ならではの ”滋味”をご堪能いただける 「里山懐石」で おもてなし'
+            }) -%>
+          </div>
 
-            <div class="subpage-banner subpage-banner-toya">
-              <div class="subpage-banner-inner">
-                <img class="" src="<%= mix('/assets/images/toya/subpage-banner.jpg') %>" alt="森のジェラテリア　ROCCO">
+          <section class="section-concept">
+            <div class="subpage-inner subpage-inner-toya">
+              <div class="l-section-title">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-concept heading-white heading-toya-concept',
+                  heading_level: '2',
+                  text: 'Concept',
+                  subtextvg: 'toya-concept-title',
+                  altSubtextvg: '「里山懐石」とは'
+                }) -%>
+              </div>
+
+              <div class="concept-content">
+                <div class="concept">
+                  <ul class="concept-list">
+                    <% getData().data.toyaConceptlist.forEach(item => { %>
+                      <li class="concept-item">
+                        <div class="concept-image">
+                          <img src="<%- item.image -%>" alt="<%- item.alt -%>">
+                        </div>
+                        <div class="concept-text">
+                          <div class="concept-title">
+                            <%- include('/partials/heading', {
+                              modifier: 'concept-heading',
+                              subtextvg: item.svgtext,
+                              altSubtextvg: item.alt
+                            }) -%>
+                          </div>
+                          <p class="concept-desc">
+                            <%- item.desc -%>
+                          </p>
+                        </div>
+                      </li>
+                    <% }); %>
+                  </ul>
+                </div>
+                <div class="concept">
+                  <ul class="concept-gallery">
+                    <% getData().data.toyaConceptGallery.forEach(item => { %>
+                      <li class="gallery-item">
+                        <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+                      </li>
+                    <% }); %>
+                  </ul>
+                </div>
               </div>
             </div>
-            
-            <div class="l-section-title u-show-pc">
-              <%- include('/partials/heading', {
-                modifier: 'heading-main-toya',
-                subtextvg: 'toya-main-title',
-                altSubtextvg: `茂木町や近隣の
-                              旬な食材を活用し、
-                              素材の持ち味を生かし
-                              一品一品丁寧に仕上げた
-                              里山ならではの
-                              “滋味”を
-                              ご堪能いただける料理で
-                              おもてなしいたします。
+          </section>
 
+          <section class="experience">
+            <div class="subpage-inner">
+              <div class="l-section-title">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-experience heading-white heading-toya-experience',
+                  text: 'Experience',
+                  subtextvg: 'toya-experience-title',
+                  altSubtextvg: '「登谷」だけの愉しみ'
+                }) -%>
+              </div>
 
-                              茂木町や近隣の
-                              旬な食材を活用し、
-                              素材の持ち味を生かし
-                              一品一品丁寧に仕上げた
-                              里山ならではの
-                              “滋味”を
-                              ご堪能いただける料理で
-                              おもてなしいたします。`
-              }) -%>
+              <div class="experience-content">
+                <div class="experience-tag">
+                  <%- include('/partials/svg', {
+                    name: 'toya-exprience-tag',
+                    svgtitle: '料理長　谷田部義憲'
+                  }) -%>
+                </div>
+
+                <div class="experience-image">
+                  <img src="<%- mix('/assets/images/toya/experience-chef.jpg') -%>" alt="料理長　谷田部義憲">
+                </div>
+
+                <div class="experience-text">
+                  <p class="toya-experience-1">
+                    <%- include('/partials/svg', {
+                      name: 'toya-experience-1',
+                      svgtitle: '料理長の想い'
+                    }) -%>
+                  </p>
+
+                  <h2 class="toya-experience-2">
+                    <%- include('/partials/svg', {
+                      name: 'toya-experience-2',
+                      svgtitle: `ひと皿ひと皿に
+                      「一期一会」の想いをこめて`
+                    }) -%>
+                  </h2>
+
+                  <p class="experience-desc">
+                    ひと皿ひと皿に「一期一会」の想いをこめて料理を作っています。目の前にある、お皿との出会いは“生涯二度とない機会”であり、また、お客様が料理を楽しんで頂いているこの時間も“生涯二度とない機会”だと思います。<br/>
+                    だからこそ、お客様の大切なひと時を精一杯大切に思い、私達が出来る最高のおもてなしをさせて頂きたいと思います。
+                  </p>
+                </div>
+              </div>
             </div>
-            
-            <div class="l-section-title u-show-sp">
-              <%- include('/partials/heading', {
-                modifier: 'heading-main-toya',
-                subtextvg: 'toya-main-title-sp',
-                altSubtextvg: `茂木町や近隣の
-                              旬な食材を活用し、
-                              素材の持ち味を生かし
-                              一品一品丁寧に仕上げた
-                              里山ならではの
-                              “滋味”を
-                              ご堪能いただける料理で
-                              おもてなしいたします。
+          </section>
+        </div>
 
-
-                              茂木町や近隣の
-                              旬な食材を活用し、
-                              素材の持ち味を生かし
-                              一品一品丁寧に仕上げた
-                              里山ならではの
-                              “滋味”を
-                              ご堪能いただける料理で
-                              おもてなしいたします。`
-              }) -%>
+        <div class="experience-commit">
+          <% getData().data.toyaExperienceData.forEach(item => { %>
+          <div class="experience-container" style="background-image: url(<%- item.bgSrc -%>);">
+            <div class="subpage-inner subpage-inner-toya">
+              <div class="columns">
+                <div class="tags tags-<%- item.svgtag -%>">
+                  <%- include('/partials/svg', {
+                    name: item.svgtag,
+                    svgtitle: item.tagalt
+                  }) -%>
+                </div>
+                <% if( !item.withSP ) { %>
+                <h3 class="heading heading-<%- item.svgtitle -%>">
+                  <%- include('/partials/svg', {
+                    name: item.svgtitle,
+                    svgtitle: item.titlealt
+                  }); -%>
+                </h3>
+                <% } else { %>
+                <h3 class="heading heading-<%- item.svgtitle -%> u-show-pc">
+                  <%- include('/partials/svg', {
+                    name: item.svgtitle,
+                    svgtitle: item.titlealt
+                  }); -%>
+                </h3>
+                <h3 class="heading heading-<%- item.svgtitle -%> u-show-sp">
+                  <%- include('/partials/svg', {
+                    name: item.svgtitle + '-sp',
+                    svgtitle: item.titlealt
+                  }); -%>
+                </h3>
+                <% } %>
+                <p class="desc">
+                  <%- item.desc -%>
+                </p>
+              </div>
+              <div class="columns">
+                <div class="image">
+                  <img src="<%- item.image -%>" alt="<%- item.alt -%>">
+                </div>
+              </div>
             </div>
           </div>
+          <% }); %>
+        </div>
 
-          <div class="food">
+        <section class="toya-menu">
+          <div class="subpage-inner subpage-inner-toya subpage-inner-toya-menu">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-restaurant-menu heading-menu-toya svg-block',
+                text: 'Menu',
+                subtextvg: 'toya-menu-subtext',
+                altSubtextvg: '御献立'
+              }) %>
+            </div>
+
             <div class="subpage-inner">
-              <ul class="food-list">
-                <% getData().data.restaurantToyaFood.forEach(item => { %>
-                  <li class="food-item">
-                    <div class="food-image">
-                      <img src="<%- item.image -%>" alt="<%- item.alt -%>">
-                    </div>
-                    <div class="food-text">
-                      <div class="food-title">
-                        <%- include('/partials/heading', {
-                          modifier: 'heading-food',
-                          subtextvg: item.svgtext,
-                          altSubtextvg: item.alt
-                        }) -%>
-                      </div>
-                      <p class="food-desc">
-                        <%- item.desc -%>
-                      </p>
-                    </div>
+              <div class="tab-toya">
+                <ul class="tab-list">
+                  <% getData().data.toyaMenuTab.forEach(item => { %>
+                  <li class="tab-item js-tab-link" data-tab="<%- item.tabId -%>" style="background-image: url(<%- item.tabBg -%>);">
+                    <%- include('/partials/svg', {
+                      name: item.tabsvg,
+                      svgtitle: item.tabLabel
+                    }) -%>
+                    <span><%- item.tabLabel -%></span>
                   </li>
-                <% }); %>
-              </ul>
+                  <% }); %>
+                </ul>
+
+                <div class="tab-container">
+                  <% getData().data.toyaMenuTab.forEach(item => { %>
+                  <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
+                    <div class="swiper-container <%- item.menuSlider -%>">
+                      <ul class="swiper-wrapper">
+                        <% item.menuSlide.forEach(elem => { %>
+                        <li class="swiper-slide">
+                          <img src="<%- elem.img -%>" alt="<%- elem.alt -%>">
+                        </li>
+                        <% }); %>
+                      </ul>
+                      <div class="swiper-pagination"></div>
+                    </div>
+
+                    <p class="menu-highlight">
+                      <%- include('/partials/svg', {
+                        name: item.highlightText,
+                        svgtitle: item.highlightTitle
+                      }) -%>
+                    </p>
+
+                    <h3 class="menu-title">
+                      <%- include('/partials/svg', {
+                        name: item.menuText,
+                        svgtitle: item.menuTitle
+                      }) -%>
+                    </h3>
+
+                    <p class="menu-price">
+                      <span>
+                        <%- include('/partials/svg', {
+                          name: item.menuPrice,
+                          svgtitle: item.menuPriceTitle
+                        }); -%>
+                      </span>
+                    </p>
+
+                    <p class="menu-desc">
+                      <%- item.menuDesc -%>
+                    </p>
+
+                    <div class="menu-button">
+                      <%- include('/partials/button', {
+                        modifier: 'restaurant-button toya-menu-button',
+                        text: '御献立一例(PDF)',
+                        link: item.menuFile !== '' ? item.menuFile : '#',
+                        arrowColor: 'white'
+                      }) -%>
+                    </div>
+
+                    <div class="tab-menu-sub">
+                      <% item.subMenu.forEach(elem => { %>
+                      <div class="tab-menu-sub-col">
+                        <div class="tab-menu-sub-image">
+                          <img src="<%- elem.img -%>" alt="<%- elem.alt -%>">
+                        </div>
+                        <div class="tab-menu-sub-svg">
+                          <h4 class="tab-menu-sub-heading">
+                            <%- include('/partials/svg', {
+                              name: elem.titlesvg,
+                              svgtitle: elem.titletext
+                            }) -%>
+                          </h4>
+                          <p class="tab-menu-sub-price">
+                            <%- include('/partials/svg', {
+                              name: elem.pricesvg,
+                              svgtitle: elem.pricetext
+                            }) -%>
+                          </p>
+                        </div>
+                      </div>
+                      <% }); %>
+                    </div>
+
+                    <small class="note">
+                      <span>※食材の入荷状況によりメニューが一部変更になる場合がございます。</span>
+                    </small>
+                  </div>
+                  <% }); %>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="subpage-inner">
-  
             <table class="table table-solid table-toya">
               <tbody>
                 <tr class="table-row table-row-solid">
@@ -199,137 +380,53 @@
               }) -%>
             </div>
           </div>
-        </div>
+        </section>
 
-        <!-- toya menu -->
-        <section class="toya-menu">
-          <div class="subpage-inner">
-            <div class="l-section-title">
-              <%- include('/partials/heading', {
-                modifier: 'heading-wrap-center heading-restaurant-menu heading-menu-toya svg-block',
-                text: 'Menu',
-                subtextvg: 'toya-menu-subtext',
-                altSubtextvg: '御献立'
-              }) %>
-            </div>
-
-            <p class="toya-text">
-              ※食材の入荷状況によりメニューが一部変更になる場合がございます。
-            </p>
-
-            <div class="subpage-image-gallery">
-              <div class="swiper-container slider-gallery js-gallery">
-                <div class="swiper-wrapper">
-                  <% getData().data.restaurantToyaGallery.forEach(item => { %>
-                    <div class="swiper-slide slider-item">
-                      <div class="slider-gallery-img" style="background-image:url(<%- item.image -%>)"></div>
-                    </div>
-                  <% }); %>
-                </div>
+        <section class="toya-reservation">
+          <div class="hoteltwinring-reservation">
+            <div class="hotel-reservation-wrap">
+              <div class="l-section-title">
+                <%- include('/partials/heading', {
+                  modifier: 'hoteltwinring-heading-reservation fill-white',
+                  text: 'Reservation',
+                  alt: '',
+                  altSubtext: '',
+                  subtextvg: 'hoteltwinring-reservation-white',
+                  altSubtextvg: 'Reservation'
+                }) %>
               </div>
-  
-              <div class="swiper-container slider-gallery-thumb js-gallery-thumb">
-                <div class="swiper-wrapper">
-                  <% getData().data.restaurantToyaGallery.forEach(item => { %>
-                    <div class="swiper-slide slider-item">
-                      <div class="slider-gallery-thumb-img" style="background-image:url(<%- item.image -%>)"></div>
-                    </div>
-                  <% }); %>
+              <p class="reservation-desc">
+                食材の入荷状況によりメニューが一部変更になる場合がございます。<br/>
+                食材の入荷状況によりメニューが一部変更になる場合がございます。
+              </p>
+
+              <div class="reservation-cta">
+                <div class="l-button cta-btn">
+                  <span>食材の入荷状況に</span>
+                  <%- include('/partials/button', {
+                    modifier: 'reservation-button',
+                    text: 'Web食材の入荷状況に',
+                    link: '#'
+                  }) -%>
                 </div>
-              </div>
-            </div>
-
-            <div class="l-section-title">
-              <%- include('/partials/heading', {
-                modifier: 'heading-toya-menu-course svg-block',
-                subtextvg: 'toya-subtext-course',
-                altSubtextvg: '里山懐石コース'
-              }) -%>
-
-              <%- include('/partials/heading', {
-                modifier: 'heading-toya-menu-course2 svg-block',
-                subtextvg: 'toya-subtext-course2',
-                altSubtextvg: '8,200円'
-              }) -%>
-            </div>
-
-            <p class="toya-text">
-              益子焼の陶器に盛り付けた、春夏秋冬のおまかせコースをご用意いたします。
-            </p>
-            
-            <%- include('/partials/button', {
-              modifier: 'restaurant-button toya-menu-button',
-              text: '御献立一例(PDF)',
-              link: '#',
-              arrowColor: 'white'
-            })-%>
-
-            <div class="tab-toya">
-              <ul class="tab-list">
-                <li class="tab-item js-tab-link is-active" data-tab="spring-menu">
-                  <span>・春の御献立</span>
-                </li>
-                <li class="tab-item js-tab-link " data-tab="summer-menu">
-                  <span>・夏の御献立</span>
-                </li>
-                <li class="tab-item js-tab-link" data-tab="autumn-menu">
-                  <span>・秋の御献立</span>
-                </li>
-                <li class="tab-item js-tab-link" data-tab="winter-menu">
-                  <span>・冬の御献立</span>
-                </li>
-              </ul>
-              <div class="tab-container">
-                <!-- spring gallery -->
-                <div class="tab-content js-tab-content" id="spring-menu">
-                  <div class="menu-gallery">
-                    <%- include('/partials/section-gallery', {
-                      modifier: 'js-spring-gallery',
-                      toyaGallery: getData().data.toyaSpringGallery
-                    }) -%>
-                  </div>
-                </div>
-
-                <!-- summer gallery -->
-                <div class="tab-content js-tab-content" id="summer-menu">
-                  <div class="menu-gallery">
-                    <%- include('/partials/section-gallery', {
-                      modifier: 'js-summer-gallery',
-                      toyaGallery: getData().data.toyaSummerGallery
-                    }) -%>
-                  </div>
-                </div>
-
-                <!-- autumn gallery -->
-                <div class="tab-content js-tab-content" id="autumn-menu">
-                  <div class="menu-gallery">
-                    <%- include('/partials/section-gallery', {
-                      modifier: 'js-autumn-gallery',
-                      toyaGallery: getData().data.toyaAutumnGallery
-                    }) -%>
-                  </div>
-                </div>
-
-                <!-- winter gallery -->
-                <div class="tab-content js-tab-content" id="winter-menu">
-                  <div class="menu-gallery">
-                    <%- include('/partials/section-gallery', {
-                      modifier: 'js-winter-gallery',
-                      toyaGallery: getData().data.toyaWinterGallery
-                    }) -%>
-                  </div>
+                <div class="l-button cta-btn">
+                  <span>食材の入荷状況に</span>
+                  <%- include('/partials/button', {
+                    modifier: 'reservation-button',
+                    text: '<span>Tel.0285-64-0489<br/><small>食材の入荷状況に 10:00~17:30</small></span>',
+                    link: '#'
+                  }) -%>
                 </div>
               </div>
             </div>
-            
           </div>
         </section>
       </div>
-
-      <!-- other restaurant module-->
-      <%- include('/partials/restaurant/section-other-restaurant') -%>
-      
     </main>
+
+    <!-- other restaurant module-->
+    <%- include('/partials/restaurant/section-other-restaurant') -%>
+
     <!-- END BOTTOM -->
   </div>
 </div>

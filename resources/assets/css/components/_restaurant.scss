@@ -237,6 +237,10 @@
           top: 102px;
         }
       }
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 100%;
+      }
     }
 
     &:before {

@@ -135,6 +135,10 @@
 .toya-reservation {//toya page
   .hotel-reservation-wrap {
     background-image: url('/assets/images/toya/toya-reservation-bg.jpg');
+
+    @include max-screen($breakpoint-mobile) {
+      background-position: center;
+    }
   }
 
   .reservation-desc {
@@ -143,6 +147,10 @@
     color: $color-white;
     line-height: 2;
     text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 
   .reservation-cta {
@@ -154,6 +162,10 @@
       width: 1020px
     }
 
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+    }
+
     .cta-btn {
       width: 50%;
       padding: {
@@ -161,12 +173,30 @@
         right: 42px;
       }
 
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        padding: {
+          left: 20px;
+          right: 20px;
+        }
+        margin-bottom: 27px;
+      }
+
       &:first-child {
         padding-left: 0px;
+
+        @include max-screen($breakpoint-mobile) {
+          padding-left: 20px;
+          margin-top: 40px;
+        }
       }
 
       &:last-child {
         padding-right: 0px;
+
+        @include max-screen($breakpoint-mobile) {
+          padding-right: 20px;
+        }
       }
 
       .reservation-button {
@@ -191,7 +221,20 @@
           small {
             display: block;
             font-size: 13px !important;
+
+            @include max-screen($breakpoint-mobile) {
+              font-size: 10px !important;
+            }
           }
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 18px;
+          }
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          font-size: 18px;
+          height: 65px;
         }
       }
     }
@@ -202,6 +245,10 @@
       font-weight: bold;
       display: block;
       text-align: center;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 14px;
+      }
     }
   }
 }

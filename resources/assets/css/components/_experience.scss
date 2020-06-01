@@ -97,6 +97,10 @@
 
       @include max-screen($breakpoint-mobile) {
         margin-bottom: 25px;
+        padding: {
+          left: 20px;
+          right: 20px;
+        }
       }
 
       svg {
@@ -121,6 +125,10 @@
       font-size: 12px;
       line-height: 1.5;
       letter-spacing: 0.1em;
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
     }
   }
 

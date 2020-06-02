@@ -17,6 +17,22 @@
     position: relative;
     background-size: cover;
 
+    @at-root .toya-reservation & {//toya page
+      @include min-screen($breakpoint-mobile + 1) {
+        padding: {
+          top: 69px;
+          bottom: 109px;
+        }
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: {
+          top: 27px;
+          bottom: 51px;
+        }
+      }
+    }
+
     &.bbq-reservation-wrap {
       background-image: url(/assets/images/bbq/reservation.png);
     }

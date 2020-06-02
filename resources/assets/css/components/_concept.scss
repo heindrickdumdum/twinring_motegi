@@ -106,8 +106,12 @@
         }
 
         &:nth-child(3) {
-          width: 561px;
+          width: 564px;
           margin-right: 0px;
+
+          @include max-screen($breakpoint-mobile) {
+            width: 100%;
+          }
         }
 
         &:nth-child(5) {

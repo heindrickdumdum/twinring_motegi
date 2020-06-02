@@ -221,6 +221,7 @@
           small {
             display: block;
             font-size: 13px !important;
+            font-weight: normal;
 
             @include max-screen($breakpoint-mobile) {
               font-size: 10px !important;

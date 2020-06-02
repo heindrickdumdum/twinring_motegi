@@ -230,4 +230,17 @@
       margin: 0 auto 45px;
     }
   }
+
+  &.heading-main-marcherant {
+    text-align: center;
+    max-width: 882px;
+    margin: 40px auto 20px;
+
+    .heading-main-subtext {
+      font-size: 18px;
+      margin-top: 34px;
+      letter-spacing: 4px;
+      line-height: 1.8;
+    }
+  }
 }

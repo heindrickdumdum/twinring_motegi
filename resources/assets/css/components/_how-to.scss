@@ -81,3 +81,14 @@
     position: relative;
   }
 }
+
+
+.enjoy-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  li {
+    width: 49%;
+    margin-bottom: 20px;
+  }
+}

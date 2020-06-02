@@ -532,6 +532,39 @@
     }
   }
 
+  &.marcherant-mv-heading {
+    .heading-text {
+      @include max-screen ($breakpoint-mobile) {
+        letter-spacing: 3px;
+        word-spacing: -1px;    
+      }
+    }
+    .heading-subtext {
+      // sass-lint:disable-block no-important    
+      max-width: 939px !important; 
+      height: 99px !important;
+      width: 241px !important;
+
+      top: -6px;
+      left: -10px;
+      @include min-screen ($breakpoint-mobile + 1) {
+        // sass-lint:disable-block no-important    
+        height: 100px !important;
+        // sass-lint:disable-block no-important    
+        width: 100% !important;
+        width: 237px;
+        left: -6px;
+        top: -11px;
+        
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      // sass-lint:disable-block no-important   
+      bottom: -22px !important;
+    }
+  }
+
 
 
   &.hellowoods-mv-heading {

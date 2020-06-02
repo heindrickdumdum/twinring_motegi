@@ -39,10 +39,12 @@
   'oak',
   'granTurismo',
   'rocco',
+  'toya',
   'donguri',
   'bbq',
   'camp',
-  'stay'
+  'stay',
+  'toya'
   ]
 %>
   
@@ -193,6 +195,10 @@
     <script src="<%= mix('/assets/js/restaurant-slider.js') %>" async></script>
   <% } %>
 
+  <% if(pageId == 'toya') { %>
+    <script src="<%= mix('/assets/js/toya.js') %>" async></script>
+  <% } %>
+  
   <% if(pageId == 'bbq') { %>
     <script src="<%= mix('/assets/js/bbq.js') %>" async></script>
   <% } %>

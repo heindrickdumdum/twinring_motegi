@@ -6,6 +6,10 @@
     height: 350px;
   }
 
+  @at-root .toya-wrapper & {//toya page
+    z-index: 1;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -15,6 +19,10 @@
     height: 100px;
     background: url(#{$image-path}mv-curve.png) no-repeat center top;
     background-size: cover;
+
+    @at-root .toya-wrapper & {//toya page
+      display: none;
+    }
 
     @include max-screen($breakpoint-mobile) {
       bottom: -33px;
@@ -324,6 +332,18 @@
         width: 230px !important;
         height: 55px !important;
         margin-top: 10px !important;
+      }
+      
+      @at-root .toya-wrapper & {//toya page
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 396px !important;
+          height: 61px !important;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          max-width: 231px !important;
+          height: 35px !important;
+        }
       }
     }
   }
@@ -1455,6 +1475,10 @@
 
 .mv-image-subpage {
   background-position-y: 25%;
+
+  @at-root .toya-wrapper & {//toya page
+    background-position-y: bottom;
+  }
 }
 
 .mv-top {

@@ -1,8 +1,47 @@
 .swiper-container {
   // sass-lint:disable-block no-important
   overflow: visible !important;
-
   background-color: $color-white;
+
+  @at-root .toya-menu & {
+    background-color: transparent !important;
+    padding-bottom: 40px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 31px;
+    }
+
+    .swiper-pagination {
+      display: flex;
+      justify-content: center;
+      bottom: 5px;
+
+      &-bullet {
+        width: 11px;
+        height: 11px;
+        background-color: $color-white;
+        display: block;
+        border-radius: 0px !important;
+        opacity: 1;
+        transform: rotate(45deg);
+        margin-right: 10px !important;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 6px;
+          height: 6px;
+          margin-right: 6px !important;
+        }
+
+        &:last-child {
+          margin-right: 0px !important;
+        }
+
+        &-active {
+          background-color: $color-dark-yellow;
+        }
+      }
+    }
+  }
 
   &-mobipark {
     background-color: transparent;
@@ -21,5 +60,44 @@
         justify-content: center;
       }
     }
+  }
+
+  @at-root .toya-wrapper {//toya page
+    .swiper {
+      position: relative;
+
+      .swiper-button {
+        &-prev,
+        &-next {
+          position: absolute;
+          cursor: pointer;
+
+          svg {
+            width: 60px;
+            height: 113px;
+          }
+        }
+
+        &-prev {
+          left: -13%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &-next {
+          right: -13%;
+          top: 50%;
+          transform: translateY(-50%);
+
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  @at-root .toya-wrapper & {//toya page
+    overflow: hidden !important;
   }
 }

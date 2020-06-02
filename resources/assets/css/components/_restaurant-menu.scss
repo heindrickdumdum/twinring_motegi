@@ -376,6 +376,8 @@
 
         &.menu-desc-marcherant {
           position: relative;
+          color: black;
+          text-align: left;
         }
       }
     }
@@ -497,6 +499,187 @@
     @include max-screen($breakpoint-mobile) {
       margin-left: 0px;
       font-size: 12px;
+    }
+  }
+}
+
+.toya-menu {//toya page
+  background-color: $color-black;
+  padding: {
+    top: 91px;
+    bottom: 91px;
+  }
+  background-image: url('/assets/images/toya/mountain-bg.png');
+  background-size: 65%;
+  background-position: left 78%;
+  background-repeat: no-repeat;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: {
+      top: 40px;
+      bottom: 0px;
+      left: 10px;
+      right: 10px;
+    }
+    background-image: url('/assets/images/toya/mountain-bg-sp.png');
+    background-size: 100%;
+    background-position: center 75%;
+  }
+
+  @at-root svg {
+    .menu-highlight & {
+      width: 100%;
+      height: 18px;
+      margin-top: 40px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: 12px;
+        margin-top: 28px;
+      }
+    }
+
+    .menu-title & {
+      width: 100%;
+      height: 35px;
+      margin-top: 20px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: 22px;
+        margin-top: 15px;
+      }
+    }
+
+    .menu-price & {
+      width: 100%;
+      height: 23px;
+      margin-top: 20px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: 12px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @at-root .menu-desc {
+    font-size: 18px;
+    color: $color-white;
+    line-height: 1.667;
+    text-align: center;
+    letter-spacing: 0.1em;  
+    margin-top: 45px;
+    margin-bottom: 45px; 
+    
+    @include max-screen($breakpoint-mobile) {
+      font-size: 13px;
+      line-height: 1.615;
+      text-align: center;
+      margin: {
+        top: 20px;
+        bottom: 40px;
+      }
+      padding: {
+        left: 60px;
+        right: 60px;
+      }
+    }
+  }
+
+  .tab-menu-sub {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 62px;
+    margin-top: 62px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 42px;
+      padding-top: 42px;
+      display: block;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &:before {
+      content: "";
+      width: 100px;
+      height: 1px;
+      background-color: $color-white;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include max-screen($breakpoint-mobile) {
+        width: 50px;
+      }
+    }
+
+    &-col {
+      width: 50%;
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 74px;
+      }
+
+      &:first-child {
+        padding-left: 0px;
+      }
+
+      &:last-child {
+        padding-right: 0px;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    @at-root svg {
+      .tab-menu-sub-heading & {
+        width: 100%;
+        height: 24px;
+        margin-top: 25px;
+
+        @include max-screen($breakpoint-mobile) {
+          height: 18px;
+        }
+      }
+
+      .tab-menu-sub-price & {
+        margin-top: 10px;
+        width: 100%;
+        height: 18px;
+
+        @include max-screen($breakpoint-mobile) {
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  .note {
+    font-size: 15px;
+    color: $color-white;
+    line-height: 2;
+    text-align: center;    
+    display: block;
+    max-width: 100%;
+    margin-top: 75px;
+    letter-spacing: 0.1em;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 5px;
+      font-size: 12px;
+      line-height: 1.5;      
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }

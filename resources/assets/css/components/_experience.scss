@@ -16,7 +16,7 @@
   }
 
   &-tag {
-    border: 2px solid #a38737;
+    border: 1px solid #a38737;
     padding: 38px 69px;
     position: absolute;
     top: 0px;
@@ -204,10 +204,16 @@
       @include max-screen($breakpoint-mobile) {
         display: block;
       }
+
+      // @at-root & .columns {
+      //   @include min-screen($breakpoint-mobile + 1) {
+      //     width: 50%;
+      //   }
+      // }
     }
 
     .tags {
-      border: 2px solid #a38737;
+      border: 1px solid #a38737;
       display: inline-block;
       padding: 16px 20px;
 

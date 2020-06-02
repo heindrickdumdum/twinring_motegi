@@ -552,6 +552,8 @@
     }
   }
 
+
+
   &.hellowoods-mv-heading {
     bottom: 5px;
     width: 100%;
@@ -621,6 +623,23 @@
       @include max-screen ($breakpoint-mobile) {
         .heading-subtext {
           width: 100%;
+        }
+      }
+    }
+  }
+
+  &.mv-heading-business-hours {
+    padding-bottom: 20px;
+    .heading-wrap-business-hours {
+      .heading-text {
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 32px;
+        }
+      }
+      .heading-subtext {
+        max-width: 210px;
+        @include max-screen ($breakpoint-mobile) {
+          max-width: 140px;
         }
       }
     }
@@ -1516,3 +1535,5 @@
     font-weight: 600 !important;
   }
 }
+
+

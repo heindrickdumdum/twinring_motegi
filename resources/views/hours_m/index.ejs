@@ -1,0 +1,60 @@
+<%
+  var title = 'ご宿泊予約｜ホテルツインリンク｜ツインリンクもてぎ';
+  pageId = 'businessHours';
+%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/hours_m/top-image.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/hours_m/top-image-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading mv-heading-business-hours">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-business-hours',
+            heading_level: 1,
+            text: 'Business Hours',
+            subtextvg: 'business-hours-top-title'
+          }) %>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="l-section">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-wrap-business-hours-guide',
+            text: 'Business Hours Guide',
+            alt: 'Business Hours Guide',
+            altSubtext: '',
+            subtextvg: 'guide-title'
+          }) %>
+        </div>
+        <div class="l-container-m business-calendar-wrapper">
+          <div class="business-calendar-inner">
+            <iframe src="//www.google.com/calendar/embed?showTitle=0&amp;?height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=53u3shra2nqa1buep9ain7sis4%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FTokyo" style=" border-width:0 " width="960" height="600" frameborder="0" scrolling="no"></iframe>
+            <p class="calendar-note">※内容は予告なく変更になる場合がございます。</p>
+          </div>
+          
+        </div>
+        
+      </section>
+      
+
+      <%- include('/partials/pickup') -%>
+    </main>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsBusinessHours
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

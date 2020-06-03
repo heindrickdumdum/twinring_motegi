@@ -683,3 +683,31 @@
     }
   }
 }
+
+.marcherant-menu {
+  .menu-container {
+    .menu-item {
+      @include min-screen($breakpoint-mobile+1){
+        width: 100%;
+        max-width: 472px;
+        margin-bottom: 22px;
+
+        .menu-image {
+          background-size: contain;
+          margin-bottom: 0;
+          max-height: 265px;
+        }
+        .menu-title {
+          margin-bottom: 0;
+        }
+        .menu-desc-marcherant {
+          font-size: 23px;
+          margin-top: 0px;
+          margin-bottom: 20px;
+          line-height: 1.5;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}

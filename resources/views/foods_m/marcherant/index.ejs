@@ -97,14 +97,14 @@
         <div class="l-container-m">
           <div class="l-section-title">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-wrap-business-hours-guide',
+              modifier: 'heading-wrap heading-recommend',
               text: 'How to Enjoy',
               alt: 'How to Enjoy',
               altSubtext: '',
               subtextvg: 'marcherant-how-to-title'
             }) %>
           </div>
-          <ul class="enjoy-list">
+          <ul class="enjoy-list-marcherant">
             <li>
               <p class="media-title alt-feature-heading">
                 <span class="media-title-text">自然の美味しい恵みを再発見できる「もてぎの地場食材」</span>
@@ -123,7 +123,7 @@
               <img src="<%- mix('/assets/images/marcherant/point-1.2.jpg') -%>" alt="">
             </li>
           </ul>
-          <ul class="enjoy-list">
+          <ul class="enjoy-list-marcherant">
             <li>
               <img src="<%- mix('/assets/images/marcherant/point-2.jpg') -%>" alt="">
             </li>
@@ -144,7 +144,7 @@
               <img src="<%- mix('/assets/images/marcherant/point-2.2.jpg') -%>" alt="">
             </li>
           </ul>
-          <ul class="enjoy-list">
+          <ul class="enjoy-list-marcherant">
             <li>
               <p class="media-title alt-feature-heading">
                 <span class="media-title-text">小さなお子さまへの「おもてなし」と<br>
@@ -166,7 +166,127 @@
           </ul>
         </div>
       </section>
+      <section class="l-section">
+        <div class="l-container-m">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-wrap-business-hours-guide',
+              text: 'Shop’s Information',
+              alt: 'Shop’s Information',
+              altSubtext: '',
+              subtextvg: 'shop-information-title'
+            }) %>
+          </div>
+          <table class="table table-craft">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">場所</th>
+                <td class="table-col">
+                  ホテルツインリング１階 <a href="/map_m/">Mapを見る</a>
+                </td>
+              </tr>
 
+              <tr class="table-row">
+                <th class="table-head">朝食</th>
+                <td class="table-col">
+                  <a href="/hours_m/">7:00 〜 10:00（L.O.9:30）</a>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">ランチ</th>
+                <td class="table-col">11:30〜14:00（L.O.13:30）</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">ディナー</th>
+                <td class="table-col">
+                  17:30〜21:00（L.O.20:30）<br>
+                  ※ディナービュッフェはご宿泊のお客様限定、また毎週土曜日・長期<br>
+                  休暇などに開催となります。詳しい日程はこちらをご確認ください。
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">ランチ</th>
+                <td class="table-col">11:30〜14:00（L.O.13:30）</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">定休日</th>
+                <td class="table-col"><a href="#">ツインリンクもてぎの休業日に準じます</a></td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">座席数</th>
+                <td class="table-col">254　※個室4部屋</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">備考</th>
+                <td class="table-col">※レース・イベント開催時は特別メニューになる場合がございます。<br>
+                  ※メニューは仕入れ状況により異なる場合がございます。</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="subpage-section subpage-section-collapse">
+            <div class="subpage-collapse-heading js-collapse-button">お子さまのお誕生日や家族の記念日に<br>
+              アニバーサリーケーキのご注文について</div>
+            <div class="subpage-collapse-description">
+              <div class="subpage-collapse-content">
+                CONTENT
+              </div>
+            </div>
+          </div>
+
+          <div class="subpage-section subpage-section-collapse">
+            <div class="subpage-collapse-heading js-collapse-button">食物アレルギーをお持ちのお客様へ</div>
+            <div class="subpage-collapse-description">
+              <div class="subpage-collapse-content">
+                CONTENT
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="toya-reservation marcherant-reservation">
+        <div class="hoteltwinring-reservation">
+          <div class="hotel-reservation-wrap marcherant-reservation-wrap">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'hoteltwinring-heading-reservation fill-white',
+                text: 'Reservation',
+                alt: '',
+                altSubtext: '',
+                subtextvg: 'marcherant-reservation-title',
+                altSubtextvg: 'Reservation'
+              }) %>
+            </div>
+
+            <div class="reservation-cta">
+              <div class="l-button cta-btn">
+                <span>ホテルツインリンクにご宿泊で<br>
+                  マルシェラン利用のお客様</span>
+                <%- include('/partials/button', {
+                  modifier: 'reservation-button',
+                  text: 'ご予約はこちら',
+                  link: '#'
+                }) -%>
+              </div>
+              <div class="l-button cta-btn">
+                <span>お問い合わせのお客様<br><br></span>
+                <%- include('/partials/button', {
+                  modifier: 'reservation-button',
+                  text: '<span>Tel.0285-64-0489<br/><small>受付時間 10:00～17:30</small></span>',
+                  link: '#'
+                }) -%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
     <!-- END BOTTOM -->

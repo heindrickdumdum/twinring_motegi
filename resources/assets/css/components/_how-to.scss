@@ -88,17 +88,35 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 98px;
+  padding-left: 20px;
+  padding-right: 20px;
   li {
     width: 49%;
     margin-bottom: 20px;
 
     .alt-feature-heading {
       margin-bottom: 16px;
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 19px;
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
     }
 
     .alt-feature-desc-text {
       letter-spacing: 3px;
       line-height: 1.9;
     }
+
+    @include max-screen ($breakpoint-mobile) {
+      width: 100%;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 20px;
   }
 }

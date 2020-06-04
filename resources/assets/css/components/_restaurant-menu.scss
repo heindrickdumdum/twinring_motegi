@@ -687,6 +687,15 @@
 .marcherant-menu {
   .menu-container {
     .menu-item {
+      margin-bottom: 20px;
+      .menu-desc-marcherant {
+        padding: 0;
+        margin-top: 8px;
+        margin-bottom: 28px;
+      }
+      .menu-image {
+        margin-bottom: 0;
+      }
       @include min-screen($breakpoint-mobile+1){
         width: 100%;
         max-width: 472px;
@@ -708,6 +717,7 @@
           letter-spacing: 2px;
         }
       }
+
     }
   }
 }

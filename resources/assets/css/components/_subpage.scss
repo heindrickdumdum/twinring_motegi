@@ -1293,3 +1293,12 @@
 .subpage-title-reserve {
   margin-bottom: 11px;
 }
+
+.marcherant-collapse-section {
+  @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 20px;
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+  }
+}

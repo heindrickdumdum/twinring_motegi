@@ -336,6 +336,11 @@
           background-repeat: repeat-x;
           background-position: center 8px;
         }
+
+        @at-root .is-safari & {//for safari
+          background-repeat: repeat-x;
+          background-position: center 3px;
+        }
       }
       
       &-heading {
@@ -351,6 +356,15 @@
           @at-root .is-ie & {//for ie
             background-repeat: repeat-x;
             background-position: center 12px;
+          }
+
+          @at-root .is-safari & {//for ie
+            background-repeat: repeat-x;
+            background-position: center 7px;
+
+            @include max-screen($breakpoint-mobile) {
+              background-position: center 3px;
+            }
           }
 
           @include max-screen($breakpoint-mobile) {

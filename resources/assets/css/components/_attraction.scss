@@ -17,3 +17,38 @@
     color: rgb(51, 51, 51);  
   }
 }
+
+.smart-entry {//smart entry page
+  .attraction {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 53px;
+    }
+
+    .article-heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 23px;
+        min-height: 59px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        min-height: 100%;
+        margin-bottom: 11px;
+      }
+    }
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+
+      @include max-screen($breakpoint-mobile) {
+        display: block;
+      }
+    }
+
+    &-item {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 311px;
+      }
+    }
+  }
+}

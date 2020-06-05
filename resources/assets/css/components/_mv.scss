@@ -587,6 +587,19 @@
         width: 230px;
         margin: 0;
       }
+
+      @at-root .smart-entry & {//smart entry page
+        @include min-screen($breakpoint-mobile + 1) {
+          max-width: 852px !important;
+          height: 50px !important;
+          margin-top: 10px !important;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          width: 322px !important;
+          height: 70px !important;
+        }
+      }
     }
 
     .heading-tsubasa {

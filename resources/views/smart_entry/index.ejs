@@ -1,0 +1,299 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'smart_entry';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage smart-entry">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc"
+            style="background-image:url(<%= mix('/assets/images/smart_entry/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp"
+            style="background-image:url(<%= mix('/assets/images/smart_entry/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading forest-program-mv-heading u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Smart Entry',
+            subtextvg: 'smart-entry-top-title',
+            altSubtextvg: '予約制森の体験プログラム'
+          }) %>
+        </div>
+
+        <div class="mv-heading hellowoods-mv-heading forest-program-mv-heading u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Smart Entry',
+            subtextvg: 'smart-entry-top-title-sp',
+            altSubtextvg: '予約制森の体験プログラム'
+          }) %>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner">
+        <div class="l-section-title u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-main-smart-entry',
+            text: 'About Smart entry',
+            subtextvg: 'smart-entry-content-title',
+            altSubtextvg: 'スマートエントリー（入場整理券）について'
+          }) -%>
+        </div>
+
+        <div class="l-section-title u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-main-smart-entry',
+            text: 'About Smart entry',
+            subtextvg: 'smart-entry-content-title-sp',
+            altSubtextvg: 'スマートエントリー（入場整理券）について'
+          }) -%>
+        </div>
+
+        <p class="main-desc u-show-pc">
+          スマートエントリーとは、混雑が予想される日に対象アトラクションで配っている入場整理券（無料）のことです。<br/>
+          ご利用を各回に分け、ご希望の時間帯にお楽しみいただけます。<br/>
+          <span class="color-red">該当日、対象アトラクションはスマートエントリーをお持ちでないとご利用できません</span>のでご了承ください。
+        </p>
+
+        <p class="main-desc u-show-sp">
+          スマートエントリーとは、混雑が予想される日に対象アトラクションで配っている入場整理券（無料）のことです。
+          ご利用を各回に分け、ご希望の時間帯にお楽しみいただけます。
+          <span class="color-red">該当日、対象アトラクションはスマートエントリーをお持ちでないとご利用できません</span>のでご了承ください。
+        </p>
+
+        <p class="media-title media-title-smart-entry">
+          <span>日程</span>
+        </p>
+
+        <table class="table table-smart-entry">
+          <tbody>
+            <tr class="table-row">
+              <th class="table-head">
+                7月
+              </th>
+              <td class="table-col">
+                24日（金）・25日（土）
+              </td>
+            </tr>
+            <tr class="table-row">
+              <th class="table-head">
+                8月
+              </th>
+              <td class="table-col">
+                8日（土）～16日（日）・23日（日）・29日（土）・30日（日）
+              </td>
+            </tr>
+            <tr class="table-row">
+              <th class="table-head">
+                9月
+              </th>
+              <td class="table-col">
+                19日（土）～22日（火）
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="media-title media-title-smart-entry">
+          <span>対象アトラクション</span>
+        </p>
+
+        <div class="attraction">
+          <ul class="attraction-list">
+            <% getData().data.targetAttraction.forEach(item => { %>
+            <li class="attraction-item">
+              <%- include('/partials/article-no-design', {
+                category: '',
+                image: item.image,
+                heading: item.heading,
+                type: '',
+                date: '',
+                link: '',
+                modifier: 'smart-entry-attraction',
+                heading: item.heading,
+                buttonLink: item.buttonLink,
+                buttonText: item.buttonText
+              }) -%>
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+
+        <p class="media-title media-title-smart-entry">
+          <span>スマートエントリー利用の流れ</span>
+        </p>
+
+        <div class="flow">
+          <ol class="flow-list">
+            <% getData().data.flowdata.forEach(item => { %>
+            <li class="flow-item">
+              <div class="flow-box">
+                <div class="flow-title">
+                  <img src="<%- item.image -%>" alt="<%- item.alt -%>">
+                </div>
+                <p class="flow-headline">
+                  <%- item.headline -%>
+                </p>
+                <p class="flow-desc">
+                  <%- item.desc -%>
+                </p>
+              </div>
+            </li>
+            <% }); %>
+          </ol>
+        </div>
+
+        <p class="media-title media-title-smart-entry">
+          <span>配布場所・配布枚数</span>
+        </p>
+
+        <div class="table-distribution">
+          <ul>
+            <li class="dotted-item u-show-pc">
+              <span>森感覚アスレチック DOKIDOKI・迷宮森殿 ITADAKI</span>
+            </li>
+            <li class="dotted-item u-show-sp">
+              <span>森感覚アスレチック DOKIDOKI・<br/>迷宮森殿 ITADAKI</span>
+            </li>
+          </ul>
+          
+          <table class="table">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">配布場所</th>
+                <td class="table-col">アトラクション前特設テント</td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head">配布枚数</th>
+                <td class="table-col">1時間ごとに約200枚配布</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <ul>
+            <li class="dotted-item">
+              <span>巨大ネットの森 SUMIKA</span>
+            </li>
+          </ul>
+
+          <table class="table">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">配布場所</th>
+                <td class="table-col">アトラクション前特設テント</td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head">配布枚数</th>
+                <td class="table-col">1時間ごとに約200枚配布</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="table-note">
+            ※スマートエントリーはアトラクションチケットではありません。<span class="color-red">別途アトラクションチケットまたはモビパークパスポートを <br class="u-show-pc"/>
+            お買い求めください。</span>
+          </p>
+
+          <p class="table-note">
+            ※各アトラクションのご利用には<u>年齢制限</u>がございます。
+          </p>
+
+          <p class="table-note">
+            ※混雑状況や天候などによりスマートエントリーの配布を行わない場合は、当日モビパークまたはSNSでお知らせいたします。
+          </p>
+        </div>
+      </div>
+
+      <div class="l-parkmap design-parkmap design-parkmap-smart-entry">
+        <div class="parkmap design-parkmap-inner">
+          <div class="l-container parkmap-container">
+            <div class="l-section-title u-show-pc">
+              <h2 class="media-title media-title-smart-entry-heading">
+                <span>モビパークMAP</span>
+              </h2>
+            </div>
+            <h2 class="media-title media-title-smart-entry-heading u-show-sp">
+              <span>モビパークMAP</span>
+            </h2>
+            <div class="parkmap-inner">
+              <div class="parkmap-image">
+                <ul class="parkmap-image-list">
+                  <% getData().data.parkMapSmartEntryData.forEach( button => { %>
+                  <li class="parkmap-image-item js-parkmap-number">
+                    <a href="<%- button.link %>" ></a>
+                  </li>
+                  <% }) %>
+                </ul>
+              </div>
+              <div class="parkmap-right">
+                <ul class="parkmap-list">
+                  <% getData().data.parkMapSmartEntryData.forEach( button => { %>
+                  <li class="parkmap-item js-parkmap-button">
+                    <a class="parkmap-link" href="<%- button.link %>" ><%- button.text %>
+                      <i class="parkmap-link-icon">
+                        <%- include('/partials/svg', {
+                          'name': 'arrow'
+                        }) %>
+                      </i>
+                    </a>
+                  </li>
+                  <% }) %>
+                  <li class="parkmap-item parkmap-item-last">
+                    <%- include('/partials/button', {
+                      newTab: false,
+                      modifier: 'button-map-smart-entry',
+                      text: 'モビパークTOPへ',
+                      link: '/mobipark_m/'
+                    }) %>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="subpage-section subpage-section-faq subpage-section-faq-smart-entry">
+        <section class="faq faq-smart-entry l-section">
+          <div class="l-container">
+            <div class="l-section-title">
+              <h2 class="media-title media-title-smart-entry-heading media-title-smart-entry-faq-heading u-show-pc">
+                <span>よく見られているご質問</span>
+              </h2>
+              <h2 class="media-title media-title-smart-entry-heading media-title-smart-entry-faq-heading u-show-sp">
+                <span>スマートエントリーに関する </span><br/><span>よくあるご質問</span>
+              </h2>
+            </div>
+          </div>
+          <%- include('/partials/accordion', {
+            dataAccordion: getData().data.accordionSmartEntry
+          }) -%>
+        </section>
+      </section>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsSmartEntry
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

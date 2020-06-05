@@ -19,9 +19,9 @@
       </ul>
 
       <div class="l-container mv-container">
-        <div class="mv-heading hellowoods-mv-heading donguri-mv-heading u-show-pc">
+        <div class="mv-heading hellowoods-mv-heading marcherant-mv-heading u-show-pc">
           <%- include('/partials/heading', {
-            modifier: 'heading-hellowoods',
+            modifier: '',
             heading_level: 1,
             text: 'Forest Restaurant Marcherant',
             subtextvg: 'marcherant-title',
@@ -32,9 +32,9 @@
           <%- include('/partials/heading', {
             modifier: 'heading-hellowoods',
             heading_level: 1,
-            text: 'Forest Kitchen Donguri',
-            subtextvg: 'donguri-top-title-sp',
-            altSubtextvg: '森のキッチン どんぐり'
+            text: 'Forest Restaurant Marcherant',
+            subtextvg: 'marcherant-top-title-sp',
+            altSubtextvg: ''
           }) %>
         </div>
 
@@ -46,7 +46,297 @@
     </div>
 
     <main>
+      <section class="l-container">
+        <div class="heading-wrap heading-main heading-main-marcherant">
+          <h2 class="heading">
+            <span class="u-title-hidden">Car and bike</span>
+            <span class="heading-texts">
+              <img class="u-show-pc" src="<%= mix('/assets/images/marcherant/color-title.png') %>" alt="地元の食材をふんだんに使い、 食べることを“五感”で楽しむ森のレストラン">
+              <img class="u-show-sp" src="<%= mix('/assets/images/marcherant/color-title-sp.png') %>" alt="地元の食材をふんだんに使い、 食べることを“五感”で楽しむ森のレストラン">
+            </span>
+          </h2>
+          <p class="heading-main-subtext">茂木町の農園直送の採れたて野菜や、素材の旨味を引き出す石窯料理など、<br>
+            和洋中の森のごちそうをご堪能ください。<br>
+            ランチは日帰りのお客様もお楽しみいただけます。</p>
+        </div>
+      </section>
 
+      <section class="">
+        <div class="five-senses-wrapper">
+          <img class="u-show-pc" src="<%- mix('/assets/images/marcherant/five-senses.png') -%>" alt="地元の食材をふんだんに使い、 食べることを“五感”で楽しむ森のレストラン">
+          <img class="u-show-sp" src="<%- mix('/assets/images/marcherant/five-senses-sp.png') -%>" alt="地元の食材をふんだんに使い、 食べることを“五感”で楽しむ森のレストラン">
+        </div>
+      </section>
+
+      <section class="info-container info-marcherant">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-restaurant',
+            text: 'Information',
+            subtextvg: 'info-subtext',
+            altSubtextvg: `お知らせ`
+          }) %>
+        </div>
+
+        <div class="l-container">
+          <ul class="info-list">
+            <% restaurantMarcherant.forEach(item => { %>
+            <li class="info-item">
+              <a href="<%- item.link %>">
+                <span><%= item.desc %></span>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+      </section>
+
+      <!-- restaurant menu -->
+      <%- include('/partials/restaurant/section-menu-marcherant', {
+        data: getData().data.marcherantMenu
+      }) -%>
+
+      <section class="how-to-enjoy">
+        <div class="l-section-title u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap heading-recommend',
+            text: 'How to Enjoy',
+            alt: 'How to Enjoy',
+            altSubtext: '',
+            subtextvg: 'marcherant-how-to-title'
+          }) %>
+        </div>
+        <div class="l-section-title u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap heading-recommend',
+            text: 'How to Enjoy',
+            alt: 'How to Enjoy',
+            altSubtext: '',
+            subtextvg: 'marcherant-how-to-title-sp'
+          }) %>
+        </div>
+        <div class="l-container-m full-sp">
+         
+          <ul class="enjoy-list-marcherant">
+            <li class="u-show-sp">
+              <img src="<%- mix('/assets/images/marcherant/point-1-sp.png') -%>" alt="">
+            </li>
+
+
+            <li>
+              <p class="media-title alt-feature-heading">
+                <span class="media-title-text">自然の美味しい恵みを再発見できる「もてぎの地場食材」</span>
+              </p>
+              <p class="alt-feature-desc-text">料理には茂木町「自然農園 空土ファーム」直送の無農薬野菜や、栃木県が誇るブランド食材などを取り入れています。
+                大自然でのびのびと育った栄養満点の山の幸をご堪能ください。
+              </p>
+            </li>
+            <li class="u-show-pc">
+              <img src="<%- mix('/assets/images/marcherant/point-1.jpg') -%>" alt="">
+            </li>
+            <li class="u-show-pc">
+              <img src="<%- mix('/assets/images/marcherant/point-1.3.jpg') -%>" alt="">
+            </li>
+            <li class="u-show-pc">
+              <img src="<%- mix('/assets/images/marcherant/point-1.2.jpg') -%>" alt="">
+            </li>
+          </ul>
+          <ul class="enjoy-list-marcherant">
+            <li class="u-show-sp">
+              <img src="<%- mix('/assets/images/marcherant/point-2-sp.png') -%>" alt="">
+            </li>
+
+            <li class="u-show-pc">
+              <img src="<%- mix('/assets/images/marcherant/point-2.jpg') -%>" alt="">
+            </li>
+            <li>
+              <p class="media-title alt-feature-heading">
+                <span class="media-title-text">外はサクッ、中はジュワッと<br>
+                  素材の旨味が広がる<br>
+                  こだわりの石窯料理</span>
+              </p>
+              <p class="alt-feature-desc-text">300度の耐熱流と遠赤外線によって、お肉はこんがりふっくらと、お野菜は本来の甘さが溢れ出る特注の石窯を使用しています。一般調理機器では引き出せない素材の旨味をぜひ五感で味わってください。
+              </p>
+            </li>
+            <li class="u-show-pc">
+              <img src="<%- mix('/assets/images/marcherant/point-2.1.jpg') -%>" alt="">
+            </li>
+            <li class="u-show-pc">
+              <img src="<%- mix('/assets/images/marcherant/point-2.2.jpg') -%>" alt="">
+            </li>
+          </ul>
+          <ul class="enjoy-list-marcherant">
+            <li class="u-show-sp">
+              <img src="<%- mix('/assets/images/marcherant/point-3-sp.png') -%>" alt="">
+            </li>
+
+            <li>
+              <p class="media-title alt-feature-heading">
+                <span class="media-title-text">小さなお子さまへの「おもてなし」と<br>
+                  五感で楽しむ「食育体験」</span>
+              </p>
+              <p class="alt-feature-desc-text">マルシェランでは美味しい料理の提供だけでなく、家族で食事を囲むひとときがあたたかな思い出になるよう、お子さまも含め全てのお客様に真心を込めたおもてなしをいたします。
+                また、親子で食べる喜びを再発見できる「食育」にも力を入れており、随時体験教室なども開いております。
+              </p>
+            </li>
+            <li class="u-show-pc">
+              <img src="<%- mix('/assets/images/marcherant/point-3.jpg') -%>" alt="地元の食材をふんだんに使い、 食べることを“五感”で楽しむ森のレストラン">
+            </li>
+            <li class="u-show-pc">
+              <img src="<%- mix('/assets/images/marcherant/point-3.1.jpg') -%>" alt="地元の食材をふんだんに使い、 食べることを“五感”で楽しむ森のレストラン">
+            </li>
+            <li class="u-show-pc">
+              <img src="<%- mix('/assets/images/marcherant/point-3.2.jpg') -%>" alt="地元の食材をふんだんに使い、 食べることを“五感”で楽しむ森のレストラン">
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="l-section">
+        <div class="l-container-m full-sp">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center',
+              text: 'Shop’s Information',
+              alt: 'Shop’s Information',
+              altSubtext: '',
+              subtextvg: 'shop-information-title'
+            }) %>
+          </div>
+          <table class="table table-craft">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">場所</th>
+                <td class="table-col">
+                  ホテルツインリング１階 <a href="/map_m/">Mapを見る</a>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">朝食</th>
+                <td class="table-col">
+                  <a href="/hours_m/">7:00 〜 10:00（L.O.9:30）</a>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">ランチ</th>
+                <td class="table-col">11:30〜14:00（L.O.13:30）</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">ディナー</th>
+                <td class="table-col">
+                  17:30〜21:00（L.O.20:30）<br>
+                  ※ディナービュッフェはご宿泊のお客様限定、また毎週土曜日・長期<br>
+                  休暇などに開催となります。詳しい日程はこちらをご確認ください。
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">ランチ</th>
+                <td class="table-col">11:30〜14:00（L.O.13:30）</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">定休日</th>
+                <td class="table-col"><a href="#">ツインリンクもてぎの休業日に準じます</a></td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">座席数</th>
+                <td class="table-col">254　※個室4部屋</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">備考</th>
+                <td class="table-col">※レース・イベント開催時は特別メニューになる場合がございます。<br>
+                  ※メニューは仕入れ状況により異なる場合がございます。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="l-container">
+          <div class="subpage-section subpage-section-collapse marcherant-collapse-section">
+            <div class="subpage-collapse-heading js-collapse-button">お子さまのお誕生日や家族の記念日に<br>
+              アニバーサリーケーキのご注文について</div>
+            <div class="subpage-collapse-description">
+              <div class="subpage-collapse-content">
+                CONTENT
+              </div>
+            </div>
+          </div>
+
+          <div class="subpage-section subpage-section-collapse marcherant-collapse-section">
+            <div class="subpage-collapse-heading js-collapse-button">食物アレルギーをお持ちのお客様へ</div>
+            <div class="subpage-collapse-description">
+              <div class="subpage-collapse-content">
+                CONTENT
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="l-section">
+        <div class="l-container">
+          <div class="marcherant-bottom-banner">
+            <a href="#" class="link">
+              <img src="<%- mix('/assets/images/marcherant/toya-banner.jpg') -%>" alt="">
+              <h3 class="bottom-banner-title">
+                <span class="title-text">
+                  <%- include('/partials/svg', {
+                    name: 'marcherant-toya-title'
+                  }) %>
+                </span>
+                
+                <i class="button-gradient-icon">
+                  <%- include('/partials/svg', {
+                    name: 'arrow'
+                  }) %>
+                </i>
+              </h3>
+              <p class="banner-desc">地元の旬な素材の持ち味を活かした、茂木ならではの上質な“滋味”が堪能できる料亭</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="toya-reservation marcherant-reservation">
+        <div class="hoteltwinring-reservation">
+          <div class="hotel-reservation-wrap marcherant-reservation-wrap">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'hoteltwinring-heading-reservation fill-white',
+                text: 'Reservation',
+                alt: '',
+                altSubtext: '',
+                subtextvg: 'marcherant-reservation-title',
+                altSubtextvg: 'Reservation'
+              }) %>
+            </div>
+
+            <div class="reservation-cta">
+              <div class="l-button cta-btn">
+                <span>ホテルツインリンクにご宿泊で<br>
+                  マルシェラン利用のお客様</span>
+                <%- include('/partials/button', {
+                  modifier: 'reservation-button',
+                  text: 'ご予約はこちら',
+                  link: '#'
+                }) -%>
+              </div>
+              <div class="l-button cta-btn">
+                <span>お問い合わせのお客様<br><br></span>
+                <%- include('/partials/button', {
+                  modifier: 'reservation-button',
+                  text: '<span>Tel.0285-64-0489<br/><small>受付時間 10:00～17:30</small></span>',
+                  link: '#'
+                }) -%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
     <!-- END BOTTOM -->

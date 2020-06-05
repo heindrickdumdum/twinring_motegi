@@ -325,3 +325,29 @@
     }
   }
 }
+
+.marcherant-bottom-banner {
+  max-width: 600px;
+  margin: auto;
+  .link {
+    color: inherit;
+  }
+  .bottom-banner-title {
+    position: relative;
+    line-height: 3;
+
+    .title-text {
+      svg {
+        height: 60px;
+        width: 240px;
+        @include max-screen ($breakpoint-mobile) {
+          width: 165px;
+        }
+      }
+    }
+
+    i {
+      line-height: 60px;
+    }
+  }
+}

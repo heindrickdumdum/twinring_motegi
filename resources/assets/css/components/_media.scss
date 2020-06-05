@@ -331,6 +331,11 @@
       span {
         background-position: center 3px;
         background-repeat-y: no-repeat;
+
+        @at-root .is-ie & {//for ie
+          background-repeat: repeat-x;
+          background-position: center 8px;
+        }
       }
       
       &-heading {
@@ -342,6 +347,11 @@
         span {
           background-position: center 7px;
           background-repeat-y: no-repeat;
+
+          @at-root .is-ie & {//for ie
+            background-repeat: repeat-x;
+            background-position: center 12px;
+          }
 
           @include max-screen($breakpoint-mobile) {
             background-position: center 3px;

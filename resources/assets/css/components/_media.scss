@@ -356,6 +356,10 @@
       }
 
       &-faq-heading {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 11px;
+        }
+
         @include max-screen($breakpoint-mobile) {
           text-align: center;
           font-size: 19px;

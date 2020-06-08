@@ -11,6 +11,78 @@
     }
   }
 
+  &.smart-entry {//smart entry page
+    .color-red {
+      color: $color-red;
+    }
+
+    .main-desc {
+      font-size: 14px;
+      line-height: 2.286;
+      text-align: center;      
+      letter-spacing: 0.1em;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 64px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+        line-height: 2.125;
+        text-align: justify;
+      }
+    }
+
+    @at-root & {
+      .dotted-item {
+        position: relative;
+        margin: {
+          left: 23px;
+          bottom: 12px;
+          top: 3px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          margin-left: 20px;
+          margin-bottom: 10px;
+        }
+
+        span {
+          font-size: 19.474px;
+          line-height: 1.778;
+          letter-spacing: 0.1em;
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 13px;
+            line-height: 1.667;
+            font-weight: bold;
+          }
+        }
+  
+        &:before {
+          position: absolute;
+          content: "\2022";
+          color: $color-green;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -25px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 35px;
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 25px;
+            margin-left: -20px;
+            width: auto;
+            height: auto;
+            top: 11px;
+          }
+        }
+      }
+    }
+  }
+
   &-hotel {//hotel granroom
     @include min-screen($breakpoint-mobile + 1) {
       // sass-lint:disable-block no-important   
@@ -1292,6 +1364,32 @@
 
 .subpage-title-reserve {
   margin-bottom: 11px;
+}
+
+@at-root .subpage-section-faq-smart-entry {//smart entry page
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: -206px;
+  }
+
+  .faq-smart-entry {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-bottom: 66px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 26px;
+    }
+  }
+
+  .l-heading {
+    display: none;
+  }
+
+  .media-title {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 11px;
+    }
+  }
 }
 
 .marcherant-collapse-section {

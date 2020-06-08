@@ -63,6 +63,27 @@
     }
   }
 
+  @at-root .heading-main-smart-entry & {//smart entry page
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 37px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 841px;
+        height: 34px;
+        margin-top: 12px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 298px;
+        height: 60px;
+      }
+    }
+  }
+
   @at-root .toya-main-title-heading & {//toya
     .heading-subtext {
       @include min-screen($breakpoint-mobile) {

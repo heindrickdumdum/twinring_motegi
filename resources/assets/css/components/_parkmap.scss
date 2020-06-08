@@ -2,6 +2,16 @@
   @include max-screen($breakpoint-mobile) {
     margin-top: 64px;
   }
+
+  @at-root .smart-entry & {//smart entry page
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 139px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 145px
+    }
+  }
 }
 
 .parkmap-container {
@@ -24,6 +34,23 @@
     transform: translateX(-50%);
     background: url(#{$image-path}top/parkmap/map-v2-sp.png) no-repeat center top;
     background-size: contain;
+  }
+
+  @at-root .smart-entry & {//smart entry page
+    background-image: url(#{$image-path}smart_entry/map.jpg);
+    width: 2120px;
+    height: 908px;
+    left: -618px;
+    top: -161px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 550px;
+      height: 375px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url(#{$image-path}smart_entry/map-sp.jpg) no-repeat center top;
+      background-size: contain;
+    }
   }
 }
 
@@ -88,6 +115,18 @@
       left: 231px;
       top: 48px;
     }
+
+    @at-root .smart-entry & {//smart entry page
+      @include min-screen($breakpoint-mobile + 1) {
+        left: 775px;
+        top: 260px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        left: 315px;
+        top: 97px;
+      }
+    }
   }
 
   &:nth-of-type(2) {
@@ -98,6 +137,18 @@
       left: 174px;
       top: 86px;
     }
+
+    @at-root .smart-entry & {//smart entry page
+      @include min-screen($breakpoint-mobile + 1) {
+        left: 865px;
+        top: 333px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        left: 362px;
+        top: 129px;
+      }
+    }
   }
 
   &:nth-of-type(3) {
@@ -107,6 +158,18 @@
     @include max-screen($breakpoint-mobile) {
       left: 324px;
       top: 129px;
+    }
+
+    @at-root .smart-entry & {//smart entry page
+      @include min-screen($breakpoint-mobile + 1) {
+        left: 725px;
+        top: 620px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        left: 299px;
+        top: 246px;
+      }
     }
   }
 
@@ -174,6 +237,17 @@
     top: 0;
     width: calc(100% - 23px);
   }
+
+  @at-root .smart-entry & {//smart entry page
+    @include min-screen($breakpoint-mobile + 1) {
+      top: 315px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -200px;
+    }
+  }
+  
 }
 
 .parkmap-link-icon {
@@ -351,5 +425,13 @@
       margin-left: auto;
       margin-right: auto;
     }
+  }
+}
+
+.design-parkmap-smart-entry {//smart entry page
+  margin-top: -39px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: -11px;
   }
 }

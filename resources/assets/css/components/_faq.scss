@@ -4,6 +4,12 @@
   @include max-screen($breakpoint-mobile) {
     margin-top: 28px;
   }
+
+  &-smart-entry {//smart entry page
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -17px;
+    }
+  }
 }
 
 .faq-tsubasa,

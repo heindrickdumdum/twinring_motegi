@@ -231,11 +231,14 @@
     @at-root &.toya-button {//toya page
       border-color: #a38737;
       color: #a38737;
+      letter-spacing: 0.1em;     
 
       @include min-screen($breakpoint-mobile + 1) {
         margin: {
           top: 102px;
         }
+        font-size: 18px;
+        line-height: 1.667;   
       }
 
       @include max-screen($breakpoint-mobile) {

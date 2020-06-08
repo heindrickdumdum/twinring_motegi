@@ -158,6 +158,81 @@
       }
     }
 
+    @at-root &:nth-of-type(4) {//fb 06082020 toya
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 85px;
+      }
+
+      .columns {
+        &:first-child {
+          @include min-screen($breakpoint-mobile + 1) {
+            padding-left: 99px !important;
+          }
+        }
+
+        .tags {
+          @include min-screen($breakpoint-mobile + 1) {
+            padding: 15px 26px !important;
+          }
+        }
+
+        .heading {
+          @include min-screen($breakpoint-mobile + 1) {
+            margin: {
+              top: 34px !important;
+              bottom: 31px !important;
+            }
+          }
+        }
+      }
+    }
+
+    @at-root &:nth-of-type(3) {//fb 06082020 toya
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 115px;
+      }
+
+      .columns {
+        .tags {
+          @include min-screen($breakpoint-mobile + 1) {
+            padding: 16px 15px !important;
+          }
+        }
+
+        .heading {
+          @include min-screen($breakpoint-mobile + 1) {
+            margin: {
+              top: 33px !important;
+              bottom: 29px !important;
+            }
+          }
+        }
+
+        .desc {
+          @include min-screen($breakpoint-mobile + 1) {
+            margin: {
+              left: 5px !important;
+            }
+          }
+        }
+
+        &:first-child {
+          @include min-screen($breakpoint-mobile + 1) {
+            padding-right: 85px !important;
+          }
+        }
+
+        &:last-child {
+          .image {
+            @include min-screen($breakpoint-mobile + 1) {
+              position: relative;
+              left: -2px;
+            }
+          }
+        }
+      }
+    }
+
     @at-root &:nth-child(1),
     &:nth-child(3) {
       .columns {
@@ -169,7 +244,7 @@
       }
     }
 
-    &:nth-child(2),
+    @at-root &:nth-child(2),
     &:nth-child(4) {
       .columns {
         &:first-child {

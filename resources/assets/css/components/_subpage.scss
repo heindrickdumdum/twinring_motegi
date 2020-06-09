@@ -12,6 +12,10 @@
   }
 
   &.smart-entry {//smart entry page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 118px;
+    }
+
     .color-red {
       color: $color-red;
     }
@@ -48,14 +52,14 @@
         }
 
         span {
-          font-size: 19.474px;
+          font-size: 18px;
           line-height: 1.778;
           letter-spacing: 0.1em;
+          font-weight: bold;
 
           @include max-screen($breakpoint-mobile) {
             font-size: 13px;
             line-height: 1.667;
-            font-weight: bold;
           }
         }
   

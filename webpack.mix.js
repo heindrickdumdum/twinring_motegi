@@ -36,6 +36,12 @@ mix
     `${srcRelativePath}/assets/js/index.js`,
     `${distRelativePath}/assets/js`,
   )
+
+  .js(
+    `${srcRelativePath}/assets/js/gallery-thumb.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
   .js(
     `${srcRelativePath}/assets/js/mobipark.js`,
     `${distRelativePath}/assets/js`,

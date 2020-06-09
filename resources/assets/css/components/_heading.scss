@@ -1919,3 +1919,184 @@
     }
   }
 }
+
+@at-root .breakfast-marcherant {//breakfast marcherant page
+  svg {
+    display: block;
+  }
+
+  @at-root .heading-menu-3 {
+    .heading-text {
+      @include max-screen($breakpoint-mobile) {
+        top: -55px !important;
+      }
+    }
+
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        width: 336.5px !important;
+        height: 15.5px !important;
+      }
+    }
+  }
+
+  .hoteltwinring-heading-reservation {
+    .heading-subtext {
+      width: 363px;
+      height: 34px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 286px;
+        height: 27px;
+      }
+    }
+  }
+
+  .other-menu {
+    .heading {
+      margin-top: 103px;
+    }
+  }
+
+  .heading-other-menu {
+    .heading {
+      margin-bottom: 0px;
+    }
+
+    .heading-subtext {
+      width: 623px;
+      height: 38px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 275px;
+        height: 26px;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  .heading-shop-info {
+    .heading {
+      margin-bottom: 57px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .heading-subtext {
+      width: 164px;
+      height: 34px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 97px;
+        height: 22px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .heading-color-title {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        height: auto !important;
+        margin-top: 64px;
+      }
+    }
+
+    img {
+      width: 687px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 293px;
+      }
+    }
+  }
+
+  .heading-point-title {
+    .heading {
+      margin-bottom: 120px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 86px;
+      }
+    }
+
+    .heading-subtext {
+      width: 678px;
+      height: 39px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 207.5px;
+        height: 52px;
+      }
+    }
+  }
+
+  .heading-breakfast-menu {
+    position: relative;
+
+    .heading-text {
+      font-size: 100px !important;    
+      letter-spacing: 0.1em !important; 
+      position: absolute;
+      opacity: 0.4;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -75px; 
+      width: 105px;
+      font-weight: normal;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 70px !important;
+        top: -41px;
+      }
+    }
+
+    .heading-subtext {
+      width: 100%;
+      height: 28px;
+      margin-top: 0px !important;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 249.5px;
+        height: 41.5px;
+      }
+    }
+
+    &.color-green {
+      .heading {
+        margin: 0px 0px 5px;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 15px;
+        }
+      }
+
+      .heading-subtext {
+        width: 133px !important;
+        height: 23px !important;
+        margin-top: 0px !important;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 95px !important;
+          height: 14.5px !important;
+        }
+      }
+
+      svg {
+        fill: $color-green;
+      }
+    }
+
+    &.heading-menu-3 {
+      .heading {
+        margin-bottom: 53px;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+}

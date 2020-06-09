@@ -284,6 +284,15 @@
   padding: 0 20px;
   width: 100%;
 
+  @at-root .shops-information & {//breakfast marcherant page
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 0px;
+        right: 0px;
+      }
+    }
+  }
+
   &-toya-menu {//toya page
     & > .subpage-inner {
       padding-bottom: 20px !important;
@@ -1452,10 +1461,28 @@
 }
 
 .breakfast-marcherant {//breakfast marcherant page
+  .shop-info-collapse {
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+  }
+
   .subpage-desc-breakfast {
     font-size: 18px;
     line-height: 1.889;
     text-align: center;    
     letter-spacing: 0.1em;
+    margin-top: 55px;
+    margin-bottom: 95px;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.791;
+      margin: {
+        top: -5px;
+        bottom: 45px;
+      }
+    }
   }
 }

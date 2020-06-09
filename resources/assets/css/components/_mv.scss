@@ -266,6 +266,11 @@
         height: 62px !important;
         margin-top: 6px !important;
       }
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 236px !important;
+        height: 36.5px !important;
+      }
     }
   }
 

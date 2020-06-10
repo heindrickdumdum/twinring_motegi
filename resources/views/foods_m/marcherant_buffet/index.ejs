@@ -75,10 +75,10 @@
             <div class="swiper-container slider-gallery js-gallery">
               <div class="swiper-wrapper">
                 <div class="swiper-slide slider-item">
-                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/granroom/granroom-banner.jpg') -%>)"></div>
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
                 </div>
                 <div class="swiper-slide slider-item">
-                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/granroom/granroom-banner2.jpg') -%>)"></div>
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
                 </div>
               </div>
             </div>
@@ -86,19 +86,21 @@
             <div class="swiper-container slider-gallery-thumb js-gallery-thumb">
               <div class="swiper-wrapper">
                 <div class="swiper-slide slider-item">
-                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/granroom/granroom-banner.jpg') -%>)"></div>
+                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
                 </div>
                 <div class="swiper-slide slider-item">
-                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/granroom/granroom-banner2.jpg') -%>)"></div>
+                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
                 </div>
               </div>
             </div>
+
+            <h3 class="text-center">あらびき那須三元豚とほうれん草のキッシュ</h3>
+            <p class="subpage-desc text-center">
+              お子様にも食べやすいよう、ホワイトソースとパン粉を加えまろやかでやわらかく仕上げました
+            </p>
           </div>
 
-          <p class="subpage-desc">
-            <h3><b></b>あらびき那須三元豚とほうれん草のキッシュ</b></h3>
-            通常の2倍ある広々とした部屋には幅4mのワイドベッドをはじめロッキングチェア、ハンモックが設けられ、心地よい木の香りに包まれながら森の中のようにリラックスしてお過ごしいただけます。
-          </p>
+          
 
         </div>
       </section>
@@ -107,19 +109,19 @@
         <div class="l-container">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
-              modifier: 'heading-forest heading-forest-craft',
+              modifier: '',
               text: 'Point',
               alt: 'Point',
-              subtextvg: 'craft-recommendation-title',
+              subtextvg: 'marcherant-dinner-buffet-point-title',
               altSubtext: '',
             }) %>
           </div>
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
-              modifier: 'heading-forest heading-forest-craft',
+              modifier: '',
               text: 'Point',
               alt: 'Point',
-              subtextvg: 'craft-recommendation-title',
+              subtextvg: 'marcherant-dinner-buffet-point-title',
               altSubtext: '',
             }) %>
           </div>
@@ -135,6 +137,7 @@
               石窯が設置されたオーブンキッチンでシェフの実演風景とともにお楽しみください。</p>
           </div>  
         </div>
+        
 
         <div class="l-container">
           <ul class="point-image-list">
@@ -143,12 +146,108 @@
               <p>牛フィレ肉の石窯ロースト</p>
             </li>
             <li>
-              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-1.1.png') %>);"></div>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-1.2.png') %>);"></div>
               <p>那須野ヶ原牛のアッシュパルマンティエ</p>
             </li>
             <li>
-              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-1.1.png') %>);"></div>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-1.3.png') %>);"></div>
               <p>焼きたての石窯ピザ</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="l-section point-item">
+        <div class="l-container-m">
+          <div class="point-heading-wrap">
+            <h3 class="point-heading no-2">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-buffet-point-2'
+              }) %>
+            </h3>
+            <p class="point-subtext">那須三元豚・いっこく野州鶏・プレミアムヤシオマス・磨宝卵・大子町の豆腐など<br>
+              栃木県が誇るこだわりの食材を多数使用しています。<br>
+              安心・安全な地場産の食材を、オリジナルメニューでお召し上がりください。 </p>
+          </div>  
+        </div>
+        
+
+        <div class="l-container">
+          <ul class="point-image-list two-items">
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-2.1.png') %>);"></div>
+              <p>磨宝卵と冬野菜のモッツァレラチーズ焼き</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-2.2.png') %>);"></div>
+              <p>牛スジと茨城県産コンニャクのコムタン風</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="l-section point-item">
+        <div class="l-container-m">
+          <div class="point-heading-wrap">
+            <h3 class="point-heading no-3">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-buffet-point-3'
+              }) %>
+            </h3>
+            <p class="point-subtext">空と大地の恵みを受けてのびのびと育った栄養満点の里山の野菜。<br>
+              野菜嫌いなお子さまにも食べやすいよう一品一品工夫して調理しています。</p>
+          </div>  
+        </div>
+        
+
+        <div class="l-container">
+          <ul class="point-image-list">
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-3.1.png') %>);"></div>
+              <p>かぼちゃサラダとヨーグルトソース</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-3.2.png') %>);"></div>
+              <p>季節の採れたてオーガニック野菜</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-3.3.png') %>);"></div>
+              <p>疲労回復や美肌効果などが<br>
+                期待できるベジタブルウォーター</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="l-section point-item">
+        <div class="l-container-m">
+          <div class="point-heading-wrap">
+            <h3 class="point-heading no-4">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-buffet-point-4'
+              }) %>
+            </h3>
+            <p class="point-subtext">フルーツ、ケーキ、アイスクリーム、チョコレートファウンテンなど目にも楽しいほど種類豊富。
+              季節のフルーツと濃厚な那須牛乳を使ったストーンアイスは絶品です。</p>
+          </div>  
+        </div>
+        
+
+        <div class="l-container">
+          <ul class="point-image-list">
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-4.1.png') %>);"></div>
+              <p>フルーツやケーキだけでなく、<br>
+                和スイーツも充実</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-4.2.png') %>);"></div>
+              <p>様々なフレーバーを楽しめるミニケーキ</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-4.3.png') %>);"></div>
+              <p>那須牛乳オリジナルみるくアイスに<br>
+                季節のフルーツを添えたストーンアイス</p>
             </li>
           </ul>
         </div>
@@ -158,26 +257,26 @@
         <div class="l-container">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
-              modifier: 'heading-forest heading-forest-craft',
+              modifier: '',
               text: 'Kids Experience',
               alt: 'Kids Experience',
-              subtextvg: 'craft-recommendation-title',
+              subtextvg: 'marcherant-dinner-buffet-kids-exp',
               altSubtext: '',
             }) %>
           </div>
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
-              modifier: 'heading-forest heading-forest-craft',
+              modifier: '',
               text: 'Kids Experience',
               alt: 'Kids Experience',
-              subtextvg: 'craft-recommendation-title',
+              subtextvg: 'marcherant-dinner-buffet-kids-exp',
               altSubtext: '',
             }) %>
           </div>
         </div>
         <div class="swiper-container slider js-slider common-slider" id="commonSlider">
           <ul class="swiper-wrapper top-slide top-slide-craft">
-            <% forestCraft.forEach(item => { %>
+            <% marcherantDinnerBuffetKidsExp.forEach(item => { %>
             <li class="swiper-slide slider-item">
               <div class="top-slider-image">
                 <img src="<%- item.src -%>" alt="<%- item.alt -%>">
@@ -188,6 +287,61 @@
             </li>
             <% } ) %>
           </ul>
+        </div>
+      </section>
+
+      
+      <!-- breakfast menu 3 -->
+      <section class="breakfast-marcherant-menu menu-3">
+        <div class="l-container">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant  heading-breakfast-menu heading-menu-3',
+              text: '03',
+              subtextvg: 'breakfast-marcherant-title-5',
+              altSubtextvg: '洋食も和食も種類豊富な朝食ビュッフェ'
+            }) %>
+          </div>
+
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant  heading-breakfast-menu heading-menu-3',
+              text: '03',
+              subtextvg: 'breakfast-marcherant-title-5-sp',
+              altSubtextvg: '洋食も和食も種類豊富な朝食ビュッフェ'
+            }) %>
+          </div>
+
+          <div class="subpage-inner">
+            <div class="breakfast-menu-3">
+              <div class="l-section-title">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu color-green',
+                  subtextvg: 'breakfast-marcherant-menu-title',
+                  altSubtextvg: 'メニュー例'
+                }) %>
+              </div>
+    
+              <p class="breakfast-menu-subtext">
+                ※メニューは季節・<br class="u-show-sp"/>仕入れ状況により異なる場合がございます。
+              </p>
+    
+              <ul class="breakfast-menu-list-container">
+                <% getData().data.breakfastMarcherantMenu3.forEach(item => { %>
+                <li class="breakfast-menu-list-cat-item">
+                  <span><%- item.categoryName -%></span>
+                  <ul class="breakfast-menu-list-cat-list">
+                    <% item.categoryList.forEach(elem => { %>
+                    <li class="breakfast-menu-list-cat-list-item">
+                      <%- elem.listdesc -%>
+                    </li>
+                    <% }); %>
+                  </ul>
+                </li>
+                <% }); %>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

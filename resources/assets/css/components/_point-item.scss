@@ -22,6 +22,15 @@
       &.no-1 {
         background-image: url(../images/dinner-buffet/01.png);
       }
+      &.no-2 {
+        background-image: url(../images/dinner-buffet/02.png);
+      }
+      &.no-3 {
+        background-image: url(../images/dinner-buffet/03.png);
+      }
+      &.no-4 {
+        background-image: url(../images/dinner-buffet/04.png);
+      }
     }
     .point-subtext {
       font-size: 15px;
@@ -46,6 +55,14 @@
         margin: auto;
         background-size: contain;
         margin-bottom: 14px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &.two-items {
+      display: block;
+      li {
+        display: inline-block;
       }
     }
   }

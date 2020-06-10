@@ -19,12 +19,12 @@
       </ul>
 
       <div class="l-container mv-container">
-        <div class="mv-heading hellowoods-mv-heading marcherant-mv-heading u-show-pc">
+        <div class="mv-heading hellowoods-mv-heading u-show-pc">
           <%- include('/partials/heading', {
             modifier: '',
             heading_level: 1,
             text: 'Dinner Buffet',
-            subtextvg: 'marcherant-title',
+            subtextvg: 'marcherant-dinner-buffet-title',
             altSubtextvg: '森のキッチン どんぐり'
           }) %>
         </div>
@@ -62,7 +62,15 @@
 
       <section class="subpage-section subpage-section-roomdetails subpage-section-aqua-labo">
         <div class="subpage-inner">
-
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-hellowoods heading-other-restaurant',
+              heading_level: 1,
+              text: 'Recommend',
+              subtextvg: 'marcherant-dinner-buffet-recommend',
+              altSubtextvg: 'Recommend'
+            }) %>
+          </div>
           <div class="subpage-image-gallery subpage-image-gallery-roomdetails">
             <div class="swiper-container slider-gallery js-gallery">
               <div class="swiper-wrapper">
@@ -88,6 +96,7 @@
           </div>
 
           <p class="subpage-desc">
+            <h3><b></b>あらびき那須三元豚とほうれん草のキッシュ</b></h3>
             通常の2倍ある広々とした部屋には幅4mのワイドベッドをはじめロッキングチェア、ハンモックが設けられ、心地よい木の香りに包まれながら森の中のようにリラックスしてお過ごしいただけます。
           </p>
 
@@ -145,23 +154,13 @@
         </div>
       </section>
 
-
-
-
-
-
-      <!-- restaurant menu -->
-      <%- include('/partials/restaurant/section-menu-marcherant', {
-        data: getData().data.marcherantMenu
-      }) -%>
-
       <section class="forest forest-craft l-section">
         <div class="l-container">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
               modifier: 'heading-forest heading-forest-craft',
-              text: 'Monthly Recommendation',
-              alt: 'Monthly Recommendation',
+              text: 'Kids Experience',
+              alt: 'Kids Experience',
               subtextvg: 'craft-recommendation-title',
               altSubtext: '',
             }) %>
@@ -169,8 +168,8 @@
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
               modifier: 'heading-forest heading-forest-craft',
-              text: 'Monthly Recommend',
-              alt: 'Monthly Recommendation',
+              text: 'Kids Experience',
+              alt: 'Kids Experience',
               subtextvg: 'craft-recommendation-title',
               altSubtext: '',
             }) %>
@@ -192,7 +191,7 @@
         </div>
       </section>
 
-      <section class="l-section">
+      <section class="">
         <div class="l-container-m full-sp">
           <div class="l-section-title">
             <%- include('/partials/heading', {
@@ -346,6 +345,16 @@
           </div>
         </div>
       </section>
+
+
+      <!-- restaurant menu -->
+      <%- include('/partials/restaurant/section-menu-marcherant-buffet', {
+        data: getData().data.marcherantMenu
+      }) -%>
+
+
+
+
 
       <section class="l-section">
         <div class="l-container">

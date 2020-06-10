@@ -378,6 +378,11 @@
           position: relative;
           color: black;
           text-align: left;
+
+          @at-root .breakfast-marcherant & {//marcherant breakfast page
+            display: flex;
+            align-items: center;
+          }
         }
       }
     }
@@ -719,5 +724,248 @@
       }
 
     }
+  }
+}
+
+@at-root .breakfast-marcherant {//breakfast marcherant page
+  &-menu {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1020px;
+      height: 400px;
+      background-color: $color-light-gray;
+      top: -85px;
+      z-index: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include max-screen($breakpoint-mobile) {
+        height: 206px;
+        top: -55px;
+      }
+    }
+
+    &.menu-3 {
+      &:before {
+        display: none;
+      }
+
+      margin-top: 153px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 137px;
+      }
+    }
+
+    &.menu-2 {
+      margin-top: 155px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 103px;
+      }
+    }
+  }
+
+  &-menu-list {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+
+    @include max-screen($breakpoint-mobile) {
+      flex-wrap: wrap;
+    }
+
+    &-2 {
+      flex-wrap: wrap;
+
+      @include max-screen($breakpoint-mobile) {
+        display: block;
+        margin: {
+          left: -20px;
+          right: -20px;
+        }
+      }
+    }
+  }
+
+  &-menu-item {
+    @include max-screen($breakpoint-mobile) {
+      width: 160px;
+      margin-bottom: 27px;
+    }
+
+    &-2 {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 35px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+  }
+
+  &-menu-image {
+    width: 360px;
+    height: 361px;
+    margin-bottom: 11px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 160px;
+      height: 160px;
+    }
+
+    &-2 {
+      width: 473px;
+      height: 278px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        height: 179px;
+      }
+    }
+  }
+
+  &-menu-desc {
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    text-align: center;  
+    
+    &.desc-2 {
+      @include min-screen($breakpoint-mobile + 1) {
+        font-weight: bold;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: left;
+    }
+  }
+
+  .breakfast-menu {
+    &-3 {
+      border: 1px solid $color-green;
+      padding: 48px 60px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: {
+          left: -20px;
+          right: -20px;
+        }
+        padding: {
+          left: 7px;
+          right: 7px;
+          top: 55px;
+          bottom: 55px;
+        }
+      }
+    }
+
+    &-subtext {
+      font-size: 12px;
+      line-height: 2.5;
+      text-align: center;
+      letter-spacing: 0.1em;  
+      margin-bottom: 23px; 
+      
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+    }
+
+    &-list-container {
+      @include min-screen($breakpoint-mobile + 1) {
+        column-count: 3;
+        column-gap: 122px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+
+      span {
+        font-size: 18px;
+        color: $color-green;
+        line-height: 1.667;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        display: block;
+        border-top: 2px solid $color-green;
+        border-bottom: 2px solid $color-green;
+        padding: {
+          top: 3px;
+          bottom: 4px;
+        }
+        margin-bottom: 5px;
+
+        @include max-screen($breakpoint-mobile) {
+          font-size: 14px;
+          line-height: 1.731;
+          padding: 2px 0px;
+          margin-bottom: 8px;
+        }
+      }
+
+      .breakfast-menu-list-cat {
+        &-item {
+          margin-bottom: 36px;
+        }
+
+        &-list-item {
+          font-size: 15px;
+          line-height: 2;
+          letter-spacing: 0.1em;    
+          position: relative;
+          margin-left: 16px;
+
+          @include max-screen($breakpoint-mobile) {
+            margin-left: 10px;
+          }
+          
+          &:before {
+            content: "\2022";
+            position: absolute;
+            top: 5px;
+            left: -11px;
+            font-size: 10px;
+
+            @include max-screen($breakpoint-mobile) {
+              top: 2px;
+              left: -10px;
+            }
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 12px;
+            line-height: 2.045;
+          }
+        }
+      }
+    }
+  }
+
+  .other-menu {
+    .marcherant-menu {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: -43px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: -8px;
+      }
+    }
+
   }
 }

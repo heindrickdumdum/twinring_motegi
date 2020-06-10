@@ -148,6 +148,12 @@
   }
 }
 
+.breakfast-marcherant {//breakfast marcherant page
+  .hotel-reservation-wrap {
+    background-image: url('/assets/images/breakfast_marcherant/reservation-bg.jpg') !important;
+  }
+}
+
 .toya-reservation {//toya page
   .hotel-reservation-wrap {
     background-image: url('/assets/images/toya/toya-reservation-bg.jpg');
@@ -266,6 +272,16 @@
       @include max-screen($breakpoint-mobile) {
         font-size: 14px;
       }
+
+      @at-root .breakfast-marcherant & {
+        @include max-screen($breakpoint-mobile) {
+          font-weight: normal;
+        }
+      }
+    }
+
+    @at-root .breakfast-marcherant & {
+      align-items: flex-end;
     }
   }
 }

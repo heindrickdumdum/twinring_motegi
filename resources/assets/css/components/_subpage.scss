@@ -1020,6 +1020,12 @@
   max-width: 800px;
   margin: 50px auto;
 
+  @at-root .breakfast-marcherant & {//marcherant breakfast page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 120px;
+    }
+  }
+
   .subpage-collapse-heading {
     padding: 30px;
     text-align: center;

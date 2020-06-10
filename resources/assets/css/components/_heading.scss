@@ -1955,6 +1955,10 @@
   .other-menu {
     .heading {
       margin-top: 103px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: -21px;
+      }
     }
   }
 

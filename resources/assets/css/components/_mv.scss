@@ -642,13 +642,13 @@
 
       @at-root .smart-entry & {//smart entry page
         @include min-screen($breakpoint-mobile + 1) {
-          max-width: 852px !important;
+          max-width: 824px !important;
           height: 50px !important;
           margin-top: 10px !important;
         }
 
         @include max-screen($breakpoint-mobile) {
-          width: 322px !important;
+          width: 307px !important;
           height: 70px !important;
         }
       }

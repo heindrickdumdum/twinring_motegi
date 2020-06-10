@@ -1,0 +1,182 @@
+.recommend-menu {
+  &-container {
+    border: 2px solid #c6cce4;
+    background-color: $color-light-gray;
+    padding-top: 25px;
+    padding-bottom: 79px;
+  }
+
+  &-details {
+    margin-top: 100px;
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      width: 550px;
+      margin-bottom: 70px;
+    }
+
+    &-main-title {
+      margin-bottom: 32px;
+
+      img {
+        display: block;
+        margin: auto;
+        // width: 491px;
+        height: 66px;
+      }
+
+      &.main-title-3 {
+        img {
+          height: 27px;
+        }
+      }
+    }
+
+    &-context {
+      padding: {
+        left: 50px;
+        right: 50px;
+      }
+    }
+  }
+}
+
+.recommend-feature {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+
+  &-item {
+    margin-bottom: 80px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 481px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 39px;
+
+    &.details-image {
+      height: 320px;
+      margin-bottom: 31px;
+    }
+  }
+
+  &-title {
+    margin-bottom: 20px;
+
+    svg {
+      width: 100%;
+      height: 29px;
+    }
+
+    @at-root & {
+      &.details-title {
+        text-align: center;
+
+        svg {
+          display: inline-block;
+          width: 410px;
+          height: 65px;
+        }
+
+        &.title-2 {
+          svg {
+            width: 287px;
+            height: 37px;
+          }
+        }
+      }
+    }
+  }
+
+  &-price {
+    margin-bottom: 20px;
+
+    svg {
+      width: 100%;
+      height: 22px;
+    }
+
+    @at-root & {
+      &.details-price {
+        svg {
+          height: 20px;
+        }
+
+        &.price-2 {
+          margin-bottom: 33px;
+        }
+      }
+    }
+  }
+
+  &-desc {
+    font-size: 15px;
+    line-height: 2;
+    text-align: center;
+    letter-spacing: 0.1em;    
+    margin-bottom: 46px;
+
+    &.details-desc {
+      text-align: left;
+    }
+  }
+
+  &-box {
+    border-top: 1px solid $color-black;
+    border-bottom: 1px solid $color-black;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 12px;
+
+    &.details-box {
+      width: 100%;
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 800px;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+  }
+
+  &-tag {
+    font-size: 16px;
+    line-height: 1.875;
+    text-align: left;
+    letter-spacing: 0.1em;    
+    background-color: $color-light-gray;
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -15px;
+
+    &.details-tag {
+      background-color: $color-white;
+    }
+  }
+
+  &-text {
+    font-size: 15px;
+    line-height: 2;
+    text-align: left;
+    letter-spacing: 0.1em;
+  }
+}

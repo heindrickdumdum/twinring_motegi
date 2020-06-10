@@ -17,13 +17,11 @@
       </ul>
 
       <div class="l-container mv-container">
-        <div class="mv-heading hellowoods-mv-heading mv-heading-marcherant-breakfast">
+        <div class="mv-heading hellowoods-mv-heading mv-heading-marcherant-lunch">
           <%- include('/partials/heading', {
-            modifier: 'heading-hellowoods heading-breakfast',
-            heading_level: 1,
-            text: 'Lunch',
-            subtextvg: 'breakfast-marcherant-top-title',
-            altSubtextvg: '朝食ビュッフェ'
+            modifier: 'heading-hellowoods heading-lunch',
+            imgPath: mix('/assets/images/lunch_marcherant/top-title.png'),
+            alt: 'ランチ'
           }) %>
         </div>
 
@@ -47,11 +45,178 @@
             ホテルシェフおすすめのランチ">
           </div>
           
-          <p class="subpage-desc-breakfast">
+          <p class="subpage-desc-breakfast desc-lunch">
             日帰りのお客様も明るく落ち着いた店内で、ゆっくりお楽しみいただけます。
           </p>
         </div>
       </div>
+
+      <!-- recommend menu -->
+      <section class="recommend-menu">
+        <div class="l-container">
+          <div class="recommend-menu-container">
+            <div class="l-section-title u-show-pc">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-restaurant heading-recommend-menu',
+                heading_level: 2,
+                text: `Recommend`,
+                subtextvg: 'lunch-marcherant-recommend-title',
+                altSubtextvg: '森のごちそうが詰まったホテルシェフの自信作石窯焼きプレート'
+              }) %>
+            </div>
+            
+            <div class="l-section-title u-show-sp">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-restaurant heading-shop-info',
+                heading_level: 2,
+                text: `Recommend`,
+                subtextvg: 'lunch-marcherant-recommend-title-sp',
+                altSubtextvg: '森のごちそうが詰まったホテルシェフの自信作石窯焼きプレート'
+              }) %>
+            </div>
+
+            <div class="recommend-feature">
+              <ul class="recommend-feature-list">
+                <li class="recommend-feature-item">
+                  <div class="recommend-feature-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/recommend-1.jpg') -%>);"></div>
+                  <h3 class="recommend-feature-title">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-recommend-1-title',
+                      svgtitle: 'とちぎ和牛100％石窯焼きハンバーグプレート'
+                    }) -%>
+                  </h3>
+                  <p class="recommend-feature-price">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-recommend-1-price',
+                      svgtitle: '1,530円'
+                    }) -%>
+                  </p>
+                  <p class="recommend-feature-desc">石窯で仕上げるMARCHERANT特製ハンバーグはとちぎ和牛の旨みが溢れる自慢の逸品</p>
+                  <div class="recommend-feature-box">
+                    <p class="recommend-feature-tag">付け合わせ</p>
+                    <p class="recommend-feature-text">自然農園空土ファーム直送野菜サラダ / アッシュパルマンティエ(じゃがいものグラタン) / 桐生酵母のパン /自家製キャロットラペ</p>
+                  </div>
+                </li>
+
+                <li class="recommend-feature-item">
+                  <div class="recommend-feature-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/recommend-2.jpg') -%>);"></div>
+                  <h3 class="recommend-feature-title">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-recommend-2-title',
+                      svgtitle: '厚切りベーコンの石窯焼きプレート'
+                    }) -%>
+                  </h3>
+                  <p class="recommend-feature-price">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-recommend-2-price',
+                      svgtitle: '1,020円'
+                    }) -%>
+                  </p>
+                  <p class="recommend-feature-desc">3種類（ワサビ・ハニーマスタード・黒胡椒）のソースで味わう <br/>
+                    ボリュームたっぷりの特製厚切りベーコン
+                  </p>
+                  <div class="recommend-feature-box">
+                    <p class="recommend-feature-tag">付け合わせ</p>
+                    <p class="recommend-feature-text">自然農園空土ファーム直送野菜サラダ / アッシュパルマンティエ(じゃがいものグラタン) / 桐生酵母のパン / 自家製キャロットラペ</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="recommend-menu-details">
+            <ul class="recommend-menu-details-list">
+              <li class="recommend-menu-details-item">
+                <div class="recommend-menu-details-main-title">
+                  <img src="<%- mix('/assets/images/lunch_marcherant/main-title-1.png') -%>" alt="素材の旨味が広がる
+                  特注の石窯で焼き上げた絶品ランチ">
+                </div>
+                <div class="recommend-feature-image details-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/left-image.jpg') -%>);"></div>
+                <h3 class="recommend-feature-title details-title">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-title-left-title',
+                    svgtitle: '磨宝卵と粗挽き那須野ヶ原牛の石焼きご飯 '
+                  }) -%>
+                </h3>
+                <p class="recommend-feature-price details-price">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-title-left-price',
+                    svgtitle: '1,200円'
+                  }) -%>
+                </p>
+                <div class="recommend-menu-details-context">
+                  <p class="recommend-feature-desc details-desc">コクと旨味が強い磨宝卵と、粗挽きの那須野ヶ原牛を石窯で焼きあげました。お好みでモッツァレラチーズと特製和風ソースをかけてお召し上がりください。</p>
+                  <div class="recommend-feature-box details-box">
+                    <p class="recommend-feature-tag details-tag">付け合わせ</p>
+                    <p class="recommend-feature-text details-text">味噌汁 / 小鉢</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="recommend-menu-details-item">
+                <div class="recommend-menu-details-main-title">
+                  <img src="<%- mix('/assets/images/lunch_marcherant/main-title-2.png') -%>" alt="サラダ・フルーツ・デザート付きで
+                  お子さまに人気のランチセット">
+                </div>
+                <div class="recommend-feature-image details-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/right-image.jpg') -%>);"></div>
+                <h3 class="recommend-feature-title details-title title-2">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-title-right-image',
+                    svgtitle: '磨宝卵と粗挽き那須野ヶ原牛の石焼きご飯 '
+                  }) -%>
+                </h3>
+                <p class="recommend-feature-price details-price price-2">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-title-right-price',
+                    svgtitle: '850円'
+                  }) -%>
+                </p>
+                <div class="recommend-menu-details-context">
+                  <div class="recommend-feature-box details-box">
+                    <p class="recommend-feature-tag details-tag">セット内容</p>
+                    <p class="recommend-feature-text details-text">MARCHERANT特製カレーライス（甘口）/ 
+                      エビフライ / 唐揚げ / ウィンナー / フレンチフライ / サラダ / フルーツ / デザート</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="recommend-menu-details">
+            <div class="recommend-menu-details-main-title main-title-3">
+              <img src="<%- mix('/assets/images/lunch_marcherant/main-title-3.png') -%>" alt="中華・パスタなど豊富なランチメニュー">
+            </div>
+
+            <ul class="recommend-menu-details-list">
+              <% getData().data.lunchMarcherantRichMenu.forEach(item => { %>
+              <li class="recommend-menu-details-item">
+                <div class="recommend-feature-image details-image" style="background-image: url(<%- item.image -%>);"></div>
+                <h3 class="recommend-feature-title details-title">
+                  <%- include('/partials/svg', {
+                    name: item.titlesvg,
+                    svgtitle: item.titlealt
+                  }) -%>
+                </h3>
+                <p class="recommend-feature-price details-price">
+                  <%- include('/partials/svg', {
+                    name: item.pricesvg,
+                    svgtitle: item.pricealt
+                  }) -%>
+                </p>
+                <div class="recommend-menu-details-context">
+                  <p class="recommend-feature-desc details-desc"><%- item.desc -%>
+                  </p>
+                  <div class="recommend-feature-box details-box">
+                    <p class="recommend-feature-tag details-tag"><%- item.tag -%></p>
+                    <p class="recommend-feature-text details-text"><%- item.tagDesc -%></p>
+                  </div>
+                </div>
+              </li>
+              <% }); %>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <!-- shops info -->
       <section class="shops-information">

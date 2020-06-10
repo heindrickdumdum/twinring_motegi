@@ -1020,6 +1020,12 @@
   max-width: 800px;
   margin: 50px auto;
 
+  @at-root .breakfast-marcherant & {//marcherant breakfast page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 120px;
+    }
+  }
+
   .subpage-collapse-heading {
     padding: 30px;
     text-align: center;
@@ -1480,6 +1486,13 @@
     margin-top: 55px;
     margin-bottom: 95px;
 
+    &.desc-lunch {//lunch marcherant page
+      margin: {
+        top: 26px;
+        bottom: -4px;
+      }
+    }
+
     @include max-screen($breakpoint-mobile) {
       font-size: 12px;
       line-height: 1.791;
@@ -1487,6 +1500,20 @@
         top: -5px;
         bottom: 45px;
       }
+    }
+  }
+}
+
+@at-root .lunch-marcherant {//lunch marcherant page
+  .color-title {
+    margin-top: 56px;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 873px;
+      height:82px;
     }
   }
 }

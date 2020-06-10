@@ -1055,6 +1055,13 @@
   .hidden {
     display: none;
   }
+
+  &.gold {
+    border: 1px solid #a38737;
+    .subpage-collapse-heading {
+      color: #a38737;
+    }
+  }
 }
 
 //modifier forest walk

@@ -5,6 +5,7 @@
     width: 100%;
     max-width: 860px;
     height: 70px;
+    margin: auto;
   }
   .point-heading-wrap {
     background-color: #f5f6fa;
@@ -24,12 +25,21 @@
       }
       &.no-2 {
         background-image: url(../images/dinner-buffet/02.png);
+        svg {
+          max-width: 380px;
+        }
       }
       &.no-3 {
         background-image: url(../images/dinner-buffet/03.png);
+        svg {
+          max-width: 750px;
+        }
       }
       &.no-4 {
         background-image: url(../images/dinner-buffet/04.png);
+        svg {
+          max-width: 410px;
+        }
       }
     }
     .point-subtext {

@@ -7,7 +7,7 @@
 <%- include('/partials/head', { pageId, title }) -%>
 
 <div class="lig-content">
-  <div class="subpage subpage-restaurant restaurant-wrapper">
+  <div class="subpage subpage-restaurant restaurant-wrapper breakfast-marcherant">
     <div class="mv mv-restaurant mv-subpage-restaurant">
       
 
@@ -64,7 +64,7 @@
         <div class="subpage-inner">
           <div class="l-section-title">
             <%- include('/partials/heading', {
-              modifier: 'heading-hellowoods heading-other-restaurant',
+              modifier: 'heading-wrap-auto',
               heading_level: 1,
               text: 'Recommend',
               subtextvg: 'marcherant-dinner-buffet-recommend',
@@ -109,7 +109,7 @@
         <div class="l-container">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
-              modifier: '',
+              modifier: 'heading-wrap-auto',
               text: 'Point',
               alt: 'Point',
               subtextvg: 'marcherant-dinner-buffet-point-title',
@@ -118,7 +118,7 @@
           </div>
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
-              modifier: '',
+              modifier: 'heading-wrap-auto',
               text: 'Point',
               alt: 'Point',
               subtextvg: 'marcherant-dinner-buffet-point-title',
@@ -227,7 +227,7 @@
                 name: 'marcherant-dinner-buffet-point-4'
               }) %>
             </h3>
-            <p class="point-subtext">フルーツ、ケーキ、アイスクリーム、チョコレートファウンテンなど目にも楽しいほど種類豊富。
+            <p class="point-subtext">フルーツ、ケーキ、アイスクリーム、チョコレートファウンテンなど目にも楽しいほど種類豊富。<br>
               季節のフルーツと濃厚な那須牛乳を使ったストーンアイスは絶品です。</p>
           </div>  
         </div>
@@ -257,7 +257,7 @@
         <div class="l-container">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
-              modifier: '',
+              modifier: 'heading-wrap-auto',
               text: 'Kids Experience',
               alt: 'Kids Experience',
               subtextvg: 'marcherant-dinner-buffet-kids-exp',
@@ -266,7 +266,7 @@
           </div>
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
-              modifier: '',
+              modifier: 'heading-wrap-auto',
               text: 'Kids Experience',
               alt: 'Kids Experience',
               subtextvg: 'marcherant-dinner-buffet-kids-exp',
@@ -292,26 +292,17 @@
 
       
       <!-- breakfast menu 3 -->
-      <section class="breakfast-marcherant-menu menu-3">
+      <section class="">
         <div class="l-container">
-          <div class="l-section-title u-show-pc">
+          <div class="l-section-title">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant  heading-breakfast-menu heading-menu-3',
-              text: '03',
-              subtextvg: 'breakfast-marcherant-title-5',
-              altSubtextvg: '洋食も和食も種類豊富な朝食ビュッフェ'
+              modifier: 'heading-wrap-auto',
+              text: 'Menu',
+              alt: 'Menu',
+              altSubtext: '',
+              subtextvg: 'marcherant-dinner-buffet-menu'
             }) %>
           </div>
-
-          <div class="l-section-title u-show-sp">
-            <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant  heading-breakfast-menu heading-menu-3',
-              text: '03',
-              subtextvg: 'breakfast-marcherant-title-5-sp',
-              altSubtextvg: '洋食も和食も種類豊富な朝食ビュッフェ'
-            }) %>
-          </div>
-
           <div class="subpage-inner">
             <div class="breakfast-menu-3">
               <div class="l-section-title">
@@ -327,7 +318,7 @@
               </p>
     
               <ul class="breakfast-menu-list-container">
-                <% getData().data.breakfastMarcherantMenu3.forEach(item => { %>
+                <% getData().data.marcherantDinnerBuffetMenu.forEach(item => { %>
                 <li class="breakfast-menu-list-cat-item">
                   <span><%- item.categoryName -%></span>
                   <ul class="breakfast-menu-list-cat-list">
@@ -340,7 +331,10 @@
                 </li>
                 <% }); %>
               </ul>
+              <br><br>
+              <img src="<%- mix('/assets/images/dinner-buffet/menu-banner.jpg') -%>" alt="menu">
             </div>
+            
           </div>
         </div>
       </section>
@@ -349,7 +343,7 @@
         <div class="l-container-m full-sp">
           <div class="l-section-title">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center',
+              modifier: 'heading-wrap-auto',
               text: 'Shop’s Information',
               alt: 'Shop’s Information',
               altSubtext: '',
@@ -361,39 +355,32 @@
               <tr class="table-row">
                 <th class="table-head">場所</th>
                 <td class="table-col">
-                  ホテルツインリング１階 <a href="/map_m/">Mapを見る</a>
+                  ホテルツインリング１階 <br><a href="/map_m/">Mapを見る</a>
                 </td>
               </tr>
 
               <tr class="table-row">
-                <th class="table-head">朝食</th>
-                <td class="table-col">
-                  <a href="/hours_m/">7:00 〜 10:00（L.O.9:30）</a>
-                </td>
-              </tr>
-
-              <tr class="table-row">
-                <th class="table-head">ランチ</th>
-                <td class="table-col">11:30〜14:00（L.O.13:30）</td>
-              </tr>
-
-              <tr class="table-row">
-                <th class="table-head">ディナー</th>
+                <th class="table-head">営業時間</th>
                 <td class="table-col">
                   17:30〜21:00（L.O.20:30）<br>
-                  ※ディナービュッフェはご宿泊のお客様限定、また毎週土曜日・長期<br>
-                  休暇などに開催となります。詳しい日程はこちらをご確認ください。
+                  ※ディナービュッフェはご宿泊のお客様限定、また毎週土曜日・長期休暇などに開催となります。詳しい日程はこちらをご確認ください。
                 </td>
               </tr>
 
               <tr class="table-row">
-                <th class="table-head">ランチ</th>
-                <td class="table-col">11:30〜14:00（L.O.13:30）</td>
+                <th class="table-head">ご利用料金</th>
+                <td class="table-col">
+                  大人（中学生以上）  4,600円<br>
+                  子ども（小学生）    3,600円<br>
+                  幼児（3歳以上）     1,600円
+                </td>
               </tr>
 
               <tr class="table-row">
                 <th class="table-head">定休日</th>
-                <td class="table-col"><a href="#">ツインリンクもてぎの休業日に準じます</a></td>
+                <td class="table-col">
+                  ツインリンクもてぎの休業日に準じます
+                </td>
               </tr>
 
               <tr class="table-row">
@@ -403,14 +390,16 @@
 
               <tr class="table-row">
                 <th class="table-head">備考</th>
-                <td class="table-col">※レース・イベント開催時は特別メニューになる場合がございます。<br>
-                  ※メニューは仕入れ状況により異なる場合がございます。</td>
+                <td class="table-col">
+                  ※レース・イベント開催時は特別メニューになる場合がございます。<br>
+                  ※メニューは仕入れ状況により異なる場合がございます。
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="l-container">
-          <div class="subpage-section subpage-section-collapse marcherant-collapse-section">
+          <div class="subpage-section subpage-section-collapse marcherant-collapse-section gold">
             <div class="subpage-collapse-heading js-collapse-button">お子さまのお誕生日や家族の記念日に<br>
               アニバーサリーケーキのご注文について</div>
             <div class="subpage-collapse-description">
@@ -448,7 +437,7 @@
             </div>
           </div>
 
-          <div class="subpage-section subpage-section-collapse marcherant-collapse-section">
+          <div class="subpage-section subpage-section-collapse marcherant-collapse-section gold">
             <div class="subpage-collapse-heading js-collapse-button">食物アレルギーをお持ちのお客様へ</div>
             <div class="subpage-collapse-description">
               <div class="subpage-collapse-content marcherant-collapse-content">
@@ -502,37 +491,10 @@
 
 
       <!-- restaurant menu -->
-      <%- include('/partials/restaurant/section-menu-marcherant-buffet', {
-        data: getData().data.marcherantMenu
+      <%- include('/partials/restaurant/section-menu-marcherant-dinner-buffet', {
+        data: getData().data.marcherantDinnerBuffetOtherMenu
       }) -%>
 
-
-
-
-
-      <section class="l-section">
-        <div class="l-container">
-          <div class="marcherant-bottom-banner">
-            <a href="#" class="link">
-              <img src="<%- mix('/assets/images/marcherant/toya-banner.jpg') -%>" alt="">
-              <h3 class="bottom-banner-title">
-                <span class="title-text">
-                  <%- include('/partials/svg', {
-                    name: 'marcherant-toya-title'
-                  }) %>
-                </span>
-                
-                <i class="button-gradient-icon">
-                  <%- include('/partials/svg', {
-                    name: 'arrow'
-                  }) %>
-                </i>
-              </h3>
-              <p class="banner-desc">地元の旬な素材の持ち味を活かした、茂木ならではの上質な“滋味”が堪能できる料亭</p>
-            </a>
-          </div>
-        </div>
-      </section>
 
       <section class="toya-reservation marcherant-reservation">
         <div class="hoteltwinring-reservation">

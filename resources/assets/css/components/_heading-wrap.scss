@@ -642,6 +642,16 @@
     }  
   }
 
+  &.heading-wrap-auto {
+    .heading-subtext {
+      width: 100%;
+
+      svg {
+        margin: auto;
+      }
+    }
+  }
+
   &.heading-comparison {
     text-align: center;
 

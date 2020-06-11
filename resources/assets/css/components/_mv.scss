@@ -1611,6 +1611,11 @@
     .heading-subtext {
       width: 214px;
       height: 160px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 124px;
+        height: 100%;
+      }
     }
   }
 }

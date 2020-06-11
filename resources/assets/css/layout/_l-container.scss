@@ -6,6 +6,10 @@
   @include max-screen($breakpoint-mobile) {
     width: 100%;
     padding: 0 20px;
+
+    @at-root .recommend-menu & {//marcherant lunch page
+      padding: 0px;
+    }
   }
 
   @at-root .camp-wrapper & {

@@ -2105,11 +2105,21 @@
   .heading {
     margin-top: 0px;
     margin-bottom: 37px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 24px;
+    }
   }
 
   .heading-subtext {
     width: 786px;
     height: 82px;
     margin-top: 27px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 276.5px;
+      height: 81.5px;
+      margin-top: 10px !important;
+    }
   }
 }

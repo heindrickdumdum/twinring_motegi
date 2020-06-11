@@ -17,10 +17,18 @@
       </ul>
 
       <div class="l-container mv-container">
-        <div class="mv-heading hellowoods-mv-heading mv-heading-marcherant-lunch">
+        <div class="mv-heading hellowoods-mv-heading mv-heading-marcherant-lunch u-show-pc">
           <%- include('/partials/heading', {
             modifier: 'heading-hellowoods heading-lunch',
             imgPath: mix('/assets/images/lunch_marcherant/top-title.png'),
+            alt: 'ランチ'
+          }) %>
+        </div>
+
+        <div class="mv-heading hellowoods-mv-heading mv-heading-marcherant-lunch u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-lunch',
+            imgPath: mix('/assets/images/lunch_marcherant/top-title-sp.png'),
             alt: 'ランチ'
           }) %>
         </div>
@@ -46,7 +54,7 @@
           </div>
           
           <p class="subpage-desc-breakfast desc-lunch">
-            日帰りのお客様も明るく落ち着いた店内で、ゆっくりお楽しみいただけます。
+            日帰りのお客様も明るく落ち着いた店内で、<br class="u-show-sp"/>ゆっくりお楽しみいただけます。
           </p>
         </div>
       </div>
@@ -67,7 +75,7 @@
             
             <div class="l-section-title u-show-sp">
               <%- include('/partials/heading', {
-                modifier: 'heading-wrap-center heading-restaurant heading-shop-info',
+                modifier: 'heading-wrap-center heading-restaurant heading-recommend-menu',
                 heading_level: 2,
                 text: `Recommend`,
                 subtextvg: 'lunch-marcherant-recommend-title-sp',
@@ -79,9 +87,15 @@
               <ul class="recommend-feature-list">
                 <li class="recommend-feature-item">
                   <div class="recommend-feature-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/recommend-1.jpg') -%>);"></div>
-                  <h3 class="recommend-feature-title">
+                  <h3 class="recommend-feature-title u-show-pc">
                     <%- include('/partials/svg', {
                       name: 'lunch-marcherant-recommend-1-title',
+                      svgtitle: 'とちぎ和牛100％石窯焼きハンバーグプレート'
+                    }) -%>
+                  </h3>
+                  <h3 class="recommend-feature-title u-show-sp">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-recommend-1-title-sp',
                       svgtitle: 'とちぎ和牛100％石窯焼きハンバーグプレート'
                     }) -%>
                   </h3>
@@ -100,7 +114,7 @@
 
                 <li class="recommend-feature-item">
                   <div class="recommend-feature-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/recommend-2.jpg') -%>);"></div>
-                  <h3 class="recommend-feature-title">
+                  <h3 class="recommend-feature-title feature-title-2">
                     <%- include('/partials/svg', {
                       name: 'lunch-marcherant-recommend-2-title',
                       svgtitle: '厚切りベーコンの石窯焼きプレート'
@@ -112,7 +126,7 @@
                       svgtitle: '1,020円'
                     }) -%>
                   </p>
-                  <p class="recommend-feature-desc">3種類（ワサビ・ハニーマスタード・黒胡椒）のソースで味わう <br/>
+                  <p class="recommend-feature-desc">3種類（ワサビ・ハニーマスタード・黒胡椒）のソースで味わう <br class="u-show-pc"/>
                     ボリュームたっぷりの特製厚切りベーコン
                   </p>
                   <div class="recommend-feature-box">

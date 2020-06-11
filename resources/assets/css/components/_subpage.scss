@@ -784,6 +784,37 @@
   &.subpage-image-gallery-nozominoyu {
     margin-bottom: 36px;
   }
+
+  &.gallery-dinner-buffet {
+    .gallery-bot-heading {
+      font-size: 24px;
+      letter-spacing: 3.5px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 16px;
+        max-width: 200px;
+        margin: 25px auto 15px;
+        letter-spacing: 3px;
+      }
+    }
+
+    .gallery-bot-subheading {
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 299px;
+        margin: auto;
+        letter-spacing: 1px;
+        font-size: 12px;
+        line-height: 2;
+    
+      }
+    }
+
+
+  }
+
+
 }
 
 

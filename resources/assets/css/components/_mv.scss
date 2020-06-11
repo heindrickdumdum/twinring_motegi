@@ -571,6 +571,8 @@
     }
   }
 
+
+
   &.marcherant-mv-heading {
     .heading-text {
       @include max-screen ($breakpoint-mobile) {
@@ -604,7 +606,7 @@
     }
   }
 
-
+ 
 
   &.hellowoods-mv-heading {
     bottom: 5px;
@@ -693,6 +695,15 @@
     }
   }
 
+  &.mv-heading-marcherant-dinner-buffet {
+    .heading-wrap-marcherant-dinner-buffet {
+      .heading-subtext {
+        @include max-screen($breakpoint-mobile) {
+          width: 90%;
+        }
+      }
+    }
+  }
   &.mv-heading-business-hours {
     padding-bottom: 20px;
     .heading-wrap-business-hours {

@@ -19,22 +19,13 @@
       </ul>
 
       <div class="l-container mv-container">
-        <div class="mv-heading hellowoods-mv-heading u-show-pc">
+        <div class="mv-heading hellowoods-mv-heading mv-heading-marcherant-dinner-buffet">
           <%- include('/partials/heading', {
-            modifier: '',
+            modifier: 'heading-wrap-marcherant-dinner-buffet',
             heading_level: 1,
             text: 'Dinner Buffet',
             subtextvg: 'marcherant-dinner-buffet-title',
             altSubtextvg: '森のキッチン どんぐり'
-          }) %>
-        </div>
-        <div class="mv-heading hellowoods-mv-heading donguri-mv-heading u-show-sp">
-          <%- include('/partials/heading', {
-            modifier: 'heading-hellowoods',
-            heading_level: 1,
-            text: 'Dinner Buffet',
-            subtextvg: 'marcherant-top-title-sp',
-            altSubtextvg: ''
           }) %>
         </div>
 
@@ -47,7 +38,7 @@
 
     <main>
       <section class="l-section">
-        <div class="heading-wrap heading-main heading-main-marcherant">
+        <div class="heading-wrap heading-main heading-main-marcherant dinner-buffet">
           <h2 class="heading">
             <span class="u-title-hidden">Car and bike</span>
             <span class="heading-texts">
@@ -71,14 +62,14 @@
               altSubtextvg: 'Recommend'
             }) %>
           </div>
-          <div class="subpage-image-gallery subpage-image-gallery-roomdetails">
+          <div class="subpage-image-gallery subpage-image-gallery-roomdetails gallery-dinner-buffet">
             <div class="swiper-container slider-gallery js-gallery">
               <div class="swiper-wrapper">
                 <div class="swiper-slide slider-item">
                   <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
                 </div>
                 <div class="swiper-slide slider-item">
-                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/menu-banner.jpg') -%>)"></div>
                 </div>
               </div>
             </div>
@@ -89,13 +80,13 @@
                   <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
                 </div>
                 <div class="swiper-slide slider-item">
-                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
+                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/menu-banner.jpg') -%>)"></div>
                 </div>
               </div>
             </div>
 
-            <h3 class="text-center">あらびき那須三元豚とほうれん草のキッシュ</h3>
-            <p class="subpage-desc text-center">
+            <h3 class="gallery-bot-heading text-center">あらびき那須三元豚とほうれん草のキッシュ</h3>
+            <p class="gallery-bot-subheading subpage-desc text-center">
               お子様にも食べやすいよう、ホワイトソースとパン粉を加えまろやかでやわらかく仕上げました
             </p>
           </div>
@@ -118,19 +109,24 @@
           </div>
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-auto',
+              modifier: 'heading-wrap-auto two-lines-sp',
               text: 'Point',
               alt: 'Point',
-              subtextvg: 'marcherant-dinner-buffet-point-title',
+              subtextvg: 'marcherant-dinner-buffet-point-title-sp',
               altSubtext: '',
             }) %>
           </div>
         </div>
-        <div class="l-container-m">
+        <div class="l-container-m full-sp">
           <div class="point-heading-wrap">
-            <h3 class="point-heading no-1">
+            <h3 class="point-heading no-1 u-show-pc">
               <%- include('/partials/svg', {
                 name: 'marcherant-dinner-point-1'
+              }) %>
+            </h3>
+            <h3 class="point-heading no-1 u-show-sp">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-point-1-sp'
               }) %>
             </h3>
             <p class="point-subtext">一般調理機器では引き出せない特注の石窯は、お肉はこんがりふっくらと、お野菜は本来の甘みが溢れてきます。<br>
@@ -158,7 +154,7 @@
       </section>
 
       <section class="l-section point-item">
-        <div class="l-container-m">
+        <div class="l-container-m full-sp">
           <div class="point-heading-wrap">
             <h3 class="point-heading no-2">
               <%- include('/partials/svg', {
@@ -187,11 +183,16 @@
       </section>
 
       <section class="l-section point-item">
-        <div class="l-container-m">
+        <div class="l-container-m full-sp">
           <div class="point-heading-wrap">
-            <h3 class="point-heading no-3">
+            <h3 class="point-heading no-3 u-show-pc">
               <%- include('/partials/svg', {
                 name: 'marcherant-dinner-buffet-point-3'
+              }) %>
+            </h3>
+            <h3 class="point-heading no-3 u-show-sp">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-buffet-point-3-sp'
               }) %>
             </h3>
             <p class="point-subtext">空と大地の恵みを受けてのびのびと育った栄養満点の里山の野菜。<br>
@@ -220,7 +221,7 @@
       </section>
 
       <section class="l-section point-item">
-        <div class="l-container-m">
+        <div class="l-container-m full-sp">
           <div class="point-heading-wrap">
             <h3 class="point-heading no-4">
               <%- include('/partials/svg', {
@@ -253,7 +254,7 @@
         </div>
       </section>
 
-      <section class="forest forest-craft l-section">
+      <section class="l-section">
         <div class="l-container">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {

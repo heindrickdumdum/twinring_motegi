@@ -662,6 +662,14 @@
     }
   }
 
+  &.two-lines-sp {
+    @include max-screen ($breakpoint-mobile) {
+      .heading-subtext {
+        min-height: 50px;
+      }
+    }
+  }
+
   &.heading-comparison {
     text-align: center;
 

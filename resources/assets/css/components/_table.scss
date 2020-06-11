@@ -11,7 +11,7 @@
     p {
       @include max-screen($breakpoint-mobile) {
         margin-bottom: 11px;
-        
+
         &:nth-of-type(2) {
           margin-bottom: 0px;
         }
@@ -79,7 +79,7 @@
 
         @include max-screen($breakpoint-mobile) {
           padding-left: 11px;
-          font-size: 12px;          
+          font-size: 12px;
         }
       }
 
@@ -112,7 +112,7 @@
 
   &.table-programdetails {
     margin-bottom: 70px;
-    
+
     @include max-screen ($breakpoint-mobile) {
       margin-bottom: 29px;
     }
@@ -241,7 +241,7 @@
   background-color: $color-white;
 
   @include max-screen($breakpoint-mobile) {
-    width: 100%;  
+    width: 100%;
     margin-bottom: 44px;
 
     &-last {

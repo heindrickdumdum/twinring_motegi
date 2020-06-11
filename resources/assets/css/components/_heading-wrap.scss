@@ -343,7 +343,17 @@
 
   &.heading-wrap-business-hours-guide {
     .heading-text {
-      font-size: 40px;
+      font-size: 23px;
+      @include min-screen ($breakpoint-mobile+1) {
+        font-size: 40px;
+      }
+    }
+
+    .heading-subtext {
+      @include max-screen ($breakpoint-mobile) {
+        margin-top: 0;
+        height: 20px;
+      }
     }
   }
 

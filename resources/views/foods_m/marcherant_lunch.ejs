@@ -253,7 +253,7 @@
                 </tr>
                 <tr class="table-row">
                   <th class="table-head">朝食　<br class="u-show-sp"/>営業時間</th>
-                  <td class="table-col">7：00 - 10：00（L.O.9：30）</td>
+                  <td class="table-col">11：30 ~14：00<br class="u-show-sp"/>(L.O.13：30)</td>
                 </tr>
                 <tr class="table-row">
                   <th class="table-head">定休日
@@ -263,7 +263,7 @@
                 </tr>
                 <tr class="table-row">
                   <th class="table-head">座席数</th>
-                  <td class="table-col">245 ※個室は4部屋</td>
+                  <td class="table-col">254　※個室4部屋</td>
                 </tr>
                 <tr class="table-row">
                   <th class="table-head">備考</th>
@@ -336,22 +336,22 @@
           <%- include('/partials/heading', {
             modifier: 'heading-wrap-center heading-restaurant heading-other-menu',
             text: 'Other Menu',
-            subtextvg: 'breakfast-marcherant-other-menu-title',
-            altSubtextvg: '朝食ビュッフェ以外のメニュー'
+            subtextvg: 'lunch-marcherant-other-menu-title',
+            altSubtextvg: 'ランチ 以外のメニュー'
           }) %>
         </div>
 
         <div class="l-section-title u-show-sp">
           <%- include('/partials/heading', {
-            modifier: 'heading-wrap-center heading-restaurant heading-other-menu',
+            modifier: 'heading-wrap-center heading-restaurant heading-other-menu heading-other-lunch-marcherant',
             text: 'Other Menu',
-            subtextvg: 'breakfast-marcherant-other-menu-title-sp',
-            altSubtextvg: '朝食ビュッフェ以外のメニュー'
+            subtextvg: 'lunch-marcherant-other-menu-title-sp',
+            altSubtextvg: 'ランチ 以外のメニュー'
           }) %>
         </div>
 
         <%- include('/partials/restaurant/section-menu-marcherant', {
-          data: getData().data.breakfastMarcherantMenu
+          data: getData().data.lunchMarcherantOtherMenu
         }) -%>
       </div>
 

@@ -1977,6 +1977,17 @@
         margin-top: 12px;
       }
     }
+
+    @at-root & {//lunch marcherant page
+      &.heading-other-lunch-marcherant {
+        .heading-subtext {
+          @include max-screen($breakpoint-mobile) {
+            width: 212.5px;
+            height: 53.5px;
+          }
+        }
+      }
+    }
   }
 
   .heading-shop-info {

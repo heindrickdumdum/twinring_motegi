@@ -736,7 +736,7 @@
       position: absolute;
       width: 1020px;
       height: 400px;
-      background-color: $color-light-gray;
+      background-color: #f5f6fa;
       top: -85px;
       z-index: 0;
       left: 50%;
@@ -888,6 +888,7 @@
       @include min-screen($breakpoint-mobile + 1) {
         column-count: 3;
         column-gap: 122px;
+        height: 547px;
       }
 
       @include max-screen($breakpoint-mobile) {
@@ -915,12 +916,19 @@
           line-height: 1.731;
           padding: 2px 0px;
           margin-bottom: 8px;
+          font-weight: normal;
+          border-top-width: 1px;
+          border-bottom-width: 1px;
         }
       }
 
       .breakfast-menu-list-cat {
         &-item {
           margin-bottom: 36px;
+
+          @include max-screen($breakpoint-mobile) {
+            margin-bottom: 24px;
+          }
         }
 
         &-list-item {

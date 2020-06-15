@@ -1063,6 +1063,13 @@
     text-decoration: underline;
     font-weight: bold;
 
+    @at-root .breakfast-marcherant & {//breakfast marcherant page
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+      }
+    }
+
     &:hover {
       cursor: pointer;
     }

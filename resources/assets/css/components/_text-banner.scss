@@ -25,11 +25,12 @@
     font-size: 17px;
     line-height: 1.8;
     margin-top: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 140px;
 
     @include max-screen ($breakpoint-mobile) {
       max-width: none;
       margin: 0 20px;
+      margin-bottom: 80px;
       font-size: 11px;
       line-height: 24px;
       letter-spacing: 3px;

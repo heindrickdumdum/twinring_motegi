@@ -1,0 +1,371 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'breakfastMarcherant';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-restaurant restaurant-wrapper breakfast-marcherant dinner-set-marcherant">
+    <div class="mv mv-restaurant mv-subpage-restaurant">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/breakfast_marcherant/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/breakfast_marcherant/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading mv-heading-marcherant-breakfast">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-breakfast',
+            heading_level: 1,
+            text: 'Breakfast Buffet',
+            subtextvg: 'breakfast-marcherant-top-title',
+            altSubtextvg: '朝食ビュッフェ'
+          }) %>
+        </div>
+
+        <div class="u-show-pc mv-today mv-logo mv-granroom-logo" style="background-image: url(<%= mix('/assets/images/marcherant/logo.png') %>);">
+          <div class="mv-l-inner">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner-wrap">
+        <div class="subpage-inner">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant heading-color-title',
+              imgPath: mix('/assets/images/breakfast_marcherant/color-title.jpg'),
+              alt: '朝日が差し込む開放的な店内で食べる フレッシュでヘルシーな森の朝食'
+            }) %>
+          </div>
+
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant heading-color-title',
+              imgPath: mix('/assets/images/breakfast_marcherant/color-title-sp.png'),
+              alt: '朝日が差し込む開放的な店内で食べる フレッシュでヘルシーな森の朝食'
+            }) %>
+          </div>
+          
+          <p class="subpage-desc-breakfast">
+            MARCHERANTで特別な1日をスタート
+          </p>
+
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant heading-point-title',
+              text: 'Point',
+              subtextvg: 'breakfast-marcherant-title-2',
+              altSubtextvg: '朝食ビュッフェを楽しむポイント'
+            }) %>
+          </div>
+
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant heading-point-title',
+              text: 'Point',
+              subtextvg: 'breakfast-marcherant-title-2-sp',
+              altSubtextvg: '朝食ビュッフェを楽しむポイント'
+            }) %>
+          </div>
+        </div>
+      </div>
+
+      <!-- breakfast menu 1 -->
+      <section class="breakfast-marcherant-menu">
+        <div class="l-container">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu',
+              text: '01',
+              subtextvg: 'breakfast-marcherant-title-3',
+              altSubtextvg: 'MARCHERANTこだわりの石窯朝食メニュー'
+            }) %>
+          </div>
+
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu',
+              text: '01',
+              subtextvg: 'breakfast-marcherant-title-3-sp',
+              altSubtextvg: 'MARCHERANTこだわりの石窯朝食メニュー'
+            }) %>
+          </div>
+
+          <ul class="breakfast-marcherant-menu-list">
+            <% getData().data.breakfastMarcherantMenu1.forEach(element => { %>
+            <li class="breakfast-marcherant-menu-item">
+              <div class="breakfast-marcherant-menu-image" style="background-image: url(<%- element.image -%>);"></div>
+              <p class="breakfast-marcherant-menu-desc"><%- element.desc -%></p>
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+      </section>
+
+      <!-- breakfast menu 2 -->
+      <section class="breakfast-marcherant-menu menu-2">
+        <div class="l-container">
+          <div class="subpage-inner">
+            <div class="l-section-title u-show-pc">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu',
+                text: '02',
+                subtextvg: 'breakfast-marcherant-title-4',
+                altSubtextvg: '豊富で新鮮なオリジナル朝食メニュー'
+              }) %>
+            </div>
+
+            <div class="l-section-title u-show-sp">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu',
+                text: '02',
+                subtextvg: 'breakfast-marcherant-title-4-sp',
+                altSubtextvg: '豊富で新鮮なオリジナル朝食メニュー'
+              }) %>
+            </div>
+
+            <ul class="breakfast-marcherant-menu-list breakfast-marcherant-menu-list-2">
+              <% getData().data.breakfastMarcherantMenu2.forEach(element => { %>
+              <li class="breakfast-marcherant-menu-item breakfast-marcherant-menu-item-2">
+                <div class="breakfast-marcherant-menu-image breakfast-marcherant-menu-image-2" style="background-image: url(<%- element.image -%>);"></div>
+                <p class="breakfast-marcherant-menu-desc desc-2"><%- element.desc -%></p>
+              </li>
+              <% }); %>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- breakfast menu 3 -->
+      <section class="breakfast-marcherant-menu menu-2">
+        <div class="l-container">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant  heading-breakfast-menu heading-menu-3',
+              text: '03',
+              subtextvg: 'breakfast-marcherant-title-5',
+              altSubtextvg: '洋食も和食も種類豊富な朝食ビュッフェ'
+            }) %>
+          </div>
+
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant  heading-breakfast-menu heading-menu-3',
+              text: '03',
+              subtextvg: 'breakfast-marcherant-title-5-sp',
+              altSubtextvg: '洋食も和食も種類豊富な朝食ビュッフェ'
+            }) %>
+          </div>
+
+          <div class="subpage-inner">
+            <div class="breakfast-menu-3">
+              <div class="l-section-title">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu color-green',
+                  subtextvg: 'breakfast-marcherant-menu-title',
+                  altSubtextvg: 'メニュー例'
+                }) %>
+              </div>
+    
+              <p class="breakfast-menu-subtext">
+                ※メニューは季節・<br class="u-show-sp"/>仕入れ状況により異なる場合がございます。
+              </p>
+    
+              <ul class="breakfast-menu-list-container">
+                <% getData().data.breakfastMarcherantMenu3.forEach(item => { %>
+                <li class="breakfast-menu-list-cat-item">
+                  <span><%- item.categoryName -%></span>
+                  <ul class="breakfast-menu-list-cat-list">
+                    <% item.categoryList.forEach(elem => { %>
+                    <li class="breakfast-menu-list-cat-list-item">
+                      <%- elem.listdesc -%>
+                    </li>
+                    <% }); %>
+                  </ul>
+                </li>
+                <% }); %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- shops info -->
+      <section class="shops-information">
+        <div class="l-container">
+          <div class="subpage-inner">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-restaurant heading-shop-info',
+                text: `Shop's Information`,
+                subtextvg: 'breakfast-marcherant-shop-title',
+                altSubtextvg: '店舗情報'
+              }) %>
+            </div>
+    
+            <table class="table">
+              <tbody>
+                <tr class="table-row">
+                  <th class="table-head">場所</th>
+                  <td class="table-col">ホテルツインリンク１階　<br class="u-show-sp"/><a class="link" href="/map_m/">Mapを見る</a></td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">朝食　<br class="u-show-sp"/>営業時間</th>
+                  <td class="table-col">7：00 - 10：00（L.O.9：30）</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">定休日
+                  </th>
+                  <td class="table-col"><a class="link" href="/hours_m/">ツインリンクもてぎの休業日</a>に準じます
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">座席数</th>
+                  <td class="table-col">254 ※個室は4部屋</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">備考</th>
+                  <td class="table-col">
+                    <p>※レース・イベント開催時は特別メニューになる場合がございます。</p>
+                    <p>※メニューは仕入れ状況により異なる場合がございます。</p>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="shop-info-collapse">
+              <div class="subpage-section subpage-section-collapse marcherant-collapse-section">
+                <div class="subpage-collapse-heading js-collapse-button">食物アレルギーをお持ちのお客様へ</div>
+                <div class="subpage-collapse-description">
+                  <div class="subpage-collapse-content marcherant-collapse-content">
+                    <p class="text-center">
+                      食物アレルギー症状のある客様は、ご予約時にお知らせください。<br>
+                      その場合、できる限りアレルゲンの除去に努めた料理を提供させて頂きますが、<br>
+                      アレルゲンの除去を保証するものではございませんのでご了承ください。
+                    </p>
+                    <p class="text-center"><b>対象</b></p>
+                    <table class="table table-marcherant-collapse">
+                      <tbody>
+                        <tr class="table-row">
+                          <th class="table-head">森のレストラン MARCHERANT</th>
+                          <td class="table-col">
+                            ・ランチ<br>
+                            ・ディナーセット
+                          </td>
+                        </tr>
+          
+                        <tr class="table-row">
+                          <th class="table-head">里山懐石　登谷</th>
+                          <td class="table-col">
+                            ・里山懐石コース<br>
+                            ・お子様御膳　<br>
+                            ・幼児御膳　
+                          </td>
+                        </tr>
+          
+                        <tr class="table-row">
+                          <th class="table-head">森と星空の<br>
+                            キャンプヴィレッジ</th>
+                          <td class="table-col">
+                            ・グランピング・ワイド森のテラス　スペシャルＢＢＱプラン<br>
+                            ・らくらくBBQプラン
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="p-red">
+                      また、森のレストラン　MARCHERANTの「ディナービュッフェ」「朝食」におきましては、特定原材料８品目（卵、乳、小麦、えび、かに、そば、落花生、大豆）の使用について表示しております。これらは表示している特定原材料がその料理に使用されていることを明記したものであり、記載のない特定原材料がその料理に含まれていないことを保証するものではありません。
+                    </p>
+                    <p class="">
+                      アレルゲンの除去が保証されないとお困りのお客様におかれましては、お客様の安全を第一に考え、やむを得ず食事の提供をお断りすることがございます。
+      その場合、御自身での食事の持ち込みをお受けいたしますので、事前にお申し出ください。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- restaurant menu -->
+      <div class="other-menu">
+        <div class="l-section-title u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-restaurant heading-other-menu',
+            text: 'Other Menu',
+            subtextvg: 'breakfast-marcherant-other-menu-title',
+            altSubtextvg: '朝食ビュッフェ以外のメニュー'
+          }) %>
+        </div>
+
+        <div class="l-section-title u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-restaurant heading-other-menu',
+            text: 'Other Menu',
+            subtextvg: 'breakfast-marcherant-other-menu-title-sp',
+            altSubtextvg: '朝食ビュッフェ以外のメニュー'
+          }) %>
+        </div>
+
+        <%- include('/partials/restaurant/section-menu-marcherant', {
+          data: getData().data.breakfastMarcherantMenu
+        }) -%>
+      </div>
+
+      <section class="toya-reservation">
+        <div class="hoteltwinring-reservation">
+          <div class="hotel-reservation-wrap">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'hoteltwinring-heading-reservation fill-white',
+                text: 'Reservation',
+                alt: '',
+                altSubtext: '',
+                subtextvg: 'breakfast-marcherant-reservation-white',
+                altSubtextvg: 'ご予約・お問い合わせ'
+              }) %>
+            </div>
+
+            <div class="reservation-cta">
+              <div class="l-button cta-btn">
+                <span>ホテルツインリンクにご宿泊で <br/>
+                  マルシェラン利用のお客様</span>
+                <%- include('/partials/button', {
+                  modifier: 'reservation-button',
+                  text: 'ご予約はこちら',
+                  link: '#'
+                }) -%>
+              </div>
+              <div class="l-button cta-btn">
+                <span>お問い合わせのお客様</span>
+                <%- include('/partials/button', {
+                  modifier: 'reservation-button',
+                  text: '<span>Tel.0285-64-0489<br/><small>受付時間 10:00～17:30</small></span>',
+                  link: '#'
+                }) -%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- other restaurant module-->
+      <%- include('/partials/restaurant/section-other-restaurant') -%>
+
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsMarcherantBreakfast
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

@@ -13,7 +13,9 @@
     height: 12px;
 
     @at-root .breakfast-marcherant & {//breakfast marcherant page
-      height: 7.5px;
+      @include max-screen($breakpoint-mobile) {
+        height: 7.5px;
+      }
     }
   }
 

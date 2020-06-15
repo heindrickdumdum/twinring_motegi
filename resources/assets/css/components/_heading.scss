@@ -1977,6 +1977,17 @@
         margin-top: 12px;
       }
     }
+
+    @at-root & {//lunch marcherant page
+      &.heading-other-lunch-marcherant {
+        .heading-subtext {
+          @include max-screen($breakpoint-mobile) {
+            width: 212.5px;
+            height: 53.5px;
+          }
+        }
+      }
+    }
   }
 
   .heading-shop-info {
@@ -2101,6 +2112,29 @@
           margin-bottom: 32px;
         }
       }
+    }
+  }
+}
+
+@at-root .heading-recommend-menu {//lunch marcherant page
+  .heading {
+    margin-top: 0px;
+    margin-bottom: 37px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .heading-subtext {
+    width: 786px;
+    height: 82px;
+    margin-top: 27px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 276.5px;
+      height: 81.5px;
+      margin-top: 10px !important;
     }
   }
 }

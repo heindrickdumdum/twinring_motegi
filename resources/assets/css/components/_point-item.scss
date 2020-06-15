@@ -148,5 +148,11 @@
     @include min-screen($breakpoint-mobile + 1) {
       margin-bottom: 33px;
     }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
   }
 }

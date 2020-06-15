@@ -994,6 +994,10 @@
       // column-gap: 65px;
       padding-top: 14px;
       padding-bottom: 19px;
+      
+      @include max-screen($breakpoint-mobile) {
+        padding: 0px;
+      }
     }
 
     span {
@@ -1065,5 +1069,11 @@
 
   .recommend-menu-details-item {
     width: 358px;
+  }
+
+  .breakfast-menu-list-cat-list-item {
+    @include min-screen($breakpoint-mobile + 1) {
+      white-space: nowrap;
+    }
   }
 }

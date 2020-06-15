@@ -188,6 +188,8 @@
       display: block;
       width: 100%;
       margin-top: 35px;
+      margin-bottom: 42px;
+
     }
 
     &-gelato {//rocco
@@ -382,6 +384,12 @@
           @at-root .breakfast-marcherant & {//marcherant breakfast page
             display: flex;
             align-items: center;
+          }
+
+          @include max-screen ($breakpoint-mobile) {
+            .button-gradient-icon {
+              width: 16px;
+            }
           }
         }
       }

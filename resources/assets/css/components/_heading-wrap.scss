@@ -660,6 +660,11 @@
         margin: auto;
       }
     }
+    @include max-screen ($breakpoint-mobile) {
+      .heading {
+        margin-bottom: 38px;
+      }
+    }
   }
 
   &.two-lines-sp {
@@ -669,6 +674,28 @@
       }
     }
   }
+
+  &.sync-fix {
+    @include min-screen ($breakpoint-mobile+1) {
+      .heading-text {
+        letter-spacing: 0.1em;
+      }
+    }
+    @include max-screen ($breakpoint-mobile) {
+      .heading {
+        .heading-text {
+          font-size: 23px;
+        }
+        .heading-subtext {
+          margin-top: 0;
+          font-size: 22px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  
 
   &.heading-comparison {
     text-align: center;
@@ -720,4 +747,6 @@
       margin-top: 150px;
     }
   }
+
+  
 }

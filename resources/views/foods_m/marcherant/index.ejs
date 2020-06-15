@@ -71,7 +71,7 @@
       <section class="info-container info-marcherant">
         <div class="l-section-title">
           <%- include('/partials/heading', {
-            modifier: 'heading-wrap-center heading-restaurant',
+            modifier: 'heading-wrap-center sync-fix',
             text: 'Information',
             subtextvg: 'info-subtext',
             altSubtextvg: `お知らせ`
@@ -99,7 +99,7 @@
       <section class="how-to-enjoy">
         <div class="l-section-title u-show-pc">
           <%- include('/partials/heading', {
-            modifier: 'heading-wrap heading-recommend',
+            modifier: 'heading-wrap heading-wrap-auto',
             text: 'How to Enjoy',
             alt: 'How to Enjoy',
             altSubtext: '',
@@ -108,7 +108,7 @@
         </div>
         <div class="l-section-title u-show-sp">
           <%- include('/partials/heading', {
-            modifier: 'heading-wrap heading-recommend',
+            modifier: 'heading-wrap heading-wrap-auto two-lines-sp',
             text: 'How to Enjoy',
             alt: 'How to Enjoy',
             altSubtext: '',
@@ -406,6 +406,9 @@
           </div>
         </div>
       </section>
+
+      <!-- other restaurant module-->
+      <%- include('/partials/restaurant/section-other-restaurant') -%>
 
     </main>
     <!-- END BOTTOM -->

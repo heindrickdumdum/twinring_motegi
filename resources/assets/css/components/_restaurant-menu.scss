@@ -566,26 +566,28 @@
     }
   }
 
-  @at-root .menu-desc {
-    font-size: 18px;
-    color: $color-white;
-    line-height: 1.667;
-    text-align: center;
-    letter-spacing: 0.1em;  
-    margin-top: 45px;
-    margin-bottom: 45px; 
-    
-    @include max-screen($breakpoint-mobile) {
-      font-size: 13px;
-      line-height: 1.615;
+  @at-root .toya-wrapper & {
+    .menu-desc {
+      font-size: 18px;
+      color: $color-white;
+      line-height: 1.667;
       text-align: center;
-      margin: {
-        top: 20px;
-        bottom: 40px;
-      }
-      padding: {
-        left: 60px;
-        right: 60px;
+      letter-spacing: 0.1em;  
+      margin-top: 45px;
+      margin-bottom: 45px; 
+      
+      @include max-screen($breakpoint-mobile) {
+        font-size: 13px;
+        line-height: 1.615;
+        text-align: center;
+        margin: {
+          top: 20px;
+          bottom: 40px;
+        }
+        padding: {
+          left: 60px;
+          right: 60px;
+        }
       }
     }
   }
@@ -927,7 +929,7 @@
 
           &:nth-of-type(3) {
             @include min-screen($breakpoint-mobile + 1) {
-              margin-bottom: 200px;
+              margin-bottom: 225px;
             }
           }
 

@@ -214,6 +214,11 @@
     height: 95px;
     border: 1px solid $color-black;
 
+    @at-root &.oak-button {//oak page
+      border-color: #0484a8;
+      color: #058a94;
+    }
+
     @at-root &.toya-menu-button {//toya page
       border-color: $color-white;
       color: $color-white;

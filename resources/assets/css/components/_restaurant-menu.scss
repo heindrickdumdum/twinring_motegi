@@ -313,6 +313,12 @@
           @include max-screen($breakpoint-mobile) {
             font-size: 13px;
           }
+
+          @at-root .oak-wrapper & {//oak page
+            @include max-screen($breakpoint-mobile) {
+              font-size: 12px !important;
+            }
+          }
         }
         
         span {
@@ -320,6 +326,34 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           display: inline-block;
+
+          &:nth-of-type(1) {
+            @include max-screen($breakpoint-mobile) {
+              margin-bottom: 10px;
+            }
+          }
+
+          &.tag {
+            -webkit-background-clip: padding-box;
+            -webkit-text-fill-color: $color-white;
+            font-size: 15px;            
+            color: $color-white;
+            letter-spacing: 0.1em;
+            display: inline-block;
+            padding: 4px 10px;
+
+            @include max-screen($breakpoint-mobile) {
+              font-size: 12px !important;
+              margin-left: 20px;
+              padding-left: 5px;
+              padding-right: 5px;
+            }
+
+            @at-root .is-ie & {
+              background-color: $color-gossamer;
+              color: $color-white;
+            }
+          }
       
           .is-ie & {
             background: none;

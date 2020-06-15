@@ -7,7 +7,7 @@
 <%- include('/partials/head', { pageId, title }) -%>
 
 <div class="lig-content">
-  <div class="subpage subpage-restaurant restaurant-wrapper">
+  <div class="subpage subpage-restaurant restaurant-wrapper oak-wrapper">
     <div class="mv mv-restaurant mv-subpage-restaurant">
       
 
@@ -52,7 +52,7 @@
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-restaurant heading-oak',
               subtextvg: 'oak-main-title',
-              altSubtextvg: `家族みんなで楽しめる『森』をテーマにした オリジナルメニューが盛りだくさん!!`
+              altSubtextvg: `「森」をテーマにした ここだけの オリジナルメニューが いっぱい`
             }) %>
           </div>
 
@@ -60,7 +60,7 @@
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-restaurant heading-oak',
               subtextvg: 'oak-main-title-sp',
-              altSubtextvg: `家族みんなで楽しめる『森』をテーマにした オリジナルメニューが盛りだくさん!!`
+              altSubtextvg: `「森」をテーマにした ここだけの オリジナルメニューが いっぱい`
             }) %>
           </div>
 
@@ -71,6 +71,10 @@
             </div>
           </div>
 
+          <p class="subpage-desc">
+            小さなお子さまからお父さん・お母さんまで、家族みんなが大満足の種類豊富なメニューが魅力。サイドメニューやデザート、アルコールもあるので、ひとやすみにもおすすめです。
+          </p>
+
           <h2 class="subpage-title">
             <span>店舗情報</span>
           </h2>
@@ -80,20 +84,30 @@
               <tr class="table-row">
                 <th class="table-head">場所</th>
                 <td class="table-col">
-                  中央エントランス（最寄の駐車場：<a href="/map_m/">N1</a>）
+                  中央エントランス（最寄の駐車場：N1） <a class="link link-green" href="/map_m/">MAP</a>
                 </td>
               </tr>
 
               <tr class="table-row">
                 <th class="table-head">営業時間</th>
                 <td class="table-col">
-                  <a href="/hours_m/">ツインリンクもてぎ営業時間</a>
+                  ツインリンクもてぎ営業時間内（L.O.営業終了30分前）<br>
+                  <a class="link link-green" href="/hours_m/">https://www.twinring.jp/hours_m/</a>
                 </td>
               </tr>
 
               <tr class="table-row">
                 <th class="table-head">座席数</th>
                 <td class="table-col">店内：98 　テラス：120</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">備考</th>
+                <td class="table-col">
+                  <p>・チャイルドシートあり </p>
+                  <p>・低アレルゲンメニューあり</p>
+                  <p>・アルコールあり</p>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -106,27 +120,29 @@
       }) -%>
 
       <div class="l-section oak-button">
-        <p class="u-show-pc">
+        <!-- <p class="u-show-pc">
           この他にも、様々なメニューをご用意しております。
         </p>
 
         <p class="u-show-sp">
           この他にも、様々なメニューを<br/>ご用意しております。
-        </p>
+        </p> -->
 
         <div class="u-show-pc">
           <%- include('/partials/button', {
-            modifier: 'restaurant-button',
+            modifier: 'restaurant-button oak-button',
             link: 'https://www.twinring.jp/foods_m/pdf/oak_menu_202003.pdf',
-            text: '春のおすすめメニューはこちら（PDF:4.3MB）'
+            text: 'その他のメニューはこちら（PDF：4.3MB）',
+            arrowColor: 'green'
           }) -%>
         </div>
 
         <div class="u-show-sp">
           <%- include('/partials/button', {
-            modifier: 'restaurant-button',
+            modifier: 'restaurant-button oak-button',
             link: 'https://www.twinring.jp/foods_m/pdf/oak_menu_202003.pdf',
-            text: '春のおすすめメニューは<br/>こちら (PDF:4.3MB)'
+            text: 'その他のメニューは<br/>こちら（PDF：4.3MB）',
+            arrowColor: 'green'
           }) -%>
         </div>
       </div>

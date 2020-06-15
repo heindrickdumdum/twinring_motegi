@@ -108,6 +108,12 @@
     .link {
       color: #00a040;
     }
+
+    span {
+      @include max-screen($breakpoint-mobile) {
+        white-space: nowrap;
+      }
+    }
   }
 
   &.table-programdetails {
@@ -437,4 +443,8 @@
       }
     }
   }
+}
+
+.link-green {
+  color: $color-green !important;
 }

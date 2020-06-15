@@ -2138,3 +2138,13 @@
     }
   }
 }
+
+@at-root .breakfast-marcherant {//dinner set
+  .heading-shop-info {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 109px;
+      }
+    }
+  }
+}

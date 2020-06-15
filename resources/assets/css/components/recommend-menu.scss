@@ -88,6 +88,11 @@
   max-width: 900px;
   margin: auto;
 
+  @at-root .dinner-set-marcherant & {
+    position: relative;
+    z-index: $z-min;
+  }
+
   &-item {
     margin-bottom: 80px;
 
@@ -270,6 +275,10 @@
     left: 50%;
     transform: translateX(-50%);
     top: -15px;
+
+    @at-root .dinner-set-marcherant & {//dinner set marcherant page
+      background-color: $color-white;
+    }
 
     @include max-screen($breakpoint-mobile) {
       font-size: 11px;

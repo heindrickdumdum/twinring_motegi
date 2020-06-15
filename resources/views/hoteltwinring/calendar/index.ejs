@@ -98,14 +98,92 @@
             }) %>
           </div>
 
-          <ul class="breakfast-marcherant-menu-list">
-            <% getData().data.breakfastMarcherantMenu1.forEach(element => { %>
-            <li class="breakfast-marcherant-menu-item">
-              <div class="breakfast-marcherant-menu-image" style="background-image: url(<%- element.image -%>);"></div>
-              <p class="breakfast-marcherant-menu-desc"><%- element.desc -%></p>
-            </li>
-            <% }); %>
-          </ul>
+          <p class="point-subtext">
+            ホテルシェフが厳選した地場産のおいしい肉・魚・野菜すべてを集めました。<br/>
+            自信を持って提供するMARCHERANTでしか味わえない一皿をどうぞ。
+          </p>
+
+          <div class="recommend-feature">
+            <ul class="recommend-feature-list">
+              <li class="recommend-feature-item">
+                <div class="recommend-feature-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/recommend-1.jpg') -%>);"></div>
+                <h3 class="recommend-feature-title u-show-pc">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-recommend-1-title',
+                    svgtitle: 'とちぎ和牛100％石窯焼きハンバーグプレート'
+                  }) -%>
+                </h3>
+                <h3 class="recommend-feature-title u-show-sp">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-recommend-1-title-sp',
+                    svgtitle: 'とちぎ和牛100％石窯焼きハンバーグプレート'
+                  }) -%>
+                </h3>
+                <p class="recommend-feature-price">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-recommend-1-price',
+                    svgtitle: '1,530円'
+                  }) -%>
+                </p>
+                <p class="recommend-feature-desc">※メニューは変更になる場合がございます </p>
+                <div class="recommend-feature-box">
+                  <p class="recommend-feature-tag">メニュー内容</p>
+                  <ul class="breakfast-menu-list-container">
+                    <% getData().data.recommendedDinnerPlate.forEach(item => { %>
+                    <li class="breakfast-menu-list-cat-item">
+                      <span><%- item.categoryName -%></span>
+                      <ul class="breakfast-menu-list-cat-list">
+                        <% item.categoryList.forEach(elem => { %>
+                        <li class="breakfast-menu-list-cat-list-item">
+                          <%- elem.listdesc -%>
+                        </li>
+                        <% }); %>
+                      </ul>
+                    </li>
+                    <% }); %>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="recommend-feature-item">
+                <div class="recommend-feature-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/recommend-1.jpg') -%>);"></div>
+                <h3 class="recommend-feature-title u-show-pc">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-recommend-1-title',
+                    svgtitle: 'とちぎ和牛100％石窯焼きハンバーグプレート'
+                  }) -%>
+                </h3>
+                <h3 class="recommend-feature-title u-show-sp">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-recommend-1-title-sp',
+                    svgtitle: 'とちぎ和牛100％石窯焼きハンバーグプレート'
+                  }) -%>
+                </h3>
+                <p class="recommend-feature-price">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-recommend-1-price',
+                    svgtitle: '1,530円'
+                  }) -%>
+                </p>
+                <p class="recommend-feature-desc">※小学生未満のお子さま限定 </p>
+                
+                <div class="menu-other-menu">
+                  <h3 class="heading-menu-other-menu">
+                    <%- include('/partials/svg', {
+                      name: 'dinner-set-other-menu-title-menu',
+                      svgtitle: 'その他のメニュー'
+                    }) -%> 
+                  </h3>
+                  <ul class="menu-other-menu-list">
+                    <li class="menu-other-menu-item">
+                      <span>地場産豆腐と山の幸入り麻婆豆腐 （本日の一品・ごはん・スープ・ザーサイ付き）</span>
+                      <span>1,850円</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -130,15 +208,82 @@
                 altSubtextvg: '豊富で新鮮なオリジナル朝食メニュー'
               }) %>
             </div>
+            
+            <p class="point-subtext">
+              栄養と旨味たっぷりの地場食材を <br/>
+              MARCHERANTオリジナル料理でお楽しみください。 
+            </p>
 
-            <ul class="breakfast-marcherant-menu-list breakfast-marcherant-menu-list-2">
-              <% getData().data.breakfastMarcherantMenu2.forEach(element => { %>
-              <li class="breakfast-marcherant-menu-item breakfast-marcherant-menu-item-2">
-                <div class="breakfast-marcherant-menu-image breakfast-marcherant-menu-image-2" style="background-image: url(<%- element.image -%>);"></div>
-                <p class="breakfast-marcherant-menu-desc desc-2"><%- element.desc -%></p>
-              </li>
-              <% }); %>
-            </ul>
+            <div class="recommend-menu-details">
+              <ul class="recommend-menu-details-list">
+                <li class="recommend-menu-details-item">
+                  <div class="recommend-feature-image details-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/left-image.jpg') -%>);"></div>
+                  <h3 class="recommend-feature-title details-title">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-title-left-title',
+                      svgtitle: '磨宝卵と粗挽き那須野ヶ原牛の石焼きご飯 '
+                    }) -%>
+                  </h3>
+                  <p class="recommend-feature-price details-price">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-title-left-price',
+                      svgtitle: '1,200円'
+                    }) -%>
+                  </p>
+                </li>
+  
+                <li class="recommend-menu-details-item">
+                  <div class="recommend-feature-image details-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/right-image.jpg') -%>);"></div>
+                  <h3 class="recommend-feature-title details-title title-2">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-title-right-image',
+                      svgtitle: '磨宝卵と粗挽き那須野ヶ原牛の石焼きご飯 '
+                    }) -%>
+                  </h3>
+                  <p class="recommend-feature-price details-price price-2">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-title-right-price',
+                      svgtitle: '850円'
+                    }) -%>
+                  </p>
+                </li>
+              </ul>
+            </div>
+                
+            <div class="menu-other-menu">
+              <h3 class="heading-menu-other-menu">
+                <%- include('/partials/svg', {
+                  name: 'dinner-set-other-menu-title-menu',
+                  svgtitle: 'その他のメニュー'
+                }) -%> 
+              </h3>
+              <ul class="menu-other-menu-list">
+                <li class="menu-other-menu-item">
+                  <span>茂木町自然農園「空土ファーム」の農園サラダ</span>
+                  <span>510円</span>
+                </li>
+                <li class="menu-other-menu-item">
+                  <span>茂木町自然農園「空土ファーム」直送野菜の素揚げ柚子塩・玉葱ドレッシング添え</span>
+                  <span>720円</span>
+                </li>
+                <li class="menu-other-menu-item">
+                  <span>もちもち水餃子　地場産ニラたっぷりにんにくソース</span>
+                  <span>620円</span>
+                </li>
+                <li class="menu-other-menu-item">
+                  <span>栃木県産ヤシオマスのフライ　柚子タルタル添え</span>
+                  <span>820円</span>
+                </li>
+                <li class="menu-other-menu-item">
+                  <span>那須三元豚の黒酢炒め</span>
+                  <span>1,020円</span>
+                </li>
+                <li class="menu-other-menu-item">
+                  <span>栃木県産ヤシオマスと茂木町自然農園「空土ファーム」直送野菜の炒め</span>
+                  <span>1,530円</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -163,36 +308,36 @@
               altSubtextvg: '洋食も和食も種類豊富な朝食ビュッフェ'
             }) %>
           </div>
+          
+          <p class="point-subtext">
+            フルーツ、季節のケーキなど種類豊富な彩りスイーツの中からお好きなものをお選びください。
+          </p>
 
-          <div class="subpage-inner">
-            <div class="breakfast-menu-3">
-              <div class="l-section-title">
-                <%- include('/partials/heading', {
-                  modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu color-green',
-                  subtextvg: 'breakfast-marcherant-menu-title',
-                  altSubtextvg: 'メニュー例'
-                }) %>
-              </div>
-    
-              <p class="breakfast-menu-subtext">
-                ※メニューは季節・<br class="u-show-sp"/>仕入れ状況により異なる場合がございます。
-              </p>
-    
-              <ul class="breakfast-menu-list-container">
-                <% getData().data.breakfastMarcherantMenu3.forEach(item => { %>
-                <li class="breakfast-menu-list-cat-item">
-                  <span><%- item.categoryName -%></span>
-                  <ul class="breakfast-menu-list-cat-list">
-                    <% item.categoryList.forEach(elem => { %>
-                    <li class="breakfast-menu-list-cat-list-item">
-                      <%- elem.listdesc -%>
+          <div class="recommend-feature">
+            <ul class="recommend-feature-list">
+              <li class="recommend-feature-item">
+                <div class="recommend-feature-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/recommend-1.jpg') -%>);"></div>
+
+                <div class="menu-other-menu">
+                  <h3 class="heading-menu-other-menu">
+                    <%- include('/partials/svg', {
+                      name: 'dinner-set-other-menu-title-menu',
+                      svgtitle: 'その他のメニュー'
+                    }) -%> 
+                  </h3>
+                  <ul class="menu-other-menu-list">
+                    <li class="menu-other-menu-item">
+                      <span>とちおとめシャーベット</span>
+                      <span>410円</span>
                     </li>
-                    <% }); %>
+                    <li class="menu-other-menu-item">
+                      <span>季節のストーンアイス	</span>
+                      <span>1,120円</span>
+                    </li>
                   </ul>
-                </li>
-                <% }); %>
-              </ul>
-            </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -214,11 +359,14 @@
               <tbody>
                 <tr class="table-row">
                   <th class="table-head">場所</th>
-                  <td class="table-col">ホテルツインリンク１階　<br class="u-show-sp"/><a class="link" href="/map_m/">Mapを見る</a></td>
+                  <td class="table-col">ホテルツインリンク１階　<br class="u-show-sp"/><a class="link" href="/map_m/">> Mapを見る</a></td>
                 </tr>
                 <tr class="table-row">
-                  <th class="table-head">朝食　<br class="u-show-sp"/>営業時間</th>
-                  <td class="table-col">7：00 - 10：00（L.O.9：30）</td>
+                  <th class="table-head">ディナー　<br class="u-show-sp"/>営業時間</th>
+                  <td class="table-col">
+                    17：30~21：00（L.O.20：30）<br/>
+                    ※ディナーセットはご宿泊のお客さま限定、またディナービュッフェを開催しない平日がセットメニューとなります。詳しい日程は<u>こちら</u>をご確認ください。
+                  </td>
                 </tr>
                 <tr class="table-row">
                   <th class="table-head">定休日
@@ -241,6 +389,44 @@
             </table>
 
             <div class="shop-info-collapse">
+              <div class="subpage-section subpage-section-collapse marcherant-collapse-section">
+                <div class="subpage-collapse-heading js-collapse-button">お子さまのお誕生日や家族の記念日に<br>
+                  アニバーサリーケーキのご注文について</div>
+                <div class="subpage-collapse-description">
+                  <div class="subpage-collapse-content marcherant-collapse-content">
+                    <p class="text-center">
+                      アニバーサリーケーキは、お電話にてご注文承ります｡<br> &lt;プレートのお名前は申し込み時にお知らせください&gt;<br><b>TEL 0285-64-0489　<br class="u-show-sp"> 受付時間 10:00～17:30</b>
+                    </p>
+                    <img class="collapse-banner" src="<%- mix('/assets/images/marcherant/collapse-banner-1.jpg') -%>" alt="">
+    
+                    <div class="grid-data">
+                      <div class="row">
+                        <div class="column" >
+                          <div class="col-heading-green">苺サンドケーキ</div>
+                          <div class="col-data">
+                            13cm    2,650円<br>
+                            15cm    2,960円<br>
+                            18cm  	3,4
+                          </div>
+                        </div>
+                        <div class="column">
+                          <div class="col-heading-green">チョコレートケーキ</div>
+                          <div class="col-data">
+                            18cm  	2,860円
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <p>
+                      ※ディナー営業時間でのご提供となります。<br>
+                      ※店内でお召し上がりいただきます。<br>
+                      ※ご予約・キャンセルは、5日前まで承ります。4日前～当日：キャンセル料100%となります。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div class="subpage-section subpage-section-collapse marcherant-collapse-section">
                 <div class="subpage-collapse-heading js-collapse-button">食物アレルギーをお持ちのお客様へ</div>
                 <div class="subpage-collapse-description">

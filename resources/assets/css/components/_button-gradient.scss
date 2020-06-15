@@ -11,6 +11,12 @@
   svg {
     width: 100%;
     height: 12px;
+
+    @at-root .breakfast-marcherant & {//breakfast marcherant page
+      @include max-screen($breakpoint-mobile) {
+        height: 7.5px;
+      }
+    }
   }
 
   @at-root .smart-entry-attraction & {

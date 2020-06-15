@@ -1063,6 +1063,13 @@
     text-decoration: underline;
     font-weight: bold;
 
+    @at-root .breakfast-marcherant & {//breakfast marcherant page
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+      }
+    }
+
     &:hover {
       cursor: pointer;
     }
@@ -1524,12 +1531,49 @@
     margin-top: 55px;
     margin-bottom: 95px;
 
+    &.desc-lunch {//lunch marcherant page
+      margin: {
+        top: 26px;
+        bottom: -4px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin: {
+          top: 20px;
+          bottom: -24px;
+        }
+      }
+    }
+
     @include max-screen($breakpoint-mobile) {
       font-size: 12px;
       line-height: 1.791;
       margin: {
         top: -5px;
         bottom: 45px;
+      }
+    }
+  }
+}
+
+@at-root .lunch-marcherant {//lunch marcherant page
+  .color-title {
+    margin-top: 56px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 42px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 873px;
+      height:82px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 291.5px;
+        height: 84px;
       }
     }
   }

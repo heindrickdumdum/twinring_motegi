@@ -1658,3 +1658,22 @@
     font-weight: 600 !important;
   }
 }
+
+
+@at-root .lunch-marcherant {//lunch marcherant page
+  .mv-heading-marcherant-lunch {
+    bottom: 11px !important;
+  }
+
+  .heading-lunch {
+    .heading-subtext {
+      width: 214px;
+      height: 160px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 124px;
+        height: 100%;
+      }
+    }
+  }
+}

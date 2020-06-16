@@ -223,4 +223,10 @@
         max-width: 345px;
       }
   }
+
+  &.map_m-pdf {
+    svg {
+      height: 30px;
+    }
+  }
 }

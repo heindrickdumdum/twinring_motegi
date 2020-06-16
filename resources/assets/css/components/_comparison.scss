@@ -23,6 +23,10 @@
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 15px;
     line-height: 2.2;
+
+    &.one-line {
+      line-height: 1;
+    }
   }
 
   @include min-screen($breakpoint-mobile + 1) {

@@ -6,6 +6,10 @@ if (typeof arrowColor === 'undefined') {
     var arrowColor = '';
 }
 
+if (typeof buttonIcon === 'undefined') {
+  var buttonIcon = 'arrow';
+}
+
 var newTab = newTab === true ? ' target="_blank"' : '';
 %>
 
@@ -17,7 +21,7 @@ var newTab = newTab === true ? ' target="_blank"' : '';
       }) %>
     <% } else { %>
     <%- include('/partials/svg', {
-      name: 'arrow'
+      name: buttonIcon
     }) %>
     <% } %>
   </i>

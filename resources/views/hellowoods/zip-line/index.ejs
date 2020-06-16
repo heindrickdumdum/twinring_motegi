@@ -202,26 +202,23 @@
             </div>
           </div>
 
-          <div class="comparison-btn comparison-btn-tsubasa">
-            <%- include('/partials/button', {
-              modifier: 'button-comparison',
-              text: 'ムササビの<br />詳細を見る',
-              link: '/hellowoods/zip-line/musasabi.html'
-            }) %>
-          </div>
         </div>
 
       </section>
 
       <section class="field-introduction">
-        <div class="field-introduction-container">
-          <%- include('/partials/heading', {
-            modifier: 'heading-wrap-how-to heading-wrap-center heading-wrap-hellowoods',
-            text: 'Map',
-            alt: '',
-            subtextvg: 'map',
-            altSubtext: ''
-          }) %>
+        <div class="l-section-title">
+          <div class="l-container">
+            <%- include('/partials/heading', {
+              modifier: '',
+              text: 'Map',
+              alt: 'Map',
+              altSubtext: '',
+              subtextvg: 'map'
+            }) %>
+          </div>
+        </div>
+        <div class="field-introduction-container field-zipline">
           <div class="map-wrapper">
             <img class="map-image u-show-pc" src="<%= mix('/assets/images/zipline/map.png') %>" alt="Zipline Map">
             <img class="map-image u-show-sp" src="<%= mix('/assets/images/zipline/map-sp.png') %>" alt="Zipline Map">
@@ -240,6 +237,6 @@
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsTsubasa
+  breadcrumbs : getData().data.breadcrumbsZipline
 }) -%>
 <%- include('/partials/footer', { pageId } ) -%>

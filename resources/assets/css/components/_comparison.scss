@@ -21,13 +21,14 @@
   font-weight: 600;
 
   @include min-screen($breakpoint-mobile + 1) {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 2.2;
   }
 
   @include min-screen($breakpoint-mobile + 1) {
     justify-content: center;
     width: calc((100% - 220px) / 2);
-    padding: 35px;
+    padding: 20px 35px;
   }
 
   &:nth-child(1) {

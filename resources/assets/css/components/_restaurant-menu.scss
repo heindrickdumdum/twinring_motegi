@@ -989,6 +989,12 @@
 
 @at-root .dinner-set-marcherant {//dinner set page
   .breakfast-menu-list-container {
+    .is-safari & {
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 400px;
+      }
+    }
+
     @include min-screen($breakpoint-mobile + 1) {
       column-count: 2;
       padding-top: 14px;

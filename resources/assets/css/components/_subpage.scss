@@ -1539,9 +1539,16 @@
     margin-top: 55px;
     margin-bottom: 95px;
 
-    &.desc-dinner {
+    &.desc-dinner {//dinner set page
       @include min-screen($breakpoint-mobile + 1) {
         margin-top: 99px;
+        white-space: nowrap;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
       }
     }
 
@@ -1588,6 +1595,37 @@
       @include max-screen($breakpoint-mobile) {
         width: 291.5px;
         height: 84px;
+      }
+    }
+  }
+}
+
+@at-root .dinner-set-marcherant {//dinner set page
+  .shops-information {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 95px;
+    }
+  }
+
+  .shop-info-collapse {
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 0px;
+        right: 0px;
+      }
+    }
+
+    .subpage-section-collapse {
+      &:nth-of-type(1) {
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 39px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 85px;
+        }
       }
     }
   }

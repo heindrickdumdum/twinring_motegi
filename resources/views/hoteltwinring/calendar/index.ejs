@@ -1,7 +1,7 @@
 <%
   var title = 'Twin Ring Motegi | 森の教習所'
   SPRITE_SVG = '/assets/svg/sprite.svg';
-  pageId = 'breakfastMarcherant';
+  pageId = 'dinnerMarcherant';
 %>
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
@@ -36,7 +36,7 @@
 
     <main>
       <div class="subpage-inner-wrap">
-        <!-- <div class="subpage-inner"> -->
+        <div class="subpage-inner">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-restaurant heading-color-title',
@@ -78,7 +78,7 @@
               altSubtextvg: 'ディナーセットを楽しむポイント'
             }) %>
           </div>
-        <!-- </div> -->
+        </div>
       </div>
 
       <!-- breakfast menu 1 -->
@@ -86,7 +86,7 @@
         <div class="l-container">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu',
+              modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu heading-dinner-menu-1',
               text: '01',
               subtextvg: 'dinner-marcherant-title-3',
               altSubtextvg: 'MARCHERANTこだわりの石窯朝食メニュー'
@@ -95,7 +95,7 @@
 
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu',
+              modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu heading-dinner-menu-1',
               text: '01',
               subtextvg: 'dinner-marcherant-title-3-sp',
               altSubtextvg: 'MARCHERANTこだわりの石窯朝食メニュー'
@@ -117,7 +117,7 @@
                     svgtitle: 'シェフのおすすめディナープレート'
                   }) -%>
                 </h3>
-                <h3 class="recommend-feature-title u-show-sp">
+                <h3 class="recommend-feature-title dinner-recommend-feature-title-1 u-show-sp">
                   <%- include('/partials/svg', {
                     name: 'dinner-marcherant-recommend-1-title-sp',
                     svgtitle: 'シェフのおすすめディナープレート'
@@ -157,7 +157,7 @@
                     svgtitle: 'お子さまプレート（スープ・デザート・ジュース付き） '
                   }) -%>
                 </h3>
-                <h3 class="recommend-feature-title u-show-sp">
+                <h3 class="recommend-feature-title dinner-feature-title u-show-sp">
                   <%- include('/partials/svg', {
                     name: 'dinner-marcherant-recommend-2-title-sp',
                     svgtitle: 'お子さまプレート（スープ・デザート・ジュース付き） '
@@ -180,7 +180,7 @@
                   </h3>
                   <ul class="menu-other-menu-list">
                     <li class="menu-other-menu-item">
-                      <span>地場産豆腐と山の幸入り麻婆豆腐 （本日の一品・ごはん・スープ・ザーサイ付き）</span>
+                      <span>地場産豆腐と山の幸入り麻婆豆腐 <br class="u-show-sp"/>（本日の一品・ごはん・スープ・ザーサイ付き）</span>
                       <span>1,850円</span>
                     </li>
                   </ul>
@@ -197,7 +197,7 @@
           <div class="subpage-inner">
             <div class="l-section-title u-show-pc">
               <%- include('/partials/heading', {
-                modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu',
+                modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu heading-dinner-menu-2',
                 text: '02',
                 subtextvg: 'dinner-marcherant-title-4',
                 altSubtextvg: '地元のオーガニック野菜やブランド食材を使った単品料理'
@@ -206,7 +206,7 @@
 
             <div class="l-section-title u-show-sp">
               <%- include('/partials/heading', {
-                modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu',
+                modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu heading-dinner-menu-2',
                 text: '02',
                 subtextvg: 'dinner-marcherant-title-4-sp',
                 altSubtextvg: '地元のオーガニック野菜やブランド食材を使った単品料理'
@@ -222,39 +222,54 @@
               <ul class="recommend-menu-details-list">
                 <li class="recommend-menu-details-item">
                   <div class="recommend-feature-image details-image" style="background-image: url(<%- mix('/assets/images/dinner_marcherant/left-image.jpg') -%>);"></div>
-                  <h3 class="recommend-feature-title details-title">
+                  <h3 class="recommend-feature-title details-title u-show-pc">
                     <%- include('/partials/svg', {
                       name: 'dinner-marcherant-title-left-title',
                       svgtitle: '地場産豆腐と山の幸入り 四川麻婆豆腐 '
                     }) -%>
                   </h3>
-                  <p class="recommend-feature-price details-price">
+                  <p class="recommend-feature-price details-price u-show-pc">
                     <%- include('/partials/svg', {
                       name: 'dinner-marcherant-title-left-price',
                       svgtitle: '中辛1,230円 / 中辛1,430円'
                     }) -%>
                   </p>
+                  <div class="u-show-sp">
+                    <p class="details-desc">
+                      地場産豆腐と山の幸入り<br/>
+                      四川麻婆豆腐 <br/>
+                      中辛1,230円<br/>
+                      激辛1,430円 
+                    </p>
+                  </div>
                 </li>
   
                 <li class="recommend-menu-details-item">
                   <div class="recommend-feature-image details-image" style="background-image: url(<%- mix('/assets/images/dinner_marcherant/right-image.jpg') -%>);"></div>
-                  <h3 class="recommend-feature-title details-title">
+                  <h3 class="recommend-feature-title details-title u-show-pc">
                     <%- include('/partials/svg', {
                       name: 'dinner-marcherant-title-right-image',
                       svgtitle: 'とちぎ和牛100％ ハンバーグの石窯焼き '
                     }) -%>
                   </h3>
-                  <p class="recommend-feature-price details-price price-2">
+                  <p class="recommend-feature-price details-price price-2 u-show-pc">
                     <%- include('/partials/svg', {
                       name: 'dinner-marcherant-title-right-price',
                       svgtitle: '1,530円'
                     }) -%>
                   </p>
+                  <div class="u-show-sp">
+                    <p class="details-desc">
+                      とちぎ和牛100％ハンバ<br/>
+                      ーグの石窯焼き<br/>
+                      1,530円
+                    </p>
+                  </div>
                 </li>
               </ul>
             </div>
                 
-            <div class="menu-other-menu">
+            <div class="menu-other-menu menu-other-2">
               <h3 class="heading-menu-other-menu">
                 <%- include('/partials/svg', {
                   name: 'dinner-set-other-menu-title-menu',
@@ -267,11 +282,11 @@
                   <span>510円</span>
                 </li>
                 <li class="menu-other-menu-item">
-                  <span>茂木町自然農園「空土ファーム」直送野菜の素揚げ柚子塩・玉葱ドレッシング添え</span>
+                  <span>茂木町自然農園「空土ファーム」直送野菜の<br class="u-show-sp"/>素揚げ柚子塩・玉葱ドレッシング添え</span>
                   <span>720円</span>
                 </li>
                 <li class="menu-other-menu-item">
-                  <span>もちもち水餃子　地場産ニラたっぷりにんにくソース</span>
+                  <span>もちもち水餃子　地場産ニラたっぷりにんにく<br class="u-show-sp"/>ソース</span>
                   <span>620円</span>
                 </li>
                 <li class="menu-other-menu-item">
@@ -283,7 +298,7 @@
                   <span>1,020円</span>
                 </li>
                 <li class="menu-other-menu-item">
-                  <span>栃木県産ヤシオマスと茂木町自然農園「空土ファーム」直送野菜の炒め</span>
+                  <span>栃木県産ヤシオマスと茂木町自然農園<br class="u-show-sp"/>「空土ファーム」直送野菜の炒め</span>
                   <span>1,530円</span>
                 </li>
               </ul>
@@ -297,7 +312,7 @@
         <div class="l-container">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant  heading-breakfast-menu heading-menu-3',
+              modifier: 'heading-wrap-center heading-restaurant  heading-breakfast-menu heading-dinner-menu-3',
               text: '03',
               subtextvg: 'dinner-marcherant-title-5',
               altSubtextvg: 'お好きなスイーツが選べるワゴンサービス'
@@ -306,7 +321,7 @@
 
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
-              modifier: 'heading-wrap-center heading-restaurant  heading-breakfast-menu heading-menu-3',
+              modifier: 'heading-wrap-center heading-restaurant  heading-breakfast-menu heading-dinner-menu-3',
               text: '03',
               subtextvg: 'dinner-marcherant-title-5-sp',
               altSubtextvg: 'お好きなスイーツが選べるワゴンサービス'
@@ -556,6 +571,6 @@
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsMarcherantBreakfast
+  breadcrumbs : getData().data.breadcrumbsMarcherantDinner
 }) -%>
 <%- include('/partials/footer', { pageId } ) -%>

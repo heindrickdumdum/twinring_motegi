@@ -998,6 +998,7 @@
       
     @include max-screen($breakpoint-mobile) {
       padding: 0px;
+      margin-top: 13px;
     }
 
     span {
@@ -1007,8 +1008,82 @@
       font-family: serif;
       
       @include max-screen($breakpoint-mobile) {
-        margin-bottom: 0px;
+        margin-bottom: 5px;
         font-size: 13px;
+      }
+
+      @at-root & {
+        &.dinner-marcherant-hors-d-oeuvre {
+          svg {
+            height: 13px;
+            width: 155px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 114.5px;
+              height: 9px;
+            }
+          }
+        }
+  
+        &.dinner-marcherant-soupe {
+          svg {
+            height: 16px;
+            width: 74px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 55px;
+              height: 11px;
+            }
+          }
+        }
+  
+        &.dinner-marcherant-entree-plat {
+          svg {
+            height: 13px;
+            width: 138px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 102px;
+              height: 9px;
+            }
+          }
+        }
+  
+        &.dinner-marcherant-pain {
+          svg {
+            height: 12px;
+            width: 67px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 50px;
+              height: 8.5px;
+            }
+          }
+        }
+  
+        &.dinner-marcherant-dessert {
+          svg {
+            height: 12px;
+            width: 95px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 70px;
+              height: 9px;
+            }
+          }
+        }
+  
+        &.dinner-marcherant-cafe-ou-the {
+          svg {
+            height: 13px;
+            width: 132px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 97px;
+              height: 9px;
+            }
+          }
+        }
       }
     }
 

@@ -135,7 +135,12 @@
                   <ul class="breakfast-menu-list-container">
                     <% getData().data.recommendedDinnerPlate.forEach(item => { %>
                     <li class="breakfast-menu-list-cat-item">
-                      <span><%- item.categoryName -%></span>
+                      <span class="<%- item.categorysvg -%>">
+                        <%- include('/partials/svg', {
+                          name: item.categorysvg,
+                          svgtitle: item.categoryName
+                        }) -%>
+                      </span>
                       <ul class="breakfast-menu-list-cat-list">
                         <% item.categoryList.forEach(elem => { %>
                         <li class="breakfast-menu-list-cat-list-item">

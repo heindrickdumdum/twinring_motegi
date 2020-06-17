@@ -25,9 +25,9 @@
       </h1> -->
 
       <div class="l-container mv-container">
-        <div class="mv-heading hellowoods-mv-heading forest-program-mv-heading u-show-pc">
+        <div class="mv-heading mv-heading-default u-show-pc">
           <%- include('/partials/heading', {
-            modifier: 'heading-hellowoods',
+            modifier: 'mv-forest-experience-program',
             heading_level: 1,
             text: 'Forest Experience Program',
             subtextvg: 'forest-program-top-title',
@@ -111,6 +111,6 @@
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsCraft
+  breadcrumbs : getData().data.breadcrumbsForestProgram
 }) -%>
 <%- include('/partials/footer', { pageId } ) -%>

@@ -255,6 +255,8 @@
     left: 15px;
   }
 
+
+
   &-marcherant-breakfast {//breakfast marcherant page
     @include min-screen($breakpoint-mobile + 1) {
       bottom: 25px !important;
@@ -312,22 +314,27 @@
   }
 
   &.forest-program-mv-heading {//program page
+    // sass-lint:disable-block no-important
     bottom: 40px !important;
 
     @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
       bottom: -5px !important;
     }
 
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
+        // sass-lint:disable-block no-important
         max-width: 725px !important;
         height: 58px !important;
         margin-top: 20px !important;
       }
 
       @include max-screen($breakpoint-mobile) {
-        width: 230px !important;
-        height: 69px !important;
+        // sass-lint:disable-block no-important
+        width: 100% !important;
+        max-width: 293px !important;
+        height: 90px !important;
         margin-top: 10px !important;
       }
     }
@@ -523,6 +530,7 @@
         transform: none;
       }
       * {
+        // sass-lint:disable-block no-important
         width: 300px !important;
 
         @include max-screen ($breakpoint-mobile) {
@@ -571,8 +579,6 @@
     }
   }
 
-
-
   &.marcherant-mv-heading {
     .heading-text {
       @include max-screen ($breakpoint-mobile) {
@@ -606,6 +612,25 @@
     }
   }
 
+  &.mv-heading-default {
+    bottom: 30px;
+    width: 100%;
+    max-width: 650px;
+    .heading-text {
+      font-size: 45px;
+      -webkit-text-fill-color: #fff;
+    }
+    .heading-subtext {
+      width: 100%;
+      height: 64px;
+      top: -20px;
+      
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      left: auto;
+    }
+  }
  
 
   &.hellowoods-mv-heading {
@@ -1677,3 +1702,4 @@
     }
   }
 }
+

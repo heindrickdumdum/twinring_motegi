@@ -319,7 +319,13 @@
 
     @include max-screen($breakpoint-mobile) {
       // sass-lint:disable-block no-important
-      bottom: -5px !important;
+      bottom: -25px !important;
+
+      .heading-text {
+        // sass-lint:disable-block no-important
+        font-size: 22px !important;
+        letter-spacing: 2.5px;
+      }
     }
 
     .heading-subtext {
@@ -333,9 +339,9 @@
       @include max-screen($breakpoint-mobile) {
         // sass-lint:disable-block no-important
         width: 100% !important;
-        max-width: 293px !important;
-        height: 90px !important;
-        margin-top: 10px !important;
+        max-width: 327px !important;
+        height: 80px !important;
+        margin-top: 2px !important;
       }
     }
   }

@@ -105,6 +105,14 @@
   }
 
   &.table-rocco {//rocco page
+    @at-root & {
+      .table-head {
+        @include max-screen($breakpoint-mobile) {
+          white-space: nowrap;
+        }
+      }
+    }
+
     .link {
       color: #00a040;
     }

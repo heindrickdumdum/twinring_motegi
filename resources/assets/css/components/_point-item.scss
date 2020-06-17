@@ -133,3 +133,26 @@
     }
   }
 }
+
+
+
+@at-root .dinner-set-marcherant {//dinner set marcherant page
+  .point-subtext {
+    font-size: 15px;
+    line-height: 2;
+    text-align: center;
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: $z-min;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 33px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+  }
+}

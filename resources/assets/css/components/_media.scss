@@ -330,7 +330,8 @@
 
       span {
         background-position: center 3px;
-        background-repeat-y: no-repeat;
+        // background-repeat-y: no-repeat;
+        background-repeat: repeat-x;
 
         @at-root .is-ie & {//for ie
           background-repeat: repeat-x;
@@ -351,7 +352,8 @@
 
         span {
           background-position: center 7px;
-          background-repeat-y: no-repeat;
+          // background-repeat-y: no-repeat;
+          background-repeat: repeat-x;
 
           @at-root .is-ie & {//for ie
             background-repeat: repeat-x;
@@ -391,7 +393,11 @@
         }
 
         span {
-          background-position: center 3px;
+          background-position: center 7px;
+
+          @include max-screen($breakpoint-mobile) {
+            background-position: center 3px;
+          }
         }
       }
     }

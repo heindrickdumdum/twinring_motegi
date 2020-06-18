@@ -346,8 +346,9 @@
 
     .title-text {
       svg {
-        height: 60px;
-        width: 240px;
+        height: 40px;
+        width: 175px;
+        margin-top: 12px;
         @include max-screen ($breakpoint-mobile) {
           width: 165px;
         }

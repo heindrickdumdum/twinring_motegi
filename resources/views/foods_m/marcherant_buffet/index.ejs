@@ -53,7 +53,7 @@
 
       <section class="subpage-section">
         <div class="subpage-inner">
-          <div class="l-section-title">
+          <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-auto',
               heading_level: 1,
@@ -62,14 +62,30 @@
               altSubtextvg: 'Recommend'
             }) %>
           </div>
-          <div class="subpage-image-gallery subpage-image-gallery-roomdetails gallery-dinner-buffet">
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-auto two-lines-sp',
+              heading_level: 1,
+              text: 'Recommend',
+              subtextvg: 'marcherant-dinner-buffet-recommend-sp',
+              altSubtextvg: 'Recommend'
+            }) %>
+          </div>
+        <div class="subpage-image-gallery gallery-dinner-buffet">
             <div class="swiper-container slider-gallery js-gallery">
               <div class="swiper-wrapper">
                 <div class="swiper-slide slider-item">
                   <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
                 </div>
                 <div class="swiper-slide slider-item">
-                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/menu-banner.jpg') -%>)"></div>
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-03.jpg') -%>)"></div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-02.jpg') -%>)"></div>
+                </div>
+                
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-04.jpg') -%>)"></div>
                 </div>
               </div>
             </div>
@@ -80,7 +96,13 @@
                   <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
                 </div>
                 <div class="swiper-slide slider-item">
-                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/menu-banner.jpg') -%>)"></div>
+                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-03.jpg') -%>)"></div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-02.jpg') -%>)"></div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-04.jpg') -%>)"></div>
                 </div>
               </div>
             </div>
@@ -320,7 +342,7 @@
     
               <ul class="breakfast-menu-list-container">
                 <% getData().data.marcherantDinnerBuffetMenu.forEach(item => { %>
-                <li class="breakfast-menu-list-cat-item">
+                <li class="breakfast-menu-list-cat-item breakfast-menu-list-cat-item-dinner-buffet">
                   <span><%- item.categoryName -%></span>
                   <ul class="breakfast-menu-list-cat-list">
                     <% item.categoryList.forEach(elem => { %>
@@ -364,7 +386,7 @@
                 <th class="table-head">営業時間</th>
                 <td class="table-col">
                   17:30〜21:00（L.O.20:30）<br>
-                  ※ディナービュッフェはご宿泊のお客様限定、また毎週土曜日・長期休暇などに開催となります。詳しい日程はこちらをご確認ください。
+                  ※ディナービュッフェはご宿泊のお客様限定、また毎週土曜日・長期休暇などに開催となります。詳しい日程は<a href="/hours_m/">こちら</a>をご確認ください。
                 </td>
               </tr>
 
@@ -533,6 +555,9 @@
           </div>
         </div>
       </section>
+
+      <!-- other restaurant module-->
+      <%- include('/partials/restaurant/section-other-restaurant') -%>
 
     </main>
     <!-- END BOTTOM -->

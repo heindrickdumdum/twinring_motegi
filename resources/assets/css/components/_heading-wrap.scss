@@ -670,7 +670,7 @@
   &.two-lines-sp {
     @include max-screen ($breakpoint-mobile) {
       .heading-subtext {
-        min-height: 50px;
+        min-height: 60px;
       }
     }
   }

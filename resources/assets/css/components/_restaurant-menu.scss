@@ -965,6 +965,8 @@
         }
       }
 
+      
+
       .breakfast-menu-list-cat {
         &-item {
           margin-bottom: 36px;
@@ -1007,6 +1009,19 @@
           @include max-screen($breakpoint-mobile) {
             font-size: 12px;
             line-height: 2.045;
+          }
+        }
+
+        &-item-dinner-buffet {
+          &:nth-of-type(3) {
+            @include min-screen($breakpoint-mobile + 1) {
+              margin-bottom: 36px;
+            }
+          }
+          &:nth-of-type(4) {
+            @include min-screen($breakpoint-mobile + 1) {
+              margin-bottom: 225px;
+            }
           }
         }
       }

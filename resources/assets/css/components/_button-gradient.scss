@@ -4,14 +4,19 @@
   right: 0;
   transition: transform $duration $ease-in-out;
 
+  @include min-screen($breakpoint-mobile + 1) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .is-ie & {
     top: 0px;
   }
 
-  .is-safari & {
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  // .is-safari & {
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  // }
 
   svg {
     width: 100%;

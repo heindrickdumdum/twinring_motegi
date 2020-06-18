@@ -126,7 +126,7 @@
 
   @include max-screen($breakpoint-mobile) {
     right: inherit;
-    left: 0;
+    left: unset;
   }
 
   &.carbike-article-cat-bg-green-1 {
@@ -461,5 +461,11 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@at-root .motegi-attraction {//fb 06182020
+  .carbike-article-more {
+    display: none !important;
   }
 }

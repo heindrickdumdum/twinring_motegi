@@ -7,7 +7,7 @@ pageId = 'carAndBike';
 <%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
-  <div class="subpage">
+  <div class="subpage motegi-attraction">
     <div class="mv mv-subpage">
       <ul class="mv-list">
         <li class="mv-item">
@@ -83,7 +83,7 @@ pageId = 'carAndBike';
       <img class="icon" src="<%= mix('/assets/images/icon_tall.png') %>" alt="tall">
       <h3 class="banner-heading">アトラクションのご利用基準について</h3>
       <p class="banner-text">
-        お客様の安全を守るため、<br> アトラクションごとに<br>ご利用基準を設けております。
+        お客様の安全を守るため、<br class="u-show-sp"> アトラクションごとに<br class="u-show-sp">ご利用基準を設けております。
       </p>
     </div>
 
@@ -193,6 +193,6 @@ pageId = 'carAndBike';
 </main>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsCarbike
+  breadcrumbs : getData().data.breadcrumbsAttraction
 }) -%>
 <%- include('/partials/footer', { pageId }) -%>

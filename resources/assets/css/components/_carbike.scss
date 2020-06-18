@@ -468,4 +468,18 @@
   .carbike-article-more {
     display: none !important;
   }
+
+  .carbike-article-list {
+    .carbike-article-list-item {
+      &:first-child {
+        padding-top: 10px;
+        border-top: 1px dashed #d5d5d5;
+      }
+
+      &:last-child {
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #d5d5d5;
+      }
+    }
+  }
 }

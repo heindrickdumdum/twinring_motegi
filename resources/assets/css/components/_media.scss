@@ -285,6 +285,16 @@
     }
   }
 
+  &-program-details {
+    .media-title-text {
+      background: rgb(195,232,216);
+      background: linear-gradient(90deg, rgba(195,232,216,1) 0%, rgba(195,232,216,1) 100%);
+      background-size: 100% 5px;
+      background-repeat: no-repeat;
+      background-position-y: bottom;
+    }
+  }
+
   &.alt-feature-heading {
     margin-bottom: 20px;
 

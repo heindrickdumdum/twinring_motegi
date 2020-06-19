@@ -1709,3 +1709,29 @@
   }
 }
 
+@at-root .motegi-attraction {
+  .mv-heading {
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: 0px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: 14px;
+    }
+
+    svg {
+      display: inline-block;
+      fill: $color-white;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 325px;
+        height: 38px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 166px;
+        height: 20px;
+      }
+    }
+  }
+}

@@ -98,6 +98,10 @@
       margin-top: 33px;
       margin-bottom: 70px;
     }
+
+    a {//fb 06222020
+      color: inherit;
+    }
   }
   @include max-screen ($breakpoint-mobile) {
     padding: 35px 23px;

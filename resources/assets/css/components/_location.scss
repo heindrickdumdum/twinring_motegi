@@ -1,0 +1,20 @@
+.location {
+  &-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-col {
+    &:nth-of-type(1) {
+      width: 613px;
+    }
+  }
+
+  &-text {
+    font-size: 15px;
+    line-height: 2;
+    text-align: left;
+    letter-spacing: 0.1em;
+    margin-bottom: 25px;
+  }
+}

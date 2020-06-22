@@ -1,0 +1,102 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'smart_entry';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage smart-entry">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc"
+            style="background-image:url(<%= mix('/assets/images/smart_entry/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp"
+            style="background-image:url(<%= mix('/assets/images/smart_entry/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading forest-program-mv-heading u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Access',
+            subtextvg: 'access-top-title',
+            altSubtextvg: 'アクセス'
+            // imgPath: mix('/assets/images/access_m/mv-top-title.png'),
+            // alt: 'アクセス'
+          }) %>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner">
+
+        <section class="location">
+
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: '',
+              heading_level: 2,
+              text: 'Location',
+              subtextvg: 'access-location-title',
+              altSubtextvg: '所在地'
+            }) -%>
+          </div>
+
+          <div class="location-info">
+            <div class="location-col">
+              <div class="location-map">
+                <!-- GOOGLE MAP -->
+                <div class="location-map-google">
+                  <img src="<%- mix('/assets/images/access_m/map.png') -%>" alt="Location">
+                </div>
+              </div>
+            </div>
+            <div class="location-col">
+              <div class="location-desc">
+                <h3 class="media-title">
+                  <span>住所</span>
+                </h3>
+                <p class="location-text">
+                  〒321-3597 <br/>
+                  栃木県芳賀郡茂木町桧山120-1
+                </p>
+
+                <h3 class="media-title">
+                  <span>連絡先</span>
+                </h3>
+                <p class="location-text">
+                  TEL：0285-64-0001（代表）
+                </p>
+
+                <div class="location-cta">
+                  <%- include('/partials/button', {
+                    modifier: 'location-btn',
+                    text: 'GoogleMAPで見る',
+                    link: '#',
+                    newTab: true
+                  }) -%>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsSmartEntry
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

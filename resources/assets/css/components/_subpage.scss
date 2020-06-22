@@ -1433,6 +1433,14 @@
     }
   }
 
+  &.profile-wrapper {
+    border: 1px solid #c5c5c5;
+    max-width: 920px;
+
+    @include min-screen ($breakpoint-mobile+1) {
+      padding: 0px 37px;
+    }
+  }
   @include min-screen ($breakpoint-mobile + 1) {
     margin-bottom: 97px;
   }

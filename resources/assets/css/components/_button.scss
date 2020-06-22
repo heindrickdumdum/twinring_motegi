@@ -250,4 +250,22 @@
     }
   }
 
+  &.dinner-buffet-gold {
+    border: 1px solid #a38737;
+    max-width: 295px;
+    color: #a38737;
+    margin-bottom: 74px;
+
+    &::before {
+      display: none;
+    }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      width: 100%;
+      max-width: 730px;
+      padding: 46px;
+      margin-bottom: 74px;
+    } 
+  }
+
 }

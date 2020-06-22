@@ -311,6 +311,12 @@
 }
 
 @at-root .dinner-set-marcherant {//dinner set page
+  .feature-price-2 {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 49px;
+    }
+  }
+
   .recommend-feature-image {
     border-radius: 10px;
 

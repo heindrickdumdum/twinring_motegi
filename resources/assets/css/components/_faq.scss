@@ -214,8 +214,14 @@
 
 
 .faq-sec-link {
+  transition: all .3s ease-in-out;
   color: #333;
   text-decoration: underline;
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: #50ae32;
+    }
+  }
 }
 
 .faq-sec-svg {
@@ -497,7 +503,7 @@
   margin-bottom: 5px;
 
   @include min-screen($breakpoint-mobile + 1) {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 0;
   }
 }
@@ -601,9 +607,16 @@
   letter-spacing: 0.16em;
   display: block;
   margin-top: 20px;
+  transition: all .3s ease-in-out;
 
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 16px;
+  }
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: #50ae32;
+    }
   }
 }
 

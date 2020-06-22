@@ -623,9 +623,10 @@
 
   &.subpage-title-programdetails {
     font-size: 20px;
-    letter-spacing: 3px;
-    line-height: 1;
-    margin-bottom: 16px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    padding-top: 7px;
 
     @include max-screen ($breakpoint-mobile) {
       font-size: 11px;
@@ -741,7 +742,7 @@
     width: calc(100% - 40px);
 
     @include max-screen ($breakpoint-mobile) {
-      max-width: 257px;
+      //max-width: 257px;
     }
   }
 }
@@ -1094,9 +1095,20 @@
       cursor: pointer;
     }
 
+    &.section-collapse-program-details {
+      @include max-screen ($breakpoint-mobile) {
+        margin: 35px auto 40px;
+      }
+    }
+
     &.collapse-heading-program-details {
       font-size: 22px;
       padding: 38px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 14px;
+        padding: 17px;
+      }
     }
   }
 
@@ -1478,8 +1490,9 @@
   }
 
   &.img-list {
+    margin-bottom: 62px;
     @include max-screen ($breakpoint-mobile) {
-      margin-bottom: 0;
+      margin-bottom: 35px;
     }
   }
 
@@ -1489,7 +1502,11 @@
 
     @include min-screen ($breakpoint-mobile+1) {
       padding: 0px 37px;
-      margin-bottom: 80px;      
+      margin-bottom: 80px;   
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      margin: 0;
     }
   }
   @include min-screen ($breakpoint-mobile + 1) {

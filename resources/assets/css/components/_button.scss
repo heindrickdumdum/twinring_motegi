@@ -248,6 +248,11 @@
     &::before {
       display: none;
     }
+
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 14px;
+      padding: 20px;
+    }
   }
 
   &.dinner-buffet-gold {

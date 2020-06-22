@@ -224,12 +224,12 @@
       </section>
 
 
-      <section class="subpage-section section-profile">
+      <section class="l-container subpage-section section-profile">
         <div class="subpage-inner subpage-inner-programdetails profile-wrapper">
           <p class="media-title media-title-profile">
             <span class="media-title-text">講師プロフィール</span>
           </p>
-          <p class="profile-sub-title">
+          <p class="profile-sub-title u-show-pc">
             <span class="bold">松崎 融（まつざき とおる）</span><br>
             <span class="u-show-pc">茂木町在住　木漆工芸作家　国画会工芸部監査委員長<br></span>
           </p>
@@ -237,7 +237,13 @@
           
           <div class="desc-container">
             <div class="profile-img">
-              <img src="<%= mix('/assets/images/program-details/profile.jpg') %>" alt="">
+              <div class="profile-img-inner">
+                <img src="<%= mix('/assets/images/program-details/profile.jpg') %>" alt="">
+              </div>
+              <p class="profile-sub-title u-show-sp">
+                <span class="bold">松崎 融<br>（まつざき とおる）</span>
+                <span class="">茂木町在住　木漆工芸作家　国画会工芸部監査委員長<br></span>
+              </p>
             </div>
             <p class="profile-desc">
               “一木をくりぬき、漆の着物を着せていく”これが私の仕事です。<br>
@@ -247,7 +253,7 @@
           </div>
         </div>
 
-        <div class="subpage-section subpage-section-collapse">
+        <div class="subpage-section subpage-section-collapse section-collapse-program-details">
           <div class="subpage-collapse-heading js-collapse-button collapse-heading-program-details">特記事項</div>
           <div class="subpage-collapse-description">
             <div class="subpage-collapse-content">

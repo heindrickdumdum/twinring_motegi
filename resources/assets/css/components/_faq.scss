@@ -147,13 +147,13 @@
   align-items: center;
   justify-content: center;
   width: calc(99% / 2);
-  padding: 12px 7px 9px;
   margin-bottom: 1%;
+  padding: 12px 7px 9px;
 
   @include min-screen($breakpoint-mobile + 1) {
     border-radius: 10px;
-    padding: 30px 20px 18px;
     margin-bottom: 20px;
+    padding: 30px 20px 18px;
     width: calc((100% - 60px) / 3);
   }
 
@@ -168,12 +168,6 @@
       margin-right: 1%;
     }
   }
-
-}
-
-.faq-sec-link {
-  color: #333;
-  text-decoration: underline;
 }
 
 .faq-sec-txt {
@@ -187,6 +181,7 @@
   letter-spacing: 0.16em;
   text-align: center;
   min-height: 28px;
+  transition: all .3s ease-in-out;
 
   @include min-screen($breakpoint-mobile + 1) {
     min-height: 44px;
@@ -196,6 +191,36 @@
   span {
     display: inline-block;
     border-bottom: 1px solid #333;
+    transition: all .3s ease-in-out;
+  }
+}
+
+
+.faq-sec-item-link {
+  color: #333;
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: #50ae32;
+
+      span {
+        border-bottom-color: #50ae32;
+      }
+
+    }
+  }
+}
+
+
+
+.faq-sec-link {
+  transition: all .3s ease-in-out;
+  color: #333;
+  text-decoration: underline;
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: #50ae32;
+    }
   }
 }
 
@@ -362,7 +387,7 @@
     position: relative;
 
     @include min-screen($breakpoint-mobile + 1) {
-      font-size: 16px;
+      font-size: 14px;
       padding: 20px 40px;
       letter-spacing: 0.1em;
       line-height: 1.5;
@@ -582,9 +607,16 @@
   letter-spacing: 0.16em;
   display: block;
   margin-top: 20px;
+  transition: all .3s ease-in-out;
 
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 16px;
+  }
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: #50ae32;
+    }
   }
 }
 

@@ -718,6 +718,14 @@
 .subpage-section {
   position: relative;
   width: 100%;
+  &.section-profile {
+    padding-bottom: 34px;
+    margin-bottom: 30px;
+    @include min-screen ($breakpoint-mobile+1) {
+      padding-bottom: 74px;
+      margin-bottom: 110px;
+    }
+  }
 
   &.section-profile::after {
     background: #dfdfdf;
@@ -1085,6 +1093,11 @@
     &:hover {
       cursor: pointer;
     }
+
+    &.collapse-heading-program-details {
+      font-size: 22px;
+      padding: 38px;
+    }
   }
 
   .subpage-collapse-description {
@@ -1116,7 +1129,44 @@
     border: 1px solid #a38737;
     .subpage-collapse-heading {
       color: #a38737;
+
+      @include max-screen ($breakpoint-mobile) {
+        padding: 17px 0px;
+      }
     }
+
+    max-width: 295px;
+
+    &:nth-child(2) {
+      margin-bottom: 75px;
+      .subpage-collapse-heading {
+        padding: 14px 0px;
+      }
+    }
+
+    &:first-child {
+      margin-bottom: 38px;
+    }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      margin-top: 82px;
+      max-width: 730px;
+
+      &:nth-child(2) {
+        margin-bottom: 110px;
+        margin-top: 0px;
+        .subpage-collapse-heading {
+          padding: 14px 0px;
+        }
+      }
+  
+      &:first-child {
+        margin-bottom: 55px;
+        .subpage-collapse-heading {
+          padding: 33px 0px;
+        }
+      }
+    }    
   }
 }
 
@@ -1439,6 +1489,7 @@
 
     @include min-screen ($breakpoint-mobile+1) {
       padding: 0px 37px;
+      margin-bottom: 80px;      
     }
   }
   @include min-screen ($breakpoint-mobile + 1) {

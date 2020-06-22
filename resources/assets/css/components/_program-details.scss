@@ -86,12 +86,17 @@
       }
     }
   }
+
+  .profile-sub-title {
+    margin-bottom: 22px;
+  }
+
   .desc-container {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
     line-height: 1.7;
-    margin-bottom: 77px;
+    margin-bottom: 35px;
 
     ul {
       list-style: initial;
@@ -112,6 +117,8 @@
     }
     .profile-img {
       //order: 2;
+      max-width: 195px;
+      width: 100%;
 
       @include max-screen ($breakpoint-mobile) {
         max-width: 160px;
@@ -121,7 +128,13 @@
     }
 
     .profile-desc {
-      max-width: 700px;
+      //max-width: 700px;
+      width: 100%;
+      line-height: 1.7;
+      letter-spacing: 3px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: -6px;
     }
 
     @include max-screen ($breakpoint-mobile) {

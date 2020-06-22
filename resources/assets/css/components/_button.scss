@@ -229,4 +229,25 @@
       height: 30px;
     }
   }
+
+  &.program-details-green {
+    background-image: url('../images/program-details/button-bg-green.jpg');
+    border: none;
+    background-position: center;
+    background-size: 200%;
+    width: 100%;
+    height: auto;
+    max-width: 490px;
+    padding: 30px;
+    margin-bottom: 14px;
+
+    @include min-screen ($breakpoint-mobile+1) {
+      margin-top: 100px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
 }

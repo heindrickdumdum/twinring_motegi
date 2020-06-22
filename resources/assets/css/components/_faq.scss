@@ -142,14 +142,18 @@
   background-color: $color-white;
   border-radius: 3px;
   border: 1px solid #333;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: calc(99% / 2);
   margin-bottom: 1%;
-  overflow: hidden;
+  padding: 12px 7px 9px;
 
   @include min-screen($breakpoint-mobile + 1) {
     border-radius: 10px;
     margin-bottom: 20px;
+    padding: 30px 20px 18px;
     width: calc((100% - 60px) / 3);
   }
 
@@ -191,29 +195,9 @@
   }
 }
 
-.faq-sec-svg {
-  height: 45px;
-  stroke-width: 6px;
-  margin-bottom: 8px;
-  transform: scale(1);
-  transition: all .3s ease-in-out;
-
-  @include min-screen($breakpoint-mobile + 1) {
-    height: 63px;
-    margin-bottom: 12px;
-  }
-}
 
 .faq-sec-item-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   color: #333;
-  padding: 12px 7px 9px;
-  @include min-screen($breakpoint-mobile + 1) {
-    padding: 30px 20px 18px;
-  }
 
   &:hover {
     @include min-screen($breakpoint-mobile + 1) {
@@ -223,16 +207,26 @@
         border-bottom-color: #50ae32;
       }
 
-      .faq-sec-svg {
-        transform: scale(1.2)
-      }
     }
   }
 }
 
+
+
 .faq-sec-link {
   color: #333;
   text-decoration: underline;
+}
+
+.faq-sec-svg {
+  height: 45px;
+  stroke-width: 6px;
+  margin-bottom: 8px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    height: 63px;
+    margin-bottom: 12px;
+  }
 }
 
 .faq-sec-svg-time {

@@ -2,6 +2,7 @@
   &-info {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 57px;
   }
 
   &-col {
@@ -10,11 +11,170 @@
     }
   }
 
+  &-map {
+    .map-iframe {
+      border: 1px dashed $color-green;
+
+      iframe {
+        width: 100%;
+
+        @include min-screen($breakpoint-mobile + 1) {
+          height: 358px;
+        }
+      }
+    }
+  }
+
+  &-cta {
+    margin-top: 40px;
+  }
+
   &-text {
     font-size: 15px;
     line-height: 2;
     text-align: left;
     letter-spacing: 0.1em;
     margin-bottom: 25px;
+  }
+
+  &-desc {
+    padding-top: 29px;
+  }
+
+  &-note {
+    display: flex;
+    justify-content: space-between;
+
+    &-col {
+      &:nth-of-type(1) {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 333px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 656px;
+        }
+      }
+    }
+
+    .border-text {
+      position: relative;
+      height: 100%;
+      border: 1px solid $color-black;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        padding: 49px 27px 31px;
+      }
+    }
+
+    .title {
+      position: absolute;
+      background-color: $color-white;
+      padding: {
+        left: 25px;
+        right: 25px;
+      }
+      font-size: 18px;
+      line-height: 1.778;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      top: -17px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    .text {
+      font-size: 15px;
+      line-height: 2;
+      letter-spacing: 0.1em;
+
+      span {
+        display: block;
+        margin-bottom: 10px;
+
+        &:nth-of-type(1) {
+          color: $color-red;
+          font-weight: bold;
+        }
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+    }
+
+    &-list {
+      li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+
+        &:before {
+          content: "\2022";
+          position: absolute;
+          font-size: 35px;
+          color: $color-green;
+          top: -14px;
+          left: 0px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1.571;
+          letter-spacing: 0.1em;
+          font-weight: bold;
+        }
+
+        @at-root & {
+          span {
+            font-size: 14px;
+            line-height: 1.571;
+            letter-spacing: 0.1em;
+          }
+        }
+      }
+    }
+
+    &-cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+
+      .note-cta {
+        display: flex;
+        justify-content: center;
+        border: 1px solid $color-black;
+        height: 46px;
+        align-items: center;
+        padding-left: 29px;
+        padding-right: 29px;
+        border-radius: 23px;
+        margin-right: 19px;
+        color: inherit;
+
+        &:nth-of-type(2) {
+          margin-right: 0px;
+        }
+
+        svg {
+          width: 23px;
+          height: 23px;
+          margin-right: 22px;
+        }
+
+        @at-root & {
+          span {
+            font-size: 15px;
+            text-decoration: underline;
+            letter-spacing: 0.1em;
+          }
+        }
+      }
+    }
   }
 }

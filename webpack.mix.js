@@ -107,6 +107,11 @@ mix
     `${distRelativePath}/assets/js`,
   )
 
+  .js(
+    `${srcRelativePath}/assets/js/access.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
   .eslint()
   .sass(
     `${srcRelativePath}/assets/css/header.scss`,

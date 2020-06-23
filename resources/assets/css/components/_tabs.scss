@@ -275,3 +275,42 @@
     transition: opacity 1s ease-in;
   }
 }
+
+.tab-access {//access page
+  margin-top: 25px;
+  
+  .tab-list {
+    display: flex;
+    border-bottom: 7px solid #c3e8d8;
+
+    .tab-item {
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      text-align: center;   
+      background-color: $color-green-6;
+      opacity: 0.5;
+      color: $color-white;
+      cursor: pointer;
+      padding: 16px 17.9px 13px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      margin-right: 10px;
+      white-space: nowrap;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+      
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .tab-container {
+    border: 1px solid $color-green;
+    border-top-width: 0px;
+    padding: 42px 37px;
+    overflow-y: hidden;
+  }
+}

@@ -1,27 +1,27 @@
 <%
   var title = 'Twin Ring Motegi | 森の教習所'
   SPRITE_SVG = '/assets/svg/sprite.svg';
-  pageId = 'smart_entry';
+  pageId = 'access';
 %>
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
 
 <div class="lig-content">
-  <div class="subpage smart-entry">
+  <div class="subpage subpage-access">
     <div class="mv mv-subpage">
       <ul class="mv-list">
         <li class="mv-item">
           <div class="mv-image mv-image-subpage u-show-pc"
-            style="background-image:url(<%= mix('/assets/images/smart_entry/mv-img.jpg') %>);"></div>
+            style="background-image:url(<%= mix('/assets/images/access_m/mv-img.jpg') %>);"></div>
           <div class="mv-image mv-image-subpage u-show-sp"
-            style="background-image:url(<%= mix('/assets/images/smart_entry/mv-img-sp.jpg') %>);"></div>
+            style="background-image:url(<%= mix('/assets/images/access_m/mv-img-sp.jpg') %>);"></div>
         </li>
       </ul>
 
       <div class="l-container mv-container">
-        <div class="mv-heading hellowoods-mv-heading forest-program-mv-heading u-show-pc">
+        <div class="mv-heading hellowoods-mv-heading access-mv-heading">
           <%- include('/partials/heading', {
-            modifier: 'heading-hellowoods',
+            modifier: 'heading-hellowoods heading-access',
             heading_level: 1,
             text: 'Access',
             subtextvg: 'access-top-title',
@@ -52,9 +52,12 @@
             <div class="location-col">
               <div class="location-map">
                 <!-- GOOGLE MAP -->
-                <div class="location-map-google">
-                  <img src="<%- mix('/assets/images/access_m/map.png') -%>" alt="Location">
+                <div class="map-iframe">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.64678428973!2d140.22348384802706!3d36.53119228682537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbdf951075ca10ac4!2sTwin%20Ring%20Motegi!5e0!3m2!1sja!2sjp!4v1592884192262!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
+                <!-- <div class="location-map-google">
+                  <img src="<%- mix('/assets/images/access_m/map.png') -%>" alt="Location">
+                </div> -->
               </div>
             </div>
             <div class="location-col">
@@ -78,11 +81,188 @@
                   <%- include('/partials/button', {
                     modifier: 'location-btn',
                     text: 'GoogleMAPで見る',
-                    link: '#',
+                    link: 'https://www.google.com/maps/place/%E3%83%84%E3%82%A4%E3%83%B3%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%82%E3%81%A6%E3%81%8E/@36.531954,140.225397,16z/data=!4m5!3m4!1s0x0:0xbdf951075ca10ac4!8m2!3d36.531954!4d140.2253966?hl=ja',
                     newTab: true
                   }) -%>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div class="location-note">
+            <div class="location-note-col">
+              <div class="border-text">
+                <p class="title">ご注意</p>
+                <p class="text">
+                  <span>
+                    ご来場時は目的地に「ツインリンクもてぎ南ゲートまたは北ゲート」を設定ください。
+                  </span>
+                  <span>
+                    ※「ツインリンクもてぎ」で登録いただくと、ツインリンクもてぎ敷地下を通る県道291号線付近に誘導される場合がございます。（県道291号線からはご入場いただけません）
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="location-note-col">
+              <div class="border-text">
+                <p class="title">レース・イベントなどの混雑時について</p>
+                <p class="text">
+                  レース・イベント開催日は交通機関の混雑が予想されます。<br>
+                  <b class="text-arrow">&#9660;</b>混雑が予想されるレース・イベント
+                </p>
+                
+                <ul class="location-note-list">
+                  <li>
+                    <p>レース</p>
+                    <span>MotoGP™️、SUPER GT、スーパーフォーミュラ、Honda Racing THANKS DAY</span>
+                  </li>
+                  <li>
+                    <p>イベント</p>
+                    <span>ＧＷ、花火の祭典 夏、お盆期間</span>
+                  </li>
+                </ul>
+
+                <p class="text">
+                  各レース・イベントの開催日は<a href="#">年間カレンダー</a>をご確認ください。
+                </p>
+
+                <div class="location-note-cta">
+                  <a class="note-cta" href="#">
+                    <%- include('/partials/svg', {
+                      name: 'access-information-logo',
+                      svgtitle: 'info'
+                    }) -%>
+                    <span>迂回路のご案内はこちら</span>
+                  </a>
+
+                  <a class="note-cta" href="#">
+                    <%- include('/partials/svg', {
+                      name: 'access-twitter-logo',
+                      svgtitle: 'twitter'
+                    }) -%>
+                    <span>最新交通情報Twitter</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="subpage-section subpage-section-carbike access-anchor">
+          <div class="carbike-menu">
+            <div class="swiper-container slider-carbike-container js-slider-carbike">
+    
+              <div class="swiper-wrapper slider-carbike">
+                <div class="swiper-slide slider-carbike-item">
+                  <div class="carbike-menu-item">
+                    <a class="carbike-menu-link js-scroll" href="#car-bike">
+                      <img src="<%= mix('/assets/images/access_m/car-icon.jpg') %>" alt="車のアトラクション">
+                    </a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider-carbike-item">
+                  <div class="carbike-menu-item">
+                    <a class="carbike-menu-link js-scroll" href="#train">
+                      <img src="<%= mix('/assets/images/access_m/train-icon.jpg') %>" alt="車のアトラクション">
+                    </a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider-carbike-item">
+                  <div class="carbike-menu-item">
+                    <a class="carbike-menu-link js-scroll" href="#bus">
+                      <img src="<%= mix('/assets/images/access_m/bus-icon.jpg') %>" alt="車のアトラクション">
+                    </a>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- car bike -->
+        <section class="car-bike-transportation transportation-section" id="car-bike">
+          <h2 class="media-title text-center access-heading">
+            <span>お車・バイクでご来場の方</span>
+          </h2>
+
+          <div class="tab-access" id="js-carbike-tab">
+            <ul class="tab-list">
+              <% getData().data.accessTabCarBike.forEach(item => { %>
+              <li class="tab-item js-tab-link" data-tab="<%- item.tabId -%>">
+                <span><%- item.tabLabel -%></span>
+              </li>
+              <% }); %>
+            </ul>
+
+            <div class="tab-container">
+              <% getData().data.accessTabCarBike.forEach(item => { %>
+              <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
+                <% item.tabContent.forEach(elem => { %>
+                  <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                <% }); %>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+
+          <p class="car-bike-note">
+            駐車場については<a href="#" class="link">料金・チケット</a>、園内<a href="#" class="link">マップ</a>ページをご確認ください。
+          </p>
+        </section>
+
+        <!-- train -->
+        <section class="train-transportation transportation-section" id="train">
+          <h2 class="media-title text-center access-heading">
+            <span>電車でご来場の方</span>
+          </h2>
+
+          <div class="tab-access" id="js-train-tab">
+            <ul class="tab-list">
+              <% getData().data.accessTabTrain.forEach(item => { %>
+              <li class="tab-item js-tab-link" data-tab="<%- item.tabId -%>">
+                <span><%- item.tabLabel -%></span>
+              </li>
+              <% }); %>
+            </ul>
+
+            <div class="tab-container">
+              <% getData().data.accessTabTrain.forEach(item => { %>
+              <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
+                <% item.tabContent.forEach(elem => { %>
+                  <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                <% }); %>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+        </section>
+
+        <!-- bus -->
+        <section class="bus-transportation transportation-section" id="bus">
+          <h2 class="media-title text-center access-heading">
+            <span>バスでご来場の方</span>
+          </h2>
+
+          <div class="tab-access" id="js-bus-tab">
+            <ul class="tab-list">
+              <% getData().data.accessTabBus.forEach(item => { %>
+              <li class="tab-item js-tab-link" data-tab="<%- item.tabId -%>">
+                <span><%- item.tabLabel -%></span>
+              </li>
+              <% }); %>
+            </ul>
+
+            <div class="tab-container">
+              <% getData().data.accessTabBus.forEach(item => { %>
+              <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
+                <% item.tabContent.forEach(elem => { %>
+                  <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                <% }); %>
+              </div>
+              <% }); %>
             </div>
           </div>
         </section>
@@ -97,6 +277,6 @@
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsSmartEntry
+  breadcrumbs : getData().data.breadcrumbsAccess
 }) -%>
 <%- include('/partials/footer', { pageId } ) -%>

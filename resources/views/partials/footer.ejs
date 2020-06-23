@@ -47,6 +47,7 @@
   'stay',
   'toya',
   'smart_entry',
+  'access',
   'marcherant',
   'breakfastMarcherant',
   'lunchMarcherant',
@@ -205,6 +206,10 @@
 
   <% if(pageId == 'toya') { %>
     <script src="<%= mix('/assets/js/toya.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'access') { %>
+    <script src="<%= mix('/assets/js/access.js') %>" async></script>
   <% } %>
   
   <% if(pageId == 'bbq') { %>

@@ -1735,3 +1735,16 @@
     }
   }
 }
+
+@at-root .access-mv-heading {
+  bottom: 38px !important;
+  
+  .heading-access {
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 198px !important;
+        height: 42px !important;
+      }
+    }
+  }
+}

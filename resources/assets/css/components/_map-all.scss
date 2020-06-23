@@ -72,18 +72,10 @@
       }
     }
 
-    .map-bubbles-item:hover {
-      transition: ease 1s all;
+    .map-bubbles-item:not(.no-hover):hover {
+      transition: ease 0.5s all;
       /* transform: scale(1.5); */
-      animation: bounce 0.5s infinite alternate;
-    }
-    @keyframes bounce {
-      from {
-        margin-top: 0;
-      }
-      to {
-        margin-top: -10px;
-      }
+      transform: translateY(-10px)
     }
   }
 

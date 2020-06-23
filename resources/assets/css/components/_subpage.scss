@@ -1160,6 +1160,11 @@
       margin-bottom: 38px;
     }
 
+    .button-icon {
+      padding: 5px 0;
+      right: 5px;
+    }
+
     @include min-screen ($breakpoint-mobile+1) {
       margin-top: 82px;
       max-width: 730px;
@@ -1177,6 +1182,11 @@
         .subpage-collapse-heading {
           padding: 39px 0px;
         }
+      }
+
+      .button-icon {
+        padding: 10px 0;
+        right: 20px;
       }
     }    
   }

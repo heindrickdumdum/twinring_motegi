@@ -637,8 +637,16 @@
       left: auto;
     }
   }
- 
 
+  &.mv-heading-mobipark-guide {
+    max-width: 950px;
+
+    .heading-subtext {
+      top: -14px;
+      left: 4px;
+    }
+  }
+ 
   &.hellowoods-mv-heading {
     bottom: 5px;
     width: 100%;

@@ -387,7 +387,7 @@
               <tr class="table-row">
                 <th class="table-head">場所</th>
                 <td class="table-col">
-                  ホテルツインリング１階 <br><a href="/map_m/">Mapを見る</a>
+                  ホテルツインリンク１階 <br><a href="/map_m/">Mapを見る</a>
                 </td>
               </tr>
 
@@ -437,7 +437,7 @@
             <div class="subpage-collapse-description">
               <div class="subpage-collapse-content marcherant-collapse-content">
                 <p class="text-center">
-                  アニバーサリーケーキは、お電話にてご注文承ります｡<br> &lt;プレートのお名前は申し込み時にお知らせください&gt;<br><b>TEL 0285-64-0489　<br class="u-show-sp"> 受付時間 10:00～17:30</b>
+                  アニバーサリーケーキは、お電話にてご注文承ります｡<br>プレートのお名前は申し込み時にお知らせください。<br><b>TEL 0285-64-0489</b>
                 </p>
                 <img class="collapse-banner" src="<%- mix('/assets/images/marcherant/collapse-banner-1.jpg') -%>" alt="">
 
@@ -448,7 +448,7 @@
                       <div class="col-data">
                         13cm    2,650円<br>
                         15cm    2,960円<br>
-                        18cm  	3,4
+                        18cm  	3,470円
                       </div>
                     </div>
                     <div class="column">
@@ -463,7 +463,7 @@
                 <p>
                   ※ディナー営業時間でのご提供となります。<br>
                   ※店内でお召し上がりいただきます。<br>
-                  ※ご予約・キャンセルは、5日前まで承ります。4日前～当日：キャンセル料100%となります。
+                  ※ご予約・キャンセルは5日前まで承ります。4日前～当日はキャンセル料100%となります。
                 </p>
               </div>
             </div>
@@ -472,7 +472,7 @@
           <%- include('/partials/button', {
             modifier: 'dinner-buffet-gold',
             text: '食物アレルギーをお持ちのお客様へ',
-            link: '#',
+            link: '/foods_m/marcherant/',
             buttonIcon: 'arrow-right-gold'
           }) %>
         </div>
@@ -506,16 +506,32 @@
                 <%- include('/partials/button', {
                   modifier: 'reservation-button',
                   text: 'ご予約はこちら',
-                  link: '#'
+                  link: 'https://asp.hotel-story.ne.jp/ver3d/planlist.asp?hcod1=61730&hcod2=001&c2plan=9001&clrmode=true'
                 }) -%>
               </div>
               <div class="l-button cta-btn">
                 <span>お問い合わせのお客様<br><br></span>
-                <%- include('/partials/button', {
-                  modifier: 'reservation-button',
-                  text: '<span>Tel.0285-64-0489<br/><small>受付時間 10:00～17:30</small></span>',
-                  link: '#'
-                }) -%>
+                <span class="u-show-sp">
+                  <%- include('/partials/button', {
+                    modifier: 'reservation-button',
+                    text: '<span>Tel.0285-64-0489<br/><small>受付時間 10:00～17:30</small></span>',
+                    link: 'tel:0285-64-0489'
+                  }) -%>
+                </span>
+                <div class="button reservation-button u-show-pc"><span>Tel.0285-64-0489<br><small>受付時間 10:00～17:30</small></span>
+                  <i class="button-icon">
+                    
+                    
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  
+                  <title></title>
+
+                  <use xlink:href="/assets/svg/sprite.svg#sprite-arrow"></use>
+                </svg>
+                
+                    
+                  </i>
+                </div>
               </div>
             </div>
           </div>

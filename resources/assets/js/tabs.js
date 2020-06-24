@@ -19,11 +19,17 @@ function tabs(){
   var optionSP = document.querySelectorAll('.option'); 
   var o;
   for (o = 0; o < optionSP.length; o++) {
+    optionSP[0].classList.add('active');//Initial items
     optionSP[o].addEventListener('click',function(){
+      if(document.querySelectorAll('.option.active')[0]) {
+        document.querySelectorAll('.option.active')[0].classList.remove('active');
+      }
       tabSPselect.innerText = this.getAttribute('value')+"月";
       document.getElementById('program-list').setAttribute("data-tab", this.getAttribute('value'));
       document.getElementById('customSelect').classList.toggle('open');
       document.getElementById('customSelectItems').classList.toggle('select-hide');
+      
+      this.classList.add('active');
     })
   }
 }

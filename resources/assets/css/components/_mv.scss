@@ -1738,12 +1738,21 @@
 
 @at-root .access-mv-heading {
   bottom: 38px !important;
+
+  @include max-screen($breakpoint-mobile) {
+    bottom: -20px;
+  }
   
   .heading-access {
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
         max-width: 198px !important;
         height: 42px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 141.5px !important;
+        height: 29px !important;
       }
     }
   }

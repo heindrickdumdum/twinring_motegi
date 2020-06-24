@@ -3,11 +3,23 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 57px;
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+    }
   }
 
   &-col {
     &:nth-of-type(1) {
       width: 613px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
     }
   }
 

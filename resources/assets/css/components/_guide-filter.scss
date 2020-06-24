@@ -49,6 +49,7 @@
 
     }
   }
+
   .guide-area-desc {
     font-size: 15px;
     display: inline-block;
@@ -86,11 +87,12 @@
     }
 
   }
+
   .guide-area-passport {
     color: #f39a04;
     position: absolute;
-    right: 4px;
-    bottom: 25px;
+    right: 2px;
+    bottom: 15px;
     font-size: 16px;
     line-height: 1;
 
@@ -105,6 +107,10 @@
     }
 
   }
+
+  .passport {
+    max-width: 30px;
+  }
 }
 
 .guide-list {
@@ -113,6 +119,11 @@
     border-bottom: 1px solid #efefef;
     padding-bottom: 40px;
     margin-bottom: 40px;
+
+    .passport {
+      float: right;
+      max-width: 30px;
+    }
   }
 
   .wrapper-container {

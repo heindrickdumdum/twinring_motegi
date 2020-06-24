@@ -1,0 +1,31 @@
+<% if(dataMobiparkGuideItems) { %>
+<ul class="guide-list">
+  <% dataMobiparkGuideItems.forEach( item => { %>
+    <li class="guide-items">
+      <p class="media-title media-title-programdetails">
+        <span class="media-title-text"><%- item.title %></span>
+      </p>
+      <div class="wrapper-container">
+        <div class="area-item-image-wrapper">
+          <img src="<%- item.imgPath %>" alt="Mobi Park">
+        </div>
+        <div class="area-item-desc-wrapper">
+          <h3 class="subpage-title">
+            <span><%- item.colorTitle %> </span>
+          </h3>
+          <ul class="carbike-article-list">
+            <ul class="carbike-article-list">
+              <% item.dataList.forEach( dataitem => { %>
+                <li class="carbike-article-list-item">
+                  <span class="carbike-article-list-label"><%= dataitem.label %></span>
+                  <p class="carbike-article-list-desc"><%- dataitem.content %></p>
+                </li>
+              <% }) %>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </li>
+  <% }) %>
+</ul>
+<% } %>

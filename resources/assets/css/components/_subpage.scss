@@ -1721,6 +1721,11 @@
   }
 }
 
+.link {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .link-green {
   color: $color-green;
 

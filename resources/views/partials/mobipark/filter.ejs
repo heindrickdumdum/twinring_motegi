@@ -1,0 +1,57 @@
+<section class="l-container section-mobipark-guide-filter">
+  <div class="heading-wrap heading-main heading-main-mobipark-guide">
+    <div class="l-section-title">
+      <%- include('/partials/heading', {
+        modifier: 'heading-wrap heading-wrap-auto',
+        text: '対象年齢・エリアなどで<br class="u-show-sp">絞り込みができます',
+        alt: '対象年齢・エリアなどで絞り込みができます',
+        altSubtext: '',
+        subtextvg: ''
+      }) %>
+    </div>
+    <div class="guide-filter">
+      <div class="row">
+        <div class="tag">未就学児</div>
+        <div class="input-wrapper">
+          <input type="checkbox" id="checkbox-1-1" class="regular-checkbox"><label for="checkbox-1-1">0歳</label>
+          <input type="checkbox" id="checkbox-1-2" class="regular-checkbox"><label for="checkbox-1-2">1歳</label>
+          <input type="checkbox" id="checkbox-1-3" class="regular-checkbox"><label for="checkbox-1-3">2歳</label>
+          <input type="checkbox" id="checkbox-1-4" class="regular-checkbox"><label for="checkbox-1-4">3歳</label>
+          <input type="checkbox" id="checkbox-1-5" class="regular-checkbox"><label for="checkbox-1-5">4歳</label>
+          <input type="checkbox" id="checkbox-1-6" class="regular-checkbox"><label for="checkbox-1-6">5歳</label>
+          <input type="checkbox" id="checkbox-1-7" class="regular-checkbox"><label for="checkbox-1-7">6歳</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="tag">小学生</div>
+        <div class="input-wrapper">
+          <input type="checkbox" id="checkbox-2-1" class="regular-checkbox big-checkbox"><label for="checkbox-2-1">1年生</label>
+          <input type="checkbox" id="checkbox-2-2" class="regular-checkbox big-checkbox"><label for="checkbox-2-2">2年生</label>
+          <input type="checkbox" id="checkbox-2-3" class="regular-checkbox big-checkbox"><label for="checkbox-2-3">3年生</label>
+          <input type="checkbox" id="checkbox-2-4" class="regular-checkbox big-checkbox"><label for="checkbox-2-4">4年生</label>
+          <input type="checkbox" id="checkbox-2-5" class="regular-checkbox big-checkbox"><label for="checkbox-2-5">5年生</label>
+          <input type="checkbox" id="checkbox-2-6" class="regular-checkbox big-checkbox"><label for="checkbox-2-6">6年生</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="tag">エリア</div>
+        <div class="input-wrapper button-holder">
+          <input type="radio" id="radio-1-1" name="radio-1-set" class="regular-radio" checked=""><label for="radio-1-1">モビパーク</label>
+          <input type="radio" id="radio-1-2" name="radio-1-set" class="regular-radio"><label for="radio-1-2">ハローウッズ</label>
+          <input type="radio" id="radio-1-3" name="radio-1-set" class="regular-radio"><label for="radio-1-3">ホンダコレクションホール</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="tag">対象</div>
+        <div class="input-wrapper button-holder">
+          <input type="radio" id="radio-2-1" name="radio-2-set" class="regular-radio big-radio"><label for="radio-2-1">モビパークパスポート</label><br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pdf-link">
+    <a href="">対象年齢・料金一覧表(PDF) <img src="<%= mix('/assets/images/pdf-icon.png') %>" alt="PDF">
+    </a>
+  </div>
+</section>
+

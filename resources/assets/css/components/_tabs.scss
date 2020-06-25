@@ -168,6 +168,10 @@
   padding: 7px;
   border-bottom: 1px solid;
   cursor: pointer;
+
+  &.active {
+    display:none;
+  }
 }
 
 .select-hide {

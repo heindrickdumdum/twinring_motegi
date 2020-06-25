@@ -699,6 +699,14 @@
       margin-left: -20px !important;
       margin-right: -20px !important;
     }
+
+    @at-root & {
+      img {
+        @include max-screen($breakpoint-mobile) {
+          height: 100%;
+        }
+      }
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 <%
   var title = 'Twin Ring Motegi | アクロエックス';
   SPRITE_SVG = '/assets/svg/sprite.svg';
-  pageId = 'faq';
+  pageId = 'service_m';
 %>
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
@@ -97,11 +97,11 @@
                 },
                ].forEach((data) => { %>
                  <li class="faq-sec-item">
-                   <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
-                     <title>icon <%- data.svgModifier %></title>
-                     <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
-                   </svg>
                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                     <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                       <title>icon <%- data.svgModifier %></title>
+                       <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                     </svg>
                      <p class="faq-sec-txt">
                        <%- data.text %>
                      </p>
@@ -153,13 +153,13 @@
                 }
                ].forEach((data) => { %>
                 <li class="faq-sec-item">
-                  <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
-                    <title>icon <%- data.svgModifier %></title>
-                    <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
-                  </svg>
                   <a class="faq-sec-item-link" href="<%- data.link %>">
+                    <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                      <title>icon <%- data.svgModifier %></title>
+                      <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                    </svg>
                     <p class="faq-sec-txt">
-                    <%- data.text %>
+                      <%- data.text %>
                     </p>
                   </a>
                 </li>
@@ -190,11 +190,11 @@
                 }
                ].forEach((data) => { %>
                  <li class="faq-sec-item">
-                   <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
-                     <title>icon <%- data.svgModifier %></title>
-                     <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
-                   </svg>
                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                     <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                       <title>icon <%- data.svgModifier %></title>
+                       <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                     </svg>
                      <p class="faq-sec-txt">
                        <%- data.text %>
                      </p>
@@ -245,36 +245,36 @@
           <ul class="faq-sec-list faq-sec-list-cat">
             <% [
                 {
-                  link: 'https://www.twinring.jp/hellowoods/',
+                  link: '/hellowoods/',
                   svgModifier: 'hellowoods',
                   svg: 'icon17',
                   text: '<span>ハローウッズについて</span>'
                 },
                 {
-                  link: 'https://www.twinring.jp/mobipark_m/',
+                  link: '/mobipark_m/',
                   svgModifier: 'mobipark',
                   svg: 'icon18',
                   text: '<span>モビパークについて</span>'
                 },
                 {
-                  link: 'https://www.twinring.jp/f-glamping/',
+                  link: '/f-glamping/',
                   svgModifier: 'twinring',
                   svg: 'icon19',
                   text: '<span>森と星空の</span><span>キャンプヴィレッジ</span>'
                 },
                 {
-                  link: 'https://www.twinring.jp/hoteltwinring/info/faq.html',
+                  link: '/hoteltwinring/info/faq.html',
                   svgModifier: 'twinringhotel',
                   svg: 'icon20',
                   text: '<span>ホテルツインリンクについて</span>'
                 }
                ].forEach((data) => { %>
                  <li class="faq-sec-item">
-                   <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
-                     <title>icon <%- data.svgModifier %></title>
-                     <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
-                   </svg>
                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                     <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                       <title>icon <%- data.svgModifier %></title>
+                       <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                     </svg>
                      <p class="faq-sec-txt">
                        <%- data.text %>
                      </p>
@@ -305,11 +305,11 @@
                 }
                ].forEach((data) => { %>
                  <li class="faq-sec-item">
-                   <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
-                     <title>icon <%- data.svgModifier %></title>
-                     <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
-                   </svg>
                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                     <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                       <title>icon <%- data.svgModifier %></title>
+                       <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                     </svg>
                      <p class="faq-sec-txt">
                        <%- data.text %>
                      </p>
@@ -402,6 +402,6 @@
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsFaq
+  breadcrumbs : getData().data.breadcrumbsServiceM
 }) -%>
 <%- include('/partials/footer', { pageId }) -%>

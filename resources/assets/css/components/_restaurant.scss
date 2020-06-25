@@ -339,6 +339,12 @@
   margin: auto;
   .link {
     color: inherit;
+
+    &:hover {
+      .button-gradient-icon {
+        transform: translateX(5px);
+      }
+    }
   }
   .bottom-banner-title {
     position: relative;

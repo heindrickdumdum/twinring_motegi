@@ -59,20 +59,22 @@
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-restaurant heading-granturismo',
-              subtextvg: 'granturismo-main-title',
-              altSubtextvg: `プレイステーションの
-カーレースゲーム「グランツーリスモ」の
-世界観を楽しみながら食事ができるレストランです`
+//               subtextvg: 'granturismo-main-title',
+//               altSubtextvg: `プレイステーションのカーレースゲーム「グランツーリスモ」の世界観を楽しみながら食事ができるレストランです`
+              imgPath: mix('/assets/images/granturismo/color-title.jpg'),
+              alt: 'プレイステーションのカーレースゲーム「グランツーリスモ」の世界観を楽しみながら食事ができるレストランです'
             }) %>
           </div>
 
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-restaurant heading-granturismo',
-              subtextvg: 'granturismo-main-title-sp',
-              altSubtextvg: `プレイステーションの
-カーレースゲーム「グランツーリスモ」の
-世界観を楽しみながら食事ができるレストランです`
+//               subtextvg: 'granturismo-main-title-sp',
+//               altSubtextvg: `プレイステーションの
+// カーレースゲーム「グランツーリスモ」の
+// 世界観を楽しみながら食事ができるレストランです`
+              imgPath: mix('/assets/images/granturismo/color-title-sp.jpg'),
+              alt: 'プレイステーションのカーレースゲーム「グランツーリスモ」の世界観を楽しみながら食事ができるレストランです'
             }) %>
           </div>
 
@@ -102,7 +104,7 @@
               <tr class="table-row">
                 <th class="table-head">営業時間</th>
                 <td class="table-col">
-                  <a class="link" href="/hours_m/">ツインリンクもてぎ営業時間</a>内 <br/>
+                  <a class="link" href="/hours_m/">ツインリンクもてぎ営業時間内</a><br class="u-show-sp"/>
                   ※平日は11:00&#126;15:00まで営業
                 </td>
               </tr>
@@ -152,7 +154,7 @@
       </div>
 
       <!-- other restaurant module-->
-      <%- include('/partials/restaurant/section-other-restaurant') -%>
+      <%- include('/partials/gran-turismo/section-other-restaurant') -%>
       
 
     </main>

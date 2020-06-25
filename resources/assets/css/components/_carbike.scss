@@ -80,6 +80,7 @@
 }
 
 .carbike-article-thumb {
+  overflow: hidden;
   position: relative;
   margin-bottom: 12px;
 
@@ -102,6 +103,11 @@
 
   @include max-screen($breakpoint-mobile) {
     padding-bottom: 54%;
+  }
+
+  &:hover {
+    transition: ease 1s all;
+    transform: scale(1.2);
   }
 }
 

@@ -330,7 +330,7 @@
                 <tr class="table-row">
                   <th class="table-head">場所</th>
                   <td class="table-col">
-                    ホテルツインリンク離れ (<a class="link" href="#">MAP</a>)
+                    ホテルツインリンク離れ (<a class="link" href="/map_m/">MAP</a>)
                   </td>
                 </tr>
     
@@ -406,7 +406,8 @@
                   <%- include('/partials/button', {
                     modifier: 'reservation-button',
                     text: 'Web予約フォームへ',
-                    link: '#'
+                    link: 'https://asp.hotel-story.ne.jp/ver3d/planlist.asp?hcod1=61730&hcod2=001&c2plan=9001&clrmode=true',
+                    newTab: true
                   }) -%>
                 </div>
                 <div class="l-button cta-btn">
@@ -414,7 +415,7 @@
                   <%- include('/partials/button', {
                     modifier: 'reservation-button',
                     text: '<span>Tel.0285-64-0489<br/><small>受付時間 10:00～17:30</small></span>',
-                    link: '#'
+                    link: 'tel:0285640489'
                   }) -%>
                 </div>
               </div>
@@ -425,7 +426,7 @@
     </main>
 
     <!-- other restaurant module-->
-    <%- include('/partials/restaurant/section-other-restaurant') -%>
+    <%- include('/partials/toya/section-other-restaurant') -%>
 
     <!-- END BOTTOM -->
   </div>

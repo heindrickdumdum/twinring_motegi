@@ -1,0 +1,1 @@
+console.log(document.querySelectorAll("input[name=radio-1-set]:checked")[0].value);

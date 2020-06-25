@@ -47,6 +47,7 @@
   'stay',
   'toya',
   'smart_entry',
+  'access',
   'marcherant',
   'breakfastMarcherant',
   'lunchMarcherant',
@@ -167,7 +168,7 @@
     <script src="<%= mix('/assets/js/index.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'carAndBike') { %>
+  <% if(pageId == 'carAndBike' || pageId == 'access') { %>
     <script src="<%= mix('/assets/js/carbike.js') %>" async></script>
   <% } %>
 
@@ -206,6 +207,10 @@
 
   <% if(pageId == 'toya') { %>
     <script src="<%= mix('/assets/js/toya.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'access') { %>
+    <script src="<%= mix('/assets/js/access.js') %>" async></script>
   <% } %>
   
   <% if(pageId == 'bbq') { %>

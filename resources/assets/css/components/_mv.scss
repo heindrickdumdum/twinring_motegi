@@ -1740,7 +1740,7 @@
   bottom: 38px !important;
 
   @include max-screen($breakpoint-mobile) {
-    bottom: -20px;
+    bottom: -20px !important;
   }
   
   .heading-access {

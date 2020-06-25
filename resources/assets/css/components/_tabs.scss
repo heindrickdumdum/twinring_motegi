@@ -296,6 +296,7 @@
       border-top-right-radius: 5px;
       margin-right: 10px;
       white-space: nowrap;
+      width: auto;
 
       &:last-child {
         margin-right: 0px;
@@ -303,6 +304,13 @@
       
       &.is-active {
         opacity: 1;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 11px;
+        padding: 10px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;     
       }
     }
   }
@@ -312,5 +320,17 @@
     border-top-width: 0px;
     padding: 42px 37px;
     overflow-y: hidden;
+
+    @include max-screen($breakpoint-mobile) {
+      border-top-width: 1px;
+      margin-top: 9px;
+      padding: 13px 8px 13px;
+    }
+
+    &.tab-bus {
+      @include max-screen($breakpoint-mobile) {
+        padding: 20px 20px 40px;
+      }
+    }
   }
 }

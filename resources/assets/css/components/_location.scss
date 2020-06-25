@@ -26,12 +26,20 @@
   &-map {
     .map-iframe {
       border: 1px dashed $color-green;
+      
+      @include max-screen($breakpoint-mobile) {
+        height: 195.5px;
+      }
 
       iframe {
         width: 100%;
 
         @include min-screen($breakpoint-mobile + 1) {
           height: 358px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          height: 100%;
         }
       }
     }
@@ -47,6 +55,11 @@
     text-align: left;
     letter-spacing: 0.1em;
     margin-bottom: 25px;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 14px;
+      line-height: 1.833;      
+    }
   }
 
   &-desc {
@@ -56,6 +69,10 @@
   &-note {
     display: flex;
     justify-content: space-between;
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+    }
 
     &-col {
       &:nth-of-type(1) {
@@ -79,6 +96,11 @@
       @include min-screen($breakpoint-mobile + 1) {
         padding: 49px 27px 31px;
       }
+      
+      @include max-screen($breakpoint-mobile) {
+        padding: 18px 20px;
+        margin-bottom: 40px;
+      }
     }
 
     .title {
@@ -96,6 +118,12 @@
       left: 50%;
       transform: translateX(-50%);
       white-space: nowrap;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 15px;
+        top: -14px;
+        padding: 0 8px;  
+      }
     }
 
     .text {
@@ -103,13 +131,18 @@
       line-height: 2;
       letter-spacing: 0.1em;
 
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+        line-height: 1.961;
+      }
+
       span {
         display: block;
-        margin-bottom: 10px;
 
         &:nth-of-type(1) {
           color: $color-red;
           font-weight: bold;
+          margin-bottom: 10px;
         }
       }
 
@@ -121,10 +154,19 @@
     }
 
     &-list {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 10px;
+      }
+
       li {
         position: relative;
         padding-left: 20px;
         margin-bottom: 10px;
+
+        @include max-screen($breakpoint-mobile) {
+          padding-left: 11px;
+          margin-left: 14px;
+        }
 
         &:before {
           content: "\2022";
@@ -133,6 +175,11 @@
           color: $color-green;
           top: -14px;
           left: 0px;
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 20px;
+            top: -9px;
+          }
         }
 
         p {
@@ -140,6 +187,11 @@
           line-height: 1.571;
           letter-spacing: 0.1em;
           font-weight: bold;
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 12px;
+            line-height: 1;            
+          }
         }
 
         @at-root & {
@@ -147,6 +199,11 @@
             font-size: 14px;
             line-height: 1.571;
             letter-spacing: 0.1em;
+
+            @include max-screen($breakpoint-mobile) {
+              font-size: 10px;
+              line-height: 1;  
+            }
           }
         }
       }
@@ -156,6 +213,11 @@
       display: flex;
       justify-content: center;
       margin-top: 30px;
+
+      @include max-screen($breakpoint-mobile) {
+        display: block;
+        padding: 0px 20px;
+      }
 
       .note-cta {
         display: flex;
@@ -169,14 +231,25 @@
         margin-right: 19px;
         color: inherit;
 
+        @include max-screen($breakpoint-mobile) {
+          margin-right: 0px;
+          margin-bottom: 18px;
+          height: 39px;
+        }
+
         &:nth-of-type(2) {
           margin-right: 0px;
+          margin-bottom: 12px;
         }
 
         svg {
           width: 23px;
           height: 23px;
           margin-right: 22px;
+
+          @include max-screen($breakpoint-mobile) {
+            margin-right: 13px;
+          }
         }
 
         @at-root & {
@@ -184,6 +257,10 @@
             font-size: 15px;
             text-decoration: underline;
             letter-spacing: 0.1em;
+
+            @include max-screen($breakpoint-mobile) {
+              font-size: 14px;              
+            }
           }
         }
       }

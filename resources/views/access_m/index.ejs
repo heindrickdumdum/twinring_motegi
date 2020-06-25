@@ -189,19 +189,22 @@
           </h2>
 
           <div class="tab-access" id="js-carbike-tab">
-            <ul class="tab-list">
-              <% getData().data.accessTabCarBike.forEach(item => { %>
-              <li class="tab-item js-tab-link" data-tab="<%- item.tabId -%>">
-                <span><%- item.tabLabel -%></span>
-              </li>
-              <% }); %>
-            </ul>
+            <div class="tab-list swiper-container slider-tab-container js-slider-tab">
+              <ul class="swiper-wrapper slider-tab">
+                <% getData().data.accessTabCarBike.forEach(item => { %>
+                <li class="tab-item js-tab-link swiper-slide" data-tab="<%- item.tabId -%>">
+                  <span><%- item.tabLabel -%></span>
+                </li>
+                <% }); %>
+              </ul>
+            </div>
 
             <div class="tab-container">
               <% getData().data.accessTabCarBike.forEach(item => { %>
               <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
                 <% item.tabContent.forEach(elem => { %>
-                  <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                  <img class="u-show-pc" src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                  <img class="u-show-sp" src="<%- elem.imageSp -%>" alt="<%- elem.alt -%>">
                 <% }); %>
               </div>
               <% }); %>
@@ -232,7 +235,8 @@
               <% getData().data.accessTabTrain.forEach(item => { %>
               <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
                 <% item.tabContent.forEach(elem => { %>
-                  <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                  <img class="u-show-pc" src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                  <img class="u-show-sp" src="<%- elem.imageSp -%>" alt="<%- elem.alt -%>">
                 <% }); %>
               </div>
               <% }); %>
@@ -255,11 +259,12 @@
               <% }); %>
             </ul>
 
-            <div class="tab-container">
+            <div class="tab-container tab-bus">
               <% getData().data.accessTabBus.forEach(item => { %>
               <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
                 <% item.tabContent.forEach(elem => { %>
-                  <img src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                  <img class="u-show-pc" src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                  <img class="u-show-sp" src="<%- elem.imageSp -%>" alt="<%- elem.alt -%>">
                 <% }); %>
               </div>
               <% }); %>
@@ -268,6 +273,9 @@
         </section>
 
       </div>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
 
       <!-- pick up module -->
       <%- include('/partials/pickup') -%>

@@ -61,6 +61,12 @@
     border: 1px dotted $color-primary;
   }
 
+  &.location-btn {//access page
+    @include max-screen($breakpoint-mobile) {
+      width: 257px;
+    }
+  }
+
   &-rocco {//rocco
     &:before {
       content: none;

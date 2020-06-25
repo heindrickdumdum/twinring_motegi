@@ -1697,6 +1697,10 @@
 .subpage-access {//access page
   .access-anchor {
     margin-top: 90px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 41px;
+    }
   }
 
   .text-center {
@@ -1709,10 +1713,18 @@
 
     &:nth-of-type(3) {
       margin-top: 88px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 41px;
+      }
     }
 
     &:nth-of-type(4) {
       margin-top: 120px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 45px;
+      }
     }
   }
 
@@ -1728,10 +1740,21 @@
       text-decoration: underline;
       font-weight: bold;
     }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.996;   
+      margin-top: 16px;
+      text-align: left;   
+    }
   }
 
-  .bottom-slider-pickup {
+  .bottom-slider:not(.bottom-slider-pickup) {
     margin-top: -58px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -4px;
+    }
   }
 }
 

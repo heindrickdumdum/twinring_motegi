@@ -1,7 +1,7 @@
 <%
   var title = 'Twin Ring Motegi | アクロエックス';
   SPRITE_SVG = '/assets/svg/sprite.svg';
-  pageId = 'faq';
+  pageId = 'service_m';
 %>
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
@@ -97,11 +97,11 @@
                 },
                ].forEach((data) => { %>
                  <li class="faq-sec-item">
-                   <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
-                     <title>icon <%- data.svgModifier %></title>
-                     <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
-                   </svg>
                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                     <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                       <title>icon <%- data.svgModifier %></title>
+                       <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                     </svg>
                      <p class="faq-sec-txt">
                        <%- data.text %>
                      </p>
@@ -153,13 +153,13 @@
                 }
                ].forEach((data) => { %>
                 <li class="faq-sec-item">
-                  <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
-                    <title>icon <%- data.svgModifier %></title>
-                    <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
-                  </svg>
                   <a class="faq-sec-item-link" href="<%- data.link %>">
+                    <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                      <title>icon <%- data.svgModifier %></title>
+                      <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                    </svg>
                     <p class="faq-sec-txt">
-                    <%- data.text %>
+                      <%- data.text %>
                     </p>
                   </a>
                 </li>
@@ -190,11 +190,11 @@
                 }
                ].forEach((data) => { %>
                  <li class="faq-sec-item">
-                   <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
-                     <title>icon <%- data.svgModifier %></title>
-                     <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
-                   </svg>
                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                     <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                       <title>icon <%- data.svgModifier %></title>
+                       <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                     </svg>
                      <p class="faq-sec-txt">
                        <%- data.text %>
                      </p>
@@ -270,11 +270,11 @@
                 }
                ].forEach((data) => { %>
                  <li class="faq-sec-item">
-                   <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
-                     <title>icon <%- data.svgModifier %></title>
-                     <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
-                   </svg>
                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                     <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                       <title>icon <%- data.svgModifier %></title>
+                       <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                     </svg>
                      <p class="faq-sec-txt">
                        <%- data.text %>
                      </p>
@@ -305,11 +305,11 @@
                 }
                ].forEach((data) => { %>
                  <li class="faq-sec-item">
-                   <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
-                     <title>icon <%- data.svgModifier %></title>
-                     <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
-                   </svg>
                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                     <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                       <title>icon <%- data.svgModifier %></title>
+                       <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                     </svg>
                      <p class="faq-sec-txt">
                        <%- data.text %>
                      </p>
@@ -402,6 +402,6 @@
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsFaq
+  breadcrumbs : getData().data.breadcrumbsServiceM
 }) -%>
 <%- include('/partials/footer', { pageId }) -%>

@@ -114,6 +114,11 @@
   max-height: 600px;
 }
 
+.mv-list-marcherant {
+  // sass-lint:disable-block no-important
+  opacity: 1 !important;
+}
+
 .mv-list-top {
   opacity: 0;
   transition: opacity 1s ease-in;

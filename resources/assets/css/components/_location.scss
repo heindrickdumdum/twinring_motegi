@@ -202,9 +202,10 @@
 
         @at-root & {
           span {
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.571;
             letter-spacing: 0.1em;
+            color: $color-mineshaft;
 
             @include max-screen($breakpoint-mobile) {
               font-size: 10px;

@@ -52,3 +52,13 @@
 .text-align-left {
   text-align: left;
 }
+
+.hover-wrap {
+  overflow: hidden;
+  &:hover {
+    &>* {
+      transition: ease 1s all;
+      transform: scale(1.2);
+    }
+  }
+}

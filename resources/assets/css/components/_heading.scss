@@ -2209,3 +2209,11 @@
     }
   }
 }
+
+@at-root .access-location-heading {//access page
+  .heading-subtext {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 10px;
+    }
+  }
+}

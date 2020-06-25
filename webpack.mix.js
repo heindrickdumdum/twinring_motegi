@@ -113,6 +113,11 @@ mix
   )
 
   .js(
+    `${srcRelativePath}/assets/js/access.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
     `${srcRelativePath}/assets/js/mobipark-guide.js`,
     `${distRelativePath}/assets/js`,
   )

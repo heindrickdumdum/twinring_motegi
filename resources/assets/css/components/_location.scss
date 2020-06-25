@@ -6,6 +6,7 @@
 
     @include max-screen($breakpoint-mobile) {
       display: block;
+      margin-bottom: 42px;
     }
   }
 
@@ -58,12 +59,17 @@
 
     @include max-screen($breakpoint-mobile) {
       font-size: 14px;
-      line-height: 1.833;      
+      line-height: 1.833;   
+      margin-bottom: 0px;   
     }
   }
 
   &-desc {
     padding-top: 29px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 0px;
+    }
   }
 
   &-note {
@@ -217,6 +223,7 @@
       @include max-screen($breakpoint-mobile) {
         display: block;
         padding: 0px 20px;
+        margin-top: 25px;
       }
 
       .note-cta {

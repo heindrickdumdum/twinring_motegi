@@ -48,6 +48,12 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @at-root .subpage-access & {//access page
+    @include max-screen($breakpoint-mobile) {
+      background-position: center;
+    }
+  }
+
   @include max-screen($breakpoint-mobile) {
     height: 378px;
   }

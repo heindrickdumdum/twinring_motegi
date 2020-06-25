@@ -52,7 +52,8 @@
   'lunchMarcherant',
   'dinnerMarcherant',
   'businessHours',
-  'parkMap'
+  'parkMap',
+  'mobiparkGuide'
   ]
 %>
   
@@ -213,6 +214,10 @@
 
   <% if(pageId == 'dinnerBuffet') { %>
     <script src="<%= mix('/assets/js/gallery-thumb.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'marcherant') { %>
+    <script src="<%= mix('/assets/js/marcherant.js') %>" async></script>
   <% } %>
 
 <script type="text/javascript">

@@ -331,17 +331,20 @@
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
         // sass-lint:disable-block no-important
-        max-width: 725px !important;
-        height: 58px !important;
-        margin-top: 20px !important;
+        // max-width: 725px !important;
+        // height: 58px !important;
+        // margin-top: 20px !important;
+        height: 55px !important;
+        max-width: 512px !important;
+        margin-top: 33px !important;
       }
 
       @include max-screen($breakpoint-mobile) {
         // sass-lint:disable-block no-important
         width: 100% !important;
-        max-width: 327px !important;
-        height: 80px !important;
-        margin-top: 2px !important;
+        height: 32px !important;
+        max-width: 297px !important;
+        margin-top: 5px !important; 
       }
     }
   }
@@ -1740,6 +1743,20 @@
         width: 166px;
         height: 20px;
       }
+    }
+  }
+}
+
+@at-root .mv-forest-experience-program {//forest program
+  .heading-subtext {
+    svg {
+      fill: $color-white;
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 55px !important;
+      max-width: 512px !important;
+      // margin-top: 33px !important;
     }
   }
 }

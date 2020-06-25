@@ -51,16 +51,20 @@
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-donguri',
-              subtextvg: 'donguri-main-title',
-              altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
+              // subtextvg: 'donguri-main-title',
+              // altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
+              imgPath: mix('/assets/images/donguri/color-title.jpg'),
+              alt: '豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です'
             }) %>
           </div>
 
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-donguri',
-              subtextvg: 'donguri-main-title-sp',
-              altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
+              // subtextvg: 'donguri-main-title-sp',
+              // altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
+              imgPath: mix('/assets/images/donguri/color-title-sp.jpg'),
+              alt: '豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です'
             }) %>
           </div>
 
@@ -126,7 +130,7 @@
       </div>
 
       <!-- other restaurant module-->
-      <%- include('/partials/restaurant/section-other-restaurant') -%>
+      <%- include('/partials/donguri/section-other-restaurant') -%>
       
 
     </main>

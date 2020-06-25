@@ -14,7 +14,7 @@
       <ul class="mv-list">
         <li class="mv-item">
           <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/oak/mv-img.jpg') %>);"></div>
-          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/oak/mv-img-sp.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/oak/mv-img-sp.png') %>);"></div>
         </li>
       </ul>
 
@@ -51,16 +51,20 @@
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-restaurant heading-oak',
-              subtextvg: 'oak-main-title',
-              altSubtextvg: `「森」をテーマにした ここだけの オリジナルメニューが いっぱい`
+              imgPath: mix('/assets/images/oak/color-title.png'),
+              alt: '「森」をテーマにした ここだけの オリジナルメニューが いっぱい'
+              // subtextvg: 'oak-main-title',
+              // altSubtextvg: `「森」をテーマにした ここだけの オリジナルメニューが いっぱい`
             }) %>
           </div>
 
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-restaurant heading-oak',
-              subtextvg: 'oak-main-title-sp',
-              altSubtextvg: `「森」をテーマにした ここだけの オリジナルメニューが いっぱい`
+              imgPath: mix('/assets/images/oak/color-title-sp.png'),
+              alt: '「森」をテーマにした ここだけの オリジナルメニューが いっぱい'
+              // subtextvg: 'oak-main-title-sp',
+              // altSubtextvg: `「森」をテーマにした ここだけの オリジナルメニューが いっぱい`
             }) %>
           </div>
 
@@ -84,7 +88,7 @@
               <tr class="table-row">
                 <th class="table-head">場所</th>
                 <td class="table-col">
-                  中央エントランス（最寄の駐車場：N1） <a class="link link-green" href="/map_m/">MAP</a>
+                  中央エントランス <a class="link link-green" href="/map_m/">MAPを見る</a>
                 </td>
               </tr>
 
@@ -106,6 +110,7 @@
                   <p>・チャイルドシートあり </p>
                   <p>・低アレルゲンメニューあり</p>
                   <p>・アルコールあり</p>
+                  <p>・クレジットカード利用可</p>
                 </td>
               </tr>
             </tbody>
@@ -147,7 +152,7 @@
       </div>
 
       <!-- other restaurant module-->
-      <%- include('/partials/restaurant/section-other-restaurant') -%>
+      <%- include('/partials/oak/section-other-restaurant') -%>
       
       
 

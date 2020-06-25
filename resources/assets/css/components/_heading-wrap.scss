@@ -9,6 +9,14 @@
         padding-top: 10px;
         margin-bottom: 59px;
       }
+
+      @at-root & {
+        img {
+          @include min-screen($breakpoint-mobile + 1) {
+            margin-bottom: 110px;
+          }
+        }
+      }
     }
   }
   &.heading-wrap-information {

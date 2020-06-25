@@ -198,6 +198,7 @@
 
 .faq-sec-item-link {
   color: #333;
+  width: 100%;
 
   &:hover {
     @include min-screen($breakpoint-mobile + 1) {

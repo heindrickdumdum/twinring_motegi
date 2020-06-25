@@ -476,17 +476,17 @@
     &:nth-child(1) {
       margin-bottom: 20px;
 
-      @include max-screen($breakpoint-mobile) {
-        order: 1;
-      }
+      // @include max-screen($breakpoint-mobile) {
+      //   order: 1;
+      // }
     }
 
-    &:nth-child(2) {
-      @include max-screen($breakpoint-mobile) {
-        order: 3;
-        margin-bottom: 0 !important;
-      }
-    }
+    // &:nth-child(2) {
+    //   @include max-screen($breakpoint-mobile) {
+    //     order: 3;
+    //     margin-bottom: 0 !important;
+    //   }
+    // }
 
     &:nth-child(3) {
       .sub-menu-image {
@@ -496,9 +496,9 @@
         }
       }
 
-      @include max-screen($breakpoint-mobile) {
-        order: 2;
-      }
+      // @include max-screen($breakpoint-mobile) {
+      //   order: 2;
+      // }
     }
   }
   
@@ -734,6 +734,20 @@
 }
 
 .marcherant-menu {
+  @at-root & {
+    a {
+      .button-gradient-icon {
+        transition: transform 0.25s ease-in-out;
+      }
+
+      &:hover {
+        .button-gradient-icon {
+          transform: translate(5px, -50%);
+        }
+      }
+    }
+  }
+
   .menu-container {
     .menu-item {
       margin-bottom: 20px;

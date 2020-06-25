@@ -26,6 +26,7 @@
   .map-all-bubbles-list {
     .map-bubbles-item {
       position: absolute;
+      transition: ease 0.5s all;
 
       &:nth-child(1) {
         top: -20px;

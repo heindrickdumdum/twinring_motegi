@@ -40,84 +40,84 @@
       </div>
     </div>
 
-    <!-- TEST UPLOAD -->
 
-    <main class="guide-data-holder" data-area="">
+    <main class="guide-data-holder" data-area="mobipark" data-age="0" data-grade="1">
       <!-- filter -->
       <%- include('/partials/mobipark/filter') -%>
 
       <!-- Mobipark -->
       <section class="l-container">
-      <div class="guide-area" data-area="mobipark">
-        <div class="guide-area-logo">
-          <img src="<%= mix('/assets/images/mobipark-guide/logo-mobipark.png') %>" alt="Mobi Park">
-        </div>
-        <div class="guide-area-desc">
-          <p>親子でチャレンジできる<br class="u-show-sp">森のアトラクションがいっぱい！</p>
-          <div class="guide-area-desc-heading mobipark">
-            <%- include('/partials/svg', {
-              name: 'mobipark-guide-mobipark-title'
-            }) %>
+        <div class="guide-area" data-area="mobipark">
+          <div class="guide-area-inner">
+            <div class="guide-area-logo">
+              <img src="<%= mix('/assets/images/mobipark-guide/logo-mobipark.png') %>" alt="Mobi Park">
+            </div>
+            <div class="guide-area-desc">
+              <p>親子でチャレンジできる<br class="u-show-sp">森のアトラクションがいっぱい！</p>
+              <div class="guide-area-desc-heading mobipark">
+                <%- include('/partials/svg', {
+                  name: 'mobipark-guide-mobipark-title'
+                }) %>
+              </div>
+            </div>
+            <div class="guide-area-passport">
+              モビパーク<br class="u-show-sp">パスポート対象  <img class="passport" src="<%= mix('/assets/images/mobipark-guide/icon_pass.png') %>" alt="Passport">
+            </div>
           </div>
+          <%- include('/partials/mobipark/area-item', {
+            modifier: 'carbike-article-attractions',
+            dataMobiparkGuideItems : getData().data.mobiparkGuideMobipark
+          }) -%>
         </div>
-        <div class="guide-area-passport">
-          モビパーク<br class="u-show-sp">パスポート対象  <img class="passport" src="<%= mix('/assets/images/mobipark-guide/icon_pass.png') %>" alt="Passport">
-        </div>
-      </div>
-      <!-- filter -->
+        <!-- filter -->
 
-
-      <%- include('/partials/mobipark/area-item', {
-        modifier: 'carbike-article-attractions',
-        dataMobiparkGuideItems : getData().data.mobiparkGuideMobipark
-      }) -%>
-  
-      <!-- Hello Woods -->
-      <div class="guide-area" data-area="hellowoods">
-        <div class="guide-area-logo">
-          <img src="<%= mix('/assets/images/mobipark-guide/logo_hellowoods.png') %>" alt="Mobi Park">
-        </div>
-        <div class="guide-area-desc">
-          <p>森の中で四季折々の自然体験を満喫</p>
-          <div class="guide-area-desc-heading hellowoods">
-            <%- include('/partials/svg', {
-              name: 'mobipark-guide-hellowoods-title'
-            }) %>
+        <!-- Hello Woods -->
+        <div class="guide-area" data-area="hellowoods">
+          <div class="guide-area-inner">
+            <div class="guide-area-logo">
+              <img src="<%= mix('/assets/images/mobipark-guide/logo_hellowoods.png') %>" alt="Mobi Park">
+            </div>
+            <div class="guide-area-desc">
+              <p>森の中で四季折々の自然体験を満喫</p>
+              <div class="guide-area-desc-heading hellowoods">
+                <%- include('/partials/svg', {
+                  name: 'mobipark-guide-hellowoods-title'
+                }) %>
+              </div>
+            </div>
+            <div class="guide-area-passport">
+              モビパーク<br class="u-show-sp">パスポート対象  <img class="passport" src="<%= mix('/assets/images/mobipark-guide/icon_pass.png') %>" alt="Passport">
+            </div>
           </div>
+          <%- include('/partials/mobipark/area-item', {
+            modifier: 'carbike-article-attractions',
+            dataMobiparkGuideItems : getData().data.mobiparkGuideHellowoods
+          }) -%>
         </div>
-        <div class="guide-area-passport">
-          モビパーク<br class="u-show-sp">パスポート対象  <img class="passport" src="<%= mix('/assets/images/mobipark-guide/icon_pass.png') %>" alt="Passport">
-        </div>
-      </div>
 
-      <%- include('/partials/mobipark/area-item', {
-        modifier: 'carbike-article-attractions',
-        dataMobiparkGuideItems : getData().data.mobiparkGuideHellowoods
-      }) -%>
-
-      <!-- Honda -->
-      <div class="guide-area" data-area="honda">
-        <div class="guide-area-logo">
-          <img src="<%= mix('/assets/images/mobipark-guide/logo-honda.png') %>" alt="Mobi Park">
-        </div>
-        <div class="guide-area-desc">
-          <p>歴代のHonda車を約300台展示</p>
-          <div class="guide-area-desc-heading honda">
-            <%- include('/partials/svg', {
-              name: 'mobipark-guide-honda-title'
-            }) %>
+        <!-- Honda -->
+        <div class="guide-area" data-area="honda">
+          <div class="guide-area-inner">
+            <div class="guide-area-logo">
+              <img src="<%= mix('/assets/images/mobipark-guide/logo-honda.png') %>" alt="Mobi Park">
+            </div>
+            <div class="guide-area-desc">
+              <p>歴代のHonda車を約300台展示</p>
+              <div class="guide-area-desc-heading honda">
+                <%- include('/partials/svg', {
+                  name: 'mobipark-guide-honda-title'
+                }) %>
+              </div>
+            </div>
+            <div class="guide-area-passport">
+              モビパーク<br class="u-show-sp">パスポート対象 <img class="passport" src="<%= mix('/assets/images/mobipark-guide/icon_pass.png') %>" alt="Passport">
+            </div>
           </div>
+          <%- include('/partials/mobipark/area-item', {
+            modifier: 'carbike-article-attractions',
+            dataMobiparkGuideItems : getData().data.mobiparkGuideHonda
+          }) -%>
         </div>
-        <div class="guide-area-passport">
-          モビパーク<br class="u-show-sp">パスポート対象 <img class="passport" src="<%= mix('/assets/images/mobipark-guide/icon_pass.png') %>" alt="Passport">
-        </div>
-      </div>
-
-      <%- include('/partials/mobipark/area-item', {
-        modifier: 'carbike-article-attractions',
-        dataMobiparkGuideItems : getData().data.mobiparkGuideHonda
-      }) -%>
-      
       </section>
 
       <div class=" block-image block-image-hellowoods block-image-hellowoods-program">

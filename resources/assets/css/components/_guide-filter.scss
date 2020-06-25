@@ -38,6 +38,7 @@
       display: inline-block;
       padding: 2px 21px;
       margin-bottom: 15px;
+      cursor: pointer;
 
       @include min-screen($breakpoint-mobile+1) {
         padding: 7px 29px;
@@ -56,129 +57,131 @@
 }
 
 .guide-area {
-  position: relative;
-  border-bottom: 1px solid #999999;
-  margin-bottom: 25px;
-
-  @include max-screen ($breakpoint-mobile) {
-    margin-bottom: 10px;
-  }
-
-
-  .guide-area-logo {
-    display: inline-block;
-    width: 225px;
-    padding: 20px;
-    padding-left: 25px;
-    vertical-align: middle;
+  .guide-area-inner {
+    position: relative;
+    border-bottom: 1px solid #999999;
+    margin-bottom: 25px;
 
     @include max-screen ($breakpoint-mobile) {
-      padding: 0;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
-    img {
-      max-width: 150px;
+
+    .guide-area-logo {
+      display: inline-block;
+      width: 225px;
+      padding: 20px;
+      padding-left: 25px;
+      vertical-align: middle;
 
       @include max-screen ($breakpoint-mobile) {
-        max-width: 95px;
-      }
-
-    }
-  }
-
-  .guide-area-desc {
-    font-size: 15px;
-    display: inline-block;
-    vertical-align: bottom;
-    width: 100%;
-    max-width: 600px;
-
-    .guide-area-desc-heading {
-      margin-bottom: 20px;
-
-      svg {
-        margin: 0;
-        width: 100%;
-        max-width: 180px;
-        height: 53px;
         padding: 0;
-        margin-bottom: -10px;
-
-        @include max-screen ($breakpoint-mobile) {
-          height: 28px;
-          margin-bottom: 0px;
-          max-width: 117px;
-        }
+        margin-bottom: 12px;
       }
 
-      &.mobipark {
+      img {
+        max-width: 150px;
+
+        @include max-screen ($breakpoint-mobile) {
+          max-width: 95px;
+        }
+
+      }
+    }
+
+    .guide-area-desc {
+      font-size: 15px;
+      display: inline-block;
+      vertical-align: bottom;
+      width: 100%;
+      max-width: 600px;
+
+      .guide-area-desc-heading {
         margin-bottom: 20px;
-        @include max-screen ($breakpoint-mobile) {
-          margin-top: 5px;
-          margin-bottom: 10px;
-        }
-      }
 
-      &.hellowoods {
         svg {
-          max-width: 300px;
+          margin: 0;
+          width: 100%;
+          max-width: 180px;
+          height: 53px;
+          padding: 0;
+          margin-bottom: -10px;
+
           @include max-screen ($breakpoint-mobile) {
-            max-width: 195px;
-            height: 25px;        
+            height: 28px;
+            margin-bottom: 0px;
+            max-width: 117px;
           }
         }
 
-        @include max-screen ($breakpoint-mobile) {
-          margin-top: 5px;
-          margin-bottom: 10px;
-        }
-      }
-
-      &.honda {
-        svg {
-          max-width: 450px;
+        &.mobipark {
+          margin-bottom: 20px;
           @include max-screen ($breakpoint-mobile) {
-            max-width: 290px;
-            height: 25px;      
+            margin-top: 5px;
+            margin-bottom: 10px;
           }
         }
-        @include max-screen ($breakpoint-mobile) {
-          margin-top: 5px;
-          margin-bottom: 10px;
+
+        &.hellowoods {
+          svg {
+            max-width: 300px;
+            @include max-screen ($breakpoint-mobile) {
+              max-width: 195px;
+              height: 25px;        
+            }
+          }
+
+          @include max-screen ($breakpoint-mobile) {
+            margin-top: 5px;
+            margin-bottom: 10px;
+          }
         }
+
+        &.honda {
+          svg {
+            max-width: 450px;
+            @include max-screen ($breakpoint-mobile) {
+              max-width: 290px;
+              height: 25px;      
+            }
+          }
+          @include max-screen ($breakpoint-mobile) {
+            margin-top: 5px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 12px;
       }
     }
 
-    @include max-screen ($breakpoint-mobile) {
-      font-size: 12px;
+    .guide-area-passport {
+      color: #f39a04;
+      position: absolute;
+      right: 2px;
+      bottom: 15px;
+      font-size: 16px;
+      line-height: 1;
+
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 50px;
+        font-size: 7px;
+        text-align: right;
+        bottom: 5px;
+        right: -1px;
+      }
     }
-  }
 
-  .guide-area-passport {
-    color: #f39a04;
-    position: absolute;
-    right: 2px;
-    bottom: 15px;
-    font-size: 16px;
-    line-height: 1;
-
-    @include max-screen ($breakpoint-mobile) {
-      max-width: 50px;
-      font-size: 7px;
-      text-align: right;
-      bottom: 5px;
-      right: -1px;
-    }
-  }
-
-  .passport {
-    max-width: 30px;
-    @include max-screen ($breakpoint-mobile) {
-      display: block;
-      float: right;
-      max-width: 23px;
-      margin-top: 9px;
+    .passport {
+      max-width: 30px;
+      @include max-screen ($breakpoint-mobile) {
+        display: block;
+        float: right;
+        max-width: 23px;
+        margin-top: 9px;
+      }
     }
   }
 }
@@ -253,4 +256,48 @@
 .pdf-link {
   text-align: right;
   a {color: #000}
+}
+
+.guide-data-holder {
+
+  //Grade
+  // &[data-age*="0"] {.guide-items[data-age*="4"] {display: none;}}
+  // &[data-age*="1"] {.guide-items[data-age*="5"] {display: none;}}
+  // &[data-age*="2"] {.guide-items[data-age*="6"] {display: none;}}
+  // &[data-age*="3"] {.guide-items[data-age*="4"] {display: block;}}
+  // &[data-age*="4"] {.guide-items[data-age*="5"] {display: block;}}
+  // &[data-age*="5"] {.guide-items[data-age*="6"] {display: block;}}
+  // &[data-age*="6"] {.guide-items[data-age*="6"] {display: block;}}
+
+  //Grade
+  &[data-grade*="1"] {.guide-items[data-grade*="4"] {display: none;}}
+  &[data-grade*="2"] {.guide-items[data-grade*="5"] {display: none;}}
+  &[data-grade*="3"] {.guide-items[data-grade*="6"] {display: none;}}
+  &[data-grade*="4"] {.guide-items[data-grade*="4"] {display: block;}}
+  &[data-grade*="5"] {.guide-items[data-grade*="5"] {display: block;}}
+  &[data-grade*="6"] {.guide-items[data-grade*="6"] {display: block;}}
+
+  //Area
+  &[data-area="mobipark"] {
+    .guide-area:not([data-area="mobipark"]) {
+      display: none;
+    }
+  }
+  &[data-area="hellowoods"] {
+    .guide-area:not([data-area="hellowoods"]) {
+      display: none;
+    }
+  }
+  &[data-area="honda"] {
+    .guide-area:not([data-area="honda"]) {
+      display: none;
+    }
+  }
+
+  //Passport 
+  &[data-passport="true"] {
+    .guide-items:not([data-passport="true"]) {
+      display: none;
+    }
+  }
 }

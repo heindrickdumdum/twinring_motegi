@@ -1,0 +1,158 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'mobiparkGuide';
+%>
+
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc"
+            style="background-image:url(<%= mix('/assets/images/mobipark-guide/mv.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp"
+            style="background-image:url(<%= mix('/assets/images/mobipark-guide/mv-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+      <div class="l-container mv-container">
+        <div class="mv-heading mv-heading-default mv-heading-mobipark-guide u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'mv-forest-experience-program',
+            heading_level: 1,
+            text: 'Attraction & Activity List',
+            subtextvg: 'mobipark-guide-title',
+            altSubtextvg: '予約制森の体験プログラム'
+          }) %>
+        </div>
+
+        <div class="mv-heading hellowoods-mv-heading forest-program-mv-heading u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Attraction & Activity List',
+            subtextvg: 'mobipark-guide-title-sp',
+            altSubtextvg: '予約制森の体験プログラム'
+          }) %>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEST UPLOAD -->
+
+    <main class="guide-data-holder" data-area="">
+      <!-- filter -->
+      <%- include('/partials/mobipark/filter') -%>
+
+      <!-- Mobipark -->
+      <section class="l-container">
+      <div class="guide-area" data-area="mobipark">
+        <div class="guide-area-logo">
+          <img src="<%= mix('/assets/images/mobipark-guide/logo-mobipark.png') %>" alt="Mobi Park">
+        </div>
+        <div class="guide-area-desc">
+          <p>親子でチャレンジできる<br class="u-show-sp">森のアトラクションがいっぱい！</p>
+          <div class="guide-area-desc-heading mobipark">
+            <%- include('/partials/svg', {
+              name: 'mobipark-guide-mobipark-title'
+            }) %>
+          </div>
+        </div>
+        <div class="guide-area-passport">
+          モビパーク<br class="u-show-sp">パスポート対象  <img class="passport" src="<%= mix('/assets/images/mobipark-guide/icon_pass.png') %>" alt="Passport">
+        </div>
+      </div>
+      <!-- filter -->
+
+
+      <%- include('/partials/mobipark/area-item', {
+        modifier: 'carbike-article-attractions',
+        dataMobiparkGuideItems : getData().data.mobiparkGuideMobipark
+      }) -%>
+  
+      <!-- Hello Woods -->
+      <div class="guide-area" data-area="hellowoods">
+        <div class="guide-area-logo">
+          <img src="<%= mix('/assets/images/mobipark-guide/logo_hellowoods.png') %>" alt="Mobi Park">
+        </div>
+        <div class="guide-area-desc">
+          <p>森の中で四季折々の自然体験を満喫</p>
+          <div class="guide-area-desc-heading hellowoods">
+            <%- include('/partials/svg', {
+              name: 'mobipark-guide-hellowoods-title'
+            }) %>
+          </div>
+        </div>
+        <div class="guide-area-passport">
+          モビパーク<br class="u-show-sp">パスポート対象  <img class="passport" src="<%= mix('/assets/images/mobipark-guide/icon_pass.png') %>" alt="Passport">
+        </div>
+      </div>
+
+      <%- include('/partials/mobipark/area-item', {
+        modifier: 'carbike-article-attractions',
+        dataMobiparkGuideItems : getData().data.mobiparkGuideHellowoods
+      }) -%>
+
+      <!-- Honda -->
+      <div class="guide-area" data-area="honda">
+        <div class="guide-area-logo">
+          <img src="<%= mix('/assets/images/mobipark-guide/logo-honda.png') %>" alt="Mobi Park">
+        </div>
+        <div class="guide-area-desc">
+          <p>歴代のHonda車を約300台展示</p>
+          <div class="guide-area-desc-heading honda">
+            <%- include('/partials/svg', {
+              name: 'mobipark-guide-honda-title'
+            }) %>
+          </div>
+        </div>
+        <div class="guide-area-passport">
+          モビパーク<br class="u-show-sp">パスポート対象 <img class="passport" src="<%= mix('/assets/images/mobipark-guide/icon_pass.png') %>" alt="Passport">
+        </div>
+      </div>
+
+      <%- include('/partials/mobipark/area-item', {
+        modifier: 'carbike-article-attractions',
+        dataMobiparkGuideItems : getData().data.mobiparkGuideHonda
+      }) -%>
+      
+      </section>
+
+      <div class=" block-image block-image-hellowoods block-image-hellowoods-program">
+        <div class="l-container">
+          <ul class="block-image-list block-image-list-hellowoods">
+            <% forest_programGallery.forEach( block => { %>
+            <li class="block-image-item block-image-item-hellowoods block-image-item-hellowoods-program image-border <%- block.modifier %>">
+              <a href="<%- block.url %>" class="block-image-item-link">
+                <div class="block-image-inner block-image-inner-program" style="background-image: url(<%- block.bg %>);">
+                  <!-- <div class="block-image-text-wrap">
+                    <p class="block-image-text block-image-text-hellowoods">
+                      <span class="heading-text"><%- block.title %></span>
+                      <span class="block-image-subtext"><%- block.subtext %></span>
+                    </p>
+                  </div> -->
+                </div>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+
+
+      
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+    </main>
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsProgramDetails
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

@@ -349,17 +349,35 @@
   
   }
   &[data-grade*="4"] {
-    .guide-items[data-grade*="4"] {display: block !important;}
+    .guide-items[data-grade*="1"],
+    .guide-items[data-grade*="2"],
+    .guide-items[data-grade*="3"],
+    .guide-items[data-grade*="4"],
+    .guide-items[data-grade*="5"],
+    .guide-items[data-grade*="6"],{display: block !important;}
+    //.guide-items[data-grade*="4"] {display: block !important;}
     .guide-items:not([data-grade*="4"]) {display: none;}
   
   }
   &[data-grade*="5"] {
-    .guide-items[data-grade*="5"] {display: block !important;}
+    .guide-items[data-grade*="1"],
+    .guide-items[data-grade*="2"],
+    .guide-items[data-grade*="3"],
+    .guide-items[data-grade*="4"],
+    .guide-items[data-grade*="5"],
+    .guide-items[data-grade*="6"],{display: block !important;}
+    //.guide-items[data-grade*="5"] {display: block !important;}
     .guide-items:not([data-grade*="5"]) {display: none;}
   
   }
   &[data-grade*="6"] {
-    .guide-items[data-grade*="6"] {display: block !important;}
+    .guide-items[data-grade*="1"],
+    .guide-items[data-grade*="2"],
+    .guide-items[data-grade*="3"],
+    .guide-items[data-grade*="4"],
+    .guide-items[data-grade*="5"],
+    .guide-items[data-grade*="6"],{display: block !important;}
+    //.guide-items[data-grade*="6"] {display: block !important;}
     .guide-items:not([data-grade*="6"]) {display: none;}
   
   }

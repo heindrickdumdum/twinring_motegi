@@ -1,0 +1,175 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'fee';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-access">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc"
+            style="background-image:url(<%= mix('/assets/images/fee_m/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp"
+            style="background-image:url(<%= mix('/assets/images/fee_m/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading access-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-access',
+            heading_level: 1,
+            text: 'Price Ticket',
+            subtextvg: 'fee-top-title',
+            altSubtextvg: '料金・チケット'
+          }) %>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner">
+        <div class="subpage-section subpage-section-carbike access-anchor">
+          <div class="carbike-menu">
+            <div class="swiper-container slider-carbike-container js-slider-carbike">
+    
+              <div class="swiper-wrapper slider-carbike">
+                <div class="swiper-slide slider-carbike-item">
+                  <div class="carbike-menu-item">
+                    <a class="carbike-menu-link js-scroll" href="#admission-parking-fees">
+                      <img src="<%= mix('/assets/images/access_m/car-icon.jpg') %>" alt="車のアトラクション">
+                    </a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider-carbike-item">
+                  <div class="carbike-menu-item">
+                    <a class="carbike-menu-link js-scroll" href="#train">
+                      <img src="<%= mix('/assets/images/access_m/train-icon.jpg') %>" alt="車のアトラクション">
+                    </a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider-carbike-item">
+                  <div class="carbike-menu-item">
+                    <a class="carbike-menu-link js-scroll" href="#bus">
+                      <img src="<%= mix('/assets/images/access_m/bus-icon.jpg') %>" alt="車のアトラクション">
+                    </a>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- car bike -->
+        <section class="car-bike-transportation transportation-section" id="car-bike">
+          <h2 class="media-title text-center access-heading">
+            <span>お車・バイクでご来場の方</span>
+          </h2>
+
+          <div class="tab-access" id="js-carbike-tab">
+            <div class="tab-list swiper-container slider-tab-container js-slider-tab">
+              <ul class="swiper-wrapper slider-tab">
+                <% getData().data.accessTabCarBike.forEach(item => { %>
+                <li class="tab-item js-tab-link swiper-slide" data-tab="<%- item.tabId -%>">
+                  <span><%- item.tabLabel -%></span>
+                </li>
+                <% }); %>
+              </ul>
+            </div>
+
+            <div class="tab-container">
+              <% getData().data.accessTabCarBike.forEach(item => { %>
+              <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
+                <% item.tabContent.forEach(elem => { %>
+                  <img class="u-show-pc" src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                  <img class="u-show-sp" src="<%- elem.imageSp -%>" alt="<%- elem.alt -%>">
+                <% }); %>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+
+          <p class="car-bike-note">
+            駐車場については<a href="/fee_m/" class="link">料金・チケット</a>、園内<a href="/map_m/" class="link">マップ</a>ページをご確認ください。
+          </p>
+        </section>
+
+        <!-- train -->
+        <section class="train-transportation transportation-section" id="train">
+          <h2 class="media-title text-center access-heading">
+            <span>電車でご来場の方</span>
+          </h2>
+
+          <div class="tab-access" id="js-train-tab">
+            <ul class="tab-list">
+              <% getData().data.accessTabTrain.forEach(item => { %>
+              <li class="tab-item js-tab-link" data-tab="<%- item.tabId -%>">
+                <span><%- item.tabLabel -%></span>
+              </li>
+              <% }); %>
+            </ul>
+
+            <div class="tab-container">
+              <% getData().data.accessTabTrain.forEach(item => { %>
+              <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
+                <% item.tabContent.forEach(elem => { %>
+                  <img class="u-show-pc" src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                  <img class="u-show-sp" src="<%- elem.imageSp -%>" alt="<%- elem.alt -%>">
+                <% }); %>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+        </section>
+
+        <!-- bus -->
+        <section class="bus-transportation transportation-section" id="bus">
+          <h2 class="media-title text-center access-heading">
+            <span>バスでご来場の方</span>
+          </h2>
+
+          <div class="tab-access" id="js-bus-tab">
+            <ul class="tab-list">
+              <% getData().data.accessTabBus.forEach(item => { %>
+              <li class="tab-item js-tab-link" data-tab="<%- item.tabId -%>">
+                <span><%- item.tabLabel -%></span>
+              </li>
+              <% }); %>
+            </ul>
+
+            <div class="tab-container tab-bus">
+              <% getData().data.accessTabBus.forEach(item => { %>
+              <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
+                <% item.tabContent.forEach(elem => { %>
+                  <img class="u-show-pc" src="<%- elem.image -%>" alt="<%- elem.alt -%>">
+                  <img class="u-show-sp" src="<%- elem.imageSp -%>" alt="<%- elem.alt -%>">
+                <% }); %>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsFee
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

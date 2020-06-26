@@ -1,4 +1,4 @@
-console.log(document.querySelectorAll("input[name=radio-1-set]:checked")[0].value);
+
 
 /*Grade Checkbox*/
 var checkboxAge = document.querySelectorAll('.age-checkbox');
@@ -26,9 +26,17 @@ checkboxGrade.forEach(checkbox => checkbox.addEventListener('change', () => {
 }));
 
 /*Area Select*/
-var radioArea = document.querySelectorAll('.radio-area');
+var radioArea = document.querySelectorAll('.area-checkbox');
 radioArea.forEach(radio => radio.addEventListener('change', () => {
   document.getElementsByClassName('guide-data-holder')[0].setAttribute('data-area',radio.value)
+
+  var areaArr = [];
+  var checkboxes = document.querySelectorAll('.area-checkbox:checked');
+  for (var i = 0; i < checkboxes.length; i++) {
+    areaArr.push(checkboxes[i].value)
+  }
+  console.log(areaArr);
+  document.getElementsByClassName('guide-data-holder')[0].setAttribute('data-area',areaArr)
 }));
 
 /*Passport Checkbox*/

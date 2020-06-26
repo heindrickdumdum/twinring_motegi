@@ -57,6 +57,7 @@
 }
 
 .guide-area {
+  display: none;
   .guide-area-inner {
     position: relative;
     border-bottom: 1px solid #999999;
@@ -189,6 +190,7 @@
 .guide-list {
 
   .guide-items {
+    display: none;
     border-bottom: 1px solid #efefef;
     padding-bottom: 40px;
     margin-bottom: 40px;
@@ -278,35 +280,36 @@
   &[data-grade*="6"] {.guide-items[data-grade*="6"] {display: block;}}
 
   //Area
-  &[data-area="mobipark"] {
-    .guide-area:not([data-area="mobipark"]) {
-      display: none;
+
+  &[data-area*="mobipark"] {
+    .guide-area[data-area="mobipark"] {
+      display: block;
     }
   }
-  &[data-area="hellowoods"] {
-    .guide-area:not([data-area="hellowoods"]) {
-      display: none;
+  &[data-area*="hellowoods"] {
+    .guide-area[data-area="hellowoods"] {
+      display: block;
     }
   }
-  &[data-area="honda"] {
-    .guide-area:not([data-area="honda"]) {
-      display: none;
+  &[data-area*="honda"] {
+    .guide-area[data-area="honda"] {
+      display: block;
     }
   }
 
   //Passport 
   &[data-passport="true"] {
-    .guide-items:not([data-passport="true"]) {
-      display: none;
+    .guide-items[data-passport=""] {
+      display: none !important;
     }
   }
 
   //Age
-  &.guide-data-holder[data-age="0"] {.guide-items:not([data-age*="0"]) {display: none;}}
-  &.guide-data-holder[data-age="1"] {.guide-items:not([data-age*="1"]) {display: none;}}
-  &.guide-data-holder[data-age="2"] {.guide-items:not([data-age*="2"]) {display: none;}}
-  &.guide-data-holder[data-age="3"] {.guide-items:not([data-age*="3"]) {display: none;}}
-  &.guide-data-holder[data-age="4"] {.guide-items:not([data-age*="4"]) {display: none;}}
-  &.guide-data-holder[data-age="5"] {.guide-items:not([data-age*="5"]) {display: none;}}
-  &.guide-data-holder[data-age="6"] {.guide-items:not([data-age*="6"]) {display: none;}}
+  &.guide-data-holder[data-age*="0"] {.guide-items[data-age*="0"] {display: block;}}
+  &.guide-data-holder[data-age*="1"] {.guide-items[data-age*="1"] {display: block;}}
+  &.guide-data-holder[data-age*="2"] {.guide-items[data-age*="2"] {display: block;}}
+  &.guide-data-holder[data-age*="3"] {.guide-items[data-age*="3"] {display: block;}}
+  &.guide-data-holder[data-age*="4"] {.guide-items[data-age*="4"] {display: block;}}
+  &.guide-data-holder[data-age*="5"] {.guide-items[data-age*="5"] {display: block;}}
+  &.guide-data-holder[data-age*="6"] {.guide-items[data-age*="6"] {display: block;}}
 }

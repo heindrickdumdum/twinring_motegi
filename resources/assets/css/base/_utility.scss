@@ -59,6 +59,12 @@
     &>* {
       transition: ease 1s all;
       transform: scale(1.2);
+
+      @at-root 
+      .lunch-marcherant &,
+      .dinner-set-marcherant & {//lunch marcherant
+        transform: scale(1);
+      }
     }
   }
 }

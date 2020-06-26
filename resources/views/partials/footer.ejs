@@ -54,10 +54,11 @@
   'dinnerMarcherant',
   'businessHours',
   'parkMap',
-  'mobiparkGuide'
+  'mobiparkGuide',
+  'service_m'
   ]
 %>
-  
+
   <!-- START GLOBAL FOOTER -->
   <footer class="footer" id="lig-footer">
     <nav class="footer-top-nav-list-wrap">
@@ -155,7 +156,7 @@
           svg4everybody({
             polyfill: true
           });
-        }  
+        }
       }, 500);
     });
   </script>
@@ -212,7 +213,7 @@
   <% if(pageId == 'access') { %>
     <script src="<%= mix('/assets/js/access.js') %>" async></script>
   <% } %>
-  
+
   <% if(pageId == 'bbq') { %>
     <script src="<%= mix('/assets/js/bbq.js') %>" async></script>
   <% } %>

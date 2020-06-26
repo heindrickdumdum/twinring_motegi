@@ -61,6 +61,7 @@
       transform: scale(1.2);
 
       @at-root 
+      .breakfast-marcherant &,
       .lunch-marcherant &,
       .dinner-set-marcherant & {//lunch marcherant
         transform: scale(1);

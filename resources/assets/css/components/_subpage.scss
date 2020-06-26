@@ -5,6 +5,10 @@
   height: auto;
   margin-bottom: 50px;
 
+  &-graph {//foods m page
+    margin-bottom: 10px;
+  }
+
   &-restaurant {
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 20px;
@@ -1782,6 +1786,23 @@
     @include max-screen($breakpoint-mobile) {
       margin-top: -4px;
     }
+  }
+}
+
+@at-root .page-twinringmotegi {//twinringmotegi page
+  .subpage-desc {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -15px;
+      position: relative;
+      z-index: $z-max;
+    }
+  }
+}
+
+@at-root .foodsm {
+  .subpage-desc {
+    margin-top: 10px;
+    background-color: $color-white;
   }
 }
 

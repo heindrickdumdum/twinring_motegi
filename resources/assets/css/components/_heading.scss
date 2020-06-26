@@ -2211,6 +2211,21 @@
   }
 }
 
+@at-root .foodsm {//foodsm page
+  .heading-foodsm {
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 325px !important;
+        height: 50px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        height: 29px !important;
+      }
+    }
+  }
+}
+
 @at-root .access-location-heading {//access page
   .heading-subtext {
     @include max-screen($breakpoint-mobile) {

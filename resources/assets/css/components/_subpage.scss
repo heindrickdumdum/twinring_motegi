@@ -5,6 +5,10 @@
   height: auto;
   margin-bottom: 50px;
 
+  &-graph {//foods m page
+    margin-bottom: 10px;
+  }
+
   &-restaurant {
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 20px;
@@ -1782,6 +1786,13 @@
     @include max-screen($breakpoint-mobile) {
       margin-top: -4px;
     }
+  }
+}
+
+@at-root .foodsm {
+  .subpage-desc {
+    margin-top: 10px;
+    background-color: $color-white;
   }
 }
 

@@ -311,6 +311,7 @@
 
     @include min-screen ($breakpoint-mobile+1) {
       padding: 56px 70px;
+      margin-bottom: 15px;
     }
   }
 }

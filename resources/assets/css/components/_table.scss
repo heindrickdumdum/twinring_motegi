@@ -196,6 +196,12 @@
   a {
     color: $base-font-color;
   }
+
+  @at-root .gran-turismo & {//granturismo table
+    @include max-screen($breakpoint-mobile) {
+      white-space: nowrap !important;
+    }
+  }
 }
 
 .table-head, .table-col {

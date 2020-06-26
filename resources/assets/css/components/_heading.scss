@@ -2082,7 +2082,8 @@
       margin-top: 0px !important;
 
       @include max-screen($breakpoint-mobile) {
-        width: 249.5px;
+        // width: 249.5px;
+        width: 100%;
         height: 41.5px;
       }
     }

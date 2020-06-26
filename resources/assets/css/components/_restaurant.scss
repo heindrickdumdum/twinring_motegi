@@ -342,7 +342,7 @@
 
     &:hover {
       .button-gradient-icon {
-        transform: translateX(5px);
+        transform: translate(5px, -50%);
       }
     }
   }

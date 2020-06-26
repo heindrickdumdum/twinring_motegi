@@ -271,13 +271,8 @@
 
 
 
-  //Grade
-  &[data-grade*="1"] {.guide-items[data-grade*="4"] {display: none;}}
-  &[data-grade*="2"] {.guide-items[data-grade*="5"] {display: none;}}
-  &[data-grade*="3"] {.guide-items[data-grade*="6"] {display: none;}}
-  &[data-grade*="4"] {.guide-items[data-grade*="4"] {display: block;}}
-  &[data-grade*="5"] {.guide-items[data-grade*="5"] {display: block;}}
-  &[data-grade*="6"] {.guide-items[data-grade*="6"] {display: block;}}
+  
+
 
   //Area
 
@@ -305,11 +300,67 @@
   }
 
   //Age
-  &.guide-data-holder[data-age*="0"] {.guide-items[data-age*="0"] {display: block;}}
-  &.guide-data-holder[data-age*="1"] {.guide-items[data-age*="1"] {display: block;}}
-  &.guide-data-holder[data-age*="2"] {.guide-items[data-age*="2"] {display: block;}}
-  &.guide-data-holder[data-age*="3"] {.guide-items[data-age*="3"] {display: block;}}
-  &.guide-data-holder[data-age*="4"] {.guide-items[data-age*="4"] {display: block;}}
-  &.guide-data-holder[data-age*="5"] {.guide-items[data-age*="5"] {display: block;}}
-  &.guide-data-holder[data-age*="6"] {.guide-items[data-age*="6"] {display: block;}}
+  &[data-age*="0"] {
+    .guide-items[data-age*="0"] {display: block;}
+    // .guide-items:not([data-age*="0"]) {display: none !important;}
+  }
+  &[data-age*="1"] {
+    .guide-items[data-age*="1"] {display: block;}
+    // .guide-items:not([data-age*="1"]) {display: none !important;}
+  }
+  &[data-age*="2"] {
+    .guide-items[data-age*="2"] {display: block;}
+    // .guide-items:not([data-age*="2"]) {display: none !important;}
+  }
+  &[data-age*="3"] {
+    .guide-items[data-age*="3"] {display: block;}
+    // .guide-items:not([data-age*="3"]) {display: none !important;}
+  }
+  &[data-age*="4"] {
+    .guide-items[data-age*="4"] {display: block;}
+    // .guide-items:not([data-age*="4"]) {display: none !important;}
+  }
+  &[data-age*="5"] {
+    .guide-items[data-age*="5"] {display: block;}
+    // .guide-items:not([data-age*="5"]) {display: none !important;}
+  }
+  &[data-age*="6"] {
+    .guide-items[data-age*="6"] {display: block;}
+    // .guide-items:not([data-age*="6"]) {display: none !important;}
+  }
+
+
+
+
+  //Grade
+  &[data-grade*="1"] {
+    .guide-items[data-grade*="1"] {display: block !important;}
+    .guide-items:not([data-grade*="1"]) {display: none;}
+  
+  }
+  &[data-grade*="2"] {
+    .guide-items[data-grade*="2"] {display: block !important;}
+    .guide-items:not([data-grade*="2"]) {display: none;}
+  
+  }
+  &[data-grade*="3"] {
+    .guide-items[data-grade*="3"] {display: block !important;}
+    .guide-items:not([data-grade*="3"]) {display: none;}
+  
+  }
+  &[data-grade*="4"] {
+    .guide-items[data-grade*="4"] {display: block !important;}
+    .guide-items:not([data-grade*="4"]) {display: none;}
+  
+  }
+  &[data-grade*="5"] {
+    .guide-items[data-grade*="5"] {display: block !important;}
+    .guide-items:not([data-grade*="5"]) {display: none;}
+  
+  }
+  &[data-grade*="6"] {
+    .guide-items[data-grade*="6"] {display: block !important;}
+    .guide-items:not([data-grade*="6"]) {display: none;}
+  
+  }
 }

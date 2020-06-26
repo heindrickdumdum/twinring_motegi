@@ -39,7 +39,7 @@
     </div>
 
     <main>
-      <section class="info-container info-container-restaurant">
+      <!-- <section class="info-container info-container-restaurant">
           <div class="l-section-title">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-restaurant',
@@ -60,7 +60,7 @@
               <% }) %>
             </ul>
           </div>
-      </section>
+      </section> -->
 
       <section class="adventure">
         <div class="l-section-title">
@@ -121,7 +121,8 @@
                 </div>
 
                 <p class="adventure-content-copy">
-                  栃木県・茨城県の食材を使った和洋中の料理と石窯料理が味わえるレストラン
+                  地元ならではの食材と採れたて野菜を使い、豊富なビュッフェメニューと <br class="u-show-pc"/>
+                  季節のプレートランチをお楽しみいただけます。
                 </p>
 
                 <div class="l-button">
@@ -174,7 +175,8 @@
                 </div>
 
                 <p class="adventure-content-copy">
-                  地元の旬な素材を活かした料理長谷田部の上質な里山懐石が堪能できる料亭
+                  美食家達の舌を唸らせた料理人 谷田部が、<br class="u-show-pc"/>
+                  茂木町ならではの”里山の滋味（じみ）"でおもてなしいたします。
                 </p>
 
                 <div class="l-button">
@@ -225,13 +227,9 @@
                   }) %>
                 </div>
 
-                <p class="adventure-content-copy u-show-pc">
-                  オムライスやハンバーガー、スイーツなどの洋食をメインとした <br/>
-                  センターキッチン
-                </p>
-
-                <p class="adventure-content-copy u-show-sp">
-                  オムライスやハンバーガー、スイーツなどの洋食をメインとした センターキッチン
+                <p class="adventure-content-copy">
+                  「森」をテーマにしたここだけのオリジナルメニューがいっぱい。<br class="u-show-pc"/>
+                  お子さま向けのメニューも豊富で、家族みんなで楽しめる開放的なカフェレストランです。
                 </p>
 
                 <div class="l-button">
@@ -283,7 +281,8 @@
                 </div>
 
                 <p class="adventure-content-copy">
-                  カレーや麺類が揃ったパドック内にあるカフェレストラン
+                  プレイステーションのカーレースゲーム「グランツーリスモ」の名を冠した<br class="u-show-pc"/>
+                  カフェスタイルのレストラン。ボリューム満点で食べ応えのあるメニューが豊富。
                 </p>
 
                 <div class="l-button">
@@ -335,7 +334,8 @@
                 </div>
 
                 <p class="adventure-content-copy">
-                  ゆず塩ラーメンや彩り野菜カレーがおすすめのお食事処
+                  豊かな自然に囲まれたハローウッズにあるレストラン。<br class="u-show-pc"/>
+                  森あそびを満喫した後におなかも満足できる食事処です。
                 </p>
 
                 <div class="l-button">
@@ -387,7 +387,8 @@
                 </div>
 
                 <p class="adventure-content-copy">
-                  ゆず塩ラーメンや彩り野菜カレーがおすすめのお食事処
+                  ジェラートコンテスト全国１位に輝いた店舗など、<br class="u-show-pc"/>
+                  栃木県の人気店とコラボした限定ジェラートをお楽しみいただけます。
                 </p>
 
                 <div class="l-button">
@@ -405,9 +406,10 @@
 
       <div class="l-section">
         <%- include('/partials/button', {
-          modifier: 'restaurant-button',
+          modifier: 'restaurant-button foodsm-button',
           link: '#',
-          text: 'レストラン場内エリアマップはこちら'
+          text: 'レストラン場内エリアマップはこちら',
+          arrowColor: 'green'
         }) -%>
       </div>
 

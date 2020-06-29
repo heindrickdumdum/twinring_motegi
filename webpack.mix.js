@@ -117,6 +117,11 @@ mix
     `${distRelativePath}/assets/js`,
   )
 
+  .js(
+    `${srcRelativePath}/assets/js/mobipark-guide.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
   .eslint()
   .sass(
     `${srcRelativePath}/assets/css/header.scss`,

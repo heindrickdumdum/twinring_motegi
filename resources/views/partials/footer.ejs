@@ -56,9 +56,10 @@
   'businessHours',
   'parkMap',
   'mobiparkGuide',
+  'service_m'
   ]
 %>
-  
+
   <!-- START GLOBAL FOOTER -->
   <footer class="footer" id="lig-footer">
     <nav class="footer-top-nav-list-wrap">
@@ -156,7 +157,7 @@
           svg4everybody({
             polyfill: true
           });
-        }  
+        }
       }, 500);
     });
   </script>
@@ -169,7 +170,7 @@
     <script src="<%= mix('/assets/js/index.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'carAndBike' || pageId == 'access') { %>
+  <% if(pageId == 'carAndBike' || pageId == 'access' || pageId === 'fee') { %>
     <script src="<%= mix('/assets/js/carbike.js') %>" async></script>
   <% } %>
 
@@ -213,7 +214,7 @@
   <% if(pageId == 'access') { %>
     <script src="<%= mix('/assets/js/access.js') %>" async></script>
   <% } %>
-  
+
   <% if(pageId == 'bbq') { %>
     <script src="<%= mix('/assets/js/bbq.js') %>" async></script>
   <% } %>
@@ -222,8 +223,12 @@
     <script src="<%= mix('/assets/js/gallery-thumb.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'marcherant') { %>
+  <% if(pageId == 'marcherant' || pageId == 'breakfastMarcherant' || pageId == 'toya' || pageId == 'rocco') { %>
     <script src="<%= mix('/assets/js/marcherant.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'mobiparkGuide') { %>
+    <script src="<%= mix('/assets/js/mobipark-guide.js') %>" async></script>
   <% } %>
 
 <script type="text/javascript">

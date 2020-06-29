@@ -7,8 +7,8 @@
 <%- include('/partials/head', { pageId, title }) -%>
 
 <div class="lig-content">
-  <div class="subpage subpage-access">
-    <div class="mv mv-subpage">
+  <div class="subpage page-fee">
+    <div class="mv mv-top mv-subpage">
       <ul class="mv-list">
         <li class="mv-item">
           <div class="mv-image mv-image-subpage u-show-pc"
@@ -21,7 +21,7 @@
       <div class="l-container mv-container">
         <div class="mv-heading hellowoods-mv-heading access-mv-heading">
           <%- include('/partials/heading', {
-            modifier: 'heading-hellowoods heading-access',
+            modifier: 'heading-hellowoods heading-fee',
             heading_level: 1,
             text: 'Price Ticket',
             subtextvg: 'fee-top-title',
@@ -40,24 +40,40 @@
               <div class="swiper-wrapper slider-carbike">
                 <div class="swiper-slide slider-carbike-item">
                   <div class="carbike-menu-item">
-                    <a class="carbike-menu-link js-scroll" href="#admission-parking-fees">
-                      <img src="<%= mix('/assets/images/access_m/car-icon.jpg') %>" alt="車のアトラクション">
+                    <a class="carbike-menu-link js-scroll" href="#admission-fees">
+                      <img src="<%= mix('/assets/images/fee_m/ticket-icon.png') %>" alt="入場料・駐車料">
                     </a>
                   </div>
                 </div>
 
                 <div class="swiper-slide slider-carbike-item">
                   <div class="carbike-menu-item">
-                    <a class="carbike-menu-link js-scroll" href="#train">
-                      <img src="<%= mix('/assets/images/access_m/train-icon.jpg') %>" alt="車のアトラクション">
+                    <a class="carbike-menu-link js-scroll" href="#attraction-fees">
+                      <img src="<%= mix('/assets/images/fee_m/attraction-icon.png') %>" alt="アトラクション 料金">
                     </a>
                   </div>
                 </div>
 
                 <div class="swiper-slide slider-carbike-item">
                   <div class="carbike-menu-item">
-                    <a class="carbike-menu-link js-scroll" href="#bus">
-                      <img src="<%= mix('/assets/images/access_m/bus-icon.jpg') %>" alt="車のアトラクション">
+                    <a class="carbike-menu-link js-scroll" href="#motorsports-fees">
+                      <img src="<%= mix('/assets/images/fee_m/motorsports-icon.png') %>" alt="車のアトラクション">
+                    </a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider-carbike-item">
+                  <div class="carbike-menu-item">
+                    <a class="carbike-menu-link js-scroll" href="#hotel-fees">
+                      <img src="<%= mix('/assets/images/fee_m/hotel-icon.png') %>" alt="車のアトラクション">
+                    </a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider-carbike-item">
+                  <div class="carbike-menu-item">
+                    <a class="carbike-menu-link js-scroll" href="#camp-fees">
+                      <img src="<%= mix('/assets/images/fee_m/camp-icon.png') %>" alt="車のアトラクション">
                     </a>
                   </div>
                 </div>
@@ -67,94 +83,549 @@
           </div>
         </div>
 
-        <!-- car bike -->
-        <section class="car-bike-transportation transportation-section" id="car-bike">
-          <h2 class="media-title text-center access-heading">
-            <span>お車・バイクでご来場の方</span>
-          </h2>
-
-          <div class="tab-access" id="js-carbike-tab">
-            <div class="tab-list swiper-container slider-tab-container js-slider-tab">
-              <ul class="swiper-wrapper slider-tab">
-                <% getData().data.accessTabCarBike.forEach(item => { %>
-                <li class="tab-item js-tab-link swiper-slide" data-tab="<%- item.tabId -%>">
-                  <span><%- item.tabLabel -%></span>
-                </li>
-                <% }); %>
-              </ul>
-            </div>
-
-            <div class="tab-container">
-              <% getData().data.accessTabCarBike.forEach(item => { %>
-              <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
-                <% item.tabContent.forEach(elem => { %>
-                  <img class="u-show-pc" src="<%- elem.image -%>" alt="<%- elem.alt -%>">
-                  <img class="u-show-sp" src="<%- elem.imageSp -%>" alt="<%- elem.alt -%>">
-                <% }); %>
-              </div>
-              <% }); %>
-            </div>
+        <!-- admission-fees -->
+        <section class="fee-section" id="admission-fees">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-admission',
+              headin_level: 2,
+              imgPath: mix('/assets/images/fee_m/admission-color-title.png'),
+              alt: '入場料・駐車料'
+            }) -%>
           </div>
 
-          <p class="car-bike-note">
-            駐車場については<a href="/fee_m/" class="link">料金・チケット</a>、園内<a href="/map_m/" class="link">マップ</a>ページをご確認ください。
+          <div class="table-container">
+            <p class="media-title">
+              <span>入場料</span>
+            </p>
+            <table class="table table-green">
+              <tbody>
+                <tr class="table-row">
+                  <th class="table-head">大人（中学生以上）</th>
+                  <th class="table-head">子ども（小学生）</th>
+                  <th class="table-head">幼児（3歳〜未就学児）</th>
+                </tr>
+                <tr class="table-row">
+                  <td class="table-col">1,200円</td>
+                  <td class="table-col">600円</td>
+                  <td class="table-col">300円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-container">
+            <p class="media-title">
+              <span>駐車料 (１日)</span>
+            </p>
+            <table class="table table-green">
+              <tbody>
+                <tr class="table-row">
+                  <th class="table-head">車</th>
+                  <th class="table-head">バイク</th>
+                  <th class="table-head">バス（大型・中型・マイクロ）</th>
+                </tr>
+                <tr class="table-row">
+                  <td class="table-col">1,000円</td>
+                  <td class="table-col">500円</td>
+                  <td class="table-col">1,500円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-container with-padding">
+            <p class="media-title display-block text-center">
+              <span>次のカードをお持ちの方は、入場料が100円割引になります。</span>
+            </p>
+
+            <div class="subpage-inner">
+              <p class="subpage-desc text-center">
+                ※レース・イベント開催日は使用できません。
+              </p>
+            </div>
+
+            <table class="table">
+              <tbody>
+                <tr class="table-row">
+                  <th class="table-head">【対象割引カード】</th>
+                  <td class="table-col">
+                    ・Honda Cカード<br/>
+                    ・Honda DREAMオーナーズカード
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="info-note">
+            <p class="info-note-title">ご注意：一部レース・イベント開催日は入場料・駐車料が異なります。</p>
+
+            <ol class="info-note-list">
+              <li class="info-note-item">
+                <span>2020/8/29(土)・30(日)</span>
+                <span>全日本スーパーフォーミュラ選手権</span>
+              </li>
+              <li class="info-note-item">
+                <span>2020/11/7(土)・8(日)</span>
+                <span>SUPER GT</span>
+              </li>
+              <li class="info-note-item">
+                <span>2020/11/14(土)・15(日)</span>
+                <span>全日本ロードレース選手権</span>
+              </li>
+              <li class="info-note-item">
+                <span>2020/11/21(土)・22(日)</span>
+                <span>スーパー耐久</span>
+              </li>
+            </ol>
+
+            <div class="subpage-section subpage-section-collapse attraction-collapse">
+              <div class="subpage-collapse-heading js-collapse-button">料金の詳細はこちら</div>
+              <div class="subpage-collapse-description">
+                <div class="subpage-collapse-content">
+                  <table class="table table-green admission-table">
+                    <tr class="table-row">
+                      <th class="table-head dark-gray">レース・イベント名</th>
+                      <th class="table-head dark-gray">駐車料（１日）</th>
+                      <th class="table-head dark-gray">入場料</th>
+                    </tr>
+
+                    <tr class="table-row">
+                      <td class="table-col">
+                        2020/8/29(土）・30(日) <br/>
+                        <span class="not-bold">全日本スーパーフォーミュラ選手権</span>
+                      </td>
+                      <td class="table-col">
+                        車　2,100円 <br/>
+                        バイク　1,100円	
+                      </td>
+                      <td class="table-col">
+                        左記駐車料のみでご入場いただけます。<br/>
+                        <span class="not-bold">※レースを観戦される場合は、別途観戦券が必要です。</span>
+                      </td>
+                    </tr>
+
+                    <tr class="table-row">
+                      <td class="table-col">
+                        2020/11/7(土)・8(日)<br/>
+                        <span class="not-bold">SUPER GT</span>
+                      </td>
+                      <td class="table-col">
+                        ※詳細が決定次第<br/>
+                        ご案内いたします。
+                      </td>
+                      <td class="table-col">
+                        ※詳細が決定次第<br/>
+                        ご案内いたします。
+                      </td>
+                    </tr>
+
+                    <tr class="table-row">
+                      <td class="table-col">
+                        2020/11/14(土)・15(日)<br/>
+                        <span class="not-bold">全日本ロードレース選手権</span>
+                      </td>
+                      <td class="table-col">
+                        車　2,100円<br/>
+                        バイク　1,100円	
+                      </td>
+                      <td class="table-col">
+                        以下通常料金でご入場いただけます。<br/>
+                        <span class="not-bold">
+                          大人(中学生以上) ：1,200円／人 <br/>
+                          子ども(小学生) ：600円／人 <br/>
+                          幼児(3歳～未就学児) ：300円／人
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr class="table-row">
+                      <td class="table-col">
+                        2020/11/21(土)・22(日)<br/>
+                        <span class="not-bold">スーパー耐久</span>
+                      </td>
+                      <td class="table-col">
+                        車　2,100円<br/>
+                        バイク　1,100円	
+                      </td>
+                      <td class="table-col">
+                        以下通常料金でご入場いただけます。<br/>
+                        <span class="not-bold">
+                          大人(中学生以上) ：1,200円／人<br/>
+                          子ども(小学生) ：600円／人<br/>
+                          幼児(3歳～未就学児) ：300円／人
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <p class="subpage-desc">
+            ※「花火の祭典」の開催日は別途、観覧料が必要になります。<br/>
+            ※レース・イベントの開催日は変更になる場合がございます。
           </p>
+
         </section>
 
-        <!-- train -->
-        <section class="train-transportation transportation-section" id="train">
-          <h2 class="media-title text-center access-heading">
-            <span>電車でご来場の方</span>
-          </h2>
+        <!-- attraction-fees -->
+        <section class="fee-section" id="attraction-fees">
+          <div class="l-seciton-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-attraction-fee text-center',
+              heading_level: 2,
+              imgPath: mix('/assets/images/fee_m/attraction-color-title.png'),
+              alt: ''
+            }) -%>
+          </div>
 
-          <div class="tab-access" id="js-train-tab">
-            <ul class="tab-list">
-              <% getData().data.accessTabTrain.forEach(item => { %>
-              <li class="tab-item js-tab-link" data-tab="<%- item.tabId -%>">
-                <span><%- item.tabLabel -%></span>
+          <div class="table-container">
+            <p class="media-title display-block">
+              <span>前売り券：モビパークパスポートセット (入場料＋１日対象アトラクション乗り放題)</span>
+            </p>
+            <p class="subpage-desc">
+              ※駐車料金が別途必要となります。
+            </p>
+            
+            <table class="table table-green">
+              <tr class="table-row">
+                <th class="table-head">大人（中学生以上）</th>
+                <th class="table-head">子ども（小学生）</th>
+                <th class="table-head">幼児（3歳〜未就学児）</th>
+              </tr>
+              <tr class="table-row">
+                <td class="table-col">
+                  4,000円
+                  <small>(通常料金より400円お得！)</small>
+                </td>
+                <td class="table-col">
+                  3,500円
+                  <small>(通常料金より300円お得！)</small>
+                </td>
+                <td class="table-col">
+                  2,000円
+                  <small>(通常料金より100円お得！)</small>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="table-container">
+            <p class="media-title">
+              <span>購入方法</span>
+            </p>
+            <p class="subpage-desc">
+              以下Webサイトよりご購入いただけます。
+            </p>
+            <ul class="table-container-list">
+              <li class="table-container-item">
+                <img src="<%- mix('/assets/images/fee_m/attraction-payment-1.jpg') -%>" alt="payment">
               </li>
-              <% }); %>
+              <li class="table-container-item">
+                <img src="<%- mix('/assets/images/fee_m/attraction-payment-2.jpg') -%>" alt="payment">
+              </li>
             </ul>
 
-            <div class="tab-container">
-              <% getData().data.accessTabTrain.forEach(item => { %>
-              <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
-                <% item.tabContent.forEach(elem => { %>
-                  <img class="u-show-pc" src="<%- elem.image -%>" alt="<%- elem.alt -%>">
-                  <img class="u-show-sp" src="<%- elem.imageSp -%>" alt="<%- elem.alt -%>">
-                <% }); %>
-              </div>
-              <% }); %>
+            <div class="info-note">
+              <p class="info-note-title">ご注意：以下日程は前売り券がご利用いただけません。</p>
+              
+              <table class="table">
+                <tbody>
+                  <tr class="table-row">
+                    <th class="table-head">ご利用除外日</th>
+                    <td class="table-col">
+                      <p>
+                        <b>2020年</b><br/>
+                        <span class="not-bold">
+                        8月14日（金）、15日（土）、29日（土）、30日（日）10月16日（金）～18日（日）11月7日（土）、8日（日）
+                        </span>
+                      </p>
+                      <p>
+                        <b>2021年</b><br/>
+                        <span class="not-bold">
+                        1月2日（土）
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr class="table-row">
+                    <th class="table-head">定休日</th>
+                    <td class="table-col">
+                      <p>
+                        <b>2020年</b><br/>
+                        <span class="not-bold">
+                          12月1日（火）、2日（水）、8日（火）、9日（水）、15日（火）、16日（水）
+                        </span>
+                      </p>
+                      <p>
+                        <b>2021年</b><br/>
+                        <span class="not-bold">
+                          1月12日（火）、13日（水）、18日（月）～31日（日）<br/>
+                          2月1日（月）～4日（木）、9日（火）、10日（水）、16日（火）、17日（水）
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+
+            <p class="subpage-desc attraction-bottom-space">
+              ※<span class="color-red">前売り券は引換券となります。有効期間内にモビパークチケット売場にて正式なチケットにお引換えください。</span><br class="u-show-pc"/>
+              　引換え当日のみ有効となります。<br/>
+              ※ご利用がない場合でも変更・交換・払戻しはできません。
+            </p>
+
+            <div class="table-container">
+              <p class="media-title">
+                <span>モビパークパスポート(1日乗り放題券）</span>
+              </p>
+              <p class="subpage-desc">
+                モビパークパスポートとは、モビパークとハローウッズの対象アトラクションが１日乗り放題になるお得な乗り物券です。<br/>
+                また、一部対象外のアトラクションも割安になる特典もございます。
+              </p>
+              <table class="table table-green">
+                <tr class="table-row">
+                  <th class="table-head" rowspan="2">料金</th>
+                  <th class="table-head">小学生以上</th>
+                  <th class="table-head">幼児（3歳以上〜未就学児）</th>
+                </tr>
+                <tr class="table-row">
+                  <td class="table-col">
+                    3,200円
+                  </td>
+                  <td class="table-col">
+                    1,800円
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="table-container">
+              <p class="media-title">
+                <span>アトラクションチケット</span>
+              </p>
+              <p class="subpage-desc">
+                1枚100円分の乗り物券です。
+              </p>
+              <table class="table table-green">
+                <tr class="table-row">
+                  <th class="table-head">料金</th>
+                  <td class="table-col">
+                    <span>1枚100円</span>
+                    <span>1,000円分</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="subpage-section subpage-section-collapse attraction-collapse">
+              <div class="subpage-collapse-heading js-collapse-button">モビパークパスポート対象アトラクション、各アトラクションの料金はこちらをご確認ください</div>
+              <div class="subpage-collapse-description">
+                <div class="subpage-collapse-content">
+                  <table class="table table-green admission-table">
+                    <tr class="table-row">
+                      <th class="table-head dark-gray">レース・イベント名</th>
+                      <th class="table-head dark-gray">駐車料（１日）</th>
+                      <th class="table-head dark-gray">入場料</th>
+                    </tr>
+
+                    <tr class="table-row">
+                      <td class="table-col">
+                        2020/8/29(土）・30(日) <br/>
+                        <span class="not-bold">全日本スーパーフォーミュラ選手権</span>
+                      </td>
+                      <td class="table-col">
+                        車　2,100円 <br/>
+                        バイク　1,100円	
+                      </td>
+                      <td class="table-col">
+                        左記駐車料のみでご入場いただけます。<br/>
+                        <span class="not-bold">※レースを観戦される場合は、別途観戦券が必要です。</span>
+                      </td>
+                    </tr>
+
+                    <tr class="table-row">
+                      <td class="table-col">
+                        2020/11/7(土)・8(日)<br/>
+                        <span class="not-bold">SUPER GT</span>
+                      </td>
+                      <td class="table-col">
+                        ※詳細が決定次第<br/>
+                        ご案内いたします。
+                      </td>
+                      <td class="table-col">
+                        ※詳細が決定次第<br/>
+                        ご案内いたします。
+                      </td>
+                    </tr>
+
+                    <tr class="table-row">
+                      <td class="table-col">
+                        2020/11/14(土)・15(日)<br/>
+                        <span class="not-bold">全日本ロードレース選手権</span>
+                      </td>
+                      <td class="table-col">
+                        車　2,100円<br/>
+                        バイク　1,100円	
+                      </td>
+                      <td class="table-col">
+                        以下通常料金でご入場いただけます。<br/>
+                        <span class="not-bold">
+                          大人(中学生以上) ：1,200円／人 <br/>
+                          子ども(小学生) ：600円／人 <br/>
+                          幼児(3歳～未就学児) ：300円／人
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr class="table-row">
+                      <td class="table-col">
+                        2020/11/21(土)・22(日)<br/>
+                        <span class="not-bold">スーパー耐久</span>
+                      </td>
+                      <td class="table-col">
+                        車　2,100円<br/>
+                        バイク　1,100円	
+                      </td>
+                      <td class="table-col">
+                        以下通常料金でご入場いただけます。<br/>
+                        <span class="not-bold">
+                          大人(中学生以上) ：1,200円／人<br/>
+                          子ども(小学生) ：600円／人<br/>
+                          幼児(3歳～未就学児) ：300円／人
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <p class="subpage-desc attraction-desc">
+              ※混雑時は<a href="#" class="link bold">スマートエントリー（入場整理券)</a> が必要になるアトラクションがございます。
+            </p>
           </div>
         </section>
 
-        <!-- bus -->
-        <section class="bus-transportation transportation-section" id="bus">
-          <h2 class="media-title text-center access-heading">
-            <span>バスでご来場の方</span>
-          </h2>
-
-          <div class="tab-access" id="js-bus-tab">
-            <ul class="tab-list">
-              <% getData().data.accessTabBus.forEach(item => { %>
-              <li class="tab-item js-tab-link" data-tab="<%- item.tabId -%>">
-                <span><%- item.tabLabel -%></span>
-              </li>
-              <% }); %>
-            </ul>
-
-            <div class="tab-container tab-bus">
-              <% getData().data.accessTabBus.forEach(item => { %>
-              <div class="tab-content js-tab-content" id="<%- item.tabId -%>">
-                <% item.tabContent.forEach(elem => { %>
-                  <img class="u-show-pc" src="<%- elem.image -%>" alt="<%- elem.alt -%>">
-                  <img class="u-show-sp" src="<%- elem.imageSp -%>" alt="<%- elem.alt -%>">
-                <% }); %>
-              </div>
-              <% }); %>
-            </div>
+        <!-- motorsports-fees -->
+        <section class="fee-section" id="motorsports-fees">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-motorsport-fee',
+              heading_level: 2,
+              imgPath: mix('/assets/images/fee_m/motorsport-color-title.png'),
+              alt: 'モータースポーツ　料金'
+            }) -%>
           </div>
+
+          <p class="subpage-desc text-center">
+            レース・イベントのチケット、スポーツ走行、コース貸切の料金は、以下の各ページをご確認ください。
+          </p>
+
+          <ul class="fee-image-list">
+            <li class="fee-image-item">
+              <a href="#">
+                <img src="<%- mix('/assets/images/fee_m/race-1.jpg') -%>" alt="レース・イベント チケット">
+                <p class="fee-image-text">レース・イベント チケット</p>
+              </a>
+            </li>
+            <li class="fee-image-item">
+              <a href="#">
+                <img src="<%- mix('/assets/images/fee_m/race-2.jpg') -%>" alt="スポーツ走行">
+                <p class="fee-image-text">スポーツ走行</p>
+              </a>
+            </li>
+            <li class="fee-image-item">
+              <a href="#">
+                <img src="<%- mix('/assets/images/fee_m/race-3.jpg') -%>" alt="コース貸切">
+                <p class="fee-image-text">コース貸切</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- hotel-fees -->
+        <section class="fee-section" id="hotel-fees">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-hotel-fee',
+              heading_level: 2,
+              imgPath: mix('/assets/images/fee_m/hotel-color-title.png'),
+              alt: 'ホテルツインリンク　料金'
+            }) -%>
+          </div>
+
+          <p class="subpage-desc text-center">
+            各お部屋、のぞみの湯の料金は、以下それぞれのページをご確認ください。
+          </p>
+
+          <ul class="fee-image-list">
+            <li class="fee-image-item">
+              <a href="#">
+                <img src="<%- mix('/assets/images/fee_m/hotel-1.jpg') -%>" alt="グランルーム">
+                <p class="fee-image-text">グランルーム</p>
+              </a>
+            </li>
+            <li class="fee-image-item">
+              <a href="#">
+                <img src="<%- mix('/assets/images/fee_m/hotel-2.jpg') -%>" alt="スーペリアファミリールーム">
+                <p class="fee-image-text">スーペリアファミリールーム</p>
+              </a>
+            </li>
+            <li class="fee-image-item">
+              <a href="#">
+                <img src="<%- mix('/assets/images/fee_m/hotel-3.jpg') -%>" alt="スタンダードルーム">
+                <p class="fee-image-text">スタンダードルーム</p>
+              </a>
+            </li>
+            <li class="fee-image-item">
+              <a href="#">
+                <img src="<%- mix('/assets/images/fee_m/hotel-4.jpg') -%>" alt="のぞみの湯">
+                <p class="fee-image-text">のぞみの湯</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- camp-fees -->
+        <section class="fee-section" id="camp-fees">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-camp-fee',
+              heading_level: 2,
+              imgPath: mix('/assets/images/fee_m/camp-color-title.png'),
+              alt: '森と星空のキャンプヴィレッジ　料金'
+            }) -%>
+          </div>
+
+          <p class="subpage-desc text-center">
+            各お部屋、のぞみの湯の料金は、以下それぞれのページをご確認ください。
+          </p>
+
+          <ul class="fee-image-list">
+            <li class="fee-image-item">
+              <a href="#">
+                <img src="<%- mix('/assets/images/fee_m/camp-1.jpg') -%>" alt="グランピング">
+                <p class="fee-image-text">グランピング</p>
+              </a>
+            </li>
+            <li class="fee-image-item">
+              <a href="#">
+                <img src="<%- mix('/assets/images/fee_m/camp-2.jpg') -%>" alt="ログキャビン">
+                <p class="fee-image-text">ログキャビン</p>
+              </a>
+            </li>
+            <li class="fee-image-item">
+              <a href="#">
+                <img src="<%- mix('/assets/images/fee_m/camp-3.jpg') -%>" alt="キャンプ">
+                <p class="fee-image-text">キャンプ</p>
+              </a>
+            </li>
+          </ul>
         </section>
 
       </div>

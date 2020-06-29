@@ -1,18 +1,22 @@
 <% if(dataMobiparkGuideItems) { %>
 <ul class="guide-list">
   <% dataMobiparkGuideItems.forEach( item => { %>
-    <li class="guide-items">
+    <li class="guide-items" data-age="<%- item.age %>" data-grade="<%- item.grade %>" data-passport="<%- item.passport %>" >
       <p class="media-title media-title-programdetails">
         <span class="media-title-text"><%- item.title %></span>
       </p>
       <div class="wrapper-container">
         <div class="area-item-image-wrapper">
-          <img src="<%- item.imgPath %>" alt="Mobi Park">
+          <a href="<%- item.link %>">
+            <img src="<%- item.imgPath %>" alt="Mobi Park">
+          </a>
         </div>
         <div class="area-item-desc-wrapper">
           <h3 class="subpage-title">
-            <span><%- item.colorTitle %> </span>
-            <img class="passport" src="<%= mix('/assets/images/mobipark-guide/icon_pass.png') %>" alt="Passport">
+            <span><a href="<%- item.link %>"><%- item.colorTitle %> </a></span>
+            <% if(item.passport) { %>
+              <img class="passport" src="<%= mix('/assets/images/mobipark-guide/icon_pass.png') %>" alt="Passport">
+            <% } %>
           </h3>
           <ul class="carbike-article-list">
             <ul class="carbike-article-list">

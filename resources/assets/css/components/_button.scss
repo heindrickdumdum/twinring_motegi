@@ -280,3 +280,12 @@
   }
 
 }
+
+@at-root .foodsm-button {//foods_m page
+  border-color: $color-green !important;
+  color: $color-green;
+}
+
+@at-root .location-btn {//access page
+  background-color: $color-white;
+}

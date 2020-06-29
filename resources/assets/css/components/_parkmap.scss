@@ -238,6 +238,12 @@
     width: calc(100% - 23px);
   }
 
+  @at-root .page-twinringmotegi & {//twinringmotegi page
+    @include min-screen($breakpoint-mobile + 1) {
+      top: 238px !important;
+    }
+  }
+
   @at-root .smart-entry & {//smart entry page
     @include min-screen($breakpoint-mobile + 1) {
       top: 315px;
@@ -264,6 +270,10 @@
   svg {
     width: 100%;
     height: 12px;
+  }
+
+  @at-root .page-twinringmotegi & {//twinringmotegi page
+    transform: rotate(90deg);
   }
 }
 

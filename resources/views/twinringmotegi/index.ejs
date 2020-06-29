@@ -8,11 +8,11 @@
 
 <div class="lig-content">
   <div class="subpage subpage-twinringmotegi page-twinringmotegi">
-    <div class="mv mv-subpage mv-subpage-twinringmotegi">
+    <div class="mv mv-subpage-twinringmotegi">
       <ul class="mv-list">
         <li class="mv-item">
-          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/twinringmotegi/pc/areaindex-mv.jpg') %>);"></div>
-          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/twinringmotegi/sp/areaindex-mv.jpg') %>);"></div>
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/twinringmotegi/pc/areaindex-mv.png') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/twinringmotegi/sp/areaindex-mv.png') %>);"></div>
         </li>
       </ul>
 
@@ -21,7 +21,7 @@
           <%- include('/partials/heading', {
             modifier: 'heading-hellowoods',
             heading_level: 1,
-            text: 'Area & Facility',
+            text: 'Aria , Attraction',
             subtextvg: 'twinringmotegi-top-title',
             altSubtextvg: 'エリア・施設'
           }) %>
@@ -56,6 +56,10 @@
 
             </div>
     
+            <p class="subpage-desc text-center">
+              家族みんなが1日中楽しめる全7つのエリアで構成された森の中のモビリティテーマパーク。<br class="u-show-pc"/>
+              ここにしかない冒険と発見の旅に出かけよう。
+            </p>
     
             <div class="parkmap-inner">
               <div class="parkmap-image">
@@ -117,13 +121,9 @@
                   }) %>
                 </div>
 
-                <p class="adventure-content-copy u-show-pc">
-                  ガイドウォークやジップライン、研究室展示や、自然のクラフト体験など、実際に広大な森を歩きながら、<br/>
-                  自然とふれあいながら、遊び・学べる、体験型アトラクション・プログラムが満載です。
-                </p>
-
-                <p class="adventure-content-copy u-show-sp">
-                  ガイドウォークやジップライン、研究室展示や、自然のクラフト体験など、実際に広大な森を歩きながら、自然とふれあいながら、遊び・学べる、体験型アトラクション・プログラムが満載です。
+                <p class="adventure-content-copy">
+                  森を家族で散策しながら、生きものや植物の不思議を見つけよう。<br class="u-show-pc"/>
+                  ハローウッズには生きものの研究所や絶景・くつろぎスポット、迷路など“発見”につながる仕掛けがいっぱい。ハローウッズは子どもたちが自然とのふれあいを通して、生きるチカラを育める場所です。 
                 </p>
 
                 <div class="l-button">
@@ -156,15 +156,16 @@
                   }) %>
                 </div>
 
-                <p class="adventure-content-copy u-show-pc">
-                  子どもたちが自ら”操れる”のりものと、チャレンジの要素がつまった巨大迷路・アスレチックで、思いっきり遊ぶことができる森のアトラクションテーマパークです。<br/>
-                  ただ楽しいだけじゃない、達成の喜びを体験できます。
+                <p class="adventure-content-copy">
+                  モビパークには、森をテーマに親子でチャレンジできるアスレチックや立体迷路、<br class="u-show-pc"/>
+                  子どもが自由に操れるクルマやバイクのアトラクションがいっぱい。<br class="u-show-pc"/>
+                  モビパークは、そんな子どもたちのステップアップを応援します。
                 </p>
 
-                <p class="adventure-content-copy u-show-sp">
+                <!-- <p class="adventure-content-copy u-show-sp">
                   子どもたちが自ら”操れる”のりものと、チャレンジの要素がつまった巨大迷路・アスレチックで、思いっきり遊ぶこと <br/>
                   ができる森のアトラクションテーマパークです。ただ楽しいだけじゃない、達成の喜びを体験できます。
-                </p>
+                </p> -->
 
                 <div class="l-button">
                   <%- include('/partials/button', {
@@ -196,16 +197,16 @@
                   }) %>
                 </div>
 
-                <p class="adventure-content-copy u-show-pc">
-                  贅沢空間でのグランピングやログキャビンでの宿泊やテントでのキャンプを <br/>
-                  お楽しみいただけます。ホテルのシェフによる厳選食材のBBQや、<br/>
-                  ビギナーも安心できる充実した設備が魅力のアウトドアエリアです。
+                <p class="adventure-content-copy">
+                  都会を離れ、森の中で味わう癒しのひととき。ホテルシェフが季節ごとに監修する<br class="u-show-pc"/>
+                  こだわりのBBQ、星のソムリエがナビゲートする星空観望…。<br class="u-show-pc"/>
+                  ここにしかない極上のアウトドア体験を家族と一緒に。
                 </p>
 
-                <p class="adventure-content-copy u-show-sp">
+                <!-- <p class="adventure-content-copy u-show-sp">
                   贅沢空間でのグランピングやログキャビンでの宿泊やテントでのキャンプをお楽しみいただけます。ホテルのシェフによ <br/>
                   る厳選食材のBBQや、ビギナーも安心できる充実した設備が魅力のアウトドアエリアです。
-                </p>
+                </p> -->
 
                 <div class="l-button">
                   <%- include('/partials/button', {
@@ -237,13 +238,12 @@
                   }) %>
                 </div>
 
-                <p class="adventure-content-copy u-show-pc">
-                  森をテーマにした癒やしに包まれるお部屋でくつろぎ、レストラン・料亭で、栃木県、茂木町の美味しい食材を使ったこだわりのお食事で、優雅なひとときを、ご家族みんなで、お過ごしください。
+                <p class="adventure-content-copy">小高い丘の上、フィトンチッド溢れる森に囲まれたホテルで寛ぎと癒しの時間を過ごそう。満天の星を眺めながら優雅に疲れを癒す露天風呂、ここでしか味わえない地元素材を使ったこだわりグルメ、宿泊者限定のアクティビティ、そのすべてが特別な体験としてあなたとご家族をおもてなしします。
                 </p>
 
-                <p class="adventure-content-copy u-show-sp">
+                <!-- <p class="adventure-content-copy u-show-sp">
                   森をテーマにした癒やしに包まれるお部屋でくつろぎ、レストラン・料亭で、栃木県、茂木町の美味しい食材を使ったこだわりのお食事で、優雅なひとときを、ご家族みんなで、お過ごしください。
-                </p>
+                </p> -->
 
                 <div class="l-button">
                   <%- include('/partials/button', {
@@ -275,13 +275,15 @@
                   }) %>
                 </div>
 
-                <p class="adventure-content-copy u-show-pc">
-                  MotoGP™世界選手権、SUPER GT、スーパーフォーミュラなど国内外のトップレースをはじめアマチュア選手が楽しめる耐久レースも多数開催するサーキットです。レースだけでなく、国際規格のサーキットで本格走行も体験できます。
+                <p class="adventure-content-copy">
+                  世界中が興奮するバイクレース「MotoGP™️」、国内最大の動員を誇る自動車レース<br class="u-show-pc"/>
+                  「SUPER GT」、数々のドラマが生まれるモータースポーツ。<br class="u-show-pc"/>
+                  未体験のサウンド、パワー、スピードをからだ全体で感じよう。
                 </p>
 
-                <p class="adventure-content-copy u-show-sp">
+                <!-- <p class="adventure-content-copy u-show-sp">
                   MotoGP™世界選手権、SUPER GT、スーパーフォーミュラなど国内外のトップレースをはじめアマチュア選手が楽しめる耐久レースも多数開催するサーキットです。レースだけでなく、国際規格のサーキットで本格走行も体験できます。
-                </p>
+                </p> -->
 
                 <div class="l-button">
                   <%- include('/partials/button', {
@@ -313,14 +315,15 @@
                   }) %>
                 </div>
 
-                <p class="adventure-content-copy u-show-pc">
-                  Hondaの「技術の歴史」と「ものづくりへの情熱」、「チャレンジングスピリット」をコンセプトに、<br/>
-                  2輪、4輪、汎用製品、レーシングマシン、国内外の良きライバル車など約300台を展示しています。
+                <p class="adventure-content-copy">
+                  Honda創業期からの歴史が詰まった世界唯一のミュージアム。創業者 本田宗一郎の熱い言葉が<br class="u-show-pc"/>
+                  刻み込まれた壁面、伝説のF1マシン、ドラマを生んだGPマシン、時代を彩った市販車など約300台を<br class="u-show-pc"/>
+                  目の前にすれば、当時の記憶が色褪せずに甦ることでしょう。
                 </p>
 
-                <p class="adventure-content-copy u-show-sp">
+                <!-- <p class="adventure-content-copy u-show-sp">
                   Hondaの「技術の歴史」と「ものづくりへの情熱」、「チャレンジングスピリット」をコンセプトに、2輪、4輪、汎用製品、レーシングマシン、国内外の良きライバル車など約300台を展示しています。
-                </p>
+                </p> -->
 
                 <div class="l-button">
                   <%- include('/partials/button', {
@@ -358,15 +361,16 @@
                   </span>
                 </h3> -->
 
-                <p class="adventure-content-copy u-show-pc">
-                  安全運転をアクティブに学んでいただく参加体験型の施設です。<br/>
-                  インストラクターの丁寧な指導により、運転経験に自信のない方も車やバイクでの走行を <br/>
-                  お楽しみいただけます。親子向けのバイクのスクールや、企業研修プログラムも提供しています。
+                <p class="adventure-content-copy">
+                  楽しみながら運転の基本を学び、危険な状況を安全に体感しよう。<br class="u-show-pc"/>
+                  普段は決してできない事故直前の疑似体験をはじめ、初心者向けのレッスンやレベルアップのための<br class="u-show-pc"/>
+                  トレーニングを経験豊富なインストラクターとともに楽しみましょう。<br class="u-show-pc"/>
+                  親子バイクスクールや企業向けプログラムなども人気。
                 </p>
 
-                <p class="adventure-content-copy u-show-sp">
+                <!-- <p class="adventure-content-copy u-show-sp">
                   安全運転をアクティブに学んでいただく参加体験型の施設です。インストラクターの丁寧な指導により、運転経験に自信のない方も車やバイクでの走行をお楽しみいただけます。親子向けのバイクのスクールや、企業研修プログラムも提供しています。
-                </p>
+                </p> -->
 
                 <div class="l-button">
                   <%- include('/partials/button', {

@@ -5,6 +5,10 @@
   height: auto;
   margin-bottom: 50px;
 
+  &-graph {//foods m page
+    margin-bottom: 10px;
+  }
+
   &-restaurant {
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 20px;
@@ -288,6 +292,10 @@
   padding: 0 20px;
   width: 100%;
 
+  @at-root .page-fee & {//fee page
+    margin-bottom: 0px;
+  }
+
   @at-root .shops-information & {//breakfast marcherant page
     @include max-screen($breakpoint-mobile) {
       padding: {
@@ -402,6 +410,10 @@
     text-align: left;
     letter-spacing: 0.16em;
     margin-bottom: 33px;
+
+    @at-root .page-fee & {//fee page
+      margin-bottom: 30px;
+    }
 
     @at-root .section-camp {
       @include min-screen($breakpoint-mobile + 1) {
@@ -1064,6 +1076,21 @@
   max-width: 800px;
   margin: 50px auto;
 
+  @at-root .page-fee & {//fee page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin: {
+        top: 26px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+      }
+    }
+
+    &.attraction-collapse {
+      max-width: 100%;
+    }
+  }
+
   @at-root .dinner-set-marcherant & {
     &:nth-of-type(2) {
       @include min-screen($breakpoint-mobile + 1) {
@@ -1083,6 +1110,11 @@
     text-align: center;
     text-decoration: underline;
     font-weight: bold;
+
+    @at-root .page-fee & {//fee page
+      font-size: 18px;
+      letter-spacing: 0.1em;
+    }
 
     @at-root .breakfast-marcherant & {//breakfast marcherant page
       @include min-screen($breakpoint-mobile + 1) {
@@ -1785,6 +1817,23 @@
   }
 }
 
+@at-root .page-twinringmotegi {//twinringmotegi page
+  .subpage-desc {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -15px;
+      position: relative;
+      z-index: $z-max;
+    }
+  }
+}
+
+@at-root .foodsm {
+  .subpage-desc {
+    margin-top: 10px;
+    background-color: $color-white;
+  }
+}
+
 .link {
   color: inherit;
   text-decoration: underline;
@@ -1796,4 +1845,67 @@
   &.line {
     text-decoration: underline;
   }
+}
+
+.display-block {
+  display: block;
+}
+
+@at-root .subpage-desc {
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  margin-top: 20px;
+  margin-bottom: 42px;
+
+  &.attraction-desc {
+    margin-top: 24px !important;
+  }
+
+  &.attraction-bottom-space {
+    margin-bottom: 56px !important;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12.752px;    
+  }
+}
+
+@at-root .page-fee {//fee page
+  .fee-image {
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      width: 320px;
+      margin-bottom: 37px;
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        margin-bottom: 14px;
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 1.667;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .fee-section {
+    margin-top: 50px;
+  }
+}
+
+@at-root .color-red {
+  color: #ff3333;
 }

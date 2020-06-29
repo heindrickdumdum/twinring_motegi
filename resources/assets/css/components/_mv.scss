@@ -636,9 +636,15 @@
     bottom: 30px;
     width: 100%;
     max-width: 650px;
+    fill: #fff;
     .heading-text {
       font-size: 45px;
       -webkit-text-fill-color: #fff;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 24px;
+        text-align: left;
+      }
     }
     .heading-subtext {
       width: 100%;
@@ -649,6 +655,23 @@
 
     @include max-screen ($breakpoint-mobile) {
       left: auto;
+    }
+  }
+
+  &.mv-collection-pit {
+    max-width: 270px;
+
+    @include max-screen ($breakpoint-mobile) {
+      .heading {
+        margin-bottom: 10px;
+      }
+      .heading-subtext {
+        max-width: 180px;
+        height: 37px;
+        margin-top: 0px;
+        margin-left: 0;
+        top: 0px;
+      }
     }
   }
 

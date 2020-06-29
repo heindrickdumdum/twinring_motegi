@@ -93,6 +93,7 @@
     display: flex;
     justify-content: space-between;
     font-family: $font-hiragino;
+    align-items: center;
 
     @include max-screen($breakpoint-mobile) {
       * {
@@ -233,7 +234,10 @@
 
         &-gelato {//gelato
           background-size: contain;
-          height: 343px;
+          // height: 343px;
+          @include min-screen($breakpoint-mobile + 1) {
+            height: 276px;
+          }
 
           @include max-screen($breakpoint-mobile) {
             height: 171px;
@@ -329,7 +333,7 @@
 
           &:nth-of-type(1) {
             @include max-screen($breakpoint-mobile) {
-              margin-bottom: 10px;
+              margin-bottom: 0px;
             }
           }
 
@@ -343,8 +347,8 @@
             padding: 4px 10px;
 
             @include max-screen($breakpoint-mobile) {
-              font-size: 12px !important;
-              margin-left: 20px;
+              font-size: 10px !important;
+              margin-left: 10px;
               padding-left: 5px;
               padding-right: 5px;
             }
@@ -469,7 +473,7 @@
       width: 100%;
 
       &:last-child {
-        margin-bottom: 0px;
+        margin-bottom: 0px !important;
       }
     }
     
@@ -1328,6 +1332,20 @@
       @include max-screen($breakpoint-mobile) {
         height: 265.5px;
       }
+    }
+  }
+}
+
+@at-root .page-rocco {//rocco page
+  .restaurant-banner {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -30px;
+      margin-bottom: 150px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -40px;
+      margin-bottom: 70px;
     }
   }
 }

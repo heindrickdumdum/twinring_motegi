@@ -1804,7 +1804,15 @@
 }
 
 @at-root .mv-forest-experience-program {//forest program
+  .heading {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 0;
+    }
+  }
   .heading-subtext {
+    max-width: 265px;
+    margin-left: 0;
+
     svg {
       fill: $color-white;
     }
@@ -1812,7 +1820,9 @@
     @include min-screen($breakpoint-mobile + 1) {
       height: 55px !important;
       max-width: 512px !important;
+      margin-left: auto;
       // margin-top: 33px !important;
     }
   }
+
 }

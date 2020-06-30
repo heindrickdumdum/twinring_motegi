@@ -7,8 +7,8 @@
 <%- include('/partials/head', { pageId, title }) -%>
 
 <div class="lig-content">
-  <div class="subpage subpage-restaurant restaurant-wrapper">
-    <div class="mv mv-restaurant mv-subpage-restaurant">
+  <div class="subpage subpage-restaurant restaurant-wrapper page-rocco">
+    <div class="mv mv-top mv-restaurant mv-subpage-restaurant">
       <!-- <div class="mv-buttons">
         <ul class="mv-buttons-list">
           <li class="mv-buttons-item">
@@ -19,11 +19,19 @@
         </ul>
       </div> -->
 
-      <ul class="mv-list">
-        <li class="mv-item">
+      <ul class="mv-list mv-list-top js-mv-list mv-list-marcherant">
+        <li class="mv-item js-mv-item js-mv-item-first">
           <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/rocco/mv-img.jpg') %>);"></div>
           <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/rocco/mv-img-sp.jpg') %>);"></div>
         </li>
+        <li class="mv-item js-mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/rocco/mv-img2.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/rocco/mv-img-sp.jpg') %>);"></div>
+        </li>
+        <!-- <li class="mv-item js-mv-item ">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/rocco/mv-img3.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/rocco/mv-img-sp.jpg') %>);"></div>
+        </li> -->
       </ul>
 
       <div class="l-container mv-container">
@@ -46,10 +54,10 @@
           }) %>
         </div>
 
-        <!-- <div class="u-show-pc mv-today mv-logo mv-granroom-logo" style="background-image: url(<%= mix('/assets/images/granturismo/mv-logo.png') %>);">
+        <div class="u-show-pc mv-today mv-logo mv-granroom-logo" style="background-image: url(<%= mix('/assets/images/rocco/mv-logo.png') %>);">
           <div class="mv-l-inner">
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
 
@@ -83,9 +91,10 @@
             </div>
           </div>
 
-          <!-- <p class="suboage-desc">
-            <span>無料で体験できるグランツーリスモSPORT。好きな車を選んで、様々なコースに挑戦しよう！</span>
-          </p> -->
+          <p class="suboage-desc">
+            森の生きものや植物をモチーフにしたオリジナルジェラートが季節ごとに登場。<br class="u-show-pc"/>
+            コンテストで全国1位に輝いたジェラート店とコラボし、味はもちろん見た目の可愛さにもこだわっています。
+          </p>
 
           <h2 class="subpage-title">
             <span>店舗情報</span>
@@ -96,7 +105,7 @@
               <tr class="table-row">
                 <th class="table-head">場所</th>
                 <td class="table-col">
-                  中央エントランス横 <a class="link" href="/map_m/">MAP</a>
+                  中央エントランス横 <a class="link" href="/map_m/">Mapを見る</a>
                   <!-- <br class="u-show-sp"/>
                   <a class="link" href="/map_m/"></a>
                     <span>MAP</span> -->
@@ -172,21 +181,6 @@
 
         </section>
 
-        <!-- restaurant banner -->
-        <div class="restaurant-banner">
-          <div class="subpage-inner">
-            <div class="banner-text">
-              <h2 class="banner-title">
-                <span>フレーバーの変更・売り切れについて</span>
-              </h2>
-              <p class="banner-desc">
-                ※季節によりご用意するフレーバーが異なりますので店舗のショーケースよりお選びください。<br/>
-                ※ジェラートのフレーバーは予告なしに変わることがございます。 また、売り切れになる場合もございますので予めご了承ください。
-              </p>
-            </div>
-          </div>
-        </div>
-
         <!-- restaurant sub menu rocco -->
         <div class="restaurant-sub-menu">
           <div class="subpage-inner">
@@ -202,9 +196,9 @@
                         <span class="main-text">
                           <%- item.title -%>
                         </span>
-                        <span class="sub-text">
+                        <!-- <span class="sub-text">
                           <%- item.subTitle -%>
-                        </span>
+                        </span> -->
                       </div>
                       <div class="sub-menu-price">
                         <span>
@@ -215,6 +209,21 @@
                   </li>
                 <% }); %>
               </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- restaurant banner -->
+        <div class="restaurant-banner">
+          <div class="subpage-inner">
+            <div class="banner-text">
+              <!-- <h2 class="banner-title">
+                <span>フレーバーの変更・売り切れについて</span>
+              </h2> -->
+              <p class="banner-desc">
+                ※季節ごとに旬のフレーバーへと入れ替わります。<br/>
+                ※人気フレーバーは売り切れになる場合がございます。
+              </p>
             </div>
           </div>
         </div>
@@ -268,13 +277,18 @@
                   <% getData().data.roccoDrinksMenu2.forEach(item => { %>
                     <li class="drink-menu-item drink-menu2-item">
                       <div class="drink-menu-title drink-menu2-title">
-                        <span><%- item.title -%></span>
+                        <span>
+                          <%- item.title -%> <br/>
+                          <% if( item.subtext !== '' ) { %>
+                          <%- item.subtext -%>
+                          <% } %>
+                        </span>
                         <span><%- item.price -%></span>
                       </div>
                       <% if( item.subtext !== '' ) { %>
-                      <div class="drink-menu-subtext drink-menu2-subtext">
-                        <span><%- item.subtext -%></span>
-                      </div>
+                      <!-- <div class="drink-menu-subtext drink-menu2-subtext">
+                        <span><%- item.price -%></span>
+                      </div> -->
                       <% } %>
                     </li>
                   <% }); %>
@@ -293,7 +307,7 @@
                 <%- include('/partials/heading', {
                   modifier: 'heading-wrap-center heading-rocco-ad',
                   subtextvg: 'rocco-ad-title',
-                  altSubtextvg: '栃木県の人気ジェラート店とツインリングもてぎがコラボレーション'
+                  altSubtextvg: '「森のジェラテリア ROCCO」は、栃木県の人気ジェラート店とコラボしています'
                 }) %>
               </div>
 
@@ -301,52 +315,59 @@
                 <%- include('/partials/heading', {
                   modifier: 'heading-wrap-center heading-rocco-ad',
                   subtextvg: 'rocco-ad-title-sp',
-                  altSubtextvg: '栃木県の人気ジェラート店とツインリングもてぎがコラボレーション'
+                  altSubtextvg: '「森のジェラテリア ROCCO」は、栃木県の人気ジェラート店とコラボしています'
                 }) %>
               </div>
 
-              <p class="restaurant-ad-desc u-show-pc">
-                2017年ジェラートマエストロコンテスト全国1位輝いた「ジェラートマスモ」と老舗養蜂園の黒田養蜂園手がける「Dolce Miele」道の駅しもつけの <br/>
-                人気ジェラート専門店「Gelato＆Cafe伊深いちご園」<br/>
-                が「森のジェラテリア　ROCCO」とコラボ！！
-              </p>
-
-              <p class="restaurant-ad-desc u-show-sp">
+              <!-- <p class="restaurant-ad-desc u-show-sp">
                 2017年ジェラートマエストロコンテスト全国1位輝いた「ジェラートマスモ」と老舗養蜂園の黒田養蜂園手がける「Dolce Miele」道の駅しもつけの人気ジェラート専門店「Gelato＆Cafe伊深いちご園」が「森のジェラテリア　ROCCO」とコラボ！！
-              </p>
+              </p> -->
+
+              <div class="restaurant-ad-button">
+                <p class="restaurant-ad-desc">
+                  2017年ジェラートマエストロコンテスト全国１位に輝いた「ジェラートマスモ」
+                </p>
+
+                <div class="rocco-ad-button">
+                  <%- include('/partials/button-arrow-white', {
+                    modifier: 'button-rocco',
+                    text: '公式サイトはこちら',
+                    link: 'https://www.masumogelato.com/',
+                    newTab: true
+                  }) -%>
+                </div>
+
+                <p class="restaurant-ad-desc">
+                  老舗養蜂園の黒田養蜂園が手がける「Dolce Miele」
+                </p>
+
+                <div class="rocco-ad-button">
+                  <%- include('/partials/button-arrow-white', {
+                    modifier: 'button-rocco',
+                    text: '公式サイトはこちら',
+                    link: 'https://www.kuroda-honey.com/',
+                    newTab: true
+                  }) -%>
+                </div>
+
+                <p class="restaurant-ad-desc">
+                  道の駅しもつけの人気ジェラート店「Gelato&Caffe伊澤いちご園」
+                </p>
+
+                <div class="rocco-ad-button">
+                  <%- include('/partials/button-arrow-white', {
+                    modifier: 'button-rocco',
+                    text: '公式サイトはこちら',
+                    link: 'https://www.ichigonogelato.jp/',
+                    newTab: true
+                  }) -%>
+                </div>
+              </div>
             </div>
           </div>
-
+<!-- 
           <div class="subpage-inner">
-            <div class="restaurant-ad-button">
-              <div class="rocco-ad-button">
-                <%- include('/partials/button-arrow-white', {
-                  modifier: 'button-rocco',
-                  text: 'ジェラート　マスモのサイトはこちら',
-                  link: 'https://www.masumogelato.com/',
-                  newTab: true
-                }) -%>
-              </div>
-
-              <div class="rocco-ad-button">
-                <%- include('/partials/button-arrow-white', {
-                  modifier: 'button-rocco',
-                  text: '黒田養蜂園のサイトはこちら',
-                  link: 'https://www.kuroda-honey.com/',
-                  newTab: true
-                }) -%>
-              </div>
-
-              <div class="rocco-ad-button">
-                <%- include('/partials/button-arrow-white', {
-                  modifier: 'button-rocco',
-                  text: '伊澤いちご園のサイトはこちら',
-                  link: 'https://www.ichigonogelato.jp/',
-                  newTab: true
-                }) -%>
-              </div>
-            </div>
-          </div>
+          </div> -->
         </div>
 
       </div>

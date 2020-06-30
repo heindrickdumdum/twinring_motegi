@@ -288,6 +288,11 @@
     border-bottom: 7px solid #c3e8d8;
 
     .tab-item {
+      &-slide {
+        width: auto;
+        margin-right: 10px;
+      }
+
       font-size: 15px;
       letter-spacing: 0.1em;
       text-align: center;   
@@ -298,8 +303,8 @@
       padding: 16px 17.9px 13px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
-      margin-right: 10px;
       white-space: nowrap;
+      margin-right: 10px;
       width: auto;
 
       &:last-child {

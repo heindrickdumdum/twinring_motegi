@@ -18,22 +18,12 @@
         </li>
       </ul>
       <div class="l-container mv-container">
-        <div class="mv-heading mv-heading-default u-show-pc">
+        <div class="mv-heading mv-heading-default">
           <%- include('/partials/heading', {
             modifier: 'mv-forest-experience-program',
             heading_level: 1,
             text: 'Forest Experience Program',
             subtextvg: 'forest-program-top-title',
-            altSubtextvg: '予約制森の体験プログラム'
-          }) %>
-        </div>
-
-        <div class="mv-heading mv-heading-default u-show-sp">
-          <%- include('/partials/heading', {
-            modifier: 'mv-forest-experience-program',
-            heading_level: 1,
-            text: 'Forest Experience Program',
-            subtextvg: 'forest-program-top-title2-sp',
             altSubtextvg: '予約制森の体験プログラム'
           }) %>
         </div>
@@ -137,20 +127,20 @@
             <span class="media-title-text">スケジュール</span>
           </p>
 
-          <table class="table table-programdetails">
+          <table class="table table-programdetails custom">
             <tbody>
               <tr class="table-row">
-                <th class="table-head">09:00<br>※送迎をご利用の方</th>
+                <th class="table-head table-head-custom">09:00<br>※送迎<br class="u-show-sp">ご利用の方</th>
                 <td class="table-col border-right">
                   集合
                 </td>
-                <td class="table-col">
-                  宇都宮（JR宇都宮駅東口）<br>※状況により集合場所変更の可能性がございます。
+                <td class="table-col" style="font-weight: normal;">
+                  <b>宇都宮（JR宇都宮駅東口）</b><br>※状況により集合場所変更の可能性がございます。
                 </td>
               </tr>
 
               <tr class="table-row">
-                <th class="table-head">09:30</th>
+                <th class="table-head table-head-custom">09:30</th>
                 <td class="table-col border-right">
                   受付
                 </td>
@@ -159,7 +149,7 @@
                 </td>
               </tr>
               <tr class="table-row">
-                <th class="table-head">10:00</th>
+                <th class="table-head table-head-custom">10:00</th>
                 <td class="table-col border-right">
                   作品のイメージづくり<br>
                   作品づくり<br>
@@ -174,7 +164,7 @@
                 </td>
               </tr>
               <tr class="table-row">
-                <th class="table-head">16:00</th>
+                <th class="table-head table-head-custom">16:00</th>
                 <td class="table-col border-right">
                   解散
                 </td>

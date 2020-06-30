@@ -1986,6 +1986,12 @@
   }
 }
 
+.subpage-inner-pit-margin {
+  @include min-screen ($breakpoint-mobile+1) {
+    margin-bottom: 110px;
+  }
+}
+
 @at-root .color-red {
   color: #ff3333;
 }

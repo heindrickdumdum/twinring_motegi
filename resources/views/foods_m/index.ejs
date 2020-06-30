@@ -9,15 +9,6 @@
 <div class="lig-content">
   <div class="subpage subpage-restaurant restaurant-wrapper foodsm">
     <div class="mv mv-restaurant mv-subpage-restaurant">
-      <div class="mv-buttons">
-        <ul class="mv-buttons-list">
-          <li class="mv-buttons-item">
-            <a class="mv-buttons-link" href="/hoteltwinring/information/">
-              <span>ご予約</span>
-            </a>
-          </li>
-        </ul>
-      </div>
       <ul class="mv-list">
         <li class="mv-item">
           <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/restaurant/mv-img.jpg') %>);"></div>
@@ -76,7 +67,8 @@
           <!-- marcherant -->
           <li class="adventure-list">
             <div class="adventure-bg slide-container">
-              <div class="swiper-container slider-restaurant js-slider-restaurant-marcherant">
+              <div class="swiper-container slider-restaurant">
+                <!-- <div class="swiper-container slider-restaurant js-slider-restaurant-marcherant"> -->
                 <ul class="swiper-wrapper">
                   <% getData().data.restaurantSlider.marcherant.forEach( slide => { %>
                   <li class="swiper-slide">
@@ -120,12 +112,12 @@
                 </div>
 
                 <p class="adventure-content-copy">
-                  地元ならではの旬の食材を使い、シェフが丁寧に仕上げた和洋中のお料理やメインの石窯料理、<br class="u-show-pc"/>
+                  <!-- 地元ならではの旬の食材を使い、シェフが丁寧に仕上げた和洋中のお料理やメインの石窯料理、<br class="u-show-pc"/>
                   地元で収穫した肉・魚・野菜すべてが味わえる特製プレート、<br class="u-show-pc"/>
                   種類豊富な彩りスイーツのワゴンサービスなど<br class="u-show-pc"/>
-                  家族みんなで楽しめる豊富なビュッフェメニューをお楽しみいただけます。
-                  <!-- 地元ならではの食材と採れたて野菜を使い、豊富なビュッフェメニューと <br class="u-show-pc"/>
-                  季節のプレートランチをお楽しみいただけます。 -->
+                  家族みんなで楽しめる豊富なビュッフェメニューをお楽しみいただけます。 -->
+                  地元ならではの食材と採れたて野菜を使い、豊富なビュッフェメニューと <br class="u-show-pc"/>
+                  季節のプレートランチをお楽しみいただけます。
                 </p>
 
                 <div class="l-button">
@@ -142,7 +134,8 @@
           <!-- diningtoya -->
           <li class="adventure-list">
             <div class="adventure-bg">
-              <div class="swiper-container slider-restaurant js-slider-restaurant-toya">
+              <div class="swiper-container slider-restaurant">
+                <!-- <div class="swiper-container slider-restaurant js-slider-restaurant-toya"> -->
                 <ul class="swiper-wrapper slider-wrapper">
                   <% getData().data.restaurantSlider.toya.forEach( slide => { %>
                   <li class="swiper-slide slider-item">
@@ -178,12 +171,12 @@
                 </div>
 
                 <p class="adventure-content-copy">
-                  近隣の旬な食材を活用し、素材の持ち味を生かし一品一品丁寧に仕上げております。<br class="u-show-pc"/>
+                  <!-- 近隣の旬な食材を活用し、素材の持ち味を生かし一品一品丁寧に仕上げております。<br class="u-show-pc"/>
                   茂木（里山）ならではの“滋味”をご堪能いただける料理でおもてなし。<br class="u-show-pc"/>
                   料理長 谷田部が選んだ益子焼の陶器に盛り付けた春夏秋冬のおまかせコースをご用意します。<br class="u-show-pc"/>
-                  お子様御膳、幼児御膳も取り揃えておりますので、家族連れも心地良い時間を過ごしていただけます。
-                  <!-- 美食家達の舌を唸らせた料理人 谷田部が、<br class="u-show-pc"/>
-                  茂木町ならではの”里山の滋味（じみ）"でおもてなしいたします。 -->
+                  お子様御膳、幼児御膳も取り揃えておりますので、家族連れも心地良い時間を過ごしていただけます。 -->
+                  美食家達の舌を唸らせた料理人 谷田部が、<br class="u-show-pc"/>
+                  茂木町ならではの”里山の滋味（じみ）"でおもてなしいたします。
                 </p>
 
                 <div class="l-button">
@@ -200,7 +193,8 @@
           <!-- oak -->
           <li class="adventure-list">
             <div class="adventure-bg"">
-              <div class="swiper-container slider-restaurant js-slider-restaurant-oak">
+              <div class="swiper-container slider-restaurant">
+              <!-- <div class="swiper-container slider-restaurant js-slider-restaurant-oak"> -->
                 <ul class="swiper-wrapper slider-wrapper">
                   <% getData().data.restaurantSlider.oak.forEach( slide => { %>
                   <li class="swiper-slide slider-item">
@@ -235,12 +229,12 @@
                 </div>
 
                 <p class="adventure-content-copy">
-                  家族みんなで楽しめる『森』をテーマにしたオリジナルメニューがいっぱい。<br class="u-show-pc"/>
+                  <!-- 家族みんなで楽しめる『森』をテーマにしたオリジナルメニューがいっぱい。<br class="u-show-pc"/>
                   ミートソース の夜空にお星さまいっぱいの「森と星空のグランピングオムライス」、<br class="u-show-pc"/>
                   “巨大ネットの森 SUMIKA”をイメージした「SUMIKAチーズバーガー」など <br class="u-show-pc"/>
-                  お子さま向けメニューも豊富な開放的なカフェレストランです。
-                  <!-- 「森」をテーマにしたここだけのオリジナルメニューがいっぱい。<br class="u-show-pc"/>
-                  お子さま向けのメニューも豊富で、家族みんなで楽しめる開放的なカフェレストランです。 -->
+                  お子さま向けメニューも豊富な開放的なカフェレストランです。 -->
+                  「森」をテーマにしたここだけのオリジナルメニューがいっぱい。<br class="u-show-pc"/>
+                  お子さま向けのメニューも豊富で、家族みんなで楽しめる開放的なカフェレストランです。
                 </p>
 
                 <div class="l-button">
@@ -254,124 +248,11 @@
             </div>
           </li>
 
-          <!-- granturismo -->
-          <li class="adventure-list">
-            <div class="adventure-bg">
-              <div class="swiper-container slider-restaurant js-slider-restaurant-granturismo">
-                <ul class="swiper-wrapper slider-wrapper">
-                  <% getData().data.restaurantSlider.turismo.forEach( slide => { %>
-                  <li class="swiper-slide slider-item">
-                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
-                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
-                  </li>
-                  <% }) %>
-                </ul>
-                <div class="swiper-pagination"></div>
-              </div>
-
-              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/granturismo-logo.png') %>);"></div>
-              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/granturismo-logo-sp.png') %>);"></div>
-            </div>
-
-            <div class="l-adventure-sp-container">
-              <div class="l-adventure">
-                <div class="l-section-title l-section-title-adventure">
-                  <%- include('/partials/heading', {
-                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-granturismo',
-                    subtextvg: 'restaurant-granturismo-title',
-                    altSubtextvg: 'グランツーリスモ カフェ'
-                  }) %>
-                </div>
-
-                <div class="l-section-title l-section-title-adventure">
-                  <%- include('/partials/heading', {
-                    modifier: 'heading-title-adventure-restaurant-gradient heading-title-adventure-restaurant-gradient-granturismo',
-                    imgPath: mix('/assets/images/restaurant/granturismo-gradient-subtext.png'),
-                    alt: 'レーシングコースエリア'
-                  }) %>
-                </div>
-
-                <p class="adventure-content-copy">
-                  PlayStation®️ のカーレースゲーム「グランツーリスモ」の世界観を<br class="u-show-pc"/>
-                  楽しみながら食事ができるレストランです。<br class="u-show-pc"/>
-                  ライバルにカツ（勝つ）という意味を込めた勝負飯定食「梅おろしカツ定食」や、<br class="u-show-pc"/>
-                  栃木のブランド豚を使った特製定食メニュー「とちぎゆめポーク使用　豚ごま肉の生姜焼き定食」<br class="u-show-pc"/>
-                  などの食べ応えのあるボリューム満点なメニューが豊富です。
-                  <!-- プレイステーションのカーレースゲーム「グランツーリスモ」の名を冠した<br class="u-show-pc"/>
-                  カフェスタイルのレストラン。ボリューム満点で食べ応えのあるメニューが豊富。 -->
-                </p>
-
-                <div class="l-button">
-                  <%- include('/partials/button', {
-                    modifier: 'button-adventure',
-                    text: 'もっと見る',
-                    link: '/foods_m/gran-turismo/'
-                  }) %>
-                </div>
-              </div>
-            </div>
-          </li>   
-          
-          <!-- forestkitchen -->
-          <li class="adventure-list">
-            <div class="adventure-bg">
-              <div class="swiper-container slider-restaurant js-slider-restaurant-toya">
-                <ul class="swiper-wrapper slider-wrapper">
-                  <% getData().data.restaurantSlider.kitchen.forEach( slide => { %>
-                  <li class="swiper-slide slider-item">
-                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
-                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
-                  </li>
-                  <% }) %>
-                </ul>
-                <div class="swiper-pagination"></div>
-              </div>
-
-              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/forestkitchen-logo.png') %>);"></div>
-              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/forestkitchen-logo-sp.png') %>);"></div>
-            </div>
-
-            <div class="l-adventure-sp-container">
-              <div class="l-adventure">
-                <div class="l-section-title l-section-title-adventure">
-                  <%- include('/partials/heading', {
-                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-forestkitchen',
-                    subtextvg: 'restaurant-forestkitchen-title',
-                    altSubtextvg: '森のキッチン どんぐり'
-                  }) %>
-                </div>
-
-                <div class="l-section-title l-section-title-adventure">
-                  <%- include('/partials/heading', {
-                    modifier: 'heading-title-adventure-restaurant-gradient heading-title-adventure-restaurant-gradient-forestkitchen',
-                    imgPath: mix('/assets/images/restaurant/forestkitchen-gradient-subtext.png'),
-                    alt: 'ハローウッズエリア'
-                  }) %>
-                </div>
-
-                <p class="adventure-content-copy">
-                  豊かな自然に囲まれたハローウッズの森の中にあるレストラン<br class="u-show-pc"/>
-                  キッズメニューの「森の木の葉カレープレート」や、「もてぎ名物ゆず塩ラーメン」など、<br class="u-show-pc"/>
-                  森あそびを満喫したあとに立ち寄りたいおなかも満足できるお食事処です。
-                  <!-- 豊かな自然に囲まれたハローウッズにあるレストラン。<br class="u-show-pc"/>
-                  森あそびを満喫した後におなかも満足できる食事処です。 -->
-                </p>
-
-                <div class="l-button">
-                  <%- include('/partials/button', {
-                    modifier: 'button-adventure',
-                    text: 'もっと見る',
-                    link: '#'
-                  }) %>
-                </div>
-              </div>
-            </div>
-          </li>
-          
           <!-- rocco -->
           <li class="adventure-list">
             <div class="adventure-bg">
-              <div class="swiper-container slider-restaurant js-slider-restaurant-rocco">
+              <div class="swiper-container slider-restaurant">
+              <!-- <div class="swiper-container slider-restaurant js-slider-restaurant-rocco"> -->
                 <ul class="swiper-wrapper slider-wrapper">
                   <% getData().data.restaurantSlider.rocco.forEach( slide => { %>
                   <li class="swiper-slide slider-item">
@@ -406,12 +287,12 @@
                 </div>
 
                 <p class="adventure-content-copy">
-                  人気ジェラート店とツインリンクもてぎがコラボレーション<br class="u-show-pc"/>
+                  <!-- 人気ジェラート店とツインリンクもてぎがコラボレーション<br class="u-show-pc"/>
                   栃木県が誇る名苺、とちおとめを贅沢に使った大人気ジェラート「とちおとめミルク」は<br class="u-show-pc"/>
                   お子様からお年寄りまで誰にでも愛される超定番ジェラートです。<br class="u-show-pc"/>
-                  その他、ツインリンクもてぎ限定ジェラートもお楽しみいただけます。
-                  <!-- ジェラートコンテスト全国１位に輝いた店舗など、<br class="u-show-pc"/>
-                  栃木県の人気店とコラボした限定ジェラートをお楽しみいただけます。 -->
+                  その他、ツインリンクもてぎ限定ジェラートもお楽しみいただけます。 -->
+                  ジェラートコンテスト全国１位に輝いた店舗など、<br class="u-show-pc"/>
+                  栃木県の人気店とコラボした限定ジェラートをお楽しみいただけます。
                 </p>
 
                 <div class="l-button">
@@ -424,6 +305,126 @@
               </div>
             </div>
           </li>
+
+          <!-- forestkitchen -->
+          <li class="adventure-list">
+            <div class="adventure-bg">
+              <div class="swiper-container slider-restaurant">
+              <!-- <div class="swiper-container slider-restaurant js-slider-restaurant-toya">   -->
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.kitchen.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/forestkitchen-logo.png') %>);"></div>
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/forestkitchen-logo-sp.png') %>);"></div>
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-forestkitchen',
+                    subtextvg: 'restaurant-forestkitchen-title',
+                    altSubtextvg: '森のキッチン どんぐり'
+                  }) %>
+                </div>
+
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'heading-title-adventure-restaurant-gradient heading-title-adventure-restaurant-gradient-forestkitchen',
+                    imgPath: mix('/assets/images/restaurant/forestkitchen-gradient-subtext.png'),
+                    alt: 'ハローウッズエリア'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  <!-- 豊かな自然に囲まれたハローウッズの森の中にあるレストラン<br class="u-show-pc"/>
+                  キッズメニューの「森の木の葉カレープレート」や、「もてぎ名物ゆず塩ラーメン」など、<br class="u-show-pc"/>
+                  森あそびを満喫したあとに立ち寄りたいおなかも満足できるお食事処です。 -->
+                  豊かな自然に囲まれたハローウッズにあるレストラン。<br class="u-show-pc"/>
+                  森あそびを満喫した後におなかも満足できる食事処です。
+                </p>
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '#'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- granturismo -->
+          <li class="adventure-list">
+            <div class="adventure-bg">
+              <div class="swiper-container slider-restaurant">
+              <!-- <div class="swiper-container slider-restaurant js-slider-restaurant-granturismo"> -->
+                <ul class="swiper-wrapper slider-wrapper">
+                  <% getData().data.restaurantSlider.turismo.forEach( slide => { %>
+                  <li class="swiper-slide slider-item">
+                    <div class="adventure-bg u-show-pc" style="background-image: url(<%- slide.slidePc -%>);"></div>
+                    <div class="adventure-bg u-show-sp" style="background-image: url(<%- slide.slideSp -%>);"></div>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/granturismo-logo.png') %>);"></div>
+              <div class="adventure-bg-circle" style="background-image: url(<%= mix('/assets/images/restaurant/granturismo-logo-sp.png') %>);"></div>
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-restaurant heading-title-adventure-restaurant-granturismo',
+                    subtextvg: 'restaurant-granturismo-title',
+                    altSubtextvg: 'グランツーリスモ カフェ'
+                  }) %>
+                </div>
+
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'heading-title-adventure-restaurant-gradient heading-title-adventure-restaurant-gradient-granturismo',
+                    imgPath: mix('/assets/images/restaurant/granturismo-gradient-subtext.png'),
+                    alt: 'レーシングコースエリア'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  <!-- PlayStation®️ のカーレースゲーム「グランツーリスモ」の世界観を<br class="u-show-pc"/>
+                  楽しみながら食事ができるレストランです。<br class="u-show-pc"/>
+                  ライバルにカツ（勝つ）という意味を込めた勝負飯定食「梅おろしカツ定食」や、<br class="u-show-pc"/>
+                  栃木のブランド豚を使った特製定食メニュー「とちぎゆめポーク使用　豚ごま肉の生姜焼き定食」<br class="u-show-pc"/>
+                  などの食べ応えのあるボリューム満点なメニューが豊富です。 -->
+                  プレイステーションのカーレースゲーム「グランツーリスモ」の名を冠した<br class="u-show-pc"/>
+                  カフェスタイルのレストラン。ボリューム満点で食べ応えのあるメニューが豊富。
+                </p>
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/foods_m/gran-turismo/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>   
+          
+
+          
+          
         </ul>
       </section>
 
@@ -433,9 +434,9 @@
             <img class="u-show-pc" src="<%- mix('/assets/images/restaurant/graph-pc.jpg') -%>" alt="Graph">
             <img class="u-show-sp" src="<%- mix('/assets/images/restaurant/graph-sp.jpg') -%>" alt="Graph">
 
-            <p class="subpage-desc">
-              ※1 ツインリンクもてぎ営業時間に順ずる<br/>
-              ※2 季節により異なる
+            <p class="subpage-desc bold">
+              ※1　 <a class="link" style="color: initial;" href="/hours_m/">ツインリンクもてぎ営業時間</a>により営業あり<br>
+              ※2 　季節により変動あり
             </p>
           </div>
         </div>
@@ -444,8 +445,8 @@
       <div class="l-section">
         <%- include('/partials/button', {
           modifier: 'restaurant-button foodsm-button',
-          link: '#',
-          text: 'レストラン場内エリアマップはこちら',
+          link: '/map_m/#map-central',
+          text: 'レストランマップはこちら',
           arrowColor: 'green'
         }) -%>
       </div>

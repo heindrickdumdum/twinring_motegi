@@ -688,6 +688,12 @@
     bottom: 5px;
     width: 100%;
 
+    @at-root .smart-entry & {//smart-entry page
+      @include max-screen($breakpoint-mobile) {
+        bottom: 15px !important;
+      }
+    }
+
     .heading-text {
       font-size: 45px;
       -webkit-text-fill-color: $color-white;

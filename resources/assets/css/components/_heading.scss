@@ -663,6 +663,7 @@
 
     svg {
       display: block;
+      fill: $color-maroon;
     }
   }
 }
@@ -687,6 +688,7 @@
 
     svg {
       display: block;
+      fill: $color-maroon;
     }
   }
 }
@@ -2238,3 +2240,130 @@
     }
   }
 }
+
+@at-root .heading-admission {//fee page
+  .heading {
+    margin: {
+      top: 0px;
+      bottom: 0px;
+    }
+  }
+
+  .heading-subtext {
+    height: 100%;
+
+    img {
+      width: 314.5px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 202px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+@at-root .heading-attraction-fee {//fee page
+  .heading {
+    margin: {
+      top: 0px;
+      bottom: 0px;
+    }
+  }
+  
+  .heading-subtext {
+    height: 100%;
+
+    img {
+      width: 420px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 274px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 59px;
+      margin-bottom: 42px;
+    }
+  }
+} 
+
+@at-root .heading-motorsport-fee {//fee page
+  .heading {
+    margin: {
+      top: 0px;
+      bottom: 0px;
+    }
+  }
+  
+  .heading-subtext {
+    height: 100%;
+
+    img {
+      width: 476.5px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 310px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 77px;
+      margin-bottom: 2px;
+    }
+  }
+} 
+
+@at-root .heading-hotel-fee {//fee page
+  .heading {
+    margin: {
+      top: 0px;
+      bottom: 0px;
+    }
+  }
+  
+  .heading-subtext {
+    height: 100%;
+
+    img {
+      width: 519.5px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 329.5px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 33px;
+    }
+  }
+} 
+
+@at-root .heading-camp-fee {//fee page
+  .heading {
+    margin: {
+      top: 0px;
+      bottom: 0px;
+    }
+  }
+  
+  .heading-subtext {
+    height: 100%;
+
+    img {
+      width: 756.5px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 337px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 17px;
+    }
+  }
+} 

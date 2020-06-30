@@ -85,7 +85,8 @@
           </div>
 
           <p class="suboage-desc">
-            <span>無料で体験できるグランツーリスモSPORT。好きな車を選んで、様々なコースに挑戦しよう！</span>
+            <span>店内には無料で遊べる「グランツーリスモ」のドライビングシュミレーターが設置されており、家族でゲームも楽しめます。<br class="u-show-pc"/>
+              お店がパドックの中にあるので、普段なかなか見ることができないレーシングマシーンやドライバーたちに触れ合えるチャンスも。</span>
           </p>
 
           <h2 class="subpage-title">
@@ -118,6 +119,14 @@
                   店内: 90　テラス: 31
                 </td>
               </tr>
+
+              <tr class="table-row">
+                <th class="table-head">備考</th>
+                <td class="table-col">
+                  ・チャイルドシートあり<br/>
+                  ・クレジットカード利用可
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -129,19 +138,20 @@
       }) -%>
 
       <div class="l-section oak-button">
-        <p class="u-show-pc">
+        <!-- <p class="u-show-pc">
           この他にも、様々なメニューをご用意しております。
         </p>
 
         <p class="u-show-sp">
           この他にも、様々なメニューを<br/>ご用意しております。
-        </p>
+        </p> -->
 
         <div class="u-show-pc">
           <%- include('/partials/button', {
             modifier: 'restaurant-button',
             link: '/assets/images/granturismo/gtcafe_menu_202003.pdf',
-            text: '春のおすすめメニューはこちら (PDF:2.4MB)',
+            // text: '春のおすすめメニューはこちら (PDF:2.4MB)',
+            text: 'その他のメニューはこちら',
             newTab: true
           }) -%>
         </div>
@@ -150,7 +160,8 @@
           <%- include('/partials/button', {
             modifier: 'restaurant-button',
             link: '/assets/images/granturismo/gtcafe_menu_202003.pdf',
-            text: '春のおすすめメニューはこちら (PDF:2.4MB)',
+            // text: '春のおすすめメニューはこちら (PDF:2.4MB)',
+            text: 'その他のメニューはこちら',
             newTab: true
           }) -%>
         </div>

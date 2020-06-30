@@ -34,6 +34,11 @@
               NEW!
             </span>
           <% } %>
+          <% if( item.tag2 === 'limited' && item.tag2 !== '') { %>
+            <span class="tag tag-<%- item.tag2 -%>">
+              ツインリングもてぎ限定
+            </span>
+          <% } %>
           <% if( item.tag === 'limited' ) { %>
             <span class="tag tag-<%- item.tag -%>">
               ツインリングもてぎ限定

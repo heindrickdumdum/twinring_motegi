@@ -577,7 +577,20 @@
       }
 
       span {
+        display: flex;
+        align-items: center;
         letter-spacing: 0.1;
+
+        a {
+          color: $base-font-color;
+          pointer-events: none;
+          margin-left: 5px;
+
+          @include max-screen($breakpoint-mobile) {
+            text-decoration: underline;
+            pointer-events: auto;
+          }
+        }
       }
 
       &:not(:last-child) {

@@ -128,9 +128,11 @@
     margin-bottom: 70px;
     .border-right {
       border-right: 1px solid #f7f7f7;
+      min-width: 115px;
     }
     @include max-screen ($breakpoint-mobile) {
       margin-bottom: 29px;
+      font-size: 10px;
     }
   }
 

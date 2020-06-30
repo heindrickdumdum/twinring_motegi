@@ -17,28 +17,27 @@
             style="background-image:url(<%= mix('/assets/images/pit/top-image-sp.jpg') %>);"></div>
         </li>
       </ul>
-
-      <h1 class="mv-heading mv-heading-subpage">
-        <span class="mv-heading-text">
-          ピット工房
-        </span>
-      </h1>
+      <div class="l-container mv-container">
+        <div class="mv-heading mv-heading-default mv-collection-pit">
+          <%- include('/partials/heading', {
+            modifier: '',
+            heading_level: 1,
+            text: 'Pit Workshop',
+            subtextvg: 'pit-mv-title',
+            altSubtextvg: 'ピット工房'
+          }) %>
+        </div>
+      </div>
     </div>
 
     <main>
       <div class="subpage-inner-wrap">
         <div class="subpage-inner">
-          <div class="heading-wrap heading-main heading-main-pit">
-            <h2 class="heading heading-pit">
-              <span class="u-show-pc">
-                <%- include('/partials/svg', {
-                  'name': 'pit-top-title'
-                }) %>
-              </span>
-              <span class="u-show-sp">
-                <%- include('/partials/svg', {
-                  'name': 'main-title-sp'
-                }) %>
+          <div class="heading-wrap l-heading-main">
+          <h2 class="heading heading-collection-pit">
+              <span class="heading-texts">
+                <img class="u-show-pc" src="<%= mix('/assets/images/pit/color-title.jpg') %>" alt="Colection Pit">
+                <img class="u-show-sp" src="<%= mix('/assets/images/pit/color-title-sp.jpg') %>" alt="Colection Pit">
               </span>
             </h2>
           </div>
@@ -54,7 +53,7 @@
             <span>アクティビティ情報</span>
           </h3>
 
-          <p>電動モーターで走る乗り物を自分で組み立てて走らせることができます。乗り心地やスピードがどう変わるか？本物の工具を使って組み立てを楽しみながら、クルマの構造を学ぶことができるプログラムです。</p>
+          <p>本物の工具を使ってクルマを組み立てて、走らせてみよう。<br> 何度もチャレンジすると組み立てるパーツが増え、難易度が上がっていくよ。</p>
 
           <table class="table">
             <tbody>
@@ -77,8 +76,8 @@
               </tr>
 
               <tr class="table-row">
-                <th class="table-head">雨天の開催</th>
-                <td class="table-col">雨天でも営業しております。</td>
+                <th class="table-head">雨天の運行</th>
+                <td class="table-col">雨天でも営業いたします。</td>
               </tr>
               <tr class="table-row">
                 <th class="table-head">対象者</th>
@@ -89,16 +88,16 @@
               <tr class="table-row">
                 <th class="table-head">身長制限</th>
                 <td class="table-col">
-                  走行は身長100cm以上の方が対象となります。
+                  走行は身長100cm以上のお子さまが対象となります。
                 </td>
               </tr>
               <tr class="table-row">
                 <th class="table-head">料金</th>
                 <td class="table-col">
-                  モビパークパスポート特典<br>
-                  アトラクションチケット利用：1,100円<br>
-                  モビパークパスポートをお持ちの方は、<br>
-                  特典として通常1,100円のところ900円でご利用いただけます！
+                  ・モビパークパスポート特典<br>
+                  　→モビパークパスポートをお持ちの方は、通常1,100円のところ900円でご利用いただけます。<br>
+                  ・アトラクションチケット利用：1,100円 
+
                 </td>
               </tr>
             </tbody>
@@ -111,8 +110,8 @@
           <div class="l-section-title">
             <%- include('/partials/heading', {
               modifier: 'heading-enjoy heading-wrap-craft',
-              text: 'How to Play',
-              alt: 'How to Play',
+              text: 'How to Experience',
+              alt: 'How to Experience',
               subtextvg: 'pit-play',
               altSubtext: '',
             }) %>
@@ -123,7 +122,7 @@
               <div class="media-left">
                 <div class="media-bg">
                   <div class="media-thumb">
-                    <div style="background-image: url(<%= mix('/assets/images/craft/how-to-play-1.jpg') %>);"></div>
+                    <div class="carbike-menu-link" style="background-image: url(<%= mix('/assets/images/pit/image-1.jpg') %>);"></div>
                   </div>
                 </div>
               </div>
@@ -140,7 +139,7 @@
               <div class="media-left">
                 <div class="media-bg">
                   <div class="media-thumb">
-                    <div style="background-image: url(<%= mix('/assets/images/craft/how-to-play-2.jpg') %>);"></div>
+                    <div class="carbike-menu-link" style="background-image: url(<%= mix('/assets/images/pit/image-2.jpg') %>);"></div>
                   </div>
                 </div>
               </div>
@@ -158,7 +157,7 @@
               <div class="media-left">
                 <div class="media-bg">
                   <div class="media-thumb">
-                    <div style="background-image: url(<%= mix('/assets/images/craft/how-to-play-3.jpg') %>);"></div>
+                    <div class="carbike-menu-link" style="background-image: url(<%= mix('/assets/images/pit/image-3.jpg') %>);"></div>
                   </div>
                 </div>
               </div>
@@ -176,7 +175,7 @@
               <div class="media-left">
                 <div class="media-bg">
                   <div class="media-thumb">
-                    <div style="background-image: url(<%= mix('/assets/images/craft/how-to-play-4.jpg') %>);"></div>
+                    <div style="background-image: url(<%= mix('/assets/images/pit/image-4.jpg') %>);"></div>
                   </div>
                 </div>
               </div>
@@ -205,10 +204,11 @@
         <div class="l-container">
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
-              modifier: 'heading-forest heading-forest-craft',
-              text: 'Step up program',
-              alt: 'Step up program',
+              modifier: 'heading-wrap-auto',
+              text: 'Step up Program',
+              alt: 'Step up Program',
               subtextvg: 'pit-step-up-title',
+              headingSubtext: 'ピット工房にチャレンジする度に組み立てられるパーツが増え、<br> どんどん難しくなっていくよ。たくさん挑戦して、クルマ博士を目指そう。',
               altSubtext: '',
             }) %>
           </div>
@@ -221,6 +221,7 @@
               altSubtext: '',
             }) %>
           </div>
+
         </div>
         <div class="swiper-container slider js-slider common-slider" id="commonSlider">
           <ul class="swiper-wrapper top-slide top-slide-craft">
@@ -239,11 +240,18 @@
         </div>
       </section>
 
-      <section class="l-menu u-show-sp">
-
-        <%- include('/partials/hellowoods/section-menu') -%>
-
-      </section>
+      <div class="l-section block-image">
+        <div class="l-container">
+          <ul class="block-image-list">
+            
+            <li class="block-image-item block-image-item-collection-pit">
+              <a href="/collection-hall/" class="block-image-item-link">
+                <img src="<%= mix('/assets/images/pit/bottom-banner.jpg') %>" alt="ライセンスバナー">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <!-- recommendation module -->
       <div class="pit-recommendation">

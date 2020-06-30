@@ -84,7 +84,7 @@
               <tr class="table-row">
                 <th class="table-head">場所</th>
                 <td class="table-col">
-                  ハローウッズ  > <a class="link" href="/map_m/">MAP</a>
+                  ハローウッズ <a class="link" href="/map_m/">Mapを見る</a>
                 </td>
               </tr>
 
@@ -98,7 +98,16 @@
               <tr class="table-row">
                 <th class="table-head">座席数</th>
                 <td class="table-col">店内：36<br>
-                  ※クレジットカードはご利用いただけません。</td>
+                  <!-- ※クレジットカードはご利用いただけません。 -->
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">備考</th>
+                <td class="table-col">
+                  ・チャイルドシートあり<br/>
+                  ・アルコールあり
+                </td>
               </tr>
             </tbody>
           </table>
@@ -109,14 +118,15 @@
       <%- include('/partials/donguri/section-menu') -%>
 
       <div class="l-section oak-button">
-        <p class="u-show-sp">
+        <!-- <p class="u-show-sp">
           この他にも、様々なメニューを<br>ご用意しております。
-        </p>
+        </p> -->
         <div class="u-show-pc">
           <%- include('/partials/button', {
             modifier: 'restaurant-button donguri-button',
             link: 'https://www.twinring.jp/foods_m/pdf/donguri_menu_202003.pdf',
-            text: '春のおすすめメニューはこちら（PDF:3.2MB）'
+            // text: '春のおすすめメニューはこちら（PDF:3.2MB）'
+            text: 'その他のメニューはこちら'
           }) -%>
         </div>
 
@@ -124,7 +134,8 @@
           <%- include('/partials/button', {
             modifier: 'restaurant-button donguri-button',
             link: 'https://www.twinring.jp/foods_m/pdf/donguri_menu_202003.pdf',
-            text: '春のおすすめメニューはこちら（PDF:3.2MB）'
+            // text: '春のおすすめメニューはこちら（PDF:3.2MB）'
+            text: 'その他のメニューはこちら'
           }) -%>
         </div>
       </div>

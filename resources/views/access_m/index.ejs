@@ -74,7 +74,7 @@
                   <span>連絡先</span>
                 </h3>
                 <p class="location-text">
-                  TEL：0285-64-0001（代表）
+                  TEL：<a class="link bold hover-green" href="tel:0285640001">0285-64-0001</a>（代表）
                 </p>
 
                 <div class="location-cta">
@@ -123,11 +123,11 @@
                 </ul>
 
                 <p class="text">
-                  各レース・イベントの開催日は<a href="/hoteltwinring/calendar/">年間カレンダー</a>をご確認ください。
+                  各レース・イベントの開催日は<a class="hover-green" href="/calendar_m/">年間カレンダー</a>をご確認ください。
                 </p>
 
                 <div class="location-note-cta">
-                  <a class="note-cta" href="/access_m/detour/">
+                  <a class="note-cta hover-opacity" href="/access_m/detour/">
                     <%- include('/partials/svg', {
                       name: 'access-information-logo',
                       svgtitle: 'info'
@@ -135,7 +135,7 @@
                     <span>迂回路のご案内はこちら</span>
                   </a>
 
-                  <a class="note-cta" target="_blank" href="https://twitter.com/twinringt">
+                  <a class="note-cta hover-opacity" target="_blank" href="https://twitter.com/twinringt">
                     <%- include('/partials/svg', {
                       name: 'access-twitter-logo',
                       svgtitle: 'twitter'
@@ -192,8 +192,10 @@
             <div class="tab-list swiper-container slider-tab-container js-slider-tab">
               <ul class="swiper-wrapper slider-tab">
                 <% getData().data.accessTabCarBike.forEach(item => { %>
-                <li class="tab-item js-tab-link swiper-slide" data-tab="<%- item.tabId -%>">
-                  <span><%- item.tabLabel -%></span>
+                <li class="tab-item-slide swiper-slide">
+                  <div class="tab-item js-tab-link hover-opacity" data-tab="<%- item.tabId -%>">
+                    <span><%- item.tabLabel -%></span>
+                  </div>
                 </li>
                 <% }); %>
               </ul>
@@ -212,7 +214,7 @@
           </div>
 
           <p class="car-bike-note">
-            駐車場については<a href="/fee_m/" class="link">料金・チケット</a>、園内<a href="/map_m/" class="link">マップ</a>ページをご確認ください。
+            駐車場については<a class="link hover-green" href="/fee_m/">料金・チケット</a>、園内<a class="link hover-green" href="/map_m/">マップ</a>ページをご確認ください。
           </p>
         </section>
 
@@ -225,7 +227,7 @@
           <div class="tab-access" id="js-train-tab">
             <ul class="tab-list">
               <% getData().data.accessTabTrain.forEach(item => { %>
-              <li class="tab-item js-tab-link" data-tab="<%- item.tabId -%>">
+              <li class="tab-item js-tab-link hover-opacity" data-tab="<%- item.tabId -%>">
                 <span><%- item.tabLabel -%></span>
               </li>
               <% }); %>
@@ -253,7 +255,7 @@
           <div class="tab-access" id="js-bus-tab">
             <ul class="tab-list">
               <% getData().data.accessTabBus.forEach(item => { %>
-              <li class="tab-item js-tab-link" data-tab="<%- item.tabId -%>">
+              <li class="tab-item js-tab-link hover-opacity" data-tab="<%- item.tabId -%>">
                 <span><%- item.tabLabel -%></span>
               </li>
               <% }); %>

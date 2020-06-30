@@ -1823,6 +1823,10 @@
       fill: $color-white;
     }
 
+    @include max-screen ($breakpoint-mobile) {
+      height: 45px !important;
+    }
+
     @include min-screen($breakpoint-mobile + 1) {
       height: 55px !important;
       max-width: 512px !important;

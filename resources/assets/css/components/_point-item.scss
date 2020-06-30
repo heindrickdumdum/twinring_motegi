@@ -6,8 +6,8 @@
       padding: 0;
     }
   }
-    
-  
+
+
   svg {
     width: 100%;
     max-width: 860px;
@@ -26,7 +26,7 @@
     }
 
     .point-heading {
-      
+
       background-repeat: no-repeat;
       background-position: center;
       margin-bottom: 34px;
@@ -38,31 +38,53 @@
 
       &.no-1 {
         background-image: url(../images/dinner-buffet/01.png);
+        background-size: 107px;
+        @include max-screen ($breakpoint-mobile) {
+          background-size: 80px;
+        }
+
+        svg {
+          @include max-screen ($breakpoint-mobile) {
+            max-width: 300px;
+          }
+        }
       }
       &.no-2 {
         background-image: url(../images/dinner-buffet/02.png);
+        background-size: 107px;
+        @include max-screen ($breakpoint-mobile) {
+          background-size: 80px;
+        }
         svg {
           max-width: 380px;
           @include max-screen ($breakpoint-mobile) {
-            max-width: 270px;
+            max-width: 300px;
           }
         }
       }
       &.no-3 {
         background-image: url(../images/dinner-buffet/03.png);
+        background-size: 107px;
+        @include max-screen ($breakpoint-mobile) {
+          background-size: 80px;
+        }
         svg {
           max-width: 750px;
           @include max-screen ($breakpoint-mobile) {
-            max-width: 270px;
+            max-width: 340px;
           }
         }
       }
       &.no-4 {
         background-image: url(../images/dinner-buffet/04.png);
+        background-size: 107px;
+        @include max-screen ($breakpoint-mobile) {
+          background-size: 80px;
+        }
         svg {
-          max-width: 410px;
+          max-width: 350px;
           @include max-screen ($breakpoint-mobile) {
-            max-width: 270px;
+            max-width: 260px;
           }
         }
       }

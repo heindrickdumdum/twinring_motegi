@@ -1088,6 +1088,13 @@
 
     &.attraction-collapse {
       max-width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: {
+          top: 20px;
+          bottom: 0px;
+        }
+      }
     }
   }
 
@@ -1114,6 +1121,10 @@
     @at-root .page-fee & {//fee page
       font-size: 18px;
       letter-spacing: 0.1em;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;        
+      }
     }
 
     @at-root .breakfast-marcherant & {//breakfast marcherant page
@@ -1151,6 +1162,16 @@
 
   .subpage-collapse-content {
     padding: 0 50px 50px 50px;
+
+    @at-root .page-fee & {//fee page
+      @include max-screen($breakpoint-mobile) {
+        padding: {
+          left: 20px;
+          right: 20px;
+        }
+        overflow-x: scroll;
+      }
+    }
 
     a {
       display: inline-block;
@@ -1858,16 +1879,53 @@
   margin-top: 20px;
   margin-bottom: 42px;
 
+  @at-root .page-fee & {
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 15px;  
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 13px;
+      line-height: 1.667;      
+    }
+  }
+
+  &.subpage-desc-unique {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -15px;
+      margin-bottom: 12px;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 12px;
+  }
+
+  // &.admission-sp {
+  //   @include max-screen($breakpoint-mobile) {
+  //     white-space: nowrap;
+  //   }
+  // }
+
   &.attraction-desc {
     margin-top: 24px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 12px !important;
+    }
   }
 
   &.attraction-bottom-space {
     margin-bottom: 56px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 28px !important;
+    }
   }
 
   @include max-screen($breakpoint-mobile) {
-    font-size: 12.752px;    
+    font-size: 11px;
+    // white-space: nowrap;
   }
 }
 
@@ -1883,12 +1941,21 @@
       width: 320px;
       margin-bottom: 37px;
 
+      @include max-screen($breakpoint-mobile) {
+        width: 163px;
+        margin-bottom: 5px;
+      }
+
       a {
         color: inherit;
       }
 
       img {
         margin-bottom: 14px;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 7px;
+        }
       }
     }
 
@@ -1898,11 +1965,24 @@
       letter-spacing: 0.1em;
       font-weight: bold;
       text-align: center;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 10px;
+        line-height: 1.3;        
+      }
     }
   }
 
   .fee-section {
     margin-top: 50px;
+
+    & > .subpage-desc {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 13px;
+        margin-bottom: 14px;
+        text-align: left !important;
+      }
+    }
   }
 }
 

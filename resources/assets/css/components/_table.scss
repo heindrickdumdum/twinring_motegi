@@ -469,6 +469,12 @@
   border: 1px solid $color-green;
   background-color: $color-white;
 
+  @at-root .attraction-collapse & {//fee page
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 20px !important;
+    }
+  }
+
   @at-root & {
     &.admission-table {
       border-bottom-width: 0px;
@@ -485,6 +491,11 @@
     text-align: center;
     border-right: 1px solid $color-green;
     vertical-align: middle;
+
+    // @include max-screen($breakpoint-mobile) {
+    //   white-space: nowrap;
+    //   line-height: normal;
+    // }
 
     &.dark-gray {
       background-color: $color-dark-gray;
@@ -510,6 +521,18 @@
       right: 20px;
     }
 
+    .space-right {
+      margin-right: 25px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      // white-space: nowrap;
+      padding: {
+        left: 10px;
+        right: 10px;
+      }
+    }
+
     &:last-child {
       border-right-width: 0px;
     }
@@ -525,17 +548,37 @@
   .table-container {
     margin-bottom: 66px;
 
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 12px;
+    }
+
     &-list {
       display: flex;
       margin-bottom: 80px;
+
+      @include max-screen($breakpoint-mobile) {
+        display: block;
+        text-align: center;
+      }
     }
 
     &-item {
       width: 280px;
       margin-right: 20px;
 
+      @include max-screen($breakpoint-mobile) {
+        margin-right: 0px;
+        display: inline-block;
+        width: 203px;
+        margin-bottom: 10px;
+      }
+
       &:last-child {
         margin-right: 0px;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 0px;
+        }
       }
     }
 
@@ -544,10 +587,18 @@
         left: 40px;
         right: 40px;
       }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 0px;
+      }
     }
 
     .media-title {
       margin-bottom: 18px;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 16px;
+      }
     }
 
     .subpage-desc {

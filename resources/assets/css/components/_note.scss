@@ -73,6 +73,15 @@
     }
     margin-bottom: 20px;
 
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 20px;
+        right: 20px;
+        top: 40px;
+      }
+      margin-top: 46px;
+    }
+
     &-title {
       font-size: 18px;
       line-height: 1.778;
@@ -88,6 +97,15 @@
       white-space: nowrap;
       transform: translateX(-50%);
       font-weight: bold;
+
+      @include max-screen($breakpoint-mobile) {
+        white-space: normal;
+        font-size: 13.5px;
+        line-height: 1.357;
+        width: 300px;
+        text-align: center;
+        top: -10px;     
+      }
     }
 
     &-item {
@@ -102,11 +120,29 @@
         margin-bottom: 0px;
       }
 
+      @include max-screen($breakpoint-mobile) {
+        font-size: 13px;
+        line-height: 1.727;
+        margin-right: 0px !important;
+      }
+
       span {
         &:first-child {
           width: 220px;
           margin-right: 20px;
-          display: inline-flex;
+          display: inline-block;
+          white-space: nowrap;
+        }
+
+        &:last-child {
+          font-weight: normal !important;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          display: block !important;
+          text-align: center;
+          width: 100% !important;
+          margin-right: 0px;
         }
       }
     }

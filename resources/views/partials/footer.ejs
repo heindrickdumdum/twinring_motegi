@@ -14,6 +14,7 @@
   'bunBunScooter',
   'carAndBike',
   'debDenWalk',
+  'dinnerBuffet',
   'dream',
   'drift',
   'forestDrivingSchool',
@@ -39,10 +40,24 @@
   'oak',
   'granTurismo',
   'rocco',
+  'toya',
   'donguri',
   'bbq',
   'camp',
-  'stay'
+  'stay',
+  'toya',
+  'smart_entry',
+  'access',
+  'fee',
+  'marcherant',
+  'breakfastMarcherant',
+  'lunchMarcherant',
+  'dinnerMarcherant',
+  'businessHours',
+  'parkMap',
+  'mobiparkGuide',
+  'service_m',
+  'collectionPit'
   ]
 %>
 
@@ -156,7 +171,7 @@
     <script src="<%= mix('/assets/js/index.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'carAndBike') { %>
+  <% if(pageId == 'carAndBike' || pageId == 'access' || pageId === 'fee') { %>
     <script src="<%= mix('/assets/js/carbike.js') %>" async></script>
   <% } %>
 
@@ -194,8 +209,28 @@
   <% } %>
 
 <!-- START GTM FOOTER -->
+  <% if(pageId == 'toya') { %>
+    <script src="<%= mix('/assets/js/toya.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'access') { %>
+    <script src="<%= mix('/assets/js/access.js') %>" async></script>
+  <% } %>
+
   <% if(pageId == 'bbq') { %>
     <script src="<%= mix('/assets/js/bbq.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'dinnerBuffet') { %>
+    <script src="<%= mix('/assets/js/gallery-thumb.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'marcherant' || pageId == 'breakfastMarcherant' || pageId == 'toya' || pageId == 'rocco') { %>
+    <script src="<%= mix('/assets/js/marcherant.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'mobiparkGuide') { %>
+    <script src="<%= mix('/assets/js/mobipark-guide.js') %>" async></script>
   <% } %>
 
 <script type="text/javascript">

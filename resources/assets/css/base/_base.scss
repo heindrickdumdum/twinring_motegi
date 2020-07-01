@@ -38,6 +38,10 @@ body {
   #{$client} {
     box-sizing: initial;
   }
+
+  .bg-black {
+    background-color: #000000;
+  }
 }
 
 * {

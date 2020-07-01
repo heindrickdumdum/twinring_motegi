@@ -11,6 +11,21 @@
 .restaurant-wrapper {
   .subpage-inner {
     margin-bottom: 70px;
+
+    &-toya-menu {//toya page
+      background-image: url('/assets/images/toya/menu-bg.jpg');
+      margin-bottom: 0px;
+      background-size: 100%;
+      padding-bottom: 10px;
+      padding-top: 100px;
+
+      @include max-screen($breakpoint-mobile) {
+        padding: {
+          top: 34px;
+          bottom: 34px;
+        }
+      }
+    }
   }
 
   .restaurant-ad-container {//rocco
@@ -43,19 +58,26 @@
     .restaurant-ad-desc {
       font-size: 22px;
       line-height: 2.091;
+      letter-spacing: 0.1em;
       text-align: center;      
-      letter-spacing: 0.12em;
-      margin-bottom: 0px;
       font-family: $font-hiragino;
 
+      &:nth-of-type(1) {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-top: 50px;
+        }
+      }
+
       @include min-screen($breakpoint-mobile + 1) {
-        margin-top: 20px;
+        margin-top: 0px;
+        margin-bottom: 20px;
       }
 
       @include max-screen($breakpoint-mobile) {
         font-size: 12px;
         margin-top: 23px;
-        text-align: justify;
+        text-align: center;
+        margin-bottom: 20px;
       }
     }
   }
@@ -63,7 +85,7 @@
   .restaurant-ad-button {//rocoo
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     width: 964px;
     margin-left: auto;
     margin-right: auto;
@@ -74,19 +96,19 @@
     }
 
     .rocco-ad-button {
-      &:nth-child(2) {
+      &:nth-of-type(1) {
         @include max-screen($breakpoint-mobile) {
-          order: 3;
-
           a {
-            margin-bottom: 0px;
+          margin-bottom: 0px;
           }
         }
       }
 
-      &:nth-child(3) {
+      &:nth-of-type(2) {
         @include max-screen($breakpoint-mobile) {
-          order: 2;
+          a {
+            margin-bottom: 0px;
+          }
         }
       }
     }
@@ -144,6 +166,7 @@
         width: 100%;
         background-color: #f2f2f2;
         bottom: -2px;
+        left: 0;
 
         @include min-screen($breakpoint-mobile + 1) {
           height: 300px;
@@ -197,6 +220,43 @@
     background-color: $color-white;
     height: 95px;
     border: 1px solid $color-black;
+
+    @at-root &.oak-button {//oak page
+      border-color: #0484a8;
+      color: #058a94;
+    }
+
+    @at-root &.toya-menu-button {//toya page
+      border-color: $color-white;
+      color: $color-white;
+      background-color: transparent;
+      max-width: 480px;
+      height: 60px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: 40px;
+        max-width: 260px;
+        font-size: 12px;        
+      }
+    }
+
+    @at-root &.toya-button {//toya page
+      border-color: #a38737;
+      color: #a38737;
+      letter-spacing: 0.1em;     
+
+      @include min-screen($breakpoint-mobile + 1) {
+        margin: {
+          top: 102px;
+        }
+        font-size: 18px;
+        line-height: 1.667;   
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 100%;
+      }
+    }
 
     &:before {
       content: none;
@@ -277,6 +337,39 @@
           margin-right: 0px;
         }
       }
+    }
+  }
+}
+
+.marcherant-bottom-banner {
+  max-width: 600px;
+  margin: auto;
+  .link {
+    color: inherit;
+
+    &:hover {
+      .button-gradient-icon {
+        transform: translate(5px, -50%);
+      }
+    }
+  }
+  .bottom-banner-title {
+    position: relative;
+    line-height: 3;
+
+    .title-text {
+      svg {
+        height: 40px;
+        width: 175px;
+        margin-top: 12px;
+        @include max-screen ($breakpoint-mobile) {
+          width: 165px;
+        }
+      }
+    }
+
+    i {
+      line-height: 60px;
     }
   }
 }

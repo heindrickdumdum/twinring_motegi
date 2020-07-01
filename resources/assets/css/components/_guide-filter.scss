@@ -1,0 +1,384 @@
+.guide-filter {
+
+  .row {
+    align-content: space-between;
+    margin-bottom: 24px;
+
+    @include max-screen ($breakpoint-mobile) {
+      display: block;
+      margin-bottom: 12px;
+    }
+
+  }
+  .tag {
+    width: 150px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+
+    @include min-screen ($breakpoint-mobile+1) {
+      font-size: 18px;
+    }
+  }
+
+  .input-wrapper {
+    font-size: 12px;
+
+    @include min-screen($breakpoint-mobile+1) {
+      font-size: 15px;
+    }
+
+    label {
+      border-radius: 36px;
+      margin-right: 4px;
+      background-color: #969696;
+
+      display: inline-block;
+      padding: 2px 21px;
+      margin-bottom: 15px;
+      cursor: pointer;
+
+      @include min-screen($breakpoint-mobile+1) {
+        padding: 7px 29px;
+        margin-bottom: 0px;
+      }
+    }
+
+    input {
+      display: none;
+      &:checked + label {
+        background-color: #069802;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.guide-area {
+  display: none;
+  .guide-area-inner {
+    position: relative;
+    border-bottom: 1px solid #999999;
+    margin-bottom: 25px;
+
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 10px;
+    }
+
+
+    .guide-area-logo {
+      display: inline-block;
+      width: 225px;
+      padding: 20px;
+      padding-left: 25px;
+      vertical-align: middle;
+
+      @include max-screen ($breakpoint-mobile) {
+        padding: 0;
+        margin-bottom: 12px;
+      }
+
+      img {
+        max-width: 150px;
+
+        @include max-screen ($breakpoint-mobile) {
+          max-width: 95px;
+        }
+
+      }
+    }
+
+    .guide-area-desc {
+      font-size: 15px;
+      display: inline-block;
+      vertical-align: bottom;
+      width: 100%;
+      max-width: 600px;
+
+      .guide-area-desc-heading {
+        margin-bottom: 20px;
+
+        svg {
+          margin: 0;
+          width: 100%;
+          max-width: 180px;
+          height: 53px;
+          padding: 0;
+          margin-bottom: -10px;
+
+          @include max-screen ($breakpoint-mobile) {
+            height: 28px;
+            margin-bottom: 0px;
+            max-width: 117px;
+          }
+        }
+
+        &.mobipark {
+          margin-bottom: 20px;
+          @include max-screen ($breakpoint-mobile) {
+            margin-top: 5px;
+            margin-bottom: 10px;
+          }
+        }
+
+        &.hellowoods {
+          svg {
+            max-width: 300px;
+            @include max-screen ($breakpoint-mobile) {
+              max-width: 195px;
+              height: 25px;        
+            }
+          }
+
+          @include max-screen ($breakpoint-mobile) {
+            margin-top: 5px;
+            margin-bottom: 10px;
+          }
+        }
+
+        &.honda {
+          svg {
+            max-width: 450px;
+            @include max-screen ($breakpoint-mobile) {
+              max-width: 290px;
+              height: 25px;      
+            }
+          }
+          @include max-screen ($breakpoint-mobile) {
+            margin-top: 5px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 12px;
+      }
+    }
+
+    .guide-area-passport {
+      color: #f39a04;
+      position: absolute;
+      right: 2px;
+      bottom: 15px;
+      font-size: 16px;
+      line-height: 1;
+
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 50px;
+        font-size: 7px;
+        text-align: right;
+        bottom: 5px;
+        right: -1px;
+      }
+    }
+
+    .passport {
+      max-width: 30px;
+      @include max-screen ($breakpoint-mobile) {
+        display: block;
+        float: right;
+        max-width: 23px;
+        margin-top: 9px;
+      }
+    }
+  }
+}
+
+.guide-list {
+
+  .guide-items {
+    display: none;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+
+    .passport {
+      position: absolute;
+      right: 0;
+      max-width: 30px;
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 23px;
+        bottom: 0;
+        right: -1px;
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      padding-bottom: 25px;
+
+      .media-title {
+        margin-bottom: 10px;
+        margin-top: 0;
+        letter-spacing: 0px;
+      }
+    }
+  }
+
+  .wrapper-container {
+    display: flex;
+    justify-content: space-between;
+
+    .area-item-image-wrapper {
+      max-width: 400px;
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 290px;
+        margin: auto;
+        margin-bottom: 23px;
+      }
+    }
+
+    .area-item-desc-wrapper {
+      width: 100%;
+      max-width: 635px;
+      
+      .subpage-title {
+        position: relative;
+      }
+      .heading {
+        margin: 0;
+        .heading-text {
+          font-family: unset;
+          font-size: 24px;
+          text-align: left;
+          margin-bottom: 13px;
+          letter-spacing: 5px;
+        }
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      display: block;
+    }
+  }
+}
+
+.pdf-link {
+  text-align: right;
+  font-size: 14px;
+  font-weight: bold;
+  a {
+    color: #000;text-decoration: underline;
+    .pdf-icon {
+      margin-left: 17px;
+    }
+  }
+}
+
+.guide-data-holder {
+
+
+
+  
+
+
+  //Area
+
+  &[data-area*="mobipark"] {
+    .guide-area[data-area="mobipark"] {
+      display: block;
+    }
+  }
+  &[data-area*="hellowoods"] {
+    .guide-area[data-area="hellowoods"] {
+      display: block;
+    }
+  }
+  &[data-area*="honda"] {
+    .guide-area[data-area="honda"] {
+      display: block;
+    }
+  }
+
+  //Passport 
+  &[data-passport="true"] {
+    .guide-items[data-passport=""] {
+      display: none !important;
+    }
+  }
+
+  //Age
+  &[data-age*="0"] {
+    .guide-items[data-age*="0"] {display: block;}
+    // .guide-items:not([data-age*="0"]) {display: none !important;}
+  }
+  &[data-age*="1"] {
+    .guide-items[data-age*="1"] {display: block;}
+    // .guide-items:not([data-age*="1"]) {display: none !important;}
+  }
+  &[data-age*="2"] {
+    .guide-items[data-age*="2"] {display: block;}
+    // .guide-items:not([data-age*="2"]) {display: none !important;}
+  }
+  &[data-age*="3"] {
+    .guide-items[data-age*="3"] {display: block;}
+    // .guide-items:not([data-age*="3"]) {display: none !important;}
+  }
+  &[data-age*="4"] {
+    .guide-items[data-age*="4"] {display: block;}
+    // .guide-items:not([data-age*="4"]) {display: none !important;}
+  }
+  &[data-age*="5"] {
+    .guide-items[data-age*="5"] {display: block;}
+    // .guide-items:not([data-age*="5"]) {display: none !important;}
+  }
+  &[data-age*="6"] {
+    .guide-items[data-age*="6"] {display: block;}
+    // .guide-items:not([data-age*="6"]) {display: none !important;}
+  }
+
+
+
+
+  //Grade
+  &[data-grade*="1"] {
+    .guide-items[data-grade*="1"] {display: block !important;}
+    .guide-items:not([data-grade*="1"]) {display: none;}
+  
+  }
+  &[data-grade*="2"] {
+    .guide-items[data-grade*="2"] {display: block !important;}
+    .guide-items:not([data-grade*="2"]) {display: none;}
+  
+  }
+  &[data-grade*="3"] {
+    .guide-items[data-grade*="3"] {display: block !important;}
+    .guide-items:not([data-grade*="3"]) {display: none;}
+  
+  }
+  &[data-grade*="4"] {
+    .guide-items[data-grade*="1"],
+    .guide-items[data-grade*="2"],
+    .guide-items[data-grade*="3"],
+    .guide-items[data-grade*="4"],
+    .guide-items[data-grade*="5"],
+    .guide-items[data-grade*="6"],{display: block !important;}
+    //.guide-items[data-grade*="4"] {display: block !important;}
+    .guide-items:not([data-grade*="4"]) {display: none;}
+  
+  }
+  &[data-grade*="5"] {
+    .guide-items[data-grade*="1"],
+    .guide-items[data-grade*="2"],
+    .guide-items[data-grade*="3"],
+    .guide-items[data-grade*="4"],
+    .guide-items[data-grade*="5"],
+    .guide-items[data-grade*="6"],{display: block !important;}
+    //.guide-items[data-grade*="5"] {display: block !important;}
+    .guide-items:not([data-grade*="5"]) {display: none;}
+  
+  }
+  &[data-grade*="6"] {
+    .guide-items[data-grade*="1"],
+    .guide-items[data-grade*="2"],
+    .guide-items[data-grade*="3"],
+    .guide-items[data-grade*="4"],
+    .guide-items[data-grade*="5"],
+    .guide-items[data-grade*="6"],{display: block !important;}
+    //.guide-items[data-grade*="6"] {display: block !important;}
+    .guide-items:not([data-grade*="6"]) {display: none;}
+  
+  }
+}

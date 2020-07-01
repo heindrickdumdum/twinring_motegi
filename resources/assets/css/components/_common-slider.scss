@@ -6,17 +6,16 @@
     // sass-lint:disable-block no-important
     margin: 0 -214px !important;
   }
-
   .swiper-wrapper {
    // justify-content: center;
     //margin-left: 40px;
-
-    .swiper-slide-prev {
+    .swiper-slide  {
       opacity: 0.5;
     }
 
-    .swiper-slide-next {
-      opacity: 0.5;
+    .swiper-slide-duplicate-active,
+    .swiper-slide-active  {
+      opacity: 1;
     }
   }
 

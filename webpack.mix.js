@@ -36,6 +36,12 @@ mix
     `${srcRelativePath}/assets/js/index.js`,
     `${distRelativePath}/assets/js`,
   )
+
+  .js(
+    `${srcRelativePath}/assets/js/gallery-thumb.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
   .js(
     `${srcRelativePath}/assets/js/mobipark.js`,
     `${distRelativePath}/assets/js`,
@@ -92,7 +98,27 @@ mix
   )
 
   .js(
+    `${srcRelativePath}/assets/js/toya.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
     `${srcRelativePath}/assets/js/bbq.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
+    `${srcRelativePath}/assets/js/marcherant.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
+    `${srcRelativePath}/assets/js/access.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
+    `${srcRelativePath}/assets/js/mobipark-guide.js`,
     `${distRelativePath}/assets/js`,
   )
 

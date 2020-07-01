@@ -1,0 +1,53 @@
+<section class="other-restaurant">
+  <div class="l-section-title">
+    <%- include('/partials/heading', {
+      modifier: 'heading-hellowoods heading-other-restaurant',
+      heading_level: 1,
+      text: 'Other Restaurant',
+      subtextvg: 'other-restaurant-top-title',
+      altSubtextvg: 'その他のレストラン'
+    }) %>
+  </div>
+
+  <div class="swiper-container slider-recommendation slider-recommendation-restaurant slider js-slider-recommended-restaurant">
+    <ul class="swiper-wrapper slider-wrapper">
+      <% getData().data.restaurantOtherMenuGranturismo.forEach(item => { %>
+      <li class="swiper-slide slider-item">
+        <a href="<%- item.link -%>">
+          <div class="top-slider-image">
+            <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+          </div>
+          <span class="top-slider-text">
+            <h2 class="subpage-title">
+              <span>
+                <%- item.title -%>
+              </span>
+            </h2>
+          </span>
+        </a>
+      </li>
+      <% } ) %>
+    </ul>
+  </div>
+
+  <!-- <div class="swiper-container common-slider dokidoki-slider slider js-slider-other-restaurant">
+    <ul class="swiper-wrapper top-slide">
+      <% getData().data.restaurantOtherMenu.forEach(item => { %>
+      <li class="swiper-slide slider-item">
+        <a href="<%- item.link -%>">
+          <div class="top-slider-image">
+            <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+          </div>
+          <span class="top-slider-text">
+            <h2 class="subpage-title">
+              <span>
+                <%- item.title -%>
+              </span>
+            </h2>
+          </span>
+        </a>
+      </li>
+      <% } ) %>
+    </ul>
+  </div> -->
+</section>

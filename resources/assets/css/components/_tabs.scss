@@ -1,6 +1,6 @@
 .tab-underline {
   position: relative;
-  
+
   &:after {
     content: "";
     position: absolute;
@@ -22,7 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   min-height: 100px;
 
   // &:after {
@@ -42,7 +42,7 @@
       padding: 10px;
     }
 
-    [name="tab-tabId"] {  
+    [name="tab-tabId"] {
       &:checked ~ .lblTab {
         font-size: 12px;
         height: 80px;
@@ -88,7 +88,7 @@
       padding: 11px 0px 22px;
     }
   }
-  
+
 
   [type="radio"] {
     display: none;
@@ -106,7 +106,7 @@
 @for $i from 1 through 12 {
   [data-tab="#{$i}"] .program-item[data-month="#{$i}"] {display: block;}
 }
- 
+
 .faq-item {
   display:none;
   &>div {
@@ -168,9 +168,201 @@
   padding: 7px;
   border-bottom: 1px solid;
   cursor: pointer;
+
+  &.active {
+    display:none;
+  }
 }
 
 .select-hide {
   display: none;
 }
 
+
+
+.tab-toya {//toya page
+  background-color: $color-black;
+  padding: 60px 40px;
+  margin-top: 40px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 39px 17px;
+  }
+
+  .tab-list {
+    display: flex;
+    justify-content: center;
+
+    @include max-screen($breakpoint-mobile) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .tab-item {
+    font-size: 13px;
+    color: $color-white;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    cursor: pointer;
+    width: 25%;
+    padding: {
+      top: 16px;
+      bottom: 16px;
+    }
+    border: 1px solid $color-dark-yellow;
+    border-right-width: 0px;
+    background-size: 105%;
+    background-position: center;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 50%;
+      background-size: 170%;
+      border-right-width: 1px;
+      border-bottom-width: 0px;
+      align-items: center;
+    }
+
+    &:nth-child(3) {
+      @include max-screen($breakpoint-mobile) {
+        border-bottom-width: 1px;
+      }
+    }
+
+    &:last-child {
+      border-right: 1px solid $color-dark-yellow;
+      @include max-screen($breakpoint-mobile) {
+        border-bottom-width: 1px;
+      }
+    }
+
+    svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    span {
+      margin-left: 15px;
+    }
+
+    @at-root &:nth-child(4) {//winter
+      &.is-active,
+      &:hover {
+        background-image: url('/assets/images/toya/winter-tab-on.jpg') !important;
+      }
+    }
+
+    @at-root &:nth-child(3) {//autumn
+      &.is-active,
+      &:hover {
+        background-image: url('/assets/images/toya/autumn-tab-on.jpg') !important;
+      }
+    }
+
+    @at-root &:nth-child(2) {//summer
+      &.is-active,
+      &:hover {
+        background-image: url('/assets/images/toya/summer-tab-on.jpg') !important;
+      }
+    }
+
+    @at-root &:nth-child(1) {//spring
+      &.is-active,
+      &:hover {
+        background-image: url('/assets/images/toya/spring-tab-on.jpg') !important;
+      }
+    }
+  }
+
+  .tab-content {
+    transition: opacity 1s ease-in;
+  }
+}
+
+.tab-access {//access page
+  margin-top: 25px;
+
+  .slider-tab {
+    align-items: flex-end;
+  }
+
+  .tab-list {
+    display: flex;
+    border-bottom: 7px solid #c3e8d8;
+    align-items: flex-end;
+
+
+    .tab-item {
+      &-slide {
+        width: auto;
+        margin-right: 10px;
+      }
+
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      text-align: center;
+      background-color: $color-green-6;
+      opacity: 0.5;
+      color: $color-white;
+      cursor: pointer;
+      padding: 0 17.9px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      white-space: nowrap;
+      margin-right: 10px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      transition: height .5s ease;
+
+      @include max-screen($breakpoint-mobile) {
+        height: 30px;
+        font-size: 11px;
+        padding: 0 10px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        margin-right: 5px;
+      }
+
+      &:hover {
+        @include min-screen(1025px) {
+          height: 50px;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      &.is-active {
+        opacity: 1;
+        height: 50px;
+        @include max-screen($breakpoint-mobile) {
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  .tab-container {
+    border: 1px solid $color-green;
+    border-top-width: 0px;
+    padding: 42px 37px;
+    overflow-y: hidden;
+
+    @include max-screen($breakpoint-mobile) {
+      border-top-width: 1px;
+      margin-top: 9px;
+      padding: 13px 8px 13px;
+    }
+
+    &.tab-bus {
+      @include max-screen($breakpoint-mobile) {
+        padding: 20px 20px 40px;
+      }
+    }
+  }
+}

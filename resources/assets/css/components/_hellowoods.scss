@@ -3,6 +3,11 @@
 
   @include max-screen ($breakpoint-mobile) {
     max-width: 252px;
+
+    &.full-sp {
+      max-width: none;
+      padding: 0 20px;
+    }
   }
 }
 
@@ -26,6 +31,13 @@
   .field-introduction {
     .field-introduction-container {
       padding: 0;
+
+      &.field-zipline {
+        @include min-screen ($breakpoint-mobile+1) {
+          margin-top: -30px;
+          margin-bottom: 152px;
+        }
+      }
     }
     .map-wrapper {
       /*background-image: url(../images/hellowoods/field-intro-bg.png);*/

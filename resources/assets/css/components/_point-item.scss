@@ -1,0 +1,180 @@
+.point-item {
+  text-align: center;
+
+  @include max-screen ($breakpoint-mobile) {
+    .full-sp {
+      padding: 0;
+    }
+  }
+
+
+  svg {
+    width: 100%;
+    max-width: 860px;
+    height: 70px;
+    margin: auto;
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 245px;
+    }
+  }
+  .point-heading-wrap {
+    background-color: #f5f6fa;
+    padding: 50px 20px 80px;
+    @include min-screen ($breakpoint-mobile+1) {
+      padding: 67px 20px 180px;
+    }
+
+    .point-heading {
+
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 34px;
+
+      @include max-screen ($breakpoint-mobile) {
+        background-size: 80px;
+        margin-bottom: 26px;
+      }
+
+      &.no-1 {
+        background-image: url(../images/dinner-buffet/01.png);
+        background-size: 107px;
+        @include max-screen ($breakpoint-mobile) {
+          background-size: 80px;
+        }
+
+        svg {
+          @include max-screen ($breakpoint-mobile) {
+            max-width: 300px;
+          }
+        }
+      }
+      &.no-2 {
+        background-image: url(../images/dinner-buffet/02.png);
+        background-size: 107px;
+        @include max-screen ($breakpoint-mobile) {
+          background-size: 80px;
+        }
+        svg {
+          max-width: 380px;
+          @include max-screen ($breakpoint-mobile) {
+            max-width: 300px;
+          }
+        }
+      }
+      &.no-3 {
+        background-image: url(../images/dinner-buffet/03.png);
+        background-size: 107px;
+        @include max-screen ($breakpoint-mobile) {
+          background-size: 80px;
+        }
+        svg {
+          max-width: 750px;
+          @include max-screen ($breakpoint-mobile) {
+            max-width: 340px;
+          }
+        }
+      }
+      &.no-4 {
+        background-image: url(../images/dinner-buffet/04.png);
+        background-size: 107px;
+        @include max-screen ($breakpoint-mobile) {
+          background-size: 80px;
+        }
+        svg {
+          max-width: 350px;
+          @include max-screen ($breakpoint-mobile) {
+            max-width: 260px;
+          }
+        }
+      }
+    }
+    .point-subtext {
+      font-size: 15px;
+      letter-spacing: 2px;
+      line-height: 1.8;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 12px;
+        max-width: 300px;
+        margin: auto;
+        line-height: 1.5;
+        letter-spacing: 3px;
+      }
+    }
+  }
+
+  .point-image-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -55px;
+    justify-content: space-between;
+
+    @include min-screen ($breakpoint-mobile+1) {
+      display: flex;
+      margin-top: -155px;
+    }
+    li {
+      width: 48%;
+      margin-bottom: 32px;
+
+      .point-image {
+        width: 100%;
+        height: 170px;
+        max-width: 360px;
+        margin: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include min-screen ($breakpoint-mobile+1) {
+          height: 360px;
+          margin-bottom: 14px;
+        }
+      }
+
+      p {
+        @include max-screen ($breakpoint-mobile) {
+          line-height: 1;
+          font-size: 14px;
+          margin-top: 6px;
+          text-align: left;
+        }
+      }
+
+      @include min-screen ($breakpoint-mobile+1) {
+        width: 33.3%;
+        margin: 0;
+      }
+    }
+
+    &.two-items {
+      display: block;
+      li {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+
+@at-root .dinner-set-marcherant {//dinner set marcherant page
+  .point-subtext {
+    font-size: 15px;
+    line-height: 2;
+    text-align: center;
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: $z-min;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 33px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+  }
+}

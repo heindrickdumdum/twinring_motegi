@@ -46,9 +46,42 @@
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text-align-left {
   text-align: left;
+}
+
+.hover-wrap {
+  overflow: hidden;
+  &:hover {
+    &>* {
+      transition: ease 1s all;
+      transform: scale(1.2);
+
+      @at-root 
+      .breakfast-marcherant &,
+      .lunch-marcherant &,
+      .dinner-set-marcherant & {//lunch marcherant
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.hover-green {
+  transition: color 0.25s ease-in-out;
+
+  &:hover {
+    color: $color-green !important;
+  }
+}
+
+.hover-opacity {
+  transition: opacity 0.25s ease-in-out;
+
+  &:hover {
+    opacity: 0.8 !important;
+  }
 }

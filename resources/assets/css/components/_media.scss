@@ -262,6 +262,12 @@
   font-weight: 700;
   letter-spacing: 0.16em;
 
+  @at-root .location-desc & {//access page
+    @include max-screen($breakpoint-mobile) {
+      font-size: 16px;
+    }
+  }
+
   @include min-screen($breakpoint-mobile + 1) {
     font-size: 20px;
   }
@@ -282,6 +288,23 @@
     @include min-screen($breakpoint-mobile + 1) {
       background-image: linear-gradient(0deg, #c3e8d8 19.44%, #ffffff 19.44%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 69.44%, #ffffff 69.44%, #ffffff 100%);
       background-size: 36.00px 36.00px;
+    }
+
+    @at-root .location-desc & {//access page
+      @include max-screen($breakpoint-mobile) {
+        background-position: center 3px;
+        background-repeat: repeat-x;
+      }
+    }
+  }
+
+  &-program-details {
+    .media-title-text {
+      background: rgb(195,232,216);
+      background: linear-gradient(90deg, rgba(195,232,216,1) 0%, rgba(195,232,216,1) 100%);
+      background-size: 100% 5px;
+      background-repeat: no-repeat;
+      background-position-y: bottom;
     }
   }
 
@@ -312,6 +335,94 @@
       font-size: 15px;
       margin-bottom: 16px;
       margin-top: 14px;
+    }
+  }
+
+  @at-root .smart-entry & {//smart entry
+    &-smart-entry {
+      font-size: 22px;
+      letter-spacing: 0.1em;
+      margin-bottom: 24px;
+      line-height: 1.455; 
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 16px;
+        line-height: 1.625;
+        margin-bottom: 11px;
+      }
+
+      span {
+        background-position: center 3px;
+        // background-repeat-y: no-repeat;
+        background-repeat: repeat-x;
+
+        @at-root .is-ie & {//for ie
+          background-repeat: repeat-x;
+          background-position: center 8px;
+        }
+
+        @at-root .is-safari & {//for safari
+          background-repeat: repeat-x;
+          background-position: center 3px;
+        }
+      }
+      
+      &-heading {
+        font-size: 26px;
+        line-height: 1.385;
+        letter-spacing: 0.1em;
+        text-align: center;
+
+        span {
+          background-position: center 7px;
+          // background-repeat-y: no-repeat;
+          background-repeat: repeat-x;
+
+          @at-root .is-ie & {//for ie
+            background-repeat: repeat-x;
+            background-position: center 12px;
+          }
+
+          @at-root .is-safari & {//for ie
+            background-repeat: repeat-x;
+            background-position: center 7px;
+
+            @include max-screen($breakpoint-mobile) {
+              background-position: center 3px;
+            }
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            background-position: center 3px;
+          }
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          font-size: 16px;
+          line-height: 1.625;
+          text-align: left;
+        }
+      }
+
+      &-faq-heading {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 11px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          text-align: center;
+          font-size: 19px;
+          line-height: 1.316;          
+        }
+
+        span {
+          background-position: center 7px;
+
+          @include max-screen($breakpoint-mobile) {
+            background-position: center 3px;
+          }
+        }
+      }
     }
   }
 }
@@ -1043,3 +1154,22 @@
 
 //hotel-granroom end
 
+.access-heading {//access page
+  font-size: 26px;
+  letter-spacing: 0.1em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 19px;    
+  }
+
+  @at-root & {
+    span {
+      background-repeat: repeat-x;
+      background-position: center 7px;
+
+      @include max-screen($breakpoint-mobile) {
+        background-position: center 3px;
+      }
+    }
+  }
+}

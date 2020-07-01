@@ -193,12 +193,22 @@
       padding-left: 0;
       color: $color-mineshaft;
       letter-spacing: 0.03em;
+
+      @at-root .smart-entry & {//smart entry page
+        @include max-screen($breakpoint-mobile) {
+          margin-top: -1px;
+        }
+
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-top: 12px;
+        }
+      }
     }
 
     &:hover {
       @include min-screen($breakpoint-mobile + 1) {
         .button-gradient-icon {
-          transform: translateX(5px);
+          transform: translate(5px, -50%);
         }
       }
     }

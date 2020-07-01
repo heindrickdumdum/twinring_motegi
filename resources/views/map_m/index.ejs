@@ -1,0 +1,135 @@
+<%
+  var title = 'ご宿泊予約｜ホテルツインリンク｜ツインリンクもてぎ';
+  pageId = 'businessHours';
+%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/map_m/mv.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/map_m/mv-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading mv-heading-business-hours">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-business-hours',
+            heading_level: 1,
+            text: 'Park Map',
+            subtextvg: 'map_m-title'
+          }) %>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-wrap-business-hours-guide',
+            text: 'Map',
+            alt: 'Map',
+            altSubtext: '',
+            subtextvg: 'map_m-map-all'
+          }) %>
+        </div>
+        <div class="map-all">
+            <div class="l-container">
+              <div class="map-all-wrapper">
+                <img class="u-show-pc" src="<%= mix('/assets/images/map_m/map-all.png') %>" alt="全体マップ">
+                <img class="u-show-sp" src="<%= mix('/assets/images/map_m/sp-map-all.png') %>" alt="全体マップ">
+                <img class="u-show-sp sp-map-mark" src="<%= mix('/assets/images/map_m/sp-map-mark.png') %>" alt="全体マップ">
+                <a href="#map-central" class="u-show-sp sp-map-frame">
+                  <img class="" src="<%= mix('/assets/images/map_m/sp-entrance.png') %>" alt="全体マップ">
+                </a>
+                <ul class="map-all-bubbles-list u-show-pc">
+                  <li class="map-bubbles-item">
+                    <a href="https://www.twinring.jp/hoteltwinring/"><img class="" src="<%= mix('/assets/images/map_m/bubble-hotel.png') %>" alt="全体マップ"></a>
+                  </li>
+                  <li class="map-bubbles-item">
+                    <a href="https://www.twinring.jp/f-glamping/"><img class="" src="<%= mix('/assets/images/map_m/bubble-camp.png') %>" alt="全体マップ"></a>
+                  </li>
+                  <li class="map-bubbles-item">
+                    <a href="https://www.twinring.jp/hellowoods/"><img class="" src="<%= mix('/assets/images/map_m/bubble-hollowoods.png') %>" alt="全体マップ"></a>
+                  </li>
+                  <li class="map-bubbles-item">
+                    <a href="https://www.twinring.jp/collection-hall/"><img class="" src="<%= mix('/assets/images/map_m/bubble-honda.png') %>" alt="全体マップ"></a>
+                  </li>
+                  <li class="map-bubbles-item">
+                    <a href="https://www.twinring.jp/information_m/"><img class="" src="<%= mix('/assets/images/map_m/bubble-information.png') %>" alt="全体マップ"></a>
+                  </li>
+                  <li class="map-bubbles-item">
+                    <a href="https://www.twinring.jp/mobipark_m/"><img class="" src="<%= mix('/assets/images/map_m/bubble-mobipark.png') %>" alt="全体マップ"></a>
+                  </li>
+                  <li class="map-bubbles-item no-hover">
+                    <img class="" src="<%= mix('/assets/images/map_m/bubble-active-safety.png') %>" alt="全体マップ">
+                  </li>
+                  <li class="map-bubbles-item no-hover">
+                    <a href="#map-central"><img class="" src="<%= mix('/assets/images/map_m/icon_closeup.png') %>" alt="全体マップ"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="section-button">
+                <%- include('/partials/button', {
+                  newTab: true,
+                  modifier: 'map_m-pdf',
+                  text: 'MAPをPDFで見る',
+                  link: '/assets/images/pdf/map-all-pdf.pdf',
+                  buttonIcon: 'icon_pdf-small'
+                }) %>
+              </div>
+            </div>
+            
+        </div>
+        
+      </section>
+
+      <section id="map-central" class="">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-wrap-auto',
+            text: '',
+            alt: 'Map',
+            altSubtext: '',
+            subtextvg: 'map_m-h2-map-central-entrance'
+          }) %>
+        </div>
+        <div class="map-all map-central">
+            <div class="l-container">
+              <div class="map-all-wrapper">
+                <img class="u-show-pc" src="<%= mix('/assets/images/map_m/central-entrance-map.png') %>" alt="全体マップ">
+                <img class="u-show-sp" src="<%= mix('/assets/images/map_m/sp-map-central-entrance.png') %>" alt="全体マップ">
+                
+              </div>
+              <div class="section-button">
+                <%- include('/partials/button', {
+                  newTab: true,
+                  modifier: 'map_m-pdf',
+                  text: 'MAPをPDFで見る',
+                  link: '/assets/images/pdf/map-central-entrance.pdf',
+                  buttonIcon: 'icon_pdf-small'
+                }) %>
+              </div>
+            </div>
+        </div>
+      </section>
+      
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+    
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+    </main>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsParkMap
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

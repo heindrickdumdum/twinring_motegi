@@ -80,6 +80,7 @@
 }
 
 .carbike-article-thumb {
+  overflow: hidden;
   position: relative;
   margin-bottom: 12px;
 
@@ -102,6 +103,11 @@
 
   @include max-screen($breakpoint-mobile) {
     padding-bottom: 54%;
+  }
+
+  &:hover {
+    transition: ease 1s all;
+    transform: scale(1.2);
   }
 }
 
@@ -126,7 +132,7 @@
 
   @include max-screen($breakpoint-mobile) {
     right: inherit;
-    left: 0;
+    left: unset;
   }
 
   &.carbike-article-cat-bg-green-1 {
@@ -257,7 +263,7 @@
     @include max-screen ($breakpoint-mobile) {
       text-align: left;
       justify-content: left;
-      padding: 10px 8px;
+      padding: 4px 8px;
       width: 68px;
       margin-right: 0;
     }
@@ -284,8 +290,9 @@
     line-height: 1.7;
 
     @include max-screen ($breakpoint-mobile) {
-      padding: 10px 12px;
+      padding: 4px 12px;
       width: calc(100% - 68px);
+      font-size: 11px;
     }
   }
 
@@ -432,7 +439,7 @@
     @include min-screen ($breakpoint-mobile + 1) {
       left: 0;
       right: inherit;
-      bottom: -13px;
+      // bottom: -13px;
       padding: 5px 13px;
       min-height: auto;
     }
@@ -460,5 +467,31 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@at-root .motegi-attraction {//fb 06182020
+  .carbike-article-more {
+    display: none !important;
+  }
+
+  .carbike-article-list {
+    .carbike-article-list-item {
+      &:first-child {
+        padding-top: 10px;
+        border-top: 1px dashed #d5d5d5;
+      }
+
+      &:last-child {
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #d5d5d5;
+      }
+    }
+  }
+
+  .carbike-article-cat {
+    right: 0px !important;
+    bottom: 0px !important;
+    border-radius: 0px !important;
   }
 }

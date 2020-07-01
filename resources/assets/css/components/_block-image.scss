@@ -32,11 +32,13 @@
 
     &-program {//program experience page
       @include min-screen($breakpoint-mobile + 1) {
-        padding-bottom: 60px !important;
+        padding-bottom: 90px !important;
+        margin-bottom: 75px;
       }
 
       @include max-screen($breakpoint-mobile) {
         padding-bottom: 0px !important;
+        margin-bottom: 45px;
       }
     }
   }
@@ -85,6 +87,11 @@
     margin: 0 0 24px;
   }
 
+  .block-image-item-link {
+    // overflow: hidden;
+    // display: block;
+  }
+
   &.block-image-item-last {
     .block-image-text {
       img {
@@ -120,6 +127,11 @@
         margin-left: 0px;
       }
     }
+  }
+
+  &.block-image-item-collection-pit {
+    width: auto;
+    margin: auto;
   }
 }
 
@@ -176,6 +188,11 @@
   @include max-screen($breakpoint-mobile) {
     height: auto;
     padding: 10% 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    transition: ease 0.5s all;
   }
 }
 

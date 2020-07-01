@@ -4,13 +4,35 @@
   right: 0;
   transition: transform $duration $ease-in-out;
 
+  @include min-screen($breakpoint-mobile + 1) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .is-ie & {
     top: 0px;
   }
 
+  // .is-safari & {
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  // }
+
   svg {
     width: 100%;
     height: 12px;
+
+    @at-root .breakfast-marcherant & {//breakfast marcherant page
+      @include max-screen($breakpoint-mobile) {
+        height: 7.5px;
+      }
+    }
+  }
+
+  @at-root .smart-entry-attraction & {
+    @include max-screen($breakpoint-mobile) {
+      top: -20px;
+    }
   }
 }
 

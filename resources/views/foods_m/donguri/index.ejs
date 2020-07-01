@@ -51,16 +51,20 @@
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-donguri',
-              subtextvg: 'donguri-main-title',
-              altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
+              // subtextvg: 'donguri-main-title',
+              // altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
+              imgPath: mix('/assets/images/donguri/color-title.jpg'),
+              alt: '豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です'
             }) %>
           </div>
 
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-donguri',
-              subtextvg: 'donguri-main-title-sp',
-              altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
+              // subtextvg: 'donguri-main-title-sp',
+              // altSubtextvg: `豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です`
+              imgPath: mix('/assets/images/donguri/color-title-sp.jpg'),
+              alt: '豊かな自然に囲まれたハローウッズの森にあるレストラン 森を満喫した後に、おなかも満足できる食事処です'
             }) %>
           </div>
 
@@ -80,21 +84,30 @@
               <tr class="table-row">
                 <th class="table-head">場所</th>
                 <td class="table-col">
-                  ハローウッズ  > <a class="link" href="/map_m/">MAP</a>
+                  ハローウッズ <a class="link" href="/map_m/">Mapを見る</a>
                 </td>
               </tr>
 
               <tr class="table-row">
                 <th class="table-head">営業時間</th>
                 <td class="table-col">
-                  <a class="link" href="https://www.twinring.jp/hours_m/">ツインリンクもてぎ営業時間内（L.O.営業終了30分前）</a>
+                  <a class="link" href="https://www.twinring.jp/hours_m/">ツインリンクもてぎ営業時間内</a>（L.O.営業終了30分前）
                 </td>
               </tr>
 
               <tr class="table-row">
                 <th class="table-head">座席数</th>
                 <td class="table-col">店内：36<br>
-                  ※クレジットカードはご利用いただけません。</td>
+                  <!-- ※クレジットカードはご利用いただけません。 -->
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">備考</th>
+                <td class="table-col">
+                  ・チャイルドシートあり<br/>
+                  ・アルコールあり
+                </td>
               </tr>
             </tbody>
           </table>
@@ -105,14 +118,15 @@
       <%- include('/partials/donguri/section-menu') -%>
 
       <div class="l-section oak-button">
-        <p class="u-show-sp">
+        <!-- <p class="u-show-sp">
           この他にも、様々なメニューを<br>ご用意しております。
-        </p>
+        </p> -->
         <div class="u-show-pc">
           <%- include('/partials/button', {
             modifier: 'restaurant-button donguri-button',
             link: 'https://www.twinring.jp/foods_m/pdf/donguri_menu_202003.pdf',
-            text: '春のおすすめメニューはこちら（PDF:3.2MB）'
+            // text: '春のおすすめメニューはこちら（PDF:3.2MB）'
+            text: 'その他のメニューはこちら'
           }) -%>
         </div>
 
@@ -120,13 +134,14 @@
           <%- include('/partials/button', {
             modifier: 'restaurant-button donguri-button',
             link: 'https://www.twinring.jp/foods_m/pdf/donguri_menu_202003.pdf',
-            text: '春のおすすめメニューはこちら（PDF:3.2MB）'
+            // text: '春のおすすめメニューはこちら（PDF:3.2MB）'
+            text: 'その他のメニューはこちら'
           }) -%>
         </div>
       </div>
 
       <!-- other restaurant module-->
-      <%- include('/partials/restaurant/section-other-restaurant') -%>
+      <%- include('/partials/donguri/section-other-restaurant') -%>
       
 
     </main>

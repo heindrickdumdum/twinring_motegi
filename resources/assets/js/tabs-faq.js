@@ -24,7 +24,7 @@ function tabsFaq(){
       document.getElementById('faq-list').setAttribute("data-tab", this.getAttribute('value'));
       document.getElementById('customSelect').classList.toggle('open');
       document.getElementById('customSelectItems').classList.toggle('select-hide');
-    })
+    });
   }
 }
 

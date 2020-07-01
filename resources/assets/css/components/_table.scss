@@ -7,6 +7,18 @@
   font-weight: 700;
   text-align: left;
 
+  @at-root .shops-information & {
+    p {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 11px;
+
+        &:nth-of-type(2) {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+
   @at-root .table-wrap {
     p {
       @include max-screen($breakpoint-mobile) {
@@ -41,17 +53,91 @@
     }
   }
 
-  &.table-rocco {
+  &.table-toya {//toya page
+    background-color: transparent;
+    margin-top: 120px;
+
+    @at-root & {
+      .link {
+        color: $color-white;
+      }
+
+      .table-head {
+        background-color: rgba($color: $color-dark-yellow, $alpha: 0.30);
+        color: $color-white;
+        border-color: $color-dark-yellow;
+        text-align: left;
+        vertical-align: top;
+
+        &:first-child {
+          border-left: 0px solid;
+        }
+
+        @include min-screen($breakpoint-mobile + 1) {
+          padding-left: 42px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          padding-left: 11px;
+          font-size: 12px;
+        }
+      }
+
+      .table-col {
+       color: $color-white;
+       text-align: left;
+       padding: {
+        left: 54px;
+       }
+       border-right: 0px solid;
+       border-color: $color-dark-yellow;
+
+       @include max-screen($breakpoint-mobile) {
+        padding-left: 11px;
+        font-size: 12px;
+       }
+      }
+
+      .table-row-last {
+        border-bottom-color: $color-dark-yellow !important;
+      }
+    }
+  }
+
+  &.table-rocco {//rocco page
+    @at-root & {
+      .table-head {
+        @include max-screen($breakpoint-mobile) {
+          white-space: nowrap;
+        }
+      }
+    }
+
     .link {
       color: #00a040;
+    }
+
+    span {
+      @include max-screen($breakpoint-mobile) {
+        white-space: nowrap;
+      }
     }
   }
 
   &.table-programdetails {
     margin-bottom: 70px;
-    
+    .border-right {
+      border-right: 1px solid #f7f7f7;
+      min-width: 140px;
+    }
     @include max-screen ($breakpoint-mobile) {
       margin-bottom: 29px;
+      font-size: 10px;
+
+      .table-head-custom {
+        width: 60px;
+        padding: 10px 5px;
+      }
     }
   }
 
@@ -80,6 +166,16 @@
       color: #00a040;
     }
   }
+
+  @at-root .smart-entry & {//smart entry page
+    &-smart-entry {
+      margin-bottom: 94px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 34px;
+      }
+    }
+  }
 }
 
 .table-head {
@@ -106,6 +202,12 @@
 
   a {
     color: $base-font-color;
+  }
+
+  @at-root .gran-turismo & {//granturismo table
+    @include max-screen($breakpoint-mobile) {
+      white-space: nowrap !important;
+    }
   }
 }
 
@@ -168,7 +270,7 @@
   background-color: $color-white;
 
   @include max-screen($breakpoint-mobile) {
-    width: 100%;  
+    width: 100%;
     margin-bottom: 44px;
 
     &-last {
@@ -331,3 +433,212 @@
   }
 }
 //modifier forest walk end
+
+@at-root .table-distribution {//smart entry page
+  .table {
+    margin-bottom: 31px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 24px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 40px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-note {
+      font-size: 15px;
+      line-height: 2;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+
+      &:nth-of-type(3) {
+        margin-bottom: 0px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+        line-height: 1.833;
+      }
+    }
+  }
+}
+
+.link-green {
+  color: $color-green !important;
+}
+
+@at-root .table-green {
+  border: 1px solid $color-green;
+  background-color: $color-white;
+
+  @at-root .attraction-collapse & {//fee page
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 20px !important;
+    }
+  }
+
+  @at-root & {
+    &.admission-table {
+      border-bottom-width: 0px;
+
+      .table-col {
+        border-bottom: 1px solid $color-green;
+      }
+    }
+  }
+
+  .table-head {
+    border-top-width: 0px;
+    border-bottom: 1px solid $color-green;
+    text-align: center;
+    border-right: 1px solid $color-green;
+    vertical-align: middle;
+
+    // @include max-screen($breakpoint-mobile) {
+    //   white-space: nowrap;
+    //   line-height: normal;
+    // }
+
+    &.dark-gray {
+      background-color: $color-dark-gray;
+    }
+
+    &:last-child {
+      border-right-width: 0px;
+    }
+
+    &:before,
+    &:after {
+      background: none !important;
+    }
+  }
+
+  .table-col {
+    border-width: 0px;
+    text-align: center;
+    border-right: 1px solid $color-green;
+    vertical-align: middle;
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+
+    .space-right {
+      margin-right: 25px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      // white-space: nowrap;
+      padding: {
+        left: 10px;
+        right: 10px;
+      }
+    }
+
+    &:last-child {
+      border-right-width: 0px;
+    }
+
+    &:before,
+    &:after {
+      background: none !important;
+    }
+  }
+}
+
+@at-root .page-fee {//fee page
+  .table-container {
+    margin-bottom: 66px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 12px;
+    }
+
+    &-list {
+      display: flex;
+      margin-bottom: 80px;
+
+      @include max-screen($breakpoint-mobile) {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    &-item {
+      width: 280px;
+      margin-right: 20px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-right: 0px;
+        display: inline-block;
+        width: 203px;
+        margin-bottom: 10px;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    &.with-padding {
+      padding: {
+        left: 40px;
+        right: 40px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 0px;
+      }
+    }
+
+    .media-title {
+      margin-bottom: 18px;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 16px;
+      }
+    }
+
+    .subpage-desc {
+      margin-top: 0px;
+      margin-bottom: 21px;
+    }
+
+    .table-col {
+      line-height: normal;
+    }
+
+    small {
+      display: block;
+      font-weight: normal;
+      font-size: 13px; 
+    }
+
+    .not-bold {
+      font-weight: normal;
+    }
+
+    table {
+      p {
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+.not-bold {
+  font-weight: normal;
+}

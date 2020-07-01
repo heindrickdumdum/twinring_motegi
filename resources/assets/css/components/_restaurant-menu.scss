@@ -93,6 +93,7 @@
     display: flex;
     justify-content: space-between;
     font-family: $font-hiragino;
+    align-items: center;
 
     @include max-screen($breakpoint-mobile) {
       * {
@@ -188,6 +189,8 @@
       display: block;
       width: 100%;
       margin-top: 35px;
+      margin-bottom: 42px;
+
     }
 
     &-gelato {//rocco
@@ -231,7 +234,10 @@
 
         &-gelato {//gelato
           background-size: contain;
-          height: 343px;
+          // height: 343px;
+          @include min-screen($breakpoint-mobile + 1) {
+            height: 276px;
+          }
 
           @include max-screen($breakpoint-mobile) {
             height: 171px;
@@ -311,6 +317,12 @@
           @include max-screen($breakpoint-mobile) {
             font-size: 13px;
           }
+
+          @at-root .oak-wrapper & {//oak page
+            @include max-screen($breakpoint-mobile) {
+              font-size: 12px !important;
+            }
+          }
         }
         
         span {
@@ -318,6 +330,34 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           display: inline-block;
+
+          &:nth-of-type(1) {
+            @include max-screen($breakpoint-mobile) {
+              margin-bottom: 0px;
+            }
+          }
+
+          &.tag {
+            -webkit-background-clip: padding-box;
+            -webkit-text-fill-color: $color-white;
+            font-size: 15px;            
+            color: $color-white;
+            letter-spacing: 0.1em;
+            display: inline-block;
+            padding: 4px 10px;
+
+            @include max-screen($breakpoint-mobile) {
+              font-size: 10px !important;
+              margin-left: 10px;
+              padding-left: 5px;
+              padding-right: 5px;
+            }
+
+            @at-root .is-ie & {
+              background-color: $color-gossamer;
+              color: $color-white;
+            }
+          }
       
           .is-ie & {
             background: none;
@@ -373,6 +413,23 @@
           margin-top: 10px;
           padding-top: 15px;
         }
+
+        &.menu-desc-marcherant {
+          position: relative;
+          color: black;
+          text-align: left;
+
+          @at-root .breakfast-marcherant & {//marcherant breakfast page
+            display: flex;
+            align-items: center;
+          }
+
+          @include max-screen ($breakpoint-mobile) {
+            .button-gradient-icon {
+              width: 16px;
+            }
+          }
+        }
       }
     }
   }
@@ -416,24 +473,24 @@
       width: 100%;
 
       &:last-child {
-        margin-bottom: 0px;
+        margin-bottom: 0px !important;
       }
     }
     
     &:nth-child(1) {
       margin-bottom: 20px;
 
-      @include max-screen($breakpoint-mobile) {
-        order: 1;
-      }
+      // @include max-screen($breakpoint-mobile) {
+      //   order: 1;
+      // }
     }
 
-    &:nth-child(2) {
-      @include max-screen($breakpoint-mobile) {
-        order: 3;
-        margin-bottom: 0 !important;
-      }
-    }
+    // &:nth-child(2) {
+    //   @include max-screen($breakpoint-mobile) {
+    //     order: 3;
+    //     margin-bottom: 0 !important;
+    //   }
+    // }
 
     &:nth-child(3) {
       .sub-menu-image {
@@ -443,9 +500,9 @@
         }
       }
 
-      @include max-screen($breakpoint-mobile) {
-        order: 2;
-      }
+      // @include max-screen($breakpoint-mobile) {
+      //   order: 2;
+      // }
     }
   }
   
@@ -493,6 +550,802 @@
     @include max-screen($breakpoint-mobile) {
       margin-left: 0px;
       font-size: 12px;
+    }
+  }
+}
+
+.toya-menu {//toya page
+  background-color: $color-black;
+  padding: {
+    top: 91px;
+    bottom: 91px;
+  }
+  background-image: url('/assets/images/toya/mountain-bg.png');
+  background-size: 65%;
+  background-position: left 78%;
+  background-repeat: no-repeat;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: {
+      top: 40px;
+      bottom: 0px;
+      left: 10px;
+      right: 10px;
+    }
+    background-image: url('/assets/images/toya/mountain-bg-sp.png');
+    background-size: 100%;
+    background-position: center 75%;
+  }
+
+  @at-root svg {
+    .menu-highlight & {
+      width: 100%;
+      height: 18px;
+      margin-top: 40px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: 12px;
+        margin-top: 28px;
+      }
+    }
+
+    .menu-title & {
+      width: 100%;
+      height: 35px;
+      margin-top: 20px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: 22px;
+        margin-top: 15px;
+      }
+    }
+
+    .menu-price & {
+      width: 100%;
+      height: 23px;
+      margin-top: 20px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: 12px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @at-root .toya-wrapper & {
+    .menu-desc {
+      font-size: 18px;
+      color: $color-white;
+      line-height: 1.667;
+      text-align: center;
+      letter-spacing: 0.1em;  
+      margin-top: 45px;
+      margin-bottom: 45px; 
+      
+      @include max-screen($breakpoint-mobile) {
+        font-size: 13px;
+        line-height: 1.615;
+        text-align: center;
+        margin: {
+          top: 20px;
+          bottom: 40px;
+        }
+        padding: {
+          left: 60px;
+          right: 60px;
+        }
+      }
+    }
+  }
+
+  .tab-menu-sub {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 62px;
+    margin-top: 62px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 42px;
+      padding-top: 42px;
+      display: block;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &:before {
+      content: "";
+      width: 100px;
+      height: 1px;
+      background-color: $color-white;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include max-screen($breakpoint-mobile) {
+        width: 50px;
+      }
+    }
+
+    &-col {
+      width: 50%;
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 74px;
+      }
+
+      &:first-child {
+        padding-left: 0px;
+      }
+
+      &:last-child {
+        padding-right: 0px;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    @at-root svg {
+      .tab-menu-sub-heading & {
+        width: 100%;
+        height: 24px;
+        margin-top: 25px;
+
+        @include max-screen($breakpoint-mobile) {
+          height: 18px;
+        }
+      }
+
+      .tab-menu-sub-price & {
+        margin-top: 10px;
+        width: 100%;
+        height: 18px;
+
+        @include max-screen($breakpoint-mobile) {
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  .note {
+    font-size: 15px;
+    color: $color-white;
+    line-height: 2;
+    text-align: center;    
+    display: block;
+    max-width: 100%;
+    margin-top: 75px;
+    letter-spacing: 0.1em;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 5px;
+      font-size: 12px;
+      line-height: 1.5;      
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+.marcherant-menu {
+  @at-root & {
+    a {
+      .button-gradient-icon {
+        transition: transform 0.25s ease-in-out;
+      }
+
+      &:hover {
+        .button-gradient-icon {
+          transform: translate(5px, -50%);
+        }
+      }
+    }
+  }
+
+  .menu-container {
+    .menu-item {
+      margin-bottom: 20px;
+      .menu-desc-marcherant {
+        padding: 0;
+        margin-top: 8px;
+        margin-bottom: 28px;
+      }
+      .menu-image {
+        margin-bottom: 0;
+      }
+      @include min-screen($breakpoint-mobile+1){
+        width: 100%;
+        max-width: 472px;
+        margin-bottom: 22px;
+
+        .menu-image {
+          background-size: contain;
+          margin-bottom: 0;
+          max-height: 265px;
+        }
+        .menu-title {
+          margin-bottom: 0;
+        }
+        .menu-desc-marcherant {
+          font-size: 23px;
+          margin-top: 0px;
+          margin-bottom: 20px;
+          line-height: 1.5;
+          letter-spacing: 2px;
+        }
+      }
+
+    }
+  }
+}
+
+@at-root .breakfast-marcherant {//breakfast marcherant page
+  &-menu {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1020px;
+      height: 400px;
+      background-color: #f5f6fa;
+      top: -85px;
+      z-index: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include max-screen($breakpoint-mobile) {
+        height: 206px;
+        top: -55px;
+      }
+    }
+
+    &.menu-3 {
+      &:before {
+        display: none;
+      }
+
+      margin-top: 153px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 137px;
+      }
+    }
+
+    &.menu-2 {
+      margin-top: 155px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 103px;
+      }
+    }
+  }
+
+  &-menu-list {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+
+    @include max-screen($breakpoint-mobile) {
+      flex-wrap: wrap;
+    }
+
+    &-2 {
+      flex-wrap: wrap;
+
+      @include max-screen($breakpoint-mobile) {
+        display: block;
+        margin: {
+          left: -20px;
+          right: -20px;
+        }
+      }
+    }
+  }
+
+  &-menu-item {
+    @include max-screen($breakpoint-mobile) {
+      width: 160px;
+      margin-bottom: 27px;
+    }
+
+    &-2 {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 35px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+  }
+
+  &-menu-image {
+    width: 360px;
+    height: 361px;
+    margin-bottom: 11px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 160px;
+      height: 160px;
+    }
+
+    &-2 {
+      width: 473px;
+      height: 278px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        height: 179px;
+      }
+    }
+  }
+
+  &-menu-desc {
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    text-align: center;  
+    
+    &.desc-2 {
+      @include min-screen($breakpoint-mobile + 1) {
+        font-weight: bold;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: left;
+    }
+  }
+
+  .breakfast-menu {
+    &-3 {
+      border: 1px solid $color-green;
+      padding: 48px 60px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: {
+          left: -20px;
+          right: -20px;
+        }
+        padding: {
+          left: 7px;
+          right: 7px;
+          top: 55px;
+          bottom: 55px;
+        }
+      }
+    }
+
+    &-subtext {
+      font-size: 12px;
+      line-height: 2.5;
+      text-align: center;
+      letter-spacing: 0.1em;  
+      margin-bottom: 23px; 
+      
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+    }
+
+    &-list-container {
+      @include min-screen($breakpoint-mobile + 1) {
+        column-count: 3;
+        column-gap: 122px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+
+      span {
+        font-size: 18px;
+        color: $color-green;
+        line-height: 1.667;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        display: block;
+        border-top: 2px solid $color-green;
+        border-bottom: 2px solid $color-green;
+        padding: {
+          top: 3px;
+          bottom: 4px;
+        }
+        margin-bottom: 5px;
+
+        @include max-screen($breakpoint-mobile) {
+          font-size: 14px;
+          line-height: 1.731;
+          padding: 2px 0px;
+          margin-bottom: 8px;
+          font-weight: normal;
+          border-top-width: 1px;
+          border-bottom-width: 1px;
+        }
+      }
+
+      
+
+      .breakfast-menu-list-cat {
+        &-item {
+          margin-bottom: 36px;
+
+          &:nth-of-type(3) {
+            @include min-screen($breakpoint-mobile + 1) {
+              margin-bottom: 225px;
+            }
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            margin-bottom: 24px;
+          }
+        }
+
+        &-list-item {
+          font-size: 15px;
+          line-height: 2;
+          letter-spacing: 0.1em;    
+          position: relative;
+          margin-left: 16px;
+
+          @include max-screen($breakpoint-mobile) {
+            margin-left: 10px;
+          }
+          
+          &:before {
+            content: "\2022";
+            position: absolute;
+            top: 5px;
+            left: -11px;
+            font-size: 10px;
+
+            @include max-screen($breakpoint-mobile) {
+              top: 2px;
+              left: -10px;
+            }
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 12px;
+            line-height: 2.045;
+          }
+        }
+
+        &-item-dinner-buffet {
+          &:nth-of-type(3) {
+            @include min-screen($breakpoint-mobile + 1) {
+              margin-bottom: 36px;
+            }
+          }
+          &:nth-of-type(4) {
+            @include min-screen($breakpoint-mobile + 1) {
+              margin-bottom: 225px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .other-menu {
+    .marcherant-menu {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: -43px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: -8px;
+      }
+    }
+
+  }
+}
+
+
+
+@at-root .dinner-set-marcherant {//dinner set page
+  .breakfast-menu-list-container {
+    // .is-safari & {
+    //   @include min-screen($breakpoint-mobile + 1) {
+    //     height: 400px;
+    //   }
+    // }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      column-count: 2;
+      padding-top: 14px;
+      padding-bottom: 19px;
+      column-fill: auto;
+      height: 400px;
+    }
+      
+    @include max-screen($breakpoint-mobile) {
+      padding: 0px;
+      margin-top: 13px;
+    }
+
+    span {
+      border-width: 0px;
+      font-style: italic;
+      font-size: 15px;  
+      font-family: serif;
+      
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 5px;
+        font-size: 13px;
+      }
+
+      @at-root & {
+        &.dinner-marcherant-hors-d-oeuvre {
+          svg {
+            height: 13px;
+            width: 155px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 114.5px;
+              height: 9px;
+            }
+          }
+        }
+  
+        &.dinner-marcherant-soupe {
+          svg {
+            height: 16px;
+            width: 74px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 55px;
+              height: 11px;
+            }
+          }
+        }
+  
+        &.dinner-marcherant-entree-plat {
+          svg {
+            height: 13px;
+            width: 138px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 102px;
+              height: 9px;
+            }
+          }
+        }
+  
+        &.dinner-marcherant-pain {
+          svg {
+            height: 12px;
+            width: 67px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 50px;
+              height: 8.5px;
+            }
+          }
+        }
+  
+        &.dinner-marcherant-dessert {
+          svg {
+            height: 12px;
+            width: 95px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 70px;
+              height: 9px;
+            }
+          }
+        }
+  
+        &.dinner-marcherant-cafe-ou-the {
+          svg {
+            height: 13px;
+            width: 132px;
+
+            @include max-screen($breakpoint-mobile) {
+              width: 97px;
+              height: 9px;
+            }
+          }
+        }
+      }
+    }
+
+    .breakfast-menu-list-cat-item {
+      &:nth-of-type(3) {
+        @include min-screen($breakpoint-mobile + 1) {
+          // margin-bottom: 55px;
+        }
+
+        // .is-safari & {
+        //   @include min-screen($breakpoint-mobile + 1) {
+        //     margin-bottom: 0px;
+        //   }
+        // }
+      }
+    }
+  }
+
+  .menu-other-menu {
+    @at-root & {
+      &.menu-other-2 {
+        @include max-screen($breakpoint-mobile) {
+          margin: {
+            left: -20px;
+            right: -20px;
+          }
+        }
+  
+        .menu-other-menu-item {
+          &:nth-of-type(2) {
+            @include max-screen($breakpoint-mobile) {
+              padding-bottom: 10px;
+            }
+          }
+  
+          &:nth-of-type(3) {
+            @include max-screen($breakpoint-mobile) {
+              padding-top: 17px;
+              padding-bottom: 13px;
+            }
+          }
+  
+          &:last-child {
+            @include max-screen($breakpoint-mobile) {
+              padding-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .heading-menu-other-menu {
+      margin-bottom: 17px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 10px;
+      }
+
+      svg {
+        width: 188px;
+        height: 20px;
+
+        @include max-screen($breakpoint-mobile) {
+          height: 13.5px;
+          width: 124.5px;
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid $color-green;
+      padding-top: 15px;
+      padding-bottom: 20px;
+      font-size: 15px;
+      line-height: 2;
+      letter-spacing: 0.1em;
+
+      &:last-child {
+        border-bottom: 1px solid $color-green;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 11px;
+        line-height: 1.636;
+        align-items: flex-start;
+        padding-top: 12px;
+        padding-bottom: 11px;
+      }
+    }
+  }
+
+  .recommend-menu-details {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -2px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding: 0px;
+      margin-top: 23px;
+      margin: {
+        left: -20px;
+        right: -20px;
+      }
+    }
+  }
+
+  .recommend-menu-details-list {
+    @include min-screen($breakpoint-mobile + 1) {
+      max-width: 801px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      display: flex;
+    }
+  }
+
+  .details-image {
+    border-radius: 10px;
+  }
+
+  .recommend-menu-details-item {
+    width: 358px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 160px;
+      margin-bottom: 33px;
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 26px;
+    }
+  }
+
+  .breakfast-menu-list-cat-list-item {
+    @include min-screen($breakpoint-mobile + 1) {
+      white-space: nowrap;
+    }
+  }
+
+  @at-root & {
+    .dinner-feature-title {
+      svg {
+        @include max-screen($breakpoint-mobile) {
+          height: 56.5px;
+        }
+      }
+    }
+  }
+
+  .breakfast-marcherant-menu {
+    &:before {
+      @include max-screen($breakpoint-mobile) {
+        height: 265.5px;
+      }
+    }
+  }
+}
+
+@at-root .page-rocco {//rocco page
+  .restaurant-banner {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -30px;
+      margin-bottom: 150px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -40px;
+      margin-bottom: 70px;
     }
   }
 }

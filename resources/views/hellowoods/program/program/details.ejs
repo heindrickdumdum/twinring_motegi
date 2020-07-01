@@ -17,19 +17,36 @@
             style="background-image:url(<%= mix('/assets/images/program/mv-sp.jpg') %>);"></div>
         </li>
       </ul>
-
-      <h1 class="mv-heading mv-heading-subpage">
-        <span class="mv-heading-text">
-          森の体験プログラム（予約制）
-        </span>
-      </h1>
+      <div class="l-container mv-container">
+        <div class="mv-heading mv-heading-default">
+          <%- include('/partials/heading', {
+            modifier: 'mv-forest-experience-program',
+            heading_level: 1,
+            text: 'Forest Experience Program',
+            subtextvg: 'forest-program-top-title',
+            altSubtextvg: '予約制森の体験プログラム'
+          }) %>
+        </div>
+      </div>
     </div>
 
     <main>
+      <div class="l-container subpage-inner-wrap">
+        <div class="">
+          <div class="heading-wrap heading-main text-center heading-main-program-details">
+            <h2 class="heading">
+              <p class="media-title media-title-program-details">
+                <span class="media-title-text">5月のプログラム</span>
+              </p>
+            </h2>
+          </div>
+        </div>
+      </div>
+
       <section class="subpage-section">
         <div class="subpage-inner subpage-inner-programdetails full-width-sp">
           <h3 class="subpage-title subpage-title-programdetails">
-            <span> CRAFTING ー ＃日帰り</span>
+            <span>CRAFTING</span>
           </h3>
           <p class="page-description page-description-programdetails">
             木漆工芸作家　松崎融の「木と親しむ木工講座」
@@ -38,17 +55,20 @@
             <div class="swiper-container slider-gallery js-gallery swiper-container-horizontal">
               <div class="swiper-wrapper">
                 <div class="swiper-slide slider-item">
-                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/program-details/banner-slide-1.jpg') -%>)"></div>
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/program-details/content-1.jpg') -%>)"></div>
                 </div>
                 <div class="swiper-slide slider-item">
-                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/program-details/banner-slide-2.jpg') -%>)"></div>
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/program-details/content-2.jpg') -%>)"></div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/program-details/content-3.jpg') -%>)"></div>
                 </div>
               </div>
               <!-- Add Pagination -->
              <div class="swiper-pagination swiper-pagination-bullets"></div>
             </div>
 
-            
+
           </div>
         </div>
       </section>
@@ -56,14 +76,14 @@
       <section class="subpage-section">
         <div class="subpage-inner subpage-inner-programdetails">
           <h3 class="subpage-title">
-            <span>貴重な自然木を思い思いのカタチにくりぬき、漆塗りの逸品を手づくりで！</span>
+            <span>森の自然木を材料に木工ハンドメイドに挑戦しよう！</span>
           </h3>
 
           <p>
-            日々の生活で使うものを自分の思うカタチに彫り込んでみませんか。ケヤキやトチノキなどの広葉樹を材料に、<br>
-            時間をかけ思いを込めながら、ノミやカンナなどの道具を使ってひと彫り・ひと削り…丹念に木を削っていきます。<br>
-            初めての方には1日で完成できるよう、スタッフがお手伝いをしますので安心してご参加いただけます。<br>
+            日々の生活で使うものを自分の思うカタチに彫り込んでみませんか。<br>
             彫り終えた作品には講師が漆塗りを施し、丈夫で長く使えるようにしてお渡しします。
+
+
           </p>
 
           <p class="media-title media-title-programdetails">
@@ -80,14 +100,7 @@
               </tr>
 
               <tr class="table-row">
-                <th class="table-head">募集締め切り	</th>
-                <td class="table-col">
-                  2020年3月1日（日）
-                </td>
-              </tr>
-
-              <tr class="table-row">
-                <th class="table-head">対象／定員</th>
+                <th class="table-head">対象／定員	</th>
                 <td class="table-col">
                   18歳以上／12名
                 </td>
@@ -98,37 +111,6 @@
                 <td class="table-col">
                   7,000円（完成品には講師が漆塗りを施します）<br>
                   お客様のご都合によりキャンセルされる場合は、必ずハローウッズまでご連絡ください。
-                </td>
-              </tr>
-
-              <tr class="table-row">
-                <th class="table-head">集合･解散</th>
-                <td class="table-col">
-                  現地（ハローウッズ）　<span><a href="">交通アクセス</a></span>
-                </td>
-              </tr>
-
-              <tr class="table-row">
-                <th class="table-head">送迎をご利用の方</th>
-                <td class="table-col">
-                  宇都宮（JR宇都宮駅東口）<br>
-                  集合日時：3月8日（日）9：00／解散日時：3月8日（日）17：00（予定）<br>
-                  ※解散時間は、交通事情により遅れることもございます。<br>
-                  ※状況により集合場所変更の可能性がございます。詳細は手引きにてお知らせいたします。
-                </td>
-              </tr>
-
-              <tr class="table-row">
-                <th class="table-head">受付日時</th>
-                <td class="table-col">
-                  9:30 〜 10:00
-                </td>
-              </tr>
-
-              <tr class="table-row">
-                <th class="table-head">時間</th>
-                <td class="table-col">
-                  集合時間：10：00／解散時間：16：00
                 </td>
               </tr>
 
@@ -145,12 +127,28 @@
             <span class="media-title-text">スケジュール</span>
           </p>
 
-          <table class="table table-programdetails">
+          <table class="table table-programdetails custom">
             <tbody>
               <tr class="table-row">
-                <th class="table-head">10：00</th>
+                <th class="table-head table-head-custom">09:00<br>※送迎をご利用の方</th>
+                <td class="table-col border-right"> 集合 </td>
                 <td class="table-col">
-                  集合<br>
+                  宇都宮（JR宇都宮駅東口)<br>※状況により集合場所変更の可能性がございます。
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head table-head-custom">09:30</th>
+                <td class="table-col border-right">
+                  受付
+                </td>
+                <td class="table-col">
+                  ハローウッズ
+                </td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head table-head-custom">10:00</th>
+                <td class="table-col border-right">
                   作品のイメージづくり<br>
                   作品づくり<br>
                   昼食（持参弁当）<br>
@@ -159,12 +157,17 @@
                   作品づくり<br>
                   振り返り
                 </td>
-              </tr>
-
-              <tr class="table-row">
-                <th class="table-head">16：00</th>
                 <td class="table-col">
+                  <br>
+                </td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head table-head-custom">16:00</th>
+                <td class="table-col border-right">
                   解散
+                </td>
+                <td class="table-col">
+                  ハローウッズ
                 </td>
               </tr>
             </tbody>
@@ -172,87 +175,11 @@
         </div>
       </section>
 
-      <section class="subpage-section work-introduction">
-        <div class="subpage-inner subpage-inner-programdetails work-intro">
-          <p class="media-title media-title-work-intro">
-            <span class="media-title-text">作品紹介</span>
-          </p>
-          <div class="work-intro-item">
-            <p class="work-intro-desc">
-              <span class="bold">大切な人へ「ありがとうの感謝を込めて」</span>
-              時間をかけてつくるから思いが伝わる・・・<br>
-              結婚記念日や誕生日などの記念日に、大切な人へのプレゼントとしても最適です。
-            </p>
-            <div class="media media-subpage media-subpage-work-intro u-clear">
-              <div class="media-box media-box-work">
-                <div class="">
-                  <div class="media-thumb media-thumb-work">
-                    <div class="no-radius" style="background-image: url(/assets/images/program-details/work-2.jpg);"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="media-box media-box-work">
-                <div class="">
-                  <div class="media-thumb media-thumb-work">
-                    <div class="no-radius" style="background-image: url(/assets/images/program-details/work-1.jpg);"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="work-intro-item">
-            <p class="work-intro-desc">
-              <span class="bold">自分の手づくり作品で「みんなをおもてなし」</span>
-              つかうたびに味のある作品に・・・<br>
-              みんなとのお茶や食事などで披露して、<br>
-              楽しい時間を過ごしましょう。
-            </p>
-            <div class="media media-subpage media-subpage-work-intro u-clear">
-              <div class="media-box media-box-work">
-                <div class="">
-                  <div class="media-thumb media-thumb-work">
-                    <div class="no-radius" style="background-image: url(/assets/images/program-details/work-3.jpg);"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="media-box media-box-work">
-                <div class="">
-                  <div class="media-thumb media-thumb-work">
-                    <div class="no-radius" style="background-image: url(/assets/images/program-details/work-4.jpg);"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="work-intro-item">
-            <p class="work-intro-desc">
-              <span class="bold">経験に合わせたものづくり</span>
-              はじめての方には一回で完成するお皿などがおすすめ、回を重ねるたびに様々な器などにチャレンジ できます。
-            </p>
-            <div class="media media-subpage media-subpage-work-intro u-clear">
-              <div class="media-box media-box-work">
-                <div class="">
-                  <div class="media-thumb media-thumb-work">
-                    <div class="no-radius" style="background-image: url(/assets/images/program-details/work-5.jpg);"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="media-box media-box-work">
-                <div class="">
-                  <div class="media-thumb media-thumb-work">
-                    <div class="no-radius" style="background-image: url(/assets/images/program-details/work-6.jpg);"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="subpage-section">
         <div class="subpage-inner subpage-inner-programdetails img-list">
+          <p class="media-title media-title-programdetails">
+            <span class="media-title-text">作品紹介</span>
+          </p>
           <ul class="image-list">
             <li class="image-list-item">
               <img src="<%= mix('/assets/images/program-details/work-intro-1.jpg') %>" alt="">
@@ -282,63 +209,72 @@
         </div>
       </section>
 
-      <section class="subpage-section section-profile">
-        <div class="subpage-inner subpage-inner-programdetails">
+
+      <section class="l-container subpage-section section-profile">
+        <div class="subpage-inner subpage-inner-programdetails profile-wrapper">
           <p class="media-title media-title-profile">
             <span class="media-title-text">講師プロフィール</span>
           </p>
-          
+          <p class="profile-sub-title u-show-pc">
+            <span class="bold">松崎 融（まつざき とおる）</span><br>
+            <span class="u-show-pc">茂木町在住　木漆工芸作家　国画会工芸部監査委員長<br></span>
+          </p>
+
+
           <div class="desc-container">
             <div class="profile-img">
-              <img src="<%= mix('/assets/images/program-details/profile.jpg') %>" alt="">
+              <div class="profile-img-inner">
+                <img src="<%= mix('/assets/images/program-details/profile.jpg') %>" alt="">
+              </div>
+              <p class="profile-sub-title u-show-sp">
+                <span class="bold">松崎 融<br>（まつざき とおる）</span>
+                <span class="">茂木町在住　木漆工芸作家　国画会工芸部監査委員長<br></span>
+              </p>
             </div>
             <p class="profile-desc">
-              <span class="bold">松崎　融　（まつざき　とおる）</span>
-              <span class="u-show-pc">時間をかけてつくるから思いが伝わる・・・<br></span>
-              1944年　東京生まれ<br>
-              茂木町在住　木漆工芸作家　国画会工芸部監査委員長<br>
-              国画会とは : 創立精神である「創作の自由」をモットーに活動する総合美術団体。<br>
-              毎年春に新国立美術館で開催される「国展」は、同団体が開催する。<br>
               “一木をくりぬき、漆の着物を着せていく”これが私の仕事です。<br>
-              技術は出来るだけシンプルに、そしてその分自分の思いを沢山込めたそんな<br>
-              仕事をしたいと思います。漆芸は、長い歴史の中で、現在の様に美しさを極めてきましたが、その一方で、漆本来の強さは忘れられてしまっています。<br>
-              酸やアルカリに腐蝕せず、長く土中にあっても残っているほどの強靭さ、<br>
-              私はその強さを前面に出した仕事をしていきたいと思います。<br>
-              形の美しさを求め、それに強くて美しい衣を着せ、更に人が使うことによって、より一層美しく艶やかになっていく器。力強さの中にも品格を合わせ持つ事、それが私の目標です。<br>
+              技術は出来るだけシンプルに、そしてその分自分の思いを沢山込めたそんな仕事をしたいと思います。<br>
+              漆芸は、長い歴史の中で、現在の様に美しさを極めてきましたが、その一方で、漆本来の強さは忘れられてしまっています。酸やアルカリに腐蝕せず、長く土中にあっても残っているほどの強靭さ、私はその強さを前面に出した仕事をしていきたいと思います。形の美しさを求め、それに強くて美しい衣を着せ、更に人が使うことによって、より一層美しく艶やかになっていく器。力強さの中にも品格を合わせ持つ事、それが私の目標です。
             </p>
-          </div>  
-
-          <p class="media-title media-title-profile desc-2">
-            <span class="media-title-text">特記事項</span>
-          </p>
-          <div class="desc-container">
-            <p class="profile-desc">
-              <ul>
-                <li>料金は、税込み表記となります。</li>
-                <li>本プログラムのお支払いに、アトラクションチケット、ご利用券など、その他金券はご利用いただけません。昼食は各自ご用意ください。</li>
-                <li>料金は、1作品の表記です</li>
-                <li>料金には、プログラム費(漆代、材料費等)、ツインリンクもてぎ入場料・駐車料を含みます。</li>
-                <li>特別に大きな作品をつくられる方は、別途材料費をいただきます。</li>
-                <li>漆塗りを施した作品のお渡しは、ハローウッズ受付、もしくは着払い宅配便にて発送を承ります。</li>
-                <li>道具や材料は全てハローウッズでご用意します。</li>
-                <li>講師の都合により、日程の変更や代理の講師が講座を行う場合があります。</li>
-                <li>参加者には、当日のスケジュール、持ち物などを記載した『参加の手引き』を送付します。</li>
-                <li>当日のスケジュールやプログラム等は天候や参加人数などにより予告なしに変更・中止となる場合があります。</li>
-                <li>募集定員を超えた際には、キャンセル待ちでのお申し込みをお受けします。</li>
-                <li>電話・FAXでも受け付けております。希望のプログラム名・日程・参加者全員の氏名・年齢・性別・住所・電話番号を お知らせください。</li>
-              </ul>
-            </p>
-          </div>  
-
-          <div class="l-button">
-            <%- include('/partials/button', {
-              modifier: 'button-profile',
-              text: 'このプログラムを申し込む',
-              link: '#'
-            }) %>
           </div>
         </div>
+
+        <div class="subpage-section subpage-section-collapse section-collapse-program-details">
+          <div class="subpage-collapse-heading js-collapse-button collapse-heading-program-details">特記事項</div>
+          <div class="subpage-collapse-description">
+            <div class="subpage-collapse-content">
+              <p class="">
+                <ul>
+                  <li>料金は、税込み表記となります。</li>
+                  <li>本プログラムのお支払いに、アトラクションチケット、ご利用券など、その他金券はご利用いただけません。昼食は各自ご用意ください。</li>
+                  <li>料金は、1作品の表記です</li>
+                  <li>料金には、プログラム費(漆代、材料費等)、ツインリンクもてぎ入場料・駐車料を含みます。</li>
+                  <li>特別に大きな作品をつくられる方は、別途材料費をいただきます。</li>
+                  <li>漆塗りを施した作品のお渡しは、ハローウッズ受付、もしくは着払い宅配便にて発送を承ります。</li>
+                  <li>道具や材料は全てハローウッズでご用意します。</li>
+                  <li>講師の都合により、日程の変更や代理の講師が講座を行う場合があります。</li>
+                  <li>参加者には、当日のスケジュール、持ち物などを記載した『参加の手引き』を送付します。</li>
+                  <li>当日のスケジュールやプログラム等は天候や参加人数などにより予告なしに変更・中止となる場合があります。</li>
+                  <li>募集定員を超えた際には、キャンセル待ちでのお申し込みをお受けします。</li>
+                  <li>電話・FAXでも受け付けております。希望のプログラム名・日程・参加者全員の氏名・年齢・性別・住所・電話番号を お知らせください。</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <%- include('/partials/button', {
+            modifier: 'program-details-green',
+            text: 'このプログラムを申し込む',
+            link: '#'
+          }) %>
+          <span>募集締め切り : 2020年3月1日（日）</span>
+        </div>
       </section>
+
+
+
 
       <!-- recommendation module -->
       <%- include('/partials/recommendation') -%>
@@ -349,5 +285,7 @@
   </div>
 </div>
 
-
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsProgramDetails
+}) -%>
 <%- include('/partials/footer', { pageId } ) -%>

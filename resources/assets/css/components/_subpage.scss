@@ -5,9 +5,89 @@
   height: auto;
   margin-bottom: 50px;
 
+  &-graph {//foods m page
+    margin-bottom: 10px;
+  }
+
   &-restaurant {
     @include max-screen($breakpoint-mobile) {
       margin-bottom: 20px;
+    }
+  }
+
+  &.smart-entry {//smart entry page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 118px;
+    }
+
+    .color-red {
+      color: $color-red;
+    }
+
+    .main-desc {
+      font-size: 14px;
+      line-height: 2.286;
+      text-align: center;      
+      letter-spacing: 0.1em;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 64px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+        line-height: 2.125;
+        text-align: justify;
+      }
+    }
+
+    @at-root & {
+      .dotted-item {
+        position: relative;
+        margin: {
+          left: 23px;
+          bottom: 12px;
+          top: 3px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          margin-left: 20px;
+          margin-bottom: 10px;
+        }
+
+        span {
+          font-size: 18px;
+          line-height: 1.778;
+          letter-spacing: 0.1em;
+          font-weight: bold;
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 13px;
+            line-height: 1.667;
+          }
+        }
+  
+        &:before {
+          position: absolute;
+          content: "\2022";
+          color: $color-green;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -25px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 35px;
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 25px;
+            margin-left: -20px;
+            width: auto;
+            height: auto;
+            top: 11px;
+          }
+        }
+      }
     }
   }
 
@@ -33,6 +113,34 @@
 
   > * {
     position: relative;
+  }
+
+  @at-root &.toya-wrapper {//toya page
+    &:before {
+      display: none;
+    }
+
+    main {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1000px;
+        background-image: url('/assets/images/toya/wrapper-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        top: -320px;
+        z-index: 0;
+        background-position: center bottom;
+
+        @include max-screen($breakpoint-mobile) {
+          height: 683px;
+          background-image: url('/assets/images/toya/wrapper-bg-sp.jpg');
+        }
+      }
+    }
   }
 
   &::after {
@@ -123,6 +231,13 @@
   }
 }
 
+.subpage-banner-toya {
+  @include min-screen($breakpoint-mobile + 1) {
+    padding-top: 86px;
+    margin-top: 0;
+  }
+}
+
 .subpage-banner-rocco {//rocco
   @include min-screen($breakpoint-mobile + 1) {
     margin-top: 86px;
@@ -176,6 +291,56 @@
   margin: 0 auto 60px;
   padding: 0 20px;
   width: 100%;
+
+  @at-root .page-fee & {//fee page
+    margin-bottom: 0px;
+  }
+
+  @at-root .shops-information & {//breakfast marcherant page
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 0px;
+        right: 0px;
+      }
+    }
+  }
+
+  &-toya-menu {//toya page
+    & > .subpage-inner {
+      padding-bottom: 20px !important;
+    }
+  }
+
+  @at-root .toya-menu & {//toya page
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 5px;
+        right: 5px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0px;
+        padding-bottom: 51px;
+        padding: {
+          left: 10px;
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  @at-root &-toya {//toya page
+    max-width: 1222px;
+    padding: 0px;
+  }
+
+  @at-root .toya-wrapper & {//toya page
+    margin: {
+      bottom: 0px;
+    }
+  }
 
   .subpage-hotel & {//hotel granroom
     z-index: $z-min2;
@@ -245,6 +410,10 @@
     text-align: left;
     letter-spacing: 0.16em;
     margin-bottom: 33px;
+
+    @at-root .page-fee & {//fee page
+      margin-bottom: 30px;
+    }
 
     @at-root .section-camp {
       @include min-screen($breakpoint-mobile + 1) {
@@ -336,6 +505,24 @@
 }
 
 .subpage-inner-wrap {
+  .toya-menu {//toya page
+    .toya-text {
+      color: $color-white;
+      text-align: center;
+      margin-top: 44px;
+    }
+  }
+
+  .toya-bg-mountain {//toya page
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-bottom: 102px;
+    }
+  }
+
   .subpage-craft & {
     &::before {
       @include min-screen($breakpoint-mobile + 1) {
@@ -448,9 +635,10 @@
 
   &.subpage-title-programdetails {
     font-size: 20px;
-    letter-spacing: 3px;
-    line-height: 1;
-    margin-bottom: 16px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    padding-top: 7px;
 
     @include max-screen ($breakpoint-mobile) {
       font-size: 11px;
@@ -543,6 +731,14 @@
 .subpage-section {
   position: relative;
   width: 100%;
+  &.section-profile {
+    padding-bottom: 34px;
+    margin-bottom: 30px;
+    @include min-screen ($breakpoint-mobile+1) {
+      padding-bottom: 74px;
+      margin-bottom: 110px;
+    }
+  }
 
   &.section-profile::after {
     background: #dfdfdf;
@@ -558,7 +754,7 @@
     width: calc(100% - 40px);
 
     @include max-screen ($breakpoint-mobile) {
-      max-width: 257px;
+      //max-width: 257px;
     }
   }
 }
@@ -609,6 +805,41 @@
   &.subpage-image-gallery-nozominoyu {
     margin-bottom: 36px;
   }
+
+  &.gallery-dinner-buffet {
+    .gallery-bot-heading {
+      font-size: 24px;
+      letter-spacing: 3.5px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 16px;
+        max-width: 200px;
+        margin: 25px auto 15px;
+        letter-spacing: 3px;
+      }
+    }
+
+    .gallery-bot-subheading {
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 299px;
+        margin: auto;
+        letter-spacing: 1px;
+        font-size: 12px;
+        line-height: 2;
+    
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      margin-bottom: 135px;
+    }
+
+
+  }
+
+
 }
 
 
@@ -845,14 +1076,82 @@
   max-width: 800px;
   margin: 50px auto;
 
+  @at-root .page-fee & {//fee page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin: {
+        top: 26px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+      }
+    }
+
+    &.attraction-collapse {
+      max-width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: {
+          top: 20px;
+          bottom: 0px;
+        }
+      }
+    }
+  }
+
+  @at-root .dinner-set-marcherant & {
+    &:nth-of-type(2) {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: -10px;
+      }
+    }
+  }
+
+  @at-root .breakfast-marcherant & {//marcherant breakfast page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 120px;
+    }
+  }
+
   .subpage-collapse-heading {
     padding: 30px;
     text-align: center;
     text-decoration: underline;
     font-weight: bold;
 
+    @at-root .page-fee & {//fee page
+      font-size: 18px;
+      letter-spacing: 0.1em;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;        
+      }
+    }
+
+    @at-root .breakfast-marcherant & {//breakfast marcherant page
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+      }
+    }
+
     &:hover {
       cursor: pointer;
+    }
+
+    &.section-collapse-program-details {
+      @include max-screen ($breakpoint-mobile) {
+        margin: 35px auto 40px;
+      }
+    }
+
+    &.collapse-heading-program-details {
+      font-size: 22px;
+      padding: 38px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 14px;
+        padding: 17px;
+      }
     }
   }
 
@@ -863,6 +1162,16 @@
 
   .subpage-collapse-content {
     padding: 0 50px 50px 50px;
+
+    @at-root .page-fee & {//fee page
+      @include max-screen($breakpoint-mobile) {
+        padding: {
+          left: 20px;
+          right: 20px;
+        }
+        overflow-x: scroll;
+      }
+    }
 
     a {
       display: inline-block;
@@ -879,6 +1188,60 @@
 
   .hidden {
     display: none;
+  }
+
+  &.gold {
+    border: 1px solid #a38737;
+    .subpage-collapse-heading {
+      color: #a38737;
+
+      @include max-screen ($breakpoint-mobile) {
+        padding: 17px 0px;
+      }
+    }
+
+    max-width: 295px;
+
+    &:nth-child(2) {
+      margin-bottom: 75px;
+      .subpage-collapse-heading {
+        padding: 14px 0px;
+      }
+    }
+
+    &:first-child {
+      margin-bottom: 38px;
+    }
+
+    .button-icon {
+      padding: 5px 0;
+      right: 5px;
+    }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      margin-top: 82px;
+      max-width: 730px;
+
+      &:nth-child(2) {
+        margin-bottom: 110px;
+        margin-top: 0px;
+        .subpage-collapse-heading {
+          padding: 33px 0px;
+        }
+      }
+  
+      &:first-child {
+        margin-bottom: 55px;
+        .subpage-collapse-heading {
+          padding: 39px 0px;
+        }
+      }
+
+      .button-icon {
+        padding: 10px 0;
+        right: 20px;
+      }
+    }    
   }
 }
 
@@ -1190,11 +1553,25 @@
   }
 
   &.img-list {
+    margin-bottom: 62px;
     @include max-screen ($breakpoint-mobile) {
-      margin-bottom: 0;
+      margin-bottom: 35px;
     }
   }
 
+  &.profile-wrapper {
+    border: 1px solid #c5c5c5;
+    max-width: 920px;
+
+    @include min-screen ($breakpoint-mobile+1) {
+      padding: 0px 37px;
+      margin-bottom: 80px;   
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      margin: 0;
+    }
+  }
   @include min-screen ($breakpoint-mobile + 1) {
     margin-bottom: 97px;
   }
@@ -1202,4 +1579,419 @@
 
 .subpage-title-reserve {
   margin-bottom: 11px;
+}
+
+@at-root .subpage-section-faq-smart-entry {//smart entry page
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: -206px;
+  }
+
+  .faq-smart-entry {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-bottom: 66px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 26px;
+    }
+  }
+
+  .l-heading {
+    display: none;
+  }
+
+  .media-title {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 11px;
+    }
+  }
+}
+
+.marcherant-collapse-section {
+  @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 20px;
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+
+    .text-center {
+      text-align: initial;
+    }
+  }
+  .table-head {
+    background-color: #efefef;
+  }
+  .marcherant-collapse-content {
+    .collapse-banner {
+      margin-bottom: 29px;
+    }
+
+    .grid-data {
+      margin-bottom: 20px;
+    }
+    .row {
+      max-width: 555px;
+    }
+    
+    .col-heading-green {
+      color: #00a040;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      text-align: left;
+      padding: 8px 0;
+    }
+    .column {
+      width: 50%;
+      padding-right: 50px;
+      font-size: 15px;  
+
+      @include max-screen ($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+
+    .col-data {
+      line-height: 2;
+      padding: 8px;
+      letter-spacing: 4px;
+    }
+
+    .table-marcherant-collapse {
+      margin-bottom: 22px;
+    }
+
+    .p-red {
+      color: #ff3333;
+    } 
+  }
+}
+
+.breakfast-marcherant {//breakfast marcherant page
+  .shop-info-collapse {
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+  }
+
+  .subpage-desc-breakfast {
+    font-size: 18px;
+    line-height: 1.889;
+    text-align: center;    
+    letter-spacing: 0.1em;
+    margin-top: 55px;
+    margin-bottom: 95px;
+
+    &.desc-dinner {//dinner set page
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 99px;
+        white-space: nowrap;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+      }
+    }
+
+    &.desc-lunch {//lunch marcherant page
+      margin: {
+        top: 26px;
+        bottom: -4px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin: {
+          top: 20px;
+          bottom: -24px;
+        }
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.791;
+      margin: {
+        top: -5px;
+        bottom: 45px;
+      }
+    }
+  }
+}
+
+@at-root .lunch-marcherant {//lunch marcherant page
+  .color-title {
+    margin-top: 56px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 42px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 873px;
+      height:82px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 291.5px;
+        height: 84px;
+      }
+    }
+  }
+}
+
+@at-root .dinner-set-marcherant {//dinner set page
+  .shops-information {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 95px;
+    }
+  }
+
+  .shop-info-collapse {
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 0px;
+        right: 0px;
+      }
+    }
+
+    .subpage-section-collapse {
+      &:nth-of-type(1) {
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 39px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 85px;
+        }
+      }
+    }
+  }
+}
+
+.subpage-access {//access page
+  .access-anchor {
+    margin-top: 90px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 41px;
+    }
+  }
+
+  .text-center {
+    text-align: center;
+    display: block;
+  }
+
+  .transportation-section {
+    margin-top: 39px;
+
+    &:nth-of-type(3) {
+      margin-top: 88px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 41px;
+      }
+    }
+
+    &:nth-of-type(4) {
+      margin-top: 120px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 45px;
+      }
+    }
+  }
+
+  .car-bike-note {
+    font-size: 17px;
+    line-height: 1.647;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 20px;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.996;   
+      margin-top: 16px;
+      text-align: left;   
+    }
+  }
+
+  .bottom-slider:not(.bottom-slider-pickup) {
+    margin-top: -58px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -4px;
+    }
+  }
+}
+
+@at-root .page-twinringmotegi {//twinringmotegi page
+  .subpage-desc {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -15px;
+      position: relative;
+      z-index: $z-max;
+    }
+  }
+}
+
+@at-root .foodsm {
+  .subpage-desc {
+    margin-top: 10px;
+    background-color: $color-white;
+  }
+}
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.link-green {
+  color: $color-green;
+
+  &.line {
+    text-decoration: underline;
+  }
+}
+
+.display-block {
+  display: block;
+}
+
+@at-root .subpage-desc {
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  margin-top: 20px;
+  margin-bottom: 42px;
+
+  @at-root .page-fee & {
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 15px;  
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 13px;
+      line-height: 1.667;      
+    }
+  }
+
+  &.subpage-desc-unique {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -15px;
+      margin-bottom: 12px;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 12px;
+  }
+
+  // &.admission-sp {
+  //   @include max-screen($breakpoint-mobile) {
+  //     white-space: nowrap;
+  //   }
+  // }
+
+  &.attraction-desc {
+    margin-top: 24px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 12px !important;
+    }
+  }
+
+  &.attraction-bottom-space {
+    margin-bottom: 56px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 28px !important;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 11px;
+    // white-space: nowrap;
+  }
+}
+
+@at-root .page-fee {//fee page
+  .fee-image {
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      width: 320px;
+      margin-bottom: 37px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 163px;
+        margin-bottom: 5px;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        margin-bottom: 14px;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 7px;
+        }
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 1.667;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      text-align: center;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 10px;
+        line-height: 1.3;        
+      }
+    }
+  }
+
+  .fee-section {
+    margin-top: 50px;
+
+    & > .subpage-desc {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 13px;
+        margin-bottom: 14px;
+        text-align: left !important;
+      }
+    }
+  }
+}
+
+.subpage-inner-pit-margin {
+  @include min-screen ($breakpoint-mobile+1) {
+    margin-bottom: 110px;
+  }
+}
+
+@at-root .color-red {
+  color: #ff3333;
 }

@@ -7,7 +7,7 @@ pageId = 'carAndBike';
 <%- include('/partials/head', { pageId, title }) -%>
 
 <main class="l-main">
-  <div class="subpage">
+  <div class="subpage motegi-attraction">
     <div class="mv mv-subpage">
       <ul class="mv-list">
         <li class="mv-item">
@@ -18,7 +18,11 @@ pageId = 'carAndBike';
   
       <h1 class="mv-heading mv-heading-subpage  mv-heading-subpage-labo">
         <span class="mv-heading-text">
-          アトラクション
+          <!-- アトラクション -->
+          <%- include('/partials/svg', {
+            name: 'attraction-mv-title',
+            svgtitle: 'アトラクション'
+          }) -%>
         </span>
       </h1>
     </div>
@@ -80,11 +84,13 @@ pageId = 'carAndBike';
     </section>
 
     <div class="subpage-section subpage-section-carbike text-banner l-container-m text-center attraction-top">
-      <img class="icon" src="<%= mix('/assets/images/icon_tall.png') %>" alt="tall">
-      <h3 class="banner-heading">アトラクションのご利用基準について</h3>
-      <p class="banner-text">
-        お客様の安全を守るため、<br> アトラクションごとに<br>ご利用基準を設けております。
-      </p>
+      <a href="/mobipark_m/guide/">
+        <img class="icon" src="<%= mix('/assets/images/icon_tall.png') %>" alt="tall">
+        <h3 class="banner-heading">アトラクションのご利用基準について</h3>
+        <p class="banner-text">
+          お客様の安全を守るため、<br class="u-show-sp"> アトラクションごとに<br class="u-show-sp">ご利用基準を設けております。
+        </p>
+      </a>
     </div>
 
     <section class="subpage-section subpage-section-carbike " id="athletic">
@@ -193,6 +199,6 @@ pageId = 'carAndBike';
 </main>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsCarbike
+  breadcrumbs : getData().data.breadcrumbsAttraction
 }) -%>
 <%- include('/partials/footer', { pageId }) -%>

@@ -6,6 +6,10 @@
     height: 350px;
   }
 
+  @at-root .toya-wrapper & {//toya page
+    z-index: 1;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -15,6 +19,10 @@
     height: 100px;
     background: url(#{$image-path}mv-curve.png) no-repeat center top;
     background-size: cover;
+
+    @at-root .toya-wrapper & {//toya page
+      display: none;
+    }
 
     @include max-screen($breakpoint-mobile) {
       bottom: -33px;
@@ -39,6 +47,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @at-root .subpage-access & {//access page
+    @include max-screen($breakpoint-mobile) {
+      background-position: center;
+    }
+  }
 
   @include max-screen($breakpoint-mobile) {
     height: 378px;
@@ -104,6 +118,11 @@
 
 .mv-list-glamping-top {
   max-height: 600px;
+}
+
+.mv-list-marcherant {
+  // sass-lint:disable-block no-important
+  opacity: 1 !important;
 }
 
 .mv-list-top {
@@ -247,6 +266,27 @@
     left: 15px;
   }
 
+
+
+  &-marcherant-breakfast {//breakfast marcherant page
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: 25px !important;
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 405px !important;
+        height: 62px !important;
+        margin-top: 6px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 236px !important;
+        height: 36.5px !important;
+      }
+    }
+  }
+
   &-camp {//f-glamping camp page
     .heading-subtext {
       font-size: 42px;
@@ -285,23 +325,37 @@
   }
 
   &.forest-program-mv-heading {//program page
+    // sass-lint:disable-block no-important
     bottom: 40px !important;
 
     @include max-screen($breakpoint-mobile) {
-      bottom: -5px !important;
+      // sass-lint:disable-block no-important
+      bottom: -25px !important;
+
+      .heading-text {
+        // sass-lint:disable-block no-important
+        font-size: 22px !important;
+        letter-spacing: 2.5px;
+      }
     }
 
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
-        max-width: 725px !important;
-        height: 58px !important;
-        margin-top: 20px !important;
+        // sass-lint:disable-block no-important
+        // max-width: 725px !important;
+        // height: 58px !important;
+        // margin-top: 20px !important;
+        height: 55px !important;
+        max-width: 512px !important;
+        margin-top: 33px !important;
       }
 
       @include max-screen($breakpoint-mobile) {
-        width: 230px !important;
-        height: 69px !important;
-        margin-top: 10px !important;
+        // sass-lint:disable-block no-important
+        width: 100% !important;
+        height: 32px !important;
+        max-width: 297px !important;
+        margin-top: 5px !important; 
       }
     }
   }
@@ -321,9 +375,21 @@
       }
 
       @include max-screen($breakpoint-mobile) {
-        width: 230px !important;
-        height: 55px !important;
+        width: 335px !important;
+        height: 87px !important;
         margin-top: 10px !important;
+      }
+
+      @at-root .toya-wrapper & {//toya page
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 396px !important;
+          height: 61px !important;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          max-width: 231px !important;
+          height: 35px !important;
+        }
       }
     }
   }
@@ -388,28 +454,28 @@
   &.standardroom-mv-heading {//hotel familyroom
 
     @include min-screen($breakpoint-mobile + 1) {
-      // sass-lint:disable-block no-important   
+      // sass-lint:disable-block no-important
       bottom: 50px !important;
     }
 
     @include max-screen($breakpoint-mobile) {
-      // sass-lint:disable-block no-important   
+      // sass-lint:disable-block no-important
       bottom: -5px !important;
     }
 
     .heading-subtext {
-      // sass-lint:disable-block no-important    
+      // sass-lint:disable-block no-important
       max-width: 491px !important;
-      // sass-lint:disable-block no-important    
+      // sass-lint:disable-block no-important
       height: 52px !important;
-      // sass-lint:disable-block no-important    
+      // sass-lint:disable-block no-important
       margin-top: 15px !important;
       fill: $color-white;
-  
+
       @include max-screen($breakpoint-mobile) {
-        // sass-lint:disable-block no-important    
+        // sass-lint:disable-block no-important
         max-width: 207px !important;
-        // sass-lint:disable-block no-important    
+        // sass-lint:disable-block no-important
         height: 22px !important;
       }
     }
@@ -418,23 +484,23 @@
   &.familyroom-mv-heading {//hotel familyroom
 
     @include min-screen($breakpoint-mobile + 1) {
-      // sass-lint:disable-block no-important   
+      // sass-lint:disable-block no-important
       bottom: 33px !important;
     }
 
     .heading-subtext {
-      // sass-lint:disable-block no-important    
+      // sass-lint:disable-block no-important
       max-width: 743px !important;
-      // sass-lint:disable-block no-important    
+      // sass-lint:disable-block no-important
       height: 52px !important;
-      // sass-lint:disable-block no-important    
+      // sass-lint:disable-block no-important
       margin-top: 15px !important;
       fill: $color-white;
-  
+
       @include max-screen($breakpoint-mobile) {
-        // sass-lint:disable-block no-important    
+        // sass-lint:disable-block no-important
         max-width: 200px !important;
-        // sass-lint:disable-block no-important    
+        // sass-lint:disable-block no-important
         height: 55px !important;
       }
     }
@@ -443,33 +509,33 @@
   &.granroom-mv-heading {
 
     @include min-screen($breakpoint-mobile + 1) {
-      // sass-lint:disable-block no-important   
+      // sass-lint:disable-block no-important
       bottom: 37px !important;
     }
 
     @include max-screen($breakpoint-mobile) {
-      // sass-lint:disable-block no-important   
+      // sass-lint:disable-block no-important
       bottom: 7px !important;
     }
 
     .heading-subtext {
-      // sass-lint:disable-block no-important    
+      // sass-lint:disable-block no-important
       width: 352px !important;
-      // sass-lint:disable-block no-important    
+      // sass-lint:disable-block no-important
       height: 56px !important;
       fill: $color-white;
 
       @include min-screen($breakpoint-mobile + 1) {
-        // sass-lint:disable-block no-important   
+        // sass-lint:disable-block no-important
         margin-top: 10px !important;
       }
 
       @include max-screen($breakpoint-mobile) {
-        // sass-lint:disable-block no-important    
+        // sass-lint:disable-block no-important
         width: 227px !important;
-        // sass-lint:disable-block no-important    
+        // sass-lint:disable-block no-important
         height: 37px !important;
-        // sass-lint:disable-block no-important    
+        // sass-lint:disable-block no-important
         margin-top: 9px !important;
       }
     }
@@ -484,17 +550,18 @@
         transform: none;
       }
       * {
+        // sass-lint:disable-block no-important
         width: 300px !important;
 
         @include max-screen ($breakpoint-mobile) {
-           // sass-lint:disable-block no-important    
+          // sass-lint:disable-block no-important
           width: 207px !important;
         }
       }
     }
 
     @include max-screen($breakpoint-mobile) {
-      // sass-lint:disable-block no-important    
+      // sass-lint:disable-block no-important
       padding: 15px 20px !important;
     }
   }
@@ -503,38 +570,129 @@
     .heading-text {
       @include max-screen ($breakpoint-mobile) {
         letter-spacing: 3px;
-        word-spacing: -1px;    
+        word-spacing: -1px;
       }
     }
     .heading-subtext {
-      // sass-lint:disable-block no-important    
-      max-width: 595px !important; 
+      // sass-lint:disable-block no-important
+      max-width: 595px !important;
       height: 99px !important;
       width: 241px !important;
 
       top: -6px;
       left: -10px;
       @include min-screen ($breakpoint-mobile + 1) {
-        // sass-lint:disable-block no-important    
+        // sass-lint:disable-block no-important
         height: 100px !important;
-        // sass-lint:disable-block no-important    
+        // sass-lint:disable-block no-important
         width: 100% !important;
         width: 237px;
         left: -6px;
         top: 6px;
-        
+
       }
     }
 
     @include max-screen ($breakpoint-mobile) {
-      // sass-lint:disable-block no-important   
+      // sass-lint:disable-block no-important
       bottom: -22px !important;
     }
   }
 
+  &.marcherant-mv-heading {
+    .heading-text {
+      @include max-screen ($breakpoint-mobile) {
+        letter-spacing: 3px;
+        word-spacing: -1px;
+      }
+    }
+    .heading-subtext {
+      // sass-lint:disable-block no-important
+      max-width: 939px !important;
+      height: 99px !important;
+      width: 241px !important;
+
+      top: -6px;
+      left: -10px;
+      @include min-screen ($breakpoint-mobile + 1) {
+        // sass-lint:disable-block no-important
+        height: 100px !important;
+        // sass-lint:disable-block no-important
+        width: 100% !important;
+        width: 237px;
+        left: -6px;
+        top: -11px;
+
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      bottom: -22px !important;
+    }
+  }
+
+  &.mv-heading-default {
+    bottom: 30px;
+    width: 100%;
+    max-width: 650px;
+    fill: #fff;
+    .heading-text {
+      font-size: 45px;
+      -webkit-text-fill-color: #fff;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 24px;
+        text-align: left;
+      }
+    }
+    .heading-subtext {
+      width: 100%;
+      height: 64px;
+      top: -20px;
+      
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      left: auto;
+    }
+  }
+
+  &.mv-collection-pit {
+    max-width: 270px;
+
+    @include max-screen ($breakpoint-mobile) {
+      .heading {
+        margin-bottom: 10px;
+      }
+      .heading-subtext {
+        max-width: 180px;
+        height: 37px;
+        margin-top: 0px;
+        margin-left: 0;
+        top: 0px;
+      }
+    }
+  }
+
+  &.mv-heading-mobipark-guide {
+    max-width: 950px;
+
+    .heading-subtext {
+      top: -14px;
+      left: 4px;
+    }
+  }
+ 
   &.hellowoods-mv-heading {
     bottom: 5px;
     width: 100%;
+
+    @at-root .smart-entry & {//smart-entry page
+      @include max-screen($breakpoint-mobile) {
+        bottom: 15px !important;
+      }
+    }
 
     .heading-text {
       font-size: 45px;
@@ -564,6 +722,31 @@
         height: 60px;
         width: 230px;
         margin: 0;
+      }
+
+      @at-root .smart-entry & {//smart entry page
+        @include min-screen($breakpoint-mobile + 1) {
+          max-width: 824px !important;
+          height: 50px !important;
+          margin-top: 10px !important;
+
+          img {
+            max-width: 888px;
+            margin-left: -17px;
+            margin-top: -19px;
+          }
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          width: 307px !important;
+          height: 70px !important;
+
+          img {
+            max-width: 340.5px;
+            margin-left: -9px;
+            margin-top: -10px;
+          }
+        }
       }
     }
 
@@ -606,8 +789,68 @@
     }
   }
 
-  
+  &.mv-heading-marcherant-dinner-buffet {
+    .heading-wrap-marcherant-dinner-buffet {
+      .heading-subtext {
+        @include max-screen($breakpoint-mobile) {
+          width: 90%;
+        }
+      }
+    }
+  }
+  &.mv-heading-business-hours {
+    padding-bottom: 20px;
+    .heading-wrap-business-hours {
+      .heading-text {
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 32px;
+        }
+      }
+      .heading-subtext {
+        max-width: 210px;
+        @include max-screen ($breakpoint-mobile) {
+          max-width: 140px;
+        }
+      }
+    }
+  }
+  /* stylelint-disable no-descending-specificity */
+  &.mv-heading-faq {
+    bottom: 5px;
+    width: 100%;
 
+    .heading-text {
+      font-size: 45px;
+      -webkit-text-fill-color: $color-white;
+
+      .is-ie & {//ie modifier
+        background: none;
+        color: $color-white;
+        -webkit-text-fill-color: $color-white;
+        -moz-text-fill-color: $color-white;
+        -ms-text-fill-color: $color-white;
+      }
+
+      @include max-screen ($breakpoint-mobile) {
+        text-align: left;
+        font-size: 23px;
+      }
+    }
+    .heading-subtext {
+      width: 100%;
+      max-width: 310px;
+      height: 90px;
+      margin-top: 0;
+      fill: $color-white;
+
+      @include max-screen ($breakpoint-mobile) {
+        height: 60px;
+        width: 230px;
+        margin: 0;
+      }
+    }
+  }
+  /* stylelint-enable no-descending-specificity */
   span {
     display: block;
   }
@@ -684,7 +927,7 @@
     background: url(#{$image-path}granroom/mv-today-bg.png) no-repeat;
     background-size: contain;
     max-width: 247px;
-    
+
     @include min-screen($breakpoint-mobile + 1) {
       bottom: -144px;
     }
@@ -697,7 +940,7 @@
   }
 
   &.mv-hoteltwinring-logo {
-    
+
     background: url(#{$image-path}hoteltwinring/hotel-twinring-logo.png) no-repeat;
     background-size: contain;
     max-width: 270px;
@@ -711,7 +954,7 @@
     background: url(#{$image-path}nozominoyu/nozominoyu-logo.png) no-repeat;
     background-size: contain;
     max-width: 247px;
-    
+
     @include min-screen($breakpoint-mobile + 1) {
       bottom: -144px;
     }
@@ -1069,7 +1312,7 @@
     bottom: 5px;
 
     @include max-screen($breakpoint-mobile) {
-      
+
       left: 0;
       right: 0;
       padding: 30px;
@@ -1142,41 +1385,41 @@
 
 .mv-inner {
 
+  @include max-screen($breakpoint-mobile) {
+    height: 378px;
+  }
+
+  .mv-today {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/sumika/sumika-logo.png);
+    bottom: -45px;
+  }
+
+  .mv-heading {
+    bottom: 27px;
+  }
+
+  .mv-heading-subtexts {
+
+    svg {
+      fill: $color-white;
+      width: 520px;
+      height: 74px;
+    }
+  }
+
+  .mv-heading-texts {
+    font-family: $font-holland;
+    color: $color-white;
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    width: auto;
+
     @include max-screen($breakpoint-mobile) {
-      height: 378px;
+      font-size: 25px;
     }
-
-    .mv-today {
-      width: 268px;
-      height: 266px;
-      background-image: url(../images/sumika/sumika-logo.png);
-      bottom: -45px;
-    }
-
-    .mv-heading {
-      bottom: 27px;
-    }
-
-    .mv-heading-subtexts {
-
-      svg {
-        fill: $color-white;
-        width: 520px;
-        height: 74px;
-      }
-    }
-
-    .mv-heading-texts {
-      font-family: $font-holland;
-      color: $color-white;
-      font-size: 50px;
-      letter-spacing: 0.06em;
-      width: auto;
-
-      @include max-screen($breakpoint-mobile) {
-        font-size: 25px;
-      }
-    }
+  }
 
 
   .mv-heading-sumika {
@@ -1212,12 +1455,12 @@
     }
 
     @include max-screen($breakpoint-mobile) {
-    .mv-heading-subtexts {
-      svg {
-        width: 162px;
-        height: 76px;
+      .mv-heading-subtexts {
+        svg {
+          width: 162px;
+          height: 76px;
+        }
       }
-    }
     }
   }
 
@@ -1234,34 +1477,34 @@
     }
 
     @include max-screen($breakpoint-mobile) {
-    .mv-heading-subtexts {
-      svg {
-        width: 183px;
-        height: 96px;
+      .mv-heading-subtexts {
+        svg {
+          width: 183px;
+          height: 96px;
+        }
       }
-    }
     }
   }
 
 
-    // itadaki mv
+  // itadaki mv
 
-    &.itadaki-mv {
-      .mv-today {
-        background-image: url(../images/itadaki/today.png);
-      }
+  &.itadaki-mv {
+    .mv-today {
+      background-image: url(../images/itadaki/today.png);
     }
+  }
 
-    // dokidoki
+  // dokidoki
 
-    &.dokidoki-mv {
-      .mv-today {
-        background-image: url(../images/dokidoki/dokidoki-logo.png);
-        width: 247px;
-        height: 247px;
-        bottom: -38px;
-      }
+  &.dokidoki-mv {
+    .mv-today {
+      background-image: url(../images/dokidoki/dokidoki-logo.png);
+      width: 247px;
+      height: 247px;
+      bottom: -38px;
     }
+  }
 }
 
 
@@ -1337,21 +1580,21 @@
     }
   }
 
-&.mv-subpage-reserve {
-  overflow: hidden;
+  &.mv-subpage-reserve {
+    overflow: hidden;
 
-  @include min-screen($breakpoint-mobile + 1) {
-    margin-bottom: 95px;
-  }
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 95px;
+    }
 
-  .mv-image {
-    padding-bottom: 43%;
+    .mv-image {
+      padding-bottom: 43%;
 
-    @include max-screen($breakpoint-mobile) {
-      padding-bottom: 96%;
+      @include max-screen($breakpoint-mobile) {
+        padding-bottom: 96%;
+      }
     }
   }
-}
 
   &.mv-musasabi {
     .mv-heading-texts{
@@ -1401,8 +1644,13 @@
   }
 }
 
+
 .mv-image-subpage {
   background-position-y: 25%;
+
+  @at-root .toya-wrapper & {//toya page
+    background-position-y: bottom;
+  }
 }
 
 .mv-top {
@@ -1491,4 +1739,100 @@
   @include min-screen($breakpoint-mobile + 1) {
     font-weight: 600 !important;
   }
+}
+
+
+@at-root .lunch-marcherant {//lunch marcherant page
+  .mv-heading-marcherant-lunch {
+    bottom: 11px !important;
+  }
+
+  .heading-lunch {
+    .heading-subtext {
+      width: 214px;
+      height: 160px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 124px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@at-root .motegi-attraction {
+  .mv-heading {
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: 0px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: 14px;
+    }
+
+    svg {
+      display: inline-block;
+      fill: $color-white;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 325px;
+        height: 38px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 166px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@at-root .access-mv-heading {
+  bottom: 38px !important;
+
+  @include max-screen($breakpoint-mobile) {
+    bottom: -20px !important;
+  }
+  
+  .heading-access {
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 198px !important;
+        height: 42px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 141.5px !important;
+        height: 29px !important;
+      }
+    }
+  }
+}
+
+@at-root .mv-forest-experience-program {//forest program
+  .heading {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 0;
+    }
+  }
+  .heading-subtext {
+    max-width: 265px;
+    margin-left: 0;
+
+    svg {
+      fill: $color-white;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      height: 45px !important;
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 55px !important;
+      max-width: 512px !important;
+      margin-left: auto;
+      // margin-top: 33px !important;
+    }
+  }
+
 }

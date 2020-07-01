@@ -12,6 +12,12 @@
     width: 100%;
     height: 12px;
   }
+
+  @at-root .toya-button & {
+    @include min-screen($breakpoint-mobile + 1) {
+      right: 40px;
+    }
+  }
 }
 
 .button {
@@ -53,6 +59,12 @@
     left: -5px;
     right: 0;
     border: 1px dotted $color-primary;
+  }
+
+  &.location-btn {//access page
+    @include max-screen($breakpoint-mobile) {
+      width: 257px;
+    }
   }
 
   &-rocco {//rocco
@@ -217,4 +229,63 @@
         max-width: 345px;
       }
   }
+
+  &.map_m-pdf {
+    svg {
+      height: 30px;
+    }
+  }
+
+  &.program-details-green {
+    background-image: url('../images/program-details/button-bg-green.jpg');
+    border: none;
+    background-position: center;
+    background-size: 200%;
+    width: 100%;
+    height: auto;
+    max-width: 490px;
+    padding: 30px;
+    margin-bottom: 14px;
+
+    @include min-screen ($breakpoint-mobile+1) {
+      margin-top: 100px;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 14px;
+      padding: 20px;
+    }
+  }
+
+  &.dinner-buffet-gold {
+    border: 1px solid #a38737;
+    max-width: 295px;
+    color: #a38737;
+    margin-bottom: 74px;
+
+    &::before {
+      display: none;
+    }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      width: 100%;
+      max-width: 730px;
+      padding: 46px;
+      margin-bottom: 74px;
+    } 
+  }
+
+}
+
+@at-root .foodsm-button {//foods_m page
+  border-color: $color-green !important;
+  color: $color-green;
+}
+
+@at-root .location-btn {//access page
+  background-color: $color-white;
 }

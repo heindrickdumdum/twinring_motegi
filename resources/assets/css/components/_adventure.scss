@@ -10,6 +10,17 @@
     }
   }
 
+  @at-root .foodsm & {//foods m page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 100px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 37px !important;
+      
+    }
+  }
+
   //phase 2
   .adventure-bg-circle {
     background-image: url(/assets/images/twinringmotegi/adventure-bg-circle.png);

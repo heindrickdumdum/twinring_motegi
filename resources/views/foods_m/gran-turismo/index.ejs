@@ -7,7 +7,7 @@
 <%- include('/partials/head', { pageId, title }) -%>
 
 <div class="lig-content">
-  <div class="subpage subpage-restaurant restaurant-wrapper">
+  <div class="subpage subpage-restaurant restaurant-wrapper gran-turismo">
     <div class="mv mv-restaurant mv-subpage-restaurant">
       <!-- <div class="mv-buttons">
         <ul class="mv-buttons-list">
@@ -59,20 +59,22 @@
           <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-restaurant heading-granturismo',
-              subtextvg: 'granturismo-main-title',
-              altSubtextvg: `プレイステーションの
-カーレースゲーム「グランツーリスモ」の
-世界観を楽しみながら食事ができるレストランです`
+//               subtextvg: 'granturismo-main-title',
+//               altSubtextvg: `プレイステーションのカーレースゲーム「グランツーリスモ」の世界観を楽しみながら食事ができるレストランです`
+              imgPath: mix('/assets/images/granturismo/color-title.jpg'),
+              alt: 'プレイステーションのカーレースゲーム「グランツーリスモ」の世界観を楽しみながら食事ができるレストランです'
             }) %>
           </div>
 
           <div class="l-section-title u-show-sp">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-restaurant heading-granturismo',
-              subtextvg: 'granturismo-main-title-sp',
-              altSubtextvg: `プレイステーションの
-カーレースゲーム「グランツーリスモ」の
-世界観を楽しみながら食事ができるレストランです`
+//               subtextvg: 'granturismo-main-title-sp',
+//               altSubtextvg: `プレイステーションの
+// カーレースゲーム「グランツーリスモ」の
+// 世界観を楽しみながら食事ができるレストランです`
+              imgPath: mix('/assets/images/granturismo/color-title-sp.jpg'),
+              alt: 'プレイステーションのカーレースゲーム「グランツーリスモ」の世界観を楽しみながら食事ができるレストランです'
             }) %>
           </div>
 
@@ -83,7 +85,8 @@
           </div>
 
           <p class="suboage-desc">
-            <span>無料で体験できるグランツーリスモSPORT。好きな車を選んで、様々なコースに挑戦しよう！</span>
+            <span>店内には無料で遊べる「グランツーリスモ」のドライビングシュミレーターが設置されており、家族でゲームも楽しめます。<br class="u-show-pc"/>
+              お店がパドックの中にあるので、普段なかなか見ることができないレーシングマシーンやドライバーたちに触れ合えるチャンスも。</span>
           </p>
 
           <h2 class="subpage-title">
@@ -95,15 +98,18 @@
               <tr class="table-row">
                 <th class="table-head">場所</th>
                 <td class="table-col">
-                  パドック（最寄の駐車場 : <a class="link" href="/map_m/">第1パドック駐車場</a>）
+                  パドック<br class="u-show-sp"/>（最寄の駐車場：第1パドック）<br class="u-show-sp"/><a class="link" href="/map_m/">Mapを見る</a>
+                  <!-- パドック（最寄の駐車場 : <a class="link" href="/map_m/">第1パドック駐車場</a>） -->
                 </td>
               </tr>
 
               <tr class="table-row">
                 <th class="table-head">営業時間</th>
                 <td class="table-col">
-                  ツインリンクもてぎ営業時間内 <br/>
-                  <a class="link" href="/hours_m/">※平日は11:00&#126;15:00まで営業</a>
+                  平日：11:00-15:00<br/>
+                  土日祝：<a class="link" href="/hours_m/">ツインリンクもてぎ営業時間内</a>
+                  <!-- <a class="link" href="/hours_m/">ツインリンクもてぎ営業時間内</a><br class="u-show-sp"/>
+                  ※平日は11:00&#126;15:00まで営業 -->
                 </td>
               </tr>
 
@@ -111,6 +117,14 @@
                 <th class="table-head">座席数</th>
                 <td class="table-col">
                   店内: 90　テラス: 31
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">備考</th>
+                <td class="table-col">
+                  ・チャイルドシートあり<br/>
+                  ・クレジットカード利用可
                 </td>
               </tr>
             </tbody>
@@ -124,19 +138,20 @@
       }) -%>
 
       <div class="l-section oak-button">
-        <p class="u-show-pc">
+        <!-- <p class="u-show-pc">
           この他にも、様々なメニューをご用意しております。
         </p>
 
         <p class="u-show-sp">
           この他にも、様々なメニューを<br/>ご用意しております。
-        </p>
+        </p> -->
 
         <div class="u-show-pc">
           <%- include('/partials/button', {
             modifier: 'restaurant-button',
             link: '/assets/images/granturismo/gtcafe_menu_202003.pdf',
-            text: '春のおすすめメニューはこちら (PDF:2.4MB)',
+            // text: '春のおすすめメニューはこちら (PDF:2.4MB)',
+            text: 'その他のメニューはこちら',
             newTab: true
           }) -%>
         </div>
@@ -145,14 +160,15 @@
           <%- include('/partials/button', {
             modifier: 'restaurant-button',
             link: '/assets/images/granturismo/gtcafe_menu_202003.pdf',
-            text: '春のおすすめメニューはこちら (PDF:2.4MB)',
+            // text: '春のおすすめメニューはこちら (PDF:2.4MB)',
+            text: 'その他のメニューはこちら',
             newTab: true
           }) -%>
         </div>
       </div>
 
       <!-- other restaurant module-->
-      <%- include('/partials/restaurant/section-other-restaurant') -%>
+      <%- include('/partials/gran-turismo/section-other-restaurant') -%>
       
 
     </main>

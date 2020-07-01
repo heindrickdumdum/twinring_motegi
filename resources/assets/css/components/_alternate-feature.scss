@@ -67,6 +67,18 @@
         }
       }
 
+      &.zip-line {
+        @include min-screen ($breakpoint-mobile+1) {
+          padding: 71px 40px 45px;
+        }
+
+        .l-button {
+          @include min-screen ($breakpoint-mobile+1) {
+            margin-top: 85px;
+          }
+        }
+      }
+
       &.zipline-green-label::before {
         content: "モビパークパスポート対象";
         background-color: #4fae32;

@@ -681,6 +681,21 @@
     .heading-subtext {
       top: -14px;
       left: 4px;
+
+      @include max-screen ($breakpoint-mobile) {
+        height: 76px;
+        left: 0;
+        margin-top: 28px;
+        
+
+        svg {
+          width: 330px;
+        }
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      bottom: 5px;
     }
   }
  

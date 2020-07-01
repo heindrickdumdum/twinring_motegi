@@ -1962,6 +1962,12 @@
           img {
             transform: scale(1.25);
           }
+
+          @at-root & {
+            .fee-image-text {
+              color: $color-green;
+            }
+          }
         }
       }
     }
@@ -1988,6 +1994,7 @@
       letter-spacing: 0.1em;
       font-weight: bold;
       text-align: center;
+      transition: color 0.25s ease-in-out;
 
       @include max-screen($breakpoint-mobile) {
         font-size: 10px;

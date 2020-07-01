@@ -59,7 +59,7 @@
       font-size: 22px;
       line-height: 2.091;
       letter-spacing: 0.1em;
-      text-align: center;      
+      text-align: center;
       font-family: $font-hiragino;
 
       &:nth-of-type(1) {
@@ -127,8 +127,8 @@
 
       &-title {
         font-size: 17px;
-        line-height: 1.765;     
-        letter-spacing: 0.16em;   
+        line-height: 1.765;
+        letter-spacing: 0.16em;
 
         @include max-screen($breakpoint-mobile) {
           font-size: 13px;
@@ -137,7 +137,7 @@
 
       &-desc {
         font-size: 15px;
-        line-height: 1.765;     
+        line-height: 1.765;
         letter-spacing: 0.16em;
 
         @include max-screen($breakpoint-mobile) {
@@ -159,7 +159,7 @@
       @include max-screen($breakpoint-mobile) {
         padding-bottom: 31px;
       }
-  
+
       &:before {
         position: absolute;
         content: "";
@@ -196,20 +196,20 @@
     a {
       @include max-screen($breakpoint-mobile) {
         max-width: 100%;
-        height: 70px; 
+        height: 70px;
       }
     }
 
     p {
       font-size: 15px;
-      line-height: 2.267;      
+      line-height: 2.267;
       letter-spacing: 0.16em;
       margin-bottom: 20px;
       text-align: center;
 
       @include max-screen($breakpoint-mobile) {
         font-size: 12px;
-        line-height: 1.792;        
+        line-height: 1.792;
       }
     }
   }
@@ -236,21 +236,21 @@
       @include max-screen($breakpoint-mobile) {
         height: 40px;
         max-width: 260px;
-        font-size: 12px;        
+        font-size: 12px;
       }
     }
 
     @at-root &.toya-button {//toya page
       border-color: #a38737;
       color: #a38737;
-      letter-spacing: 0.1em;     
+      letter-spacing: 0.1em;
 
       @include min-screen($breakpoint-mobile + 1) {
         margin: {
           top: 102px;
         }
         font-size: 18px;
-        line-height: 1.667;   
+        line-height: 1.667;
       }
 
       @include max-screen($breakpoint-mobile) {
@@ -264,12 +264,13 @@
     }
 
     &.donguri-button {
-      @include min-screen ($breakpoint-mobile + 1) {
-        background: linear-gradient(to right, #027cc3 0%, #09a046 100%);
+
+      span {
+        background: inear-gradient(to right, #027cc3 30%, #09a046 70%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        border: 1px solid #058a92;
-    
+        // border: 1px solid #058a92;
+
         .is-ie & {
           background: none;
           color: $color-gossamer;

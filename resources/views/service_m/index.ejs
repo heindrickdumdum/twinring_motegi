@@ -243,44 +243,50 @@
           </h2>
 
           <ul class="faq-sec-list faq-sec-list-cat">
-            <% [
-                {
-                  link: '/hellowoods/#hellowoods-faq',
-                  svgModifier: 'hellowoods',
-                  svg: 'icon17',
-                  text: '<span>ハローウッズについて</span>'
-                },
-                {
-                  link: '/mobipark_m/',
-                  svgModifier: 'mobipark',
-                  svg: 'icon18',
-                  text: '<span>モビパークについて</span>'
-                },
-                {
-                  link: '/f-glamping/',
-                  svgModifier: 'twinring',
-                  svg: 'icon19',
-                  text: '<span>森と星空の</span><span>キャンプヴィレッジ</span>'
-                },
-                {
-                  link: '/hoteltwinring/info/faq.html',
-                  svgModifier: 'twinringhotel',
-                  svg: 'icon20',
-                  text: '<span>ホテルツインリンクについて</span>'
-                }
-               ].forEach((data) => { %>
-                 <li class="faq-sec-item">
-                   <a class="faq-sec-item-link" href="<%- data.link %>">
-                     <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
-                       <title>icon <%- data.svgModifier %></title>
-                       <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
-                     </svg>
-                     <p class="faq-sec-txt">
-                       <%- data.text %>
-                     </p>
-                   </a>
-                 </li>
-            <% }); %>
+            <li class="faq-sec-item">
+              <a class="faq-sec-item-link" href="/hellowoods/#hellowoods-faq">
+                <svg class="faq-sec-svg faq-sec-svg-hellowoods">
+                  <title>icon hellowoods</title>
+                  <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-icon17') %>"></use>
+                </svg>
+                <p class="faq-sec-txt">
+                  <span>ハローウッズについて</span>
+                </p>
+              </a>
+            </li>
+            <li class="faq-sec-item">
+              <a class="faq-sec-item-link" href="/mobipark_m/">
+                <svg class="faq-sec-svg faq-sec-svg-mobipark">
+                  <title>icon mobipark</title>
+                  <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-icon18') %>"></use>
+                </svg>
+                <p class="faq-sec-txt">
+                  <span>モビパークについて</span>
+                </p>
+              </a>
+            </li>
+            <li class="faq-sec-item">
+              <a class="faq-sec-item-link" href="/f-glamping/#faq">
+                <div class="faq-sec-img faq-sec-img-twinring">
+                  <img  src="<%= mix('/assets/images/service-m/twinring-hotel.png') %>" alt="">
+                </div>
+
+                <p class="faq-sec-txt">
+                  <span>森と星空の</span><span>キャンプヴィレッジ</span>
+                </p>
+              </a>
+            </li>
+            <li class="faq-sec-item">
+              <a class="faq-sec-item-link" href="/f-glamping/">
+                <svg class="faq-sec-svg faq-sec-svg-twinringhotel">
+                  <title>icon twinringhotel</title>
+                  <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-icon20') %>"></use>
+                </svg>
+                <p class="faq-sec-txt">
+                  <span>ホテルツインリンクについて</span>
+                </p>
+              </a>
+            </li>
           </ul>
         </section>
 
@@ -374,11 +380,11 @@
                   </li>
                   <li>
                     <span>ハローウッズ</span>
-                    <span>TEL <a href="tel:0285640155">0285-64-0155</a> / <br class="u-show-sp"/>FAX <a href="tel:0285640156">0285-64-0156</a></span>
+                    <span>TEL <a href="tel:0285640155">0285-64-0155</a> / <br class="u-show-sp"/>FAX 0285-64-0156</span>
                   </li>
                   <li>
                     <span>ホテルツインリンク</span>
-                    <span>TEL <a href="tel:0285640123">0285-64-0123</a> /<br class="u-show-sp"/> FAX <a href="tel:0285640125">0285-64-0125</a></span>
+                    <span>TEL <a href="tel:0285640123">0285-64-0123</a> /<br class="u-show-sp"/> FAX 0285-64-0125></span>
                   </li>
                   <li>
                     <span>アクティブセーフティトレーニングパーク</span>

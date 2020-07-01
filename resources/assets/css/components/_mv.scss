@@ -432,8 +432,8 @@
       }
 
       @include max-screen($breakpoint-mobile) {
-        width: 273px !important;
-        height: 60px !important;
+        width: 300px !important;
+        height: 70px !important;
         margin-top: 10px !important;
       }
     }
@@ -442,11 +442,12 @@
   &.restaurant-mv-heading {//restaurant page
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
-        max-width: 270px !important;
+        max-width: 328px !important;
       }
 
       @include max-screen($breakpoint-mobile) {
-        width: 190px !important;
+        width: 265px !important;
+        height: 42px !important;
       }
     }
   }
@@ -1812,13 +1813,13 @@
   .heading-access {
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
-        max-width: 198px !important;
-        height: 42px !important;
+        max-width: 286px !important;
+        height: 62px !important;
       }
 
       @include max-screen($breakpoint-mobile) {
-        max-width: 141.5px !important;
-        height: 29px !important;
+        max-width: 169px !important;
+        height: 36.5px !important;
       }
     }
   }
@@ -1850,4 +1851,18 @@
     }
   }
 
+}
+
+@at-root .map-mv-heading {
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      max-width: 308px !important;
+      height: 62px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 181px !important;
+      height: 36.5px !important;
+    }
+  }
 }

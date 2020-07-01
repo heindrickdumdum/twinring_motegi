@@ -2071,11 +2071,30 @@
       letter-spacing: 0.1em !important; 
       position: absolute;
       opacity: 0.4;
-      left: 50%;
-      transform: translateX(-50%);
+      // left: 50%;
+      // transform: translateX(-50%);
+      transform: initial;
+      left: calc(50% - 50px);
       top: -75px; 
       width: 105px;
       font-weight: normal;
+
+      @include max-screen($breakpoint-mobile) {
+        transform: initial;
+        left: calc(50% - 55px);
+      }
+
+      // @at-root .is-firefox & {
+      //   @include min-screen($breakpoint-mobile + 1) {
+      //     transform: initial;
+      //     left: calc(50% - 50px);
+      //   }
+
+      //   @include max-screen($breakpoint-mobile) {
+      //     transform: initial;
+      //     left: calc(50% - 55px);
+      //   }
+      // }
 
       @include max-screen($breakpoint-mobile) {
         font-size: 70px !important;

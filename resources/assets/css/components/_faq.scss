@@ -230,6 +230,29 @@
   }
 }
 
+.faq-sec-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  margin-bottom: 8px;
+  @include min-screen($breakpoint-mobile + 1) {
+    height: 63px;
+    margin-bottom: 12px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.faq-sec-img-twinring {
+  width: 110px;
+  @include min-screen($breakpoint-mobile + 1) {
+    width: 180px;
+  }
+}
+
 .faq-sec-svg {
   height: 45px;
   stroke-width: 6px;

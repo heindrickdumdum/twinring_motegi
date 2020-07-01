@@ -39,6 +39,10 @@ if(typeof headingSubtext === 'undefined') {
   headingSubtext = '';
 }
 
+if(typeof headingText2 === 'undefined') {
+  headingText2 = '';
+}
+
 %>
 
 <div class="heading-wrap<%- ' '+modifier %>">
@@ -48,6 +52,13 @@ if(typeof headingSubtext === 'undefined') {
       <h<%- heading_level %> class="heading-text">
         <%- text %>
     </h<%= heading_level %>>
+    <% } %>
+
+    <% if(headingText2) { %>
+      <span class="u-title-hidden"><%- alt %></span>
+      <p class="heading-text">
+        <%- headingText2 %>
+      </p>
     <% } %>
 
     <% if(subtextvg || imgPath) { %>

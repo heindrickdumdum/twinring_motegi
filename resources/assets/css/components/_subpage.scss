@@ -1946,16 +1946,39 @@
         margin-bottom: 5px;
       }
 
-      a {
-        color: inherit;
+      img {
+        transition: transform 0.25s ease-in-out;
+        // margin-bottom: 14px;
+
+        // @include max-screen($breakpoint-mobile) {
+        //   margin-bottom: 7px;
+        // }
       }
 
-      img {
-        margin-bottom: 14px;
+      a {
+        color: inherit;
 
-        @include max-screen($breakpoint-mobile) {
-          margin-bottom: 7px;
+        &:hover {
+          img {
+            transform: scale(1.25);
+          }
         }
+      }
+    }
+
+    &-container {
+      overflow: hidden;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 160px;
+        margin-bottom: 14px;
+        border-radius: 10px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 7px;
+        height: 81.5px;
+        border-radius: 5px;
       }
     }
 

@@ -562,7 +562,7 @@
   }
   background-image: url('/assets/images/toya/mountain-bg.png');
   background-size: 65%;
-  background-position: left 78%;
+  background-position: left 1860px;
   background-repeat: no-repeat;
 
   @include max-screen($breakpoint-mobile) {
@@ -574,7 +574,7 @@
     }
     background-image: url('/assets/images/toya/mountain-bg-sp.png');
     background-size: 100%;
-    background-position: center 75%;
+    background-position: center 1498px;
   }
 
   @at-root svg {

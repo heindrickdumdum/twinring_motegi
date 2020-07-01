@@ -138,6 +138,7 @@
         @include max-screen($breakpoint-mobile) {
           height: 683px;
           background-image: url('/assets/images/toya/concept-bg.jpg');
+          background-size: 200%;
         }
       }
     }
@@ -1234,6 +1235,12 @@
     .button-icon {
       padding: 5px 0;
       right: 5px;
+
+      @at-root .toya-wrapper & {//toya page
+        @include max-screen($breakpoint-mobile) {
+          padding: 0px;
+        }
+      }
     }
 
     @include min-screen ($breakpoint-mobile+1) {

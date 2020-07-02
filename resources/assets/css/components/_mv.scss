@@ -280,7 +280,11 @@
     left: 15px;
   }
 
-
+  &-marcherant-dinner {
+    @include max-screen($breakpoint-mobile) {
+      bottom: -30px !important;
+    }
+  }
 
   &-marcherant-breakfast {//breakfast marcherant page
     @include min-screen($breakpoint-mobile + 1) {

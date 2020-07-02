@@ -847,6 +847,10 @@
         }
       }
     }
+
+    @include max-screen ($breakpoint-mobile) {
+      bottom: -20px;
+    }
   }
   &.mv-heading-business-hours {
     padding-bottom: 20px;

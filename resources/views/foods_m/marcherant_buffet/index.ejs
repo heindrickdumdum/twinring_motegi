@@ -19,12 +19,21 @@
       </ul>
 
       <div class="l-container mv-container">
-        <div class="mv-heading hellowoods-mv-heading mv-heading-marcherant-dinner-buffet">
+        <div class="u-show-pc mv-heading hellowoods-mv-heading mv-heading-marcherant-dinner-buffet">
           <%- include('/partials/heading', {
             modifier: 'heading-wrap-marcherant-dinner-buffet',
             heading_level: 1,
             text: 'Dinner Buffet',
             subtextvg: 'marcherant-dinner-buffet-title',
+            altSubtextvg: '森のキッチン どんぐり'
+          }) %>
+        </div>
+        <div class="u-show-sp mv-heading hellowoods-mv-heading mv-heading-marcherant-dinner-buffet">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-marcherant-dinner-buffet',
+            heading_level: 1,
+            text: 'Dinner Buffet',
+            subtextvg: 'marcherant-dinner-buffet-title-sp',
             altSubtextvg: '森のキッチン どんぐり'
           }) %>
         </div>
@@ -245,9 +254,14 @@
       <section class="l-section point-item">
         <div class="l-container-m full-sp">
           <div class="point-heading-wrap">
-            <h3 class="point-heading no-4">
+            <h3 class="point-heading no-4 u-show-pc">
               <%- include('/partials/svg', {
                 name: 'marcherant-dinner-buffet-point-4'
+              }) %>
+            </h3>
+            <h3 class="point-heading no-4 u-show-sp">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-buffet-point-4-sp'
               }) %>
             </h3>
             <p class="point-subtext">フルーツ、ケーキ、アイスクリーム、チョコレートファウンテンなど目にも楽しいほど種類豊富。<br>

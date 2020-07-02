@@ -29,6 +29,20 @@
       height: 50px;
     }
   }
+
+  &.mv-restaurant {
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 100px;
+      height: 450px;
+      &::after {
+        display: none;
+      }
+
+      .mv-image {
+        height: 500px;
+      }
+    }
+  }
 }
 
 .mv-container {
@@ -273,6 +287,10 @@
       bottom: 25px !important;
     }
 
+    @include max-screen($breakpoint-mobile) {
+      bottom: -80px !important;
+    }
+
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
         max-width: 405px !important;
@@ -312,13 +330,13 @@
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
         max-width: 324px !important;
-        height: 51px !important;
+        height: 56px !important;
         margin-top: 20px !important;
       }
 
       @include max-screen($breakpoint-mobile) {
         width: 210px !important;
-        height: 33px !important;
+        height: 36px !important;
         margin-top: 10px !important;
       }
     }
@@ -432,8 +450,8 @@
       }
 
       @include max-screen($breakpoint-mobile) {
-        width: 273px !important;
-        height: 60px !important;
+        width: 300px !important;
+        height: 70px !important;
         margin-top: 10px !important;
       }
     }
@@ -442,12 +460,16 @@
   &.restaurant-mv-heading {//restaurant page
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
-        max-width: 270px !important;
+        max-width: 328px !important;
       }
 
       @include max-screen($breakpoint-mobile) {
-        width: 190px !important;
+        width: 265px !important;
+        height: 42px !important;
       }
+    }
+    @include max-screen ($breakpoint-mobile) {
+      bottom: -65px !important;
     }
   }
 
@@ -681,6 +703,21 @@
     .heading-subtext {
       top: -14px;
       left: 4px;
+
+      @include max-screen ($breakpoint-mobile) {
+        height: 76px;
+        left: 0;
+        margin-top: 28px;
+        
+
+        svg {
+          width: 330px;
+        }
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      bottom: 5px;
     }
   }
  
@@ -1797,13 +1834,13 @@
   .heading-access {
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
-        max-width: 198px !important;
-        height: 42px !important;
+        max-width: 286px !important;
+        height: 62px !important;
       }
 
       @include max-screen($breakpoint-mobile) {
-        max-width: 141.5px !important;
-        height: 29px !important;
+        max-width: 169px !important;
+        height: 36.5px !important;
       }
     }
   }
@@ -1835,4 +1872,18 @@
     }
   }
 
+}
+
+@at-root .map-mv-heading {
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      max-width: 263px !important;
+      height: 53px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 153.5px !important;
+      height: 31.5px !important;
+    }
+  }
 }

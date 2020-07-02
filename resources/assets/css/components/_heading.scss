@@ -1133,13 +1133,15 @@
         &-diningtoya {
           .heading-subtext {
             @include min-screen($breakpoint-mobile + 1) {
-              width: 205px;
-              height: 23px;
+              width: 280px;
+              // height: 23px;
+              height: 100%;
             }
 
             @include max-screen($breakpoint-mobile) {
-              width: 170px;
-              height: 22px;
+              width: 200px;
+              // height: 22px;
+              height: 100%;
             }
           }
         }
@@ -2028,14 +2030,19 @@
 
   .heading-color-title {
     .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 140px !important;
+      }
+
       @include max-screen($breakpoint-mobile) {
         height: auto !important;
         margin-top: 64px;
+        margin-bottom: 70px !important;
       }
     }
 
     img {
-      width: 687px;
+      width: 786.5px;
 
       @include max-screen($breakpoint-mobile) {
         width: 293px;
@@ -2071,11 +2078,30 @@
       letter-spacing: 0.1em !important; 
       position: absolute;
       opacity: 0.4;
-      left: 50%;
-      transform: translateX(-50%);
+      // left: 50%;
+      // transform: translateX(-50%);
+      transform: initial;
+      left: calc(50% - 50px);
       top: -75px; 
       width: 105px;
       font-weight: normal;
+
+      @include max-screen($breakpoint-mobile) {
+        transform: initial;
+        left: calc(50% - 55px);
+      }
+
+      // @at-root .is-firefox & {
+      //   @include min-screen($breakpoint-mobile + 1) {
+      //     transform: initial;
+      //     left: calc(50% - 50px);
+      //   }
+
+      //   @include max-screen($breakpoint-mobile) {
+      //     transform: initial;
+      //     left: calc(50% - 55px);
+      //   }
+      // }
 
       @include max-screen($breakpoint-mobile) {
         font-size: 70px !important;

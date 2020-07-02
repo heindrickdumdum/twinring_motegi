@@ -20,7 +20,7 @@
       <div class="l-container mv-container">
         <div class="mv-heading mv-heading-default mv-heading-mobipark-guide u-show-pc">
           <%- include('/partials/heading', {
-            modifier: 'mv-forest-experience-program',
+            modifier: '',
             heading_level: 1,
             text: 'Attraction & Activity List',
             subtextvg: 'mobipark-guide-title',
@@ -28,9 +28,9 @@
           }) %>
         </div>
 
-        <div class="mv-heading hellowoods-mv-heading forest-program-mv-heading u-show-sp">
+        <div class="mv-heading mv-heading-default mv-heading-mobipark-guide u-show-sp">
           <%- include('/partials/heading', {
-            modifier: 'heading-hellowoods',
+            modifier: '',
             heading_level: 1,
             text: 'Attraction & Activity List',
             subtextvg: 'mobipark-guide-title-sp',
@@ -41,12 +41,14 @@
     </div>
 
 
-    <main class="guide-data-holder" data-area="mobipark" data-age="0" data-grade="1">
+    <main class="guide-data-holder" data-area="mobipark,hellowoods,honda" data-age="0,1,2,3,4,5,6" data-grade="1,2,3,4,5,6">
       <!-- filter -->
       <%- include('/partials/mobipark/filter') -%>
 
-      <!-- Mobipark -->
-      <section class="l-container">
+     
+      <section class="l-container l-container-mobi-guide">
+
+         <!-- Mobipark -->
         <div class="guide-area" data-area="mobipark">
           <div class="guide-area-inner">
             <div class="guide-area-logo">
@@ -153,6 +155,6 @@
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsProgramDetails
+  breadcrumbs : getData().data.breadcrumbsMobiparkGuide
 }) -%>
 <%- include('/partials/footer', { pageId } ) -%>

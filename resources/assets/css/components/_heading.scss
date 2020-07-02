@@ -1133,13 +1133,15 @@
         &-diningtoya {
           .heading-subtext {
             @include min-screen($breakpoint-mobile + 1) {
-              width: 205px;
-              height: 23px;
+              width: 280px;
+              // height: 23px;
+              height: 100%;
             }
 
             @include max-screen($breakpoint-mobile) {
-              width: 170px;
-              height: 22px;
+              width: 200px;
+              // height: 22px;
+              height: 100%;
             }
           }
         }

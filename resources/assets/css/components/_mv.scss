@@ -29,6 +29,20 @@
       height: 50px;
     }
   }
+
+  &.mv-restaurant {
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 100px;
+      height: 450px;
+      &::after {
+        display: none;
+      }
+
+      .mv-image {
+        height: 500px;
+      }
+    }
+  }
 }
 
 .mv-container {
@@ -453,6 +467,9 @@
         width: 265px !important;
         height: 42px !important;
       }
+    }
+    @include max-screen ($breakpoint-mobile) {
+      bottom: -65px !important;
     }
   }
 

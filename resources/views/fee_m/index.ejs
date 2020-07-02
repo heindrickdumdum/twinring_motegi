@@ -187,10 +187,10 @@
               <div class="subpage-collapse-description">
                 <div class="subpage-collapse-content">
                   <table class="table table-green admission-table">
-                    <tr class="table-row">
-                      <th class="table-head dark-gray">レース &sdot; <br class="u-show-sp"/>イベント名</th>
-                      <th class="table-head dark-gray">駐車料（１日）</th>
-                      <th class="table-head dark-gray">入場料</th>
+                    <tr class="table-row dark-gray">
+                      <th class="table-head">レース &sdot; <br class="u-show-sp"/>イベント名</th>
+                      <th class="table-head">駐車料（１日）</th>
+                      <th class="table-head">入場料</th>
                     </tr>
 
                     <tr class="table-row">
@@ -525,17 +525,27 @@
               <table class="table table-green">
                 <tr class="table-row">
                   <th class="table-head">料金</th>
-                  <td class="table-col">
+                  <td class="table-col color-white">
                     <span class="space-right">1枚100円</span>
-                    <span>1,000円分</span>
+                    <!-- <span>1,000円分</span> -->
                   </td>
                 </tr>
               </table>
             </div>
 
             <div class="subpage-section subpage-section-collapse attraction-collapse">
-              <div class="subpage-collapse-heading js-collapse-button">モビパークパスポート対象アトラクション、各アトラクションの料金はこちらをご確認ください</div>
-              <div class="subpage-collapse-description">
+              <!-- <div class="fee-cta">
+                <%- include('/partials/button', {
+                  modifier: 'fee-button',
+                  text: 'モビパークパスポート対象アトラクション、各アトラクションの料金はこちらをご確認ください',
+                  link: '#',
+                  newTab: false
+                }) -%>
+              </div> -->
+              <a class="link hover-green" href="/">
+                <div class="subpage-collapse-heading js-collapse-button">モビパークパスポート対象アトラクション、各アトラクションの料金はこちらをご確認ください</div>
+              </a>
+              <!-- <div class="subpage-collapse-description">
                 <div class="subpage-collapse-content">
                   <table class="table table-green admission-table">
                     <tr class="table-row">
@@ -612,114 +622,8 @@
                       </td>
                     </tr>
                   </table>
-
-                  <!-- <div class="u-show-sp">
-                    <table class="table table-green admission-table u-show-sp">
-                      <tr class="table-row">
-                        <th class="table-head">レース・イベント名</th>
-                        <td class="table-col">
-                          2020/8/29(土）・30(日) <br/>
-                          <span class="not-bold">全日本スーパーフォーミュラ選手権</span>
-                        </td>
-                      </tr>
-                      <tr class="table-row">
-                        <th class="table-head">駐車料<br/>（１日）</th>
-                        <td class="table-col">
-                          車　2,100円 <br/>
-                          バイク　1,100円  
-                        </td>
-                      </tr>
-                      <tr class="table-row">
-                        <th class="table-head">入場料</th>
-                        <td class="table-col">
-                          左記駐車料のみでご入場いただけます。<br/>
-                          <span class="not-bold">※レースを観戦される場合は、別途観戦券が必要です。</span>
-                        </td>
-                      </tr>
-                    </table>
-  
-                    <table class="table table-green admission-table u-show-sp">
-                      <tr class="table-row">
-                        <th class="table-head">レース・イベント名</th>
-                        <td class="table-col">
-                          2020/11/7(土)・8(日)
-                          <span class="not-bold">SUPER GT</span>
-                        </td>
-                      </tr>
-                      <tr class="table-row">
-                        <th class="table-head">駐車料<br/>（１日）</th>
-                        <td class="table-col">
-                          ※詳細が決定次第<br/>
-                          ご案内いたします。
-                        </td>
-                      </tr>
-                      <tr class="table-row">
-                        <th class="table-head">入場料</th>
-                        <td class="table-col">
-                          ※詳細が決定次第<br/>
-                          ご案内いたします。
-                        </td>
-                      </tr>
-                    </table>
-  
-                    <table class="table table-green admission-table u-show-sp">
-                      <tr class="table-row">
-                        <th class="table-head">レース・イベント名</th>
-                        <td class="table-col">
-                          2020/11/14(土)・15(日)<br/>
-                          <span class="not-bold">全日本ロードレース選手権</span>
-                        </td>
-                      </tr>
-                      <tr class="table-row">
-                        <th class="table-head">駐車料<br/>（１日）</th>
-                        <td class="table-col">
-                          車　2,100円<br/>
-                          バイク　1,100円  
-                        </td>
-                      </tr>
-                      <tr class="table-row">
-                        <th class="table-head">入場料</th>
-                        <td class="table-col">
-                          以下通常料金でご入場いただけます。<br/>
-                          <span class="not-bold">
-                            大人(中学生以上) ：1,200円／人 <br/>
-                            子ども(小学生) ：600円／人 <br/>
-                            幼児(3歳～未就学児) ：300円／人
-                          </span>
-                        </td>
-                      </tr>
-                    </table>
-  
-                    <table class="table table-green admission-table u-show-sp">
-                      <tr class="table-row">
-                        <th class="table-head">レース・イベント名</th>
-                        <td class="table-col">
-                          2020/11/21(土)・22(日)<br/>
-                          <span class="not-bold">スーパー耐久</span>
-                        </td>
-                      </tr>
-                      <tr class="table-row">
-                        <th class="table-head">駐車料<br/>（１日）</th>
-                        <td class="table-col">
-                          車　2,100円<br/>
-                          バイク　1,100円  
-                        </td>
-                      </tr>
-                      <tr class="table-row">
-                        <th class="table-head">入場料</th>
-                        <td class="table-col">
-                          以下通常料金でご入場いただけます。<br/>
-                          <span class="not-bold">
-                            大人(中学生以上) ：1,200円／人<br/>
-                            子ども(小学生) ：600円／人<br/>
-                            幼児(3歳～未就学児) ：300円／人
-                          </span>
-                        </td>
-                      </tr>
-                    </table>
-                  </div> -->
                 </div>
-              </div>
+              </div> -->
             </div>
 
             <p class="subpage-desc attraction-desc">
@@ -783,6 +687,7 @@
           </div>
 
           <p class="subpage-desc text-center">
+            <!-- 各サイトの料金は、以下それぞれのページをご確認ください。 -->
             各お部屋、のぞみの湯の料金は、以下それぞれのページをご確認ください。
           </p>
 
@@ -843,7 +748,8 @@
           </div>
 
           <p class="subpage-desc text-center">
-            各お部屋、のぞみの湯の料金は、以下それぞれのページをご確認ください。
+            各サイトの料金は、以下それぞれのページをご確認ください。
+            <!-- 各お部屋、のぞみの湯の料金は、以下それぞれのページをご確認ください。 -->
           </p>
 
           <ul class="fee-image-list">

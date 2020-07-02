@@ -1877,13 +1877,13 @@
 @at-root .map-mv-heading {
   .heading-subtext {
     @include min-screen($breakpoint-mobile + 1) {
-      max-width: 308px !important;
-      height: 62px !important;
+      max-width: 263px !important;
+      height: 53px !important;
     }
 
     @include max-screen($breakpoint-mobile) {
-      max-width: 181px !important;
-      height: 36.5px !important;
+      max-width: 153.5px !important;
+      height: 31.5px !important;
     }
   }
 }

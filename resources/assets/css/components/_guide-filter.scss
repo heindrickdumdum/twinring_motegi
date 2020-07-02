@@ -291,7 +291,6 @@
 
 
   //Area
-
   &[data-area*="mobipark"] {
     .guide-area[data-area="mobipark"] {
       display: block;
@@ -307,13 +306,13 @@
       display: block;
     }
   }
-
-  //Passport 
-  &[data-passport="true"] {
-    .guide-items[data-passport=""] {
-      display: none !important;
+  &[data-area=""] {
+    .guide-area {
+      display: block;
     }
   }
+
+  
 
   //Age
   &[data-age*="0"] {
@@ -401,6 +400,14 @@
   &[data-age=""][data-grade=""][data-area=""] {
     .guide-area, .guide-items {
       display: block;
+    }
+  }
+
+
+  //Passport 
+  &[data-passport="true"] {
+    .guide-items[data-passport=""] {
+      display: none !important;
     }
   }
   

@@ -238,6 +238,15 @@
       .subpage-title {
         position: relative;
 
+        .title-underline {
+          background: rgb(195,232,216);
+          background: linear-gradient(90deg, rgba(195,232,216,1) 0%, rgba(195,232,216,1) 100%);
+          background-size: 100% 5px;
+          background-repeat: no-repeat;
+          background-position-y: bottom;
+          padding-bottom: 5px;
+        }
+
         @include max-screen($breakpoint-mobile) {
           margin-bottom: 20px;
         }

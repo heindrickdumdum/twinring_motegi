@@ -287,6 +287,10 @@
       bottom: 25px !important;
     }
 
+    @include max-screen($breakpoint-mobile) {
+      bottom: -25px !important;
+    }
+
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {
         max-width: 405px !important;

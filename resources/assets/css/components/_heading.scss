@@ -2028,14 +2028,19 @@
 
   .heading-color-title {
     .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 140px !important;
+      }
+
       @include max-screen($breakpoint-mobile) {
         height: auto !important;
         margin-top: 64px;
+        margin-bottom: 70px !important;
       }
     }
 
     img {
-      width: 687px;
+      width: 786.5px;
 
       @include max-screen($breakpoint-mobile) {
         width: 293px;

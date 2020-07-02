@@ -666,6 +666,27 @@
   }
 }
 
+@at-root .table-gold {
+  border: 1px solid $color-dark-yellow !important;
+
+  .table-row {
+    background-color: transparent;
+  }
+
+  .table-head {
+    background-color: rgba(163, 135, 55, 0.3) !important;
+    border-width: 1px !important;
+    border-color: $color-dark-yellow !important;
+  }
+
+  .table-col {
+    background-color: $color-white;
+    border-width: 1px !important;
+    border-color: $color-dark-yellow !important;
+    text-align: left;
+  }
+}
+
 .not-bold {
   font-weight: normal;
 }

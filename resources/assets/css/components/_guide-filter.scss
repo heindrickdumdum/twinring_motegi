@@ -239,12 +239,13 @@
         position: relative;
 
         .title-underline {
-          background: rgb(195,232,216);
-          background: linear-gradient(90deg, rgba(195,232,216,1) 0%, rgba(195,232,216,1) 100%);
-          background-size: 100% 5px;
-          background-repeat: no-repeat;
-          background-position-y: bottom;
-          padding-bottom: 5px;
+          // background: rgb(195,232,216);
+          // background: linear-gradient(90deg, rgba(195,232,216,1) 0%, rgba(195,232,216,1) 100%);
+          // background-size: 100% 5px;
+          // background-repeat: no-repeat;
+          // background-position-y: bottom;
+          // padding-bottom: 5px;
+          border-bottom: 1px solid #0b9376;
         }
 
         @include max-screen($breakpoint-mobile) {
@@ -406,6 +407,7 @@
   
   }
 
+  /*Show items if both age and grade are not selected*/
   &[data-age=""][data-grade=""] {
     .guide-items {
       display: block;

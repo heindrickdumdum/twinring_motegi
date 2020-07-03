@@ -24,6 +24,7 @@
   'wildRacer',
   'hellowoods',
   'program',
+  'programProgram',
   'programDetails',
   'craft',
   'labo',
@@ -184,7 +185,7 @@
     <script src="<%= mix('/assets/js/labo.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'program') { %>
+  <% if(pageId == 'program' || pageId == 'programProgram' ) { %>
     <script src="<%= mix('/assets/js/tabs.js') %>" async></script>
   <% } %>
 

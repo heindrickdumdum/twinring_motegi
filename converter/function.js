@@ -51,6 +51,12 @@ module.exports = {
 		contentsTagsBottom = getTags(CONFIG.tag.gtmFooter.end, CONFIG.tag.closed);
 		contentsTags = contentsTagsTop + contentsTagsBottom;
 
+		//remove lig assets
+		htmlTags = contentsTags;
+		contentsTagsTop = getTags(0, CONFIG.tag.ligAssets.start);
+		contentsTagsBottom = getTags(CONFIG.tag.ligAssets.end, CONFIG.tag.closed);
+		contentsTags = contentsTagsTop + contentsTagsBottom;
+
 		fs.writeFileSync(targetFile, contentsTags);
 		// console.log('success: ' + targetFile);
 

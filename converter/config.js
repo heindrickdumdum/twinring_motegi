@@ -69,6 +69,10 @@ module.exports = {
 			start: '<!-- START GTM FOOTER -->',
 			end: '<!-- END GTM FOOTER -->'
 		},
+		ligAssets: {
+			start: '<!-- START LIG ASSETS CSS/JS -->',
+			end: '<!-- END LIG ASSETS CSS/JS -->'
+		},
 		closed: '</html>'
 	},
 	scp: {

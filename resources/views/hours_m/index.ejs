@@ -1,6 +1,6 @@
 <%
   var title = 'ご宿泊予約｜ホテルツインリンク｜ツインリンクもてぎ';
-  pageId = 'parkMap';
+  pageId = 'businessHours';
 %>
 <%- include('/partials/head', { pageId, title }) -%>
 
@@ -16,12 +16,20 @@
 
 
       <div class="l-container mv-container">
-        <div class="mv-heading hellowoods-mv-heading mv-heading-business-hours">
+        <div class="mv-heading hellowoods-mv-heading mv-heading-business-hours u-show-pc">
           <%- include('/partials/heading', {
             modifier: 'heading-wrap-business-hours',
             heading_level: 1,
             text: 'Business Hours',
             subtextvg: 'business-hours-top-new-title'
+          }) %>
+        </div>
+        <div class="mv-heading hellowoods-mv-heading mv-heading-business-hours u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-business-hours',
+            heading_level: 1,
+            text: 'Business Hours',
+            subtextvg: 'business-hours-top-new-title-sp'
           }) %>
         </div>
       </div>

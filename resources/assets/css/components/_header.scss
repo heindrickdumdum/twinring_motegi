@@ -1,4 +1,4 @@
-#lig-header { 
+#lig-header {
   .header-wrap {
     background-color: $color-white;
     position: relative;
@@ -6,7 +6,7 @@
 
     @include min-screen($breakpoint-mobile + 1) {
       padding-bottom: 20px;
-      z-index: 20;
+      // z-index: 20;
     }
   }
 
@@ -36,7 +36,8 @@
     svg {
       width: 14px;
       height: 5px;
-      fill: $color-primary;
+      stroke: $color-primary;
+      stroke-width: 8px;
     }
   }
 

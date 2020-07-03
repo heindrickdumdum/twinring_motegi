@@ -280,12 +280,6 @@
     left: 15px;
   }
 
-  &-marcherant-dinner {
-    @include max-screen($breakpoint-mobile) {
-      bottom: -30px !important;
-    }
-  }
-
   &-marcherant-breakfast {//breakfast marcherant page
     @include min-screen($breakpoint-mobile + 1) {
       bottom: 25px !important;
@@ -843,7 +837,7 @@
     .heading-wrap-marcherant-dinner-buffet {
       .heading-subtext {
         @include max-screen($breakpoint-mobile) {
-          width: 90%;
+          width: 100%;
         }
       }
     }
@@ -853,7 +847,10 @@
     }
   }
   &.mv-heading-business-hours {
-    padding-bottom: 20px;
+    @include max-screen ($breakpoint-mobile) {
+      padding-bottom: 20px;
+    }
+
     .heading-wrap-business-hours {
       .heading-text {
         @include max-screen ($breakpoint-mobile) {
@@ -1902,5 +1899,11 @@
       max-width: 153.5px !important;
       height: 31.5px !important;
     }
+  }
+}
+
+@at-root .mv-heading-marcherant-dinner {//dinner marcherant page
+  @include max-screen($breakpoint-mobile) {
+    bottom: -30px !important;
   }
 }

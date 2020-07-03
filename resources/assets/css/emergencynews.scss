@@ -27,3 +27,10 @@
 #emergencynews p a{
   color: #1616ef;
 }
+
+@include max-screen ($breakpoint-mobile) {
+  .trmWrapper {
+    #emergencynews {margin-top: 0;}
+  }
+}
+

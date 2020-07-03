@@ -12,9 +12,14 @@ module.exports = {
 			'/mobipark_m/',
 			'/sumika/',
 			'/hoteltwinring/',
+			'/twinringmotegi/',
+			'/foods_m/',
 			'/hours_m/',
 			'/smart_entry/',
-			'/foods_m/',
+			'/access_m/',
+			'/map_m/',
+			'/service_m/',
+			'/fee_m/',
 			'/top/'
 		],[
 			'/hellowoods/program/',
@@ -26,9 +31,14 @@ module.exports = {
 			'/hoteltwinring/nozominoyu/',
 			'/hoteltwinring/standardroom/',
 			'/foods_m/marcherant/',
+			'/foods_m/marcherant_buffet/',
 			'/foods_m/marcherant_dinner/',
+			'/foods_m/marcherant_lunch/',
 			'/foods_m/marcherant_morning/',
+			'/foods_m/toya/',
 			'/foods_m/gran-turismo/',
+			'/foods_m/oak/',
+			'/foods_m/rocco/',
 			'/foods_m/donguri/'
 		]
 	],

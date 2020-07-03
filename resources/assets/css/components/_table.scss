@@ -668,22 +668,53 @@
 
 @at-root .table-gold {
   border: 1px solid $color-dark-yellow !important;
+  border-left-width: 0px !important;
+  border-right-width: 0px !important;
+  background-color: transparent !important;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: -10px;
+  }
 
   .table-row {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   .table-head {
     background-color: rgba(163, 135, 55, 0.3) !important;
     border-width: 1px !important;
     border-color: $color-dark-yellow !important;
+    vertical-align: top;
+    text-align: left;
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
   }
 
   .table-col {
-    background-color: $color-white;
+    background-color: transparent;
     border-width: 1px !important;
     border-color: $color-dark-yellow !important;
     text-align: left;
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      padding: {
+        left: 40px;
+        right: 40px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+    }
   }
 }
 

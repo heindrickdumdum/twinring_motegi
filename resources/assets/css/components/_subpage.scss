@@ -1195,6 +1195,20 @@
   .subpage-collapse-content {
     padding: 0 50px 50px 50px;
 
+    @at-root .toya-wrapper & {//toya page
+      padding: {
+        left: 30px;
+        right: 30px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: {
+          left: 20px;
+          right: 20px;
+        };
+      }
+    }
+
     @at-root .page-fee & {//fee page
       @include max-screen($breakpoint-mobile) {
         padding: {
@@ -2089,4 +2103,8 @@
     width: 100%; 
     height: 100%;
   }
+}
+
+@at-root .color-gold {
+  color: $color-dark-yellow;
 }

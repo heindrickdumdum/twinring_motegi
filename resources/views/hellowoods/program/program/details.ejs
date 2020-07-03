@@ -18,12 +18,23 @@
         </li>
       </ul>
       <div class="l-container mv-container">
-        <div class="mv-heading mv-heading-default">
+        <div class="mv-heading mv-heading-default u-show-pc">
           <%- include('/partials/heading', {
             modifier: 'mv-forest-experience-program',
             heading_level: 1,
             text: 'Forest Experience Program',
             subtextvg: 'forest-program-top-title',
+            altSubtextvg: '予約制森の体験プログラム'
+          }) %>
+        </div>
+
+        <div class="mv-heading hellowoods-mv-heading forest-program-mv-heading u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods mv-forest-experience-program',
+            heading_level: 1,
+            text: 'Forest Experience Program',
+            subtextvg: 'forest-program-top-title-sp',
+            // subtextvg: 'forest-program-top-title2-sp',
             altSubtextvg: '予約制森の体験プログラム'
           }) %>
         </div>

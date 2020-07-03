@@ -73,11 +73,20 @@
                   </li>
                 </ul>
               </div>
-              <div class="section-button">
+              <div class="u-show-pc section-button">
                 <%- include('/partials/button', {
                   newTab: true,
                   modifier: 'map_m-pdf',
                   text: 'MAPをPDFで見る',
+                  link: '/assets/images/pdf/map-all-pdf.pdf',
+                  buttonIcon: 'icon_pdf-small'
+                }) %>
+              </div>
+              <div class="u-show-sp section-button">
+                <%- include('/partials/button', {
+                  newTab: true,
+                  modifier: 'map_m-pdf',
+                  text: 'PDFで詳しく見る',
                   link: '/assets/images/pdf/map-all-pdf.pdf',
                   buttonIcon: 'icon_pdf-small'
                 }) %>
@@ -105,11 +114,20 @@
                 <img class="u-show-sp" src="<%= mix('/assets/images/map_m/sp-map-central-entrance.png') %>" alt="全体マップ">
                 
               </div>
-              <div class="section-button">
+              <div class="u-show-pc section-button">
                 <%- include('/partials/button', {
                   newTab: true,
                   modifier: 'map_m-pdf',
                   text: 'MAPをPDFで見る',
+                  link: '/assets/images/pdf/map-central-entrance.pdf',
+                  buttonIcon: 'icon_pdf-small'
+                }) %>
+              </div>
+              <div class="u-show-sp section-button">
+                <%- include('/partials/button', {
+                  newTab: true,
+                  modifier: 'map_m-pdf',
+                  text: 'PDFで詳しく見る',
                   link: '/assets/images/pdf/map-central-entrance.pdf',
                   buttonIcon: 'icon_pdf-small'
                 }) %>

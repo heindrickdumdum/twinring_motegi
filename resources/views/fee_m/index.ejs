@@ -187,10 +187,10 @@
               <div class="subpage-collapse-description">
                 <div class="subpage-collapse-content">
                   <table class="table table-green admission-table">
-                    <tr class="table-row">
-                      <th class="table-head dark-gray">レース &sdot; <br class="u-show-sp"/>イベント名</th>
-                      <th class="table-head dark-gray">駐車料（１日）</th>
-                      <th class="table-head dark-gray">入場料</th>
+                    <tr class="table-row dark-gray">
+                      <th class="table-head">レース &sdot; <br class="u-show-sp"/>イベント名</th>
+                      <th class="table-head">駐車料（１日）</th>
+                      <th class="table-head">入場料</th>
                     </tr>
 
                     <tr class="table-row">
@@ -204,7 +204,7 @@
                       </td>
                       <td class="table-col">
                         左記駐車料のみでご入場いただけます。<br/>
-                        <span class="not-bold">※レースを観戦される場合は、別途観戦券が必要です。</span>
+                        <span class="not-bold">※レースを観戦される場合は、別途観戦券が必要です。</span>
                       </td>
                     </tr>
 
@@ -395,7 +395,8 @@
               <span>前売り券: モビパークパスポートセット (入場料＋１日対象アトラクション乗り放題)</span>
             </p>
             <p class="subpage-desc">
-              ※<a href="#" class="link bold hover-green">駐車料金</a>が別途必要となります。
+              <!-- ※<a href="#" class="link bold hover-green">駐車料金</a>が別途必要となります。 -->
+              ※駐車料金が別途必要となります。
             </p>
 
             <table class="table table-green">
@@ -430,10 +431,14 @@
             </p>
             <ul class="table-container-list">
               <li class="table-container-item">
-                <img src="<%- mix('/assets/images/fee_m/attraction-payment-1.jpg') -%>" alt="payment">
+                <a class="hover-opacity" href="http://7ticket.jp/search?q=%E3%83%84%E3%82%A4%E3%83%B3%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%82%E3%81%A6%E3%81%8E&sk=3" target="_blank">
+                  <img src="<%- mix('/assets/images/fee_m/attraction-payment-1.jpg') -%>" alt="payment">
+                </a>
               </li>
               <li class="table-container-item">
-                <img src="<%- mix('/assets/images/fee_m/attraction-payment-2.jpg') -%>" alt="payment">
+                <a class="hover-opacity" href="https://online.mobilityland.co.jp/SelectCategory.aspx?LGenreCode=02&SGenreCode=0000103" target="_blank">
+                  <img src="<%- mix('/assets/images/fee_m/attraction-payment-2.jpg') -%>" alt="payment">
+                </a>
               </li>
             </ul>
 
@@ -520,17 +525,27 @@
               <table class="table table-green">
                 <tr class="table-row">
                   <th class="table-head">料金</th>
-                  <td class="table-col">
+                  <td class="table-col color-white">
                     <span class="space-right">1枚100円</span>
-                    <span>1,000円分</span>
+                    <!-- <span>1,000円分</span> -->
                   </td>
                 </tr>
               </table>
             </div>
 
             <div class="subpage-section subpage-section-collapse attraction-collapse">
-              <div class="subpage-collapse-heading js-collapse-button">モビパークパスポート対象アトラクション、各アトラクションの料金はこちらをご確認ください</div>
-              <div class="subpage-collapse-description">
+              <!-- <div class="fee-cta">
+                <%- include('/partials/button', {
+                  modifier: 'fee-button',
+                  text: 'モビパークパスポート対象アトラクション、各アトラクションの料金はこちらをご確認ください',
+                  link: '#',
+                  newTab: false
+                }) -%>
+              </div> -->
+              <a class="link hover-green" href="/">
+                <div class="subpage-collapse-heading js-collapse-button">モビパークパスポート対象アトラクション、各アトラクションの料金はこちらをご確認ください</div>
+              </a>
+              <!-- <div class="subpage-collapse-description">
                 <div class="subpage-collapse-content">
                   <table class="table table-green admission-table">
                     <tr class="table-row">
@@ -607,6 +622,7 @@
                       </td>
                     </tr>
                   </table>
+<<<<<<< HEAD
 
                   <!-- <div class="u-show-sp">
                     <table class="table table-green admission-table u-show-sp">
@@ -713,8 +729,10 @@
                       </tr>
                     </table>
                   </div> -->
+=======
+>>>>>>> b4f82ee283b68ab114f6f4c514b855ae95ea7de3
                 </div>
-              </div>
+              </div> -->
             </div>
 
             <p class="subpage-desc attraction-desc">
@@ -778,6 +796,7 @@
           </div>
 
           <p class="subpage-desc text-center">
+            <!-- 各サイトの料金は、以下それぞれのページをご確認ください。 -->
             各お部屋、のぞみの湯の料金は、以下それぞれのページをご確認ください。
           </p>
 
@@ -838,7 +857,8 @@
           </div>
 
           <p class="subpage-desc text-center">
-            各お部屋、のぞみの湯の料金は、以下それぞれのページをご確認ください。
+            各サイトの料金は、以下それぞれのページをご確認ください。
+            <!-- 各お部屋、のぞみの湯の料金は、以下それぞれのページをご確認ください。 -->
           </p>
 
           <ul class="fee-image-list">

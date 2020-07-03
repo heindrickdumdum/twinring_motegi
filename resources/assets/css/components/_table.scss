@@ -475,6 +475,23 @@
 @at-root .table-green {
   border: 1px solid $color-green;
   background-color: $color-white;
+  border-collapse: collapse;
+
+  @at-root .color-white {
+    background-color: $color-white !important;
+  }
+
+  @at-root & {
+    .table-row {
+      &:first-child {
+        background-color: $color-table-head;
+      }
+
+      &:not(:first-child) {
+        background-color: $color-white;
+      }
+    }
+  }
 
   @at-root .attraction-collapse & {//fee page
     @include max-screen($breakpoint-mobile) {
@@ -485,6 +502,14 @@
   @at-root & {
     &.admission-table {
       border-bottom-width: 0px;
+
+      .dark-gray {
+        background-color: $color-dark-gray;
+      }
+
+      .table-head {
+        background-color: transparent;
+      }
 
       .table-col {
         border-bottom: 1px solid $color-green;
@@ -498,6 +523,7 @@
     text-align: center;
     border-right: 1px solid $color-green;
     vertical-align: middle;
+    background-color: transparent;
 
     // @include max-screen($breakpoint-mobile) {
     //   white-space: nowrap;
@@ -527,6 +553,7 @@
       left: 20px;
       right: 20px;
     }
+    background-color: transparent;
 
     .space-right {
       margin-right: 25px;
@@ -634,6 +661,58 @@
         &:last-child {
           margin-bottom: 0px;
         }
+      }
+    }
+  }
+}
+
+@at-root .table-gold {
+  border: 1px solid $color-dark-yellow !important;
+  border-left-width: 0px !important;
+  border-right-width: 0px !important;
+  background-color: transparent !important;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: -10px;
+  }
+
+  .table-row {
+    background-color: transparent !important;
+  }
+
+  .table-head {
+    background-color: rgba(163, 135, 55, 0.3) !important;
+    border-width: 1px !important;
+    border-color: $color-dark-yellow !important;
+    vertical-align: top;
+    text-align: left;
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+  }
+
+  .table-col {
+    background-color: transparent;
+    border-width: 1px !important;
+    border-color: $color-dark-yellow !important;
+    text-align: left;
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      padding: {
+        left: 40px;
+        right: 40px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 20px;
+        right: 20px;
       }
     }
   }

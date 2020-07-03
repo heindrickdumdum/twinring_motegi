@@ -122,10 +122,12 @@
     &.details-image {
       height: 320px;
       margin-bottom: 31px;
+      border-radius: 10px;
 
       @include max-screen($breakpoint-mobile) {
         height: 179px;
         margin-bottom: 18px;
+        border-radius: 5px;
       }
     }
   }

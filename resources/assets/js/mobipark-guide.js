@@ -1,28 +1,30 @@
 
+/* Reset*/
+function checkboxReset(checkbox){
+  var dataArr = [];
+  var checkboxes = document.querySelectorAll('.'+checkbox+'-checkbox:checked');
+  for (var i = 0; i < checkboxes.length; i++) {
+    dataArr.push(checkboxes[i].value)
+  }
+  console.log(dataArr);
+  document.getElementsByClassName('guide-data-holder')[0].setAttribute('data-'+checkbox,dataArr)
+}
 
-/*Grade Checkbox*/
+
+
+/*Age Checkbox*/
 var checkboxAge = document.querySelectorAll('.age-checkbox');
 checkboxAge.forEach(checkbox => checkbox.addEventListener('change', () => {
-  var agesArr = [];
-  var checkboxes = document.querySelectorAll('.age-checkbox:checked');
-  for (var i = 0; i < checkboxes.length; i++) {
-    agesArr.push(checkboxes[i].value)
-  }
-  console.log(agesArr);
-  document.getElementsByClassName('guide-data-holder')[0].setAttribute('data-age',agesArr)
+  checkboxReset('age');
+  checkboxReset('grade');
 }));
 
 
 /*Grade Checkbox*/
 var checkboxGrade = document.querySelectorAll('.grade-checkbox');
 checkboxGrade.forEach(checkbox => checkbox.addEventListener('change', () => {
-  var gradesArr = [];
-  var checkboxes = document.querySelectorAll('.grade-checkbox:checked');
-  for (var i = 0; i < checkboxes.length; i++) {
-    gradesArr.push(checkboxes[i].value)
-  }
-  console.log(gradesArr);
-  document.getElementsByClassName('guide-data-holder')[0].setAttribute('data-grade',gradesArr)
+  checkboxReset('grade');
+  checkboxReset('age');
 }));
 
 /*Area Select*/

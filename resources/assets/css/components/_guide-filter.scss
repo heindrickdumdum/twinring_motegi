@@ -238,6 +238,16 @@
       .subpage-title {
         position: relative;
 
+        .title-underline {
+          // background: rgb(195,232,216);
+          // background: linear-gradient(90deg, rgba(195,232,216,1) 0%, rgba(195,232,216,1) 100%);
+          // background-size: 100% 5px;
+          // background-repeat: no-repeat;
+          // background-position-y: bottom;
+          // padding-bottom: 5px;
+          border-bottom: 1px solid #0b9376;
+        }
+
         @include max-screen($breakpoint-mobile) {
           margin-bottom: 20px;
         }
@@ -291,7 +301,6 @@
 
 
   //Area
-
   &[data-area*="mobipark"] {
     .guide-area[data-area="mobipark"] {
       display: block;
@@ -307,40 +316,40 @@
       display: block;
     }
   }
-
-  //Passport 
-  &[data-passport="true"] {
-    .guide-items[data-passport=""] {
-      display: none !important;
+  &[data-area=""] {
+    .guide-area {
+      display: block;
     }
   }
 
+  
+
   //Age
-  &[data-age*="0"] {
+  &[data-age*="0"][data-grade=""] {
     .guide-items[data-age*="0"] {display: block;}
     // .guide-items:not([data-age*="0"]) {display: none !important;}
   }
-  &[data-age*="1"] {
+  &[data-age*="1"][data-grade=""] {
     .guide-items[data-age*="1"] {display: block;}
     // .guide-items:not([data-age*="1"]) {display: none !important;}
   }
-  &[data-age*="2"] {
+  &[data-age*="2"][data-grade=""] {
     .guide-items[data-age*="2"] {display: block;}
     // .guide-items:not([data-age*="2"]) {display: none !important;}
   }
-  &[data-age*="3"] {
+  &[data-age*="3"][data-grade=""] {
     .guide-items[data-age*="3"] {display: block;}
     // .guide-items:not([data-age*="3"]) {display: none !important;}
   }
-  &[data-age*="4"] {
+  &[data-age*="4"][data-grade=""] {
     .guide-items[data-age*="4"] {display: block;}
     // .guide-items:not([data-age*="4"]) {display: none !important;}
   }
-  &[data-age*="5"] {
+  &[data-age*="5"][data-grade=""] {
     .guide-items[data-age*="5"] {display: block;}
     // .guide-items:not([data-age*="5"]) {display: none !important;}
   }
-  &[data-age*="6"] {
+  &[data-age*="6"][data-grade=""] {
     .guide-items[data-age*="6"] {display: block;}
     // .guide-items:not([data-age*="6"]) {display: none !important;}
   }
@@ -398,9 +407,24 @@
   
   }
 
+  /*Show items if both age and grade are not selected*/
+  &[data-age=""][data-grade=""] {
+    .guide-items {
+      display: block;
+    }
+  }
+
   &[data-age=""][data-grade=""][data-area=""] {
     .guide-area, .guide-items {
       display: block;
+    }
+  }
+
+
+  //Passport 
+  &[data-passport="true"] {
+    .guide-items[data-passport=""] {
+      display: none !important;
     }
   }
   

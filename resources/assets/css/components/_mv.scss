@@ -843,7 +843,7 @@
     .heading-wrap-marcherant-dinner-buffet {
       .heading-subtext {
         @include max-screen($breakpoint-mobile) {
-          width: 90%;
+          width: 100%;
         }
       }
     }

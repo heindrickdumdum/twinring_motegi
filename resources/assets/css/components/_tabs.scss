@@ -295,8 +295,21 @@
 
     .tab-item {
       &-slide {
-        width: auto;
         margin-right: 10px;
+
+        @include min-screen($breakpoint-mobile + 1) {
+          width: calc((100% - 60px) / 7);
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          width: auto;
+        }
+
+        &:last-child {
+          @include max-screen($breakpoint-mobile) {
+            margin-right: 0px;
+          }
+        }
       }
 
       font-size: 15px;

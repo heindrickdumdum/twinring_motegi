@@ -1075,7 +1075,8 @@
       padding-top: 14px;
       padding-bottom: 19px;
       column-fill: auto;
-      height: 400px;
+      height: 407px;
+      width: 100%;
     }
       
     @include max-screen($breakpoint-mobile) {
@@ -1346,6 +1347,18 @@
     @include max-screen($breakpoint-mobile) {
       margin-top: -40px;
       margin-bottom: 70px;
+    }
+  }
+}
+
+@at-root .dinner-set-marcherant {
+  .breakfast-menu-list-cat {
+    &-item {
+      &:nth-of-type(3) {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 0px !important;
+        }
+      }
     }
   }
 }

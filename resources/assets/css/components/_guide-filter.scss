@@ -423,10 +423,12 @@
 
   //Passport 
   &[data-passport="true"] {
+    [data-area="honda"],
     .guide-items[data-passport=""] {
       display: none !important;
     }
   }
   
+
 
 }

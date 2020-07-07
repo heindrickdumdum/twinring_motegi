@@ -219,12 +219,15 @@
   }
 
   .wrapper-container {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
+    display: block;
 
     .area-item-image-wrapper {
       max-width: 400px;
+      display: inline-block;
       @include max-screen ($breakpoint-mobile) {
+        display: block;
         max-width: 290px;
         margin: auto;
         margin-bottom: 23px;
@@ -232,8 +235,10 @@
     }
 
     .area-item-desc-wrapper {
+      display: inline-block;
       width: 100%;
       max-width: 635px;
+      float: right;
       
       .subpage-title {
         position: relative;

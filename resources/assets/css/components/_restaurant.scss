@@ -222,8 +222,14 @@
     border: 1px solid $color-black;
 
     @at-root &.oak-button {//oak page
-      border-color: #0484a8;
+      // border-color: #0484a8;
       color: #058a94;
+      border-image: linear-gradient(to right, #027cc3, #09a046);
+      border-image-slice: 1;
+
+      @at-root .is-ie & {
+        border-color: #0484a8 !important;
+      }
     }
 
     @at-root &.toya-menu-button {//toya page

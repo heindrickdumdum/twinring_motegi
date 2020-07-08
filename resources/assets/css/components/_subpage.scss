@@ -1195,6 +1195,15 @@
   .subpage-collapse-content {
     padding: 0 50px 50px 50px;
 
+    @at-root & {
+      &.marcherant-buffet-collapse-content {//marcherant buffet
+        @include max-screen($breakpoint-mobile) {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+      }
+    }
+
     @at-root .toya-wrapper & {//toya page
       padding: {
         left: 30px;
@@ -1238,6 +1247,12 @@
 
   &.gold {
     border: 1px solid #a38737;
+    @at-root .marcherant-buffet & {
+      @include max-screen($breakpoint-mobile) {
+        max-width: 100%;
+      }
+    }
+
     .subpage-collapse-heading {
       color: #a38737;
 
@@ -1735,6 +1750,13 @@
     padding: {
       left: 20px;
       right: 20px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 0px;
+        right: 0px;
+      }
     }
   }
 

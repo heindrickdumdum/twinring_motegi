@@ -44,12 +44,19 @@
     top: -161px;
 
     @include max-screen($breakpoint-mobile) {
-      width: 550px;
-      height: 375px;
+      width: calc(100% + 40px);
+      height: 100%;
       left: 50%;
       transform: translateX(-50%);
       background: url(#{$image-path}smart_entry/map-sp.jpg) no-repeat center top;
       background-size: contain;
+      position: relative;
+    }
+
+    .map-sp {
+      @include max-screen($breakpoint-mobile) {
+        visibility: hidden;
+      }
     }
   }
 }
@@ -61,6 +68,15 @@
 
   @include max-screen($breakpoint-mobile) {
     left: 0;
+  }
+
+  @at-root .smart-entry & {
+    @include max-screen($breakpoint-mobile) {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -123,8 +139,8 @@
       }
 
       @include max-screen($breakpoint-mobile) {
-        left: 315px;
-        top: 97px;
+        left: 61%;
+        top: 25%;
       }
     }
   }
@@ -145,8 +161,8 @@
       }
 
       @include max-screen($breakpoint-mobile) {
-        left: 362px;
-        top: 129px;
+        left: 71%;
+        top: 34%;
       }
     }
   }
@@ -167,8 +183,8 @@
       }
 
       @include max-screen($breakpoint-mobile) {
-        left: 299px;
-        top: 246px;
+        left: 57%;
+        top: 68%;
       }
     }
   }

@@ -477,6 +477,18 @@
   background-color: $color-white;
   border-collapse: collapse;
 
+  @at-root .table-one-row {
+    border: 1px solid $color-green !important;
+
+    .table-col {
+      // border-top: 1px solid $color-green !important;
+      // border-bottom: 1px solid $color-green !important;
+      border-left: 1px solid $color-green !important;
+      // border-right: 1px solid $color-green !important;
+      background-clip: padding-box;
+    }
+  }
+
   @at-root .color-white {
     background-color: $color-white !important;
   }

@@ -669,6 +669,7 @@
     .heading-text {
       font-size: 45px;
       -webkit-text-fill-color: #fff;
+      color: #fff;
 
       @include max-screen ($breakpoint-mobile) {
         font-size: 24px;

@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    font-family: $font-NotoSansCJKjp-Regular;
 
     @include max-screen($breakpoint-mobile) {
       flex-wrap: wrap;
@@ -28,6 +29,7 @@
     align-items: center;
     flex-grow: 1;
     border-right: 1px solid $color-primary;
+    
 
     @include max-screen($breakpoint-mobile) {
       flex: auto;
@@ -97,6 +99,7 @@
 
   .footer-top-links-list {
     flex-grow: 1;
+    font-family: $font-NotoSansCJKjp-Regular;
   }
 
   .footer-top-links-item {

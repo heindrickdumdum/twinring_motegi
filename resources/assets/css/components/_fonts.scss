@@ -40,3 +40,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: $font-NotoSansCJKjp-Regular;
+  src:  url('#{$font-path}Notosans/NotoSansCJKjp-Regular.otf') format('opentype');
+}

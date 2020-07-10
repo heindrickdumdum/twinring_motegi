@@ -28,6 +28,7 @@
     align-items: center;
     flex-grow: 1;
     border-right: 1px solid $color-primary;
+    
 
     @include max-screen($breakpoint-mobile) {
       flex: auto;
@@ -97,6 +98,7 @@
 
   .footer-top-links-list {
     flex-grow: 1;
+    font-family: $font-NotoSansCJKjp-Regular;
   }
 
   .footer-top-links-item {

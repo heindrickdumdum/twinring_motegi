@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    font-family: "NotoSansCJKjp-Regular";
+    font-family: $font-NotoSansCJKjp-Regular;
 
     @include max-screen($breakpoint-mobile) {
       flex-wrap: wrap;

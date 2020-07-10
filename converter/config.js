@@ -3,6 +3,7 @@ module.exports = {
 	release: __dirname + '/../release/',
 	assets: __dirname + '/../public/assets/',
 	assets_copy: process.env.MOTEGI_ASSETS_CP ? false : true,
+	assets_copy_without_image: process.env.MOTEGI_ASSETS_CP_WITHOUT_IMAGE ? true : false,
 	directories: [
 		[
 			'/globalnavi/',
@@ -20,7 +21,7 @@ module.exports = {
 			'/map_m/',
 			'/service_m/',
 			'/fee_m/',
-			'/access_m-test/',
+			'/access_m/',
 			'/top/'
 		],[
 			'/hellowoods/program/',

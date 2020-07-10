@@ -19,7 +19,16 @@ module.exports = function(){
 		while (index < target.length) {
 			var eachAssetsDirectory = CONFIG.release + target[index] + '/assets';
 			fs.mkdirsSync(eachAssetsDirectory);
-			fs.copySync(CONFIG.assets, eachAssetsDirectory);
+			if(CONFIG.assets_copy_without_image) {
+				console.log('Copy Assets file without images:%s', eachAssetsDirectory);
+				fs.copySync(CONFIG.assets + '/css', eachAssetsDirectory + '/css');
+				fs.copySync(CONFIG.assets + '/js', eachAssetsDirectory + '/js');
+				fs.copySync(CONFIG.assets + '/lib', eachAssetsDirectory + '/lib');
+				fs.copySync(CONFIG.assets + '/svg', eachAssetsDirectory + '/svg');
+			} else {
+				console.log('Copy Assets file:%s', eachAssetsDirectory);
+				fs.copySync(CONFIG.assets, eachAssetsDirectory);
+			}
 			index++;
 		}
 	};

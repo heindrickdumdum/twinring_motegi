@@ -10,7 +10,15 @@ module.exports = function(){
 		//Target only .html file
 		if(targetFileName.indexOf('.html') !== -1 && targetFileName.indexOf('_utf') === -1){
 
-						var str = iconv.decode(fs.readFileSync(filePath), 'utf8');
+			var str = iconv.decode(fs.readFileSync(filePath), 'utf8');
+			fs.writeFileSync(filePath, iconv.encode(str, 'Shift_JIS'));
+
+			console.log('covert Shift-Jis -> ' + filePath);
+		}
+		//Target only specific file
+		if(targetFileName.indexOf('tabs.js') !== -1 && targetFileName.indexOf('_utf') === -1){
+
+			var str = iconv.decode(fs.readFileSync(filePath), 'utf8');
 			fs.writeFileSync(filePath, iconv.encode(str, 'Shift_JIS'));
 
 			console.log('covert Shift-Jis -> ' + filePath);

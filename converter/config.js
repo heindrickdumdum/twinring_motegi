@@ -20,6 +20,7 @@ module.exports = {
 			'/map_m/',
 			'/service_m/',
 			'/fee_m/',
+			'/access_m-test/',
 			'/top/'
 		],[
 			'/hellowoods/program/',

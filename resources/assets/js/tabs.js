@@ -32,6 +32,9 @@ function tabs(){
       this.classList.add('active');
     })
   }
+
+  
 }
 
 tabs();
+

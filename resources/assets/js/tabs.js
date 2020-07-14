@@ -41,4 +41,4 @@ tabs();
 /*Fix browser back button issue*/
 setTimeout(function(){
   document.getElementById('program-list').setAttribute("data-tab", document.querySelector('.tab [type="radio"]:checked').value);
-},100)
+},10)

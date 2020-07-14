@@ -13,7 +13,7 @@ if (typeof modifier === 'undefined'){
       <% dataProgramList.forEach( item => { %>
             <% if(arrTabs.indexOf(item.month) === -1) { %>
               <li class="tab"><% if(arrTabs.length > 0) {checked=""} %>
-                <input autocomplete='off' type="radio" id="tab-<%- item.month %>" name="tab-month" class="tab-month" value="<%- item.month %>" <%- checked %>>
+                <input autocomplete='on' type="radio" id="tab-<%- item.month %>" name="tab-month" class="tab-month" value="<%- item.month %>" <%- checked %>>
                 <label for="tab-<%- item.month %>"><%- item.month %>月</label>
               </li>
             <% arrTabs.push(item.month) %>

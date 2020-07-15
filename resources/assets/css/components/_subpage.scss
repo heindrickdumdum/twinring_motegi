@@ -5,6 +5,14 @@
   height: auto;
   margin-bottom: 50px;
 
+  @at-root & {//404 page
+    &-error {
+      &:after {
+        display: none !important;
+      }
+    }
+  }
+
   &-graph {//foods m page
     margin-bottom: 10px;
   }
@@ -155,6 +163,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 40px);
+    
   }
 
   &::before {

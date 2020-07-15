@@ -1,0 +1,89 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'error404';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-error">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc"
+            style="background-image:url(<%= mix('/assets/images/404/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp"
+            style="background-image:url(<%= mix('/assets/images/404/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading mv-heading-404">
+          <%- include('/partials/heading', {
+            modifier: 'heading-404',
+            subtextvg: '404_title_pc',
+            altSubtextvg: 'アクセス'
+          }) %>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner">
+        <div class="l-section-title u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-main heading-main-404',
+            subtextvg: '404_content-svg',
+            altSubtextvg: ''
+          }) -%>
+        </div>
+        <div class="l-section-title u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-main heading-main-404',
+            subtextvg: '404_content-svg_1',
+            altSubtextvg: ''
+          }) -%>
+        </div>
+
+        <p class="text-center u-show-pc">
+          ツインリンクもてぎウェブサイトにお越しいただき、ありがとうございます。<br class="u-show-pc"/>
+          大変申し訳ありませんが、ご指定いただいたページが見つかりません。
+        </p>
+        <p class="text-center u-show-pc">
+          お手数ですが、入力された内容をもう一度ご確認の上、<br class="u-show-pc"/>
+          トップページに戻る、もしくはヘッダー、フッターのメニューからお求めのページをお探しください。
+        </p>
+
+        <p class="text-left u-show-sp">
+          ツインリンクもてぎウェブサイトにお越しいただき、ありがとうございます。<br class="u-show-pc"/>
+          大変申し訳ありませんが、ご指定いただいたページが見つかりません。
+        </p>
+        <p class="text-left u-show-sp">
+          お手数ですが、入力された内容をもう一度ご確認の上、<br class="u-show-pc"/>
+          トップページに戻る、もしくはヘッダー、フッターのメニューからお求めのページをお探しください。
+        </p>
+
+        <div class="404-cta">
+          <%- include('/partials/button', {
+            modifier: 'button-404',
+            text: 'TOPへ戻る',
+            link: '/'
+          }) -%>
+        </div>
+      </div>
+
+      <!-- recommendation module -->
+      <!-- <%- include('/partials/recommendation') -%> -->
+
+      <!-- pick up module -->
+      <!-- <%- include('/partials/pickup') -%> -->
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbs404
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

@@ -31,6 +31,9 @@ module.exports = {
 
 			var contentsTags = htmlTags.slice(startLine + startTagLen, endLine + endTagLen);
 
+			console.log('htmlTags length: %s contentsTags length: %s', htmlTags.length, contentsTags.length);
+			console.log('contents last 10:%s', contentsTags.slice(-10));
+
 			return contentsTags;
 		}
 
@@ -60,6 +63,8 @@ module.exports = {
 		contentsTagsTop = getTags(0, CONFIG.tag.ligAssets.start);
 		contentsTagsBottom = getTags(CONFIG.tag.ligAssets.end, CONFIG.tag.closed);
 		contentsTags = contentsTagsTop + contentsTagsBottom;
+
+		//contentsTags = contentsTags + '\n\n</html>'
 
 		fs.writeFileSync(targetFile, contentsTags);
 		// console.log('success: ' + targetFile);

@@ -280,6 +280,34 @@
     left: 15px;
   }
 
+  &-404 {//404 page
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: 35px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: 17px !important;
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 467px !important;
+        height: 42px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 319px !important;
+        height: 30px !important;
+      }
+
+      @at-root & {
+        svg {
+          fill: $color-white;
+        }
+      }
+    }
+  }
+
   &-marcherant-breakfast {//breakfast marcherant page
     @include min-screen($breakpoint-mobile + 1) {
       bottom: 25px !important;

@@ -38,7 +38,8 @@ function tabs(){
 
 tabs();
 
+
 /*Fix browser back button issue*/
-setTimeout(function(){
+window.onload = function(){
   document.getElementById('program-list').setAttribute("data-tab", document.querySelector('.tab [type="radio"]:checked').value);
-},10)
+}

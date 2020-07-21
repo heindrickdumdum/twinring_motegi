@@ -44,7 +44,11 @@ function fixTabsIE(){
   document.getElementById('program-list').setAttribute("data-tab", document.querySelector('.tab [type="radio"]:checked').value);
 }
 
-setTimeout(function(){
+setTimeout(() => {
   fixTabsIE();
 },10);
-window.onload = fixTabsIE();
+
+window.onload = () => {
+  document.querySelector('.tab [type="radio"]:checked').click();
+  fixTabsIE();
+}

@@ -231,6 +231,36 @@
     }
   }
 
+  &.heading-wrap-collection-pit {
+
+    @include min-screen ($breakpoint-mobile+1) {
+      .heading-subtext:last-child {
+        span {
+          font-size: 15px;
+          font-weight: bold;
+          line-height: 30px;
+          letter-spacing: 3.4px;
+        }
+      }
+    }
+
+    
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 5px;
+      .heading-subtext:last-child {
+        height: auto;
+        margin-bottom: 30px;
+        padding: 0;
+        line-height: 1.7;
+      }
+    }
+
+
+
+
+  }
+
+
   &.heading-main-pit {
     text-align: center;
 

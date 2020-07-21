@@ -22,6 +22,14 @@
   }
 }
 
+.media-coll-pit {
+  @include max-screen ($breakpoint-mobile) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .sumika-media,
 .itadaki-media,
 .dokidoki-media {
@@ -49,6 +57,8 @@
     z-index: 1;
   }
 }
+
+
 
 //media-grid
 .media-grid {
@@ -1173,3 +1183,5 @@
     }
   }
 }
+
+

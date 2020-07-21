@@ -2393,3 +2393,25 @@
     }
   }
 } 
+
+@at-root .heading-main-404 {//404 page
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 46px !important;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 30px !important;
+  }
+
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 757px;
+      height: 34px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 287.5px;
+      height: 62px;
+    }
+  }
+}

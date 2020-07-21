@@ -38,7 +38,17 @@ function tabs(){
 
 tabs();
 
+
 /*Fix browser back button issue*/
-setTimeout(function(){
+function fixTabsIE(){
   document.getElementById('program-list').setAttribute("data-tab", document.querySelector('.tab [type="radio"]:checked').value);
-},10)
+}
+
+setTimeout(() => {
+  fixTabsIE();
+},10);
+
+window.onload = () => {
+  document.querySelector('.tab [type="radio"]:checked').click();
+  fixTabsIE();
+}

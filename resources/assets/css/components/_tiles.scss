@@ -1,0 +1,125 @@
+.tiles {
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .tile {
+    max-width: 320px;
+    width: 33%;
+    margin-bottom: 30px;
+
+    .tileImageWrap {
+      margin-bottom: 11px;
+    }
+    .tileDescWrap {
+      margin-bottom: 12px;
+      .title {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        /* Text style for "花の山" */
+        letter-spacing: 0.43px;
+        margin-bottom: 10px;
+      }
+
+      .address {
+        color: #7a7a7a;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 1.4px;
+        border-top: 1px dashed;
+        border-bottom: 1px dashed;
+        padding: 5px 0;
+        margin-bottom: 15px;
+      }
+
+      .desc {
+        font-weight: bold;
+        font-size: 15px;
+        letter-spacing: 2.4px;
+        line-height: 2;
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
+
+.townListItem {
+  .town-item {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    .tileImageWrap {
+      max-width: 440px;
+      margin-bottom: 0;
+    }
+
+    .tileDescWrap {
+      max-width: 520px;
+
+      .direction-time {
+        color: #00a004;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 1;
+        letter-spacing: 2.4px;
+        margin-bottom: 21px;
+        display: inline-block;
+        border-bottom: 1px dashed;
+      }
+
+      .color-title {
+        max-width: 400px;
+        height: 33px;
+        margin-bottom: 21px;
+
+        img {
+          width: auto;
+          height: 100%;
+        }
+
+        .official-link-wrap {
+          vertical-align: bottom;
+
+          @include max-screen ($breakpoint-mobile) {
+            display: block;
+          }
+        }
+      }
+
+      .desc {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 26px;
+        letter-spacing: 2.24px;
+        margin-bottom: 15px;
+      }
+
+      .address {
+        color: #7a7a7a;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 30px;
+        letter-spacing: 2.4px;
+
+        .link {
+          color: #333333;
+          font-size: 12px;
+          letter-spacing: 1.92px;
+
+        }
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      display: flex;
+    }
+  }
+}
+

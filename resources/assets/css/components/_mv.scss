@@ -953,6 +953,14 @@
     }
   }
 
+  &.mv-heading-tourism {
+    max-width: 875px;
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 280px;
+    }
+  }
+
 }
 
 .mv-heading-text {

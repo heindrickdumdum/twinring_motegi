@@ -294,6 +294,28 @@
 
   }
 
+  &.heading-main-tourism {
+    .heading-tourism {
+      max-width: 481px;
+      margin-bottom: 30px;
+      
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 290px;
+      }
+    }
+
+    .heading-main-subtext-tourism {
+      margin: auto;
+      
+      font-weight: bold;
+      line-height: 2.3;
+
+      @include min-screen ($breakpoint-mobile+1) {
+        font-size: 14px;
+      }
+    }
+  }
+
   &.heading-main-program-details {
     .media-title {
       font-size: 36px;
@@ -316,4 +338,6 @@
       margin-bottom: 15px;
     }
   }
+
+  
 }

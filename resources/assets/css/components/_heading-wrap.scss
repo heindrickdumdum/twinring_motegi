@@ -658,12 +658,38 @@
     }
   }
 
+  &.heading-wrap-green-line {
+    text-align: center;
+    .heading-subtext {
+      svg {
+        max-width: 365px;
+        height: 32px;
+        background-image: linear-gradient(0deg, #c3e8d8 21.43%, #ffffff 21.43%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 71.43%, #ffffff 71.43%, #ffffff 100%);
+        background-size: 35.00px 40.00px;
+        background-position-y: 10px;
+        background-repeat: repeat-x;
+      }
+    }
+  }
+
   &.heading-wrap-youtube {
     @include max-screen ($breakpoint-mobile) {
       .heading-subtext {
         height: 80px;
         max-width: 240px;
       }
+    }
+  }
+
+  &.heading-wrap-townList {
+    border-bottom: 1px solid #999999;
+    margin-bottom: 60px;
+    .heading {
+      margin-bottom: 17px;
+    }
+    .heading-subtext {
+      max-width: 122px;
+      margin-top: 0;
     }
   }
 

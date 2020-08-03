@@ -314,6 +314,10 @@
         font-size: 14px;
       }
     }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      margin-bottom: 85px;
+    } 
   }
 
   &.heading-main-program-details {

@@ -1,0 +1,166 @@
+<%
+  var title = 'ご宿泊予約｜ホテルツインリンク｜ツインリンクもてぎ';
+  pageId = 'information';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage mv-subpage-reserve">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/tourism/top-image.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/tourism/top-image-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading mv-heading-default mv-heading-tourism">
+          <%- include('/partials/heading', {
+            modifier: 'u-show-pc',
+            heading_level: 1,
+            text: 'Tourist Information',
+            subtextvg: 'tourism-top-title'
+          }) %>
+          <%- include('/partials/heading', {
+            modifier: 'u-show-sp',
+            heading_level: 1,
+            text: 'Tourist Information',
+            subtextvg: 'tourism-top-title-sp'
+          }) %>
+        </div>
+
+        <!-- <div class="u-show-pc mv-today mv-log mv-granroom-logo">
+          <div class="mv-l-inner">
+          </div>
+        </div> -->
+      </div>
+
+    </div>
+    <main>
+      <section class="l-container">
+        <div class="heading-wrap heading-main heading-main-marcherant heading-main-tourism">
+          <h2 class="heading heading-tourism">
+            <span class="u-title-hidden">Car and bike</span>
+            <span class="heading-texts">
+              <img class="" src="<%= mix('/assets/images/tourism/color-title.jpg') %>" alt="ツインリンクもてぎから 少し足をのばしてみよう">
+            </span>
+          </h2>
+          <p class="heading-main-subtext heading-main-subtext-tourism">季節によって移り変わるのどかな風景に心を癒し、<br class="u-show-pc">
+            伝統工芸や焼物文化にふれ、美味しい旬の恵みを食す。<br class="u-show-pc">
+            ちょっと寄り道をしながら栃木を満喫する旅はいかがですか？</p>
+        </div>
+      </section>
+
+      <section class="l-container-m full-sp">
+        <div class="map-wrapper">
+          <img class="u-show-pc" src="<%- mix('/assets/images/tourism/map.jpg') -%>" alt="ツインリンクもてぎから 少し足をのばしてみよう">
+          <img class="u-show-sp" src="<%- mix('/assets/images/tourism/map-sp.jpg') -%>" alt="少し足をのばしてみよう 少し足をのばしてみよう">
+        </div>
+      </section>
+
+      <div class="subpage-inner subpage-inner-anchor subpage-inner-anchor-reserve">
+        <div class="column-link l-column-link column-link-reserve">
+          <ul class="link-container">
+            <li class="link-item">
+              <a class="js-scroll" href="#internet-reservation">
+                <img src="<%- mix('/assets/images/tourism/circle-1.jpg') -%>" alt="インターネット予約">
+                <span>茂木町</span>
+              </a>
+            </li>
+            <li class="link-item">
+              <a class="js-scroll" href="#phone-reservation">
+                <img src="<%- mix('/assets/images/tourism/circle-2.jpg') -%>" alt="電話予約">
+                <span>益子町</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="l-container-m full-sp">
+        <%- include('/partials/heading', {
+        modifier: 'heading-wrap-townList',
+          heading_level: 2,
+          text: ``,
+          subtextvg: 'tourism-motegi-title',
+          altSubtextvg: '森のごちそうが詰まったホテルシェフの自信作石窯焼きプレート'
+        }) %>
+        <ul class="townListItem">
+          <% tourismMogiTown.forEach(item => { %>
+            <li class="town-item">
+              <div class="tileImageWrap">
+                <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+              </div>
+              <div class="tileDescWrap">
+                <p class="direction-time"><%- item.directionTime -%></p>
+                <p class="color-title"><img src="<%- item.colorTitle -%>" alt=""> <span class="official-link-wrap"><a class="official-link link" href="<%- item.officialLink -%>">公式サイトへ</a></span></p>
+                <p class="desc"><%- item.desc -%></p>
+                <p class="address"><%- item.address -%> <span class="map-link-wrap"><a class="map-link link" href="<%- item.mapLink -%>">Googleマップ</a></span></p>
+              </div>
+            </li>
+          <% } ) %>
+        </ul>
+      </section>
+
+      <section class="l-container-m full-sp">
+        <%- include('/partials/heading', {
+          modifier: 'heading-wrap-auto heading-wrap-green-line',
+            heading_level: 2,
+            subtextvg: 'tourism-motegi-nature_title',
+            altSubtextvg: '森のごちそうが詰まったホテルシェフの自信作石窯焼きプレート'
+          }) %>
+        <ul class="tiles">
+          <% tourismMogiCho.forEach(item => { %>
+            <li class="tile">
+              <div class="tileImageWrap">
+                <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+              </div>
+              <div class="tileDescWrap">
+                <p class="title"><%- item.title -%></p>
+                <p class="address"><%- item.address -%></p>
+                <p class="desc"><%- item.desc -%></p>
+              </div>
+            </li>
+          <% } ) %>
+        </ul>
+      </section>
+
+      <section class="l-container-m full-sp">
+        <%- include('/partials/heading', {
+        modifier: 'heading-wrap-townList',
+          heading_level: 2,
+          text: ``,
+          subtextvg: 'tourism-mashiko_title',
+          altSubtextvg: '森のごちそうが詰まったホテルシェフの自信作石窯焼きプレート'
+        }) %>
+        <ul class="townListItem">
+          <% tourismMashikoTown.forEach(item => { %>
+            <li class="town-item">
+              <div class="tileImageWrap">
+                <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+              </div>
+              <div class="tileDescWrap">
+                <p class="direction-time"><%- item.directionTime -%></p>
+                <p class="color-title"><img src="<%- item.colorTitle -%>" alt=""> <span class="official-link-wrap"><a class="official-link link" href="<%- item.officialLink -%>">公式サイトへ</a></span></p>
+                <p class="desc"><%- item.desc -%></p>
+                <p class="address"><%- item.address -%> <span class="map-link-wrap"><a class="map-link link" href="<%- item.mapLink -%>">Googleマップ</a></span></p>
+              </div>
+            </li>
+          <% } ) %>
+        </ul>
+      </section>
+
+      <%- include('/partials/recommendation') -%>
+
+      <%- include('/partials/pickup') -%>
+    </main>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsReserve
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

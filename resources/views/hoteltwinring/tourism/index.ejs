@@ -65,13 +65,13 @@
         <div class="column-link l-column-link column-link-reserve">
           <ul class="link-container">
             <li class="link-item">
-              <a class="js-scroll" href="#internet-reservation">
+              <a class="js-scroll" href="#town-a">
                 <img src="<%- mix('/assets/images/tourism/circle-1.jpg') -%>" alt="インターネット予約">
                 <span>茂木町</span>
               </a>
             </li>
             <li class="link-item">
-              <a class="js-scroll" href="#phone-reservation">
+              <a class="js-scroll" href="#town-b">
                 <img src="<%- mix('/assets/images/tourism/circle-2.jpg') -%>" alt="電話予約">
                 <span>益子町</span>
               </a>
@@ -80,7 +80,7 @@
         </div>
       </div>
 
-      <section class="l-container-m full-sp">
+      <section id="town-a" class="l-container-m full-sp">
         <%- include('/partials/heading', {
         modifier: 'heading-wrap-townList',
           heading_level: 2,
@@ -128,7 +128,7 @@
         </ul>
       </section>
 
-      <section class="l-container-m full-sp">
+      <section id="town-b" class="l-container-m full-sp">
         <%- include('/partials/heading', {
         modifier: 'heading-wrap-townList',
           heading_level: 2,

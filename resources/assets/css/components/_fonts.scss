@@ -1,7 +1,7 @@
 @font-face {
   font-family: $font-hiragino;
   src: url('#{$font-path}Hiragino Kaku Gothic Pro W6/HiraKakuPro-W6-AlphaNum.eot?#iefix') format('embedded-opentype'),
-       url('#{$font-path}Hiragino Kaku Gothic Pro W6/HiraKakuPro-W6-AlphaNum.otf') format('opentype'),
+      //  url('#{$font-path}Hiragino Kaku Gothic Pro W6/HiraKakuPro-W6-AlphaNum.otf') format('opentype'), //file size too large
 	     url('#{$font-path}Hiragino Kaku Gothic Pro W6/HiraKakuPro-W6-AlphaNum.woff') format('woff'),
        url('#{$font-path}Hiragino Kaku Gothic Pro W6/HiraKakuPro-W6-AlphaNum.ttf') format('truetype'),
        url('#{$font-path}Hiragino Kaku Gothic Pro W6/HiraKakuPro-W6-AlphaNum.svg#HiraKakuPro-W6-AlphaNum') format('svg');

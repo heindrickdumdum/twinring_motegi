@@ -10,16 +10,25 @@
 
     .tileImageWrap {
       margin-bottom: 11px;
+
+      @include max-screen ($breakpoint-mobile) {
+        margin-bottom: 8px;
+      }
     }
     .tileDescWrap {
       margin-bottom: 12px;
       .title {
         font-size: 20px;
-        font-weight: 400;
+        font-weight: bold;
         line-height: 32px;
-        /* Text style for "花の山" */
         letter-spacing: 0.43px;
         margin-bottom: 10px;
+
+        @include max-screen ($breakpoint-mobile) {
+          text-align: center;
+          font-size: 15px;
+          margin-bottom: 4px;
+        }
       }
 
       .address {
@@ -32,19 +41,32 @@
         border-bottom: 1px dashed;
         padding: 5px 0;
         margin-bottom: 15px;
+
+        @include max-screen ($breakpoint-mobile) {
+          padding: 3px 0;
+          font-size: 11px;
+          margin-bottom: 10px;
+        }
       }
 
       .desc {
-        font-weight: bold;
         font-size: 15px;
         letter-spacing: 2.4px;
         line-height: 2;
+        font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", YuGothic, 游ゴシック, メイリオ, Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif;
+
+        @include max-screen ($breakpoint-mobile) {
+          line-height: 2.2;
+          font-size: 11px;
+          letter-spacing: 3.2px;
+        }
       }
     }
 
     @include max-screen ($breakpoint-mobile) {
       width: 100%;
       max-width: none;
+      margin-bottom: 20px;
     }
   }
 }
@@ -58,7 +80,12 @@
     .tileImageWrap {
       max-width: 440px;
       margin-bottom: 0;
+
+      @include max-screen ($breakpoint-mobile) {
+        margin-bottom: 20px;
+      }
     }
+    
 
     .tileDescWrap {
       max-width: 520px;
@@ -72,6 +99,11 @@
         margin-bottom: 21px;
         display: inline-block;
         border-bottom: 1px dashed;
+
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 11px;
+          margin-bottom: 15px;
+        }
       }
 
       .color-title {
@@ -82,14 +114,30 @@
         img {
           width: auto;
           height: 100%;
+          margin-right: 23px;
+          @include max-screen ($breakpoint-mobile) {
+            margin-bottom: 15px;
+            margin-right: 10px;
+          }
         }
 
         .official-link-wrap {
           vertical-align: bottom;
 
+          .official-link {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1.4px;
+          }
+
           @include max-screen ($breakpoint-mobile) {
             display: block;
           }
+        }
+
+        @include max-screen ($breakpoint-mobile) {
+          height: 22px;
+          margin-bottom: 50px;
         }
       }
 
@@ -99,6 +147,13 @@
         line-height: 26px;
         letter-spacing: 2.24px;
         margin-bottom: 15px;
+
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 12px;
+          letter-spacing: 2px;
+          line-height: 2;
+          margin-bottom: 0;
+        }
       }
 
       .address {
@@ -108,17 +163,29 @@
         line-height: 30px;
         letter-spacing: 2.4px;
 
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 10px;
+          letter-spacing: 3.25px;
+        }
+
         .link {
           color: #333333;
           font-size: 12px;
           letter-spacing: 1.92px;
 
+          @include max-screen ($breakpoint-mobile) {
+            font-size: 10px;
+          }
         }
       }
     }
 
     @include min-screen ($breakpoint-mobile+1) {
       display: flex;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 70px;
     }
   }
 }

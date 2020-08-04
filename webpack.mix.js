@@ -123,20 +123,6 @@ mix
   )
 
   .eslint()
-  .sass(
-    `${srcRelativePath}/assets/css/header.scss`,
-    `${distRelativePath}/assets/css`
-  )
-  .sass(//all footer scss
-    `${srcRelativePath}/assets/css/footer.scss`,
-    `${distRelativePath}/assets/css`
-  )
-  .sass(
-    `${srcRelativePath}/assets/css/app.scss`,
-    `${distRelativePath}/assets/css`
-  )
-  .stylelint({ context: srcRelativePath })
-  .options({ processCssUrls: false })
   .webpackConfig({
     plugins: [
       new SVGSpritemapPlugin(
@@ -159,6 +145,21 @@ mix
       )
     ]
   })
+  .sass(
+    `${srcRelativePath}/assets/css/header.scss`,
+    `${distRelativePath}/assets/css`
+  )
+  .sass(//all footer scss
+    `${srcRelativePath}/assets/css/footer.scss`,
+    `${distRelativePath}/assets/css`
+  )
+  .sass(
+    `${srcRelativePath}/assets/css/app.scss`,
+    `${distRelativePath}/assets/css`
+  )
+  .stylelint({ context: srcRelativePath })
+  .options({ processCssUrls: false })
+
   .copyWatched(
     [
       `${srcRelativePath}/assets/svg/!(sprite)`,

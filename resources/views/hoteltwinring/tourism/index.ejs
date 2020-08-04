@@ -1,6 +1,7 @@
 <%
-  var title = 'ご宿泊予約｜ホテルツインリンク｜ツインリンクもてぎ';
-  pageId = 'information';
+  var title = 'ツインリンクもてぎ周辺の観光案内';
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'touristInformation';
 %>
 <% include('/partials/data/index') %>
 <%- include('/partials/head', { pageId, title }) -%>
@@ -161,6 +162,6 @@
 
 <!-- BREADCRUMBS -->
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsReserve
+  breadcrumbs : getData().data.breadcrumbsTouristInformation
 }) -%>
 <%- include('/partials/footer', { pageId }) -%>

@@ -957,10 +957,13 @@
     max-width: 875px;
 
     @include max-screen ($breakpoint-mobile) {
-      max-width: 280px;
+      max-width: 335px;
+
+      .heading-subtext {
+        height: 85px;
+      }
     }
   }
-
 }
 
 .mv-heading-text {

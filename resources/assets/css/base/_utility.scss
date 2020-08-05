@@ -53,6 +53,10 @@
   text-align: left;
 }
 
+.text-align-right {
+  text-align: right;
+}
+
 .hover-wrap {
   overflow: hidden;
   &:hover {
@@ -84,4 +88,8 @@
   &:hover {
     opacity: 0.8 !important;
   }
+}
+
+.v-hidden {
+  visibility: hidden;
 }

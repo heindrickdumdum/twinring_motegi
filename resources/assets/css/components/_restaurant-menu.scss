@@ -432,6 +432,12 @@
         }
       }
     }
+
+    &.menu-container-bluenote {
+      .menu-item-bluenote {
+        width: 100%;
+      }
+    }
   }
 }
 

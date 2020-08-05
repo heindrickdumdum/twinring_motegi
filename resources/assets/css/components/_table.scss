@@ -167,6 +167,94 @@
     }
   }
 
+  &.table-bluenote-menu {
+    max-width: 905px;
+    margin: 0 auto;
+    border-top: 2px solid #00a040;
+    font-family: $font-combined;
+
+    .table-row-bluenote {
+      .table-head-bluenote, .table-col-bluenote {
+        background: none;
+        padding-left: 0;
+        padding-right: 0;
+        &::before, &::after {
+          display: none;
+        }
+      }
+
+      .table-head-bluenote {
+        padding-top: 25px;
+        color: #333333;
+        letter-spacing: 2.4px;
+        font-weight: 400;
+
+        span {
+          padding-left: 0;
+          background: linear-gradient(to bottom, #027cc3 10%, #099f48 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: block;
+          font-family: $font-hiragino;
+          font-size: 24px;
+          line-height: 30px;
+          text-transform: uppercase;
+        }
+
+        @include min-screen ($breakpoint-mobile + 1) {
+          width: 322px;
+        }
+      }
+
+      .table-col-bluenote {
+        padding-top: 25px;
+        border-bottom: 1px dashed #333333;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 2.4px;
+
+        .color-label {
+          color: #333333;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 30px;
+          letter-spacing: 2.88px;
+          font-family: $font-hiragino;
+          margin-bottom: 12px;
+        }
+
+
+        ul {
+          &.first {
+            margin-bottom: 5px;
+          }
+          &:not(.first) {
+            line-height: 2;
+          }
+        }
+        
+
+      }
+
+      .color-green {
+        color: #00a040;
+        line-height: 24px;
+        letter-spacing: 0.75px;
+      }
+
+      .line-height-inherit {
+        line-height: inherit;
+      }
+
+      &:last-child {
+        .table-col-bluenote {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
   @at-root .smart-entry & {//smart entry page
     &-smart-entry {
       margin-bottom: 94px;

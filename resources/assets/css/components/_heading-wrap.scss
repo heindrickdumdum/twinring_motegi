@@ -1,5 +1,14 @@
 .heading-wrap {
 
+  &.heading-wrap-bluenote {
+    .heading-subtext {
+      @include max-screen ($breakpoint-mobile) {
+        height: auto;
+        margin-bottom: 40px;
+      } 
+    }
+  }
+
   &.heading-donguri {
     .heading-subtext {
       height: 85px;

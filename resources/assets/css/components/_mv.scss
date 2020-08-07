@@ -756,7 +756,18 @@
       bottom: 5px;
     }
   }
- 
+  
+  &.mv-heading-bluenote {
+    .heading-text {
+      letter-spacing: 2px;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 300px;
+      bottom: -10px;
+    }
+  }
+
   &.hellowoods-mv-heading {
     bottom: 5px;
     width: 100%;
@@ -964,6 +975,8 @@
       }
     }
   }
+
+  
 }
 
 .mv-heading-text {

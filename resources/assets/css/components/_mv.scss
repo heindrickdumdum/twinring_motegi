@@ -128,6 +128,7 @@
       display: none;
     }
   }
+
 }
 
 .mv-list-glamping-top {
@@ -966,10 +967,18 @@
 
   &.mv-heading-tourism {
     max-width: 875px;
+    bottom: -6px;
+    left: 22px;
 
     @include max-screen ($breakpoint-mobile) {
       max-width: 335px;
+      bottom: -10px;
 
+      .heading {
+        .heading-text {
+          letter-spacing: 2px;
+        }
+      }
       .heading-subtext {
         height: 85px;
       }
@@ -1744,6 +1753,19 @@
     @include min-screen($breakpoint-mobile + 1) {
       height: auto;
       margin-bottom: 72px;
+    }
+  }
+
+  &.mv-subpage-tourism {
+    .mv-image-tourism {
+      height: 370px;
+      @include min-screen ($breakpoint-mobile + 1) {
+        height: 420px;
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile + 1) {
+      height: 450px;
     }
   }
 }

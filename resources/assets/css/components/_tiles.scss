@@ -173,6 +173,10 @@
           font-size: 12px;
           letter-spacing: 1.92px;
 
+          &[href=""] {
+            display: none;
+          }
+
           @include max-screen ($breakpoint-mobile) {
             font-size: 10px;
           }

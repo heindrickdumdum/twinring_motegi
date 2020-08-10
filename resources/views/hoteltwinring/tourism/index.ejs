@@ -8,11 +8,11 @@
 
 <div class="lig-content">
   <div class="subpage">
-    <div class="mv mv-subpage mv-subpage-reserve">
+    <div class="mv mv-subpage mv-subpage-tourism">
       <ul class="mv-list">
         <li class="mv-item">
-          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/tourism/top-image.jpg') %>);"></div>
-          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/tourism/top-image-sp.jpg') %>);"></div>
+          <div class="u-show-pc mv-image mv-image-tourism" style="background-image:url(<%= mix('/assets/images/tourism/top-image.jpg') %>);"></div>
+          <div class="u-show-sp mv-image mv-image-tourism" style="background-image:url(<%= mix('/assets/images/tourism/top-image-sp.jpg') %>);"></div>
         </li>
       </ul>
 
@@ -96,9 +96,11 @@
               </div>
               <div class="tileDescWrap">
                 <p class="direction-time"><%- item.directionTime -%></p>
-                <p class="color-title"><img src="<%- item.colorTitle -%>" alt=""> <span class="official-link-wrap"><a class="official-link link" href="<%- item.officialLink -%>">公式サイトへ</a></span></p>
+                <p class="color-title"><img src="<%- item.colorTitle -%>" alt=""> <span class="official-link-wrap"><a class="official-link link" target="_blank" href="<%- item.officialLink -%>">公式サイトへ</a></span></p>
                 <p class="desc"><%- item.desc -%></p>
-                <p class="address"><%- item.address -%> <span class="map-link-wrap"><a class="map-link link" href="<%- item.mapLink -%>">Googleマップ</a></span></p>
+                <p class="address"><%- item.address -%> <span class="map-link-wrap">
+                  <a class="map-link link" target="_blank" href="<%- item.mapLink -%>">Googleマップ</a></span>
+                </p>
               </div>
             </li>
           <% } ) %>
@@ -144,10 +146,12 @@
               </div>
               <div class="tileDescWrap">
                 <p class="direction-time"><%- item.directionTime -%></p>
-                <p class="color-title"><img src="<%- item.colorTitle -%>" alt=""> <span class="official-link-wrap"><a class="official-link link" href="<%- item.officialLink -%>">公式サイトへ</a></span></p>
+                <p class="color-title"><img src="<%- item.colorTitle -%>" alt=""> <span class="official-link-wrap"><a class="official-link link " target="_blank" href="<%- item.officialLink -%>">公式サイトへ</a></span></p>
                 <p class="desc"><%- item.desc -%></p>
-                <p class="address"><%- item.address -%> <span class="map-link-wrap"><a class="map-link link" href="<%- item.mapLink -%>">Googleマップ</a></span></p>
-              </div>
+                <p class="address"><%- item.address -%> <span class="map-link-wrap">
+                  <a class="map-link link" target="_blank" href="<%- item.mapLink -%>">Googleマップ</a></span>
+                </p>
+                </div>
             </li>
           <% } ) %>
         </ul>

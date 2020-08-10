@@ -5,7 +5,7 @@
       @include max-screen ($breakpoint-mobile) {
         height: auto;
         margin-bottom: 40px;
-      } 
+      }
     }
   }
 
@@ -253,7 +253,7 @@
       }
     }
 
-    
+
     @include max-screen ($breakpoint-mobile) {
       margin-bottom: 5px;
       .heading-subtext:last-child {
@@ -314,7 +314,7 @@
     .heading-sub-program {
       font-size: 18px;
       letter-spacing: 1px;
-      line-height: 1.8;  
+      line-height: 1.8;
     }
 
     .heading-sub-program-sp {
@@ -709,7 +709,7 @@
 
   &.heading-nozominoyu-text {
 
-    .heading-text {  
+    .heading-text {
       @include max-screen($breakpoint-mobile) {
         // sass-lint:disable-block no-important
         font-size: 38px !important;
@@ -727,7 +727,7 @@
           height: 40px;
         }
       }
-    }  
+    }
   }
 
   &.heading-wrap-auto {
@@ -779,7 +779,7 @@
     }
   }
 
-  
+
 
   &.heading-comparison {
     text-align: center;
@@ -816,7 +816,7 @@
   &.heading-zipline {
     .heading {
       .heading-subtext {
-        max-width: 330px;
+        max-width: 793px;
         left: -20px;
       }
     }
@@ -832,5 +832,5 @@
     }
   }
 
-  
+
 }

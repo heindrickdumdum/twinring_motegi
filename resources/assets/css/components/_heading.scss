@@ -16,7 +16,7 @@
     .heading-texts {
       img {
         width: 600px;
-        
+
         @include max-screen($breakpoint-mobile) {
           width: 100%;
           display: block;
@@ -151,17 +151,17 @@
       background: none;
       -webkit-text-fill-color: $color-black;
     }
-  
+
     // additional
     position: relative;
     margin-left: auto;
     margin-right: auto;
-  
+
     @include max-screen($breakpoint-mobile) {
       height: 22px;
       display: block;
     }
-  
+
     svg {
       width: 100%;
       height: 100%;
@@ -521,7 +521,7 @@
 }
 
 .heading-main-toya {//toya page
-  .heading-subtext { 
+  .heading-subtext {
     @include min-screen($breakpoint-mobile + 1) {
       height: 306px;
       width: 832px;
@@ -810,7 +810,7 @@
       // sass-lint:disable-block no-important
       height: 136px !important;
       // sass-lint:disable-block no-important
-      margin-top: 106px !important; 
+      margin-top: 106px !important;
     }
   }
 }
@@ -832,7 +832,7 @@
       height: 65px !important;
       // sass-lint:disable-block no-important
       margin-top: 106px !important;
-      
+
     }
 
   }
@@ -848,7 +848,7 @@
       width: 145px !important;
       // sass-lint:disable-block no-important
       height: 26px !important;
-      
+
     }
 
   }
@@ -1150,7 +1150,7 @@
           .heading-subtext {
             @include min-screen($breakpoint-mobile + 1) {
               width: 183px;
-              height: 23px;             
+              height: 23px;
             }
 
             @include max-screen($breakpoint-mobile) {
@@ -1194,7 +1194,7 @@
               width: 183px;
               height: 23px;
             }
-            
+
             @include max-screen($breakpoint-mobile) {
               width: 150px;
               height: 22px;
@@ -1595,7 +1595,7 @@
         margin-bottom: 13px;
         height: 20px;
       }
-      
+
     }
   }
   &.room-standard {
@@ -1606,9 +1606,9 @@
         height: 16px;
       }
     }
-  } 
-  
-  
+  }
+
+
 }
 
 .dokidoki-video,
@@ -1920,7 +1920,7 @@
     p.heading-subtext {
       max-width: 195px;
       height: 20px;
-      top: -3px;  
+      top: -3px;
 
       @include max-screen ($breakpoint-mobile) {
         max-width: 150px;
@@ -2074,15 +2074,15 @@
     position: relative;
 
     .heading-text {
-      font-size: 100px !important;    
-      letter-spacing: 0.1em !important; 
+      font-size: 100px !important;
+      letter-spacing: 0.1em !important;
       position: absolute;
       opacity: 0.4;
       // left: 50%;
       // transform: translateX(-50%);
       transform: initial;
       left: calc(50% - 50px);
-      top: -75px; 
+      top: -75px;
       width: 105px;
       font-weight: normal;
 
@@ -2299,7 +2299,7 @@
       bottom: 0px;
     }
   }
-  
+
   .heading-subtext {
     height: 100%;
 
@@ -2316,7 +2316,7 @@
       margin-bottom: 42px;
     }
   }
-} 
+}
 
 @at-root .heading-motorsport-fee {//fee page
   .heading {
@@ -2325,7 +2325,7 @@
       bottom: 0px;
     }
   }
-  
+
   .heading-subtext {
     height: 100%;
 
@@ -2342,7 +2342,7 @@
       margin-bottom: 2px;
     }
   }
-} 
+}
 
 @at-root .heading-hotel-fee {//fee page
   .heading {
@@ -2351,7 +2351,7 @@
       bottom: 0px;
     }
   }
-  
+
   .heading-subtext {
     height: 100%;
 
@@ -2367,7 +2367,7 @@
       margin-top: 33px;
     }
   }
-} 
+}
 
 @at-root .heading-camp-fee {//fee page
   .heading {
@@ -2376,7 +2376,7 @@
       bottom: 0px;
     }
   }
-  
+
   .heading-subtext {
     height: 100%;
 
@@ -2392,7 +2392,7 @@
       margin-top: 17px;
     }
   }
-} 
+}
 
 @at-root .heading-main-404 {//404 page
   @include min-screen($breakpoint-mobile + 1) {

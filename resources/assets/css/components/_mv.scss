@@ -43,6 +43,16 @@
       }
     }
   }
+
+  &.mv-bluenote {
+    @include max-screen ($breakpoint-mobile) {
+      //height: 350px;
+
+      .mv-image {
+        //height: 430px;
+      }
+    }
+  }
 }
 
 .mv-container {
@@ -765,7 +775,14 @@
 
     @include max-screen ($breakpoint-mobile) {
       max-width: 300px;
-      bottom: -10px;
+      bottom: -30px;
+
+      .heading-subtext {
+        height: 80px;
+        top: -25px;
+        left: -43px;
+        max-width: 210px;
+      }
     }
   }
 

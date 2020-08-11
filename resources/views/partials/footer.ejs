@@ -62,7 +62,8 @@
   'error404',
   'collectionPit',
   'touristInformation',
-  'blueNote'
+  'blueNote',
+  'goods'
   ]
 %>
 
@@ -187,6 +188,10 @@
 
   <% if(pageId == 'program' || pageId == 'programProgram' ) { %>
     <script src="<%= mix('/assets/js/tabs.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'goods') { %>
+    <script src="<%= mix('/assets/js/tabs-goods.js') %>" async></script>
   <% } %>
 
   <% if(pageId == 'hoteltwinring') { %>

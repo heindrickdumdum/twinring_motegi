@@ -1,0 +1,58 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'goods';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-access">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc"
+            style="background-image:url(<%= mix('/assets/images/access_m/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp"
+            style="background-image:url(<%= mix('/assets/images/access_m/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading access-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-access',
+            heading_level: 1,
+            text: 'Goods &amp; Shop',
+            subtextvg: 'access-top-title',
+            altSubtextvg: 'アクセス'
+            // imgPath: mix('/assets/images/access_m/mv-top-title.png'),
+            // alt: 'アクセス'
+          }) %>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner">
+        <section class="subpage-section subpage-section-carbike" id="">
+          <%- include('/partials/goods_m/goods-list', {
+            dataGoodList : getData().data.goodsList
+          }) -%> 
+        </section>
+      </div>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsAccess
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

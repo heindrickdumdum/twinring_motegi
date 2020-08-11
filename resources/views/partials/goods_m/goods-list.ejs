@@ -1,0 +1,63 @@
+<%
+if (typeof modifier === 'undefined'){
+  var modifier = '';
+}
+
+
+%>
+
+
+<% if(dataGoodList) { var arrTabs = [];%>
+  <div class="u-show-pc tab-underline">
+    <ol id="tabs" class="tabs u-show-pc" >
+      <li class="tab">
+        <input autocomplete='on' type="radio" id="tab-1" name="tab-goods" class="tab-month" value="1" checked>
+        <label for="tab-1">ツインリンクもてぎ<br>オリジナルグッズ</label>
+      </li>
+      <li class="tab">
+        <input autocomplete='on' type="radio" id="tab-2" name="tab-goods" class="tab-month" value="2" >
+        <label for="tab-2">お子さま向けグッズ</label>
+      </li>
+      <li class="tab">
+        <input autocomplete='on' type="radio" id="tab-3" name="tab-goods" class="tab-month" value="3" >
+        <label for="tab-3">モータースポーツ<br>ファングッズ</label>
+      </li>
+      <li class="tab">
+        <input autocomplete='on' type="radio" id="tab-4" name="tab-goods" class="tab-month" value="4" >
+        <label for="tab-4">ホンダファングッズ</label>
+      </li>
+    </ol>
+  </div>
+
+  <div class="l-section-title u-show-sp program-dropdown-title">
+    <%- include('/partials/svg', {
+      'name': 'program-dropdown-title'
+    }) %>
+  </div> 
+  <div class="custom-select u-show-sp">
+    <div id="customSelect" class="select-selected">ツインリンクもてぎ<br>オリジナルグッズ</div>
+    <div id="customSelectItems" class="select-items select-hide">
+      <div class="option" value="1">ツインリンクもてぎ<br>オリジナルグッズ</div>
+      <div class="option" value="2">お子さま向けグッズ</div>
+      <div class="option" value="3">モータースポーツ<br>ファングッズ</div>
+      <div class="option" value="4">ホンダファングッズ</div>
+    </div>
+  </div>
+
+<% } %>
+
+<% if(dataGoodList) { %>
+  <ul id="program-list" class="tiles" data-tab="3">
+    <% dataGoodList.forEach(item => { %>
+      <li class="tile program-item program-item-goods" data-tab="<%- item.tab %>">
+        <div class="tileImageWrap">dsds
+          <img src="<%- item.imgPath -%>" alt="<%- item.alt -%>">
+        </div>
+        <div class="tileDescWrap">
+          <p class="title"><%- item.title -%></p>
+        </div>
+      </li>
+    <% } ) %>
+  </ul>
+
+<% } %>

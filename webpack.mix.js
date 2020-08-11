@@ -122,6 +122,11 @@ mix
     `${distRelativePath}/assets/js`,
   )
 
+  .js(
+    `${srcRelativePath}/assets/js/tabs-goods.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
   .eslint()
   .webpackConfig({
     plugins: [

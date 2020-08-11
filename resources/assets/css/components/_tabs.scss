@@ -107,6 +107,11 @@
   [data-tab="#{$i}"] .program-item[data-month="#{$i}"] {display: block;}
 }
 
+.program-item-goods {display:none;}
+@for $i from 1 through 12 {
+  [data-tab="#{$i}"] .program-item-goods[data-tab="#{$i}"] {display: block;}
+}
+
 .faq-item {
   display:none;
   &>div {

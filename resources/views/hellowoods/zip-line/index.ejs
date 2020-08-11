@@ -15,12 +15,21 @@
       </ul>
 
       <div class="l-container mv-container">
-        <h2 class="mv-heading hellowoods-mv-heading">
+        <h2 class="u-show-pc mv-heading hellowoods-mv-heading">
           <%- include('/partials/heading', {
             'modifier': 'heading-zipline',
             'text': 'Zipline',
             'alt': 'Zipline',
             'subtextvg': 'zipline-main-title',
+            'altSubtext': ''
+          }) %>
+        </h2>
+        <h2 class="u-show-sp mv-heading hellowoods-mv-heading">
+          <%- include('/partials/heading', {
+            'modifier': 'heading-zipline',
+            'text': 'Zipline',
+            'alt': 'Zipline',
+            'subtextvg': 'test2-01',
             'altSubtext': ''
           }) %>
         </h2>
@@ -67,13 +76,22 @@
 
       <section class="subpage-section subpage-section-comparison l-section">
         <div class="l-section-title heading-tsubasa">
-          <div class="l-container">
+          <div class="u-show-pc l-container">
             <%- include('/partials/heading', {
               modifier: 'heading-gradient-tobottom heading-comparison',
               text: 'Comparison',
               alt: 'Comparison',
               altSubtext: '',
               subtextvg: 'zipline-comparison'
+            }) %>
+          </div>
+          <div class="u-show-sp l-container">
+            <%- include('/partials/heading', {
+              modifier: 'heading-gradient-tobottom heading-comparison',
+              text: 'Comparison',
+              alt: 'Comparison',
+              altSubtext: '',
+              subtextvg: 'zipline-comparison-sp'
             }) %>
           </div>
         </div>

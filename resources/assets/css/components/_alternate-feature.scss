@@ -3,7 +3,7 @@
   align-items: center;
   margin-bottom: 130px;
   display: flex;
-  
+
   .order-1 {order: 1;}
   .order-2 {order: 2;}
 
@@ -58,7 +58,7 @@
         background-color: #51ca30;
         top: 10px;
         left: 12px;
-        
+
 
         @include max-screen ($breakpoint-mobile) {
           top: 5px;
@@ -107,6 +107,27 @@
         }
       }
 
+      .zipline-grey-label-sp {
+        background-color: #9c9c9c;
+        padding: 9px 18px;
+        border-radius: 5px;
+        display: block;
+        max-width: 318px;
+        width: 100%;
+        color: #fffefe;
+        margin-bottom: 20px;
+      }
+      .zipline-green-label-sp {
+        background-color: #4fae32;
+        padding: 9px 18px;
+        border-radius: 5px;
+        display: block;
+        max-width: 318px;
+        width: 100%;
+        color: #fffefe;
+        margin-bottom: 20px;
+      }
+
       .alt-feature-desc-text {
         line-height: 2;
       }
@@ -116,10 +137,10 @@
         padding-bottom: 22px;
         background-size: 100% 100%;
       }
-      
+
       img.animal-icon {
         position: absolute;
-        
+
         @include max-screen ($breakpoint-mobile) {
           right: auto !important;
           left: -12px !important;
@@ -161,7 +182,7 @@
           }
         }
 
-        
+
 
       }
     }

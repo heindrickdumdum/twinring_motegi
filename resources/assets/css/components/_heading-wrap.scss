@@ -472,6 +472,15 @@
       }
     }
   }
+  
+  &.heading-wrap-goods-color {
+    max-width: 275px;
+    margin: auto;
+
+    .heading {
+      margin-bottom: 12px;
+    }
+  }
 
   @include max-screen($breakpoint-mobile) {
     .heading-main-subpage {

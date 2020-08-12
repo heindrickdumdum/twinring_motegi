@@ -4,7 +4,8 @@ function tabs(){
   var i;
   for(i = 0; i < tab.length; i++) {
     tab[i].onchange = function() {
-      document.getElementById('program-list').setAttribute("data-tab", this.value)
+      document.getElementById('program-list').setAttribute("data-tab", this.value);
+      document.getElementById('tab-banner').setAttribute("data-tab", this.value);
     }
   }
 
@@ -24,8 +25,9 @@ function tabs(){
       if(document.querySelectorAll('.option.active')[0]) {
         document.querySelectorAll('.option.active')[0].classList.remove('active');
       }
-      tabSPselect.innerText = this.getAttribute('value');
+      tabSPselect.innerHTML = this.innerHTML;
       document.getElementById('program-list').setAttribute("data-tab", this.getAttribute('value'));
+      document.getElementById('tab-banner').setAttribute("data-tab", this.getAttribute('value'));
       document.getElementById('customSelect').classList.toggle('open');
       document.getElementById('customSelectItems').classList.toggle('select-hide');
       
@@ -42,6 +44,8 @@ tabs();
 /*Fix browser back button issue*/
 function fixTabsIE(){
   document.getElementById('program-list').setAttribute("data-tab", document.querySelector('.tab [type="radio"]:checked').value);
+  document.getElementById('tab-banner').setAttribute("data-tab", document.querySelector('.tab [type="radio"]:checked').value);
+  
 }
 
 setTimeout(() => {

@@ -295,6 +295,18 @@
   }
 }
 
+.subapge-section-goods-tab {
+  background-color: #f5f6fa;
+  margin-bottom: 30px;
+  @include min-screen ($breakpoint-mobile + 1) {
+    margin-bottom: 70px;
+  }
+
+  .l-section-title {
+    background-color: #fff;
+  }
+}
+
 .subpage-inner {
   position: relative;
   max-width: 1060px;

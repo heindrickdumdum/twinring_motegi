@@ -51,6 +51,11 @@
       }
     }
   }
+
+  &.tabs-goods {
+    background-color: #fff;
+    margin-bottom: 0;
+  }
 }
 
 .tab {
@@ -89,6 +94,80 @@
     }
   }
 
+  &.tab-goods {
+    margin-right: 6px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    label {
+      font-size: 16px;
+      height: 67px;
+      display: table-cell;
+      vertical-align: middle;
+      width: 250px;
+
+      &:hover {
+        height: 86px;
+        .lbl-ico {
+          top: 15px;
+        }
+      }
+
+      img {
+        max-width: 41px;
+        position: absolute;
+        left: 19px;
+        top: 8px;
+        transition: ease 0.5s all;
+      }
+    }
+
+    &.tab-motegi {
+      .lbl-goods {
+        padding-left: 70px;
+      }
+    }
+
+    &.tab-kids {
+      .lbl-goods {
+        padding-left: 50px;
+      }
+    }
+
+    &.tab-motor {
+      .lbl-goods {
+        padding-left: 45px;
+        .lbl-ico {
+          max-width: 30px;
+          left: 30px;
+        }
+      }
+    }
+
+    &.tab-honda {
+      .lbl-goods {
+        padding-left: 36px;
+        .lbl-ico {
+          left: 16px;
+          top: 15px;
+          max-width: 38px;
+        }
+      }
+    }
+
+    [name="tab-goods"]:hover ~ .lbl-goods,
+    [name="tab-goods"]:checked ~ .lbl-goods {
+      height: 86px;
+      img {
+        top: 15px;
+      }
+      .ico-honda {
+        top: 23px;
+      }
+    }    
+  }
 
   [type="radio"] {
     display: none;
@@ -100,6 +179,25 @@
       padding: 11px 0px 22px;
     }
   }
+}
+
+.tab-banner {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-top: 31px;
+  padding-bottom: 20px;
+
+  li {
+    display: none;
+  }
+  &[data-tab="1"] {li[data-tab="1"] { display: block;}}
+  &[data-tab="2"] {li[data-tab="2"] { display: block;}}
+  &[data-tab="3"] {li[data-tab="3"] { display: block;}}
+  &[data-tab="4"] {li[data-tab="4"] { display: block;}}
+  
 }
 
 .program-item {display:none;}

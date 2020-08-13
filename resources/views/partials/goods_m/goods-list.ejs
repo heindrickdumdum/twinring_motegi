@@ -30,43 +30,42 @@ if (typeof modifier === 'undefined'){
     </ol>
   </div>
 
-  <div class="l-section-title u-show-sp program-dropdown-title">
-    <%- include('/partials/svg', {
-      'name': 'program-dropdown-title'
-    }) %>
-  </div> 
-  <div class="custom-select u-show-sp">
-    <div id="customSelect" class="select-selected">ツインリンクもてぎ<br>オリジナルグッズ</div>
-    <div id="customSelectItems" class="select-items select-hide">
-      <div class="option" value="1">ツインリンクもてぎ<br>オリジナルグッズ</div>
-      <div class="option" value="2">お子さま向けグッズ</div>
-      <div class="option" value="3">モータースポーツ<br>ファングッズ</div>
-      <div class="option" value="4">ホンダファングッズ</div>
+  <div class="bg-white">
+    <div class="custom-select u-show-sp custom-select-goods-sp">
+      <div id="customSelect" class="select-selected select-selected-goods"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/goods/ico-motegi.png') %>" alt="Motegi"> ツインリンクもてぎ<br>オリジナルグッズ</div>
+      <div id="customSelectItems" class="select-items select-items-goods select-hide">
+        <div class="option select-goods-option" value="1"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/goods/ico-motegi.png') %>" alt="Motegi"> ツインリンクもてぎ<br>オリジナルグッズ</div>
+        <div class="option select-goods-option" value="2"><img class="lbl-ico ico-kids" src="<%= mix('/assets/images/goods/ico-kids.png') %>" alt="Motegi">お子さま向けグッズ</div>
+        <div class="option select-goods-option" value="3"><img class="lbl-ico ico-motor" src="<%= mix('/assets/images/goods/ico-motor.png') %>" alt="Motegi">モータースポーツ<br>ファングッズ</div>
+        <div class="option select-goods-option" value="4"><img class="lbl-ico ico-honda" src="<%= mix('/assets/images/goods/ico-honda.png') %>" alt="Motegi">ホンダファングッズ</div>
+      </div>
     </div>
   </div>
 
 <% } %>
 
 <% if(dataGoodList) { %>
-  <ul id="tab-banner" class="tab-banner" data-tab="1">
-    <li data-tab="1">販売場所：スーベニアもてぎ、モビプラザ、ミュージアムショップ</li>
-    <li data-tab="2">kids</li>
-    <li data-tab="3">motor</li>
-    <li data-tab="4">honda</li>
-  </ul>
-  <ul id="program-list" class="tiles tilesGoodsList" data-tab="1">
-    <% dataGoodList.forEach(item => { %>
-      <li class="tile program-item program-item-goods" data-tab="<%- item.tab %>">
-        <a href="<%- item.link -%>">
-          <div class="tileImageWrap">
-            <img src="<%- item.imgPath -%>" alt="<%- item.alt -%>">
-          </div>
-          <div class="tileDescWrap">
-            <p class="title"><%- item.title -%></p>
-          </div>
-        </a>
-      </li>
-    <% } ) %>
-  </ul>
+  <div class="bg-grey l-container-m">
+    <ul id="tab-banner" class="tab-banner" data-tab="1">
+      <li data-tab="1">販売場所：<br class="u-show-sp">スーベニアもてぎ、モビプラザ、<br class="u-show-sp">ミュージアムショップ</li>
+      <li data-tab="2">kids</li>
+      <li data-tab="3">motor</li>
+      <li data-tab="4">honda</li>
+    </ul>
+    <ul id="program-list" class="tiles tilesGoodsList" data-tab="1">
+      <% dataGoodList.forEach(item => { %>
+        <li class="tile program-item program-item-goods" data-tab="<%- item.tab %>">
+          <a href="<%- item.link -%>">
+            <div class="tileImageWrap">
+              <img src="<%- item.imgPath -%>" alt="<%- item.alt -%>">
+            </div>
+            <div class="tileDescWrap">
+              <p class="title"><%- item.title -%></p>
+            </div>
+          </a>
+        </li>
+      <% } ) %>
+    </ul>
+  </div>
 
 <% } %>

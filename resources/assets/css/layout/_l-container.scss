@@ -96,3 +96,22 @@
 .l-container-mobi-guide {
   max-width: 1170px;
 }
+
+.l-container-m {
+  max-width: 1021px;margin: 0 auto;
+
+  @include max-screen ($breakpoint-mobile) {
+    max-width: 252px;
+
+    &.full-sp {
+      max-width: none;
+      padding: 0 20px;
+    }
+  }
+}
+
+.goods-shop-container {
+  @include max-screen ($breakpoint-mobile) {
+    max-width: 265px;
+  }
+}

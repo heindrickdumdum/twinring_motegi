@@ -19,7 +19,7 @@
       </ul>
 
       <div class="l-container mv-container">
-        <div class="mv-heading hellowoods-mv-heading">
+        <div class="mv-heading hellowoods-mv-heading mv-heading-goods">
           <%- include('/partials/heading', {
             modifier: 'heading-hellowoods',
             heading_level: 1,
@@ -33,27 +33,25 @@
     </div>
 
     <main>
-      <div class="l-container-m">
+      <div class="">
         <div class="l-section-title">
-        <%- include('/partials/heading', {
-          modifier: 'heading-wrap-goods-color',
-          text: '',
-          alt : '',
-          subtextvg: '',
-          altSubtextvg: '',
-          imgPath: mix('/assets/images/goods/top-color-title.jpg')
-        }) %>
-      </div>
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-goods-color',
+            text: '',
+            alt : '',
+            subtextvg: '',
+            altSubtextvg: '',
+            imgPath: mix('/assets/images/goods/top-color-title.jpg')
+          }) %>
+        </div>
         <section class="subpage-section subapge-section-goods-tab">
           <%- include('/partials/goods_m/goods-list', {
             dataGoodList : getData().data.goodsList
           }) -%> 
         </section>
-
-        
       </div>
 
-      <div class="l-container-m">
+      <div class="l-container-m goods-shop-container">
         <section>
           <div class="l-section-title">
             <%- include('/partials/heading', {
@@ -61,7 +59,7 @@
               text: 'Shop',
               alt: '',
               altSubtext: '',
-              subtextvg: 'room-type-title'
+              subtextvg: 'goods-shop'
             }) %>
           </div>
           <!-- recommendation module -->
@@ -74,7 +72,7 @@
 
         <section class="goods-bottom-banners">
           <div class="banner">
-            <p class="banner-desc">傘やティッシュ、紙おむつやマスクなど<br>急に必要になった商品も各ショップで販売しております。</p>
+            <p class="banner-desc">傘やティッシュ、紙おむつやマスクなど <br class="u-show-pc">急に必要になった商品も各ショップで販売しております。</p>
             <div class="l-button">
               <%- include('/partials/button', {
                 modifier: 'local',
@@ -93,7 +91,8 @@
           </div>
 
           <div class="banner-3">
-            <img src="<%- mix('/assets/images/goods/bnr-onlineshop.jpg') %>" alt="公式オンラインショップ">
+            <img class="u-show-pc" src="<%- mix('/assets/images/goods/bnr-onlineshop.jpg') %>" alt="公式オンラインショップ">
+            <img class="u-show-sp" src="<%- mix('/assets/images/goods/bnr-onlineshop-sp.jpg') %>" alt="公式オンラインショップ">
           </div>
         </section>
       </div>

@@ -891,6 +891,12 @@
     }
   }
 
+  &.mv-heading-goods {
+    @include max-screen ($breakpoint-mobile) {
+      padding-bottom: 0;
+    }
+  }
+  
   &.mv-heading-marcherant-dinner-buffet {
     .heading-wrap-marcherant-dinner-buffet {
       .heading-subtext {

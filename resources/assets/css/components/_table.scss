@@ -221,6 +221,12 @@
         letter-spacing: 2.4px;
         vertical-align: bottom;
 
+        &.custom {
+          @include min-screen ($breakpoint-mobile + 1) {
+            padding-bottom: 11px;
+          }
+        }
+
         .color-label {
           color: #333333;
           font-size: 18px;

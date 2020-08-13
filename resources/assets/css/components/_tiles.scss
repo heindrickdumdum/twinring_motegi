@@ -195,7 +195,7 @@
 }
 
 .tilesGoodsList {
-  padding: 0 60px 60px;
+  
 
   .program-item-goods {
     max-width: 270px;
@@ -214,8 +214,20 @@
         .price {
           color: #2d2d2d;
           font-size: 17px;
+
+          @include max-screen ($breakpoint-mobile) {
+            font: 13px;
+          }
+        }
+
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 13px;
         }
       }
     }
+  }
+
+  @include min-screen ($breakpoint-mobile + 1) {
+    padding: 0 60px 60px;
   }
 }

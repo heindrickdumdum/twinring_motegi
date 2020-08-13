@@ -296,10 +296,23 @@
 }
 
 .subapge-section-goods-tab {
-  background-color: #f5f6fa;
+  
   margin-bottom: 30px;
+
+
   @include min-screen ($breakpoint-mobile + 1) {
+    background-color: #f5f6fa;
+    max-width: 1021px;
+    margin: 0 auto;
     margin-bottom: 70px;
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    background-color: #f5f6fa;
+
+    .bg-white {
+      background-color: #fff;
+    }
   }
 
   .l-section-title {

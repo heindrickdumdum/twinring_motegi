@@ -6,7 +6,7 @@
     margin-bottom: 40px;
 
     @include max-screen ($breakpoint-mobile) {
-      padding-bottom: 25px;
+      padding-bottom: 0px;
 
       .media-title {
         margin-bottom: 10px;
@@ -35,14 +35,14 @@
       display: inline-block;
       width: 100%;
       max-width: 500px;
-      float: right;
+      
       
       .subpage-title {
         position: relative;
         margin-bottom: 20px;
 
         @include max-screen($breakpoint-mobile) {
-          margin-bottom: 20px;
+          margin-bottom: 5px;
         }
       }
       
@@ -51,6 +51,10 @@
         letter-spacing: 2px;
         line-height: 2;
         margin-bottom: 13px;
+
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 12px;
+        }
       }
 
       .details-list {
@@ -64,7 +68,7 @@
             @include min-screen ($breakpoint-mobile + 1) {
               min-width: 102px;
               margin-right: 20px;
-              
+              width: 63px;
             } 
           }
 
@@ -75,6 +79,11 @@
             padding-left: 19px;
             width: 100%;
             letter-spacing: 1.4px;  
+
+            @include max-screen ($breakpoint-mobile) {
+              width: auto;
+              padding-left: 10px;
+            }
           }
 
           .link {
@@ -93,6 +102,10 @@
           letter-spacing: 5px;
         }
       }
+
+      @include min-screen ($breakpoint-mobile + 1) {
+        float: right;
+      }
     }
 
     @include max-screen ($breakpoint-mobile) {
@@ -107,12 +120,16 @@
     height: 140px;
     background-color: #f2f2f2;
     width: 100%;
-    padding: 30px 52px;
+    padding: 30px 20px;
     margin-bottom: 30px;
     
     .banner-desc, .l-button {
       display: table-cell;
       vertical-align: middle;
+
+      @include max-screen ($breakpoint-mobile) {
+        display: block;
+      }
     }
 
     .banner-desc {
@@ -121,13 +138,27 @@
       font-weight: 400;
       line-height: 30px;
       letter-spacing: 1.5px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 12px;
+        line-height: 1.5;
+      }
     }
-    .button {
-      margin-right: 0;
+
+    .l-button {
+      
+      .button {
+        margin-right: 0;
+      }
+
+      @include max-screen ($breakpoint-mobile) {
+        margin-top: 17px;
+      }
     }
 
     @include min-screen ($breakpoint-mobile + 1) {
       margin-bottom: 70px;
+      padding: 30px 52px;
     }
   }
 
@@ -139,6 +170,10 @@
       font-size: 15px;
       font-weight: bold;
       line-height: 1.7;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 11px;
+      }
     }
 
     @include min-screen ($breakpoint-mobile + 1) {

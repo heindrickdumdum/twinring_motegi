@@ -353,6 +353,10 @@
         margin: 0 25px;
       }
 
+      a {
+        color: #2d2d2d;
+      }
+
       @include max-screen ($breakpoint-mobile) {
         font-size: 8px;
         letter-spacing: 1.4px;

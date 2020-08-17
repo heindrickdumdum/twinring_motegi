@@ -1694,6 +1694,14 @@
     }
   }
 
+  &.mv-subpage-404 {
+    .mv-image {
+      @include max-screen ($breakpoint-mobile) {
+        padding-bottom: 105%;
+      }
+    }
+  }
+
   &.mv-subpage-acrox {
     &::after {
       @include max-screen($breakpoint-mobile) {

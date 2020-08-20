@@ -1,0 +1,104 @@
+<%
+  var title = 'Twin Ring Motegi';
+  pageId = 'events';
+%>
+<%- include('./../partials/data/index') -%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage hellowoods-wrapper">
+    <div class="mv mv-hellowoods mv-events">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/events/mv.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/events/mv-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <h2 class="mv-heading hellowoods-mv-heading events-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            text: 'Sprind Event',
+            alt: '',
+            subtextvg: 'events-mv-title',
+            altSubtext: ''
+          }) %>
+        </h2>
+
+        <p class="mv-date">
+          2021.3.20(Fri)～4.5(Sun)
+        </p>
+
+        <div class="u-show-pc mv-today mv-log mv-events-logo">
+          <div class="mv-l-inner">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+
+      <div class="l-section">
+        <div class="challenge hellowoods events-page">
+          <div class="l-container">
+            <div class="row">
+              <div class="challenge-left">
+                <div class="challenge-img u-show-pc">
+                  <div class="challenge-img1 events">
+                    <img src="<%- mix('/assets/images/events/image-02.png') -%>" alt="梟">
+                  </div>
+                  <div class="challenge-img2">
+                    <img src="<%- mix('/assets/images/events/image-03.png') -%>" alt="女の子">
+                  </div>
+                  <div class="challenge-img3">
+                    <img src="<%- mix('/assets/images/events/image-01.png') -%>" alt="モモンガ">
+                  </div>
+                </div>
+
+                <div class="challenge-img u-show-sp">
+                  <img src="<%- mix('/assets/images/events/bubbles-sp.png') -%>" alt="梟">
+                </div>
+
+
+              </div>
+              <div class="challenge-right events">
+                <p class="heading-text">
+                  <img src="<%- mix('/assets/images/events/forest-heading-color.png') -%>" alt="春の芽吹きを感じながら、都会では体験できない 森あそびをおもいっきり楽しもう。">
+                </p>
+                <p class="desc hellowoods">
+                  春の心地良い森の中でお散歩したり、コーヒーを飲んで寛いだり…。<br>
+                  冬眠から目覚めた生きものや植物たちとの出会いも待っています。<br>
+                  パパやママ、小さなお子さままで家族みんなにちょうどいい春の冒険を楽しもう。
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+
+      <div class="l-container-m goods-shop-container">
+        <section>
+          <!-- recommendation module -->
+          <%- include('/partials/events/events-list', {
+            modifier: '',
+            dataEventsItem : getData().data.eventsList
+          }) -%>
+        </section>
+      </div>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+
+    </main>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsMobipark
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

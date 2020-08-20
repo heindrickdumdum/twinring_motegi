@@ -112,6 +112,55 @@
       display: block;
     }
   }
+
+  &.events-list {
+    .swiper-wrapper {
+      margin-bottom: 15px;
+    }
+    .events-swiper-pagination {
+      text-align: center;
+
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 11px;
+        background-color: #090707;
+        opacity:  initial;
+        margin: 0 5px;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #00a040;
+      }
+    }
+
+    .events-list-item {
+      border-bottom: 1px solid #dfdfdf;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+      }
+
+      .subpage-title {
+        letter-spacing: 5px;
+        margin-bottom: 12px;
+      }
+
+      .desc {
+        margin-bottom: 35px;
+      }
+
+      .button {
+        margin: 0;
+      }
+    }
+  }
+
 }
 
 .goods-bottom-banners {

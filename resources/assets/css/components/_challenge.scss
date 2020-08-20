@@ -30,6 +30,14 @@
         width: 100%;
       }
     }
+
+    &.events {
+      z-index: 10;
+      .heading-text {
+        max-width: none;
+        width: 127%;
+      }
+    }
   }
 
   @include max-screen($breakpoint-mobile) {
@@ -89,6 +97,10 @@
     position: relative;
     top: -46px;
     left: -32px;
+
+    &.events {
+      max-width: 235px;
+    }
   }
 
   .challenge-img2 {
@@ -103,6 +115,10 @@
     position: relative;
     left: 24px;
     top: -220px;
+  }
+
+  &.events-page {
+    overflow: hidden;
   }
 
   &.hellowoods-life-overflowing {

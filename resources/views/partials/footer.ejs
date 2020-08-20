@@ -63,7 +63,8 @@
   'collectionPit',
   'touristInformation',
   'blueNote',
-  'goods'
+  'goods',
+  'events'
   ]
 %>
 
@@ -236,6 +237,10 @@
 
   <% if(pageId == 'mobiparkGuide') { %>
     <script src="<%= mix('/assets/js/mobipark-guide.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'events') { %>
+    <script src="<%= mix('/assets/js/events.js') %>" async></script>
   <% } %>
   
 <!-- START GTM FOOTER -->

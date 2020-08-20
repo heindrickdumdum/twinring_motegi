@@ -30,6 +30,30 @@
     }
   }
 
+  &.mv-events {
+    .events-mv-heading {
+      bottom: 60px;
+    }
+    .mv-date {
+      background: url(#{$image-path}events/mv-gradient-rect.jpg) no-repeat;
+      background-size: no-repeat;
+      background-size: cover;
+      display: inline-block;
+      padding: 10px 17px;
+      color: #fefefe;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      line-height: 1;
+      position: absolute;
+      bottom: 64px;
+    } 
+
+    @include min-screen ($breakpoint-mobile + 1) {
+      margin-bottom: 200px;
+    }
+  }
+
   &.mv-restaurant {
     @include max-screen ($breakpoint-mobile) {
       margin-bottom: 100px;
@@ -1073,6 +1097,13 @@
     background: url(#{$image-path}hellowoods/mv-today-bg.png) no-repeat;
     background-size: contain;
     max-width: 270px;
+  }
+
+  &.mv-events-logo {
+    background: url(#{$image-path}events/logo.png) no-repeat;
+    background-size: contain;
+    max-width: 250px;
+    bottom: -140px;
   }
 
   &.mv-hoteltwinring-logo {

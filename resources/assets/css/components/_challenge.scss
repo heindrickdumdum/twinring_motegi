@@ -131,7 +131,7 @@
   }
 
   &.events-page {
-    overflow: hidden;
+    // overflow: hidden;
     .challenge-img {
       @include max-screen ($breakpoint-mobile) {
         img {

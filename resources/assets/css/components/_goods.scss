@@ -164,6 +164,7 @@
       }
 
       .details-list {
+        margin-bottom: 0;
         @include max-screen ($breakpoint-mobile) {
           margin-bottom: 40px;
 

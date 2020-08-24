@@ -76,7 +76,7 @@ module.exports = {
 		var endLine = htmlTags.indexOf(endTag);
 		var contentsTags = htmlTags.slice(startLine, endLine + endTagLen);
 
-		console.log('targetFile:%s \n startLine: %s endLine: %s', targetFile, startLine, endLine);
+		// console.log('targetFile:%s \n startLine: %s endLine: %s', targetFile, startLine, endLine);
 
 		//Update html files
 		fs.writeFileSync(targetFile, contentsTags);

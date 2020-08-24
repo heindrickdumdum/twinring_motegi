@@ -37,7 +37,7 @@ module.exports = function(){
 				if(targetFileName.indexOf('.html') !== -1
 						&& targetFileName.indexOf('header') === -1
 						&& targetFileName.indexOf('footer') === -1){
-						console.log('convert html:%s', targetFileName)
+						// console.log('convert html:%s', targetFileName)
 						fn.optimizeHtml(filePath);
 				}
 		});

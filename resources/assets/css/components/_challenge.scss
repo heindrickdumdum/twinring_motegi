@@ -34,15 +34,17 @@
     &.events {
       z-index: 10;
       .heading-text {
-        max-width: none;
+        width: 127%;
 
         img {
           max-width: none;
         }
 
-        @include min-screen ($breakpoint-mobile+1) {
-          width: 127%;
+        @include max-screen ($breakpoint-mobile) {
+          max-width: none;
+          width: 100%;
         }
+
       }
 
       @include max-screen ($breakpoint-mobile)  {

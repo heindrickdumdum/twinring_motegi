@@ -24,7 +24,7 @@ module.exports = function(){
 		var targetFileName = path.basename(filePath);
 		//Target only .html file
 		if(filePath.indexOf('globalnavi/') !== -1 && targetFileName.indexOf('.html') !== -1){
-			console.log('GLOBALNAVI: replace html file path: %s', filePath);
+			// console.log('GLOBALNAVI: replace html file path: %s', filePath);
 			//arrange clear path
 			var thisPath = path.normalize(filePath);
 			var thisRootPath = path.normalize(rootPath);
@@ -42,7 +42,7 @@ module.exports = function(){
 			replaceFile.sync(options);
 
 		} else if(filePath.indexOf('top/') !== -1 && targetFileName.indexOf('.html') !== -1){
-			console.log('TOP: replace html file path: %s', filePath);
+			// console.log('TOP: replace html file path: %s', filePath);
 			//arrange clear path
 			var thisPath = path.normalize(filePath);
 			var thisRootPath = path.normalize(rootPath);
@@ -60,7 +60,7 @@ module.exports = function(){
 			replaceFile.sync(options);
 
 		} else if(targetFileName.indexOf('.html') !== -1){
-				console.log('CONTENTS: replace html file path: %s', filePath);
+				// console.log('CONTENTS: replace html file path: %s', filePath);
 				//arrange clear path
 				var thisPath = path.normalize(filePath);
 				var thisRootPath = path.normalize(rootPath);
@@ -79,7 +79,7 @@ module.exports = function(){
 
 		} else if (filePath.indexOf('globalnavi') !== -1 && targetFileName.indexOf('.css') !== -1){
 			//Settings for replace
-			console.log('GLOBALNAVI: replace css file path: %s', filePath);
+			// console.log('GLOBALNAVI: replace css file path: %s', filePath);
 			//console.log('GLOBALNAVI: replace css file: %s', targetFileName);
 			var options = {
 				files: filePath,
@@ -90,7 +90,7 @@ module.exports = function(){
 
 		} else if (filePath.indexOf('top/') !== -1 && targetFileName.indexOf('.css') !== -1){
 			//Settings for replace
-			console.log('TOP: replace css file path: %s', filePath);
+			// console.log('TOP: replace css file path: %s', filePath);
 			//console.log('TOP: replace css file: %s', targetFileName);
 			var options = {
 				files: filePath,
@@ -101,7 +101,7 @@ module.exports = function(){
 
 		} else if (targetFileName.indexOf('.css') !== -1){
 			//Settings for replace
-			console.log('CONTENTS: replace css file path: %s', filePath);
+			// console.log('CONTENTS: replace css file path: %s', filePath);
 			//console.log('CONTENTS: replace css file: %s', targetFileName);
 			var options = {
 				files: filePath,

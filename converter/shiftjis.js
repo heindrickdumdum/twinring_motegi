@@ -13,7 +13,7 @@ module.exports = function(){
 			var str = iconv.decode(fs.readFileSync(filePath), 'utf8');
 			fs.writeFileSync(filePath, iconv.encode(str, 'Shift_JIS'));
 
-			console.log('covert Shift-Jis -> ' + filePath);
+			// console.log('covert Shift-Jis -> ' + filePath);
 		}
 		//Target only specific file
 		if(targetFileName.indexOf('tabs.js') !== -1 && targetFileName.indexOf('_utf') === -1){
@@ -21,7 +21,7 @@ module.exports = function(){
 			var str = iconv.decode(fs.readFileSync(filePath), 'utf8');
 			fs.writeFileSync(filePath, iconv.encode(str, 'Shift_JIS'));
 
-			console.log('covert Shift-Jis -> ' + filePath);
+			//console.log('covert Shift-Jis -> ' + filePath);
 		}
 	});
 };

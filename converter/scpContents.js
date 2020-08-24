@@ -14,10 +14,10 @@ module.exports = function(){
 
 	var sendContentsList = CONFIG.scp.contents;
 
-	console.log(sendContentsList);
+	// console.log(sendContentsList);
 
 	async.each(sendContentsList, function(sendContents, callback) {
-		console.log(sendContents);
+		// console.log(sendContents);
 
 		var scpConfig ={
 				host: CONFIG.scp.host,
@@ -26,14 +26,14 @@ module.exports = function(){
 				path: sendContents.dist
 			};
 
-		console.log(scpConfig);
+		// console.log(scpConfig);
 
 
 		scpClient.scp(
 			sendContents.src,
 			scpConfig,
 			function(err) {
-				console.log(err);
+				// console.log(err);
 				callback(err);
 			});
 
@@ -42,9 +42,9 @@ module.exports = function(){
 	},
 	function(err) {
 		if(err) {
-			console.log(err);
+			// console.log(err);
 		} else {
-			console.log("Finish to transfer contents");
+			// console.log("Finish to transfer contents");
 		}
 	});
 

@@ -10,6 +10,12 @@
     padding-bottom: 55px;
   }
 
+  &.section-events {
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 120px;
+    }
+  }
+
   &.l-section-forest-dokidoki {
     @include max-screen($breakpoint-mobile) {
       padding-bottom: 20px;

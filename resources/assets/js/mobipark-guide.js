@@ -6,7 +6,7 @@ function checkboxReset(checkbox){
   for (var i = 0; i < checkboxes.length; i++) {
     dataArr.push(checkboxes[i].value)
   }
-  console.log(dataArr);
+  //console.log(dataArr);
   document.getElementsByClassName('guide-data-holder')[0].setAttribute('data-'+checkbox,dataArr)
 }
 
@@ -37,8 +37,8 @@ radioArea.forEach(radio => radio.addEventListener('change', () => {
   for (var i = 0; i < checkboxes.length; i++) {
     areaArr.push(checkboxes[i].value)
   }
-  console.log(areaArr);
-  document.getElementsByClassName('guide-data-holder')[0].setAttribute('data-area',areaArr)
+  // console.log(areaArr);
+  // document.getElementsByClassName('guide-data-holder')[0].setAttribute('data-area',areaArr)
 }));
 
 /*Passport Checkbox*/

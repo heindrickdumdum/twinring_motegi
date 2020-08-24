@@ -144,15 +144,33 @@
         font-weight: bold;
         letter-spacing: 2px;
         margin-bottom: 10px;
+
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 11px;
+        }
       }
 
       .subpage-title {
         letter-spacing: 5px;
         margin-bottom: 12px;
+
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 15px;
+        }
       }
 
       .desc {
         margin-bottom: 35px;
+      }
+
+      .details-list {
+        @include max-screen ($breakpoint-mobile) {
+          margin-bottom: 40px;
+
+          .details-list-item {
+            width: 100%;
+          }
+        }
       }
 
       .button {

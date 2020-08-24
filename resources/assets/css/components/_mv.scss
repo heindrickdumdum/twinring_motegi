@@ -31,8 +31,13 @@
   }
 
   &.mv-events {
+    margin-bottom: 90px;
     .events-mv-heading {
       bottom: 60px;
+
+      @include max-screen ($breakpoint-mobile) {
+        bottom: 20px;
+      }
     }
     .mv-date {
       background: url(#{$image-path}events/mv-gradient-rect.jpg) no-repeat;
@@ -47,6 +52,12 @@
       line-height: 1;
       position: absolute;
       bottom: 64px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 5px 10px;
+      }
     } 
 
     @include min-screen ($breakpoint-mobile + 1) {

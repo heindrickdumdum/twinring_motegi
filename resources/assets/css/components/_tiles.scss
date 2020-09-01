@@ -216,7 +216,20 @@
           font-size: 17px;
 
           @include max-screen ($breakpoint-mobile) {
-            font: 13px;
+            font-size: 13px;
+          }
+        }
+
+        &.long-text {
+          font-size: 11px;
+          letter-spacing: normal;
+
+          @include max-screen ($breakpoint-mobile) {
+            font-size: 10px;
+          }
+
+          .price {
+            font-size: 12px;
           }
         }
 

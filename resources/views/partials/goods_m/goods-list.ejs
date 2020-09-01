@@ -47,10 +47,14 @@ if (typeof modifier === 'undefined'){
 <% if(dataGoodList) { %>
   <div class="bg-grey l-container-m">
     <ul id="tab-banner" class="tab-banner" data-tab="1">
-      <li data-tab="1">販売場所：<br class="u-show-sp">スーベニアもてぎ、モビプラザ、<br class="u-show-sp">ミュージアムショップ</li>
-      <li data-tab="2">販売場所：スーベニアもてぎ・モビプラザ</li>
-      <li data-tab="3">販売場所：モビプラザ、スーベニアもてぎ、グランツーリスモ カフェ ショップ</li>
-      <li data-tab="4">販売場所：ミュージアムショップ</li>
+      <li class="tab-banner-motegi" data-tab="1">
+        販売場所：<br class="u-show-sp">スーベニアもてぎ、モビプラザ、<br class="u-show-sp">ミュージアムショップ<br>
+        ※表示金額はすべて税込みです。<br>
+        ※品切れの際は、ご容赦ください。
+      </li>
+      <li class="text-center" data-tab="2">販売場所：スーベニアもてぎ・モビプラザ</li>
+      <li class="text-center" data-tab="3">販売場所：モビプラザ、スーベニアもてぎ、グランツーリスモ カフェ ショップ</li>
+      <li class="text-center" data-tab="4">販売場所：ミュージアムショップ</li>
     </ul>
     <ul id="program-list" class="tiles tilesGoodsList" data-tab="1">
       <% dataGoodList.forEach(item => { %>
@@ -60,7 +64,7 @@ if (typeof modifier === 'undefined'){
               <img src="<%- item.imgPath -%>" alt="<%- item.alt -%>">
             </div>
             <div class="tileDescWrap">
-              <p class="title"><%- item.title -%></p>
+              <p class="title <%- item.mods -%>"><%- item.title -%></p>
             </div>
           </a>
         </li>

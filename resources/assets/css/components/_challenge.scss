@@ -8,7 +8,7 @@
   &-left {
     order: 2
   }
-  
+
   &-right {
     order: 1;
     flex-grow: 1;
@@ -48,7 +48,7 @@
       }
 
       @include max-screen ($breakpoint-mobile)  {
-        margin-top: 4px;  
+        margin-top: 4px;
       }
     }
   }
@@ -72,7 +72,7 @@
   .desc {
     margin-top: 66px;
     margin-left: 4px;
-    font-size: 20px;  
+    font-size: 20px;
     letter-spacing: 0.16em;
     line-height: 2.25;
 
@@ -85,6 +85,13 @@
 
     &.hellowoods {
       max-width: 600px;
+
+      @include max-screen ($breakpoint-mobile) {
+        line-height: 2;
+      }
+    }
+    &.collection {
+      max-width: 603px;
 
       @include max-screen ($breakpoint-mobile) {
         line-height: 2;
@@ -114,6 +121,12 @@
     &.events {
       max-width: 235px;
     }
+
+    &.collection {
+      max-width: 233px;
+      top: 64px;
+      left: 17px;
+    }
   }
 
   .challenge-img2 {
@@ -121,6 +134,11 @@
     position: relative;
     left: 95px;
     top: -134px;
+
+    &.collection {
+      left: 96px;
+      top: 22px;
+    }
   }
 
   .challenge-img3 {
@@ -128,6 +146,11 @@
     position: relative;
     left: 24px;
     top: -220px;
+
+    &.collection {
+      left: -32px;
+      top: -87px;
+    }
   }
 
   &.events-page {
@@ -164,6 +187,10 @@
 
   &.hellowoods {
     max-height: 800px;
+  }
+
+  &.collection {
+    background-position: right 32px top 84px;
   }
 
   @include max-screen($breakpoint-mobile) {

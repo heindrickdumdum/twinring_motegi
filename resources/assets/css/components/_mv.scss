@@ -30,6 +30,12 @@
     }
   }
 
+  &.mv-collection {
+    &::after {
+      display: none;
+    }
+  }
+
   &.mv-events {
     margin-bottom: 90px;
     .events-mv-heading {
@@ -58,7 +64,7 @@
         letter-spacing: 1px;
         padding: 5px 10px;
       }
-    } 
+    }
 
     @include min-screen ($breakpoint-mobile + 1) {
       margin-bottom: 200px;
@@ -887,6 +893,12 @@
       }
     }
 
+    .heading-collection {
+      .heading-subtext {
+        max-width: 688px;
+      }
+    }
+
     .heading-tsubasa {
       .heading-subtext {
         max-width: 600px;
@@ -926,12 +938,14 @@
     }
   }
 
+
+
   &.mv-heading-goods {
     @include max-screen ($breakpoint-mobile) {
       padding-bottom: 0;
     }
   }
-  
+
   &.mv-heading-marcherant-dinner-buffet {
     .heading-wrap-marcherant-dinner-buffet {
       .heading-subtext {
@@ -1106,6 +1120,12 @@
 
   &.mv-hellowoods-logo {
     background: url(#{$image-path}hellowoods/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 270px;
+  }
+
+  &.mv-collection-logo {
+    background: url(#{$image-path}collection/mv-today-bg.png) no-repeat;
     background-size: contain;
     max-width: 270px;
   }

@@ -29,14 +29,28 @@
         margin: auto;
         margin-bottom: 23px;
       }
+      &.collection-image-wrapper {
+        max-width: 557px;
+        text-align: center;
+        .collection-subpage-title {
+          font-size: 20px;
+          margin-top: 14px;
+        }
+        .collection-details {
+          text-align: left;
+          margin: 0 auto;
+          width: 100%;
+          max-width: 363px;
+        }
+      }
     }
 
     .area-item-desc-wrapper {
       display: inline-block;
       width: 100%;
       max-width: 500px;
-      
-      
+
+
       .subpage-title {
         position: relative;
         margin-bottom: 20px;
@@ -45,7 +59,7 @@
           margin-bottom: 5px;
         }
       }
-      
+
       .desc {
         font-size: 15px;
         letter-spacing: 2px;
@@ -69,7 +83,7 @@
               min-width: 102px;
               margin-right: 20px;
               width: 63px;
-            } 
+            }
           }
 
           .details-list-item-desc {
@@ -78,7 +92,7 @@
             padding-bottom: 5px;
             padding-left: 19px;
             width: 100%;
-            letter-spacing: 1.4px;  
+            letter-spacing: 1.4px;
 
             @include max-screen ($breakpoint-mobile) {
               width: auto;
@@ -103,10 +117,22 @@
         }
       }
 
+      &.collection-desc-wrapper {
+        max-width: 507px;
+        z-index: 2;
+        position: relative;
+        .details-list .details-list-item {
+          .details-list-item-desc {
+            padding: 16px 19px;
+          }
+        }
+      }
+
       @include min-screen ($breakpoint-mobile + 1) {
         float: right;
       }
     }
+
 
     @include max-screen ($breakpoint-mobile) {
       display: block;
@@ -190,7 +216,7 @@
     width: 100%;
     padding: 30px 20px;
     margin-bottom: 30px;
-    
+
     .banner-desc, .l-button {
       display: table-cell;
       vertical-align: middle;
@@ -214,7 +240,7 @@
     }
 
     .l-button {
-      
+
       .button {
         margin-right: 0;
       }

@@ -6,6 +6,10 @@
     padding-bottom: 0;
   }
 
+  &.l-collection {
+    padding-bottom: 83px;
+  }
+
   @include max-screen($breakpoint-mobile) {
     padding-bottom: 55px;
   }

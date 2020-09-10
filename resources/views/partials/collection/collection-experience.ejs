@@ -1,0 +1,29 @@
+<ul class="adventure-container adventure-container-hellowoods">
+  <!-- Musasabi -->
+
+  <li class="adventure-list ">
+    <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/collection/experience-img.jpg') %>);">
+    </div>
+
+    <div class="l-adventure-sp-container">
+      <div class="l-adventure hoteltwinring">
+        <div class="l-section-title l-section-title-adventure hellowoods experience-title">
+          <img src="<%- mix('/assets/images/collection/experience-title.png') -%>" alt="ピット工房（クルマのワークショップ）" />
+        </div>
+
+        <p class="adventure-content-copy hoteltwinring">
+        本物の工具を使ってクルマを組み立てて走らせることができるワークショップ。<br>
+        何度もチャレンジすると組み立てるパーツが増え、難易度が上がっていきます。
+        </p>
+
+        <div class="l-button">
+          <%- include('/partials/button', {
+            modifier: 'button-adventure',
+            text: 'もっと見る',
+            link: '#'
+          }) %>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

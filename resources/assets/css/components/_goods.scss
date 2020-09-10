@@ -5,6 +5,14 @@
     padding-bottom: 40px;
     margin-bottom: 40px;
 
+    &.experience-item {
+      clear: both;
+      border-bottom: 1px solid #dadada;
+      &:last-child {
+        border:0;
+      }
+    }
+
     @include max-screen ($breakpoint-mobile) {
       padding-bottom: 0px;
 
@@ -136,6 +144,15 @@
 
     @include max-screen ($breakpoint-mobile) {
       display: block;
+    }
+
+    &.experience-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .area-item-desc-wrapper {
+        float: none;
+      }
     }
   }
 

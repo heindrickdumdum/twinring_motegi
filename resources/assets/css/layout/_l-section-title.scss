@@ -4,8 +4,14 @@
   &.program-dropdown-title {
     svg {
       height: 17px;
-      margin-bottom: 21px;  
+      margin-bottom: 21px;
     }
+  }
+
+  &.experience-title {
+    max-width: 447px;
+    width: 100%;
+    margin:48px auto 0;
   }
 }
 
@@ -22,7 +28,7 @@
 .alternate-feature {
   .heading-wrap  {
     margin-bottom: 65px;
-    
+
     @include max-screen ($breakpoint-mobile) {
       margin-bottom: 45px;
     }

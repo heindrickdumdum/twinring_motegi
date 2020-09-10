@@ -801,6 +801,32 @@
     }
   }
 
+  &.heading-contents {
+    .heading-text {
+      -webkit-text-fill-color: #fff;
+      background: transparent;
+      font-size: 42px;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+    .heading-subtext {
+      margin-top: 0;
+      max-width: 989px;
+      width: 100%;
+    }
+  }
+
+  &.heading-experience {
+    .heading-text {
+      font-size: 41px;
+      letter-spacing: 0.02em;
+    }
+    .heading-subtext {
+      margin-top: 0;
+    }
+  }
+
   &.heading-comparison {
     text-align: center;
 
@@ -860,6 +886,8 @@
       font-size: 36px;
     }
   }
+
+
 
 
 

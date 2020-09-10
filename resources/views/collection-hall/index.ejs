@@ -1,0 +1,302 @@
+<%
+  var title = 'Twin Ring Motegi';
+  pageId = 'collectionHall';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage collection-wrapper">
+
+    <div class="mv mv-collection">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/collection/mv-img.png') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/collection/mv-img-sp.png') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <h2 class="mv-heading hellowoods-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-collection',
+            text: 'Honda Collection Hall',
+            alt: '',
+            subtextvg: 'collection-main-title',
+            altSubtext: ''
+          }) %>
+        </h2>
+
+        <div class="u-show-pc mv-today mv-log mv-collection-logo">
+          <div class="mv-l-inner"></div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="l-section l-collection">
+        <section class="info-container info-container-hellowoods">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-mobipark heading-collection',
+                text: 'Information',
+                alt: 'information',
+                altSubtext: '',
+                subtextvg: 'info-subtext'
+              }) %>
+            </div>
+
+            <div class="l-container">
+              <ul class="info-list">
+                <li class="info-item collection-item">
+                  <div class="collection-item-div">
+                    <span>現在ホンダコレクションホールでは、新型コロナウイルスの感染拡大防止のため</span>
+                    お客様の安全・安心を最優先に、以下のプログラムの開催を延期しております。<br>
+                    ・ガイドツアー <br>
+                    ・ホンダコレクションホール展示車両人気投票「Honda Collection Hall Grand Prix」
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </section>
+
+        <section class="info-container info-container-hellowoods collection-container">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-exhibit',
+                text: 'Exhibition',
+                alt: 'Exhibition',
+                altSubtext: '',
+                subtextvg: 'exhibition-subtext'
+              }) %>
+            </div>
+
+            <div class="collection-exhibit-wrapper">
+              <div class="l-container">
+                <ul class="exhibit-list">
+                  <li class="exhibit-item">
+                    <img src="<%- mix('/assets/images/collection/exhibit-img1.jpg') -%>" alt="歴代CT・ハンターカブ特別展示" />
+                    <span class="exhibit-title exhibit-margin-first">歴代CT・ハンターカブ特別展示</span>
+                    <p>新型「CT125・ハンターカブ」の発売を記念し、歴代の「CT・ハンターカブ」を特別展示いたします。</p>
+                  </li>
+                  <li class="exhibit-item">
+                    <img src="<%- mix('/assets/images/collection/exhibit-img2.jpg') -%>" alt="Back to the 1964" />
+                    <span class="exhibit-title">Back to the 1964<br>
+                    ～ホンダが切り開いた新たな世界～
+                    </span>
+                    <p>ホンダ創業16年目の1964年にタイムトリップ！F1初参戦をはじめ、新たな世界を切り開いていった挑戦をご紹介いたします！</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </section>
+      </div>
+
+      <div class="l-section section-events">
+        <div class="challenge hellowoods events-page collection">
+          <div class="l-container">
+            <div class="row">
+              <div class="challenge-left">
+                <div class="challenge-img u-show-pc">
+                  <div class="challenge-img1 collection">
+                    <img src="<%- mix('/assets/images/collection/image-02.png') -%>" alt="梟" />
+                  </div>
+                  <div class="challenge-img2 collection">
+                    <img src="<%- mix('/assets/images/collection/image-03.png') -%>" alt="女の子" />
+                  </div>
+                  <div class="challenge-img3 collection">
+                    <img src="<%- mix('/assets/images/collection/image-01.png') -%>" alt="モモンガ" />
+                  </div>
+                </div>
+
+                <div class="challenge-img u-show-sp">
+                  <img src="<%- mix('/assets/images/events/bubbles-sp.png') -%>" alt="梟" />
+                </div>
+
+
+              </div>
+              <div class="challenge-right events">
+                <p class="heading-text">
+                  <img class="u-show-pc" src="<%- mix('/assets/images/collection/collection-heading-color.png') -%>" alt="春の芽吹きを感じながら、都会では体験できない 森あそびをおもいっきり楽しもう。" />
+                  <img class="u-show-sp" src="<%- mix('/assets/images/collection/collection-heading-color-sp.png') -%>" alt="春の芽吹きを感じながら、都会では体験できない 森あそびをおもいっきり楽しもう。" />
+                </p>
+                <p class="desc collection">
+                  ホンダコレクションホールは、<br>
+                  ホンダの原点の心を多くのお客さまに伝えることを目的に1998年3月に開館しました。<br><br>
+
+                  創業者 本田宗一郎の熱い言葉が刻み込まれた壁面、<br>
+                  伝説のF1マシン、ドラマを生んだGPマシン、時代を彩った市販車など<br>
+                  約300台を目の前にすれば、当時の記憶が色褪せずに甦ることでしょう。
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="l-container-m goods-shop-container collection-data-container">
+        <section>
+          <ul class="goods-shop-list">
+              <li class="goods-shop-items">
+                <div class="wrapper-container">
+                  <div class="area-item-image-wrapper collection-image-wrapper">
+                    <a href="">
+                      <img src="<%- mix('/assets/images/collection/intro-video.png') -%>" alt="Introduction Video">
+                    </a>
+                    <h3 class="subpage-title collection-subpage-title">
+                      <span><a class="" href="#">ホンダコレクションホール紹介動画 </a></span>
+                    </h3>
+                    <p class="collection-details">【1階】開館20周年記念展示「Honda夢と挑戦の軌跡」<br>
+                  【2階】２輪・４輪　市販車両、汎用製品<br>
+                  【3階】２輪・４輪　レーシングマシン</p>
+                  </div>
+                  <div class="area-item-desc-wrapper collection-desc-wrapper">
+                    <ul class="carbike-article-list details-list">
+                      <li class="carbike-article-list-item details-list-item">
+                        <span class="carbike-article-list-label details-list-item-label">場所</span>
+                        <p class="carbike-article-list-desc details-list-item-desc"><a class="link" href="#">MAPを見る</a></p>
+                      </li>
+                      <li class="carbike-article-list-item details-list-item">
+                        <span class="carbike-article-list-label details-list-item-label">開館時間</span>
+                        <p class="carbike-article-list-desc details-list-item-desc">開館時間や各体験プログラムの開催時間は<a class="link" href="#">こちら</a><br>
+                        ※季節や曜日によって時間が異なります。</p>
+                      </li>
+                      <li class="carbike-article-list-item details-list-item">
+                        <span class="carbike-article-list-label details-list-item-label">料金</span>
+                        <p class="carbike-article-list-desc details-list-item-desc">無料<br>
+                        ※入館は無料ですが、ツインリンクもてぎの<a class="link" href="#">入場料・駐車料</a>が掛かります。</p>
+                      </li>
+                      <li class="carbike-article-list-item details-list-item">
+                        <span class="carbike-article-list-label details-list-item-label">備考</span>
+                        <ul class="carbike-article-list-desc details-list-item-desc collection-article-list">
+                          <li class="collection-item-list">ショップあり<br>ここでしか買えないホンダグッズを多数取り揃
+                        　えております。詳しくは<a href="#" class="link">こちら</a></li>
+                          <li class="collection-item-list">写真撮影可能</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="content-section">
+        <div class="l-container">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-exhibit heading-contents',
+              text: 'Contents',
+              alt: 'Contents',
+              altSubtext: '',
+              subtextvg: 'contents-subtext'
+            }) %>
+          </div>
+          <ul class="content-lists">
+            <li class="content-item">
+              <a href="#" class="content-link">
+                <img src="<%- mix('/assets/images/collection/img-contents-1.jpg') -%>" alt="イベント情報" />
+                <div class="content-info">
+                  <span class="content-title">イベント情報</span>
+                </div>
+              </a>
+            </li>
+            <li class="content-item">
+              <a href="#" class="content-link">
+                <img src="<%- mix('/assets/images/collection/img-contents-2.jpg') -%>" alt="展示車両検索" />
+                <div class="content-info">
+                  <span class="content-title">展示車両検索</span>
+                </div>
+              </a>
+            </li>
+            <li class="content-item">
+              <a href="#" class="content-link">
+                <img src="<%- mix('/assets/images/collection/img-contents-3.jpg') -%>" alt="360°バーチャルツアー" />
+                <div class="content-info">
+                  <span class="content-title">360°バーチャルツアー</span>
+                </div>
+              </a>
+            </li>
+            <li class="content-item">
+              <a href="#" class="content-link">
+                <img src="<%- mix('/assets/images/collection/img-contents-4.jpg') -%>" alt="【公式アプリ】" />
+                <div class="content-info">
+                  <span class="content-title">【公式アプリ】<br>ホンダコレクションホール展示ガイド</span>
+                  <p class="content-desc">中国語・タイ語・英語・日本語による展示車両解説アプリです。</p>
+                </div>
+              </a>
+            </li>
+            <li class="content-item">
+              <a href="#" class="content-link">
+                <img src="<%- mix('/assets/images/collection/img-contents-5.jpg') -%>" alt="展示車両人気投票" />
+                <div class="content-info">
+                  <span class="content-title content-title-margin">展示車両人気投票</span>
+                  <p class="content-desc">展示中の4輪レース車の中からお好きな車両1台に投票いただくと、素敵なプレゼントが当たる抽選にご参加いただけます。</p>
+                </div>
+              </a>
+            </li>
+            <li class="content-item">
+              <a href="#" class="content-link">
+                <img src="<%- mix('/assets/images/collection/img-contents-6.jpg') -%>" alt="【Honda公式YouTubeチャンネル】" />
+                <div class="content-info">
+                  <span class="content-title">【Honda公式YouTubeチャンネル】<br>
+                  収蔵車両走行ビデオ</span>
+                  <p class="content-desc">歴代の製品やレーシングマシンの説明と走行中の様子をご覧いただけます。</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="experience-section">
+        <section class="adventure">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-wrap-hellowoods heading-experience',
+              text: 'Experience',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'experience-type-title'
+            }) %>
+          </div>
+
+          <div class="forest-container">
+            <%- include('/partials/collection/collection-experience') -%>
+          </div>
+        </section>
+      </div>
+
+      <div class="l-container-m goods-shop-container">
+        <section>
+          <%- include('/partials/collection/collection-data', {
+            modifier: '',
+            dataCollection : getData().data.collectionData
+          }) -%>
+        </section>
+      </div>
+
+      <section id="hellowoods-faq" class="l-section l-section-hellowoods faq-file-dl">
+        <%- include('/partials/collection-faq', {
+          collectionAccordion: getData().data.accordionFaq
+        }) %>
+      </section>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+
+    </main>
+
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsCollectionHall
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

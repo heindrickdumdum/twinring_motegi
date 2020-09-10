@@ -96,6 +96,7 @@
       @include max-screen ($breakpoint-mobile) {
         line-height: 2;
       }
+
     }
   }
 
@@ -191,6 +192,9 @@
 
   &.collection {
     background-position: right 32px top 84px;
+    .heading-text img{
+      max-width: 155%;
+    }
   }
 
   @include max-screen($breakpoint-mobile) {

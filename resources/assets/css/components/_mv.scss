@@ -897,7 +897,7 @@
       .heading-subtext {
         max-width: 688px;
         @include max-screen ($breakpoint-mobile) {
-          width: 100%;
+          width: 68%;
         }
       }
     }

@@ -20,6 +20,12 @@
     }
   }
 
+  &.collection-section{
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 60px;
+    }
+  }
+
   &.l-section-forest-dokidoki {
     @include max-screen($breakpoint-mobile) {
       padding-bottom: 20px;

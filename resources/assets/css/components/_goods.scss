@@ -11,6 +11,9 @@
       &:last-child {
         border:0;
       }
+      @include max-screen ($breakpoint-mobile) {
+        border:0;
+      }
     }
 
     @include max-screen ($breakpoint-mobile) {

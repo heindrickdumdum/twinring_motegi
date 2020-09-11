@@ -91,7 +91,7 @@
         </section>
       </div>
 
-      <div class="l-section section-events">
+      <div class="l-section section-events collection-section">
         <div class="challenge hellowoods events-page collection">
           <div class="l-container">
             <div class="row">
@@ -108,8 +108,8 @@
                   </div>
                 </div>
 
-                <div class="challenge-img u-show-sp">
-                  <img src="<%- mix('/assets/images/events/bubbles-sp.png') -%>" alt="梟" />
+                <div class="challenge-img u-show-sp collection-img-sp">
+                  <img src="<%- mix('/assets/images/collection/bubbles-sp.png') -%>" alt="ホンダの夢・情熱・歴史が詰まった世界唯一のミュージアム" />
                 </div>
 
 
@@ -184,13 +184,22 @@
 
       <section class="content-section">
         <div class="l-container">
-          <div class="l-section-title">
+          <div class="l-section-title u-show-pc">
             <%- include('/partials/heading', {
               modifier: 'heading-wrap-center heading-exhibit heading-contents',
               text: 'Contents',
               alt: 'Contents',
               altSubtext: '',
               subtextvg: 'contents-subtext'
+            }) %>
+          </div>
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-exhibit heading-contents',
+              text: 'Contents',
+              alt: 'Contents',
+              altSubtext: '',
+              subtextvg: 'contents-subtext-sp'
             }) %>
           </div>
           <ul class="content-lists">
@@ -268,7 +277,7 @@
         </section>
       </div>
 
-      <div class="l-container-m goods-shop-container">
+      <div class="l-container-m goods-shop-container experience-container-sp">
         <section>
           <%- include('/partials/collection/collection-data', {
             modifier: '',

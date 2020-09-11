@@ -11,6 +11,9 @@
     left: 0;
     right: 0;
     z-index: -1;
+    @include max-screen ($breakpoint-mobile) {
+      height: 569px;
+    }
   }
 }
 .exhibit-list {
@@ -71,11 +74,14 @@
 
 // content-section
 .content-section {
-  background: url('../images/collection/bg-contents.jpg') no-repeat;
+  background: url('../images/collection/bg-contents.jpg') no-repeat top center;
   width: 100%;
   background-size: cover;
   padding: 74px 0 90px;
   margin-bottom: 109px;
+  @include max-screen ($breakpoint-mobile) {
+    background-image: url('../images/collection/bg-contents-sp.jpg');
+  }
 }
 .content-header {
   text-align: center;
@@ -98,6 +104,9 @@
   max-width: 370px;
   width: 100%;
   margin-bottom: 28px;
+  @include max-screen ($breakpoint-mobile) {
+    max-width: 100%;
+  }
 }
 .content-link {
   display: block;
@@ -127,4 +136,8 @@
   line-height: 2;
   letter-spacing: 0.09em;
 }
-// experience section
+.collection-data-list{
+  @include max-screen ($breakpoint-mobile) {
+      margin-top: 62px;
+  }
+}

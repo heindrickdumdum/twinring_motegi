@@ -1,28 +1,20 @@
-<%
-if (typeof modifier === 'undefined'){
-  var modifier = '';
-}
+  <div class="l-container-racing">
+    <div class="u-show-pc tab-underline">
+      <ol id="tabs" class="tabs tabs-goods u-show-pc" >
+        <li class="tab tab-goods tab-motegi tabs-racing">
+          <input autocomplete='on' type="radio" id="tab-1" name="tab-goods" class="tab-month" value="1" checked>
+          <label class="lbl-goods lbl-racing" for="tab-1">1回目の方</label>
 
-
-%>
-
-
-<% if(racingKartTabs) { var arrTabs = [];%>
-  <div class="u-show-pc tab-underline">
-    <ol id="tabs" class="tabs tabs-goods u-show-pc" >
-      <li class="tab tab-goods tab-motegi tabs-racing">
-        <input autocomplete='on' type="radio" id="tab-1" name="tab-goods" class="tab-month" value="1" checked>
-        <label class="lbl-goods lbl-racing" for="tab-1">1回目の方</label>
-
-      </li>
-      <li class="tab tab-goods tabs-racing">
-        <input autocomplete='on' type="radio" id="tab-2" name="tab-goods" class="tab-month" value="2" >
-        <label class="lbl-goods lbl-racing-2" for="tab-2">
-          2回目以降の方<br>
-          レーシングカート会員の方
-        </label>
-      </li>
-    </ol>
+        </li>
+        <li class="tab tab-goods tabs-racing">
+          <input autocomplete='on' type="radio" id="tab-2" name="tab-goods" class="tab-month" value="2" >
+          <label class="lbl-goods lbl-racing-2" for="tab-2">
+            2回目以降の方<br>
+            レーシングカート会員の方
+          </label>
+        </li>
+      </ol>
+    </div>
   </div>
 
   <div class="bg-white">
@@ -37,31 +29,222 @@ if (typeof modifier === 'undefined'){
     </div>
   </div>
 
-<% } %>
 
-<% if(racingKartTabs) { %>
-  <div class="bg-grey l-container-m">
-    <ul id="tab-banner" class="tab-banner tab-banner-racing" data-tab="1">
-      <li class="tab-banner-motegi" data-tab="1">
-        <h3 class="tab-banner-title"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/racingkart/racing-title1.png') %>" alt="タイムアタックセッション"></h3>
-        <span class="table-banner-span">気軽に本格カートにチャレンジ！</span>
-        <p class="table-banner-desc">はじめてレーシングカートに乗る人や練習中のビギナー、また女性も安心して楽しめる初心者だけの走行枠。 <br>
-        普通運転免許証があれば手ぶらでOK！まずはキミの可能性に挑戦してみよう。</p>
-      </li>
-      <li class="tab-banner-motegi" data-tab="2">
-        <h3 class="tab-banner-title"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/racingkart/racing-title2.png') %>" alt="タイムアタックセッション"></h3>
-        <span class="table-banner-span">レーサー気分で最速ラップを目指せ！</span>
-        <p class="table-banner-desc">参加ドライバーがベストタイムを狙い、全開アタックをする上級者向けの走行枠。<br>
-        レース同様の実況アナウンスがさらにバトルを盛り上げ、プロドライバーになった気分で走行できます。</p>
-      </li>
-    </ul>
-    <ul id="program-list" class="tiles tilesGoodsList" data-tab="1">
-      <li class="tile program-item program-item-goods" data-tab="1">
-        This is tab 1
-      </li>
-      <li class="tile program-item program-item-goods" data-tab="2">
+  <div class="bg-grey">
+    <div class="l-container-racing">
+      <ul id="tab-banner" class="tab-banner tab-banner-racing" data-tab="1">
+        <li class="tab-banner-motegi" data-tab="1">
+          <h3 class="tab-banner-title"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/racingkart/racing-title1.png') %>" alt="タイムアタックセッション"></h3>
+          <span class="table-banner-span">気軽に本格カートにチャレンジ！</span>
+          <p class="table-banner-desc">はじめてレーシングカートに乗る人や練習中のビギナー、また女性も安心して楽しめる初心者だけの走行枠。 <br>
+          普通運転免許証があれば手ぶらでOK！まずはキミの可能性に挑戦してみよう。</p>
+        </li>
+        <li class="tab-banner-motegi" data-tab="2">
+          <h3 class="tab-banner-title"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/racingkart/racing-title2.png') %>" alt="タイムアタックセッション"></h3>
+          <span class="table-banner-span">レーサー気分で最速ラップを目指せ！</span>
+          <p class="table-banner-desc">参加ドライバーがベストタイムを狙い、全開アタックをする上級者向けの走行枠。<br>
+          レース同様の実況アナウンスがさらにバトルを盛り上げ、プロドライバーになった気分で走行できます。</p>
+        </li>
+      </ul>
+    </div>
+    <div id="program-list" class="tiles tilesGoodsList battle-cart-list" data-tab="1">
+      <div class="tile program-item program-item-goods battle-cart" data-tab="1">
+        <div class="l-container-racing">
+          <h3 class="battle-cart-title">マシン</h3>
+          <ul class="racing-kart-video">
+            <li class="racing-kart-item racing-kart-img">
+              <img src="<%- mix('/assets/images/racingkart/racing-kart-left-image.jpg') -%>" alt="１人乗り（最高時速40km・Honda GX270）">
+              <p class="racing-desc">１人乗り（最高時速40km・Honda GX270）</p>
+            </li>
+            <li class="racing-kart-item racing-kart-img">
+              <img src="<%- mix('/assets/images/racingkart/racing-kart-right-image.jpg') -%>" alt="２人乗り（最高時速40km・Honda GX270）">
+              <p class="racing-desc">２人乗り（最高時速40km・Honda GX270）</p>
+            </li>
+          </ul>
+
+          <table class="table table-racing table-battle-cart">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">所要時間</th>
+                <td class="table-col">説明：10分　走行：5分</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">対象者</th>
+                <td class="table-col">
+                  以下①②のすべての条件を満たす方 <br>
+                  　①身長が140ｃｍ以上<br>
+                  　②普通運転免許証をお持ちの方<br><br>
+
+                  ★免許証をお持ちでない方が利用する場合<br>
+                  以下①②③のすべての条件を満たす方<br>
+                  　①小学４年生以上<br>
+                  　②身長が140ｃｍ以上<br>
+                  　③チャレンジカートで条件をクリアし、合格した方<br>
+                  <p class="table-desc">※２人乗りの場合、同乗者は身長が１４０ｃｍ以上ある小学４年生以上の方がご利用できます。<br>
+                  ※18歳未満の方は、レーシングカート受付にて誓約書へご本人様＋親権者様の直筆の署名が必要になります。</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="battle-cart-section">
+            <div class="battle-cart-item">
+              <img src="<%- mix('/assets/images/racingkart/banner-image.jpg') -%>" alt="">
+            </div>
+            <div class="battle-cart-item">
+              <h3 class="battle-cart-heading"><img src="<%- mix('/assets/images/racingkart/battle-cart-title.png') -%>" alt="小学４年生からのカートチャレンジ"></h3>
+              <p class="battle-cart-desc">以下のお客さまは「チャレンジカート」から挑戦してみよう！</p>
+              <ul>
+                <li class="battle-cart-desc-list">・身長が140cm以上ある小学４年生～中学生</li>
+                <li class="battle-cart-desc-list">・普通運転免許証をお持ちでない方</li>
+              </ul>
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'もっと見る',
+                  link: '#'
+                }) %>
+              </div>
+            </div>
+          </div>
+
+          <div class="battle-cart-fee-section">
+            <h3 class="battle-cart-title">料金</h3>
+            <table class="battle-cart-fee-table">
+              <tbody>
+                <tr>
+                  <th class="battle-cart-fee-th"></th>
+                  <th class="battle-cart-fee-th">一般の方</th>
+                  <th class="battle-cart-fee-th">モビパークパスポートを <br>
+                  お持ちの方</th>
+                  <th class="battle-cart-fee-th">レーシングカート会員 <br>
+                  ＴＲＭＣ-Ｓ会員</th>
+                  <th class="battle-cart-fee-th">運転免許を取得して <br>
+                  １年以内の方※1</th>
+                </tr>
+                <tr>
+                  <th class="battle-cart-fee-th">１人乗り</th>
+                  <td>1,500円</td>
+                  <td colspan="3">1,200円</td>
+                </tr>
+                <tr>
+                  <th class="battle-cart-fee-th">２人乗り</th>
+                  <td>2,000円</td>
+                  <td colspan="3">1,700円</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="battle-cart-fee-desc">※1　割引適用には免許証の提示が必要となります。免許取得1年以内の方が1人でもいらっしゃれば、1グループ5名様まで割引適用となります。</p>
+          </div>
+
+          <div class="battle-cart-challenge">
+            <h3 class="battle-cart-challenge-heading">タイムアップワンポイントアドバイス割</h3>
+            <h4 class="battle-cart-challenge-heading sub">～次はタイムアタックセッションにチャレンジ～</h4>
+            <p class="battle-cart-fee-desc">レーシングカート体験走行終了後、スタッフからアドバイスシートをお渡しします。<br>
+            それをレーシングカート受付までお持ちいただくと、タイムアタックセッションのレーシングカートB（時速50km）をお値引き価格でご利用いただけます。</p>
+
+            <div class="battle-cart-challenge-info">
+              <ul class="battle-cart-challenge-info-ul">
+                <li class="battle-cart-challenge-info-li">
+                  <div class="battle-cart-challenge-box gray">
+                  タイムアタックセッション<br>
+                  通常料金
+                  </div>
+                  <div class="battle-cart-challenge-box">
+                    2,600円
+                  </div>
+                </li>
+                <li class="battle-cart-challenge-info-li">
+                  <div class="battle-cart-challenge-box gray">
+                  アドバイス割
+                  </div>
+                  <div class="battle-cart-challenge-box">
+                  2,100円<br>
+                  <span class="red">（ 500円 OFF ! ）</span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'button-adventure',
+                  text: 'タイムアタックセッションについて',
+                  link: '#'
+                }) %>
+              </div>
+
+            </div>
+          </div>
+
+        </div> <!-- end of l-container-racing -->
+
+        <div class="field-introduction battle-cart-layout">
+          <div class="field-introduction-container">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-how-to heading-wrap-center heading-wrap-hellowoods',
+              text: 'Course Layout',
+              alt: '',
+              subtextvg: 'course-layout-svg',
+              altSubtext: ''
+            }) %>
+            <div class="map-wrapper">
+              <img class="map-image u-show-pc" src="<%= mix('/assets/images/racingkart/map.png') %>" alt="course layout">
+              <img class="map-image u-show-sp" src="<%= mix('/assets/images/racingkart/map-sp.png') %>" alt="course layout">
+            </div>
+            <div class="smap">
+              <img class="map-flag" src="<%= mix('/assets/images/racingkart/map-flag.jpg') %>" alt="map flag">
+            </div>
+          </div>
+        </div>
+
+        <section class="schedule-section">
+          <div class="l-container-racing">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-wrap-business-hours-guide',
+                text: 'Schedule',
+                alt: 'Schedule',
+                altSubtext: '',
+                subtextvg: 'schedule'
+              }) %>
+            </div>
+            <div class="l-container-m business-calendar-wrapper">
+              <div class="business-calendar-inner">
+                <div class="responsive-calendar u-show-pc">
+                  <iframe src="//www.google.com/calendar/embed?showTitle=0&amp;?height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=53u3shra2nqa1buep9ain7sis4%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FTokyo" style=" border-width:0 " width="960" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="responsive-calendar u-show-sp">
+                  <iframe src="//www.google.com/calendar/embed?showTitle=0&amp;mode=AGENDA&amp;height=250&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=53u3shra2nqa1buep9ain7sis4%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FTokyo&amp;showTabs=0&amp;showPrint=0" style="" width="94%" height="320" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <p class="calendar-note">※イベント開催や団体様のご利用により、コースが貸切となる場合がございます。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="member-pass-section">
+          <div class="l-container-racing">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-wrap-business-hours-guide',
+                text: 'Member Pass',
+                alt: 'Member Pass',
+                altSubtext: '',
+                subtextvg: 'member-pass'
+              }) %>
+            </div>
+
+            <p class="battle-cart-fee-desc">1年通してお得にレーシングカートをお楽しみいただける会員制度をご用意しています。</p>
+          </div>
+
+       </section>
+
+      </div>
+
+      <div class="tile program-item program-item-goods battle-cart" data-tab="2">
         This is tab 2
-      </li>
-    </ul>
+      </div>
+
+    </div>
   </div>
-<% } %>

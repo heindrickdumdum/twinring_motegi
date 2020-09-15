@@ -85,7 +85,7 @@
         margin-bottom: 20px;
       }
     }
-    
+
 
     .tileDescWrap {
       max-width: 520px;
@@ -195,7 +195,7 @@
 }
 
 .tilesGoodsList {
-  
+
 
   .program-item-goods {
     max-width: 270px;
@@ -236,9 +236,16 @@
         }
       }
     }
+    &.battle-cart {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   @include min-screen ($breakpoint-mobile + 1) {
     padding: 0 60px 60px;
+  }
+  &.battle-cart-list {
+    padding: 0;
   }
 }

@@ -43,6 +43,11 @@
       &.collection-image-wrapper {
         max-width: 557px;
         text-align: center;
+        iframe {
+          max-width: 100%;
+          width: 557px;
+          height: 304px;
+        }
         .collection-subpage-title {
           font-size: 20px;
           margin-top: 14px;

@@ -8,6 +8,10 @@
     width: 487px;
     height: 285px;
   }
+  &.racing-kart-img {
+    max-width: 487px;
+    width: 100%;
+  }
 }
 .racing-desc {
   color: #2d2d2d;
@@ -31,4 +35,227 @@
 }
 .table-subheading-racing {
   margin-top: 32px;
+}
+
+// Battle Cart
+.battle-cart-title {
+  text-align: center;
+  color: #2d2d2d;
+  font-family: $font-hiragino;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  position: relative;
+  z-index: 1;
+  margin: 38px auto 51px;
+  &::after {
+    content: '';
+    width: 95px;
+    height: 7px;
+    background: url(/assets/images/racingkart/line.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+    max-width: 100%;
+  }
+}
+.battle-cart-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 60px;
+  padding: 47px 55px;
+  z-index: 1;
+  &:before {
+    content: "";
+    background: url('/assets/images/racingkart/border.png');
+    background-size: 100% 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .battle-cart-item {
+    max-width: 444px;
+    .battle-cart-heading {
+      max-width: 444px;
+      width: 100%;
+      margin: 7px 0 33px;
+    }
+    .battle-cart-desc {
+      color: #333333;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: 0.06em;
+      margin-bottom: 25px;
+    }
+    .battle-cart-desc-list {
+      line-height: 2;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    .l-button {
+      margin-top: 33px;
+      .button-adventure  {
+          margin: 0 8px 0;
+      }
+    }
+  }
+}
+.battle-cart-fee-section {
+
+  .battle-cart-title {
+    &:after {
+      width: 76px;
+    }
+  }
+  .battle-cart-fee-table {
+    border:1px solid #4EBD7B;
+    width: 100%;
+    margin-bottom: 35px;
+    .battle-cart-fee-th {
+      background-color: #f7f7f7;
+      border:1px solid #4EBD7B;
+      text-align: center;
+      padding: 42px 34px;
+    }
+    tr, td {
+      border:1px solid #4EBD7B;
+      text-align: center;
+    }
+  }
+}
+.battle-cart-fee-desc {
+  line-height: 2;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+}
+.battle-cart-challenge {
+  margin-top: 64px;
+  .battle-cart-challenge-heading {
+    font-family: $font-hiragino;
+    font-size: 24px;
+    letter-spacing: 2.88px;
+    line-height: 1;
+    position: relative;
+    color: #2d2d2d;
+    text-align: center;
+    z-index: 1;
+    &::after {
+      content: '';
+      width: 532px;
+      height: 7px;
+      background: url(/assets/images/racingkart/line2.png) no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: -1;
+      max-width: 100%;
+    }
+    &.sub {
+      letter-spacing: 2.16px;
+      line-height: 1;
+      font-size: 18px;
+      margin-top: 13px;
+      margin-bottom: 38px;
+      &::after {
+        width: 478px;
+      }
+    }
+  }
+  .battle-cart-challenge-info {
+    margin-top: 50px;
+    position: relative;
+    padding-bottom: 60px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      background-image: url(../images/program/underline.png);
+      bottom: 0px;
+      left: 1px;
+    }
+    .battle-cart-challenge-info-ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 704px;
+      margin: 0 auto;
+      .battle-cart-challenge-info-li {
+        width: 292px;
+        position: relative;
+        &::after {
+          content: url('/assets/images/racingkart/arrow.png');
+          position: absolute;
+          right: -75px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+        .battle-cart-challenge-box {
+          border: 1px solid #4EBD7B;
+          min-height: 95px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          &.gray {
+            background-color: #f7f7f7;
+          }
+          .red {
+            display: block;
+            color: #c1272d;
+          }
+        }
+      }
+    }
+    .l-button {
+      .button-icon {
+        display: none;
+      }
+    }
+  }
+}
+.battle-cart-layout {
+  .heading-subtext {
+    width: 595px;
+    max-width: 100%;
+  }
+}
+.map-flag {
+  max-width: 902px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.schedule-section {
+  .business-calendar-wrapper {
+    background: none;
+  }
+}
+.member-pass-section {
+  .heading-subtext {
+    width: 639px;
+    max-width: 100%;
+  }
 }

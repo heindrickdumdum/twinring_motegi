@@ -167,8 +167,8 @@
 
 
       <div class="l-section">
-        <div class="l-container l-container-racing">
-
+        <div class="l-container ">
+          <div class="l-container-racing">
             <div class="l-section-title">
               <%- include('/partials/heading', {
                 modifier: 'heading-wrap-center heading-mobipark heading-racing',
@@ -178,26 +178,32 @@
                 subtextvg: 'battle-cart'
               }) %>
             </div>
-
-            <section class="subpage-section subpage-section-racing subapge-section-goods-tab">
-              <%- include('/partials/racingkart/racing-tabs', {
-                racingKartTabs : getData().data.racingTabs
-              }) -%>
-            </section>
+          </div>
+          <section class="subpage-section subpage-section-racing subapge-section-goods-tab">
+            <%- include('/partials/racingkart/racing-tabs' ) -%>
+          </section>
 
         </div>
       </div>
 
+      <section id="hellowoods-faq" class="l-section l-section-hellowoods faq-file-dl">
+        <%- include('/partials/racingkart-faq', {
+          racingkartAccordion: getData().data.racingkartAccordion
+        }) %>
+      </section>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
 
     </main>
-
-
-
     <!-- END BOTTOM -->
   </div>
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsCollectionPit
+  breadcrumbs : getData().data.breadcrumbsRacingKart
 }) -%>
 <%- include('/partials/footer', { pageId } ) -%>

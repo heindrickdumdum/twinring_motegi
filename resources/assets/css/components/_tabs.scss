@@ -236,8 +236,21 @@
   padding-left: 290px;
 
   &.tab-banner-racing {
-    padding: 60px 20px;
+    padding: 60px 20px 40px;
     text-align: center;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-position: left;
+      background-image: url(/assets/images/img-dash.png);
+      background-repeat: repeat-x;
+      opacity: 0.2;
+    }
     .tab-banner-title {
       max-width: 460px;
       width: 100%;

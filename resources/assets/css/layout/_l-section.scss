@@ -10,6 +10,14 @@
     padding-bottom: 83px;
   }
 
+  &.l-racing {
+    padding-bottom: 56px;
+  }
+
+  &.l-section-racing {
+    padding-bottom: 10px;
+  }
+
   @include max-screen($breakpoint-mobile) {
     padding-bottom: 55px;
   }

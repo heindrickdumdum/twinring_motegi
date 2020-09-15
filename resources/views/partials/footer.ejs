@@ -65,7 +65,8 @@
   'blueNote',
   'goods',
   'events',
-  'collectionHall'
+  'collectionHall',
+  'racingKart'
   ]
 %>
 
@@ -192,7 +193,7 @@
     <script src="<%= mix('/assets/js/tabs.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'goods') { %>
+  <% if(pageId == 'goods' || pageId == 'racingKart') { %>
     <script src="<%= mix('/assets/js/tabs-goods.js') %>" async></script>
   <% } %>
 

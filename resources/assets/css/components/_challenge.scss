@@ -98,6 +98,14 @@
       }
 
     }
+    &.racing {
+      max-width: 605px;
+
+      @include max-screen ($breakpoint-mobile) {
+        line-height: 2;
+      }
+
+    }
   }
 
   .challenge-img {
@@ -109,7 +117,7 @@
         display: block;
         padding-top: 15px;
         margin: auto;
-        
+
       }
     }
   }
@@ -128,6 +136,11 @@
       max-width: 233px;
       top: 64px;
       left: 17px;
+    }
+    &.racing-img1 {
+      max-width: 233px;
+      top: -101px;
+      left: 13px;
     }
   }
 

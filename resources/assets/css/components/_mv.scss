@@ -902,6 +902,15 @@
       }
     }
 
+    .heading-racing {
+      .heading-subtext {
+        max-width: 490px;
+        @include max-screen ($breakpoint-mobile) {
+          width: 68%;
+        }
+      }
+    }
+
     .heading-tsubasa {
       .heading-subtext {
         max-width: 600px;
@@ -1131,6 +1140,12 @@
     background: url(#{$image-path}collection/mv-today-bg.png) no-repeat;
     background-size: contain;
     max-width: 270px;
+  }
+
+  &.mv-racing-logo {
+    background: url(#{$image-path}racingkart/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 247px;
   }
 
   &.mv-events-logo {

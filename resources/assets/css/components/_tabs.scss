@@ -56,6 +56,8 @@
     background-color: #fff;
     margin-bottom: 0;
   }
+
+
 }
 
 .custom-select-goods-sp {
@@ -64,7 +66,7 @@
     left: 20px;
     max-width: 20px;
   }
-  
+
   .select-selected-goods {
     .ico-motegi,.ico-motor {
       max-width: 25px;
@@ -158,6 +160,18 @@
       }
     }
 
+    &.tabs-racing {
+      text-align: right;
+      margin-right: 40px;
+      &:last-child {
+        margin-right: 0;
+      }
+      .lbl-racing {
+        display: inline-block;
+        padding: 23px 20px;
+      }
+    }
+
     &.tab-kids {
       .lbl-goods {
         padding-left: 50px;
@@ -194,7 +208,7 @@
       .ico-honda {
         top: 23px;
       }
-    }    
+    }
   }
 
   [type="radio"] {
@@ -221,6 +235,29 @@
   margin: auto;
   padding-left: 290px;
 
+  &.tab-banner-racing {
+    padding: 60px 20px;
+    text-align: center;
+    .tab-banner-title {
+      max-width: 460px;
+      width: 100%;
+      margin: 0 auto 34px;
+    }
+    .table-banner-span {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: 0.09em;
+      display: block;
+      margin-bottom: 24px;
+    }
+    .table-banner-desc {
+      font-weight: 400;
+      line-height: 2;
+      font-size: 15px;
+    }
+  }
+
   li {
     display: none;
 
@@ -243,7 +280,7 @@
     line-height: 1.8;
     margin-bottom: 30px;
   }
-  
+
 }
 
 .program-item {display:none;}
@@ -300,7 +337,7 @@
     }
   }
 
-  
+
 }
 .select-selected {
   padding: 9px;

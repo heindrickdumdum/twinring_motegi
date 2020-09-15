@@ -346,6 +346,10 @@
     width: 100%;
     background: none; //for ie
 
+    &.heading-text-racing {
+      max-width: 606px;
+    }
+
     @include max-screen($breakpoint-mobile) {
       max-width: 250px;
     }
@@ -360,6 +364,13 @@
 
   .heading-subtext {
     max-width: 161px;
+    width: 100%;
+  }
+}
+
+.heading-racing {
+  .heading-subtext {
+    max-width: 505px;
     width: 100%;
   }
 }

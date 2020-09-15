@@ -1,0 +1,34 @@
+.racing-kart-video {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.racing-kart-item {
+  iframe {
+    width: 487px;
+    height: 285px;
+  }
+}
+.racing-desc {
+  color: #2d2d2d;
+  font-family: $font-hiragino;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.09em;
+  margin-top: 21px;
+}
+.table-heading-racing {
+  max-width: 234px;
+}
+.table-racing {
+  .link {
+    color: #00a040;
+  }
+  .table-desc {
+    font-weight: 400;
+  }
+}
+.table-subheading-racing {
+  margin-top: 32px;
+}

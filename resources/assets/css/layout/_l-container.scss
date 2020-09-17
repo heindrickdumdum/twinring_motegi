@@ -25,7 +25,6 @@
 
 .l-container-racing {
     max-width: 1086px;
-    width: 100%;
     margin: 0 auto;
     padding: 0 32px;
     @include max-screen($breakpoint-mobile) {
@@ -34,6 +33,9 @@
 
       @at-root .recommend-menu & {//marcherant lunch page
         padding: 0px;
+      }
+      &.for-sp {
+        padding: 0;
       }
     }
 

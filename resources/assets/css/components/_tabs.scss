@@ -163,6 +163,9 @@
     &.tabs-racing {
       text-align: right;
       margin-right: 40px;
+      &.align-left {
+        text-align: left;
+      }
       @include max-screen ($breakpoint-mobile) {
         margin-right: 12px;
         max-width: 48%;

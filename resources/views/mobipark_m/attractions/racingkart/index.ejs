@@ -49,7 +49,7 @@
               <ul class="info-list">
                 <% racingInfo.forEach(item => { %>
                 <li class="info-item">
-                  <a href="<%- item.link %>">
+                  <a href="<%- item.link %>" target="_blank">
                     <span><%= item.desc %></span>
                   </a>
                 </li>
@@ -125,7 +125,7 @@
             <tbody>
               <tr class="table-row">
                 <th class="table-head">場所</th>
-                <td class="table-col">モビパーク内レーシングカート <a href="#" class="link">MAPを見る</a></td>
+                <td class="table-col">モビパーク内レーシングカート <a href="/map_m" class="link">MAPを見る</a></td>
               </tr>
 
               <tr class="table-row">
@@ -133,7 +133,7 @@
                 <td class="table-col">
                   午前：営業開始時間～11:30 <br>
                   午後：13:00～営業終了時間 <br>
-                  <p class="table-desc">※イベントの開催や団体様のご利用により営業時間が変更となる場合がございます。その日の営業開始時間・営業終了時間を含め、詳しくは<u>スケジュール</u>をご確認ください。</p>
+                  <p class="table-desc">※イベントの開催や団体様のご利用により営業時間が変更となる場合がございます。その日の営業開始時間・営業終了時間を含め、詳しくは<a href="/mobipark_m/attractions/racingkart/schedule.html">スケジュール</a>をご確認ください。</p>
                 </td>
               </tr>
 

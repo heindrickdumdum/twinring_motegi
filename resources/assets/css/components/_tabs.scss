@@ -258,6 +258,10 @@
     padding: 60px 20px 40px;
     text-align: center;
     position: relative;
+    @include max-screen ($breakpoint-mobile) {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
     &::after {
       position: absolute;
       content: '';
@@ -269,6 +273,9 @@
       background-image: url(/assets/images/img-dash.png);
       background-repeat: repeat-x;
       opacity: 0.2;
+      @include max-screen ($breakpoint-mobile) {
+        display: none;
+      }
     }
     .tab-banner-title {
       max-width: 460px;

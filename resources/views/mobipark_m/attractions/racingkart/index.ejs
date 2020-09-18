@@ -85,7 +85,7 @@
 ライダーなど世界のトップ選手も走ったコースで 仲間とともに本格バトル">
                 </p>
                 <p class="desc racing">
-                  はじめての人でもチャレンジできる気軽さがありながら、<br>
+                  はじめての人でもチャレンジできる気軽さがありながら、<br class="u-show-pc">
                   スピード感・エンジン音・コーナーリングの感覚はレーシングカーそのもの。本格的なカートアトラクションで、レース気分を味わおう。
                 </p>
               </div>
@@ -125,7 +125,7 @@
             <tbody>
               <tr class="table-row">
                 <th class="table-head">場所</th>
-                <td class="table-col">モビパーク内レーシングカート <a href="/map_m" class="link">MAPを見る</a></td>
+                <td class="table-col">モビパーク内レーシングカート<br class="u-show-sp"> <a href="/map_m" class="link">MAPを見る</a></td>
               </tr>
 
               <tr class="table-row">
@@ -166,7 +166,7 @@
       </div>
 
 
-      <div class="l-section">
+      <div class="l-section l-section-battle-cart">
         <div class="l-container ">
           <div class="l-container-racing">
             <div class="l-section-title u-show-pc">
@@ -308,7 +308,7 @@
                   <li>・５回分　
                     <ul>
                       <li class="member-pass-info">通常価格：10,000円</li>
-                      <li class="member-pass-info">会員価格：8,000円</li>
+                      <li class="member-pass-info">会員価格：<span class="member-pass-item-red">8,000円</span></li>
                     </ul>
                   </li>
                 </ul>
@@ -340,7 +340,7 @@
                         <tr>
                           <th class="battle-cart-fee-th">区分</th>
                           <th class="battle-cart-fee-th">入会金</th>
-                          <th class="battle-cart-fee-th">年会金</th>
+                          <th class="battle-cart-fee-th">年会費</th>
                           <th class="battle-cart-fee-th">条件</th>
                         </tr>
                         <tr>
@@ -475,11 +475,13 @@
         }) %>
       </section>
 
-      <%- include('/partials/banner-cta', {
-        link: '/mobipark_m/card/',
-        imgPath: mix('/assets/images/subpage-banner-bottom.png'),
-        alt: '上手に乗れたらライセンスカードをつくろう'
-      }) -%>
+      <div class="banner-cta-racing">
+        <%- include('/partials/banner-cta', {
+          link: '/mobipark_m/card/',
+          imgPath: mix('/assets/images/subpage-banner-bottom.png'),
+          alt: '上手に乗れたらライセンスカードをつくろう'
+        }) -%>
+      </div>
 
       <!-- recommendation module -->
       <%- include('/partials/recommendation') -%>

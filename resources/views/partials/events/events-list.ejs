@@ -4,7 +4,7 @@
       <li class="goods-shop-items clearfix events-list-item" data-age="<%- item.age %>" data-grade="<%- item.grade %>" data-passport="<%- item.passport %>" >
         <div class="wrapper-container">
           <div class="area-item-image-wrapper">
-            
+
               <div class="events-swiper">
                 <div class="swiper-wrapper">
                   <% item.imgList.forEach( imgItem => { %>
@@ -18,12 +18,12 @@
                 <!-- Add Pagination -->
                 <div class="events-swiper-pagination"></div>
               </div>
-              
+
           </div>
           <div class="area-item-desc-wrapper">
             <p class="title"><%- item.title %></p>
             <h3 class="subpage-title">
-              <span><a class="" href="<%- item.link %>"><%- item.colorTitle %> </a></span>
+              <span><%- item.colorTitle %></span>
             </h3>
             <p class="desc"><%- item.desc %></p>
             <ul class="carbike-article-list details-list">
@@ -41,7 +41,7 @@
                   modifier: 'local',
                   text: 'もっと見る',
                   link: item.ctaLink
-                  
+
                 }) %>
               </div>
             <% } %>

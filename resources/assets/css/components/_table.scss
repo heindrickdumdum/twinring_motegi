@@ -398,6 +398,9 @@
   a {
     color: $base-font-color;
     text-decoration: underline;
+    &:hover {
+      color: #00a040;
+    }
   }
 }
 

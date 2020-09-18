@@ -253,6 +253,9 @@
   padding-bottom: 20px;
   margin: auto;
   padding-left: 290px;
+  @include max-screen ($breakpoint-mobile) {
+    padding-left: 0;
+  }
 
   &.tab-banner-racing {
     padding: 60px 20px 40px;
@@ -392,6 +395,8 @@
     content: "\25BE";
     position: absolute;
     right: 11px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

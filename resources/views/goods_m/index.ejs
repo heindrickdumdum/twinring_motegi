@@ -33,6 +33,32 @@
     </div>
 
     <main>
+      <div class="l-section l-racing">
+        <section class="info-container info-container-hellowoods">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-mobipark heading-collection',
+                text: 'Information',
+                alt: 'information',
+                altSubtext: '',
+                subtextvg: 'info-subtext'
+              }) %>
+            </div>
+
+            <div class="l-container">
+              <ul class="info-list">
+                <% goodsInfo.forEach(item => { %>
+                <li class="info-item">
+                  <a href="<%- item.link %>" target="_blank">
+                    <span><%= item.desc %></span>
+                  </a>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+        </section>
+      </div>
+
       <div class="">
         <div class="l-section-title">
           <%- include('/partials/heading', {
@@ -47,7 +73,7 @@
         <section class="subpage-section subapge-section-goods-tab">
           <%- include('/partials/goods_m/goods-list', {
             dataGoodList : getData().data.goodsList
-          }) -%> 
+          }) -%>
         </section>
       </div>
 
@@ -76,30 +102,32 @@
             <div class="l-button">
               <%- include('/partials/button', {
                 modifier: 'local',
-                text: '(PDF)日用品・販売ショップ一覧',
-                link: '#'
+                text: '詳細はこちら（PDF：706KB）',
+                link: '/assets/images/pdf/急に必要になったもの.pdf',
+                newTab: true
               }) %>
             </div>
           </div>
 
+          <div class="banner-3">
+            <a href="https://online.mobilityland.co.jp/SelectCategory.aspx" target="_blank">
+            <img class="u-show-pc" src="<%- mix('/assets/images/goods/bnr-onlineshop.jpg') %>" alt="公式オンラインショップ">
+            <img class="u-show-sp" src="<%- mix('/assets/images/goods/bnr-onlineshop-sp.jpg') %>" alt="公式オンラインショップ">
+            </a>
+          </div>
+
           <div class="banner-2">
             <p class="banner-desc">
-              ※表示金額はすべて税込みです。<br>
-              ※商品のデザインおよび料金等は予告なく変更になる場合がございます。<br>
-              ※品切れの際は、ご容赦ください。
+              ※商品のデザインおよび料金等は予告なく変更になる場合がございます。
             </p>
           </div>
 
-          <div class="banner-3">
-            <img class="u-show-pc" src="<%- mix('/assets/images/goods/bnr-onlineshop.jpg') %>" alt="公式オンラインショップ">
-            <img class="u-show-sp" src="<%- mix('/assets/images/goods/bnr-onlineshop-sp.jpg') %>" alt="公式オンラインショップ">
-          </div>
         </section>
       </div>
 
-      
 
-      
+
+
 
       <!-- recommendation module -->
       <%- include('/partials/recommendation') -%>

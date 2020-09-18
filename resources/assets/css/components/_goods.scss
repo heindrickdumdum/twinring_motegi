@@ -51,6 +51,10 @@
         .collection-subpage-title {
           font-size: 20px;
           margin-top: 14px;
+          @include max-screen ($breakpoint-mobile) {
+            font-size: 19px;
+            letter-spacing: 0.02em;
+          }
         }
         .collection-details {
           text-align: left;

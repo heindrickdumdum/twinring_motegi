@@ -12,6 +12,19 @@
     }
   }
 }
+.accordion-link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #333;
+  &.underline {
+    font-weight: 400;
+    @include max-screen($breakpoint-mobile) {
+      &.u-show-sp {
+        display: inline-block !important;
+      }
+    }
+  }
+}
 
 .accordion-arrow {
   display: block;

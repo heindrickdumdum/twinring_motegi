@@ -206,6 +206,9 @@
 
   &.collection {
     background-position: right 32px top 84px;
+    @include max-screen($breakpoint-mobile) {
+        max-height: inherit;
+    }
     .heading-text img{
       max-width: 155%;
     }

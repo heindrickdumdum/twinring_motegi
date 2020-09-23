@@ -771,6 +771,10 @@
   &.mv-collection-pit {
     max-width: 270px;
 
+    .heading {
+      margin: 40px 0 -7px;
+    }
+
     @include max-screen ($breakpoint-mobile) {
       .heading {
         margin-bottom: 10px;
@@ -897,7 +901,8 @@
       .heading-subtext {
         max-width: 688px;
         @include max-screen ($breakpoint-mobile) {
-          width: 68%;
+          width: 100%;
+          max-width: 247px;
         }
       }
     }

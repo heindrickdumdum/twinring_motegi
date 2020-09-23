@@ -110,6 +110,12 @@
         &:before {
           height: 40%;
         }
+        &.goods-item {
+          height: 120px;
+          &:before {
+            height: 66%;
+          }
+        }
         .collection-item-div {
           padding-top: 23px;
           padding-bottom: 14px;

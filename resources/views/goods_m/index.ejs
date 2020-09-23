@@ -33,7 +33,7 @@
     </div>
 
     <main>
-      <div class="l-section l-racing">
+      <div class="l-section l-section-battle-cart">
         <section class="info-container info-container-hellowoods">
             <div class="l-section-title">
               <%- include('/partials/heading', {
@@ -47,13 +47,11 @@
 
             <div class="l-container">
               <ul class="info-list">
-                <% goodsInfo.forEach(item => { %>
-                <li class="info-item">
-                  <a href="<%- item.link %>" target="_blank">
-                    <span><%= item.desc %></span>
-                  </a>
+                <li class="info-item collection-item goods-item">
+                  <div class="collection-item-div">
+                    現在「スーベニアもてぎ」「モビプラザ」「グランツーリスモ カフェ ショップ」では、<br class="u-show-pc">営業時間を短縮しております。あらかじめご了承ください。
+                  </div>
                 </li>
-                <% }) %>
               </ul>
             </div>
         </section>

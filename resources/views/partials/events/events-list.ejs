@@ -5,16 +5,21 @@
         <div class="wrapper-container">
           <div class="area-item-image-wrapper">
 
-              <div class="events-swiper">
+              <div class="events-swiper" data-imgcount="<%= item.imgList.length %>">
                 <div class="swiper-wrapper">
                   <% item.imgList.forEach( imgItem => { %>
                     <div class="swiper-slide">
-                        <img src="<%- imgItem.imgUrl %>" alt="Mobi Park">
+                      <img src="<%- imgItem.imgUrl %>" alt="Mobi Park">
                     </div>
                   <% }) %>
+
+                  <!-- Add Pagination -->
+
+                    <div class="events-swiper-pagination"></div>
+
                 </div>
-                <!-- Add Pagination -->
-                <div class="events-swiper-pagination"></div>
+
+
               </div>
 
           </div>

@@ -18,6 +18,40 @@
 
   <div class="swiper-container slider-pickup js-slider-pickup">
     <ul class="swiper-wrapper slider-wrapper">
+      <% if(pageId == 'collectionHall') { %>
+        <% getData().data.pickupcollectionhall.forEach(item => { %>
+        <li class="swiper-slide slider-item">
+          <%- include('/partials/article-no-design', {
+            category: item.category,
+            image: item.image,
+            heading: item.heading,
+            type: item.type,
+            date: item.date,
+            link: item.link,
+            modifier: 'article-pickup',
+            buttonLink: item.link,
+            buttonText: ''
+          }) %>
+        </li>
+        <% }) %>
+      <% } else if (pageId == 'racingKart') {  %>
+        <% getData().data.pickupracingkart.forEach(item => { %>
+        <li class="swiper-slide slider-item">
+          <%- include('/partials/article-no-design', {
+            category: item.category,
+            image: item.image,
+            heading: item.heading,
+            type: item.type,
+            date: item.date,
+            link: item.link,
+            modifier: 'article-pickup',
+            buttonLink: item.link,
+            buttonText: ''
+          }) %>
+        </li>
+        <% }) %>
+      <% }  else { %>
+
       <% getData().data.pickup.forEach(item => { %>
       <li class="swiper-slide slider-item">
         <%- include('/partials/article-no-design', {
@@ -32,7 +66,7 @@
           buttonText: ''
         }) %>
       </li>
-      <% }) %>
+      <% }) }%>
     </ul>
   </div>
 </section>

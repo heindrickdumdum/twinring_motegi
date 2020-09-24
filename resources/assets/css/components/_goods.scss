@@ -204,6 +204,10 @@
     .events-list-item {
       border-bottom: 1px solid #dfdfdf;
 
+      @include max-screen ($breakpoint-mobile) {
+        padding-bottom: 40px;
+      }
+
       &:last-child {
         border-bottom: 0;
       }
@@ -237,7 +241,7 @@
       .details-list {
         margin-bottom: 0;
         @include max-screen ($breakpoint-mobile) {
-          margin-bottom: 40px;
+          margin-bottom: 0;
 
           .details-list-item {
             width: 100%;

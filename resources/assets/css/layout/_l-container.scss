@@ -31,6 +31,10 @@
       width: 100%;
       padding: 0 20px;
 
+      &.l-racing-sp {
+        padding: 0;
+      }
+
       @at-root .recommend-menu & {//marcherant lunch page
         padding: 0px;
       }

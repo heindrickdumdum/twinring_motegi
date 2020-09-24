@@ -35,6 +35,7 @@
 }
 .table-heading-racing {
   max-width: 234px;
+  margin-top: 0;
 }
 .table-racing {
   .link {
@@ -176,8 +177,7 @@
       padding: 42px 34px;
       @include max-screen ($breakpoint-mobile) {
         width: 45%;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 15px 20px;
       }
     }
     tr, td {
@@ -192,7 +192,7 @@
     }
     .align-left {
       text-align: left;
-      padding: 0 24px;
+      padding: 20px 24px;
     }
   }
 }
@@ -275,7 +275,7 @@
       background-image: url(../images/program/underline.png);
       bottom: 0px;
       left: 1px;
-      opacity: 0.5;
+      opacity: 0.8;
     }
     .battle-cart-challenge-info-ul {
       display: flex;
@@ -340,6 +340,11 @@
           @include max-screen ($breakpoint-mobile) {
             font-size: 15px;
           }
+          &:hover {
+            border-color: #4EBD7B;
+            color: #4EBD7B;
+            transition: 0.3s;
+          }
           &::before {
             content: "";
             background: url('/assets/images/racingkart/daily-ranking.png');
@@ -378,11 +383,6 @@
             color: #c1272d;
           }
         }
-      }
-    }
-    .l-button {
-      .button-icon {
-        display: none;
       }
     }
   }
@@ -481,6 +481,9 @@
       color: #2d2d2d;
       position: relative;
       padding: 32px 20px;
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 14px;
+      }
       span {
         position: relative;
         display: inline-block;
@@ -497,11 +500,17 @@
           height: 0;
           border-style: solid;
           border-color: transparent transparent #719b68 transparent;
+          @include max-screen ($breakpoint-mobile) {
+            top: 6px;
+          }
         }
         &.is-open {
           &:before {
             transform: rotate(0);
-            top: 3px
+            top: 3px;
+            @include max-screen ($breakpoint-mobile) {
+              top: 1px;
+            }
           }
         }
       }
@@ -542,6 +551,12 @@
 }
 .banner-cta-racing{
   .banner-cta {
-    margin-top: 89px;
+    margin-top: 44px;
+    @include max-screen ($breakpoint-mobile) {
+      margin-top: 10px;
+    }
   }
+}
+.racing-kart-ul {
+  padding-left: 17px;
 }

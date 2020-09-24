@@ -38,6 +38,9 @@
 
   &.mv-events {
     margin-bottom: 90px;
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 80px;
+    }
     .events-mv-heading {
       bottom: 60px;
 

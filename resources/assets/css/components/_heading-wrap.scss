@@ -800,7 +800,9 @@
       height: 48px;
       @include max-screen ($breakpoint-mobile) {
         max-width: 206px;
-        letter-spacing: 0.05em;
+        .heading-text {
+          letter-spacing: 0.05em;
+        }
       }
     }
   }

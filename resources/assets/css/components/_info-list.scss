@@ -73,6 +73,14 @@
         }
       }
 
+      &.info-item-racing {
+        &:before {
+          @include max-screen($breakpoint-mobile) {
+            top: -18px;
+          }
+        }
+      }
+
       span {
         //margin-top: 24px;
         //margin-bottom: 24px;

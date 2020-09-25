@@ -819,6 +819,9 @@
       margin-top: 0;
       max-width: 989px;
       width: 100%;
+      svg {
+        fill:#fff;
+      }
     }
   }
 
@@ -898,7 +901,7 @@
 
   &.heading-collection {
     .heading-text {
-      letter-spacing: 0.10em;
+      letter-spacing: 0;
     }
   }
 

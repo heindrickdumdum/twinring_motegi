@@ -20,6 +20,37 @@
       }
     }
   }
+
+}
+
+.l-container-racing {
+    max-width: 1086px;
+    margin: 0 auto;
+    padding: 0 32px;
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      padding: 0 20px;
+
+      &.l-racing-sp {
+        padding: 0;
+      }
+
+      @at-root .recommend-menu & {//marcherant lunch page
+        padding: 0px;
+      }
+      &.for-sp {
+        padding: 0;
+      }
+    }
+
+    @at-root .camp-wrapper & {
+      &-m {
+        margin: {
+          left: auto;
+          right: auto;
+        }
+      }
+    }
 }
 
 .l-container-kids-attraction {
@@ -56,13 +87,13 @@
   background-size: 100% 95%;
   max-width: none;
   background-repeat: no-repeat;
-  
+
   .business-calendar-inner {
     max-width: 1021px;
     margin: 0 auto;
     padding-bottom: 50px;
     padding-top: 25px;
-    
+
     iframe {
       width: 100%;
     }
@@ -84,7 +115,7 @@
     }
   }
 
-  
+
 
   @include max-screen ($breakpoint-mobile) {
     width: 100%;
@@ -95,4 +126,36 @@
 
 .l-container-mobi-guide {
   max-width: 1170px;
+}
+
+.l-container-m {
+  max-width: 1021px;margin: 0 auto;
+
+  @include max-screen ($breakpoint-mobile) {
+    max-width: 252px;
+
+    &.full-sp {
+      max-width: none;
+      padding: 0 20px;
+    }
+  }
+
+  &.collection-data-container {
+    max-width: 1116px;
+    margin-top: 64px;
+    @include max-screen ($breakpoint-mobile) {
+      margin-top: 0;
+      padding: 0 30px;
+    }
+  }
+}
+
+.goods-shop-container {
+  @include max-screen ($breakpoint-mobile) {
+    max-width: 265px;
+    &.experience-container-sp {
+      max-width: 373px;
+      width: 94%;
+    }
+  }
 }

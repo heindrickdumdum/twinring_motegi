@@ -20,6 +20,15 @@
     }
   }
 
+  &.step-word-coll-pit {
+    line-height: 1;
+
+    @include min-screen ($breakpoint-mobile+1) {
+      margin-top: -15px;
+      margin-bottom: 18px;
+    }
+  }
+
   .step-word {
     font-size: 18px;
     margin-right: 10px;

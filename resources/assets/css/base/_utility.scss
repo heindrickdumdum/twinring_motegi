@@ -14,6 +14,10 @@
 
   @media screen and (max-width: $breakpoint-mobile) {
     display: block !important;
+
+    &.collection-img-sp {
+      margin-bottom: 32px;
+    }
   }
 
   &.u-show-sp-flex {
@@ -53,6 +57,10 @@
   text-align: left;
 }
 
+.text-align-right {
+  text-align: right;
+}
+
 .hover-wrap {
   overflow: hidden;
   &:hover {
@@ -60,7 +68,7 @@
       transition: ease 1s all;
       transform: scale(1.2);
 
-      @at-root 
+      @at-root
       .breakfast-marcherant &,
       .lunch-marcherant &,
       .dinner-set-marcherant & {//lunch marcherant
@@ -84,4 +92,8 @@
   &:hover {
     opacity: 0.8 !important;
   }
+}
+
+.v-hidden {
+  visibility: hidden;
 }

@@ -1,0 +1,56 @@
+<% if(dataEventsItem) { %>
+  <ul class="goods-shop-list events-list">
+    <% dataEventsItem.forEach( item => { %>
+      <li class="goods-shop-items events-shop-items clearfix events-list-item" data-age="<%- item.age %>" data-grade="<%- item.grade %>" data-passport="<%- item.passport %>" >
+        <div class="wrapper-container">
+          <div class="area-item-image-wrapper">
+
+              <div class="events-swiper" data-imgcount="<%= item.imgList.length %>">
+                <div class="swiper-wrapper">
+                  <% item.imgList.forEach( imgItem => { %>
+                    <div class="swiper-slide">
+                      <img src="<%- imgItem.imgUrl %>" alt="Mobi Park">
+                    </div>
+                  <% }) %>
+
+                  <!-- Add Pagination -->
+
+                    <div class="events-swiper-pagination"></div>
+
+                </div>
+
+
+              </div>
+
+          </div>
+          <div class="area-item-desc-wrapper">
+            <p class="title"><%- item.title %></p>
+            <h3 class="subpage-title">
+              <span><%- item.colorTitle %></span>
+            </h3>
+            <p class="desc"><%- item.desc %></p>
+            <ul class="carbike-article-list details-list">
+              <% item.dataList.forEach( dataitem => { %>
+                <li class="carbike-article-list-item details-list-item">
+                  <span class="carbike-article-list-label details-list-item-label"><%= dataitem.label %></span>
+                  <p class="carbike-article-list-desc details-list-item-desc"><%- dataitem.content %></p>
+                </li>
+              <% }) %>
+            </ul>
+
+            <% if(item.ctaLink) { %>
+              <div class="l-button">
+                <%- include('/partials/button', {
+                  modifier: 'local',
+                  text: 'もっと見る',
+                  link: item.ctaLink
+
+                }) %>
+              </div>
+            <% } %>
+          </div>
+        </div>
+      </li>
+    <% }) %>
+  </ul>
+  <% } %>

@@ -18,8 +18,24 @@
 
     @include min-screen($breakpoint-mobile + 1) {
       margin-bottom: 55px;
+
+      .arrow-green-down {
+        &::after {
+          top: 15px;
+        }
+      }
     }
   }
+}
+
+.media-coll-pit {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 0;
+    }
+  }
+  
 }
 
 .sumika-media,
@@ -49,6 +65,8 @@
     z-index: 1;
   }
 }
+
+
 
 //media-grid
 .media-grid {
@@ -1173,3 +1191,5 @@
     }
   }
 }
+
+

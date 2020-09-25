@@ -1,5 +1,14 @@
 .heading-wrap {
 
+  &.heading-wrap-bluenote {
+    .heading-subtext {
+      @include max-screen ($breakpoint-mobile) {
+        height: auto;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
   &.heading-donguri {
     .heading-subtext {
       height: 85px;
@@ -19,6 +28,7 @@
       }
     }
   }
+
   &.heading-wrap-information {
     .heading-text {
       letter-spacing: 0.01em;
@@ -231,6 +241,36 @@
     }
   }
 
+  &.heading-wrap-collection-pit {
+
+    @include min-screen ($breakpoint-mobile+1) {
+      .heading-subtext:last-child {
+        span {
+          font-size: 15px;
+          font-weight: bold;
+          line-height: 30px;
+          letter-spacing: 3.4px;
+        }
+      }
+    }
+
+
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 5px;
+      .heading-subtext:last-child {
+        height: auto;
+        margin-bottom: 30px;
+        padding: 0;
+        line-height: 1.7;
+      }
+    }
+
+
+
+
+  }
+
+
   &.heading-main-pit {
     text-align: center;
 
@@ -275,7 +315,7 @@
     .heading-sub-program {
       font-size: 18px;
       letter-spacing: 1px;
-      line-height: 1.8;  
+      line-height: 1.8;
     }
 
     .heading-sub-program-sp {
@@ -337,7 +377,7 @@
       font-size: 34px;
 
       @include max-screen($breakpoint-mobile) {
-        letter-spacing: 0.01em;
+        letter-spacing: 0.05em;
         font-size: 24px;
       }
     }
@@ -431,6 +471,20 @@
         height: 70px;
         max-width: 250px;
       }
+    }
+  }
+
+  &.heading-wrap-goods-color {
+    max-width: 275px;
+    margin: auto;
+
+    .heading {
+      margin-bottom: 12px;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 180px;
+      margin-bottom: 18px;
     }
   }
 
@@ -628,6 +682,20 @@
     }
   }
 
+  &.heading-wrap-green-line {
+    text-align: center;
+    .heading-subtext {
+      svg {
+        max-width: 365px;
+        height: 32px;
+        background-image: linear-gradient(0deg, #c3e8d8 21.43%, #ffffff 21.43%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 71.43%, #ffffff 71.43%, #ffffff 100%);
+        background-size: 35.00px 40.00px;
+        background-position-y: 10px;
+        background-repeat: repeat-x;
+      }
+    }
+  }
+
   &.heading-wrap-youtube {
     @include max-screen ($breakpoint-mobile) {
       .heading-subtext {
@@ -637,9 +705,26 @@
     }
   }
 
+  &.heading-wrap-townList {
+    border-bottom: 1px solid #999999;
+    margin-bottom: 60px;
+    .heading {
+      margin-bottom: 17px;
+    }
+    .heading-subtext {
+      max-width: 122px;
+      margin-top: 0;
+
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 80px;
+        margin-left: 0;
+      }
+    }
+  }
+
   &.heading-nozominoyu-text {
 
-    .heading-text {  
+    .heading-text {
       @include max-screen($breakpoint-mobile) {
         // sass-lint:disable-block no-important
         font-size: 38px !important;
@@ -657,7 +742,7 @@
           height: 40px;
         }
       }
-    }  
+    }
   }
 
   &.heading-wrap-auto {
@@ -709,7 +794,46 @@
     }
   }
 
-  
+  &.heading-exhibit {
+    .heading-subtext {
+      max-width: 297px;
+      height: 48px;
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 206px;
+        .heading-text {
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+  }
+
+  &.heading-contents {
+    .heading-text {
+      -webkit-text-fill-color: #fff;
+      background: transparent;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+    .heading-subtext {
+      margin-top: 0;
+      max-width: 989px;
+      width: 100%;
+    }
+  }
+
+  &.heading-experience {
+    .heading-text {
+      font-size: 41px;
+      letter-spacing: 0.02em;
+      @include max-screen($breakpoint-mobile) {
+        font-size: 24px;
+      }
+    }
+    .heading-subtext {
+      margin-top: 0;
+    }
+  }
 
   &.heading-comparison {
     text-align: center;
@@ -726,7 +850,9 @@
       width: 100%;
 
       @include max-screen($breakpoint-mobile) {
-        margin-top: 10px;
+        height: auto;
+        margin: -46px auto 0;
+        max-width: 350px;
       }
     }
 
@@ -743,14 +869,22 @@
     }
   }
 
+
   &.heading-zipline {
     .heading {
       .heading-subtext {
-        max-width: 330px;
+        max-width: 793px;
         left: -20px;
+        @include max-screen($breakpoint-mobile) {
+          max-width: 260px;
+          width: 100%;
+          height: 94px;
+        }
       }
     }
   }
+
+
 
   @include max-screen($breakpoint-mobile) {
     .subpage-section-family-walk {
@@ -762,5 +896,16 @@
     }
   }
 
-  
+  &.heading-collection {
+    .heading-text {
+      letter-spacing: 0.10em;
+    }
+  }
+
+  &.heading-goods {
+    .heading-text {
+      font-size: 24px;
+    }
+  }
+
 }

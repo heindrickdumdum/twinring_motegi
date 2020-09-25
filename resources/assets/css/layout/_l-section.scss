@@ -6,8 +6,40 @@
     padding-bottom: 0;
   }
 
+  &.l-collection {
+    padding-bottom: 83px;
+  }
+
+  &.l-racing {
+    padding-bottom: 56px;
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &.l-section-battle-cart {
+    padding-bottom: 0;
+  }
+
+  &.l-section-racing {
+    padding-bottom: 10px;
+
+  }
+
   @include max-screen($breakpoint-mobile) {
     padding-bottom: 55px;
+  }
+
+  &.section-events {
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 100px;
+    }
+  }
+
+  &.collection-section{
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 60px;
+    }
   }
 
   &.l-section-forest-dokidoki {

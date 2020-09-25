@@ -51,7 +51,42 @@
       }
     }
   }
+
+  &.tabs-goods {
+    background-color: #fff;
+    margin-bottom: 0;
+  }
+
+
 }
+
+.custom-select-goods-sp {
+  .lbl-ico {
+    position: absolute;
+    left: 20px;
+    max-width: 20px;
+  }
+
+  .select-selected-goods {
+    .ico-motegi,.ico-motor {
+      max-width: 25px;
+      left: 17px;
+      top: 20px;
+    }
+  }
+  .select-items-goods {
+    .ico-motegi, .ico-motor {
+      max-width: 25px;
+      left: 17px;
+      top: 20px;
+    }
+    .select-goods-option {
+      padding: 10px;
+      position: relative;
+    }
+  }
+}
+
 
 .tab {
   width: 100%;
@@ -89,6 +124,116 @@
     }
   }
 
+  &.tab-goods {
+    margin-right: 6px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    label {
+      font-size: 16px;
+      height: 67px;
+      display: table-cell;
+      vertical-align: middle;
+      width: 250px;
+
+      &:hover {
+        height: 86px;
+        .lbl-ico {
+          top: 15px;
+        }
+      }
+
+      img {
+        max-width: 41px;
+        position: absolute;
+        left: 19px;
+        top: 8px;
+        transition: ease 0.5s all;
+      }
+    }
+
+    &.tab-motegi {
+      .lbl-goods {
+        padding-left: 70px;
+      }
+    }
+
+    &.tabs-racing {
+      text-align: right;
+      margin-right: 40px;
+      &.align-left {
+        text-align: left;
+      }
+      @include max-screen ($breakpoint-mobile) {
+        margin-right: 12px;
+        max-width: 48%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      .lbl-racing {
+        display: inline-block;
+        padding: 23px 20px;
+        &.tab2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        @include max-screen ($breakpoint-mobile) {
+          max-width: 100%;
+          font-size: 10px;
+          padding: 15px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    &.tab-kids {
+      .lbl-goods {
+        padding-left: 50px;
+      }
+    }
+
+    &.tab-motor {
+      .lbl-goods {
+        padding-left: 45px;
+        .lbl-ico {
+          max-width: 30px;
+          left: 30px;
+        }
+      }
+    }
+
+    &.tab-honda {
+      .lbl-goods {
+        padding-left: 36px;
+        .lbl-ico {
+          left: 16px;
+          top: 15px;
+          max-width: 38px;
+        }
+      }
+    }
+
+    [name="tab-goods"]:hover ~ .lbl-goods,
+    [name="tab-goods"]:checked ~ .lbl-goods {
+      height: 86px;
+      img {
+        top: 15px;
+      }
+      .ico-honda {
+        top: 23px;
+      }
+    }
+  }
 
   [type="radio"] {
     display: none;
@@ -102,9 +247,105 @@
   }
 }
 
+
+.tab-banner {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 30px;
+  letter-spacing: 2px;
+  padding-top: 31px;
+  padding-bottom: 20px;
+  margin: auto;
+  padding-left: 60px;
+  @include max-screen ($breakpoint-mobile) {
+    padding-left: 0;
+    letter-spacing: 0.10em;
+  }
+
+  &.tab-banner-racing {
+    padding: 60px 20px 40px;
+    text-align: center;
+    position: relative;
+    @include max-screen ($breakpoint-mobile) {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-position: left;
+      background-image: url(/assets/images/img-dash.png);
+      background-repeat: repeat-x;
+      opacity: 0.2;
+      @include max-screen ($breakpoint-mobile) {
+        display: none;
+      }
+    }
+    .tab-banner-title {
+      max-width: 460px;
+      width: 100%;
+      margin: 0 auto 34px;
+    }
+    .table-banner-span {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: 0.09em;
+      display: block;
+      margin-bottom: 24px;
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 15px;
+      }
+    }
+    .table-banner-desc {
+      font-weight: 400;
+      line-height: 2;
+      font-size: 15px;
+      @include max-screen ($breakpoint-mobile) {
+        text-align: left;
+        font-size: 14px;
+      }
+    }
+  }
+
+  li {
+    display: none;
+
+    &.tab-banner-motegi {
+      // max-width: 460px;
+      margin: auto;
+    }
+  }
+
+  &[data-tab="1"] {li[data-tab="1"] { display: block;}}
+  &[data-tab="2"] {li[data-tab="2"] { display: block;}}
+  &[data-tab="3"] {li[data-tab="3"] { display: block;}}
+  &[data-tab="4"] {li[data-tab="4"] { display: block;}}
+
+  @include max-screen ($breakpoint-mobile) {
+    padding-top: 29px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+}
+
 .program-item {display:none;}
 @for $i from 1 through 12 {
   [data-tab="#{$i}"] .program-item[data-month="#{$i}"] {display: block;}
+}
+
+.program-item-goods {display:none;}
+@for $i from 1 through 12 {
+  [data-tab="#{$i}"] .program-item-goods[data-tab="#{$i}"] {display: block;}
 }
 
 .faq-item {
@@ -130,6 +371,10 @@
 
   @include max-screen($breakpoint-mobile) {
     margin-bottom: 37px;
+    &.custom-select-goods-sp {
+      max-width: 258px;
+      margin-bottom: 0;
+    }
   }
 
   &:after {
@@ -146,6 +391,8 @@
       display: none;
     }
   }
+
+
 }
 .select-selected {
   padding: 9px;
@@ -161,6 +408,8 @@
     content: "\25BE";
     position: absolute;
     right: 11px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

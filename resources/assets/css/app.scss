@@ -102,7 +102,10 @@
 @import "components/map-all";
 @import "components/location";
 @import "components/guide-filter";
-
+@import "components/tiles";
+@import "components/goods";
+@import "components/collection";
+@import "components/racing-kart";
 
 @import 'layout/grid';
 @import "layout/l-container";
@@ -119,4 +122,3 @@
 @import "layout/l-column-anchor";
 
 @import "emergencynews";
-

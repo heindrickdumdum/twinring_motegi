@@ -24,28 +24,28 @@ var cmd = process.argv[2];
 
 if(cmd === CMD.init) {
 	init();
-	console.log('init done');
+	// console.log('init done');
 
 } else if(cmd === CMD.arrangePath) {
 	arrangePath();
-	console.log('arrangePath done');
+	// console.log('arrangePath done');
 
 } else if(cmd === CMD.convertHtml) {
 	convertHtml();
-	console.log('convertHtml done');
+	// console.log('convertHtml done');
 
 } else if(cmd === CMD.shiftjis) {
 	shiftjis();
-	console.log('shiftjis done');
+	// console.log('shiftjis done');
 
 } else if(cmd === CMD.scpContents) {
 	scpContents();
-	console.log('scpContents done');
+	// console.log('scpContents done');
 
 } else if(cmd === CMD.convertInit) {
 	init();
 	arrangePath();
-	console.log('convertInit done');
+	// console.log('convertInit done');
 
 } else if(cmd === CMD.convert) {
 	init();
@@ -53,5 +53,5 @@ if(cmd === CMD.init) {
 	convertHtml();
 	shiftjis();
 	//scpContents();
-	console.log('convert done');
+	// console.log('convert done');
 }

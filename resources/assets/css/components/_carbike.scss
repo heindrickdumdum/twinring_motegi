@@ -22,7 +22,16 @@
   // }
 }
 
-.carbike-menu-link {
+.arrow-green-down {
+  &:after {
+    @include max-screen ($breakpoint-mobile) {
+      margin: 20px auto 0 auto !important;
+    }
+  }
+}
+
+.carbike-menu-link,
+.arrow-green-down {
   display: block;
   height: 100%;
   position: relative;
@@ -53,6 +62,8 @@
     }
   }
 }
+
+
 
 .carbike-list {
   display: flex;

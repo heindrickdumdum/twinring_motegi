@@ -11,7 +11,7 @@
     letter-spacing: 4px;
     line-height: 1;
     display: block;
-    
+
     @include max-screen ($breakpoint-mobile) {
       font-size: 20px;
       letter-spacing: 3px;
@@ -25,9 +25,9 @@
     padding-bottom: 7px;
 
     &.l-container-m {
-      max-width: 300px;
+      max-width: 330px;
       line-height: 22px;
-      letter-spacing: 2px;  
+      letter-spacing: 2px;
     }
   }
 }

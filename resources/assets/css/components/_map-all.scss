@@ -107,3 +107,12 @@
     }
   }
 }
+
+.map-wrapper {
+  &.map-wrapper-tourism {
+    img {
+      width: 100%;
+      max-width: 890px;
+    }
+  }
+}

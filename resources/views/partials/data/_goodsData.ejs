@@ -1,0 +1,255 @@
+<%
+  goodsList = [
+
+    <!-- motegi -->
+    {
+      tab: '1',
+      imgPath: mix('/assets/images/goods/motegi-01.jpg'),
+      alt: 'もてぎの森のりすとどんぐりクッキー',
+      title: 'もてぎの森のりすとどんぐりクッキー<br><span class="price">650円</span>',
+      link: ''
+    },
+    {
+      tab: '1',
+      imgPath: mix('/assets/images/goods/motegi-02.jpg'),
+      title: 'もてぎの森のおとしもの<br>（ロシアケーキ）<br><span class="price">600円</span>',
+      link: ''
+    },
+    {
+      tab: '1',
+      imgPath: mix('/assets/images/goods/motegi-03.jpg'),
+      title: 'ベルトループキーホルダー<br><span class="price">各2,250円</span>',
+      link: ''
+    },
+    {
+      tab: '1',
+      imgPath: mix('/assets/images/goods/motegi-04.jpg'),
+      title: 'マフラータオル<br><span class="price">各1,300円</span>',
+      link: ''
+    },
+    {
+      tab: '1',
+      imgPath: mix('/assets/images/goods/motegi-05.jpg'),
+      title: 'ツールボックス<br><span class="price">各1,800円</span>',
+      link: ''
+    },
+    {
+      tab: '1',
+      imgPath: mix('/assets/images/goods/motegi-06.jpg'),
+      title: 'ジェットストリーム　<span class="price">1,500円</span><br>クルトガシャーペン　<span class="price">900円</span>',
+      link: ''
+    },
+
+    <!-- kids -->
+    {
+      tab: '2',
+      imgPath: mix('/assets/images/goods/kids-01.jpg'),
+      title: 'ミニタオル（昆虫/動物）<br><span class="price">550円</span>',
+      link: ''
+    },
+    {
+      tab: '2',
+      imgPath: mix('/assets/images/goods/kids-02.jpg'),
+      title: 'キャンプTシャツ<br>大人（S,M,L）<span class="price">各3,000円</span><br>子ども （100,110,120）<span class="price">各2,600円</span>',
+      link: ''
+    },
+    {
+      tab: '2',
+      imgPath: mix('/assets/images/goods/kids-03.jpg'),
+      title: 'カードケース <br><span class="price">720円</span>',
+      link: ''
+    },
+    {
+      tab: '2',
+      imgPath: mix('/assets/images/goods/kids-04.jpg'),
+      title: '4Dパズル <br><span class="price">各650円</span>',
+      link: ''
+    },
+    {
+      tab: '2',
+      imgPath: mix('/assets/images/goods/kids-05.jpg'),
+      title: 'ぬいぐるみ <br><span class="price">各1,690円～</span>',
+      link: ''
+    },
+    {
+      tab: '2',
+      imgPath: mix('/assets/images/goods/kids-06.jpg'),
+      title: 'メッシュキャップ（動物/昆虫）<br><span class="price">各2,350円</span>',
+      link: ''
+    },
+
+    <!-- motor -->
+
+    {
+      tab: '3',
+      imgPath: mix('/assets/images/goods/mortorsports-01.jpg'),
+      title: 'レジャーシート<br><span class="price">1,000円</span>',
+      link: ''
+    },
+    {
+      tab: '3',
+      imgPath: mix('/assets/images/goods/mortorsports-02.jpg'),
+      title: 'シートクッション<br><span class="price">1,000円</span>',
+      link: ''
+    },
+    {
+      tab: '3',
+      imgPath: mix('/assets/images/goods/mortorsports-03.jpg'),
+      title: '折りたたみイス<br><span class="price">各1,800円</span>',
+      link: ''
+    },
+    {
+      tab: '3',
+      imgPath: mix('/assets/images/goods/mortorsports-04.jpg'),
+      title: '双眼鏡<br><span class="price">3,000円</span>',
+      link: ''
+    },
+    {
+      tab: '3',
+      imgPath: mix('/assets/images/goods/mortorsports-05.jpg'),
+      title: 'タイヤカスさきいか<br><span class="price">600円</span>',
+      link: ''
+    },
+    {
+      tab: '3',
+      imgPath: mix('/assets/images/goods/mortorsports-06.jpg'),
+      title: 'タイヤ型ペン立て　<span class="price">1,900円</span> <br>工具ボールペン(<span class="small">スパナ/モンキーレンチ</span>)<br><span class="price">各800円</span> <br>スパナ型スケール　<span class="price">500円</span> <br>タイヤ消しゴム<span class="price">（２個セット）650円</span> <br>',
+      link: '',
+      mods: 'long-text'
+    },
+
+    <!-- Honda -->
+    {
+      tab: '4',
+      imgPath: mix('/assets/images/goods/honda-01.jpg'),
+      title: 'ピンズ<br><span class="price">1,200円</span>',
+      link: ''
+    },
+    {
+      tab: '4',
+      imgPath: mix('/assets/images/goods/honda-02.jpg'),
+      title: 'キャップ　全5種<br><span class="price">各3,300円</span>',
+      link: ''
+    },
+    {
+      tab: '4',
+      imgPath: mix('/assets/images/goods/honda-03.jpg'),
+      title: 'キャップ　全5種<br><span class="price">各3,300円</span>',
+      link: ''
+    },
+    {
+      tab: '4',
+      imgPath: mix('/assets/images/goods/honda-04.jpg'),
+      title: 'マグカップ　全5種<br><span class="price">各1,200円</span>',
+      link: ''
+    },
+    {
+      tab: '4',
+      imgPath: mix('/assets/images/goods/honda-05.jpg'),
+      title: 'マグカップ　全5種<br><span class="price">各1,200円</span>',
+      link: ''
+    },
+    {
+      tab: '4',
+      imgPath: mix('/assets/images/goods/honda-06.jpg'),
+      title: 'Tシャツ　全16種（S・M・L・XL）<br><span class="price">各3,000円</span>',
+      link: ''
+    }
+
+  ]
+
+
+
+  goodsShopList = [
+    {
+      imgPath: mix('/assets/images/goods/img-souvenir.jpg'),
+      title: '',
+      colorTitle: 'スーベニアもてぎ',
+      desc: 'ツインリンクもてぎオリジナルグッズ、動物や昆虫をモチーフにしたグッズ、地元名産品などファミリー向けグッズを多数取り揃えたお店',
+      link: '#',
+      dataList: [
+        {
+          label: '営業時間',
+          content: '<a href="/hours_m/">ツインリンクもてぎ営業時間内</a>'
+        },
+        {
+          label: '場所',
+          content: 'インフォメーションセンター横 <a class="link" href="/map_m/">MAPを見る</a>'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/goods/img-mobiplaza.jpg'),
+      title: '',
+      colorTitle: 'モビプラザ',
+      desc: 'MotoGP選手グッズや各メーカーグッズなどのレーシンググッズを中心に、オリジナルグッズから地元名産品までなんでも揃うツインリンクもてぎ最大のお店',
+      link: '#',
+      dataList: [
+        {
+          label: '営業時間',
+          content: '<a href="/hours_m/">土日祝、レース・イベント開催日の営業時間内</a>'
+        },
+        {
+          label: '場所',
+          content: 'グランドスタンド <a class="link" href="/map_m/">MAPを見る</a>'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/goods/img-museumshop.jpg'),
+      title: '',
+      colorTitle: 'ミュージアムショップ',
+      desc: 'ここでしか買えないホンダグッズやミニカーなどを取り揃えたホンダファン必見のお店',
+      link: '#',
+      dataList: [
+        {
+          label: '営業時間',
+          content: '<a href="/hours_m/">ツインリンクもてぎ営業時間内</a>'
+        },
+        {
+          label: '場所',
+          content: 'ホンダコレクションホール1階 <a class="link" href="/map_m/">MAPを見る</a>'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/goods/img-gran-turismo.jpg'),
+      title: '',
+      colorTitle: 'グランツーリスモ カフェ ショップ',
+      desc: 'ライダー、ドライバー、チームスタッフ向けにレーシンググッズを数多くご用意。その他オリジナルグッズや日用品まで幅広い商品を販売',
+      link: '#',
+      dataList: [
+        {
+          label: '営業時間',
+          content: '<a href="/hours_m/">ツインリンクもてぎ営業時間内</a>'
+        },
+        {
+          label: '場所',
+          content: 'パドック内 <a class="link" href="/map_m/">MAPを見る</a>'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/goods/img-lobbyshop.jpg'),
+      title: '',
+      colorTitle: 'ロビーショップ',
+      desc: 'ソフトドリンクやアルコール、スナック菓子、アイスクリーム、日用品などを扱ったコンビニ感覚で利用できるお店',
+      link: '#',
+      dataList: [
+        {
+          label: '営業時間',
+          content: '8:00～21:00'
+        },
+        {
+          label: '場所',
+          content: 'ホテルツインリンク1階 <br class="u-show-sp"><a class="link" href="/map_m/">MAPを見る</a>'
+        }
+      ]
+    }
+  ]
+
+
+
+
+
+%>

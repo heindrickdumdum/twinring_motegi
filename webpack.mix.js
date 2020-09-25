@@ -103,6 +103,11 @@ mix
   )
 
   .js(
+    `${srcRelativePath}/assets/js/read-more.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
     `${srcRelativePath}/assets/js/bbq.js`,
     `${distRelativePath}/assets/js`,
   )
@@ -122,21 +127,22 @@ mix
     `${distRelativePath}/assets/js`,
   )
 
+  .js(
+    `${srcRelativePath}/assets/js/tabs-goods.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
+    `${srcRelativePath}/assets/js/racing-kart.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
+    `${srcRelativePath}/assets/js/events.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
   .eslint()
-  .sass(
-    `${srcRelativePath}/assets/css/header.scss`,
-    `${distRelativePath}/assets/css`
-  )
-  .sass(//all footer scss
-    `${srcRelativePath}/assets/css/footer.scss`,
-    `${distRelativePath}/assets/css`
-  )
-  .sass(
-    `${srcRelativePath}/assets/css/app.scss`,
-    `${distRelativePath}/assets/css`
-  )
-  .stylelint({ context: srcRelativePath })
-  .options({ processCssUrls: false })
   .webpackConfig({
     plugins: [
       new SVGSpritemapPlugin(
@@ -159,6 +165,21 @@ mix
       )
     ]
   })
+  .sass(
+    `${srcRelativePath}/assets/css/header.scss`,
+    `${distRelativePath}/assets/css`
+  )
+  .sass(//all footer scss
+    `${srcRelativePath}/assets/css/footer.scss`,
+    `${distRelativePath}/assets/css`
+  )
+  .sass(
+    `${srcRelativePath}/assets/css/app.scss`,
+    `${distRelativePath}/assets/css`
+  )
+  .stylelint({ context: srcRelativePath })
+  .options({ processCssUrls: false })
+
   .copyWatched(
     [
       `${srcRelativePath}/assets/svg/!(sprite)`,

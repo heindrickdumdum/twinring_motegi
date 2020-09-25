@@ -8,7 +8,7 @@
   &-left {
     order: 2
   }
-  
+
   &-right {
     order: 1;
     flex-grow: 1;
@@ -28,6 +28,27 @@
       img {
         max-width: 245px;
         width: 100%;
+      }
+    }
+
+    &.events {
+      z-index: 10;
+      .heading-text {
+        width: 127%;
+
+        img {
+          max-width: none;
+        }
+
+        @include max-screen ($breakpoint-mobile) {
+          max-width: none;
+          width: 100%;
+        }
+
+      }
+
+      @include max-screen ($breakpoint-mobile)  {
+        margin-top: 4px;
       }
     }
   }
@@ -51,7 +72,7 @@
   .desc {
     margin-top: 66px;
     margin-left: 4px;
-    font-size: 20px;  
+    font-size: 20px;
     letter-spacing: 0.16em;
     line-height: 2.25;
 
@@ -69,6 +90,23 @@
         line-height: 2;
       }
     }
+    &.collection {
+      max-width: 603px;
+
+      @include max-screen ($breakpoint-mobile) {
+        line-height: 2;
+      }
+
+    }
+    &.racing {
+      max-width: 605px;
+
+      @include max-screen ($breakpoint-mobile) {
+        line-height: 2;
+        letter-spacing: 0.10em;
+      }
+
+    }
   }
 
   .challenge-img {
@@ -80,6 +118,7 @@
         display: block;
         padding-top: 15px;
         margin: auto;
+
       }
     }
   }
@@ -89,6 +128,21 @@
     position: relative;
     top: -46px;
     left: -32px;
+
+    &.events {
+      max-width: 235px;
+    }
+
+    &.collection {
+      max-width: 233px;
+      top: 64px;
+      left: 17px;
+    }
+    &.racing-img1 {
+      max-width: 233px;
+      top: -101px;
+      left: 13px;
+    }
   }
 
   .challenge-img2 {
@@ -96,6 +150,11 @@
     position: relative;
     left: 95px;
     top: -134px;
+
+    &.collection {
+      left: 96px;
+      top: 22px;
+    }
   }
 
   .challenge-img3 {
@@ -103,6 +162,22 @@
     position: relative;
     left: 24px;
     top: -220px;
+
+    &.collection {
+      left: -32px;
+      top: -87px;
+    }
+  }
+
+  &.events-page {
+    // overflow: hidden;
+    .challenge-img {
+      @include max-screen ($breakpoint-mobile) {
+        img {
+          max-width: none;
+        }
+      }
+    }
   }
 
   &.hellowoods-life-overflowing {
@@ -128,6 +203,16 @@
 
   &.hellowoods {
     max-height: 800px;
+  }
+
+  &.collection {
+    background-position: right 32px top 84px;
+    @include max-screen($breakpoint-mobile) {
+        max-height: inherit;
+    }
+    .heading-text img{
+      max-width: 155%;
+    }
   }
 
   @include max-screen($breakpoint-mobile) {

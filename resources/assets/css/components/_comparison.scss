@@ -13,7 +13,7 @@
 .comparison-col {
   display: flex;
   flex-direction: column;
-  background: #f2f7fb;
+  background: #f2faf5;
   width: calc(100% / 2);
   align-items: center;
   padding: 15px;
@@ -71,7 +71,7 @@
   }
 
   &:nth-child(3) {
-    background: #f2faf5;
+    background: #f2f7fb;
 
     @include min-screen($breakpoint-mobile + 1) {
       order: 3;

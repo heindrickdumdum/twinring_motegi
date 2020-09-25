@@ -30,6 +30,50 @@
     }
   }
 
+  // &.mv-collection {
+  //   &::after {
+  //     display: none;
+  //   }
+  // }
+
+  &.mv-events {
+    margin-bottom: 90px;
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 80px;
+    }
+    .events-mv-heading {
+      bottom: 60px;
+
+      @include max-screen ($breakpoint-mobile) {
+        bottom: 20px;
+      }
+    }
+    .mv-date {
+      background: url(#{$image-path}events/mv-gradient-rect.jpg) no-repeat;
+      background-size: no-repeat;
+      background-size: cover;
+      display: inline-block;
+      padding: 10px 17px;
+      color: #fefefe;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      line-height: 1;
+      position: absolute;
+      bottom: 64px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 5px 10px;
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile + 1) {
+      margin-bottom: 200px;
+    }
+  }
+
   &.mv-restaurant {
     @include max-screen ($breakpoint-mobile) {
       margin-bottom: 100px;
@@ -40,6 +84,16 @@
 
       .mv-image {
         height: 500px;
+      }
+    }
+  }
+
+  &.mv-bluenote {
+    @include max-screen ($breakpoint-mobile) {
+      //height: 350px;
+
+      .mv-image {
+        //height: 430px;
       }
     }
   }
@@ -128,6 +182,7 @@
       display: none;
     }
   }
+
 }
 
 .mv-list-glamping-top {
@@ -399,7 +454,7 @@
         width: 100% !important;
         height: 32px !important;
         max-width: 297px !important;
-        margin-top: 5px !important; 
+        margin-top: 5px !important;
       }
     }
   }
@@ -708,7 +763,7 @@
       width: 100%;
       height: 64px;
       top: -20px;
-      
+
     }
 
     @include max-screen ($breakpoint-mobile) {
@@ -718,6 +773,10 @@
 
   &.mv-collection-pit {
     max-width: 270px;
+
+    .heading {
+      margin: 40px 0 -7px;
+    }
 
     @include max-screen ($breakpoint-mobile) {
       .heading {
@@ -744,7 +803,7 @@
         height: 76px;
         left: 0;
         margin-top: 28px;
-        
+
 
         svg {
           width: 330px;
@@ -756,7 +815,25 @@
       bottom: 5px;
     }
   }
- 
+
+  &.mv-heading-bluenote {
+    .heading-text {
+      letter-spacing: 2px;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 300px;
+      bottom: -30px;
+
+      .heading-subtext {
+        height: 80px;
+        top: -25px;
+        left: -43px;
+        max-width: 210px;
+      }
+    }
+  }
+
   &.hellowoods-mv-heading {
     bottom: 5px;
     width: 100%;
@@ -793,7 +870,7 @@
 
       @include max-screen ($breakpoint-mobile) {
         height: 60px;
-        width: 230px;
+        width: 185px;
         margin: 0;
       }
 
@@ -819,6 +896,34 @@
             margin-left: -9px;
             margin-top: -10px;
           }
+        }
+      }
+    }
+
+    &.mv-heading-goods {
+      .heading-subtext {
+        max-width: 458px;
+        @include max-screen ($breakpoint-mobile) {
+          width: 300px;
+        }
+      }
+    }
+
+    .heading-collection {
+      .heading-subtext {
+        max-width: 688px;
+        @include max-screen ($breakpoint-mobile) {
+          width: 100%;
+          max-width: 247px;
+        }
+      }
+    }
+
+    .heading-racing {
+      .heading-subtext {
+        max-width: 490px;
+        @include max-screen ($breakpoint-mobile) {
+          width: 92%;
         }
       }
     }
@@ -859,6 +964,14 @@
           width: 100%;
         }
       }
+    }
+  }
+
+
+
+  &.mv-heading-goods {
+    @include max-screen ($breakpoint-mobile) {
+      padding-bottom: 0;
     }
   }
 
@@ -953,6 +1066,27 @@
     }
   }
 
+  &.mv-heading-tourism {
+    max-width: 875px;
+    bottom: -6px;
+    left: 22px;
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 335px;
+      bottom: -10px;
+
+      .heading {
+        .heading-text {
+          letter-spacing: 2px;
+        }
+      }
+      .heading-subtext {
+        height: 85px;
+      }
+    }
+  }
+
+
 }
 
 .mv-heading-text {
@@ -1017,6 +1151,25 @@
     background: url(#{$image-path}hellowoods/mv-today-bg.png) no-repeat;
     background-size: contain;
     max-width: 270px;
+  }
+
+  &.mv-collection-logo {
+    background: url(#{$image-path}collection/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 270px;
+  }
+
+  &.mv-racing-logo {
+    background: url(#{$image-path}racingkart/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 247px;
+  }
+
+  &.mv-events-logo {
+    background: url(#{$image-path}events/logo.png) no-repeat;
+    background-size: contain;
+    max-width: 250px;
+    bottom: -140px;
   }
 
   &.mv-hoteltwinring-logo {
@@ -1638,6 +1791,14 @@
     }
   }
 
+  &.mv-subpage-404 {
+    .mv-image {
+      @include max-screen ($breakpoint-mobile) {
+        padding-bottom: 105%;
+      }
+    }
+  }
+
   &.mv-subpage-acrox {
     &::after {
       @include max-screen($breakpoint-mobile) {
@@ -1720,6 +1881,19 @@
     @include min-screen($breakpoint-mobile + 1) {
       height: auto;
       margin-bottom: 72px;
+    }
+  }
+
+  &.mv-subpage-tourism {
+    .mv-image-tourism {
+      height: 370px;
+      @include min-screen ($breakpoint-mobile + 1) {
+        height: 420px;
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile + 1) {
+      height: 450px;
     }
   }
 }
@@ -1873,7 +2047,7 @@
   @include max-screen($breakpoint-mobile) {
     bottom: -20px !important;
   }
-  
+
   .heading-access {
     .heading-subtext {
       @include min-screen($breakpoint-mobile + 1) {

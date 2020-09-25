@@ -138,7 +138,8 @@
   left: 0;
   transform: translateY(-50%);
   @include max-screen($breakpoint-mobile) {
-    top: 32%;
+    top: 8px;
+    transform: none;
   }
   img {
     max-width: 100%;

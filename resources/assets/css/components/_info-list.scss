@@ -76,7 +76,8 @@
       &.info-item-racing {
         &:before {
           @include max-screen($breakpoint-mobile) {
-            top: -18px;
+            top: 5px;
+            height: 30px;
           }
         }
       }

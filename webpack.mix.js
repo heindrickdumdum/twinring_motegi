@@ -133,6 +133,11 @@ mix
   )
 
   .js(
+    `${srcRelativePath}/assets/js/racing-kart.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
     `${srcRelativePath}/assets/js/events.js`,
     `${distRelativePath}/assets/js`,
   )

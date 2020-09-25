@@ -157,6 +157,13 @@
           margin: 0 auto;
         }
       }
+      &.tab2 {
+        .button-icon {
+          @include max-screen ($breakpoint-mobile) {
+            right: 15px;
+          }
+        }
+      }
     }
   }
 }

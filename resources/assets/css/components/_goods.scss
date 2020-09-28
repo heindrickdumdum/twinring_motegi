@@ -106,13 +106,11 @@
             padding-top: 16px;
             line-height: 1;
             text-align: center;
+            font-weight: bold;
             @include min-screen ($breakpoint-mobile + 1) {
               min-width: 102px;
               margin-right: 20px;
               width: 63px;
-            }
-            @include max-screen ($breakpoint-mobile) {
-              font-weight: bold;
             }
           }
 

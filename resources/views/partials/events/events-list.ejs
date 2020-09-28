@@ -9,7 +9,7 @@
                 <div class="swiper-wrapper">
                   <% item.imgList.forEach( imgItem => { %>
                     <div class="swiper-slide">
-                      <img src="<%- imgItem.imgUrl %>" alt="Mobi Park">
+                      <img src="<%- imgItem.imgUrl %>" alt="<%- imgItem.alt %>">
                     </div>
                   <% }) %>
 

@@ -10,6 +10,11 @@
   &.heading-collection-pit {
     max-width: 808px;
     margin: auto;
+    .heading-texts {
+      @include max-screen($breakpoint-mobile) {
+        display: inline-block;
+      }
+    }
   }
 
   &.heading-sumika {

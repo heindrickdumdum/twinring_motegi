@@ -121,6 +121,11 @@
             padding-left: 19px;
             width: 100%;
             letter-spacing: 1.4px;
+            font-weight: bold;
+
+            &.padding-left-none {
+              padding-left:0;
+            }
 
             @include max-screen ($breakpoint-mobile) {
               width: auto;

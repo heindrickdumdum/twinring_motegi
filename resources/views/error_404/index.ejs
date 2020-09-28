@@ -19,10 +19,17 @@
       </ul>
 
       <div class="l-container mv-container">
-        <div class="mv-heading mv-heading-404">
+        <div class="mv-heading mv-heading-404 u-show-pc">
           <%- include('/partials/heading', {
             modifier: 'heading-404',
             subtextvg: '404_title_pc',
+            altSubtextvg: '404 NOT FOUND'
+          }) %>
+        </div>
+        <div class="mv-heading mv-heading-404 u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-404',
+            subtextvg: '404_title_sp',
             altSubtextvg: '404 NOT FOUND'
           }) %>
         </div>

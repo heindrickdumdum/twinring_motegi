@@ -20,10 +20,17 @@
       <div class="l-container mv-container">
         <div class="mv-heading mv-heading-default mv-collection-pit">
           <%- include('/partials/heading', {
-            modifier: '',
+            modifier: 'u-show-pc',
             heading_level: 1,
             text: 'Pit Workshop',
             subtextvg: 'pit-mv-title',
+            altSubtextvg: 'ピット工房'
+          }) %>
+          <%- include('/partials/heading', {
+            modifier: 'u-show-sp',
+            heading_level: 1,
+            text: 'Pit Workshop',
+            subtextvg: 'pit-mv-title-sp',
             altSubtextvg: 'ピット工房'
           }) %>
         </div>

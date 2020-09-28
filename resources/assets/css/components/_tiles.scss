@@ -54,7 +54,7 @@
         letter-spacing: 2.4px;
         line-height: 2;
         font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", YuGothic, 游ゴシック, メイリオ, Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif;
-
+        font-weight: 400;
         @include max-screen ($breakpoint-mobile) {
           line-height: 2.2;
           font-size: 11px;
@@ -115,6 +115,8 @@
           width: auto;
           height: 100%;
           margin-right: 23px;
+          vertical-align: bottom;
+          display: inline-block;
           @include max-screen ($breakpoint-mobile) {
             margin-bottom: 15px;
             margin-right: 10px;
@@ -123,7 +125,7 @@
 
         .official-link-wrap {
           vertical-align: bottom;
-
+          display: inline-block;
           .official-link {
             font-size: 14px;
             font-weight: bold;

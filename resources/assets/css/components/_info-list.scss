@@ -76,7 +76,8 @@
       &.info-item-racing {
         &:before {
           @include max-screen($breakpoint-mobile) {
-            top: -18px;
+            top: 5px;
+            height: 30px;
           }
         }
       }
@@ -115,13 +116,19 @@
         padding:0;
         line-height: 2;
         overflow-y: auto;
+        @include max-screen ($breakpoint-mobile) {
+          font-weight: bold;
+        }
         &:before {
           height: 40%;
         }
         &.goods-item {
           height: 120px;
+          @include max-screen ($breakpoint-mobile) {
+            height: 135px;
+          }
           &:before {
-            height: 66%;
+            height: 70%;
           }
         }
         .collection-item-div {
@@ -138,6 +145,7 @@
           top: 0;
           left: 0;
           right: 0;
+          font-weight: bold;
         }
       }
     }

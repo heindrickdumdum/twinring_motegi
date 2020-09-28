@@ -9,7 +9,7 @@
                 <div class="swiper-wrapper">
                   <% item.imgList.forEach( imgItem => { %>
                     <div class="swiper-slide">
-                      <img src="<%- imgItem.imgUrl %>" alt="Mobi Park">
+                      <img src="<%- imgItem.imgUrl %>" alt="<%- imgItem.alt %>">
                     </div>
                   <% }) %>
 
@@ -33,7 +33,7 @@
               <% item.dataList.forEach( dataitem => { %>
                 <li class="carbike-article-list-item details-list-item">
                   <span class="carbike-article-list-label details-list-item-label"><%= dataitem.label %></span>
-                  <p class="carbike-article-list-desc details-list-item-desc"><%- dataitem.content %></p>
+                  <div class="carbike-article-list-desc details-list-item-desc"><%- dataitem.content %></div>
                 </li>
               <% }) %>
             </ul>

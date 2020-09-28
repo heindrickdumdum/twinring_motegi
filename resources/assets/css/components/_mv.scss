@@ -772,10 +772,10 @@
   }
 
   &.mv-collection-pit {
-    max-width: 270px;
+    max-width: 330px;
 
     .heading {
-      margin: 40px 0 -7px;
+      margin: 40px 0 14px;
     }
 
     @include max-screen ($breakpoint-mobile) {
@@ -827,9 +827,14 @@
 
       .heading-subtext {
         height: 80px;
-        top: -25px;
+        top: -15px;
         left: -43px;
         max-width: 210px;
+      }
+      .heading-wrap-bluenote {
+        .heading {
+          margin: 60px 0;
+        }
       }
     }
   }
@@ -914,7 +919,8 @@
         max-width: 688px;
         @include max-screen ($breakpoint-mobile) {
           width: 100%;
-          max-width: 247px;
+          max-width: 388px;
+          height: 96px;
         }
       }
     }

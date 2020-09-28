@@ -482,6 +482,10 @@
       margin-bottom: 12px;
     }
 
+    .heading-subtext {
+      max-width: 275px;
+    }
+
     @include max-screen ($breakpoint-mobile) {
       max-width: 180px;
       margin-bottom: 18px;

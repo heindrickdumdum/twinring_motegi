@@ -11,7 +11,7 @@
     left: 1px;
 
     @at-root .is-ie & {
-      bottom: 23px;
+      bottom: 17px;
     }
   }
 }
@@ -408,9 +408,15 @@
   /* border-radius: 45px; */
   border-bottom: 1px solid;
   cursor: pointer;
+  position: relative;
 
   &.open::after {
     transform: scaleY(-1);
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &::after {

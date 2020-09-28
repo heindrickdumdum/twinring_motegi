@@ -51,7 +51,7 @@
 
   .drink-menu-item {
     border-bottom: 1px solid #d8cdcd;
-    
+
     @include min-screen($breakpoint-mobile + 1) {
       margin-top: 55px;
       padding-bottom: 8px;
@@ -77,7 +77,7 @@
         padding-bottom: 0px;
       }
     }
-    
+
     @include min-screen($breakpoint-mobile + 1) {
       margin-top: 21px;
     }
@@ -132,7 +132,7 @@
 
   .drink-menu-desc {
     font-size: 15px;
-    line-height: 2;    
+    line-height: 2;
     letter-spacing: 0.16em;
 
     @include min-screen($breakpoint-mobile + 1) {
@@ -276,7 +276,7 @@
             -webkit-text-fill-color: $color-white;
             -moz-text-fill-color: $color-white;
             -ms-text-fill-color: $color-white;
-            padding: 4px 8px;         
+            padding: 4px 8px;
             letter-spacing: 0.025em;
             margin-left: 10px;
 
@@ -312,8 +312,8 @@
         .price {
           font-size: 16px;
           letter-spacing: 4px;
-          padding-left: 2px; 
-          
+          padding-left: 2px;
+
           @include max-screen($breakpoint-mobile) {
             font-size: 13px;
           }
@@ -324,7 +324,7 @@
             }
           }
         }
-        
+
         span {
           background: linear-gradient(to right, #027cc3 0%, #09a046 100%);
           -webkit-background-clip: text;
@@ -340,7 +340,7 @@
           &.tag {
             -webkit-background-clip: padding-box;
             -webkit-text-fill-color: $color-white;
-            font-size: 15px;            
+            font-size: 15px;
             color: $color-white;
             letter-spacing: 0.1em;
             display: inline-block;
@@ -358,7 +358,7 @@
               color: $color-white;
             }
           }
-      
+
           .is-ie & {
             background: none;
             color: $color-gossamer;
@@ -369,7 +369,7 @@
 
           &.title {//gelato
             font-size: 20px;
-            line-height: 2;     
+            line-height: 2;
             letter-spacing: 0.12em;
             background: none;
             color: $color-black;
@@ -391,7 +391,7 @@
       .menu-subtext {
         font-size: 15px;
         line-height: normal;
-        letter-spacing: 0.12em; 
+        letter-spacing: 0.12em;
 
         @include max-screen($breakpoint-mobile) {
           font-size: 11px;
@@ -400,9 +400,9 @@
 
       .menu-desc {
         font-size: 15px;
-        line-height: 2;  
-        letter-spacing: 0.16em;    
-        
+        line-height: 2;
+        letter-spacing: 0.16em;
+
         @include max-screen($breakpoint-mobile) {
           font-size: 12px;
           line-height: 2;
@@ -439,13 +439,13 @@
 
         .gradient-title {
           padding-top: 13px;
-          
+
           color: #333333;
           letter-spacing: 2.4px;
           font-weight: 400;
-  
-  
-  
+
+
+
           .gradient {
             padding-left: 0;
             background: linear-gradient(to bottom, #027cc3 10%, #099f48 100%);
@@ -456,13 +456,21 @@
             font-size: 24px;
             line-height: 30px;
             text-transform: uppercase;
-  
+
             @include max-screen ($breakpoint-mobile) {
               font-size: 15px;
               line-height: 25px;
             }
+            .is-ie & {
+              background: none !important;
+              color: $color-gossamer;
+              -webkit-text-fill-color: $color-gossamer;
+              -moz-text-fill-color: $color-gossamer;
+              -ms-text-fill-color: $color-gossamer;
+              text-align: left;  
+            }
           }
-  
+
           .gradient-sub {
             position: absolute;
 
@@ -470,12 +478,12 @@
               font-size: 12px;
             }
           }
-  
+
           @include min-screen ($breakpoint-mobile + 1) {
             width: 322px;
             padding-top: 25px;
           }
-  
+
           @include max-screen ($breakpoint-mobile) {
             display: block;
             width: 100%;
@@ -538,7 +546,7 @@
         margin-bottom: 0px !important;
       }
     }
-    
+
     &:nth-child(1) {
       margin-bottom: 20px;
 
@@ -567,7 +575,7 @@
       // }
     }
   }
-  
+
   .menu-item-container {
     display: flex;
     align-items: center;
@@ -585,20 +593,20 @@
       margin-left: 0px;
 
     }
-    
+
     .main-text {
       font-size: 20px;
-      display: block;  
-      
+      display: block;
+
       @include max-screen($breakpoint-mobile) {
         font-size: 13px;
       }
     }
 
     .sub-text {
-      font-size: 16px;  
-      display: block;    
-      
+      font-size: 16px;
+      display: block;
+
       @include max-screen($breakpoint-mobile) {
         font-size: 11px;
       }
@@ -607,7 +615,7 @@
 
   .sub-menu-price {
     font-size: 18px;
-    margin-left: 35px;  
+    margin-left: 35px;
 
     @include max-screen($breakpoint-mobile) {
       margin-left: 0px;
@@ -680,10 +688,10 @@
       color: $color-white;
       line-height: 1.667;
       text-align: center;
-      letter-spacing: 0.1em;  
+      letter-spacing: 0.1em;
       margin-top: 45px;
-      margin-bottom: 45px; 
-      
+      margin-bottom: 45px;
+
       @include max-screen($breakpoint-mobile) {
         font-size: 13px;
         line-height: 1.615;
@@ -783,7 +791,7 @@
     font-size: 15px;
     color: $color-white;
     line-height: 2;
-    text-align: center;    
+    text-align: center;
     display: block;
     max-width: 100%;
     margin-top: 75px;
@@ -792,7 +800,7 @@
     @include max-screen($breakpoint-mobile) {
       margin-top: 5px;
       font-size: 12px;
-      line-height: 1.5;      
+      line-height: 1.5;
       padding-left: 20px;
       padding-right: 20px;
     }
@@ -961,8 +969,8 @@
     font-size: 15px;
     line-height: 2;
     letter-spacing: 0.1em;
-    text-align: center;  
-    
+    text-align: center;
+
     &.desc-2 {
       @include min-screen($breakpoint-mobile + 1) {
         font-weight: bold;
@@ -999,9 +1007,9 @@
       font-size: 12px;
       line-height: 2.5;
       text-align: center;
-      letter-spacing: 0.1em;  
-      margin-bottom: 23px; 
-      
+      letter-spacing: 0.1em;
+      margin-bottom: 23px;
+
       @include max-screen($breakpoint-mobile) {
         font-size: 12px;
         line-height: 1.5;
@@ -1045,7 +1053,7 @@
         }
       }
 
-      
+
 
       .breakfast-menu-list-cat {
         &-item {
@@ -1065,14 +1073,14 @@
         &-list-item {
           font-size: 15px;
           line-height: 2;
-          letter-spacing: 0.1em;    
+          letter-spacing: 0.1em;
           position: relative;
           margin-left: 16px;
 
           @include max-screen($breakpoint-mobile) {
             margin-left: 10px;
           }
-          
+
           &:before {
             content: "\2022";
             position: absolute;
@@ -1140,7 +1148,7 @@
       height: 407px;
       width: 100%;
     }
-      
+
     @include max-screen($breakpoint-mobile) {
       padding: 0px;
       margin-top: 13px;
@@ -1149,9 +1157,9 @@
     span {
       border-width: 0px;
       font-style: italic;
-      font-size: 15px;  
+      font-size: 15px;
       font-family: serif;
-      
+
       @include max-screen($breakpoint-mobile) {
         margin-bottom: 5px;
         font-size: 13px;
@@ -1169,7 +1177,7 @@
             }
           }
         }
-  
+
         &.dinner-marcherant-soupe {
           svg {
             height: 16px;
@@ -1181,7 +1189,7 @@
             }
           }
         }
-  
+
         &.dinner-marcherant-entree-plat {
           svg {
             height: 13px;
@@ -1193,7 +1201,7 @@
             }
           }
         }
-  
+
         &.dinner-marcherant-pain {
           svg {
             height: 12px;
@@ -1205,7 +1213,7 @@
             }
           }
         }
-  
+
         &.dinner-marcherant-dessert {
           svg {
             height: 12px;
@@ -1217,7 +1225,7 @@
             }
           }
         }
-  
+
         &.dinner-marcherant-cafe-ou-the {
           svg {
             height: 13px;
@@ -1256,21 +1264,21 @@
             right: -20px;
           }
         }
-  
+
         .menu-other-menu-item {
           &:nth-of-type(2) {
             @include max-screen($breakpoint-mobile) {
               padding-bottom: 10px;
             }
           }
-  
+
           &:nth-of-type(3) {
             @include max-screen($breakpoint-mobile) {
               padding-top: 17px;
               padding-bottom: 13px;
             }
           }
-  
+
           &:last-child {
             @include max-screen($breakpoint-mobile) {
               padding-bottom: 15px;

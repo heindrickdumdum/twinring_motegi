@@ -34,11 +34,13 @@
     .area-item-image-wrapper {
       max-width: 442px;
       display: inline-block;
+      flex: 0 0 50%;
       @include max-screen ($breakpoint-mobile) {
         display: block;
         max-width: 290px;
         margin: auto;
         margin-bottom: 48px;
+        flex: 0 0 100%;
       }
       &.collection-image-wrapper {
         max-width: 557px;
@@ -61,6 +63,10 @@
           margin: 0 auto;
           width: 100%;
           max-width: 363px;
+          @include max-screen ($breakpoint-mobile) {
+            font-size: 12px;
+            letter-spacing: 0.03em;
+          }
         }
       }
     }
@@ -94,11 +100,13 @@
       .details-list {
         .details-list-item {
           display: table;
+          width: 100%;
           .details-list-item-label {
             display: table-cell;
             padding-top: 16px;
             line-height: 1;
             text-align: center;
+            font-weight: bold;
             @include min-screen ($breakpoint-mobile + 1) {
               min-width: 102px;
               margin-right: 20px;
@@ -113,10 +121,16 @@
             padding-left: 19px;
             width: 100%;
             letter-spacing: 1.4px;
+            font-weight: bold;
+
+            &.padding-left-none {
+              padding-left:0;
+            }
 
             @include max-screen ($breakpoint-mobile) {
               width: auto;
               padding-left: 10px;
+              font-weight: bold;
             }
             a {
               text-decoration: underline;

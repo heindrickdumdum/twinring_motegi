@@ -22,11 +22,17 @@ module.exports = {
 			'/service_m/',
 			'/fee_m/',
 			'/access_m/',
+			'/collection-hall/',
+			'/goods_m/',
+			'/temp/',
+			'/error_404/',
 			'/top/'
 		],[
+			'/collection-hall/pit/',
 			'/hellowoods/program/',
 			'/hellowoods/zip-line/',
 			'/mobipark_m/attractions/',
+			'/mobipark_m/attractions/racingkart/',
 			'/hoteltwinring/familyroom/',
 			'/hoteltwinring/granroom/',
 			'/hoteltwinring/information/',
@@ -41,7 +47,9 @@ module.exports = {
 			'/foods_m/gran-turismo/',
 			'/foods_m/oak/',
 			'/foods_m/rocco/',
-			'/foods_m/donguri/'
+			'/foods_m/bluenote/',
+			'/foods_m/donguri/',
+			'/service_m/tourism/'
 		]
 	],
 	commonParts: {

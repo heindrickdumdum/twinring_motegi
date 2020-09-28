@@ -124,8 +124,11 @@
         }
         &.goods-item {
           height: 120px;
+          @include max-screen ($breakpoint-mobile) {
+            height: 135px;
+          }
           &:before {
-            height: 66%;
+            height: 70%;
           }
         }
         .collection-item-div {

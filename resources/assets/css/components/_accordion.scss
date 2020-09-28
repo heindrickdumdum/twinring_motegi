@@ -82,6 +82,7 @@
   @include max-screen($breakpoint-mobile) {
     font-size: 12px;
     padding: 10px 27px 12px;
+    font-weight: bold;
   }
 
   &.accordion-btn-musasabi {
@@ -138,7 +139,7 @@
   left: 0;
   transform: translateY(-50%);
   @include max-screen($breakpoint-mobile) {
-    top: 8px;
+    top: 10px;
     transform: none;
   }
   img {

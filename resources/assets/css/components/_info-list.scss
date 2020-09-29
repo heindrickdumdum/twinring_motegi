@@ -118,6 +118,8 @@
         overflow-y: auto;
         @include max-screen ($breakpoint-mobile) {
           font-weight: bold;
+          height: 100%;
+          overflow: hidden;
         }
         &:before {
           height: 40%;
@@ -146,6 +148,9 @@
           left: 0;
           right: 0;
           font-weight: bold;
+          @include max-screen ($breakpoint-mobile) {
+            position: relative;
+          }
         }
       }
     }
@@ -175,6 +180,9 @@
       margin-top: 26px;
       margin-bottom: 55px;
       max-height: 178px;
+      &.collection-list {
+        max-height: none;
+      }
 
       .info-item {
         padding-top: 10px;

@@ -80,9 +80,11 @@
     .tileImageWrap {
       max-width: 440px;
       margin-bottom: 0;
+      flex: 0 0 50%;
 
       @include max-screen ($breakpoint-mobile) {
         margin-bottom: 20px;
+        flex: 0 0 100%;
       }
     }
 

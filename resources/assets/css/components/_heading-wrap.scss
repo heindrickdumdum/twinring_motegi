@@ -818,6 +818,10 @@
       line-height: 1;
       letter-spacing: 0.02em;
       margin-bottom: 14px;
+      @at-root .is-ie & {
+        color: #fff;
+        -webkit-text-fill-color: #fff;
+      }
     }
     .heading-subtext {
       margin-top: 0;
@@ -881,11 +885,12 @@
     .heading {
       .heading-subtext {
         max-width: 793px;
-        left: -20px;
+        left: 0;
         @include max-screen($breakpoint-mobile) {
           max-width: 260px;
           width: 100%;
           height: 94px;
+          left: -20px;
         }
       }
     }

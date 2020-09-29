@@ -57,7 +57,7 @@
 	    var isIpad = (ua.indexOf('iPad') > 0);
 	    var isAndroidTab = (ua.indexOf('Android') > 0 && ua.match(/Mobile/i) == null);
 	    var tab = isIpad || isAndroidTab;
-	    var minWidth = tab ? 1240 : 'device-width';
+	    var minWidth = tab ? 1279 : 'device-width';
 	    var initialScale = tab ? window.parent.screen.width / minWidth : 1;
 	    if (tab) {
 	      document.head.insertAdjacentHTML('beforeend', '<meta name="viewport" content="width=' + minWidth + ',initial-scale=' + initialScale + '">');

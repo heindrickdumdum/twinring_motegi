@@ -211,6 +211,12 @@
   letter-spacing: 0.1em;
   font-size: 36px;
 
+  @at-root .is-safari & {
+    @include max-screen ($breakpoint-tablet) {
+      margin-top: -1px;
+    }
+  }
+
   @at-root .heading-white & {//white text for dark background
     background: none !important;
     color: $color-white !important;

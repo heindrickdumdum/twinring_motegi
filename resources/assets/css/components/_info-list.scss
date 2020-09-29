@@ -122,7 +122,7 @@
           overflow: hidden;
         }
         &:before {
-          height: 40%;
+          height: 43%;
         }
         &.goods-item {
           height: 120px;
@@ -150,6 +150,7 @@
           font-weight: bold;
           @include max-screen ($breakpoint-mobile) {
             position: relative;
+            padding-left: 28px;
           }
         }
       }

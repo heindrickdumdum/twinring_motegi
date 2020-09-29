@@ -332,6 +332,7 @@
             min-width: 364px;
             @include max-screen ($breakpoint-mobile) {
               margin: 0 auto;
+              min-width: 100%;
             }
           }
         }

@@ -221,13 +221,16 @@
       margin-bottom: 0;
 
       @include max-screen ($breakpoint-mobile) {
-        margin-bottom: 20px;
+        margin:0 auto 20px;
       }
     }
 
 
     .tileDescWrap {
       max-width: 520px;
+      @include max-screen ($breakpoint-mobile) {
+        margin:0 auto;
+      }
 
       .banner-title {
         font-size: 15px;
@@ -328,6 +331,7 @@
 
         .button {
           margin: 0 5px;
+          font-weight: 400;
           @at-root .is-safari & {
             min-width: 364px;
             @include max-screen ($breakpoint-mobile) {
@@ -341,7 +345,7 @@
         }
 
         @include max-screen ($breakpoint-mobile) {
-          max-width: 222px;
+          max-width: 375px;
           margin: auto;
           margin-bottom: 22px;
         }

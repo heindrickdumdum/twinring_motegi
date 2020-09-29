@@ -334,6 +334,9 @@
               margin: 0 auto;
               min-width: 100%;
             }
+            @include max-screen ($breakpoint-tablet) {
+              font-size: 16px;
+            }
           }
         }
 

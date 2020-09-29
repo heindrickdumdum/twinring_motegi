@@ -214,6 +214,7 @@
   @at-root .is-safari & {
     @include max-screen ($breakpoint-tablet) {
       margin-top: -3px;
+      -webkit-mask-image: linear-gradient(180deg, #027cc3 0, #099f48 100%);
     }
   }
 

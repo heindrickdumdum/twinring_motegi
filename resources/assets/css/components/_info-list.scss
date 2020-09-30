@@ -124,6 +124,9 @@
         &:before {
           height: 17px;
           top: 30px;
+          @include max-screen ($breakpoint-mobile) {
+            top: 25px;
+          }
         }
         &.goods-item {
           height: 120px;

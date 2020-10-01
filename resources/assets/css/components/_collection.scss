@@ -141,6 +141,6 @@
 }
 .collection-data-list{
   @include max-screen ($breakpoint-mobile) {
-      margin-top: 62px;
+      margin-top: 0px;
   }
 }

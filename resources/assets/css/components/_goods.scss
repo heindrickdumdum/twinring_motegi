@@ -18,6 +18,7 @@
 
     @include max-screen ($breakpoint-mobile) {
       padding-bottom: 0px;
+      padding-top: 62px;
 
       .media-title {
         margin-bottom: 10px;

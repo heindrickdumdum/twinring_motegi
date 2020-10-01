@@ -57,6 +57,13 @@ window.onload = () => {
   fixTabsIE();
 
   if(window.location.search.split("?tab=")[1]) {
-    document.getElementById('tab-'+window.location.search.split("?tab=")[1]).click()
+    let tabNo = window.location.search.split("?tab=")[1];
+    document.getElementById('tab-'+tabNo).click()
+
+    // SP
+    document.querySelectorAll('.select-goods-option[value="'+tabNo+'"]')[0].click();
+    document.getElementById('customSelect').classList.remove("open");
+    document.getElementById('customSelectItems').classList.add("select-hide");
+
   }
 }

@@ -66,4 +66,6 @@ window.onload = () => {
     document.getElementById('customSelectItems').classList.add("select-hide");
 
   }
+
+  
 }

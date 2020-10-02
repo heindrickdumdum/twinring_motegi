@@ -9,6 +9,17 @@ export default function screenOrientation() {
       } else {
         constants.$html.addClass('is-landscape');
       }
+
+      //Scroll to ID
+      if(window.location.hash) {
+        setTimeout(function(){
+          const y = document.querySelector(window.location.hash).getBoundingClientRect().top + window.scrollY-50;
+          window.scroll({
+            top: y,
+            behavior: 'smooth'
+          });
+        },100);
+      }
     });
 
     constants.$window.on('resize', function (e) {

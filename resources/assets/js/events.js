@@ -31,7 +31,7 @@ new Swiper('.slide-images', {
   },
   speed: 1000, 
   slidersPerView: 1,
-  effect: 'flip',
+
   loop: true,
   pagination: {
     el: '.events-swiper-pagination',

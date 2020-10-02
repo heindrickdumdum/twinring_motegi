@@ -394,3 +394,13 @@
     perspective: 1000;
     backface-visibility: hidden;
 }
+
+// Events Slider 
+.events-swiper {
+  overflow: hidden;
+  position: relative;
+
+  .events-swiper-pagination {
+    position: initial !important;
+  }
+}

@@ -9,6 +9,10 @@ export default class eventItemSlide {
      fadeEffect: { crossFade: true },
      effect: 'fade',
      loop: true,
+     autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+     },
 
      pagination: {
       el: '.events-swiper-pagination',

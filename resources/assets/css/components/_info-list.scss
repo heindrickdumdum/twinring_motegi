@@ -124,6 +124,9 @@
         &:before {
           height: 17px;
           top: 30px;
+          @include max-screen ($breakpoint-mobile) {
+            top: 25px;
+          }
         }
         &.goods-item {
           height: 120px;
@@ -133,6 +136,9 @@
           &:before {
             height: 10px;
             top: 36px;
+            @include max-screen ($breakpoint-mobile) {
+              top: 30px;
+            }
           }
         }
         .collection-item-div {

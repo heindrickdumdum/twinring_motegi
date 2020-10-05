@@ -64,7 +64,7 @@ module.exports = {
 		contentsTagsBottom = getTags(CONFIG.tag.ligAssets.end, CONFIG.tag.closed);
 		contentsTags = contentsTagsTop + contentsTagsBottom;
 
-		//contentsTags = contentsTags + '\n\n</html>'
+		contentsTags = contentsTags + '\n\n</html>'
 
 		fs.writeFileSync(targetFile, contentsTags);
 		// console.log('success: ' + targetFile);

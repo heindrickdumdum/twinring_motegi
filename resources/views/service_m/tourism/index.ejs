@@ -112,7 +112,7 @@
           modifier: 'heading-wrap-auto heading-wrap-green-line',
             heading_level: 2,
             subtextvg: 'tourism-motegi-nature_title',
-            altSubtextvg: '森のごちそうが詰まったホテルシェフの自信作石窯焼きプレート'
+            altSubtextvg: '茂木町の自然にふれる'
           }) %>
         <ul class="tiles">
           <% tourismMogiCho.forEach(item => { %>
@@ -136,7 +136,7 @@
           heading_level: 2,
           text: ``,
           subtextvg: 'tourism-mashiko_title',
-          altSubtextvg: '森のごちそうが詰まったホテルシェフの自信作石窯焼きプレート'
+          altSubtextvg: '益子町'
         }) %>
         <ul class="townListItem">
           <% tourismMashikoTown.forEach(item => { %>
@@ -146,7 +146,7 @@
               </div>
               <div class="tileDescWrap">
                 <p class="direction-time"><%- item.directionTime -%></p>
-                <p class="color-title"><img src="<%- item.colorTitle -%>" alt="<%- item.officialLinkText -%>"> <span class="official-link-wrap"><a class="official-link link " target="_blank" href="<%- item.officialLink -%>"><%- item.officialLinkText -%></a></span></p>
+                <p class="color-title"><img src="<%- item.colorTitle -%>" alt="<%- item.colorTitleAlt -%>"> <span class="official-link-wrap"><a class="official-link link " target="_blank" href="<%- item.officialLink -%>"><%- item.officialLinkText -%></a></span></p>
                 <p class="desc"><%- item.desc -%></p>
                 <p class="address"><%- item.address -%> <span class="map-link-wrap">
                   <a class="map-link link" target="_blank" href="<%- item.mapLink -%>">Googleマップ</a></span>
@@ -172,7 +172,7 @@
                 <%- include('/partials/button', {
                   modifier: '',
                   text: 'トップページへ',
-                  link: 'http://twinring-motegi.test-web.asia/'
+                  link: '/'
                 }) %>
               </div>
 

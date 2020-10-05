@@ -498,6 +498,12 @@
       @include max-screen ($breakpoint-mobile) {
         font-size: 14px;
       }
+
+      &.open {
+        .is-open {display: inline-block;}
+        .is-close {display: none;}
+      }
+
       span {
         position: relative;
         display: inline-block;
@@ -518,7 +524,9 @@
             top: 6px;
           }
         }
+
         &.is-open {
+          display: none;
           &:before {
             transform: rotate(0);
             top: 3px;

@@ -44,4 +44,7 @@ window.onload = () => {
   if(window.location.search.split("?tab=")[1]) {
     document.getElementById('tab-'+window.location.search.split("?tab=")[1]).click()
   }
+
+  
+
 }

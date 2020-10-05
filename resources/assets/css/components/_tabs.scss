@@ -383,6 +383,13 @@
     &.custom-select-goods-sp {
       max-width: 258px;
       margin-bottom: 0;
+      &.is-fixed {
+        position: fixed;
+        top: 57px;
+        left: 0;
+        right: 0;
+        z-index: 999;
+      }
     }
   }
 

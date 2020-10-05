@@ -67,18 +67,3 @@ window.onload = () => {
 
   }
 }
-
-const tabSelect = document.querySelector('.custom-select-goods-sp');
-const main = document.querySelector('.bg-grey');
-let navOffsetop = tabSelect.getBoundingClientRect().top;
-
-window.addEventListener('scroll', function(){
-  if (navOffsetop <= window.pageYOffset) {
-    tabSelect.classList.add('is-fixed');
-    main.style.marginTop = '95px';
-  } else {
-    tabSelect.classList.remove('is-fixed');
-    main.style.marginTop = '0';
-  }
-
-});

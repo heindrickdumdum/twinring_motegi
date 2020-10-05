@@ -417,6 +417,10 @@
   display: block;
 }
 .schedule-section {
+  @include max-screen ($breakpoint-mobile) {
+    padding-top: 50px;
+    margin-top: -50px;
+  }
   .business-calendar-wrapper {
     background: none;
     @include max-screen ($breakpoint-mobile) {
@@ -581,4 +585,10 @@
 }
 .racing-kart-ul {
   padding-left: 17px;
+}
+.tabs-goods-section {
+  @include max-screen ($breakpoint-mobile) {
+    padding-top: 50px;
+    margin-top: -50px;
+  }
 }

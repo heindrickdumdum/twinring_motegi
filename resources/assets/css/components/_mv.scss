@@ -1765,6 +1765,16 @@
     }
   }
 
+  .mv-tourism {
+    &::after {
+      bottom: -68px;
+
+      @include max-screen($breakpoint-mobile) {
+        bottom: -25px;
+      }
+    }
+  }
+
   .mv-heading-subpage {
     width: 100%;
     text-align: center;

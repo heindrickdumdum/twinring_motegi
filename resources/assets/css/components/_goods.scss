@@ -18,7 +18,7 @@
 
     @include max-screen ($breakpoint-mobile) {
       padding-bottom: 0px;
-      padding-top: 62px;
+      padding-top: 12px;
 
       .media-title {
         margin-bottom: 10px;
@@ -40,9 +40,9 @@
         display: block;
         max-width: 290px;
         margin: auto;
-        margin-bottom: 48px;
+        margin-bottom: 25px;
         flex: 0 0 100%;
-        min-height: 211px;
+        min-height: 0;
       }
       &.collection-image-wrapper {
         max-width: 557px;

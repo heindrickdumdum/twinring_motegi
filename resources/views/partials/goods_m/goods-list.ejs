@@ -65,14 +65,12 @@ if (typeof modifier === 'undefined'){
     <ul id="program-list" class="tiles tilesGoodsList" data-tab="1">
       <% dataGoodList.forEach(item => { %>
         <li class="tile program-item program-item-goods" data-tab="<%- item.tab %>">
-          <a href="<%- item.link -%>">
             <div class="tileImageWrap">
               <img src="<%- item.imgPath -%>" alt="<%- item.alt -%>">
             </div>
             <div class="tileDescWrap">
               <p class="title <%- item.mods -%>"><%- item.title -%></p>
             </div>
-          </a>
         </li>
       <% } ) %>
     </ul>

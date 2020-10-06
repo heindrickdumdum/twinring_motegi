@@ -418,8 +418,8 @@
 }
 .schedule-section {
   @include max-screen ($breakpoint-mobile) {
-    padding-top: 50px;
-    margin-top: -50px;
+    padding-top: 32px;
+    margin-top: -32px;
   }
   .business-calendar-wrapper {
     background: none;

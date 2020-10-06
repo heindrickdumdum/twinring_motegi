@@ -3,11 +3,11 @@
     <% dataEventsItem.forEach( item => { %>
       <li class="goods-shop-items events-shop-items clearfix events-list-item" data-age="<%- item.age %>" data-grade="<%- item.grade %>" data-passport="<%- item.passport %>" >
         <div class="wrapper-container">
-          <div class="area-item-image-wrapper">
-              <div class="events-swiper <%= item.classMods %>" data-imgcount="<%= item.imgList.length %>">
+          <div class="subpage-image-gallery area-item-image-wrapper">
+              <div class="events-swiper swiper-container slider-gallery js-gallery swiper-container-horizontal <%= item.classMods %> " data-imgcount="<%= item.imgList.length %>">
                 <div class="swiper-wrapper">
                   <% item.imgList.forEach( imgItem => { %>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide slider-item">
                       <img src="<%- imgItem.imgUrl %>" alt="<%- imgItem.alt %>">
                     </div>
                   <% }) %>
@@ -17,7 +17,7 @@
                 </div>
                 <!-- Add Pagination -->
 
-                <div class="events-swiper-pagination"></div>
+                <div class="events-swiper-pagination swiper-pagination-bullets"></div>
 
               </div>
 

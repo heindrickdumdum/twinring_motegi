@@ -1,4 +1,4 @@
-import Swiper from 'swiper/dist/js/swiper.esm.bundle';
+// import Swiper from 'swiper/dist/js/swiper.esm.bundle';
 
 // export default class galleryEventsList {
 //  constructor() {
@@ -23,19 +23,45 @@ import Swiper from 'swiper/dist/js/swiper.esm.bundle';
 // }
 // new galleryEventsList();
 
-new Swiper('.slide-images', {
+// new Swiper('.slide-images', {
+ 
+//   autoplay: {
+//       delay: 5000,
+//       disableOnInteraction: true,
+//   },
+//   speed: 1000, 
+//   slidersPerView: 1,
 
-  autoplay: {
+//   loop: true,
+//   pagination: {
+//     el: '.events-swiper-pagination',
+//     clickable: true
+//   }
+// });
+
+
+import Swiper from 'swiper/dist/js/swiper.js';
+
+export default class galleryEvent1 {
+ constructor() {
+
+   new Swiper('.js-gallery', {
+     speed: 1000,
+     slidesPerView: 1,
+     fadeEffect: { crossFade: true },
+     effect: 'fade',
+     loop: true,
+     autoplay: {
       delay: 5000,
-      disableOnInteraction: true,
-  },
-  speed: 1000, 
-  slidersPerView: 1,
+      disableOnInteraction: false,
+     },
+     pagination: {
+      el: '.swiper-pagination-bullets',
+      clickable: true,
+    }
+   })
+ }
+}
 
-  loop: true,
-  pagination: {
-    el: '.events-swiper-pagination',
-    clickable: true
-  }
-});
+new galleryEvent1();
 

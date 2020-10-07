@@ -66,4 +66,16 @@ window.onload = () => {
     document.getElementById('customSelectItems').classList.add("select-hide");
 
   }
+
+
+  //Scroll to ID
+  if(window.location.hash) {
+    setTimeout(function(){
+      const y = document.querySelector(window.location.hash).getBoundingClientRect().top + window.scrollY-50;
+      window.scroll({
+        top: y,
+        behavior: 'smooth'
+      });
+    },100);
+  }
 }

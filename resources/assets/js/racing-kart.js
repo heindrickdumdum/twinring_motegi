@@ -45,6 +45,15 @@ window.onload = () => {
     document.getElementById('tab-'+window.location.search.split("?tab=")[1]).click()
   }
 
-  
+  //Scroll to ID
+  if(window.location.hash) {
+    setTimeout(function(){
+      const y = document.querySelector(window.location.hash).getBoundingClientRect().top + window.scrollY-50;
+      window.scroll({
+        top: y,
+        behavior: 'smooth'
+      });
+    },100);
+  }
 
 }

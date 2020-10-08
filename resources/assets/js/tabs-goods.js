@@ -71,7 +71,7 @@ window.onload = () => {
   //Scroll to ID
   if(window.location.hash) {
     setTimeout(function(){
-      const y = document.querySelector(window.location.hash).getBoundingClientRect().top + window.scrollY-50;
+      const y = document.querySelector(window.location.hash).getBoundingClientRect().top + window.scrollY-80;
       window.scroll({
         top: y,
         behavior: 'smooth'

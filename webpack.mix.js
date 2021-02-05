@@ -52,10 +52,7 @@ mix
     `${distRelativePath}/assets/js`,
   )
 
-  .js(
-    `${srcRelativePath}/assets/js/common-slider.js`,
-    `${distRelativePath}/assets/js`,
-  )
+  
 
   .js(
     `${srcRelativePath}/assets/js/accordion.js`,
@@ -142,6 +139,11 @@ mix
     `${distRelativePath}/assets/js`,
   )
 
+  .js(
+    `${srcRelativePath}/assets/js/common-slider.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
   .eslint()
   .webpackConfig({
     plugins: [
@@ -197,7 +199,20 @@ mix
     `${srcRelativePath}/assets/lib/test`,
     `${distRelativePath}/assets/lib/test`,
     { base: `${srcRelativePath}/assets/lib/test` }
+  )
+
+  .copyWatched(
+    `${srcRelativePath}/assets/data`,
+    `${distRelativePath}/assets/data`,
+    { base: `${srcRelativePath}/assets/data` }
+  )
+  
+  .copyWatched(
+    `${srcRelativePath}/common-parts.json`,
+    `${distRelativePath}/common-parts.json`,
+    { base: `${srcRelativePath}/common-parts.json` }
 	)
+
   .browserSync({
     open: true,
     host: process.env.MIX_BROWSER_SYNC_HOST || 'localhost',

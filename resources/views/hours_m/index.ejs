@@ -62,7 +62,28 @@
       </section>
       
 
-      <%- include('/partials/pickup') -%>
+      <!-- Pickup JSON -->
+      <section class="bottom-slider bottom-slider-pickup">
+        <div class="l-section-title u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-pickup',
+            text: 'Pick Up',
+            altSubtext: '',
+            subtextvg: 'pickup-new-title-pc'
+          }) %>
+        </div>
+        <div class="l-section-title u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-pickup',
+            text: 'Pick Up',
+            altSubtext: '',
+            subtextvg: 'pickup-new-title-sp'
+          }) %>
+        </div>
+        <div class="swiper-container slider-pickup js-slider-pickup-json">
+          <ul class="swiper-wrapper slider-wrapper"></ul>
+        </div>
+      </section>
     </main>
   </div>
 </div>

@@ -1,0 +1,117 @@
+{
+  "pickupArticle" : [
+    {
+      "image" : "/assets/images/pickup/pickup-14.jpg",
+      "heading" : "家族みんなで団らん「スーペリアファミリールーム」3月13日（金）～新登場",
+      "type" : "news",
+      "date" : "",
+      "link" : "/hoteltwinring/familyroom/"
+    },
+    {
+      "image" : "/assets/images/pickup/pickup-03.jpg",
+      "heading" : "歩くほどに発見「森のファミリーウォーク TEKUTEKU」3月20日（金・祝）～新登場",
+      "type" : "news",
+      "date" : "開催期間：2020年3月20日（金・祝）～",
+      "link" : "/hellowoods/program/#tekuteku"
+    },
+    {
+      "image" : "/assets/images/pickup/pickup-13.jpg",
+      "heading" : "“今”だけの冒険と発見「アクティビティ」この春新登場",
+      "type" : "news",
+      "date" : "開催期間：2020年春",
+      "link" : "/activity/"
+    },
+    {
+      "image" : "/assets/images/pickup/pickup-14.jpg",
+      "heading" : "家族みんなで団らん「スーペリアファミリールーム」3月13日（金）～新登場",
+      "type" : "news",
+      "date" : "",
+      "link" : "/hoteltwinring/familyroom/"
+    },
+    {
+      "image" : "/assets/images/pickup/pickup-03.jpg",
+      "heading" : "歩くほどに発見「森のファミリーウォーク TEKUTEKU」3月20日（金・祝）～新登場",
+      "type" : "news",
+      "date" : "開催期間：2020年3月20日（金・祝）～",
+      "link" : "/hellowoods/program/#tekuteku"
+    },
+    {
+      "image" : "/assets/images/pickup/pickup-13.jpg",
+      "heading" : "“今”だけの冒険と発見「アクティビティ」この春新登場",
+      "type" : "news",
+      "date" : "開催期間：2020年春",
+      "link" : "/activity/"
+    }
+  ],
+  "recommendationArticle" : [
+    {
+      "image" : "/assets/images/recommendation/recommendation01.jpg",
+      "heading" : "森のファミリーウォーク TEKUTEKU",
+      "buttonLink" : "/hellowoods/program/#tekuteku",
+      "buttonText" : "ハローウッズ"
+    },
+    {
+      "image" : "/assets/images/recommendation/recommendation02.jpg",
+      "heading" : "巨大ネットの森 SUMIKA",
+      "buttonLink" : "/sumika/",
+      "buttonText" : "モビパーク"
+    },
+    {
+      "image" : "/assets/images/recommendation/recommendation03.jpg",
+      "heading" : "森感覚アスレチック DOKIDOKI",
+      "buttonLink" : "/dokidoki/",
+      "buttonText" : "モビパーク"
+    },
+    {
+      "image" : "/assets/images/recommendation/recommendation04.jpg",
+      "heading" : "迷宮森殿 ITADAKI",
+      "buttonLink" : "/itadaki/",
+      "buttonText" : "モビパーク"
+    },
+    {
+      "image" : "/assets/images/recommendation/recommendation05.jpg",
+      "heading" : "森の空中散歩（ジップライン）",
+      "buttonLink" : "/hellowoods/#zip-line",
+      "buttonText" : "ハローウッズ"
+    },
+    {
+      "image" : "/assets/images/recommendation/recommendation06.jpg",
+      "heading" : "クルマ&バイクのアトラクション",
+      "buttonLink" : "/mobipark_m/attractions/car-and-bike.html",
+      "buttonText" : "モビパーク"
+    }
+  ],
+
+  "otherRestaurantArticle" : [
+    {
+      "src" : "/assets/images/otherrestaurant/toya.png",
+      "alt" : "里山懐石 登谷",
+      "title" : "里山懐石 登谷",
+      "link" : "/foods_m/toya/"
+    },
+    {
+      "src" : "/assets/images/otherrestaurant/gran-turismo-bg.jpg",
+      "alt" : "グランツーリスモ カフェ",
+      "title" : "グランツーリスモ カフェ",
+      "link" : "/foods_m/gran-turismo/"
+    },
+    {
+      "src" : "/assets/images/otherrestaurant/rocco.png",
+      "alt" : "森のジェラテリア ROCCO",
+      "title" : "森のジェラテリア ROCCO",
+      "link" : "/foods_m/rocco/"
+    },
+    {
+      "src" : "/assets/images/otherrestaurant/oak.png",
+      "alt" : "カフェレストラン オーク",
+      "title" : "カフェレストラン オーク",
+      "link" : "/foods_m/oak/"
+    },
+    {
+      "src" : "/assets/images/otherrestaurant/donguri-bg.jpg",
+      "alt" : "森のキッチン どんぐり",
+      "title" : "森のキッチン どんぐり",
+      "link" : "/foods_m/donguri/"
+    }
+  ]
+}

@@ -200,18 +200,19 @@ mix
     `${distRelativePath}/assets/lib/test`,
     { base: `${srcRelativePath}/assets/lib/test` }
   )
-
-  .copyWatched(
-    `${srcRelativePath}/assets/data`,
-    `${distRelativePath}/assets/data`,
-    { base: `${srcRelativePath}/assets/data` }
-  )
   
   .copyWatched(
-    `${srcRelativePath}/common-parts.json`,
-    `${distRelativePath}/common-parts.json`,
-    { base: `${srcRelativePath}/common-parts.json` }
-	)
+    `${srcRelativePath}/com`,
+    `${distRelativePath}/com`,
+    { base: `${srcRelativePath}/com` }
+  )
+
+  .copyWatched(
+    `${srcRelativePath}/com/.htaccess`,
+    `${distRelativePath}/com/.htaccess`,
+    { base: `${srcRelativePath}/com/.htaccess` }
+  )
+
 
   .browserSync({
     open: true,

@@ -145,8 +145,23 @@ mix
   )
 
   .js(
+    `${srcRelativePath}/com/js/components/slider.js`,
+    `${distRelativePath}/com/js/components`,
+  )
+
+  .js(
     `${srcRelativePath}/com/js/common-slider.js`,
     `${distRelativePath}/com/js`,
+  )
+
+  .js(
+    `${srcRelativePath}/com/js/common-slider.js`,
+    `${distRelativePath}/com-test/js`,
+  )
+
+  .js(
+    `${srcRelativePath}/com/js/components/slider.js`,
+    `${distRelativePath}/com-test/js/components`,
   )
 
   .eslint()
@@ -207,9 +222,27 @@ mix
   )
   
   .copyWatched(
-    `${srcRelativePath}/com`,
-    `${distRelativePath}/com`,
-    { base: `${srcRelativePath}/com` }
+    `${srcRelativePath}/com/img`,
+    `${distRelativePath}/com/img`,
+    { base: `${srcRelativePath}/com/img` }
+  )
+
+  .copyWatched(
+    `${srcRelativePath}/com/img`,
+    `${distRelativePath}/com-test/img`,
+    { base: `${srcRelativePath}/com/img` }
+  )
+
+  .copyWatched(
+    `${srcRelativePath}/com/common-parts.json`,
+    `${distRelativePath}/com/common-parts.json`,
+    { base: `${srcRelativePath}/com/common-parts.json` }
+  )
+
+  .copyWatched(
+    `${srcRelativePath}/com/common-parts.json`,
+    `${distRelativePath}/com-test/common-parts.json`,
+    { base: `${srcRelativePath}/com/common-parts.json` }
   )
 
   .copyWatched(

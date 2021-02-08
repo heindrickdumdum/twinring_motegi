@@ -1,4 +1,4 @@
-import Swiper from 'swiper/dist/js/swiper.js';
+import Swiper from 'swiper/dist/js/swiper';
 
 export default function slider(params) {
   if (!params.id) return;

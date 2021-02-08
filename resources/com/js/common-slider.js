@@ -1,4 +1,4 @@
-import slider from './components/slider';
+import slider from '../js/components/slider';
 
 // SUMIKA , ITADAKI, AND DOKIDOKI TOP SLIDER
 slider({

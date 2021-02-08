@@ -41,6 +41,13 @@
       "type" : "news",
       "date" : "開催期間：2020年春",
       "link" : "/activity/"
+    },
+    {
+      "image" : "/com/img/pickup/notfound.jpg",
+      "heading" : "“今”だけの冒険と発見「アクティビティ」この春新登場",
+      "type" : "news",
+      "date" : "開催期間：2020年春",
+      "link" : "/activity/"
     }
   ],
   "recommendationArticle" : [
@@ -76,6 +83,12 @@
     },
     {
       "image" : "/com/img/recommendation/recommendation06.jpg",
+      "heading" : "クルマ&バイクのアトラクション",
+      "buttonLink" : "/mobipark_m/attractions/car-and-bike.html",
+      "buttonText" : "モビパーク"
+    },
+    {
+      "image" : "/com/img/recommendation/notfound.jpg",
       "heading" : "クルマ&バイクのアトラクション",
       "buttonLink" : "/mobipark_m/attractions/car-and-bike.html",
       "buttonText" : "モビパーク"

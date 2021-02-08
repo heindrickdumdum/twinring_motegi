@@ -204,12 +204,19 @@ loadJSON('/com/common-parts.json',
           var iImage = item.image;
           var iLink = item.link;
           var iType = item.type;
+          var fallImg = "'notfound'";
           var pickHTML = '<li class="swiper-slide slider-item">'+
           '<article class="article article-no-design modifier">'+
+            '<img class="hiddenImg" src="'+iImage+'" onerror="this.parentElement.classList.add('+fallImg+')" style="display: none;">'+  
             '<a href="'+iLink+'" class="article-no-design-link">'+
+              
               '<div class="article-image-wrap"><div class="article-image" style="background-image: url('+iImage+')"></div></div>'+
+
               '<span class="article-type article-type-type">'+iType+'</span>'+
-              '<h3 class="article-heading">'+iheading+'</h3>'
+
+              '<h3 class="article-heading found">'+iheading+'</h3>'+
+              '<h3 class="article-heading notfound" style="display: none;">Not Found</h3>'
+
               if(iDate){
                 '<p class="article-period"><time class="article-period-date" datetime="P1D">'+iDate+'</time></p>'
               }
@@ -227,15 +234,19 @@ loadJSON('/com/common-parts.json',
           var iImage = item.image;
           var iLink = item.buttonLink;
           var iLinkText = item.buttonText;
+          var fallImg = "'notfound'";
           var recommendHTML = '<li class="swiper-slide slider-item">'+
           '<article class="article article-no-design ">'+
+            '<img class="hiddenImg" src="'+iImage+'" onerror="this.parentElement.classList.add('+fallImg+')" style="display: none;">'+
             '<a href="'+iLink+'" class="article-no-design-link">'+
               '<div class="article-image-wrap"><div class="article-image" style="background-image: url('+iImage+')"></div></div>'+
               
-              '<h3 class="article-heading">'+iheading+'</h3>'+
+              '<h3 class="article-heading found">'+iheading+'</h3>'+
+              '<h3 class="article-heading notfound" style="display: none;">Not Found</h3>'+
             '</a>'+
             '<a class="button-gradient" href="'+iLink+'">'+
-              '<span class="button-gradient-text">'+iLinkText+'</span>'+
+              '<span class="button-gradient-text found">'+iLinkText+'</span>'+
+              '<span class="button-gradient-text notfound" style="display: none;">-</span>'+
               '<i class="button-gradient-icon"><svg xmlns="http://www.w3.org/2000/svg"><title></title><use xlink:href="/assets/svg/sprite.svg#sprite-arrow"></use></svg></i>'+
             '</a>'+
 
@@ -252,11 +263,11 @@ loadJSON('/com/common-parts.json',
           var iAlt = item.alt;
           var iImage = item.src;
           var iLink = item.link;
-          
+          var fallImg = "'notfound'";
           var otherRestHTML = '<li class="swiper-slide slider-item">'+
             '<a href="'+iLink+'">'+
-              '<div class="top-slider-image"><img src="'+iImage+'" alt="'+iAlt+'"></div>'+
-              '<span class="top-slider-text"><h2 class="subpage-title"><span>'+iTitle+'</span></h2></span>'+
+              '<div class="top-slider-image"><img src="'+iImage+'" alt="'+iAlt+'" onerror="this.parentElement.classList.add('+fallImg+')"></div>'+
+              '<span class="top-slider-text"><h2 class="subpage-title"><span class="found">'+iTitle+'</span><span class="notfound" style="display: none;">Not Found</span></h2></span>'+
             '</a></li>';
         
           otherRestWrapper.insertAdjacentHTML("beforeend",otherRestHTML);

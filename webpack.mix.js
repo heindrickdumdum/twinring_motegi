@@ -144,6 +144,11 @@ mix
     `${distRelativePath}/assets/js`,
   )
 
+  .js(
+    `${srcRelativePath}/com/js/common-slider.js`,
+    `${distRelativePath}/com/js`,
+  )
+
   .eslint()
   .webpackConfig({
     plugins: [

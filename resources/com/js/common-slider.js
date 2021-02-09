@@ -186,7 +186,13 @@ function loadJSON(path, success, error)
     xhr.open("GET", path, true);
     xhr.send();
 }
-loadJSON('/com/common-parts.json', 
+
+var comPath  = "/com/";
+if(window.location.pathname.includes("-test")){
+  comPath = "/com-test/";
+}
+
+loadJSON(comPath+'common-parts.json', 
     function(data) {
       commonPartsData=data; 
       console.log(commonPartsData);

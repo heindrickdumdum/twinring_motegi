@@ -251,6 +251,15 @@ mix
     { base: `${srcRelativePath}/com/.htaccess` }
   )
 
+  
+
+  // .copyWatched(
+  //   `${srcRelativePath}/views/hours_m/`,
+  //   `${distRelativePath}/hours_m-test/`,
+  //   { base: `${srcRelativePath}/views/hours_m/` }
+  // )
+
+
 
   .browserSync({
     open: true,
@@ -291,6 +300,39 @@ mix
       partials: `${srcRelativePath}/views/partials`
     }
   )
+
+  .ejs(
+    `${srcRelativePath}/views`,
+    distRelativePath,
+    {
+      mix: (filePath = '') =>
+        process.env.NODE_ENV === 'production'
+          ? basePath + filePath + '?id=' + Date.now()
+          : basePath + filePath,
+      svgSprite: (filePath = '', id = '') =>
+        process.env.NODE_ENV === 'production'
+          ? id
+          : basePath + filePath + id
+    }
+  )
+
+   // TEST DIRECTORIES
+  .copyWatched(
+    `${distRelativePath}/collection-hall/`,
+    `${distRelativePath}/collection-hall-test/`,
+    { base: `${distRelativePath}/collection-hall/` }
+  )
+  .copyWatched(
+    `${distRelativePath}/hours_m/`,
+    `${distRelativePath}/hours_m-test/`,
+    { base: `${distRelativePath}/hours_m/` }
+  )
+  .copyWatched(
+    `${distRelativePath}/foods_m/`,
+    `${distRelativePath}/foods_m-test/`,
+    { base: `${distRelativePath}/foods_m/` }
+  )
+ 
 
 if (process.env.NODE_ENV === 'production') {
   mix

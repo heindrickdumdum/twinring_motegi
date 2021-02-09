@@ -68,7 +68,7 @@ slider({
   options: {
     speed: 1500,
     slidesPerView: 'auto',
-    variableWidth: true,
+    letiableWidth: true,
     spaceBetween: 43,
     centeredSlides: false,
     initialSlide: 1,
@@ -119,7 +119,7 @@ slider({
   options: {
     speed: 1500,
     slidesPerView: 'auto',
-    variableWidth: true,
+    letiableWidth: true,
     spaceBetween: 60,
     centeredSlides: false,
     initialSlide: 1,
@@ -145,7 +145,7 @@ slider({
   options: {
     speed: 1500,
     slidesPerView: 'auto',
-    variableWidth: true,
+    letiableWidth: true,
     spaceBetween: 60,
     centeredSlides: false,
     initialSlide: 1,
@@ -167,10 +167,10 @@ slider({
 
 
 
-var commonPartsData = "";
+let commonPartsData = "";
 function loadJSON(path, success, error)
 {
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function()
     {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -187,7 +187,7 @@ function loadJSON(path, success, error)
     xhr.send();
 }
 
-var comPath  = "/com/";
+let comPath  = "/com/";
 if(window.location.pathname.includes("-test")){
   comPath = "/com-test/";
 }
@@ -195,23 +195,21 @@ if(window.location.pathname.includes("-test")){
 loadJSON(comPath+'common-parts.json', 
     function(data) {
       commonPartsData=data; 
-      console.log(commonPartsData);
       
-
-      var pickupWrapper = document.querySelector('.js-slider-pickup-json .slider-wrapper');
-      var recommendWrapper = document.querySelector('.js-slider-bottom-json .slider-wrapper');
-      var otherRestWrapper = document.querySelector('.js-slider-other-restaurant .slider-wrapper');
+      let pickupWrapper = document.querySelector('.js-slider-pickup-json .slider-wrapper');
+      let recommendWrapper = document.querySelector('.js-slider-bottom-json .slider-wrapper');
+      let otherRestWrapper = document.querySelector('.js-slider-other-restaurant .slider-wrapper');
       
       //Pickup
       if(pickupWrapper){
         commonPartsData.pickupArticle.forEach(function(item){
-          var iDate = item.date;
-          var iheading = item.heading;
-          var iImage = item.image;
-          var iLink = item.link;
-          var iType = item.type;
-          var fallImg = "'notfound'";
-          var pickHTML = '<li class="swiper-slide slider-item">'+
+          let iDate = item.date;
+          let iheading = item.heading;
+          let iImage = item.image;
+          let iLink = item.link;
+          let iType = item.type;
+          let fallImg = "'notfound'";
+          let pickHTML = '<li class="swiper-slide slider-item">'+
           '<article class="article article-no-design modifier">'+
             '<img class="hiddenImg" src="'+iImage+'" onerror="this.parentElement.classList.add('+fallImg+')" style="display: none;">'+  
             '<a href="'+iLink+'" class="article-no-design-link">'+
@@ -236,12 +234,12 @@ loadJSON(comPath+'common-parts.json',
       //Recommendation
       if(recommendWrapper){
         commonPartsData.recommendationArticle.forEach(function(item){
-          var iheading = item.heading;
-          var iImage = item.image;
-          var iLink = item.buttonLink;
-          var iLinkText = item.buttonText;
-          var fallImg = "'notfound'";
-          var recommendHTML = '<li class="swiper-slide slider-item">'+
+          let iheading = item.heading;
+          let iImage = item.image;
+          let iLink = item.buttonLink;
+          let iLinkText = item.buttonText;
+          let fallImg = "'notfound'";
+          let recommendHTML = '<li class="swiper-slide slider-item">'+
           '<article class="article article-no-design ">'+
             '<img class="hiddenImg" src="'+iImage+'" onerror="this.parentElement.classList.add('+fallImg+')" style="display: none;">'+
             '<a href="'+iLink+'" class="article-no-design-link">'+
@@ -265,12 +263,12 @@ loadJSON(comPath+'common-parts.json',
       //Other Restaurant
       if(otherRestWrapper){
         commonPartsData.otherRestaurantArticle.forEach(function(item){
-          var iTitle = item.title;
-          var iAlt = item.alt;
-          var iImage = item.src;
-          var iLink = item.link;
-          var fallImg = "'notfound'";
-          var otherRestHTML = '<li class="swiper-slide slider-item">'+
+          let iTitle = item.title;
+          let iAlt = item.alt;
+          let iImage = item.src;
+          let iLink = item.link;
+          let fallImg = "'notfound'";
+          let otherRestHTML = '<li class="swiper-slide slider-item">'+
             '<a href="'+iLink+'">'+
               '<div class="top-slider-image"><img src="'+iImage+'" alt="'+iAlt+'" onerror="this.parentElement.classList.add('+fallImg+')"></div>'+
               '<span class="top-slider-text"><h2 class="subpage-title"><span class="found">'+iTitle+'</span><span class="notfound" style="display: none;">Not Found</span></h2></span>'+
@@ -286,7 +284,7 @@ loadJSON(comPath+'common-parts.json',
         options: {
           speed: 1500,
           slidesPerView: 'auto',
-          variableWidth: true,
+          letiableWidth: true,
           spaceBetween: 60,
           centeredSlides: false,
           initialSlide: 1,
@@ -313,7 +311,7 @@ loadJSON(comPath+'common-parts.json',
         options: {
           speed: 1500,
           slidesPerView: 'auto',
-          variableWidth: true,
+          letiableWidth: true,
           spaceBetween: 43,
           centeredSlides: false,
           initialSlide: 1,

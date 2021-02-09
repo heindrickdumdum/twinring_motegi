@@ -189,7 +189,6 @@ function loadJSON(path, success, error)
 loadJSON('/com/common-parts.json', 
     function(data) {
       commonPartsData=data; 
-      console.log(commonPartsData);
       
 
       var pickupWrapper = document.querySelector('.js-slider-pickup-json .slider-wrapper');

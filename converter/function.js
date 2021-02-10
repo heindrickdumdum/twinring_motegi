@@ -18,6 +18,7 @@ module.exports = {
 
 		// Read html file
 		htmlTags = iconv.decode(fs.readFileSync(targetFile), 'utf8');
+		console.log('targetFile:%s', targetFile);
 
 		//抽出 specific tags
 		function getTags(start, end, startTagLen, endTagLen){
@@ -25,7 +26,13 @@ module.exports = {
 			var endLine = (typeof end === "string") ? htmlTags.indexOf(end) : end;
 			var startTagLen = (!startTagLen) ? 0 : start.length;
 			var endTagLen = (!endTagLen) ? 0 : end.length;
+			console.log('startLine: %s startTagLen: %s', startLine, startTagLen);
+			console.log('endLine: %s endTagLen: %s', endLine, endTagLen);
+
 			var contentsTags = htmlTags.slice(startLine + startTagLen, endLine + endTagLen);
+
+			console.log('htmlTags length: %s contentsTags length: %s', htmlTags.length, contentsTags.length);
+			console.log('contents last 10:%s', contentsTags.slice(-10));
 
 			return contentsTags;
 		}
@@ -56,6 +63,8 @@ module.exports = {
 		contentsTagsTop = getTags(0, CONFIG.tag.ligAssets.start);
 		contentsTagsBottom = getTags(CONFIG.tag.ligAssets.end, CONFIG.tag.closed);
 		contentsTags = contentsTagsTop + contentsTagsBottom;
+
+		contentsTags = contentsTags + '\n\n</html>'
 
 		fs.writeFileSync(targetFile, contentsTags);
 		// console.log('success: ' + targetFile);

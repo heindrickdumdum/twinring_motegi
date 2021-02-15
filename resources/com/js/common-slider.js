@@ -210,7 +210,7 @@ loadJSON(comPath+'common-parts.json',
           let iType = item.type;
           let fallImg = "'notfound'";
           let pickHTML = '<li class="swiper-slide slider-item">'+
-          '<article class="article article-no-design modifier">'+
+          '<article class="article article-no-design article-pickup modifier">'+
             '<img class="hiddenImg" src="'+iImage+'" onerror="this.parentElement.classList.add('+fallImg+')" style="display: none;">'+  
             '<a href="'+iLink+'" class="article-no-design-link">'+
               
@@ -219,11 +219,11 @@ loadJSON(comPath+'common-parts.json',
               '<span class="article-type article-type-type">'+iType+'</span>'+
 
               '<h3 class="article-heading found">'+iheading+'</h3>'+
-              '<h3 class="article-heading notfound" style="display: none;">Not Found</h3>'
+              '<h3 class="article-heading notfound hidden" style="display: none;">Not Found</h3>'+
 
-              if(iDate){
-                '<p class="article-period"><time class="article-period-date" datetime="P1D">'+iDate+'</time></p>'
-              }
+              //if(iDate){
+                '<p class="article-period"><time class="article-period-date" datetime="P1D">'+iDate+'</time></p>'+
+              //}
             '</a>'+
           '</article></li>';
 
@@ -248,7 +248,7 @@ loadJSON(comPath+'common-parts.json',
               '<h3 class="article-heading found">'+iheading+'</h3>'+
               '<h3 class="article-heading notfound" style="display: none;">Not Found</h3>'+
             '</a>'+
-            '<a class="button-gradient" href="'+iLink+'">'+
+            '<a class="button-gradient button-gradient-cmn" href="'+iLink+'">'+
               '<span class="button-gradient-text found">'+iLinkText+'</span>'+
               '<span class="button-gradient-text notfound" style="display: none;">-</span>'+
               '<i class="button-gradient-icon"><svg xmlns="http://www.w3.org/2000/svg"><title></title><use xlink:href="/assets/svg/sprite.svg#sprite-arrow"></use></svg></i>'+

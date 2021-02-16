@@ -187,8 +187,12 @@ function loadJSON(path, success, error){
 }
 
 let comPath  = "/com/";
+let rootPath = "/";
 if(window.location.pathname.includes("-test")){
   comPath = "/com-test/";
+}
+if(window.location.pathname.includes("stg.")){
+  rootPath = "./";
 }
 
 loadJSON(comPath+'common-parts.json', 
@@ -250,7 +254,7 @@ loadJSON(comPath+'common-parts.json',
             '<a class="button-gradient button-gradient-cmn" href="'+iLink+'">'+
               '<span class="button-gradient-text found">'+iLinkText+'</span>'+
               '<span class="button-gradient-text notfound" style="display: none;">-</span>'+
-              '<i class="button-gradient-icon"><svg xmlns="http://www.w3.org/2000/svg"><title></title><use xlink:href="/assets/svg/sprite.svg#sprite-arrow"></use></svg></i>'+
+              '<i class="button-gradient-icon asset" data-path="'+rootPath+'"><svg xmlns="http://www.w3.org/2000/svg"><title></title><use xlink:href="'+rootPath+'assets/svg/sprite.svg#sprite-arrow"></use></svg></i>'+
             '</a>'+
 
           '</article></li>';

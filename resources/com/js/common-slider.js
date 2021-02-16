@@ -192,7 +192,7 @@ let rootPath = "/";
 if(window.location.pathname.includes("-test")){
   comPath = "/com-test/";
 }
-if(window.location.pathname.includes("stg.")){
+if(window.location.origin.includes("stg.")){
   rootPath = "./";
 }
 

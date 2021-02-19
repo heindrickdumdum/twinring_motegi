@@ -32,61 +32,61 @@ slider({
   }
 })
 
-// // other restaurant slide
-// slider({
-//   id: 'otherRestaurantSlider', // REQUIRED
-//   target: '.js-slider-other-restaurant',// REQUIRED
+// other restaurant slide
+slider({
+  id: 'otherRestaurantSlider', // REQUIRED
+  target: '.js-slider-other-restaurant',// REQUIRED
 
-//   options: {
-//     speed: 1500,
-//     slidesPerView: 3,
-//     spaceBetween: 60,
-//     loop: true,
-//     centeredSlides: true,
-//     autoplay: {
-//       delay: 3000,
-//       disableOnInteraction: false
-//     },
-//     breakpoints: {
-//       749: {
-//         slidesPerView: 3,
-//         spaceBetween: 30,
-//         pagination: {
-//           el: '.swiper-pagination',
-//           clickable: true
-//         }
-//       }
-//     }
-//   }
-// })
+  options: {
+    speed: 1500,
+    slidesPerView: 3,
+    spaceBetween: 60,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    breakpoints: {
+      749: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      }
+    }
+  }
+})
 
-// // recommended restaurant slide
-// slider({
-//   id: 'recommendedRestaurantSlider', // REQUIRED
-//   target: '.js-slider-recommended-restaurant',// REQUIRED
+// recommended restaurant slide
+slider({
+  id: 'recommendedRestaurantSlider', // REQUIRED
+  target: '.js-slider-recommended-restaurant',// REQUIRED
 
-//   options: {
-//     speed: 1500,
-//     slidesPerView: 'auto',
-//     letiableWidth: true,
-//     spaceBetween: 43,
-//     centeredSlides: false,
-//     initialSlide: 1,
-//     loop: true,
-//     autoplay: {
-//       delay: 3500,
-//       disableOnInteraction: false,
-//     },
+  options: {
+    speed: 1500,
+    slidesPerView: 'auto',
+    letiableWidth: true,
+    spaceBetween: 43,
+    centeredSlides: false,
+    initialSlide: 1,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
 
-//     breakpoints: {
-//       749: {
-//         slidesPerView: 'auto',
-//         spaceBetween: 25,
-//         centeredSlides: true
-//       }
-//     }
-//   }
-// })
+    breakpoints: {
+      749: {
+        slidesPerView: 'auto',
+        spaceBetween: 25,
+        centeredSlides: true
+      }
+    }
+  }
+})
 
 // SUMIKA , ITADAKI, AND DOKIDOKI BOTTOM SLIDER
 // slider({
@@ -311,14 +311,17 @@ loadJSON(comPath+'common-parts.json',
       
         options: {
           speed: 1500,
-          slidesPerView: 3,
-          spaceBetween: 60,
+          slidesPerView: 'auto',
+          letiableWidth: true,
+          spaceBetween: 43,
+          centeredSlides: false,
+          initialSlide: 1,
           loop: true,
-          centeredSlides: true,
           autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
+            delay: 3500,
+            disableOnInteraction: false,
           },
+      
           breakpoints: {
             749: {
               slidesPerView: 'auto',

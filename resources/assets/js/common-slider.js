@@ -32,61 +32,61 @@ slider({
   }
 })
 
-// other restaurant slide
-slider({
-  id: 'otherRestaurantSlider', // REQUIRED
-  target: '.js-slider-other-restaurant',// REQUIRED
+// // other restaurant slide
+// slider({
+//   id: 'otherRestaurantSlider', // REQUIRED
+//   target: '.js-slider-other-restaurant',// REQUIRED
 
-  options: {
-    speed: 1500,
-    slidesPerView: 3,
-    spaceBetween: 60,
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-    breakpoints: {
-      749: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        }
-      }
-    }
-  }
-})
+//   options: {
+//     speed: 1500,
+//     slidesPerView: 3,
+//     spaceBetween: 60,
+//     loop: true,
+//     centeredSlides: true,
+//     autoplay: {
+//       delay: 3000,
+//       disableOnInteraction: false
+//     },
+//     breakpoints: {
+//       749: {
+//         slidesPerView: 3,
+//         spaceBetween: 30,
+//         pagination: {
+//           el: '.swiper-pagination',
+//           clickable: true
+//         }
+//       }
+//     }
+//   }
+// })
 
-// recommended restaurant slide
-slider({
-  id: 'recommendedRestaurantSlider', // REQUIRED
-  target: '.js-slider-recommended-restaurant',// REQUIRED
+// // recommended restaurant slide
+// slider({
+//   id: 'recommendedRestaurantSlider', // REQUIRED
+//   target: '.js-slider-recommended-restaurant',// REQUIRED
 
-  options: {
-    speed: 1500,
-    slidesPerView: 'auto',
-    letiableWidth: true,
-    spaceBetween: 43,
-    centeredSlides: false,
-    initialSlide: 1,
-    loop: true,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
+//   options: {
+//     speed: 1500,
+//     slidesPerView: 'auto',
+//     letiableWidth: true,
+//     spaceBetween: 43,
+//     centeredSlides: false,
+//     initialSlide: 1,
+//     loop: true,
+//     autoplay: {
+//       delay: 3500,
+//       disableOnInteraction: false,
+//     },
 
-    breakpoints: {
-      749: {
-        slidesPerView: 'auto',
-        spaceBetween: 25,
-        centeredSlides: true
-      }
-    }
-  }
-})
+//     breakpoints: {
+//       749: {
+//         slidesPerView: 'auto',
+//         spaceBetween: 25,
+//         centeredSlides: true
+//       }
+//     }
+//   }
+// })
 
 // SUMIKA , ITADAKI, AND DOKIDOKI BOTTOM SLIDER
 // slider({
@@ -199,9 +199,9 @@ loadJSON(comPath+'common-parts.json',
       
       let pickupWrapper = document.querySelector('.js-slider-pickup-json .slider-wrapper');
       let recommendWrapper = document.querySelector('.js-slider-bottom-json .slider-wrapper');
-      let otherRestWrapper = document.querySelector('.js-slider-other-restaurant .slider-wrapper');
+      let otherRestWrapper = document.querySelector('.js-slider-other-restaurant-json .slider-wrapper');
       
-      //Pickup
+      //Pickup Append HTML
       if(pickupWrapper){
         commonPartsData.pickupArticle.forEach(function(item){
           let iDate = item.date;
@@ -232,7 +232,7 @@ loadJSON(comPath+'common-parts.json',
         });
       }
 
-      //Recommendation
+      //Recommendation Append HTML
       if(recommendWrapper){
         commonPartsData.recommendationArticle.forEach(function(item){
           let iheading = item.heading;
@@ -261,7 +261,7 @@ loadJSON(comPath+'common-parts.json',
         });
       }
 
-      //Other Restaurant
+      //Other Restaurant Append HTML
       if(otherRestWrapper){
         commonPartsData.otherRestaurantArticle.forEach(function(item){
           let iTitle = item.title;
@@ -307,21 +307,18 @@ loadJSON(comPath+'common-parts.json',
 
       slider({
         id: 'recommendedRestaurantSliderJSON', // REQUIRED
-        target: '.js-slider-other-restaurant',// REQUIRED
+        target: '.js-slider-other-restaurant-json',// REQUIRED
       
         options: {
           speed: 1500,
-          slidesPerView: 'auto',
-          letiableWidth: true,
-          spaceBetween: 43,
-          centeredSlides: false,
-          initialSlide: 1,
+          slidesPerView: 3,
+          spaceBetween: 60,
           loop: true,
+          centeredSlides: true,
           autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
+            delay: 3000,
+            disableOnInteraction: false
           },
-      
           breakpoints: {
             749: {
               slidesPerView: 'auto',
@@ -331,6 +328,6 @@ loadJSON(comPath+'common-parts.json',
           }
         }
       });
-      },
+    },
     function(xhr) { console.error(xhr); }
 );

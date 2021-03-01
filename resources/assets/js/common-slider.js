@@ -191,7 +191,7 @@ if(window.location.pathname.includes("-test")){
   comPath = "/com-test/";
 }
 
-let svgArrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.89 18.28"><defs><style>.cls-1 {fill: #2d2d2d;}</style></defs><title>Asset 3</title><g id="Layer_2" data-name="Layer 2"><g id="レイヤー_1" data-name="レイヤー 1"><path class="cls-1" d="M39.73,9.65a.61.61,0,0,0,.07-.1.91.91,0,0,0,.09-.41,1,1,0,0,0-.09-.41s0-.06-.07-.1a1.3,1.3,0,0,0-.18-.23l0,0L29.38.22A1,1,0,0,0,28,.37a1,1,0,0,0,.15,1.41l7.93,6.36H1a1,1,0,0,0,0,2H36.05L28.12,16.5A1,1,0,0,0,28,17.91a1,1,0,0,0,.78.37,1,1,0,0,0,.63-.22L39.52,9.92l0,0A.84.84,0,0,0,39.73,9.65Z" /></g></g></svg>';
+let svgArrow = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.89 18.28"><title>Asset 3</title><g id="Layer_2" data-name="Layer 2"><g id="レイヤー_1" data-name="レイヤー 1"><path class="cls-1" d="M39.73,9.65a.61.61,0,0,0,.07-.1.91.91,0,0,0,.09-.41,1,1,0,0,0-.09-.41s0-.06-.07-.1a1.3,1.3,0,0,0-.18-.23l0,0L29.38.22A1,1,0,0,0,28,.37a1,1,0,0,0,.15,1.41l7.93,6.36H1a1,1,0,0,0,0,2H36.05L28.12,16.5A1,1,0,0,0,28,17.91a1,1,0,0,0,.78.37,1,1,0,0,0,.63-.22L39.52,9.92l0,0A.84.84,0,0,0,39.73,9.65Z" /></g></g></svg>';
 
 loadJSON(comPath+'common-parts.json', 
     function(data) {

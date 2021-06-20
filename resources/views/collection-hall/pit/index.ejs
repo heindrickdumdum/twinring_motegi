@@ -269,15 +269,44 @@
         </div>
       </div>
 
-      <!-- recommendation module -->
-      <div class="pit-recommendation">
-        <%- include('/partials/recommendation') -%>
-      </div>
+      <!-- Recommendation JSON -->
+      <section class="bottom-slider">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-recommend',
+            text: 'Recommendation',
+            altSubtext: '',
+            subtextvg: 'recommendation-title'
+          }) %>
+        </div>
 
-      <!-- pick up module -->
-      <div class="pit-pick-up">
-        <%- include('/partials/pickup') -%>
-      </div>
+        <div class="swiper-container slider-recommendation js-slider-bottom-json">
+          <ul class="swiper-wrapper slider-wrapper"></ul>
+        </div>
+      </section>
+      
+      <!-- Pickup JSON -->
+      <section class="bottom-slider bottom-slider-pickup">
+        <div class="l-section-title u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-pickup',
+            text: 'Pick Up',
+            altSubtext: '',
+            subtextvg: 'pickup-new-title-pc'
+          }) %>
+        </div>
+        <div class="l-section-title u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-pickup',
+            text: 'Pick Up',
+            altSubtext: '',
+            subtextvg: 'pickup-new-title-sp'
+          }) %>
+        </div>
+        <div class="swiper-container slider-pickup js-slider-pickup-json">
+          <ul class="swiper-wrapper slider-wrapper"></ul>
+        </div>
+      </section>
     </main>
     <!-- END BOTTOM -->
   </div>

@@ -72,8 +72,8 @@ module.exports = function(){
 				//Settings for replace
 				var options = {
 					files: thisPath,
-					from: [/\/assets/g, /<meta charset="UTF-8">/g, /<meta property="og:image" content="https:\/\/www.twinring.jp\/home.\/assets\/top\/img\/ogp.png">/g],
-					to: [relativePath(thisDepth), '<meta charset="SHIFT-JIS">', '<meta property="og:image" content="https://www.twinring.jp/assets/top/img/ogp.png">']
+					from: [/\/assets/g, /<meta charset="UTF-8">/g, /<meta property="og:image" content="https:\/\/www.twinring.jp\/home.\/assets\/top\/img\/ogp.png">/g, /https:\/\/www.twinring.jp\/top\.\/assets\/images\/ogp.png/g],
+					to: [relativePath(thisDepth), '<meta charset="SHIFT-JIS">', '<meta property="og:image" content="https://www.twinring.jp/assets/top/img/ogp.png">', 'https://www.twinring.jp/top/assets/images/ogp.png']
 				};
 				replaceFile.sync(options);
 

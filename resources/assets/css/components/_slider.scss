@@ -404,3 +404,12 @@
     position: initial !important;
   }
 }
+
+//Not Found Image Or Broken Image
+.notfound {
+  pointer-events: none;
+  a {pointer-events: none;}
+  .found, .article-type, .article-period {display: none;}
+  .notfound {display: block !important;}
+  
+}

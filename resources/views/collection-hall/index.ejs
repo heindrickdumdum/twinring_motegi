@@ -302,16 +302,69 @@
         }) %>
       </section>
 
-      <!-- recommendation module -->
-      <%- include('/partials/recommendation') -%>
+      <section class="bottom-slider">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-recommend',
+            text: 'Recommendation',
+            altSubtext: '',
+            subtextvg: 'recommendation-title'
+          }) %>
+        </div>
 
-      <!-- pick up module -->
-      <%- include('/partials/pickup') -%>
+        <div class="swiper-container slider-recommendation js-slider-bottom-json">
+          <ul class="swiper-wrapper slider-wrapper"></ul>
+        </div>
+      </section>
+      
+      
+      <section class="bottom-slider bottom-slider-pickup">
+        <div class="l-section-title u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-pickup',
+            text: 'Pick Up',
+            altSubtext: '',
+            subtextvg: 'pickup-new-title-pc'
+          }) %>
+        </div>
+        <div class="l-section-title u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-pickup',
+            text: 'Pick Up',
+            altSubtext: '',
+            subtextvg: 'pickup-new-title-sp'
+          }) %>
+        </div>
+        <div class="swiper-container slider-pickup js-slider-pickup-json">
+          <ul class="swiper-wrapper slider-wrapper"></ul>
+        </div>
+      </section>
+      
+      
+      
+      
 
     </main>
 
   </div>
 </div>
+
+<script>
+  window.onload = () => {
+    //Scroll to ID
+    if(window.location.hash) {
+      setTimeout(function(){
+        const y = document.querySelector(window.location.hash).getBoundingClientRect().top + window.scrollY-50;
+        window.scroll({
+          top: y,
+          behavior: 'smooth'
+        });
+      },100);
+    }
+
+
+  }  
+</script>
 
 <!-- BREADCRUMBS -->
 <%- include('/partials/breadcrumbs', {
@@ -320,17 +373,5 @@
 <%- include('/partials/footer', { pageId }) -%>
 
 
-<script>
-window.onload = () => {
-  //Scroll to ID
-  if(window.location.hash) {
-    setTimeout(function(){
-      const y = document.querySelector(window.location.hash).getBoundingClientRect().top + window.scrollY-50;
-      window.scroll({
-        top: y,
-        behavior: 'smooth'
-      });
-    },100);
-  }
-}
-</script>
+
+

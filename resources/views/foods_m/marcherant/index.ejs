@@ -431,7 +431,24 @@
       </section>
 
       <!-- other restaurant module-->
-      <%- include('/partials/marcherant_set/section-other-restaurant') -%>
+      <!-- '/partials/marcherant_set/section-other-restaurant') --->
+
+      <section class="other-restaurant">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-other-restaurant',
+            heading_level: 1,
+            text: 'Other Restaurant',
+            subtextvg: 'other-restaurant-top-title',
+            altSubtextvg: 'その他のレストラン'
+          }) %>
+        </div>
+      
+        <div class="swiper-container slider-recommendation slider-recommendation-restaurant slider  swiper-container-horizontal js-slider-other-restaurant-json">
+          <ul class="swiper-wrapper slider-wrapper"></ul>
+        </div>
+      </section>
+      
 
     </main>
     <!-- END BOTTOM -->

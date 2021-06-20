@@ -1,0 +1,1195 @@
+.media {
+  margin: 0 auto;
+  max-width: 1060px;
+  display: flex;
+  width: 100%;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 0 55px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 55px;
+
+      .arrow-green-down {
+        &::after {
+          top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.media-coll-pit {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 0;
+    }
+  }
+  
+}
+
+.sumika-media,
+.itadaki-media,
+.dokidoki-media {
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 61px;
+  }
+}
+
+.media-left {
+  text-align: center;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    max-width: 380px;
+    width: 100%;
+  }
+}
+
+.media-thumb-bg {
+  position: relative;
+  width: 100%;
+
+  img {
+    position: absolute;
+    content: "";
+    z-index: 1;
+  }
+}
+
+
+
+//media-grid
+.media-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    .subpage-section-otherroom & {//hotel granroom/familyroom
+      padding-left: 27px;
+      padding-right: 27px;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .subpage-section-otherroom & {//hotel granroom
+      margin-top: 39px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &-item {
+    width: 442px;
+    
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      margin-bottom: 59px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-img {
+    border: 1px solid #bbbbbb;
+    width: 442px;
+    min-height: 273px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      min-height: 210px;
+    }
+
+    &-rounded {
+      max-width: 470px;
+      width: 100%;
+      min-height: 300px;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 0px;
+
+      @include max-screen($breakpoint-mobile) {
+        min-height: 224px;
+        max-width: 100%;
+
+        .subpage-section-otherroom & {//hotel granroom
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  &-title {
+    margin-top: 27px;
+
+    span {
+      display: block;
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      min-height: 72px;
+
+      .subpage-section-otherroom & {
+        margin-top: 15px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      line-height: 1.846;     
+
+      .subpage-section-otherroom & {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &-desc {
+    font-size: 15px;
+    line-height: 2;
+    text-align: left;  
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.75;      
+    }
+  }
+}
+//media-grid end
+
+.media-bg {
+  position: relative;
+  padding: 5px;
+  // margin-left: 68px;
+
+  &.media-nobg { //hotel granroom
+    &:after {
+      background-image: none;
+      content: none;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    background-image: url('../images/img-frame-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    left: -2%;
+    z-index: 0;
+    width: 103%;
+    height: 103%;
+
+    .media-craft & {
+      @include max-screen($breakpoint-mobile) {
+        background-size: cover;
+        background-image: url('../images/img-frame-bg-sp.png');
+      }
+    }
+  }
+
+  //modifier SP
+  @include max-screen($breakpoint-mobile) {
+    margin-left: 0px;
+  }
+}
+
+.media-thumb {
+  position: relative;
+  width: 370px;
+  height: 217px;
+  z-index: 2;
+
+  img {
+    position: absolute;
+    top: -5px;
+    left: -18px;
+  }
+
+  div {
+    position: relative;
+    padding-top: 58.65%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+
+    @include max-screen($breakpoint-mobile) {
+      border-radius: 7px;
+    }
+
+    .media-craft & {
+      @include max-screen($breakpoint-mobile) {
+        border-radius: 10px;
+        padding-top: 55.65%;
+      }
+    }
+  }
+
+  .no-radius {
+    border-radius: 0;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.media-right {
+  width: 100%;
+
+  .dekitane-link-banner {
+    display: block;
+    max-width: 300px;
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding-left: 50px;
+    width: calc(100% - 380px);
+  }
+}
+
+
+.media-title {
+  display: inline-block;
+  position: relative;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+
+  @at-root .location-desc & {//access page
+    @include max-screen($breakpoint-mobile) {
+      font-size: 16px;
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 20px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 15px;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: linear-gradient(0deg, #c3e8d8 25%, #ffffff 25%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 75%, #ffffff 75%, #ffffff 100%);
+      background-size: 32.00px 32.00px;
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      background-image: linear-gradient(0deg, #c3e8d8 19.44%, #ffffff 19.44%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 69.44%, #ffffff 69.44%, #ffffff 100%);
+      background-size: 36.00px 36.00px;
+    }
+
+    @at-root .location-desc & {//access page
+      @include max-screen($breakpoint-mobile) {
+        background-position: center 3px;
+        background-repeat: repeat-x;
+      }
+    }
+  }
+
+  &-program-details {
+    .media-title-text {
+      background: rgb(195,232,216);
+      background: linear-gradient(90deg, rgba(195,232,216,1) 0%, rgba(195,232,216,1) 100%);
+      background-size: 100% 5px;
+      background-repeat: no-repeat;
+      background-position-y: bottom;
+    }
+  }
+
+  &.alt-feature-heading {
+    margin-bottom: 20px;
+
+    .media-title-text {
+      background-size: 36.00px 45.00px;
+
+      @include max-screen($breakpoint-mobile) {
+        background-size: 32.00px 32.00px;
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile + 1) {
+      font-size: 24px;
+      margin-bottom: 38px;
+    }
+
+
+  }
+
+  &.media-title-programdetails {
+    font-size: 22px;
+    margin-bottom: 27px;
+
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 15px;
+      margin-bottom: 16px;
+      margin-top: 14px;
+    }
+  }
+
+  @at-root .smart-entry & {//smart entry
+    &-smart-entry {
+      font-size: 22px;
+      letter-spacing: 0.1em;
+      margin-bottom: 24px;
+      line-height: 1.455; 
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 16px;
+        line-height: 1.625;
+        margin-bottom: 11px;
+      }
+
+      span {
+        background-position: center 3px;
+        // background-repeat-y: no-repeat;
+        background-repeat: repeat-x;
+
+        @at-root .is-ie & {//for ie
+          background-repeat: repeat-x;
+          background-position: center 8px;
+        }
+
+        @at-root .is-safari & {//for safari
+          background-repeat: repeat-x;
+          background-position: center 3px;
+        }
+      }
+      
+      &-heading {
+        font-size: 26px;
+        line-height: 1.385;
+        letter-spacing: 0.1em;
+        text-align: center;
+
+        span {
+          background-position: center 7px;
+          // background-repeat-y: no-repeat;
+          background-repeat: repeat-x;
+
+          @at-root .is-ie & {//for ie
+            background-repeat: repeat-x;
+            background-position: center 12px;
+          }
+
+          @at-root .is-safari & {//for ie
+            background-repeat: repeat-x;
+            background-position: center 7px;
+
+            @include max-screen($breakpoint-mobile) {
+              background-position: center 3px;
+            }
+          }
+
+          @include max-screen($breakpoint-mobile) {
+            background-position: center 3px;
+          }
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          font-size: 16px;
+          line-height: 1.625;
+          text-align: left;
+        }
+      }
+
+      &-faq-heading {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 11px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          text-align: center;
+          font-size: 19px;
+          line-height: 1.316;          
+        }
+
+        span {
+          background-position: center 7px;
+
+          @include max-screen($breakpoint-mobile) {
+            background-position: center 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.media-title-nohighlight {
+  span {
+    background: transparent;
+  }
+}
+
+.media-desc {
+  font-size: 12px;
+  padding-top: 10px;
+  line-height: 2;
+  letter-spacing: 0.16em;
+  font-weight: 300;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 15px;
+  }
+}
+
+.media-bottom {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  .media-subpage & {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    text-align: center !important;
+    padding-left: 0px !important;
+  }
+}
+
+
+// modifier
+.media-subpage-bunbun {
+  .media-desc {
+    br {
+      @include max-screen($breakpoint-mobile) {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.media-title-racing-kart {
+  text-align: center;
+  font-size: 26px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 23px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 13px;
+    margin-top: 0px;
+  }
+}
+
+/*craft modifier*/
+.craft-media-title {
+  span {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+/*Tsubasa*/
+.media-note-tsubasa {
+  max-width: 195px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    max-width: 300px;
+  }
+}
+
+//modifier
+.media-craft {
+  .media-right {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-left: 55px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-left: 5px;
+    }
+  }
+
+  .media-title {
+    span {
+      background-image: none;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 26px;
+    }
+  }
+
+  .media-desc {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 17px;
+    }
+  }
+
+
+
+  .step-word {
+    @include min-screen($breakpoint-mobile + 1) {
+      letter-spacing: 0.16em;
+      display: inline-block;
+    }
+  }
+
+  .step-word-no {
+    .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        line-height: 1;
+        display: inline-block;
+        font-size: 60px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        display: inline-block;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 17px 24px 0 24px;
+    border-color: $color-green-4 transparent transparent transparent;
+    content: '';
+    position: absolute;
+    left: 166px;
+    right: 0;
+    bottom: -2px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 11px 13px 0 13px;
+      border-color: $color-green-4 transparent transparent transparent;
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &:nth-of-type(1) {
+    .step-word-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 12px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        top: -47px;
+      }
+    }
+
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        display: inline-block;
+        transform: translate(0px, -7px);
+        letter-spacing: 0.16em;
+      }
+    }
+
+    .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        display: inline-block;
+        transform: translate(8px, 5px);
+        line-height: 1;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        transform: translate(-5px, 4px);
+      }
+    }
+
+    .media-desc {
+      @include max-screen($breakpoint-mobile) {
+        padding-top: 10px;
+      }
+    }
+
+    .media-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 21px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 10px;
+      margin-bottom: 36px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-2px, -2px);
+      }
+    }
+
+    .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(8px, 2px);
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        transform: translate(-7px, 5px);
+        display: inline-block;
+      }
+    }
+
+    .media-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 8px;
+      }
+    }
+
+    .media-desc {
+      @include max-screen($breakpoint-mobile) {
+        padding-top: 15px;
+      }
+    }
+
+    .note {
+      @include min-screen($breakpoint-mobile + 1) {
+        // margin-left: 4px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 22px;
+        // margin-left: 28px;
+      }
+    }
+
+    .note-acorn {
+      @include min-screen($breakpoint-mobile + 1) {
+        top: -23px;
+        right: -22px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      padding: 0 0 60px;
+      margin-bottom: 40px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 36px;
+      padding-bottom: 36px;
+      margin-bottom: 23px;
+    }
+  }
+
+  &:nth-of-type(3) {
+    .step-word-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 6px;
+      }
+    }
+
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-2px, -7px);
+      }
+    }
+
+    .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(2px, -3px);
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        display: inline-block;
+        transform: translate(-6px, 5px);
+      }
+    }
+
+    .media-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 9px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 41px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 28px;
+      padding-bottom: 42px;
+      margin-bottom: 14px;
+    }
+  }
+
+  &:nth-of-type(4) {
+    .step-word {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-3px, -6px);
+      }
+    }
+
+    .step-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(1px, -4px);
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        display: inline-block;
+        transform: translate(-1px, 5px);
+      }
+    }
+
+    .step-word-no {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 2px;
+      }
+    }
+
+    .media-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 11px;
+      }
+    }
+
+    .media-desc {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 6px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-top: 5px;
+      }
+    }
+
+    .note {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 34px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 20px;
+      }
+    }
+
+    .note-acorn {
+      @include min-screen($breakpoint-mobile + 1) {
+        top: -23px;
+        right: -22px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 28px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &:last-of-type {
+    &:before {
+      content: none;
+    }
+  }
+
+  &:nth-child(odd) {
+    .media-bg {
+      &:after {
+        @include max-screen($breakpoint-mobile) {
+          top: 5px;
+          height: 102%;
+          background-position: center bottom;
+          width: 103%;
+        }
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 38px;
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 0 0 50px;
+    max-width: 1033px;
+    position: relative;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+    padding: 21px 34px 30px 34px;
+    margin-bottom: 50px;
+  }
+}
+
+//modifier forest labo
+.subpage-section-aqua-labo {
+  .media-labo {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 49px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 23px;
+    }
+
+    .subpage-title {
+      text-align: center;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .media {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding: 0;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 0 34px;
+        margin-bottom: 77px;
+      }
+    }
+
+    .media-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 3px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-top: 8px;
+      }
+    }
+
+    .media-desc {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 15px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+    }
+
+    .media-left {
+      // width: 425px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+
+    .media-bg {
+      margin-left: 0px;
+    }
+  }
+}
+
+.subpage-section-mammal-labo {
+  .media-labo {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 57px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 23px;
+    }
+
+    .subpage-title {
+      text-align: center;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 34px;
+      }
+    }
+
+    .media {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding: 0;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 0 34px;
+        margin-bottom: 45px;
+      }
+    }
+
+    .media-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 3px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-top: 8px;
+      }
+    }
+
+    .media-desc {
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 15px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+    }
+
+    .media-left {
+      // width: 425px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+
+    .media-bg {
+      margin-left: 0px;
+    }
+  }
+
+  .subpage-button {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 89px;
+    }
+  }
+}
+//modifier forest labo end
+
+//modifier mobipark
+.page-mobipark {
+  .media-title-racing-kart {
+    span {
+      @include min-screen($breakpoint-mobile + 1) {
+        background-image: linear-gradient(0deg, #c3e8d8 21.43%, #ffffff 21.43%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 71.43%, #ffffff 71.43%, #ffffff 100%);
+        background-size: 35.00px 40.00px;
+        background-position-y: -10%;
+        background-repeat-y: no-repeat;
+      }
+    }
+  }
+}
+//modifier mobipark end
+
+//modifier forest labo
+.media-subpage-labo {
+  max-width: 891px;
+  width: 100%;
+  justify-content: center;
+
+  .media-box {
+    text-align: center;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      &:first-child {
+        margin-right: 50px;
+      }
+
+      &:last-child {
+        margin-left: 50px;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 11px;
+    }
+
+    .media-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 0px;
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+//modifier forest labo end
+
+//hotel-granroom
+.media-list {
+  @include max-screen($breakpoint-mobile) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+    background-color: $color-white;
+    // align-items: center;
+
+    &-teatime {
+      background-color: transparent;
+      align-items: start;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        .subpage-section-granroomactivity & {//hotel granroom
+          margin-bottom: 45px;
+        }
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      .subpage-section-granroomactivity & {//hotel granroom
+        margin-bottom: 50px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+      margin-bottom: 0;
+
+      .subpage-section-granroomactivity & {//hotel granroom
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  &-thumb {
+    width: 511px;
+    min-height: 360px;
+    background-size: cover;
+    background-position: center;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      min-height: 206px;
+
+      .subpage-section-granroomactivity & {//hotel granroom
+        min-height: 235px;
+        background-position: center bottom;
+      }
+    }
+  }
+
+  &-text {
+    width: calc( 100% - 511px );
+    padding-left: 38px;
+    padding-right: 38px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      .subpage-section-granroomactivity & {//hotel granroom
+        padding-top: 57px;
+        padding-bottom: 57px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      padding: 0 28px 48px; 
+      margin-top: 25px;
+
+      .subpage-section-teatime & {//hotel granroom
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      font-family: $font-hiragino;
+      line-height: 1.417;
+      margin-bottom: 34px;
+      
+      @include min-screen($breakpoint-mobile + 1) {
+        white-space: nowrap;
+
+        .subpage-section-granroomactivity & {//hotel granroom
+          margin-bottom: 24px;
+        }
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 13px;
+        margin-bottom: 17px;
+        line-height: 1.615;        
+      }
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 2;
+      text-align: left;   
+      
+      @include max-screen($breakpoint-mobile) {
+        font-size: 13px;
+        line-height: 1.75;        
+      }
+    }
+  }
+}
+
+//hotel-granroom end
+
+.access-heading {//access page
+  font-size: 26px;
+  letter-spacing: 0.1em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 19px;    
+  }
+
+  @at-root & {
+    span {
+      background-repeat: repeat-x;
+      background-position: center 7px;
+
+      @include max-screen($breakpoint-mobile) {
+        background-position: center 3px;
+      }
+    }
+  }
+}
+
+

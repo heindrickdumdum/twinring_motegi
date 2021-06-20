@@ -1,0 +1,72 @@
+/*
+#styleguide
+基本スタイル
+
+```
+<p>特に何も指定しないときの状態</p>
+```
+*/
+body {
+  $wrap: '.wrap:not(.client-content)';
+  $client: '.wrap .client-content';
+  
+  #{$wrap} {
+    overflow-x: hidden;
+  }
+  
+  #{$wrap},
+  #lig-header,
+  #lig-preload,
+  #lig-breadcrumbs,
+  #lig-footer,
+  .lig-content
+  {
+    -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      text-rendering: $text-rendering;
+      font-size: $base-font-size;
+      font-family: $base-font-family !important;
+      color: $base-font-color;
+      background-color: $base-background-color;
+      min-width: $breakpoint-tablet;
+    
+      @media screen and (max-width: $breakpoint-mobile + 1) {
+        min-width: 100%;
+      }
+  }
+
+  #lig-footer {
+    font-family: $font-NotoSansCJKjp-Regular !important;
+  }
+
+  #{$client} {
+    box-sizing: initial;
+  }
+
+  .bg-black {
+    background-color: #000000;
+  }
+
+  .bg-none {
+    background: none;
+  }
+}
+
+* {
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+br {
+  opacity: 0;
+}
+
+// Required
+.svg-sprite {
+  display: none;
+}

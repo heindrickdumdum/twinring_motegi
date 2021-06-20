@@ -1,0 +1,450 @@
+.experience {
+  @include min-screen($breakpoint-mobile + 1) {
+    padding-bottom: 115px;
+  }
+
+  .subpage-inner {
+    margin-bottom: 0px;
+  }
+
+  &-content {
+    position: relative;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 600px;
+    }
+  }
+
+  &-tag {
+    border: 1px solid #a38737;
+    padding: 38px 69px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding: 12px 20px;
+      display: inline-block;
+    }
+
+    svg {
+      width: 23px;
+      height: 244px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 12px;
+        height: 123px;
+      }
+    }
+  }
+
+  &-image {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 638px;
+      height: 480px;
+      position: absolute;
+      top: 37px;
+      left: 120px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 20px;
+        right: 20px;
+        top: 45px;
+      }
+    }
+  }
+
+  &-text {
+    @include min-screen($breakpoint-mobile + 1) {
+      position: absolute;
+      width: 505px;
+      right: -88px;
+      bottom: -10px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 20px;
+        right: 20px;
+        bottom: 65px;
+      }
+      margin: {
+        top: -45px;
+      }
+    }
+
+    .toya-experience-1 {
+      margin-bottom: 27px;
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 10px;
+      }
+
+      svg {
+        width: 170px;
+        height: 17px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 162px;
+          height: 12px;
+        }
+      }
+    }
+
+    .toya-experience-2 {
+      margin-bottom: 47px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 25px;
+        padding: {
+          left: 20px;
+          right: 20px;
+        }
+      }
+
+      svg {
+        width: 441px;
+        height: 80px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 100%;
+          height: 53px;
+        }
+      }
+    }
+  }
+
+  &-desc {
+    font-size: 15px;
+    color: $color-white;
+    line-height: 2.267;    
+    letter-spacing: 0.1em;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.5;
+      letter-spacing: 0.1em;
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+    }
+  }
+
+  &-container {
+    background-color: $color-black;
+    background-size: cover;
+    padding: {
+      top: 90px;
+      bottom: 90px;
+    }
+
+    @at-root .experience-commit & {
+      @include max-screen($breakpoint-mobile) {
+        padding: {
+          right: 40px;
+          top: 52px;
+          bottom: 63px;
+        }
+        background-position: center;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 40px;
+        right: 20px;
+      }
+    }
+
+    @at-root &:nth-of-type(4) {//fb 06082020 toya
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 85px;
+      }
+
+      .columns {
+        &:first-child {
+          @include min-screen($breakpoint-mobile + 1) {
+            padding-left: 99px !important;
+          }
+        }
+
+        .tags {
+          @include min-screen($breakpoint-mobile + 1) {
+            padding: 15px 26px !important;
+          }
+        }
+
+        .heading {
+          @include min-screen($breakpoint-mobile + 1) {
+            margin: {
+              top: 34px !important;
+              bottom: 31px !important;
+            }
+          }
+        }
+      }
+    }
+
+    @at-root &:nth-of-type(3) {//fb 06082020 toya
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-top: 115px;
+      }
+
+      .columns {
+        .tags {
+          @include min-screen($breakpoint-mobile + 1) {
+            padding: 16px 15px !important;
+          }
+        }
+
+        .heading {
+          @include min-screen($breakpoint-mobile + 1) {
+            margin: {
+              top: 33px !important;
+              bottom: 29px !important;
+            }
+          }
+        }
+
+        .desc {
+          @include min-screen($breakpoint-mobile + 1) {
+            margin: {
+              left: 5px !important;
+            }
+          }
+        }
+
+        &:first-child {
+          @include min-screen($breakpoint-mobile + 1) {
+            padding-right: 85px !important;
+          }
+        }
+
+        &:last-child {
+          .image {
+            @include min-screen($breakpoint-mobile + 1) {
+              position: relative;
+              left: -2px;
+            }
+          }
+        }
+      }
+    }
+
+    @at-root &:nth-child(1),
+    &:nth-child(3) {
+      .columns {
+        &:first-child {
+          @include min-screen($breakpoint-mobile + 1) {
+            padding-right: 128px;
+          }
+        }
+      }
+    }
+
+    @at-root &:nth-child(2),
+    &:nth-child(4) {
+      .columns {
+        &:first-child {
+          order: 2;
+
+          @include min-screen($breakpoint-mobile + 1) {
+            padding-left: 128px;
+          }
+        }
+
+        &:last-child {
+          order: 1;
+        }
+
+        @at-root & {
+          .image {
+            &:before {
+              @include min-screen($breakpoint-mobile + 1) {
+                left: -10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .subpage-inner {
+      margin-bottom: 0px;
+      display: flex;
+      justify-content: space-between;
+
+      @include max-screen($breakpoint-mobile) {
+        display: block;
+      }
+
+      // @at-root & .columns {
+      //   @include min-screen($breakpoint-mobile + 1) {
+      //     width: 50%;
+      //   }
+      // }
+    }
+
+    .tags {
+      border: 1px solid #a38737;
+      display: inline-block;
+      padding: 16px 20px;
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 10px;
+      }
+
+      &-toya-material-1 {
+        svg {
+          width: 138px;
+          height: 17px;
+          display: block;
+
+          @include max-screen($breakpoint-mobile) {
+            width: 93px;
+            height: 12px;
+          }
+        }
+      }
+
+      &-toya-vessels-1 {
+        svg {
+          width: 117px;
+          height: 17px;
+          display: block;
+
+          @include max-screen($breakpoint-mobile) {
+            width: 79px;
+            height: 12px;
+          }
+        }
+      }
+
+      &-toya-space-1 {
+        svg {
+          width: 138px;
+          height: 17px;
+          display: block;
+
+          @include max-screen($breakpoint-mobile) {
+            width: 93px;
+            height: 12px;
+          }
+        }
+      }
+
+      &-toya-takumi-1 {
+        svg {
+          width: 159px;
+          height: 19px;
+          display: block;
+
+          @include max-screen($breakpoint-mobile) {
+            width: 106px;
+            height: 12px;
+          }
+        }
+      }
+    }
+
+    .heading {
+      margin: {
+        top: 40px;
+        bottom: 40px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin: {
+          top: 19px;
+          bottom: 21px;
+        }
+      }
+
+      &-toya-material-2 {
+        svg {
+          width: 338px;
+          height: 80px;
+          display: inline-block;
+
+          @include max-screen($breakpoint-mobile) {
+            width: 203px;
+            height: 48px;
+          }
+        }
+      }
+
+      &-toya-vessels-2 {
+        svg {
+          width: 461px;
+          height: 80px;
+          display: inline-block;
+
+          @include max-screen($breakpoint-mobile) {
+            width: 277px;
+            height: 48px;
+          }
+        }
+      }
+
+      &-toya-space-2 {
+        svg {
+          width: 496px;
+          height: 80px;
+          display: inline-block;
+
+          @include max-screen($breakpoint-mobile) {
+            width: 297px;
+            height: 48px;
+          }
+        }
+      }
+
+      &-toya-takumi-2 {
+        svg {
+          width: 201px;
+          height: 80px;
+          display: inline-block;
+
+          @include max-screen($breakpoint-mobile) {
+            width: 205px;
+            height: 17px;
+          }
+        }
+      }
+    }
+
+    .desc {
+      font-size: 15px;
+      color: $color-white;
+      line-height: 2.267;
+      letter-spacing: 0.1em;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 13px;
+        line-height: 1.615;
+        margin-bottom: 28px;
+      }
+    }
+
+    .image {
+      width: 640px;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $color-dark-yellow;
+        top: 10px;
+        left: 10px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+  }
+}

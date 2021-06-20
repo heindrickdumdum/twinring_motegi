@@ -1,0 +1,103 @@
+<%
+  sectionActivityCards = [
+    {
+      'category': 'ACTIVITY',
+      'image': mix('/assets/images/top/activity/img1.jpg'),
+      'title': 'ジップライン',
+      'url': '/hellowoods/#swirl'
+    },
+    {
+      'category': 'PROGRAM',
+      'image': mix('/assets/images/top/activity/img2.jpg'),
+      'title': '森のファミリーウォーク TEKUTEKU',
+      'url': '/hellowoods/tekuteku/'
+    },
+    {
+      'category': 'WORKSHOP',
+      'image': mix('/assets/images/top/activity/img3.jpg'),
+      'title': 'クラフト体験',
+      'url': '/hellowoods/program/craft.html'
+    }
+  ]
+%>
+
+  <div class="u-show-pc">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-wrap-center heading-wrap-activity',
+      'text': 'Attraction & Activity',
+      'subtext': mix('/assets/images/top/activity/subtext.png'),
+      'altSubtext': 'ツインリンクもてぎの楽しさをエリア別に紹介'
+    }) %>
+  </div>
+
+  <div class="u-show-sp">
+    <%- include('/partials/heading', {
+      'modifier': 'heading-wrap-center heading-wrap-activity',
+      'text': 'Attraction & Activity',
+      'subtext': mix('/assets/images/top/activity/subtext-sp.png'),
+      'altSubtext': 'ツインリンクもてぎの楽しさをエリア別に紹介'
+    }) %>
+  </div>
+
+  <div class="section-inner section-inner-activity">
+    <div class="section-image u-show-pc" style="background-image: url(<%= mix('/assets/images/top/activity/bg.jpg') %>);"></div>
+    <div class="section-image u-show-sp" style="background-image: url(<%= mix('/assets/images/top/activity/bg-sp.jpg') %>);"></div>
+    <div class="l-container">
+      <div class="section-contents">
+        <p class="section-contents-copy">自然とふれあいながら、遊び・学ぶ。<br class="u-show-pc">森の中で「溢れる生命（いのち）」を見つけよう。</p>
+
+        <ul class="section-cards u-show-pc">
+          <%
+            sectionActivityCards.forEach( card => {
+          %>
+          <div class="section-cards-item">
+            <a href="<%- card.url %>" class="section-card-link">
+              <div class="section-cards-image-wrap image-border">
+                <span class="section-cards-category"><%- card.category %></span>
+                <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+              </div>
+              <p class="section-cards-title"><%- card.title %></p>
+            </a>
+          </div>
+          <%
+            })
+          %>
+        </ul>
+
+        <div class="slider-wrap slider-wrap-section u-show-sp">
+          <div class="swiper-container slider js-slider-sp">
+            <ul class="swiper-wrapper slider-wrapper slider-section-cards section-cards">
+              <%
+                sectionActivityCards.forEach( card => {
+              %>
+              <li class="swiper-slide slider-item slider-section-cards-item">
+                <div class="section-cards-item">
+                  <a href="<%- card.url %>" class="section-card-link">
+                    <div class="section-cards-image-wrap image-border">
+                      <span class="section-cards-category"><%- card.category %></span>
+                      <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+                    </div>
+                    <p class="section-cards-title"><%- card.title %></p>
+                  </a>
+                </div>
+              </li>
+              <%
+                })
+              %>
+            </ul>
+
+            <div class="swiper-pagination swiper-pagination-section"></div>
+          </div>
+        </div>
+
+        <div class="section-button">
+          <%- include('/partials/button', {
+            newTab: false,
+            modifier: '',
+            text: 'もっと見る',
+            link: '/hellowoods/'
+          }) %>
+        </div>
+      </div>
+    </div>
+  </div>

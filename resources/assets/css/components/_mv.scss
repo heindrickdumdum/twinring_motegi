@@ -1,0 +1,2095 @@
+.mv {
+  height: 607px;
+  position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    height: 350px;
+  }
+
+  @at-root .toya-wrapper & {//toya page
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(#{$image-path}mv-curve.png) no-repeat center top;
+    background-size: cover;
+
+    @at-root .toya-wrapper & {//toya page
+      display: none;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -33px;
+      height: 50px;
+    }
+  }
+
+  // &.mv-collection {
+  //   &::after {
+  //     display: none;
+  //   }
+  // }
+
+  &.mv-events {
+    margin-bottom: 90px;
+    .events-mv-heading {
+      bottom: 60px;
+
+      @include max-screen ($breakpoint-mobile) {
+        bottom: 20px;
+      }
+    }
+    .mv-date {
+      background: url(#{$image-path}events/mv-gradient-rect.jpg) no-repeat;
+      background-size: no-repeat;
+      background-size: cover;
+      display: inline-block;
+      padding: 10px 17px;
+      color: #fefefe;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      line-height: 1;
+      position: absolute;
+      bottom: 64px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 5px 10px;
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile + 1) {
+      margin-bottom: 200px;
+    }
+  }
+
+  &.mv-restaurant {
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 100px;
+      height: 450px;
+      &::after {
+        display: none;
+      }
+
+      .mv-image {
+        height: 500px;
+      }
+    }
+  }
+
+  &.mv-bluenote {
+    @include max-screen ($breakpoint-mobile) {
+      //height: 350px;
+
+      .mv-image {
+        //height: 430px;
+      }
+    }
+  }
+}
+
+.mv-container {
+  position: relative;
+  z-index: $z-min;
+}
+
+.mv-list,
+.mv-buttons-list {
+  list-style: none;
+}
+
+.mv-image {
+  width: 100%;
+  height: 607px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @at-root .subpage-access & {//access page
+    @include max-screen($breakpoint-mobile) {
+      background-position: center;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    height: 378px;
+  }
+
+  .mv-subpage & {
+    max-height: 100%;
+    height: 0;
+    // max-height: 450px;
+    // height: 0;
+    overflow-y: hidden;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      // height: 450px;
+      padding-bottom: 29%;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 67%;
+    }
+
+    &::after {
+      bottom: -50px;
+    }
+  }
+
+  .mv-subpage-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 420px;
+      padding-bottom: 0;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 71%;
+    }
+  }
+
+  .mv-subpage-nozominoyu & {
+    padding-bottom: 43%;
+    background-position-y: 64%;
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 96%;
+      background-position: center;
+    }
+  }
+
+  &.mv-image-sp {
+    display: none;
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+    }
+  }
+
+  &.mv-image-pc {
+    display: block;
+
+    @include max-screen($breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+}
+
+.mv-list-glamping-top {
+  max-height: 600px;
+}
+
+.mv-list-marcherant {
+  // sass-lint:disable-block no-important
+  opacity: 1 !important;
+}
+
+.mv-list-top {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition-delay: 4s;
+  height: 607px;
+  position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    height: 440px;
+  }
+
+  .mv-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  &.is-show {
+    opacity: 1;
+  }
+
+  .mv-image {
+    @include max-screen($breakpoint-mobile) {
+      height: 440px;
+    }
+  }
+}
+
+.mv-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 40px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 20;
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+
+    .mv-subpage-hotel & {//hotel granroom
+      display: flex;
+      width: 34px;
+    }
+  }
+}
+
+.mv-buttons-list {
+  width: 100%;
+}
+
+.mv-buttons-link {
+  display: flex;
+  width: 100%;
+  height: auto;
+  min-height: 150px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5px;
+  padding-left: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.14;
+  color: $color-mineshaft;
+  background: url(#{$image-path}mv-button-bg.jpg) repeat left top;
+  background-size: cover;
+  border-radius: 5px 0 0 5px;
+
+  .is-ie & {//ie modifier
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 150px;
+    }
+  }
+
+  .mv-subpage-hotel & {//hotel granroom/familyroom
+    .is-ie & {
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 150px;
+      }
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    .mv-subpage-hotel & {//hotel granroom
+      font-size: 12px;
+      min-height: 116px;
+      padding-left: 10px;
+    }
+  }
+
+  span {
+    display: inline-block;
+    width: 16px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      .mv-subpage-hotel & {//hotel granroom
+        display: inline;
+      }
+    }
+  }
+}
+
+.mv-buttons-item {
+  display: block;
+  width: 100%;
+  margin: 11px 0;
+
+  &:last-child {
+    .mv-buttons-link {
+      background-position: left bottom;
+    }
+  }
+}
+
+.mv-heading {
+  position: absolute;
+
+  &:not(.mv-heading-subpage) {
+    bottom: -92px;
+    left: 35px;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -122px;
+      left: 20px;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    left: 15px;
+  }
+
+  &-404 {//404 page
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: 35px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: 17px !important;
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 467px !important;
+        height: 42px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 319px !important;
+        height: 30px !important;
+      }
+
+      @at-root & {
+        svg {
+          fill: $color-white;
+        }
+      }
+    }
+  }
+
+  &-marcherant-breakfast {//breakfast marcherant page
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: 25px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -80px !important;
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 405px !important;
+        height: 62px !important;
+        margin-top: 6px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 236px !important;
+        height: 36.5px !important;
+      }
+    }
+  }
+
+  &-camp {//f-glamping camp page
+    .heading-subtext {
+      font-size: 42px;
+      color: $color-white;
+      font-family: 'Noto Serif JP', serif;
+      max-width: 100% !important;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 26px;
+        width: auto !important;
+        height: auto !important;
+      }
+    }
+  }
+
+  &.twinringmotegi-mv-heading {//twinring page
+    bottom: 40px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -5px !important;
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 324px !important;
+        height: 56px !important;
+        margin-top: 20px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 210px !important;
+        height: 36px !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
+  &.forest-program-mv-heading {//program page
+    // sass-lint:disable-block no-important
+    bottom: 40px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      bottom: -25px !important;
+
+      .heading-text {
+        // sass-lint:disable-block no-important
+        font-size: 22px !important;
+        letter-spacing: 2.5px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        // sass-lint:disable-block no-important
+        // max-width: 725px !important;
+        // height: 58px !important;
+        // margin-top: 20px !important;
+        height: 55px !important;
+        max-width: 512px !important;
+        margin-top: 33px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important
+        width: 100% !important;
+        height: 32px !important;
+        max-width: 297px !important;
+        margin-top: 5px !important;
+      }
+    }
+  }
+
+  &.rocco-mv-heading {//rocco page
+    bottom: 40px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -5px !important;
+    }
+
+    @at-root .toya-wrapper & {//toya page
+      &.mv-toya-heading {
+        @include max-screen($breakpoint-mobile) {
+          bottom: -70px !important;
+        }
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 740px !important;
+        height: 58px !important;
+        margin-top: 20px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 335px !important;
+        height: 87px !important;
+        margin-top: 10px !important;
+      }
+
+      @at-root .toya-wrapper & {//toya page
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 396px !important;
+          height: 61px !important;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          max-width: 231px !important;
+          height: 35px !important;
+
+        }
+      }
+    }
+  }
+
+  &.granturismo-mv-heading {//granturismo page
+    bottom: 40px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -5px !important;
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 639px !important;
+        height: 56px !important;
+        margin-top: 20px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 273px !important;
+        height: 66px !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
+  &.oak-mv-heading {//oak page
+    bottom: 40px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -5px !important;
+    }
+
+    .heading-subtext {
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 643px !important;
+        height: 54px !important;
+        margin-top: 20px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 300px !important;
+        height: 70px !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
+  &.restaurant-mv-heading {//restaurant page
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 328px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 265px !important;
+        height: 42px !important;
+      }
+    }
+    @include max-screen ($breakpoint-mobile) {
+      bottom: -65px !important;
+    }
+  }
+
+  &.standardroom-mv-heading {//hotel familyroom
+
+    @include min-screen($breakpoint-mobile + 1) {
+      // sass-lint:disable-block no-important
+      bottom: 50px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      bottom: -5px !important;
+    }
+
+    .heading-subtext {
+      // sass-lint:disable-block no-important
+      max-width: 491px !important;
+      // sass-lint:disable-block no-important
+      height: 52px !important;
+      // sass-lint:disable-block no-important
+      margin-top: 15px !important;
+      fill: $color-white;
+
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important
+        max-width: 207px !important;
+        // sass-lint:disable-block no-important
+        height: 22px !important;
+      }
+    }
+  }
+
+  &.familyroom-mv-heading {//hotel familyroom
+
+    @include min-screen($breakpoint-mobile + 1) {
+      // sass-lint:disable-block no-important
+      bottom: 33px !important;
+    }
+
+    .heading-subtext {
+      // sass-lint:disable-block no-important
+      max-width: 743px !important;
+      // sass-lint:disable-block no-important
+      height: 52px !important;
+      // sass-lint:disable-block no-important
+      margin-top: 15px !important;
+      fill: $color-white;
+
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important
+        max-width: 200px !important;
+        // sass-lint:disable-block no-important
+        height: 55px !important;
+      }
+    }
+  }
+
+  &.granroom-mv-heading {
+
+    @include min-screen($breakpoint-mobile + 1) {
+      // sass-lint:disable-block no-important
+      bottom: 37px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      bottom: 7px !important;
+    }
+
+    .heading-subtext {
+      // sass-lint:disable-block no-important
+      width: 352px !important;
+      // sass-lint:disable-block no-important
+      height: 56px !important;
+      fill: $color-white;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        // sass-lint:disable-block no-important
+        margin-top: 10px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important
+        width: 227px !important;
+        // sass-lint:disable-block no-important
+        height: 37px !important;
+        // sass-lint:disable-block no-important
+        margin-top: 9px !important;
+      }
+    }
+  }
+
+  &.reservation-mv-heading {
+    .heading-subtext {
+      left: 0;
+
+      @include max-screen ($breakpoint-mobile) {
+        top: 10px;
+        transform: none;
+      }
+      * {
+        // sass-lint:disable-block no-important
+        width: 300px !important;
+
+        @include max-screen ($breakpoint-mobile) {
+          // sass-lint:disable-block no-important
+          width: 207px !important;
+        }
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      padding: 15px 20px !important;
+    }
+  }
+
+  &.donguri-mv-heading {
+    .heading-text {
+      @include max-screen ($breakpoint-mobile) {
+        letter-spacing: 3px;
+        word-spacing: -1px;
+      }
+    }
+    .heading-subtext {
+      // sass-lint:disable-block no-important
+      max-width: 595px !important;
+      height: 99px !important;
+      width: 241px !important;
+
+      top: -6px;
+      left: -10px;
+      @include min-screen ($breakpoint-mobile + 1) {
+        // sass-lint:disable-block no-important
+        height: 100px !important;
+        // sass-lint:disable-block no-important
+        width: 100% !important;
+        width: 237px;
+        left: -6px;
+        top: 6px;
+
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      bottom: -22px !important;
+    }
+  }
+
+  &.marcherant-mv-heading {
+    .heading-text {
+      @include max-screen ($breakpoint-mobile) {
+        letter-spacing: 3px;
+        word-spacing: -1px;
+      }
+    }
+    .heading-subtext {
+      // sass-lint:disable-block no-important
+      max-width: 939px !important;
+      height: 99px !important;
+      width: 241px !important;
+
+      top: -6px;
+      left: -10px;
+      @include min-screen ($breakpoint-mobile + 1) {
+        // sass-lint:disable-block no-important
+        height: 100px !important;
+        // sass-lint:disable-block no-important
+        width: 100% !important;
+        width: 237px;
+        left: -6px;
+        top: -11px;
+
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      bottom: -22px !important;
+    }
+  }
+
+  &.mv-heading-default {
+    bottom: 30px;
+    width: 100%;
+    max-width: 650px;
+    fill: #fff;
+    .heading-text {
+      font-size: 45px;
+      -webkit-text-fill-color: #fff;
+      color: #fff;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 24px;
+        text-align: left;
+      }
+    }
+    .heading-subtext {
+      width: 100%;
+      height: 64px;
+      top: -20px;
+
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      left: auto;
+    }
+  }
+
+  &.mv-collection-pit {
+    max-width: 270px;
+
+    @include max-screen ($breakpoint-mobile) {
+      .heading {
+        margin-bottom: 10px;
+      }
+      .heading-subtext {
+        max-width: 180px;
+        height: 37px;
+        margin-top: 0px;
+        margin-left: 0;
+        top: 0px;
+      }
+    }
+  }
+
+  &.mv-heading-mobipark-guide {
+    max-width: 950px;
+
+    .heading-subtext {
+      top: -14px;
+      left: 4px;
+
+      @include max-screen ($breakpoint-mobile) {
+        height: 76px;
+        left: 0;
+        margin-top: 28px;
+
+
+        svg {
+          width: 330px;
+        }
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      bottom: 5px;
+    }
+  }
+
+  &.mv-heading-bluenote {
+    .heading-text {
+      letter-spacing: 2px;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 300px;
+      bottom: -30px;
+
+      .heading-subtext {
+        height: 80px;
+        top: -25px;
+        left: -43px;
+        max-width: 210px;
+      }
+    }
+  }
+
+  &.hellowoods-mv-heading {
+    bottom: 5px;
+    width: 100%;
+
+    @at-root .smart-entry & {//smart-entry page
+      @include max-screen($breakpoint-mobile) {
+        bottom: 15px !important;
+      }
+    }
+
+    .heading-text {
+      font-size: 45px;
+      -webkit-text-fill-color: $color-white;
+
+      .is-ie & {//ie modifier
+        background: none;
+        color: $color-white;
+        -webkit-text-fill-color: $color-white;
+        -moz-text-fill-color: $color-white;
+        -ms-text-fill-color: $color-white;
+      }
+
+      @include max-screen ($breakpoint-mobile) {
+        text-align: left;
+        font-size: 23px;
+      }
+    }
+    .heading-subtext {
+      width: 100%;
+      max-width: 385px;
+      height: 90px;
+      margin-top: 0;
+      fill: $color-white;
+
+      @include max-screen ($breakpoint-mobile) {
+        height: 60px;
+        width: 185px;
+        margin: 0;
+      }
+
+      @at-root .smart-entry & {//smart entry page
+        @include min-screen($breakpoint-mobile + 1) {
+          max-width: 824px !important;
+          height: 50px !important;
+          margin-top: 10px !important;
+
+          img {
+            max-width: 888px;
+            margin-left: -17px;
+            margin-top: -19px;
+          }
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          width: 307px !important;
+          height: 70px !important;
+
+          img {
+            max-width: 340.5px;
+            margin-left: -9px;
+            margin-top: -10px;
+          }
+        }
+      }
+    }
+
+    .heading-collection {
+      .heading-subtext {
+        max-width: 688px;
+        @include max-screen ($breakpoint-mobile) {
+          width: 68%;
+        }
+      }
+    }
+
+    .heading-racing {
+      .heading-subtext {
+        max-width: 490px;
+        @include max-screen ($breakpoint-mobile) {
+          width: 68%;
+        }
+      }
+    }
+
+    .heading-tsubasa {
+      .heading-subtext {
+        max-width: 600px;
+      }
+    }
+
+    .heading-musasabi {
+      .heading-subtext {
+        max-width: 600px;
+        height: 80px;
+        fill: $color-white;
+
+        @include max-screen ($breakpoint-mobile) {
+          max-width: 300px;
+          height: 55px;
+          width: 100%;
+        }
+      }
+    }
+
+
+    @include max-screen ($breakpoint-mobile) {
+      left: 0;
+      padding: 50px 20px;
+
+      .heading {
+        margin-bottom: 12px;
+      }
+    }
+
+    &.hoteltwinring {
+      @include max-screen ($breakpoint-mobile) {
+        .heading-subtext {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+
+
+  &.mv-heading-goods {
+    @include max-screen ($breakpoint-mobile) {
+      padding-bottom: 0;
+    }
+  }
+
+  &.mv-heading-marcherant-dinner-buffet {
+    .heading-wrap-marcherant-dinner-buffet {
+      .heading-subtext {
+        @include max-screen($breakpoint-mobile) {
+          width: 100%;
+        }
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      bottom: -20px;
+    }
+  }
+  &.mv-heading-business-hours {
+    @include max-screen ($breakpoint-mobile) {
+      padding-bottom: 20px;
+    }
+
+    .heading-wrap-business-hours {
+      .heading-text {
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 32px;
+        }
+      }
+      .heading-subtext {
+        max-width: 210px;
+        @include max-screen ($breakpoint-mobile) {
+          max-width: 140px;
+        }
+      }
+    }
+  }
+  /* stylelint-disable no-descending-specificity */
+  &.mv-heading-faq {
+    bottom: 5px;
+    width: 100%;
+
+    .heading-text {
+      font-size: 45px;
+      -webkit-text-fill-color: $color-white;
+
+      .is-ie & {//ie modifier
+        background: none;
+        color: $color-white;
+        -webkit-text-fill-color: $color-white;
+        -moz-text-fill-color: $color-white;
+        -ms-text-fill-color: $color-white;
+      }
+
+      @include max-screen ($breakpoint-mobile) {
+        text-align: left;
+        font-size: 23px;
+      }
+    }
+    .heading-subtext {
+      width: 100%;
+      max-width: 310px;
+      height: 90px;
+      margin-top: 0;
+      fill: $color-white;
+
+      @include max-screen ($breakpoint-mobile) {
+        height: 60px;
+        width: 230px;
+        margin: 0;
+      }
+    }
+  }
+  /* stylelint-enable no-descending-specificity */
+  span {
+    display: block;
+  }
+
+  &.mv-heading-top {
+    @include max-screen($breakpoint-mobile) {
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 15.5px;
+        height: 16.5px;
+        right: 24px;
+        top: 92px;
+        background-image: url(#{$image-path}design-petal1-sp.png);
+      }
+    }
+  }
+
+  &.mv-heading-tourism {
+    max-width: 875px;
+    bottom: -6px;
+    left: 22px;
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 335px;
+      bottom: -10px;
+
+      .heading {
+        .heading-text {
+          letter-spacing: 2px;
+        }
+      }
+      .heading-subtext {
+        height: 85px;
+      }
+    }
+  }
+
+
+}
+
+.mv-heading-text {
+  font-family: $font-holland;
+  font-size: 36px;
+  color: $color-seaweed;
+  letter-spacing: 0.06em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 18px;
+  }
+
+  .is-safari {
+    @include min-screen($breakpoint-mobile + 1) {
+      letter-spacing: 0.078em;
+    }
+  }
+}
+
+.mv-heading-subtext {
+  margin-top: 13px;
+  width: 887px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    max-width: 375px;
+  }
+}
+
+.mv-today {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: -144px;
+  width: 368px;
+  height: 366px;
+  color: $color-primary;
+  text-align: center;
+  background: url(#{$image-path}mv-today-bg.png) no-repeat;
+  background-size: contain;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 225px;
+    height: 225px;
+    right: -23px;
+    bottom: -70px;
+  }
+
+  &.mv-granroom-logo {
+    background: url(#{$image-path}granroom/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 247px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: -144px;
+    }
+  }
+
+  &.mv-hellowoods-logo {
+    background: url(#{$image-path}hellowoods/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 270px;
+  }
+
+  &.mv-collection-logo {
+    background: url(#{$image-path}collection/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 270px;
+  }
+
+  &.mv-racing-logo {
+    background: url(#{$image-path}racingkart/mv-today-bg.png) no-repeat;
+    background-size: contain;
+    max-width: 247px;
+  }
+
+  &.mv-events-logo {
+    background: url(#{$image-path}events/logo.png) no-repeat;
+    background-size: contain;
+    max-width: 250px;
+    bottom: -140px;
+  }
+
+  &.mv-hoteltwinring-logo {
+
+    background: url(#{$image-path}hoteltwinring/hotel-twinring-logo.png) no-repeat;
+    background-size: contain;
+    max-width: 270px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
+
+  &.mv-nozominoyu-logo {
+    background: url(#{$image-path}nozominoyu/nozominoyu-logo.png) no-repeat;
+    background-size: contain;
+    max-width: 247px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: -144px;
+    }
+  }
+
+}
+
+.mv-today-top {
+  @include max-screen($breakpoint-mobile) {
+    display: flex;
+    bottom: -91px;
+  }
+}
+
+.mv-today-text {
+  display: block;
+  margin: 0 auto;
+  width: 92px;
+  height: 47px;
+  transform: translateX(-4px);
+
+  @include max-screen($breakpoint-mobile) {
+    width: 56px;
+    height: 25px;
+  }
+}
+
+.mv-today-time {
+  display: block;
+  margin-top: 7px;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0;
+  transform: translateX(-6px);
+  position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 7px;
+    font-size: 17px;
+    letter-spacing: 0.03em;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: relative;
+    margin: 4px auto 7px;
+    width: 92px;
+    height: 3px;
+    background: url(#{$image-path}dot.png) no-repeat center;
+    background-size: contain;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 63px;
+    }
+  }
+}
+
+.mv-today-degree {
+  display: block;
+  margin-left: -23px;
+  font-size: 24px;
+  font-weight: bold;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 13px;
+    font-weight: normal;
+  }
+}
+
+.mv-today-degree-icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 24px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 15px;
+    height: 15px;
+    margin-right: 1px;
+    margin-top: -1px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.mv-today-celcius-value {
+  margin: 0 -7px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 -3px;
+  }
+}
+
+//modifier for forest lab
+.subpage-labo {
+  .mv-image {
+    @include max-screen($breakpoint-mobile) {
+      background-position-x: 60%;
+    }
+  }
+}
+
+// modifier
+.mv-car-and-bike {
+  .mv-container {
+    max-width: 1263px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
+
+    @include min-screen($breakpoint-mobile) {
+      bottom: -15px;
+    }
+  }
+
+  .mv-heading {
+    position: relative;
+    bottom: 0;
+    left: 0
+  }
+
+  .mv-heading-texts{
+    width: 568px;
+    height: 50px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      max-width: 400px;
+
+      svg {
+        max-width: 400px;
+      }
+    }
+  }
+
+  .mv-heading-subtexts {
+    margin-top: 10px;
+    font-size: 54px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+    position: relative;
+    left: -15px;
+    max-width: 430px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      max-width: 300px;
+      height: 100px;
+      position: relative;
+      left: -10px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $color-white;
+    }
+
+
+  }
+
+  .mv-logo {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/car-and-bike/mv-logo.png);
+    bottom: 0;
+
+    position: relative;
+  }
+
+  .mv-image {
+    height: 607px;
+
+    @include max-screen ($breakpoint-mobile) {
+      height: auto;
+    }
+  }
+}
+
+// modifier dokidoki
+.mv-dokidoki {
+  overflow-y: hidden;
+
+  .mv-heading {
+    left: 0px;
+    bottom: 65px;
+  }
+
+  .mv-mobipark-text {
+    font-size: 45px;
+    color: $color-white;
+    letter-spacing: 0.08em;
+  }
+
+  .mv-mobipark-subtext {
+    max-width: 356px;
+    width: 100%;
+  }
+
+  .mv-heading-text {
+    width: auto;
+    font-family: $font-holland;
+    color: $color-white;
+    font-size: 32px;
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+  }
+
+  .mv-heading-subtext {
+    margin-top: -15px;
+    font-size: 47px;
+    color: $color-white;
+    letter-spacing: 0.06em;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+  }
+
+  .mv-today {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/dokidoki/dokidoki-logo.png);
+    bottom: -60px;
+  }
+}
+// end modifier dokidoki, mobipark
+
+// modifier mobipark
+.mv-mobipark {
+  max-height: 607px;
+  height: auto;
+  margin-bottom: 7px;
+  overflow-y: hidden;
+
+  .mv-image {
+    @include max-screen($breakpoint-mobile) {
+      background-position-x: 84%;
+    }
+  }
+
+  .mv-heading {
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: 89px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-left: 20px;
+      padding-right: 20px;
+      bottom: 55px;
+      left: 0px;
+    }
+  }
+
+  .mv-heading-text-mobipark {
+    font-size: 45px;
+    color: $color-white;
+    letter-spacing: 0.08em;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 22.5px;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  .mv-heading-subtext-mobipark {
+    margin-top: -10px;
+    font-size: 54px;
+    color: $color-white;
+    text-align: left;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+    max-width: 356px;
+    height: 62px;
+
+    @include max-screen($breakpoint-mobile) {
+      height: 52.5px;
+      max-width: 202.5px;
+      margin-top: -25px;
+      margin-left: -2px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $color-white;
+      text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+    }
+  }
+
+  .mv-today-mobipark {
+    max-width: 247px;
+    width: 100%;
+    height: 247px;
+    bottom: -37px;
+    background-image: url(../images/mobipark/mobipark-logo.png);
+    right: 20px;
+
+    @include max-screen($breakpoint-mobile) {
+      display: none;
+    }
+  }
+}
+// end modifier mobipark
+
+.mv-itadaki {
+  .mv-heading {
+    bottom: 45px;
+  }
+
+  .mv-heading-subtexts {
+    font-size: 47px;
+    margin-top: 26px;
+    color: $color-white;
+    letter-spacing: 0.06em;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+  }
+
+  .mv-heading-texts {
+    font-family: $font-holland;
+    color: $color-white;
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    width: auto;
+    text-align: center;
+  }
+
+  .mv-today {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/itadaki/today.png);
+    bottom: -45px;
+  }
+}
+
+.mv-tsubasa,
+.mv-musasabi {
+  margin-bottom: 80px;
+  position: relative;
+  .mv-heading {
+    bottom: 5px;
+
+    @include max-screen($breakpoint-mobile) {
+
+      left: 0;
+      right: 0;
+      padding: 30px;
+    }
+  }
+
+  .mv-heading-texts{
+    width: 448px;
+    height: 50px;
+    font-family: $font-holland;
+    color: $color-white;
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    text-align: center;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      max-width: 400px;
+      font-size: 26px;
+      color: $color-white;
+      margin: auto;
+      text-align: center;
+
+      svg {
+        max-width: 400px;
+      }
+    }
+  }
+
+  .mv-heading-subtexts {
+    font-size: 47px;
+    margin-top: 26px;
+    color: $color-white;
+    letter-spacing: 0.06em;
+    text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .mv-logo {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/tsubasa/mv-logo.png);
+    bottom: -60px;
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url(../images/tsubasa/mv-logo-sp.png);
+    }
+  }
+
+  .mv-logo-musasabi {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/musasabi/mv-logo.png);
+    bottom: -60px;
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url(../images/musasabi/mv-logo-sp.png);
+    }
+  }
+}
+
+.mv-inner {
+
+  @include max-screen($breakpoint-mobile) {
+    height: 378px;
+  }
+
+  .mv-today {
+    width: 268px;
+    height: 266px;
+    background-image: url(../images/sumika/sumika-logo.png);
+    bottom: -45px;
+  }
+
+  .mv-heading {
+    bottom: 27px;
+  }
+
+  .mv-heading-subtexts {
+
+    svg {
+      fill: $color-white;
+      width: 520px;
+      height: 74px;
+    }
+  }
+
+  .mv-heading-texts {
+    font-family: $font-holland;
+    color: $color-white;
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    width: auto;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 25px;
+    }
+  }
+
+
+  .mv-heading-sumika {
+    .mv-heading-texts {
+      @include max-screen($breakpoint-mobile) {
+        font-size: 24px;
+        letter-spacing: 0.092em;
+      }
+    }
+
+    .mv-heading-subtexts {
+      svg {
+        width: 653px;
+        height: 81px;
+        @include max-screen($breakpoint-mobile) {
+          width: 271px;
+          height: 87px;
+          position: relative;
+          left: -6px;
+          top: -3px;
+        }
+      }
+    }
+  }
+
+  .mv-heading-itadaki {
+    .mv-heading-texts {
+      margin-left: 25px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-left: 0;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      .mv-heading-subtexts {
+        svg {
+          width: 162px;
+          height: 76px;
+        }
+      }
+    }
+  }
+
+  .mv-heading-dokidoki {
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: 50px;
+
+      .mv-heading-subtexts {
+        svg {
+          width: 810px;
+          height: 72px;
+        }
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      .mv-heading-subtexts {
+        svg {
+          width: 183px;
+          height: 96px;
+        }
+      }
+    }
+  }
+
+
+  // itadaki mv
+
+  &.itadaki-mv {
+    .mv-today {
+      background-image: url(../images/itadaki/today.png);
+    }
+  }
+
+  // dokidoki
+
+  &.dokidoki-mv {
+    .mv-today {
+      background-image: url(../images/dokidoki/dokidoki-logo.png);
+      width: 247px;
+      height: 247px;
+      bottom: -38px;
+    }
+  }
+}
+
+
+.mv-subpage {
+  margin-bottom: 20px;
+  // max-height: 450px;
+  height: auto;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    // height: 450px;
+    margin-bottom: 50px;
+  }
+
+  &::after {
+    bottom: -50px;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -25px;
+    }
+  }
+
+  .mv-heading-subpage {
+    width: 100%;
+    text-align: center;
+    color: $color-white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    span {
+      color: $color-white;
+      text-shadow: 0px 0px 18.9px rgba(79, 79, 79, 0.5);
+      font-size: 23px;
+      font-weight: 300;
+
+      &.mv-heading-text-walk {
+        font-family: $font-hiragino-w3;
+      }
+
+      &.mv-heading-text-labo {
+        font-family: $font-hiragino-w3;
+      }
+
+      &.mv-heading-text-reserve {
+        font-family: $base-font-family;
+      }
+
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 46px;
+      }
+    }
+  }
+
+  &.mv-subpage-404 {
+    .mv-image {
+      @include max-screen ($breakpoint-mobile) {
+        padding-bottom: 105%;
+      }
+    }
+  }
+
+  &.mv-subpage-acrox {
+    &::after {
+      @include max-screen($breakpoint-mobile) {
+        display: none;
+      }
+    }
+
+  }
+
+  &.mv-subpage-craft {
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 447px;
+      margin-bottom: 89px;
+    }
+
+    .mv-heading-subpage {
+      @include min-screen($breakpoint-mobile + 1) {
+        top: 43%;
+      }
+    }
+  }
+
+  &.mv-subpage-reserve {
+    overflow: hidden;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 95px;
+    }
+
+    .mv-image {
+      padding-bottom: 43%;
+
+      @include max-screen($breakpoint-mobile) {
+        padding-bottom: 96%;
+      }
+    }
+  }
+
+  &.mv-musasabi {
+    .mv-heading-texts{
+      width: 100%;
+      text-align: left;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 23px;
+        font-weight: normal;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+    }
+
+    .mv-heading-subtexts {
+      font-weight: normal;
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: 0.17em;
+        margin-top: 18px;
+      }
+    }
+
+    .mv-image {
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 620px;
+        max-height: none;
+      }
+    }
+
+    .mv-heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        bottom: 56px;
+        left: 31px;
+      }
+    }
+
+    &::after {
+      @include min-screen($breakpoint-mobile + 1) {
+        bottom: -89px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      height: auto;
+      margin-bottom: 72px;
+    }
+  }
+
+  &.mv-subpage-tourism {
+    .mv-image-tourism {
+      height: 370px;
+      @include min-screen ($breakpoint-mobile + 1) {
+        height: 420px;
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile + 1) {
+      height: 450px;
+    }
+  }
+}
+
+
+.mv-image-subpage {
+  background-position-y: 25%;
+
+  @at-root .toya-wrapper & {//toya page
+    background-position-y: bottom;
+  }
+}
+
+.mv-top {
+  @include max-screen($breakpoint-mobile) {
+    height: 440px;
+  }
+
+  &:after {
+    @include max-screen($breakpoint-mobile) {
+      bottom: -37px;
+    }
+  }
+  .mv-heading-subtext {
+    @include max-screen($breakpoint-mobile) {
+      left: -16px;
+      position: relative;
+      margin-top: 0px;
+
+      img {
+        display: block;
+        max-width: 370px;
+        width: auto;
+      }
+    }
+  }
+}
+
+.mv-subpage-hotel {//hotel granroom / familyroom
+  @include min-screen($breakpoint-mobile + 1) {
+    // sass-lint:disable-block no-important
+    margin-bottom: 52px !important;
+  }
+}
+
+//modifier MV forest walk
+.mv-subpage-walk,
+.mv-subpage-labo {
+  overflow: hidden;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 127px;
+  }
+}
+
+.mv-tsubasa {
+  @include max-screen ($breakpoint-mobile) {
+    top: 50%;
+    max-height: 265px;
+
+    .mv-image {
+      background-size: cover;
+      max-height: 265px;
+    }
+
+    .mv-logo-tsubasa {
+      display: block;
+      max-width: 130px;
+      bottom: -170px;
+      right: 10px;
+    }
+  }
+}
+
+.mv-musasabi {
+  @include max-screen ($breakpoint-mobile) {
+    .mv-logo-musasabi {
+      display: block;
+      max-width: 130px;
+      bottom: -140px;
+      right: 10px;
+    }
+  }
+}
+
+//modifier MV forest walk end
+
+//modifier forest labo
+.mv-heading-subpage-labo {
+  text-align: right !important;
+  top: 78% !important;
+  left: 47% !important;
+}
+
+//modifier forest walk
+.mv-heading-text-walk {
+  @include min-screen($breakpoint-mobile + 1) {
+    font-weight: 600 !important;
+  }
+}
+
+
+@at-root .lunch-marcherant {//lunch marcherant page
+  .mv-heading-marcherant-lunch {
+    bottom: 11px !important;
+  }
+
+  .heading-lunch {
+    .heading-subtext {
+      width: 214px;
+      height: 160px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 124px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@at-root .motegi-attraction {
+  .mv-heading {
+    @include min-screen($breakpoint-mobile + 1) {
+      bottom: 0px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: 14px;
+    }
+
+    svg {
+      display: inline-block;
+      fill: $color-white;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 325px;
+        height: 38px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 166px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@at-root .access-mv-heading {
+  bottom: 38px !important;
+
+  @include max-screen($breakpoint-mobile) {
+    bottom: -20px !important;
+  }
+
+  .heading-access {
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 286px !important;
+        height: 62px !important;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 169px !important;
+        height: 36.5px !important;
+      }
+    }
+  }
+}
+
+@at-root .mv-forest-experience-program {//forest program
+  .heading {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 0;
+    }
+  }
+  .heading-subtext {
+    max-width: 265px;
+    margin-left: 0;
+
+    svg {
+      fill: $color-white;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      height: 45px !important;
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 55px !important;
+      max-width: 512px !important;
+      margin-left: auto;
+      // margin-top: 33px !important;
+    }
+  }
+
+}
+
+@at-root .map-mv-heading {
+  .heading-subtext {
+    @include min-screen($breakpoint-mobile + 1) {
+      max-width: 263px !important;
+      height: 53px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 153.5px !important;
+      height: 31.5px !important;
+    }
+  }
+}
+
+@at-root .mv-heading-marcherant-dinner {//dinner marcherant page
+  @include max-screen($breakpoint-mobile) {
+    bottom: -30px !important;
+  }
+}

@@ -1,0 +1,59 @@
+.common-slider {
+  position: relative;
+  margin: 0 -176px;
+
+  @include max-screen($breakpoint-mobile) {
+    // sass-lint:disable-block no-important
+    margin: 0 -214px !important;
+  }
+  .swiper-wrapper {
+   // justify-content: center;
+    //margin-left: 40px;
+    .swiper-slide  {
+      opacity: 0.5;
+    }
+
+    .swiper-slide-duplicate-active,
+    .swiper-slide-active  {
+      opacity: 1;
+    }
+  }
+
+  .swiper-pagination {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -47%;
+  }
+
+  .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    &.swiper-pagination-bullet-active {
+      background-color: #00a040;
+    }
+  }
+
+  &.sumika-slider {
+    .swiper-pagination {
+      bottom: -30px;
+    }
+  }
+
+  &.itadaki-slider {
+    .swiper-pagination {
+      bottom: -30px;
+    }
+  }
+
+  &.dokidoki-slider {
+    .swiper-pagination {
+      bottom: -30px;
+    }
+  }
+}

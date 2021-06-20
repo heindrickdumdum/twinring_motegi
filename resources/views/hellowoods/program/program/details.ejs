@@ -1,0 +1,302 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'programDetails';
+%>
+
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc"
+            style="background-image:url(<%= mix('/assets/images/program/mv.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp"
+            style="background-image:url(<%= mix('/assets/images/program/mv-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+      <div class="l-container mv-container">
+        <div class="mv-heading mv-heading-default u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'mv-forest-experience-program',
+            heading_level: 1,
+            text: 'Forest Experience Program',
+            subtextvg: 'forest-program-top-title',
+            altSubtextvg: '予約制森の体験プログラム'
+          }) %>
+        </div>
+
+        <div class="mv-heading hellowoods-mv-heading forest-program-mv-heading u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods mv-forest-experience-program',
+            heading_level: 1,
+            text: 'Forest Experience Program',
+            subtextvg: 'forest-program-top-title-sp',
+            // subtextvg: 'forest-program-top-title2-sp',
+            altSubtextvg: '予約制森の体験プログラム'
+          }) %>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="l-container subpage-inner-wrap">
+        <div class="">
+          <div class="heading-wrap heading-main text-center heading-main-program-details">
+            <h2 class="heading">
+              <p class="media-title media-title-program-details">
+                <span class="media-title-text">5月のプログラム</span>
+              </p>
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <section class="subpage-section">
+        <div class="subpage-inner subpage-inner-programdetails full-width-sp">
+          <h3 class="subpage-title subpage-title-programdetails">
+            <span>CRAFTING</span>
+          </h3>
+          <p class="page-description page-description-programdetails">
+            木漆工芸作家　松崎融の「木と親しむ木工講座」
+          </p>
+          <div class="subpage-image-gallery">
+            <div class="swiper-container slider-gallery js-gallery swiper-container-horizontal">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/program-details/content-1.jpg') -%>)"></div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/program-details/content-2.jpg') -%>)"></div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/program-details/content-3.jpg') -%>)"></div>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+             <div class="swiper-pagination swiper-pagination-bullets"></div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+      <section class="subpage-section">
+        <div class="subpage-inner subpage-inner-programdetails">
+          <h3 class="subpage-title">
+            <span>森の自然木を材料に木工ハンドメイドに挑戦しよう！</span>
+          </h3>
+
+          <p>
+            日々の生活で使うものを自分の思うカタチに彫り込んでみませんか。<br>
+            彫り終えた作品には講師が漆塗りを施し、丈夫で長く使えるようにしてお渡しします。
+
+
+          </p>
+
+          <p class="media-title media-title-programdetails">
+            <span class="media-title-text">体験概要</span>
+          </p>
+
+          <table class="table table-programdetails">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">日程</th>
+                <td class="table-col">
+                  2020年3月8日（日）【日帰り】
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">対象／定員	</th>
+                <td class="table-col">
+                  18歳以上／12名
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">料金</th>
+                <td class="table-col">
+                  7,000円（完成品には講師が漆塗りを施します）<br>
+                  お客様のご都合によりキャンセルされる場合は、必ずハローウッズまでご連絡ください。
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">関連リンク情報</th>
+                <td class="table-col">
+                  【ブログでレポートを公開中！】ハローウッズの森だより
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="media-title media-title-programdetails">
+            <span class="media-title-text">スケジュール</span>
+          </p>
+
+          <table class="table table-programdetails custom">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head table-head-custom">09:00<br>※送迎をご利用の方</th>
+                <td class="table-col border-right"> 集合 </td>
+                <td class="table-col">
+                  宇都宮（JR宇都宮駅東口)<br>※状況により集合場所変更の可能性がございます。
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head table-head-custom">09:30</th>
+                <td class="table-col border-right">
+                  受付
+                </td>
+                <td class="table-col">
+                  ハローウッズ
+                </td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head table-head-custom">10:00</th>
+                <td class="table-col border-right">
+                  作品のイメージづくり<br>
+                  作品づくり<br>
+                  昼食（持参弁当）<br>
+                  作品づくり<br>
+                  休憩（ティータイム）<br>
+                  作品づくり<br>
+                  振り返り
+                </td>
+                <td class="table-col">
+                  <br>
+                </td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head table-head-custom">16:00</th>
+                <td class="table-col border-right">
+                  解散
+                </td>
+                <td class="table-col">
+                  ハローウッズ
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="subpage-section">
+        <div class="subpage-inner subpage-inner-programdetails img-list">
+          <p class="media-title media-title-programdetails">
+            <span class="media-title-text">作品紹介</span>
+          </p>
+          <ul class="image-list">
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/program-details/work-intro-1.jpg') %>" alt="">
+              <p class="image-list-desc">【角皿】</p>
+            </li>
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/program-details/work-intro-2.jpg') %>" alt="">
+              <p class="image-list-desc">【ぐい飲み】</p>
+            </li>
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/program-details/work-intro-3.jpg') %>" alt="">
+              <p class="image-list-desc">【重箱】</p>
+            </li>
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/program-details/work-intro-4.jpg') %>" alt="">
+              <p class="image-list-desc">【丸皿】</p>
+            </li>
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/program-details/work-intro-5.jpg') %>" alt="">
+              <p class="image-list-desc">【丸皿と小皿】</p>
+            </li>
+            <li class="image-list-item">
+              <img src="<%= mix('/assets/images/program-details/work-intro-6.jpg') %>" alt="">
+              <p class="image-list-desc">【船皿】</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="l-container subpage-section section-profile">
+        <div class="subpage-inner subpage-inner-programdetails profile-wrapper">
+          <p class="media-title media-title-profile">
+            <span class="media-title-text">講師プロフィール</span>
+          </p>
+          <p class="profile-sub-title u-show-pc">
+            <span class="bold">松崎 融（まつざき とおる）</span><br>
+            <span class="u-show-pc">茂木町在住　木漆工芸作家　国画会工芸部監査委員長<br></span>
+          </p>
+
+
+          <div class="desc-container">
+            <div class="profile-img">
+              <div class="profile-img-inner">
+                <img src="<%= mix('/assets/images/program-details/profile.jpg') %>" alt="">
+              </div>
+              <p class="profile-sub-title u-show-sp">
+                <span class="bold">松崎 融<br>（まつざき とおる）</span>
+                <span class="">茂木町在住　木漆工芸作家　国画会工芸部監査委員長<br></span>
+              </p>
+            </div>
+            <p class="profile-desc">
+              “一木をくりぬき、漆の着物を着せていく”これが私の仕事です。<br>
+              技術は出来るだけシンプルに、そしてその分自分の思いを沢山込めたそんな仕事をしたいと思います。<br>
+              漆芸は、長い歴史の中で、現在の様に美しさを極めてきましたが、その一方で、漆本来の強さは忘れられてしまっています。酸やアルカリに腐蝕せず、長く土中にあっても残っているほどの強靭さ、私はその強さを前面に出した仕事をしていきたいと思います。形の美しさを求め、それに強くて美しい衣を着せ、更に人が使うことによって、より一層美しく艶やかになっていく器。力強さの中にも品格を合わせ持つ事、それが私の目標です。
+            </p>
+          </div>
+        </div>
+
+        <div class="subpage-section subpage-section-collapse section-collapse-program-details">
+          <div class="subpage-collapse-heading js-collapse-button collapse-heading-program-details">特記事項</div>
+          <div class="subpage-collapse-description">
+            <div class="subpage-collapse-content">
+              <p class="">
+                <ul>
+                  <li>料金は、税込み表記となります。</li>
+                  <li>本プログラムのお支払いに、アトラクションチケット、ご利用券など、その他金券はご利用いただけません。昼食は各自ご用意ください。</li>
+                  <li>料金は、1作品の表記です</li>
+                  <li>料金には、プログラム費(漆代、材料費等)、ツインリンクもてぎ入場料・駐車料を含みます。</li>
+                  <li>特別に大きな作品をつくられる方は、別途材料費をいただきます。</li>
+                  <li>漆塗りを施した作品のお渡しは、ハローウッズ受付、もしくは着払い宅配便にて発送を承ります。</li>
+                  <li>道具や材料は全てハローウッズでご用意します。</li>
+                  <li>講師の都合により、日程の変更や代理の講師が講座を行う場合があります。</li>
+                  <li>参加者には、当日のスケジュール、持ち物などを記載した『参加の手引き』を送付します。</li>
+                  <li>当日のスケジュールやプログラム等は天候や参加人数などにより予告なしに変更・中止となる場合があります。</li>
+                  <li>募集定員を超えた際には、キャンセル待ちでのお申し込みをお受けします。</li>
+                  <li>電話・FAXでも受け付けております。希望のプログラム名・日程・参加者全員の氏名・年齢・性別・住所・電話番号を お知らせください。</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <%- include('/partials/button', {
+            modifier: 'program-details-green',
+            text: 'このプログラムを申し込む',
+            link: '#'
+          }) %>
+          <span>募集締め切り : 2020年3月1日（日）</span>
+        </div>
+      </section>
+
+
+
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+    </main>
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsProgramDetails
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

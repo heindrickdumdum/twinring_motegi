@@ -1,0 +1,105 @@
+<%
+if (typeof modifier === 'undefined'){
+  var modifier = '';
+}
+
+
+%>
+
+
+<% if(dataProgramList) { var arrTabs = [];var checked="checked"%>
+  <div class="u-show-pc tab-underline">
+    <ol id="tabs" class="tabs u-show-pc" >
+      <% dataProgramList.forEach( item => { %>
+            <% if(arrTabs.indexOf(item.month) === -1) { %>
+              <li class="tab"><% if(arrTabs.length > 0) {checked=""} %>
+                <input autocomplete='on' type="radio" id="tab-<%- item.month %>" name="tab-month" class="tab-month" value="<%- item.month %>" <%- checked %>>
+                <label for="tab-<%- item.month %>"><%- item.month %>月</label>
+              </li>
+            <% arrTabs.push(item.month) %>
+        <% } %>
+      <% }) %>
+    </ol>
+  </div>
+
+  <div class="l-section-title u-show-sp program-dropdown-title">
+    <%- include('/partials/svg', {
+      'name': 'program-dropdown-title'
+    }) %>
+  </div>
+  <div class="custom-select u-show-sp">
+    <div id="customSelect" class="select-selected"><%- arrTabs[0] %>月</div>
+    <div id="customSelectItems" class="select-items select-hide">
+      <% arrTabs.forEach( item => { %>
+        <div class="option" value="<%- item %>"><%- item %>月</div>
+      <% }) %>
+    </div>
+  </div>
+
+<% } %>
+
+<% if(dataProgramList) { %>
+  <ul id="program-list" class="carbike-list program-list" data-tab="3">
+    <% dataProgramList.forEach( item => { %>
+      
+      <li class="carbike-item program-item" data-month="<%- item.month %>">
+        <div class="ribbon-text"><%- item.ribbon %></div>
+        <a class="carbike-item-link" href="<%- item.link %>">
+          <article class="carbike-article <%- modifier %>">
+            <div class="carbike-article-thumb">
+              
+              <div class="carbike-article-thumb-img"
+                  style="background-image: url(<%- item.imgPath %>)">
+                </div>
+              <% if(item.category !== '') { %>
+                <span class="carbike-article-cat carbike-article-cat-bg-<%- item.categoryBg %> program-cat">
+                  <%- item.category %>
+                </span>
+              <% } %>
+            </div>
+
+            <div class="carbike-article-content">
+              <h3 class="carbike-article-title">
+                <span>
+                  <%- item.title %>
+                  <% if(item.icon !== '') { %>
+                    <i class="ico-carbike ico-carbike-<%- item.icon %>"></i>
+                  <% } %>
+                </span>
+
+
+              </h3>
+
+              <p class="period">
+                <span class="period-icon">
+                  <%- include('/partials/svg', {
+                    name: 'calendar',
+                    svgtitle: 'calendar'
+                  }) -%>
+                </span>
+                <span class="period-text">
+                  <%- item.period %>
+                </span>
+              </p>
+
+              <ul class="carbike-article-list">
+                <% item.dataList.forEach( dataitem => { %>
+                  <li class="carbike-article-list-item program">
+                    <span class="carbike-article-list-label program"><%= dataitem.label %></span>
+                    <p class="carbike-article-list-desc program"><%- dataitem.content %></p>
+                  </li>
+                <% }) %>
+              </ul>
+
+              <div class="carbike-article-more">
+                <div class="carbike-article-more-link">
+                  <span>詳細はこちら</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>

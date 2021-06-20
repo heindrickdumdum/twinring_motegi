@@ -1,0 +1,94 @@
+.l-section {
+  padding-bottom: 95px;
+
+  &.youtube-video {
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
+
+  &.l-collection {
+    padding-bottom: 83px;
+  }
+
+  &.l-racing {
+    padding-bottom: 56px;
+  }
+
+  &.l-section-racing {
+    padding-bottom: 10px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    padding-bottom: 55px;
+  }
+
+  &.section-events {
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 120px;
+    }
+  }
+
+  &.collection-section{
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 60px;
+    }
+  }
+
+  &.l-section-forest-dokidoki {
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &.l-section-hotel-twin {
+    padding-bottom: 47px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 33px;
+    }
+  }
+
+  &.l-section-hellowoods {
+    padding-bottom: 50px;
+
+    @include max-screen ($breakpoint-mobile) {
+      padding-bottom: 68px;
+    }
+  }
+
+  &.sponsors {
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 55px;
+    }
+  }
+
+  &.l-section-activity {
+    margin-top: -72px;
+
+    @include max-screen ($breakpoint-mobile) {
+      margin-top: 0;
+    }
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    &.banner-image {
+      padding-bottom: 60px;
+      background-color: $color-light-gray;
+    }
+
+    &.hoteltwinring-banner-image-1,
+    &.hoteltwinring-banner-image-2 {
+      .l-container-m {
+        max-width: none;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+.l-section-inner {
+  padding: 0 146px;
+  @include max-screen($breakpoint-mobile) {
+    padding: 26px 0 40px;
+  }
+}

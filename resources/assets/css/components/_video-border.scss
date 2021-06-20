@@ -1,0 +1,14 @@
+.video-border {
+  border: 14px solid transparent;
+  border-image: url(#{$image-path}frame.png) 14 stretch;
+
+  @include max-screen($breakpoint-mobile) {
+    border: 6px solid transparent;
+    border-image: url(#{$image-path}frame.png) 30 stretch;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}

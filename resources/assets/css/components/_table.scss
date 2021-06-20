@@ -1,0 +1,874 @@
+.table {
+  display: table;
+  width: 100%;
+  letter-spacing: 0;
+
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+
+  @at-root .shops-information & {
+    p {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 11px;
+
+        &:nth-of-type(2) {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+
+  @at-root .table-wrap {
+    p {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @at-root .section-camp & {//f-glamping camp page
+    margin-bottom: 26px;
+
+    &:last-child {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 0px;
+      }
+    }
+
+    a {
+      text: {
+        decoration: none;
+      }
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 15px;
+  }
+
+  &:not(:last-child) {
+    &.table-subpage {
+      margin-bottom: 55px;
+    }
+  }
+
+  &.table-toya {//toya page
+    background-color: transparent;
+    margin-top: 120px;
+
+    @at-root & {
+      .link {
+        color: $color-white;
+      }
+
+      .table-head {
+        background-color: rgba($color: $color-dark-yellow, $alpha: 0.30);
+        color: $color-white;
+        border-color: $color-dark-yellow;
+        text-align: left;
+        vertical-align: top;
+
+        &:first-child {
+          border-left: 0px solid;
+        }
+
+        @include min-screen($breakpoint-mobile + 1) {
+          padding-left: 42px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          padding-left: 11px;
+          font-size: 12px;
+        }
+      }
+
+      .table-col {
+       color: $color-white;
+       text-align: left;
+       padding: {
+        left: 54px;
+       }
+       border-right: 0px solid;
+       border-color: $color-dark-yellow;
+
+       @include max-screen($breakpoint-mobile) {
+        padding-left: 11px;
+        font-size: 12px;
+       }
+      }
+
+      .table-row-last {
+        border-bottom-color: $color-dark-yellow !important;
+      }
+    }
+  }
+
+  &.table-rocco {//rocco page
+    @at-root & {
+      .table-head {
+        @include max-screen($breakpoint-mobile) {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .link {
+      color: #00a040;
+    }
+
+    span {
+      @include max-screen($breakpoint-mobile) {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &.table-programdetails {
+    margin-bottom: 70px;
+    .border-right {
+      border-right: 1px solid #f7f7f7;
+      min-width: 140px;
+    }
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 29px;
+      font-size: 10px;
+
+      .table-head-custom {
+        width: 60px;
+        padding: 10px 5px;
+      }
+    }
+  }
+
+  &.table-craft {
+    &::before {
+      @include max-screen($breakpoint-mobile) {
+        position: absolute;
+        left: -20px;
+        right: -20px;
+        top: -135px;
+        bottom: -80px;
+        background-image: url('../images/craft/craft-table-bg-sp.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        content: '';
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      position: relative;
+    }
+  }
+
+  &.table-donguri {
+    .link {
+      color: #00a040;
+    }
+  }
+
+  &.table-bluenote-menu {
+    max-width: 905px;
+    margin: 0 auto;
+    font-family: $font-combined;
+
+    .flag {
+      &::before {
+        display: inline-block;
+        width: 20px;
+        height: 14px;
+        content: " ";
+        margin-right: 15px;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include max-screen ($breakpoint-mobile) {
+          width: 10px;
+          height: 8px;
+          margin-left: 4px;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      }
+
+      &.italy::before {
+        background-image: url('../images/bluenote/ico-italia.png');
+      }
+
+      &.aus::before {
+        background-image: url('../images/bluenote/ico-aus.png');
+      }
+    }
+
+    .table-row-bluenote {
+      .table-head-bluenote, .table-col-bluenote {
+        background: none;
+        padding-left: 0;
+        padding-right: 0;
+        &::before, &::after {
+          display: none;
+        }
+      }
+
+      .table-col-bluenote {
+        padding-top: 23px;
+        padding-bottom: 22px;
+
+        border-bottom: 1px dashed #333333;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 2.4px;
+        vertical-align: bottom;
+
+        &.custom {
+          @include min-screen ($breakpoint-mobile + 1) {
+            padding-bottom: 11px;
+          }
+        }
+
+        .color-label {
+          color: #333333;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 30px;
+          letter-spacing: 2.88px;
+          font-family: $font-hiragino;
+
+          @include max-screen ($breakpoint-mobile) {
+            font-size: 12px;
+            line-height: 1;
+            margin-bottom: 14px;
+            letter-spacing: 2px;
+          }
+        }
+
+
+        ul {
+          &.first-space {
+            li:first-child {
+              @include min-screen ($breakpoint-mobile + 1) {
+                margin-bottom: 10px;
+              }
+            }
+          }
+          &:not(.first) {
+            line-height: 2.3;
+            letter-spacing: 1px;
+            @include max-screen ($breakpoint-mobile) {
+              line-height: 2;
+              letter-spacing: normal;
+            }
+          }
+        }
+        
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 10px;
+          letter-spacing: normal;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          vertical-align: top;
+          border-bottom: 1px dashed #e9e9e9;
+        }
+      }
+
+      .color-green {
+        color: #00a040;
+        line-height: 2;
+        letter-spacing: normal;
+        vertical-align: top;
+        width: 190px;
+
+        @include min-screen ($breakpoint-mobile + 1) {
+          width: 315px;
+          letter-spacing: 0.2px;
+          line-height: 24px;
+        } 
+      }
+
+      .line-height-inherit {
+        line-height: inherit;
+      }
+      &:first-child {
+        @include max-screen ($breakpoint-mobile) {
+          margin-bottom: 12px;
+        }
+      }
+      &:last-child {
+        .table-col-bluenote {
+          border-bottom: none;
+        }
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile + 1) {
+      border-top: 2px solid #00a040;
+    } 
+  }
+
+  @at-root .smart-entry & {//smart entry page
+    &-smart-entry {
+      margin-bottom: 94px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 34px;
+      }
+    }
+  }
+}
+
+.table-head {
+  background-color: #f7f7f7;
+  width: 93px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  background-clip: padding-box;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    width: 220px;
+  }
+}
+
+.table-col {
+  width: calc(100% - 93px);
+  letter-spacing: 0.1em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    width: calc(100% - 220px);
+  }
+
+  a {
+    color: $base-font-color;
+  }
+
+  @at-root .gran-turismo & {//granturismo table
+    @include max-screen($breakpoint-mobile) {
+      white-space: nowrap !important;
+    }
+  }
+}
+
+.table-head, .table-col {
+  position: relative;
+  padding: 10px 13px;
+  vertical-align: top;
+  min-height: 32px;
+  line-height: 2.15;
+
+  .col-small {//hotel granroom
+    display: block;
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 17px 40px;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-position: left;
+    background-image: url(/assets/images/img-dash.png);
+    background-repeat: repeat-x;
+    opacity: 0.2;
+
+    .table-solid & {//hotel granroom
+      content: none;
+    }
+  }
+
+  .table-craft & {
+    @include max-screen($breakpoint-mobile) {
+      padding: 12px 13px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      line-height: 1.5;
+    }
+  }
+
+  a {
+    color: $base-font-color;
+    text-decoration: underline;
+  }
+}
+
+.table-craft {
+  .table-head {
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 214px;
+    }
+  }
+}
+
+.table-solid {//hotel granroom/familyroom
+  background-color: $color-white;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    margin-bottom: 44px;
+
+    &-last {
+      margin-bottom: 0px;
+    }
+  }
+
+  .table-row-solid {
+    > * {
+      &:after {
+        // sass-lint:disable-block no-important
+        content: none !important;
+      }
+    }
+  }
+
+  .table-row-last {
+    border-bottom: 1px solid #d1c0a5;
+  }
+
+  .table-head, .table-col {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: 1px solid #d1c0a5;
+    vertical-align: middle;
+    border-top: 1px solid #d1c0a5;
+  }
+
+  td {
+    font-weight: 300;
+  }
+
+  .table-head {
+    @include max-screen($breakpoint-mobile) {
+      width: 130px;
+    }
+
+    &:first-child {
+      border-right: 0px;
+      border-left: 1px solid #d1c0a5;
+    }
+  }
+}
+
+.table-col-num {
+  display: inline-block;
+  margin-right: 20px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-right: 15px;
+  }
+}
+
+.table-row {
+  width: 100%;
+
+  &:first-child {
+
+    .table-head, .table-col {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-position: left center;
+        background-image: url(/assets/images/img-dash.png);
+        background-repeat: repeat-x;
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
+.table-heading-attractioninfo {
+  img {
+    max-width: 234px;
+    width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 126px;
+    }
+  }
+}
+
+.table-heading {
+  margin-top: 36px;
+  margin-bottom: 15px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  // img {
+  //   @include max-screen($breakpoint-mobile) {
+  //     width: auto;
+  //   }
+  // }
+
+  // &:last-child {
+  //   img {
+  //     @include max-screen($breakpoint-mobile) {
+  //       width: 245px;
+  //       height: 15px;
+  //       border: 1px solid red;
+  //     }
+  //   }
+  // }
+  &.table-heading-sp {
+    img {
+      @include max-screen($breakpoint-mobile) {
+        width: 50%;
+      }
+    }
+  }
+
+  &.table-heading-collapse {
+    img {
+      @include max-screen($breakpoint-mobile) {
+        width: 85%;
+        // height: 15px;
+    }
+  }
+}
+
+}
+
+.table-subheading {
+  margin-bottom: 32px;
+  font-size: 15px;
+  color: $base-font-color;
+  line-height: 2;
+  text-align: left;
+  letter-spacing: 0.160em;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 17px;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
+  }
+}
+
+//modifier forest walk
+.subpage-walk {
+  .table-row {
+    .table-col {
+      p {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+//modifier forest walk end
+
+@at-root .table-distribution {//smart entry page
+  .table {
+    margin-bottom: 31px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 24px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 40px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-note {
+      font-size: 15px;
+      line-height: 2;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+
+      &:nth-of-type(3) {
+        margin-bottom: 0px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+        line-height: 1.833;
+      }
+    }
+  }
+}
+
+.link-green {
+  color: $color-green !important;
+}
+
+@at-root .table-green {
+  border: 1px solid $color-green;
+  background-color: $color-white;
+  border-collapse: collapse;
+
+  @at-root .table-one-row {
+    border: 1px solid $color-green !important;
+
+    .table-col {
+      // border-top: 1px solid $color-green !important;
+      // border-bottom: 1px solid $color-green !important;
+      border-left: 1px solid $color-green !important;
+      // border-right: 1px solid $color-green !important;
+      background-clip: padding-box;
+    }
+  }
+
+  @at-root .color-white {
+    background-color: $color-white !important;
+  }
+
+  @at-root & {
+    .table-row {
+      &:first-child {
+        background-color: $color-table-head;
+      }
+
+      &:not(:first-child) {
+        background-color: $color-white;
+      }
+    }
+  }
+
+  @at-root .attraction-collapse & {//fee page
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 20px !important;
+    }
+  }
+
+  @at-root & {
+    &.admission-table {
+      border-bottom-width: 0px;
+
+      .dark-gray {
+        background-color: $color-dark-gray;
+      }
+
+      .table-head {
+        background-color: transparent;
+      }
+
+      .table-col {
+        border-bottom: 1px solid $color-green;
+      }
+    }
+  }
+
+  .table-head {
+    border-top-width: 0px;
+    border-bottom: 1px solid $color-green;
+    text-align: center;
+    border-right: 1px solid $color-green;
+    vertical-align: middle;
+    background-color: transparent;
+
+    // @include max-screen($breakpoint-mobile) {
+    //   white-space: nowrap;
+    //   line-height: normal;
+    // }
+
+    &.dark-gray {
+      background-color: $color-dark-gray;
+    }
+
+    &:last-child {
+      border-right-width: 0px;
+    }
+
+    &:before,
+    &:after {
+      background: none !important;
+    }
+  }
+
+  .table-col {
+    border-width: 0px;
+    text-align: center;
+    border-right: 1px solid $color-green;
+    vertical-align: middle;
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+    background-color: transparent;
+
+    .space-right {
+      margin-right: 25px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      // white-space: nowrap;
+      padding: {
+        left: 10px;
+        right: 10px;
+      }
+    }
+
+    &:last-child {
+      border-right-width: 0px;
+    }
+
+    &:before,
+    &:after {
+      background: none !important;
+    }
+  }
+}
+
+@at-root .page-fee {//fee page
+  .table-container {
+    margin-bottom: 66px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 12px;
+    }
+
+    &-list {
+      display: flex;
+      margin-bottom: 80px;
+
+      @include max-screen($breakpoint-mobile) {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    &-item {
+      width: 280px;
+      margin-right: 20px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-right: 0px;
+        display: inline-block;
+        width: 203px;
+        margin-bottom: 10px;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    &.with-padding {
+      padding: {
+        left: 40px;
+        right: 40px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: 0px;
+      }
+    }
+
+    .media-title {
+      margin-bottom: 18px;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 16px;
+      }
+    }
+
+    .subpage-desc {
+      margin-top: 0px;
+      margin-bottom: 21px;
+    }
+
+    .table-col {
+      line-height: normal;
+    }
+
+    small {
+      display: block;
+      font-weight: normal;
+      font-size: 13px; 
+    }
+
+    .not-bold {
+      font-weight: normal;
+    }
+
+    table {
+      p {
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+@at-root .table-gold {
+  border: 1px solid $color-dark-yellow !important;
+  border-left-width: 0px !important;
+  border-right-width: 0px !important;
+  background-color: transparent !important;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: -10px;
+  }
+
+  .table-row {
+    background-color: transparent !important;
+  }
+
+  .table-head {
+    background-color: rgba(163, 135, 55, 0.3) !important;
+    border-width: 1px !important;
+    border-color: $color-dark-yellow !important;
+    vertical-align: top;
+    text-align: left;
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+  }
+
+  .table-col {
+    background-color: transparent;
+    border-width: 1px !important;
+    border-color: $color-dark-yellow !important;
+    text-align: left;
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      padding: {
+        left: 40px;
+        right: 40px;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+    }
+  }
+}
+
+.not-bold {
+  font-weight: normal;
+}

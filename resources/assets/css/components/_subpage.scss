@@ -1,0 +1,2181 @@
+.subpage {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+
+  @at-root & {//404 page
+    &-error {
+      &:after {
+        display: none !important;
+      }
+    }
+  }
+
+  &-graph {//foods m page
+    margin-bottom: 10px;
+  }
+
+  &-restaurant {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &.smart-entry {//smart entry page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 118px;
+    }
+
+    .color-red {
+      color: $color-red;
+    }
+
+    .main-desc {
+      font-size: 14px;
+      line-height: 2.286;
+      text-align: center;
+      letter-spacing: 0.1em;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 64px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+        line-height: 2.125;
+        text-align: justify;
+      }
+    }
+
+    @at-root & {
+      .dotted-item {
+        position: relative;
+        margin: {
+          left: 23px;
+          bottom: 12px;
+          top: 3px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          margin-left: 20px;
+          margin-bottom: 10px;
+        }
+
+        span {
+          font-size: 18px;
+          line-height: 1.778;
+          letter-spacing: 0.1em;
+          font-weight: bold;
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 13px;
+            line-height: 1.667;
+          }
+        }
+
+        &:before {
+          position: absolute;
+          content: "\2022";
+          color: $color-green;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -25px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 35px;
+
+          @include max-screen($breakpoint-mobile) {
+            font-size: 25px;
+            margin-left: -20px;
+            width: auto;
+            height: auto;
+            top: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  &-hotel {//hotel granroom
+    @include min-screen($breakpoint-mobile + 1) {
+      // sass-lint:disable-block no-important
+      margin-bottom: 13px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 14px;
+    }
+
+    &:after {
+      // sass-lint:disable-block no-important
+      content: none !important;
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 30px;
+  }
+
+  > * {
+    position: relative;
+  }
+
+  @at-root &.toya-wrapper {//toya page
+    &:before {
+      display: none;
+    }
+
+    main {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1000px;
+        background-image: url('/assets/images/toya/concept-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        top: -320px;
+        z-index: 0;
+        background-position: center bottom;
+
+        @include max-screen($breakpoint-mobile) {
+          height: 683px;
+          background-image: url('/assets/images/toya/concept-bg.jpg');
+          background-size: 200%;
+        }
+      }
+    }
+  }
+
+  &::after {
+    background: #dfdfdf;
+    content: '';
+    display: block;
+    height: 1px;
+    max-width: 1220px;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+
+  }
+
+  &::before {
+    background-image: url('../images/subpage-bg.png');
+    // background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      // background: url('../images/bg-leaf.png');
+      background-image: url('../images/bg-leaf-sp.png');
+      background-size: cover;
+      background-position-x: right;
+
+    }
+  }
+
+  &.collection-wrapper {
+    &::before {
+      top: -144px;
+    }
+  }
+  &.racing-subpage {
+    &:before {
+      display: none;
+    }
+  }
+
+  .link-border-bottom {
+    color: #333333;
+    border-bottom: 2px solid #333333;
+    padding-bottom: 3px;
+    transition: all 0.5s;
+  }
+
+  &.subpage-itadaki {
+    &::before {
+      background-image: url('../images/itadaki/subpage-bg.png');
+
+      @include max-screen($breakpoint-mobile) {
+        // background: url('../images/bg-leaf.png');
+        background-image: url('../images/bg-leaf.png');
+        background-size: cover;
+        background-position-x: center;
+      }
+    }
+  }
+
+  &.subpage-craft {
+    &::before {
+      content: normal;
+
+      @include max-screen($breakpoint-mobile) {
+        content: normal;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 17px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &.subpage-musasabi {
+    &::before {
+      @include min-screen($breakpoint-mobile + 1) {
+        content: normal;
+      }
+    }
+  }
+
+  &.subpage-nozominoyu {
+    padding-bottom: 80px;
+  }
+}
+
+.subpage-banner-toya {
+  @include min-screen($breakpoint-mobile + 1) {
+    padding-top: 86px;
+    margin-top: 0;
+  }
+}
+
+.subpage-banner-rocco {//rocco
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: 86px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 43px;
+  }
+}
+
+.subpage-section-otherroom {//hotel granroom/familyroom
+  position: relative;
+
+  > * {//subpage inner
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 10px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 56px !important;
+    }
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      background-image: url('/assets/images/granroom/otherroom-bg.png');
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url('/assets/images/granroom/otherroom-bg-sp.png');
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.subapge-section-goods-tab {
+
+  margin-bottom: 30px;
+
+
+  @include min-screen ($breakpoint-mobile + 1) {
+    background-color: #f5f6fa;
+    max-width: 1021px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    background-color: #f5f6fa;
+
+    .bg-white {
+      background-color: #fff;
+    }
+  }
+
+  .l-section-title {
+    background-color: #fff;
+  }
+}
+
+.subpage-inner {
+  position: relative;
+  max-width: 1060px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  width: 100%;
+
+  @at-root .page-fee & {//fee page
+    margin-bottom: 0px;
+  }
+
+  @at-root .shops-information & {//breakfast marcherant page
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 0px;
+        right: 0px;
+      }
+    }
+  }
+
+  &-toya-menu {//toya page
+    & > .subpage-inner {
+      padding-bottom: 20px !important;
+    }
+  }
+
+  @at-root .toya-menu & {//toya page
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 5px;
+        right: 5px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0px;
+        padding-bottom: 51px;
+        padding: {
+          left: 10px;
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  @at-root &-toya {//toya page
+    max-width: 1222px;
+    padding: 0px;
+  }
+
+  @at-root .toya-wrapper & {//toya page
+    margin: {
+      bottom: 0px;
+    }
+  }
+
+  .subpage-hotel & {//hotel granroom
+    z-index: $z-min2;
+  }
+
+  .subpage-section-roomdetails & {
+    @include min-screen($breakpoint-mobile + 1) {
+      // sass-lint:disable-block no-important
+      margin-bottom: 87px !important;
+    }
+  }
+
+  // .subpage-section-usagefee-familyroom & {//hotel fmailyroom
+  //   @include max-screen($breakpoint-mobile) {
+  //     // sass-lint:disable-block no-important
+  //     margin-bottom: 76px !important;
+  //   }
+
+  // }
+
+  .subpage-section-usagefee & {//hotel granroom
+    // sass-lint:disable-block no-important
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 170px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      margin-bottom: 76px !important;
+    }
+  }
+
+  .subpage-section-amenity & {//hotel granroom
+    // sass-lint:disable-block no-important
+    margin-bottom: 152px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      // sass-lint:disable-block no-important
+      margin-bottom: 145px !important;
+    }
+  }
+
+  .subpage-section-teatime & {//hotel granroom
+    @include min-screen($breakpoint-mobile + 1) {
+      // sass-lint:disable-block no-important
+      margin-bottom: 225px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 112.5px;
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    // margin-bottom: 120px;
+    margin-bottom: 145px;
+
+    .subpage-hotel & {//hotel granroom
+      margin-bottom: 100px;
+    }
+  }
+
+  > p {
+    font-size: 12px;
+    color: $base-font-color;
+    line-height: 2;
+    text-align: left;
+    letter-spacing: 0.16em;
+    margin-bottom: 33px;
+
+    @at-root .page-fee & {//fee page
+      margin-bottom: 30px;
+    }
+
+    @at-root .section-camp {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 100px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 50px;
+      }
+
+      .subpage-section-usagefee {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-top: 70px;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          margin-top: 50px;
+        }
+      }
+    }
+
+    @at-root .section-camp & {//f-glamping camp page
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 24px !important;
+        margin-bottom: 99px;
+
+        text: {
+          align: center;
+        }
+      }
+
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 15px;
+    }
+
+    //sp
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 17px;
+    }
+
+    .subpage-section-granroomactivity & {//notel granroom
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 28px;
+      }
+    }
+
+    .subpage-section-usagefee & {//notel granroom
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 5px;
+      }
+    }
+
+    .subpage-craft & {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 43px;
+      }
+    }
+  }
+
+  .subpage-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 123px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 95px;
+    }
+  }
+
+  &.subpage-inner-musasabi {
+    position: relative;
+
+    > p {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 63px;
+      }
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 24px;
+        letter-spacing: 0.19em;
+      }
+    }
+  }
+}
+
+.subpage-inner-wrap {
+  .toya-menu {//toya page
+    .toya-text {
+      color: $color-white;
+      text-align: center;
+      margin-top: 44px;
+    }
+  }
+
+  .toya-bg-mountain {//toya page
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-bottom: 102px;
+    }
+  }
+
+  .subpage-craft & {
+    &::before {
+      @include min-screen($breakpoint-mobile + 1) {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -222px;
+        right: 0;
+        background-image: url("../images/craft/craft-subpage-inner-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 783px;
+      }
+    }
+  }
+
+  .subpage-musasabi & {
+    &::before {
+      @include min-screen($breakpoint-mobile + 1) {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../images/musasabi/musasabi-subpage-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+}
+
+.subpage-inner-reserve-reminder {
+  margin-bottom: 118px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 78px;
+  }
+}
+
+.subpage-button-link {
+  color: #fff;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  span {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+    }
+  }
+}
+
+.subpage-title {
+  font-size: 13px;
+  letter-spacing: 0.11em;
+  margin-bottom: 8px;
+
+  &-safety {//areaindex page
+    text-align: center;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 28px !important;
+      line-height: 1.462;
+      margin-bottom: 0px;
+    }
+  }
+
+  .subpage-section-usagefee & {//hotel granroom/familyroom
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 11px;
+    }
+  }
+
+  .subpage-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 5px;
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 24px;
+  }
+
+  span {
+    background: linear-gradient(to right, #027cc3 0%, #09a046 100%);
+  	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+
+    .is-ie & {
+      background: none;
+      color: $color-gossamer;
+      -webkit-text-fill-color: $color-gossamer;
+      -moz-text-fill-color: $color-gossamer;
+      -ms-text-fill-color: $color-gossamer;
+    }
+  }
+
+  &.subpage-title-programdetails {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    padding-top: 7px;
+
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      padding: 0 20px;
+    }
+  }
+}
+
+.subpage-title-musasabi {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 6px;
+  }
+}
+
+.subpage-youtube {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.subpage-banner {
+  width: calc(100% + 40px);
+  left: -20px;
+  position: relative;
+  margin-bottom: 20px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 40px;
+    left: 0;
+    width: 100%;
+  }
+
+  //modifier for sp
+  @include max-screen($breakpoint-mobile) {
+    &-precaution {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  &.subpage-banner-standardroom {
+    .subpage-banner-inner {
+      margin-bottom: 10px;
+    }
+  }
+
+  &.subpage-banner-craft {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 26px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 20px;
+    }
+
+    .subpage-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &.subpage-banner-tsubasa {
+    .subpage-banner-inner-tsubasa {
+      //max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+
+  &.subpage-banner-musasabi {
+    text-align: center;
+
+    iframe {
+      @include max-screen($breakpoint-mobile) {
+        height: 212px;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.subpage-section {
+  position: relative;
+  width: 100%;
+  &.section-profile {
+    padding-bottom: 34px;
+    margin-bottom: 30px;
+    @include min-screen ($breakpoint-mobile+1) {
+      padding-bottom: 74px;
+      margin-bottom: 110px;
+    }
+  }
+
+  &.section-profile::after {
+    background: #dfdfdf;
+    content: '';
+    display: block;
+    height: 1px;
+    max-width: 1220px;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+
+    @include max-screen ($breakpoint-mobile) {
+      //max-width: 257px;
+    }
+  }
+
+  &.subpage-section-racing {
+    background:none;
+  }
+}
+
+.subpage-section-inner {
+  position: relative;
+  max-width: 1102px;
+  margin: 0 auto;
+  padding: 0 42px;
+  width: 100%;
+}
+
+.subpage-button {
+  max-width: 669px;
+  height: 137px;
+  margin: -20px auto 135px;
+  position: relative;
+  z-index: 2;
+  width: calc(100% - 40px);
+
+  //sp
+  @include max-screen($breakpoint-mobile) {
+    height: 70px;
+  }
+}
+
+.subpage-image-gallery {// camp page
+  margin-bottom: 30px;
+
+  @at-root .camp-wrapper & {
+    small {
+      font-size: 10px;
+      position: relative;
+      top: -20px;
+    }
+  }
+
+  &-roomdetails {//hotel granroom
+    margin-bottom: 40px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 31px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+
+  &.subpage-image-gallery-nozominoyu {
+    margin-bottom: 36px;
+  }
+
+  &.gallery-dinner-buffet {
+    margin-bottom: 180px;
+    .gallery-bot-heading {
+      font-size: 24px;
+      letter-spacing: 3.5px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 16px;
+        max-width: 200px;
+        margin: 25px auto 15px;
+        letter-spacing: 3px;
+      }
+    }
+
+    .gallery-bot-subheading {
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 299px;
+        margin: auto;
+        letter-spacing: 1px;
+        font-size: 12px;
+        line-height: 2;
+
+      }
+    }
+
+
+    .slide-item-desc {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: -220px;
+
+      @include max-screen ($breakpoint-mobile) {
+        bottom: initial;
+        top: 250px;
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      margin-bottom: 235px;
+
+      .slide-item-desc {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -215px;
+      }
+    }
+
+
+  }
+
+
+}
+
+
+//modifier
+
+.subpage-section-howto {
+  margin-bottom: 30px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 103px;
+  }
+}
+
+.subpage-section-comparison-musasabi {
+  &::before {
+    @include min-screen($breakpoint-mobile + 1) {
+      background-image: url(../images/musasabi/musasabi-comparison-bg.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: -4px;
+      top: 17px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+}
+
+.subpage-section-howto-musasabi {
+  &::before {
+    @include min-screen($breakpoint-mobile + 1) {
+      background-image: url(../images/musasabi/musasabi-howto-bg.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: -142px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 80px;
+  }
+}
+
+.subpage-section-howto-inner {
+  // max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 0 36px;
+  }
+}
+
+.subpage-section-video-inner {
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
+.subpage-section-course-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.subpage-section-recommendation {
+  margin-bottom: 65px;
+}
+
+.subpage-section-cat-attraction {
+  max-width: 905px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.subpage-section-carbike {
+  max-width: 1060px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+//modifier family walk
+.subpage-button-family-walk {
+  margin-top: 50px;
+  margin-bottom: 0px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 33px;
+  }
+
+  .banner-list {
+    position: relative;
+
+    .list-item {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      opacity: 0;
+      transition: opacity 1s ease-in;
+
+      img {
+        width: 100%;
+      }
+
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//modifier walk precuation
+.subpage-inner-precaution {
+  background-color: #f7f7f7;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 70px 56px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 37px 23px;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: $font-hiragino;
+    line-height: 1.417;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    text-decoration: underline;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 13px;
+    }
+  }
+
+  ol {
+    font-size: 15px;
+    line-height: 2;
+    text-align: left;
+    letter-spacing: 0.16em;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+    }
+  }
+
+  &:after { // modifier for forest walk
+    content: "";
+    display: block;
+    position: absolute;
+    top: 90%;
+    right: 5px;
+    transform-origin: center;
+    transform: translateY(-50%) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5.5px 9px 5.5px;
+    border-color: transparent transparent #719b68 transparent;
+    transition: transform 0.35s ease-in-out;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      right: 50%;
+      border-width: 0 7px 12.1px 7px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      right: 50%;
+    }
+  }
+
+  &.is-open {
+    &:after {
+      transform: rotate(0);
+    }
+  }
+}
+
+.subpage-section-video {
+  margin-bottom: 158px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 82px;
+  }
+
+  &.subpage-section-video-musasabi {
+    &::before {
+      @include min-screen($breakpoint-mobile + 1) {
+        background-image: url(../images/musasabi/musasabi-videos-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: 0;
+        top: -102px;
+        right: 0;
+        bottom: 0;
+        content: "";
+        pointer-events: none;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 153px;
+    }
+  }
+}
+
+.subpage-section-video-wrapper {
+  text-align: center;
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+    padding-top: 44%;
+    max-width: 289px;
+    margin: 0 auto;
+  }
+}
+
+.subpage-collapse-num {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+//modifier subpage-section-collapse
+.subpage-section-collapse {
+  background-color: #f7f7f7;
+  max-width: 800px;
+  margin: 50px auto;
+
+  @at-root .page-fee & {//fee page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin: {
+        top: 26px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+      }
+    }
+
+    &.attraction-collapse {
+      max-width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        margin: {
+          top: 20px;
+          bottom: 0px;
+        }
+      }
+    }
+  }
+
+  @at-root .dinner-set-marcherant & {
+    &:nth-of-type(2) {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: -10px;
+      }
+    }
+  }
+
+  @at-root .breakfast-marcherant & {//marcherant breakfast page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 120px;
+    }
+  }
+
+  .subpage-collapse-heading {
+    padding: 30px;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+
+    @at-root .toya-wrapper & {//toya page
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 18px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+      }
+    }
+
+    @at-root .page-fee & {//fee page
+      font-size: 18px;
+      letter-spacing: 0.1em;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+      }
+    }
+
+    @at-root .breakfast-marcherant & {//breakfast marcherant page
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.section-collapse-program-details {
+      @include max-screen ($breakpoint-mobile) {
+        margin: 35px auto 40px;
+      }
+    }
+
+    &.collapse-heading-program-details {
+      font-size: 22px;
+      padding: 38px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 14px;
+        padding: 17px;
+      }
+    }
+  }
+
+  .subpage-collapse-description {
+    overflow: hidden;
+    transition: height .5s cubic-bezier(.22,.61,.36,1);
+  }
+
+  .subpage-collapse-content {
+    padding: 0 50px 50px 50px;
+
+    @at-root & {
+      &.marcherant-buffet-collapse-content {//marcherant buffet
+        @include max-screen($breakpoint-mobile) {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+      }
+    }
+
+    @at-root .toya-wrapper & {//toya page
+      padding: {
+        left: 30px;
+        right: 30px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding: {
+          left: 20px;
+          right: 20px;
+        };
+      }
+    }
+
+    @at-root .page-fee & {//fee page
+      @include max-screen($breakpoint-mobile) {
+        padding: {
+          left: 20px;
+          right: 20px;
+        }
+        overflow-x: scroll;
+      }
+    }
+
+    a {
+      display: inline-block;
+      color: #333;
+      text-decoration: underline;
+    }
+
+    > p {
+      line-height: 2;
+      margin: 0 0 17px;
+      letter-spacing: 0.16em;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  &.gold {
+    border: 1px solid #a38737;
+    @at-root .marcherant-buffet & {
+      @include max-screen($breakpoint-mobile) {
+        max-width: 100%;
+      }
+    }
+
+    .subpage-collapse-heading {
+      color: #a38737;
+
+      @include max-screen ($breakpoint-mobile) {
+        padding: 17px 0px;
+      }
+
+      &:hover {
+        @at-root & {
+          .button-icon {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+
+    max-width: 295px;
+
+    &:nth-child(2) {
+      margin-bottom: 75px;
+      .subpage-collapse-heading {
+        padding: 14px 0px;
+      }
+    }
+
+    &:first-child {
+      margin-bottom: 38px;
+    }
+
+    .button-icon {
+      padding: 5px 0;
+      right: 5px;
+
+      @at-root .toya-wrapper & {//toya page
+        @include max-screen($breakpoint-mobile) {
+          padding: 0px;
+        }
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      margin-top: 82px;
+      max-width: 730px;
+
+      &:nth-child(2) {
+        margin-bottom: 110px;
+        margin-top: 0px;
+        .subpage-collapse-heading {
+          padding: 33px 0px;
+        }
+      }
+
+      &:first-child {
+        margin-bottom: 55px;
+        .subpage-collapse-heading {
+          padding: 39px 0px;
+        }
+      }
+
+      .button-icon {
+        padding: 10px 0;
+        right: 20px;
+
+        @at-root .toya-wrapper & {//toya page
+          padding: 0px !important;
+        }
+      }
+    }
+  }
+}
+
+//modifier forest walk
+.subpage-walk {
+  .subpage-banner-walk {
+    @include min-screen($breakpoint-mobile + 1) { // min sp
+      margin-bottom: 23px;
+    }
+  }
+
+  .subpage-inner-walk {
+    @include min-screen($breakpoint-mobile + 1) { // min sp
+      margin-bottom: 108px;
+    }
+
+    @include max-screen($breakpoint-mobile) { // max sp
+      margin-bottom: 81px;
+    }
+
+    > p {
+      @include min-screen($breakpoint-mobile + 1) { // min sp
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .subpage-button-family-walk {
+    @include min-screen($breakpoint-mobile + 1) { // min sp
+      margin-top: 61px;
+    }
+  }
+
+  .subpage-section-guide-walk {
+    .subpage-inner-walk {
+      @include min-screen($breakpoint-mobile + 1) { // min sp
+        margin-bottom: 116px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 73px;
+      }
+
+      > p {
+        @include min-screen($breakpoint-mobile + 1) { // min sp
+          margin-bottom: 58px;
+        }
+
+        @include max-screen($breakpoint-mobile) { // max sp
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .subpage-section-free-walk {
+    .subpage-inner-walk {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 125px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 41px;
+      }
+
+      > p {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 58px;
+        }
+      }
+    }
+  }
+
+  .subpage-banner-precaution {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: -8px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      .subpage-inner {
+        margin-bottom: 72px;
+      }
+    }
+  }
+
+  //modifier sp forest walk
+  .subpage-inner-anchor {
+    margin-top: 53px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -39px;
+    }
+  }
+}
+//modifier forest walk end
+
+//hotel granroom
+.subpage-section-amenity {
+  .hotel-subtext {
+    text-align: center;
+    font-size: 15px;
+    font-family: $font-hiragino-w3;
+    line-height: 2;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+    }
+  }
+}
+
+.subpage-section-teatime {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 636px;
+    background-image: url('/assets/images/granroom/teatime-bg.png');
+    top: -33%;
+    z-index: 0;
+
+    @include max-screen($breakpoint-mobile) {
+      top: -38%;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 636px;
+    background-image: url('/assets/images/granroom/teatime-bg.png');
+    bottom: -23%;
+    z-index: 0;
+
+    @include max-screen($breakpoint-mobile) {
+      bottom: -17%;
+    }
+  }
+}
+
+.subpage-section-granroomactivity {
+  background-image: url('/assets/images/granroom/activity-bg.jpg');
+  background-size: cover;
+  background-position: center bottom;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding-top: 105px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    background-image: url('/assets/images/granroom/activity-bg-sp.jpg');
+    padding-top: 75px;
+  }
+
+  .subpage-inner {
+    padding-bottom: 146px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 69px;
+    }
+  }
+
+  .subpage-desc {
+    text-align: center;
+    color: $color-white;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 43px;
+    }
+  }
+}
+//hotel granroom end
+
+//modifier forest labo
+.subpage-labo {
+  & > .subpage-inner {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 148px;
+    }
+  }
+
+  .subpage-inner-anchor {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -39px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .subpage-section-aqua-labo {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 84px;
+    }
+
+    .subpage-inner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 196px;
+      }
+
+      & > p {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 31px;
+        }
+      }
+    }
+
+    .subpage-banner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 22px;
+      }
+    }
+
+    .subpage-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  .subpage-section-mammal-labo {
+    .subpage-inner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 196px;
+      }
+
+      & > p {
+        @include min-screen($breakpoint-mobile + 1) {
+          margin-bottom: 31px;
+        }
+      }
+    }
+
+    .subpage-banner {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 31px;
+      }
+    }
+
+    .subpage-title {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 12px;
+      }
+    }
+
+    .subpage-button {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 71px;
+      }
+
+      &-labo {
+        @include max-screen($breakpoint-mobile) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.subpage-reserve {
+
+  &::before {
+    background-image: url('../images/subpage-bg-reserve.png');
+    background-repeat: no-repeat;
+     top: 150px;
+    @include max-screen($breakpoint-mobile) {
+      top: 20%;
+    }
+  }
+
+  &::after {
+    display: none;
+  }
+}
+//modifier forest labo end
+
+.subpage-section-course,
+.subpage-section-kart {
+  margin-bottom: 50px;
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 120px;
+  }
+}
+
+.subpage-inner-anchor-reserve {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 148px;
+  }
+}
+
+.subpage-inner-reserve {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 161px;
+  }
+}
+
+.subpage-inner-programdetails {
+
+  &.full-width-sp {
+    @include max-screen ($breakpoint-mobile) {
+      padding: 0;
+    }
+  }
+
+  &.work-intro {
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &.img-list {
+    margin-bottom: 62px;
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &.profile-wrapper {
+    border: 1px solid #c5c5c5;
+    max-width: 920px;
+
+    @include min-screen ($breakpoint-mobile+1) {
+      padding: 0px 37px;
+      margin-bottom: 80px;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      margin: 0;
+    }
+  }
+  @include min-screen ($breakpoint-mobile + 1) {
+    margin-bottom: 97px;
+  }
+}
+
+.subpage-title-reserve {
+  margin-bottom: 11px;
+}
+
+@at-root .subpage-section-faq-smart-entry {//smart entry page
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: -206px;
+  }
+
+  .faq-smart-entry {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-bottom: 66px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 26px;
+    }
+  }
+
+  .l-heading {
+    display: none;
+  }
+
+  .media-title {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 11px;
+    }
+  }
+}
+
+.marcherant-collapse-section {
+  @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 20px;
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+
+    .text-center {
+      text-align: initial;
+    }
+  }
+  .table-head {
+    background-color: #efefef;
+  }
+  .marcherant-collapse-content {
+    .collapse-banner {
+      margin-bottom: 29px;
+    }
+
+    .grid-data {
+      margin-bottom: 20px;
+    }
+    .row {
+      max-width: 555px;
+    }
+
+    .col-heading-green {
+      color: #00a040;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      text-align: left;
+      padding: 8px 0;
+    }
+    .column {
+      width: 50%;
+      padding-right: 50px;
+      font-size: 15px;
+
+      @include max-screen ($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+
+    .col-data {
+      line-height: 2;
+      padding: 8px;
+      letter-spacing: 4px;
+    }
+
+    .table-marcherant-collapse {
+      margin-bottom: 22px;
+    }
+
+    .p-red {
+      color: #ff3333;
+    }
+  }
+}
+
+.breakfast-marcherant {//breakfast marcherant page
+  .shop-info-collapse {
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 0px;
+        right: 0px;
+      }
+    }
+  }
+
+  .subpage-desc-breakfast {
+    font-size: 18px;
+    line-height: 1.889;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-top: 55px;
+    margin-bottom: 95px;
+
+    &.desc-dinner {//dinner set page
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 99px;
+        white-space: nowrap;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+      }
+    }
+
+    &.desc-lunch {//lunch marcherant page
+      margin: {
+        top: 26px;
+        bottom: -4px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin: {
+          top: 20px;
+          bottom: -24px;
+        }
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.791;
+      margin: {
+        top: -5px;
+        bottom: 45px;
+      }
+    }
+  }
+}
+
+@at-root .lunch-marcherant {//lunch marcherant page
+  .color-title {
+    margin-top: 56px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 42px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 873px;
+      height:82px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 291.5px;
+        height: 84px;
+      }
+    }
+  }
+}
+
+@at-root .dinner-set-marcherant {//dinner set page
+  .shops-information {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 95px;
+    }
+  }
+
+  .shop-info-collapse {
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 0px;
+        right: 0px;
+      }
+    }
+
+    .subpage-section-collapse {
+      &:nth-of-type(1) {
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 39px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 85px;
+        }
+      }
+    }
+  }
+}
+
+.subpage-access {//access page
+  .access-anchor {
+    margin-top: 90px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 41px;
+    }
+  }
+
+  .text-center {
+    text-align: center;
+    display: block;
+  }
+
+  .transportation-section {
+    margin-top: 39px;
+
+    &:nth-of-type(3) {
+      margin-top: 88px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 41px;
+      }
+    }
+
+    &:nth-of-type(4) {
+      margin-top: 120px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 45px;
+      }
+    }
+  }
+
+  .car-bike-note {
+    font-size: 17px;
+    line-height: 1.647;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 20px;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      line-height: 1.996;
+      margin-top: 16px;
+      text-align: left;
+    }
+  }
+
+  .bottom-slider:not(.bottom-slider-pickup) {
+    margin-top: -58px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -4px;
+    }
+  }
+}
+
+@at-root .page-twinringmotegi {//twinringmotegi page
+  .subpage-desc {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -15px;
+      position: relative;
+      z-index: $z-max;
+    }
+  }
+}
+
+@at-root .foodsm {
+  .subpage-desc {
+    margin-top: 10px;
+    background-color: $color-white;
+  }
+}
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.link-green {
+  color: $color-green;
+
+  &.line {
+    text-decoration: underline;
+  }
+}
+
+.display-block {
+  display: block;
+}
+
+@at-root .subpage-desc {
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  margin-top: 20px;
+  margin-bottom: 42px;
+
+  @at-root .page-fee & {
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 15px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 13px;
+      line-height: 1.667;
+    }
+  }
+
+  &.subpage-desc-unique {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -15px;
+      margin-bottom: 12px;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 12px;
+  }
+
+  // &.admission-sp {
+  //   @include max-screen($breakpoint-mobile) {
+  //     white-space: nowrap;
+  //   }
+  // }
+
+  &.attraction-desc {
+    margin-top: 24px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 12px !important;
+    }
+  }
+
+  &.attraction-bottom-space {
+    margin-bottom: 56px !important;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 28px !important;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 11px;
+    // white-space: nowrap;
+  }
+}
+
+@at-root .page-fee {//fee page
+  .fee-image {
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      width: 320px;
+      margin-bottom: 37px;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 163px;
+        margin-bottom: 5px;
+      }
+
+      img {
+        transition: transform 0.25s ease-in-out;
+        // margin-bottom: 14px;
+
+        // @include max-screen($breakpoint-mobile) {
+        //   margin-bottom: 7px;
+        // }
+      }
+
+      a {
+        color: inherit;
+
+        &:hover {
+          img {
+            transform: scale(1.25);
+          }
+
+          @at-root & {
+            .fee-image-text {
+              color: $color-green;
+            }
+          }
+        }
+      }
+    }
+
+    &-container {
+      overflow: hidden;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 160px;
+        margin-bottom: 14px;
+        border-radius: 10px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 7px;
+        height: 81.5px;
+        border-radius: 5px;
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 1.667;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      text-align: center;
+      transition: color 0.25s ease-in-out;
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 10px;
+        line-height: 1.3;
+      }
+    }
+  }
+
+  .fee-section {
+    margin-top: 50px;
+
+    & > .subpage-desc {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 13px;
+        margin-bottom: 14px;
+        text-align: left !important;
+      }
+    }
+  }
+}
+
+.subpage-inner-pit-margin {
+  @include min-screen ($breakpoint-mobile+1) {
+    margin-bottom: 110px;
+  }
+}
+
+@at-root .color-red {
+  color: #ff3333;
+}
+
+@at-root .responsive-calendar {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@at-root .color-gold {
+  color: $color-dark-yellow;
+}

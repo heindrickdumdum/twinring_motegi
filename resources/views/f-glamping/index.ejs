@@ -1,0 +1,246 @@
+<%
+  var title = 'ご宿泊予約｜ホテルツインリンク｜ツインリンクもてぎ';
+  pageId = 'bbq';
+%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage mv-subpage-reserve">
+      <ul class="mv-list mv-list-glamping-top">
+        <li class="mv-item">
+          <div id="js-mainMovie" class="mainMovie home">
+            <video id="js-mainMovieItem" muted="" autoplay="" loop="" width="100%" playsinline="">
+            <source src="/assets/images/glamping-top/glamping.m4v">
+            </video>
+          </div>
+        </li>
+      </ul>
+
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading reservation-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Camp Village',
+            subtextvg: 'glamping-main-title'
+          }) %>
+        </div>
+
+        <!-- <div class="u-show-pc mv-today mv-log mv-granroom-logo">
+          <div class="mv-l-inner">
+          </div>
+        </div> -->
+      </div>
+
+      <!-- <h1 class="mv-heading mv-heading-subpage">
+        <span class="mv-heading-text mv-heading-text-reserve">
+          ご宿泊予約
+        </span>
+      </h1> -->
+    </div>
+    <main>
+      <div class="l-section">
+        <section class="info-container info-container-hellowoods">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-mobipark',
+                text: 'Information',
+                alt: 'information',
+                altSubtext: '',
+                subtextvg: 'info-subtext'
+              }) %>
+            </div>
+
+            <div class="l-container">
+              <ul class="info-list">
+                <% glampingInfo.forEach(item => { %>
+                <li class="info-item">
+                  <a href="<%- item.link %>">
+                    <span><%= item.desc %></span>
+                  </a>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+        </section>
+      </div>
+
+      <div class="l-section">
+        <div class="challenge hellowoods">
+          <div class="l-container">
+            <div class="row">
+              <div class="challenge-left">
+                <div class="challenge-img u-show-pc">
+                  <div class="challenge-img1">
+                    <img src="<%- mix('/assets/images/glamping-top/outdoor-img1.png') -%>" alt="満天の星、鳥のさえずり。心地よい森の中で極上のアウトドア体験を楽しもう。">
+                  </div>
+                  <div class="challenge-img2">
+                    <img src="<%- mix('/assets/images/glamping-top/outdoor-img2.png') -%>" alt="満天の星、鳥のさえずり。心地よい森の中で極上のアウトドア体験を楽しもう。">
+                  </div>
+                  <div class="challenge-img3">
+                    <img src="<%- mix('/assets/images/glamping-top/outdoor-img3.png') -%>" alt="満天の星、鳥のさえずり。心地よい森の中で極上のアウトドア体験を楽しもう。">
+                  </div>
+                </div>
+
+                <div class="challenge-img u-show-sp">
+                  <img src="<%- mix('/assets/images/glamping-top/outdoor-img-sp.png') -%>" alt="梟">
+                </div>
+
+
+              </div>
+              <div class="challenge-right">
+                <p class="heading-text">
+                  <img src="<%- mix('/assets/images/glamping-top/catch.png') -%>" alt="身近な自然に「溢れる生命」を見つけよう">
+                </p>
+                <p class="desc hellowoods">
+                  森を家族で散策しながら、生きものや植物の不思議を見つけよう。ハローウッズには生きものの研究所や絶景・くつろぎスポット、迷路など“発見”につながる仕掛けがいっぱい。ハローウッズは子どもたちが自然とのふれあいを通して、生きるチカラを育める場所です。
+                </p>
+
+
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+
+      <div class="">
+        <section class="adventure">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-one-line',
+              text: 'Stay Plan',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'glamping-stay-plan'
+            }) %>
+          </div>
+
+          <div class="forest-container">
+            <%- include('/partials/glamping/section-forest') -%>
+          </div>
+        </section>
+      </div>
+
+      <div class="">
+        <section class="adventure">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-one-line',
+              text: 'BBQ &amp; Activity',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'glamping-bbq-activity'
+            }) %>
+          </div>
+
+          <div class="forest-container">
+            <%- include('/partials/glamping/bbq-activity') -%>
+          </div>
+        </section>
+      </div>
+
+      <section class="l-section alternate-feature l-section-hellowoods">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-wrap-hellowoods',
+            text: 'Refresh',
+            alt: '',
+            altSubtext: '',
+            subtextvg: 'glamping-refresh'
+          }) %>
+        </div>
+
+        <div class="l-container-m">
+          <%- include('/partials/glamping/alt-features') -%>
+        </div>
+      </section>
+
+      <div class=" block-image block-image-hellowoods">
+        <div class="l-container">
+          <ul class="block-image-list block-image-list-hellowoods">
+            <li class="block-image-item block-image-item-hellowoods image-border ">
+              <a href="/f-glamping/guide/" class="block-image-item-link">
+                <div class="block-image-inner" style="background-image: url(/assets/images/hellowoods/hellowoods-gallery-bg.jpg);">
+                  <div class="block-image-text-wrap">
+                    <p class="block-image-text block-image-text-hellowoods">
+                      <span class="heading-text">Information</span>
+                      <span class="block-image-subtext">インフォメーション</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section id="f-glamping-faq" class="l-section l-section-hellowoods faq-file-dl">
+        <%- include('/partials/accordion', {
+          dataAccordion: getData().data.accordionGlamping
+        }) %>
+      </section>
+
+      <section class="l-section banner-info">
+        <div class="block-image-inner hoteltwinring-lounge">
+          <div class="block-image-text-wrap hoteltwinring l-container-m">
+            <div class="block-image-text block-image-text-hellowoods">
+              <span class="heading-text">Hotel Twinring</span>
+              <div class="heading-text heading-text-default">
+
+                <%- include('/partials/heading', {
+                  modifier: 'room-type svg-block svg-subtext',
+                  subtextvg: 'hotel-twin-ring',
+                }) %>
+              </div>
+              <span class="block-image-subtext">森を感じるホテルのコンセプトルーム</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="hoteltwinring-reservation">
+        <div class="hotel-reservation-wrap bbq-reservation-wrap">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'hoteltwinring-heading-reservation fill-white',
+              text: 'Reservation',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'bbq-reservation',
+              altSubtextvg: 'Reservation'
+            }) %>
+          </div>
+          <div class="l-button u-show-pc">
+            <%- include('/partials/button', {
+              modifier: 'reserve-button',
+              text: '森と星空のキャンプヴィレッジのご予約はこちら',
+              link: 'https://www.twinring.jp/f-glamping/plan/'
+            }) %>
+          </div>
+          <div class="l-button u-show-sp">
+            <%- include('/partials/button', {
+              modifier: 'reserve-button',
+              text: 'ご予約はこちら',
+              link: 'https://www.twinring.jp/f-glamping/plan/'
+            }) %>
+          </div>
+        </div>
+      </div>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+
+    </main>
+  </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsReserve
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

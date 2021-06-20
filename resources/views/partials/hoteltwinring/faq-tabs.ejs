@@ -1,0 +1,111 @@
+<%
+if (typeof modifier === 'undefined'){
+  var modifier = '';
+}
+
+
+%>
+
+
+<% if(dataFaqList) { var arrTabs = [];var checked="checked" %>
+  <div class="u-show-pc">
+    <ol id="tabs" class="tabs tabs-faq u-show-pc" >
+      <% dataFaqList.forEach( item => { %>
+            <% if(arrTabs.indexOf(item.tabId) === -1) { %>
+              <li class="tab tab-faq"><% if(arrTabs.length > 0) {checked=""} %>
+                <input type="radio" id="tab-<%- item.tabId %>" name="tab-tabId" class="tab-tabId" value="<%- item.tabId %>" <%- checked %>>
+                <label class="lblTab" for="tab-<%- item.tabId %>"><%- item.tabName %></label>
+              </li>
+            <% arrTabs.push([item.tabId,item.tabName]) %>
+        <% } %>
+      <% }) %>
+    </ol>
+  </div>
+
+  <div class="custom-select u-show-sp">
+    <div id="customSelect" class="select-selected"><%- arrTabs[0] %>月</div>
+    <div id="customSelectItems" class="select-items select-hide">
+      <% arrTabs.forEach( item => { %>
+        <div class="option" value="<%- item[0] %>"><%- item[1] %></div>
+      <% }) %>
+    </div>
+  </div>
+
+<% } %>
+
+<% if(dataFaqList) { %>
+
+  <ul id="faq-list" class="" data-tab="1">
+    <li class="faq-item" data-faqid="1">
+      <%- include('/partials/accordion', {
+        dataAccordion: getData().data.accordionReservationApplication,
+        dataHeading: "ご予約・お申し込み",
+        heading_level: 3
+      }) %>
+    </li>
+
+    <li class="faq-item" data-faqid="2">
+      <%- include('/partials/accordion', {
+        dataAccordion: getData().data.accordionAccomodationPrevilege,
+        dataHeading: "宿泊特典",
+        heading_level: 3
+      }) %>
+    </li>
+
+    <li class="faq-item" data-faqid="3">
+      <%- include('/partials/accordion', {
+        dataAccordion: getData().data.accordionAccessTransportation,
+        dataHeading: "アクセス・交通機関",
+        heading_level: 3
+      }) %>
+    </li>
+
+    <li class="faq-item" data-faqid="4">
+      <%- include('/partials/accordion', {
+        dataAccordion: getData().data.accordionArrivalCheckin,
+        dataHeading: "ご到着・チェックイン",
+        heading_level: 3
+      }) %>
+    </li>
+
+    <li class="faq-item" data-faqid="5">
+      <%- include('/partials/accordion', {
+        dataAccordion: getData().data.accordionHotel,
+        dataHeading: "ホテル",
+        heading_level: 3
+      }) %>
+    </li>
+
+    <li class="faq-item" data-faqid="6">
+      <%- include('/partials/accordion', {
+        dataAccordion: getData().data.accordionGuestRoom,
+        dataHeading: "客室",
+        heading_level: 3
+      }) %>
+    </li>
+
+    <li class="faq-item" data-faqid="7">
+      <%- include('/partials/accordion', {
+        dataAccordion: getData().data.accordionTheRestaurant,
+        dataHeading: "レストラン",
+        heading_level: 3
+      }) %>
+    </li>
+
+    <li class="faq-item" data-faqid="8">
+      <%- include('/partials/accordion', {
+        dataAccordion: getData().data.accordionNozominoYu,
+        dataHeading: "のぞみの湯",
+        heading_level: 3
+      }) %>
+    </li>
+
+    <li class="faq-item" data-faqid="9">
+      <%- include('/partials/accordion', {
+        dataAccordion: getData().data.accordionAmusementPark,
+        dataHeading: "ゆうえんち",
+        heading_level: 3
+      }) %>
+    </li>
+  </ul>
+<% } %>

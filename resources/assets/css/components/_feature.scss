@@ -1,0 +1,97 @@
+.feature-container {
+  padding-top: 40px;
+  background: none;
+}
+
+.feature-list {
+  display: flex;
+  list-style: none;
+  margin: 0 -40px;
+
+  &.feature-list-no-design {
+    margin: 37px -25px 0;
+  }
+}
+
+.feature-item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 25px;
+  width: calc(1220px / 3);
+}
+
+
+//modifier
+.feature-list-attraction-cat {
+  margin: 55px -25px 0;
+  align-items: center;
+  justify-content: center;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+  }
+
+  .feature-item {
+    max-width: 300px;
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  article {
+    padding-bottom: 17px;
+    &::after {
+      content: " ";
+      width: 40px;
+      height: 20px;
+      background: url(../images/car-and-bike/arrow-down.png) no-repeat;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 20px;
+    }
+  }
+
+  .article-image {
+    background-size: contain;
+  }
+}
+
+.feature-list-car-bike {
+  flex-wrap: wrap;
+  width: calc(100% + 40px);
+
+  @include max-screen ($breakpoint-mobile) {
+    margin: 0;
+  }
+
+
+
+  .feature-item {
+    width: calc((100% - 100px) / 2);
+
+    @include min-screen ($breakpoint-mobile) {
+      max-width: 480px;
+    }
+
+    article {
+      padding-bottom: 80px;
+    }
+    &:last-child {
+      article {
+        padding-bottom: 0px;
+      }
+    }
+    @include max-screen ($breakpoint-mobile) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

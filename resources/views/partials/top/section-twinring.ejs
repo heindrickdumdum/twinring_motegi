@@ -1,0 +1,84 @@
+<%
+  sectionTwinringCards = [
+    {
+      'category': 'STAY',
+      'image': mix('/assets/images/top/twinring/img1.jpg'),
+      'title': 'グランピング',
+      'url': '/f-glamping/stay/'
+    },
+    {
+      'category': 'BBQ',
+      'image': mix('/assets/images/top/twinring/img2.jpg'),
+      'title': 'ホテルシェフこだわり食材のBBQ',
+      'url': '/f-glamping/bbq/'
+    },
+    {
+      'category': 'ACTIVITY',
+      'image': mix('/assets/images/top/twinring/img3.jpg'),
+      'title': '星空観望',
+      'url': '/f-glamping/activity/'
+    }
+  ]
+%>
+
+<div class="section-inner">
+  <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/twinring/bg.jpg') %>);"></div>
+  <div class="l-container">
+    <div class="section-contents">
+      <p class="section-contents-copy">満天の星、鳥のさえずり、心地よい森の中で<br class="u-show-pc">極上のアウトドア体験を楽しもう。</p>
+
+      <ul class="section-cards u-show-pc">
+        <%
+          sectionTwinringCards.forEach( card => {
+        %>
+        <li class="section-cards-item">
+          <a href="<%- card.url %>" class="section-card-link">
+            <div class="section-cards-image-wrap image-border">
+              <span class="section-cards-category"><%- card.category %></span>
+              <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+            </div>
+            <p class="section-cards-title"><%- card.title %></p>
+          </a>
+        </li>
+        <%
+          })
+        %>
+      </ul>
+
+      <div class="slider-wrap slider-wrap-section u-show-sp">
+        <div class="swiper-container slider js-slider-sp">
+          <ul class="swiper-wrapper slider-wrapper slider-section-cards section-cards">
+            <%
+              sectionTwinringCards.forEach( card => {
+            %>
+            <li class="swiper-slide slider-item slider-section-cards-item">
+              <div class="section-cards-item">
+                <a href="<%- card.url %>" class="section-card-link">
+                  <div class="section-cards-image-wrap image-border">
+                    <span class="section-cards-category"><%- card.category %></span>
+                    <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+                  </div>
+                  <p class="section-cards-title"><%- card.title %></p>
+                </a>
+              </div>
+            </li>
+            <%
+              })
+            %>
+          </ul>
+
+          <div class="swiper-pagination swiper-pagination-section"></div>
+        </div>
+      </div>
+
+      <div class="section-button">
+        <%- include('/partials/button', {
+          newTab: false,
+          modifier: '',
+          text: 'もっと見る',
+          link: '/f-glamping/'
+        }) %>
+      </div>
+    </div>
+  </div>
+</div>

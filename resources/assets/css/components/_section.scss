@@ -1,0 +1,128 @@
+.section-inner {
+  margin-top: -11px;
+
+  &.section-inner-activity {
+    @include max-screen($breakpoint-mobile) {
+      margin: 83px 0 14px;
+    }
+  }
+}
+
+.section-image {
+  height: 400px;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-top: 46%;
+    height: auto;
+  }
+}
+
+.section-image-logo {
+  margin: 0 auto;
+  width: 301px;
+  position: absolute;
+  top: 33px;
+  left: 0;
+  right: 0;
+
+  @include max-screen($breakpoint-mobile) {
+    top: -51px;
+    width: 128px;
+  }
+
+  &.section-image-logo-twinring {
+    width: 314px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include max-screen($breakpoint-mobile) {
+      width: 166px;
+      top: 45%;
+    }
+  }
+
+  &.section-image-logo-hotel-twin {
+    top: 76px;
+
+    @include max-screen($breakpoint-mobile) {
+      top: 29px;
+      width: 164px;
+    }
+  }
+
+  &.section-image-logo-activity {
+    @include max-screen($breakpoint-mobile) {
+      top: -54px;
+      width: 176px;
+    }
+  }
+}
+
+.section-contents {
+  margin-top: -41px;
+  padding: 33px 0;
+  position: relative;
+  text-align: center;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 24px 0;
+    margin-top: -21px;
+  }
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 50px;
+    background-color: $color-white;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.section-contents-copy {
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.19em;
+  position: relative;
+  z-index: $z-max9;
+
+  > a {
+    text-decoration: underline;
+    transition: opacity 0.3s ease-in;
+
+    &:link,
+    &:visited {
+      color: $color-black;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    text-align: left;
+    font-size: 12px;
+    padding: 0 28px;
+  }
+}
+
+.section-button {
+  margin-top: 34px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 249px;
+    margin: 10px auto 0;
+
+    // accessing _button.scsss
+    .button-icon {
+      width: 15px;
+      right: 16px;
+    }
+  }
+}

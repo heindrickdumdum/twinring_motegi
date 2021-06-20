@@ -1,0 +1,78 @@
+<ul class="adventure-container adventure-container-hellowoods">
+  <!-- Musasabi -->
+  <li class="adventure-list adventure-list-hellowoods ">
+    <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/hellowoods/explore-bg-1.png') %>);">
+      <img class="adventure-image-logo hellowoods" src="<%= mix('/assets/images/hellowoods/musasabi-logo.png') %>" alt="Musasabi">
+    </div>
+
+    <div class="l-adventure-sp-container">
+      <div class="l-adventure hellowoods">
+        <div class="l-section-title l-section-title-adventure hellowoods">
+          
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'hellowoods-adventure-title',
+              text: '',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'hellowoods-musasabi-title'
+            }) %>
+          </div>
+          
+          <p>対象：小学４年生以上で、身長135cm以上、体重100kg以下の方</p>
+        </div>
+        
+        <p class="adventure-content-copy">
+          森の中をガイドが案内しながら、<br>
+木と木の間をムササビのように飛び回るジップライン。<br>
+生きものの目線に近づいて、植物を身近に感じながら自然の面白さを見つけよう。
+        </p>
+
+        <div class="l-button">
+          <%- include('/partials/button', {
+            modifier: 'button-adventure',
+            text: 'もっと見る',
+            link: '/hellowoods/zip-line/musasabi.html'
+          }) %>
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <!-- Tsubasa -->
+  <li class="adventure-list adventure-list-hellowoods ">
+    <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/hellowoods/explore-bg-2.jpg') %>);">
+      <img class="adventure-image-logo hellowoods" src="<%= mix('/assets/images/hellowoods/tsubasa-logo.png') %>" alt="Tsubasa">
+    </div>
+
+    <div class="l-adventure-sp-container">
+      <div class="l-adventure hellowoods">
+        <div class="l-section-title l-section-title-adventure hellowoods">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'hellowoods-adventure-title',
+              text: '',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'hellowoods-tsubasa-title'
+            }) %>
+          </div>
+          
+          <p>対象：小学1年生以上、体重30Kg以上、90Kg以下の方</p>
+        </div>
+        
+        <p class="adventure-content-copy">
+          森からサーキットへ大空を羽ばたく、全長561ｍの空中散歩
+        </p>
+
+        <div class="l-button">
+          <%- include('/partials/button', {
+            modifier: 'button-adventure',
+            text: 'もっと見る',
+            link: '/hellowoods/zip-line/tsubasa.html'
+          }) %>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,388 @@
+// .slider {}
+
+.slider-wrapper {
+  margin-left: 110px;
+
+  a {
+    //fix IOS Slider Issue
+    -webkit-touch-callout: none;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+      margin-left: 0;
+  }
+}
+
+.slider-container-mobipark {
+  overflow: hidden !important;
+}
+
+.slider-wrap {
+  max-width: 100%;
+  padding-left: 6%;
+  padding-right: 7%;
+
+  .slider-item {
+    max-width: calc(100% / 3.53);
+    width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 100%;
+    }
+  }
+
+  .slider-wrapper {
+    margin-left: 0;
+  }
+}
+
+//MODIFIER
+.slider-wrap-how-to {
+  margin-top: -2px;
+  padding-bottom: 10px;
+
+  @include max-screen($breakpoint-mobile) {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .slider-item {
+    max-width: calc(100% / 3.393);
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 86.93%;
+    }
+
+    &.swiper-slide-active {
+      @include max-screen($breakpoint-mobile) {
+        //opacity: 1;
+        &::before {
+          background-color: transparent;
+          z-index: -1;
+        }
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba($color-white, .5);
+        transition: background-color 0.5s ease-in;
+        z-index: $z-min;
+      }
+    }
+  }
+}
+
+.slider-wrap-section {
+  padding-left: 7%;
+
+  @include max-screen($breakpoint-mobile) {
+    .slider-item {
+      max-width: 100%;
+    }
+  }
+}
+
+.slider-wrapper-feature {
+  margin-left: 0;
+}
+
+.slider-gallery {
+  overflow: hidden;
+  // sass-lint:disable-block no-important
+  margin-bottom: 25px !important;
+
+  .slider-item {
+    width: 100%;
+    position: relative;
+    transition-property: opacity;
+  }
+
+  .slider-gallery-img {
+    display: block;
+    width: 100%;
+    padding-bottom: 47%;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.slider-gallery-nozominoyu {
+  // sass-lint:disable-block no-important
+  margin-bottom: 41px !important;
+
+  @include max-screen($breakpoint-mobile) {
+     // sass-lint:disable-block no-important
+    margin-bottom: 18px !important;
+  }
+
+  .slider-gallery-img {
+    padding-bottom: 46.4444%;
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 56.4444%;
+    }
+  }
+} 
+
+.slider-mobipark-attraction {
+  .slider-item {
+    transition-property: opacity;
+  }
+}
+
+.slider-gallery-thumb {
+
+  .swiper-wrapper {
+    justify-content: center;
+  }
+
+  .slider-item {
+    width: 70px;
+  }
+  .slider-gallery-thumb-img {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.slider-recommendation-restaurant {//recommended restaurant
+  .slider-wrapper {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-left: -280px !important;
+    }
+  }
+
+  .slider-item {
+    @include min-screen($breakpoint-mobile + 1) {
+      max-width: 468px !important;
+    }
+  }
+}
+
+.slider-pickup,
+.slider-recommendation {
+  opacity: 1;
+  // sass-lint:disable-block no-important
+  overflow: visible !important;
+  margin-left: 0;
+
+  @include max-screen($breakpoint-mobile) {
+    // sass-lint:disable-block no-important
+    padding: 0 12% !important;
+  }
+
+  .slider-wrapper {
+    margin-left: 0;
+  }
+
+  .slider-item {
+    @include min-screen($breakpoint-mobile) {
+      max-width: 369px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      opacity: 0.4;
+      min-width: 257px;
+    }
+  }
+
+  .swiper-slide-active {
+    @include max-screen($breakpoint-mobile) {
+      opacity: 1;
+    }
+  }
+}
+
+.swiper-pagination-feature,
+.swiper-pagination-section {
+  margin-top: 14px;
+  text-align: center;
+
+  .swiper-pagination-bullet {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+    width: 50px;
+    height: 3px;
+    background-color: $color-gray;
+
+    @include max-screen($breakpoint-mobile){
+      margin: 0 4px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+
+    &.swiper-pagination-bullet-active {
+      background-color: $color-green;
+    }
+  }
+}
+
+.swiper-pagination-feature {
+  @include max-screen($breakpoint-mobile){
+    margin-top: -13px;
+  }
+}
+
+.swiper-pagination-section {
+  @include max-screen($breakpoint-mobile){
+    margin-top: 15px;
+  }
+}
+
+.slider-dokidoki {
+  .slide-text {
+    margin-top: 15px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: $font-hiragino;
+    color: $color-black;
+    letter-spacing: 0.06em;
+  }
+}
+
+//modifier kids carbike attraction
+.kids-carbike-attraction {
+  .slide-container {
+    // max-width: 508px;
+    @include min-screen($breakpoint-mobile + 1) {
+      width: 524px;
+      height: 344px;
+    }
+
+    position: relative;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 281px;
+    }
+
+    &:before {
+      width: calc(100% + 90px);
+      height: 100%;
+      content: "";
+      position: absolute;
+      top: -31px;
+      left: -52px;
+      background-image: url(../images/mobipark/slider-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+
+      @include max-screen($breakpoint-mobile) {
+        background-image: url(../images/mobipark/mobipark-kids-attraction-bg-sp.png);
+        max-width: 335px;
+        height: calc(100% - 0px);
+        background-size: 100%;
+        left: 50%;
+        top: -6%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &:after {
+      width: calc(100% + 19px);
+      height: calc(100% - 42px);
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      background-image: url(../images/mobipark/slider-frame.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 2;
+
+      @include max-screen($breakpoint-mobile) {
+        display: none;
+      }
+    }
+  }
+
+  .slider-wrapper {
+    margin-left: 0px;
+    position: relative;
+
+    .slider-item {
+      position: relative;
+      z-index: $z-max;
+    }
+  }
+
+  .swiper-pagination {
+    max-width: 508px;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 38px;
+    text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 14px;
+    }
+
+    .swiper-pagination-bullet {
+      margin-right: 13px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: $color-gray;
+      display: inline-block;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 7px;
+        height: 7px;
+        margin-right: 8px;
+      }
+
+      &-active {
+        background-color: $color-green;
+      }
+
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.slider-carbike-container {
+  width: 100%;
+}
+
+
+.slider-carbike {
+  .slider-carbike-item {
+    max-width: 245px;
+
+
+    @include min-screen($breakpoint-mobile + 1) {
+      max-width: 100%;
+      width: calc((100% - 50px) / 3);
+      margin-bottom: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 25px;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.top-slider {
+  .swiper-wrapper {
+    margin: 0 -95px;
+  }
+}

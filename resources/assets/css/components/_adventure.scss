@@ -1,0 +1,301 @@
+.adventure {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: 0;
+    margin-bottom: 150px;
+  }
+
+  @include max-screen ($breakpoint-mobile) {    
+    .forest-container {
+      margin-top: 33px;
+    }
+  }
+
+  @at-root .foodsm & {//foods m page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 100px !important;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 37px !important;
+      
+    }
+  }
+
+  //phase 2
+  .adventure-bg-circle {
+    background-image: url(/assets/images/twinringmotegi/adventure-bg-circle.png);
+    max-width: 279px;
+    width: 100%;
+    height: 279px;
+    position: absolute;
+    bottom: -153px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .subpage-restaurant & {//restaurant page
+      z-index: $z-min;
+      background-size: 100%;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 110px;
+      bottom: -45px;
+      height: 110px;
+      background-size: contain;
+    }
+  }
+}
+
+.adventure-container {
+  margin-top: 48px;
+  max-width: 1100px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.restaurant {
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 35px;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 90px;
+    margin-top: -6px;
+
+    &.adventure-container-hellowoods {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.adventure-list {
+  margin-bottom: 102px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 48px;
+
+    &.adventure-list-hellowoods {
+      margin-bottom: 47px;
+
+      &:nth-child(2) {
+        margin-bottom: 20px;
+
+        .adventure-bg {
+          height: 140px;
+        }
+        .adventure-image-logo {
+          bottom: -48px;
+        }
+
+        .l-adventure.hellowoods {
+          margin-top: -11px;
+        }
+      }
+    }
+  }
+
+  &-itadaki {
+    @include max-screen($breakpoint-mobile) {
+      .adventure-content-copy {
+        margin-top: 9px;
+      }
+    }
+  }
+}
+
+.adventure-bg {
+  width: 100%;
+  height: 460px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  @include max-screen ($breakpoint-mobile) {
+    height: 157px;
+
+    .subpage-restaurant & {//restaurant page
+      height: 209px;
+    }
+  }
+}
+
+.adventure-image-logo {
+  max-width: 279px;
+  width: 100%;
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: $z-min + 1;
+
+  @include max-screen($breakpoint-mobile) {
+    max-width: 110px;
+    bottom: -45px;
+  }
+
+  &.hellowoods {
+    bottom: -100px;
+    @include max-screen($breakpoint-mobile) {
+      bottom: -30px;
+      max-width: 119px;  
+    }
+  }
+
+  //areaindex phase 2
+  &-areaindex {
+    max-width: 304px;
+    bottom: -76px;
+
+    @include max-screen($breakpoint-mobile) {
+      height: auto;
+      max-width: 152px;
+      bottom: -28px;
+    }
+
+    &-hellowoods {
+      max-width: 210px;
+      bottom: 0px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 85px;
+        bottom: 15px;
+      }
+    }
+
+    &-mobipark {
+      max-width: 180px;
+      bottom: 0px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        max-width: 85px;
+        bottom: 0x;
+      }
+    }
+
+    &-campvillage {
+      max-width: 158px;
+      bottom: -79px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        max-width: 105px;
+        bottom: -65px;
+      }
+    }
+
+    &-hotel {
+      max-width: 215px;
+      bottom: 25px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        max-width: 95px;
+        bottom: 20px;
+      }
+    }
+
+    &-motorsport {
+      max-width: 195px;
+      bottom: -5px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        max-width: 80px;
+        bottom: 8px;
+      }
+    }
+
+    &-hondacollection {
+      max-width: 160px;
+      bottom: 0px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        max-width: 90px;
+        bottom: -15px;
+      }
+    }
+
+    &-activesafe {
+      max-width: 180px;
+      bottom: -43px;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        max-width: 90px;
+        bottom: -15px;
+      }
+    }
+
+  }
+}
+
+.adventure-content-copy {
+  font-size: 15px;
+  // font-family: $font-hiragino-w3;   
+  letter-spacing: 0.16em;
+  line-height: 2;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 500;
+  
+  &.hoteltwinring {
+    letter-spacing: 0.19em;
+    margin-top: 32px;
+  }
+
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+    margin-top: 14px;
+    text-align: left;
+  }
+}
+
+//modifier racing kart
+.logo-racing-kart {
+  max-width: 320px;
+  margin-bottom: 31px;
+
+  &.logo-nozomi {
+    margin-bottom: 67px;
+    @include max-screen($breakpoint-mobile) {
+      max-width: 180px;
+      margin-bottom: 16px;
+    }
+  }
+  
+  @include max-screen($breakpoint-mobile) {
+    max-width: 151px;
+    margin-bottom: 16px;
+  }
+}
+
+
+.racing-kart {
+  .adventure-content-copy {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 0px;
+    }
+  }
+}
+
+.adventure-bg-racing-kart {
+  margin-top: 45px;
+  
+  @include max-screen($breakpoint-mobile) {
+    margin-top: -8px;
+    background-position: right top;
+
+    &.hoteltwinring {
+      height: 180px;
+    }
+  }
+}

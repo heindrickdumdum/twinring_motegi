@@ -1,0 +1,118 @@
+.map-all {
+  background-image: url('../images/map_m/map-central-entrance-bg.png');
+  background-size: 100% 100%;
+  margin-bottom: 128px;
+
+  @include min-screen ($breakpoint-mobile+1) {
+    //padding: 50px 0 !important; // sass-lint:disable-line no-important
+  }
+
+  .section-button {
+    margin-top: 50px;
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 60px !important; // sass-lint:disable-line no-important
+    .section-button {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+  
+  .map-all-wrapper {
+    position: relative;
+  }
+
+  .map-all-bubbles-list {
+    .map-bubbles-item {
+      position: absolute;
+      transition: ease 0.5s all;
+
+      &:nth-child(1) {
+        top: -20px;
+        max-width: 122px;
+        right: 403px;
+      }
+      &:nth-child(2) {
+        top: 51px;
+        max-width: 133px;
+        right: 545px;
+      }
+      &:nth-child(3) {
+        top: 132px;
+        max-width: 126px;
+        left: 173px;
+      }
+      &:nth-child(4) {
+        top: 366px;
+        max-width: 143px;
+        left: 105px;
+      }
+      &:nth-child(5) {
+        top: 150px;
+        max-width: 165px;
+        left: 311px;
+      }
+      &:nth-child(6) {
+        top: 303px;
+        max-width: 232px;
+        left: 344px;
+      }
+      &:nth-child(7) {
+        top: 127px;
+        max-width: 123px;
+        right: 130px;
+      }
+      &:nth-child(8) {
+        // Zoom Icon
+        bottom: 163px;
+        left: 20px;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .map-bubbles-item:not(.no-hover):hover {
+      transition: ease 0.5s all;
+      /* transform: scale(1.5); */
+      transform: translateY(-10px)
+    }
+  }
+
+  .sp-map-frame {
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+    max-width: 52%;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  .sp-map-mark {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &.map-central {
+    margin-top: 36px;
+    background-size: 100% 85%;
+    background-repeat: no-repeat;
+
+    @include max-screen ($breakpoint-mobile) {
+      margin-top: 36px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.map-wrapper {
+  &.map-wrapper-tourism {
+    img {
+      width: 100%;
+      max-width: 890px;
+    }
+  }
+}

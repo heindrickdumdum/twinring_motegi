@@ -1,0 +1,405 @@
+<%
+  var title = 'Twin Ring Motegi | エリア・施設';
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'areaindex';
+%>
+<%- include('/partials/data/index') -%>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-twinringmotegi page-twinringmotegi">
+    <div class="mv mv-subpage-twinringmotegi">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/twinringmotegi/pc/areaindex-mv.png') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/twinringmotegi/sp/areaindex-mv.png') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading twinringmotegi-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Area , Attraction',
+            subtextvg: 'twinringmotegi-top-title',
+            altSubtextvg: 'エリア・施設'
+          }) %>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="l-parkmap design-parkmap">
+        <div class="parkmap design-parkmap-inner">
+          <div class="l-container parkmap-container">
+            
+            <div class="l-section-title">
+
+              <div class="u-show-pc">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-wrap-parkmap',
+                  text: 'Park Map',
+                  subtextvg: 'parkmap-subtext',
+                  altSubtext: '',
+                }) %>
+              </div>
+      
+              <div class="u-show-sp">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-wrap-parkmap heading-wrap-parkmap-areaindex',
+                  text: 'Park Map',
+                  subtextvg: 'parkmap-subtext-sp',
+                  altSubtext: '',
+                }) %>
+              </div>
+
+            </div>
+    
+            <p class="subpage-desc text-center">
+              家族みんなが1日中楽しめる全7つのエリアで構成された森の中のモビリティテーマパーク。<br class="u-show-pc"/>
+              ここにしかない冒険と発見の旅に出かけよう。
+            </p>
+    
+            <div class="parkmap-inner">
+              <div class="parkmap-image">
+                <ul class="parkmap-image-list">
+                  <% getData().data.parkmapButtonsAreaList.forEach( button => { %>
+                  <li class="parkmap-image-item js-parkmap-number">
+                    <a href="<%- button.link %>" ></a>
+                  </li>
+                  <% }) %>
+                </ul>
+              </div>
+              <div class="parkmap-right">
+                <ul class="parkmap-list">
+                  <% getData().data.parkmapButtonsAreaList.forEach( button => { %>
+                  <li class="parkmap-item js-parkmap-button">
+                    <a class="parkmap-link" href="<%- button.link %>" ><%- button.text %>
+                      <i class="parkmap-link-icon">
+                        <%- include('/partials/svg', {
+                          'name': 'arrow'
+                        }) %>
+                      </i>
+                    </a>
+                  </li>
+                  <% }) %>
+                  <!-- <li class="parkmap-item parkmap-item-last">
+                    <%- include('/partials/button', {
+                      newTab: false,
+                      modifier: 'button-parkmap',
+                      text: 'エリア・施設一覧を見る',
+                      link: '/twinringmotegi/'
+                    }) %>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="adventure">
+        <ul class="adventure-container restaurant-container">
+
+          <!-- hellowoods -->
+          <li class="adventure-list" id="hellowoods">
+            <div class="adventure-bg"
+              style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-hellowoods.jpg') %>);">
+              <div class="adventure-bg-circle"></div>
+              <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-hellowoods" src="<%= mix('/assets/images/twinringmotegi/logo_hellowoods.png') %>"
+                alt="ハローウッズの森">
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure l-adventure-hellowoods">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-twinringmotegi heading-title-adventure-hellowoods',
+                    subtextvg: 'twinringmotegi-hellowoods-title',
+                    altSubtextvg: 'ハローウッズ'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  森を家族で散策しながら、生きものや植物の不思議を見つけよう。<br class="u-show-pc"/>
+                  ハローウッズには生きものの研究所や絶景・くつろぎスポット、迷路など“発見”につながる仕掛けがいっぱい。ハローウッズは子どもたちが自然とのふれあいを通して、生きるチカラを育める場所です。 
+                </p>
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/hellowoods/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- mobipark -->
+          <li class="adventure-list" id="mobipark">
+            <div class="adventure-bg"
+              style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-mobipark.jpg') %>);">
+              <div class="adventure-bg-circle"></div>
+              <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-mobipark" src="<%= mix('/assets/images/twinringmotegi/logo-mobipark.png') %>"
+                alt="モビパーク">
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure l-adventure-mobipark">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-twinringmotegi heading-title-adventure-mobipark',
+                    subtextvg: 'twinringmotegi-mobipark-title',
+                    altSubtextvg: 'モビパーク'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  モビパークには、森をテーマに親子でチャレンジできるアスレチックや立体迷路、<br class="u-show-pc"/>
+                  子どもが自由に操れるクルマやバイクのアトラクションがいっぱい。<br class="u-show-pc"/>
+                  モビパークは、そんな子どもたちのステップアップを応援します。
+                </p>
+
+                <!-- <p class="adventure-content-copy u-show-sp">
+                  子どもたちが自ら”操れる”のりものと、チャレンジの要素がつまった巨大迷路・アスレチックで、思いっきり遊ぶこと <br/>
+                  ができる森のアトラクションテーマパークです。ただ楽しいだけじゃない、達成の喜びを体験できます。
+                </p> -->
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/mobipark_m/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- twinringmotegi -->
+          <li class="adventure-list" id="twinringmotegi">
+            <div class="adventure-bg"
+              style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-camp.jpg') %>);">
+              <div class="adventure-bg-circle"></div>
+              <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-campvillage" src="<%= mix('/assets/images/twinringmotegi/logo-campvillage.png') %>"
+                alt="森と星空のキャンプヴィレッジ">
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure l-adventure-campvillage">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-twinringmotegi heading-title-adventure-campvillage',
+                    subtextvg: 'twinringmotegi-campvillage-title',
+                    altSubtextvg: '森と星空のキャンプヴィレッジ'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  都会を離れ、森の中で味わう癒しのひととき。ホテルシェフが季節ごとに監修する<br class="u-show-pc"/>
+                  こだわりのBBQ、星のソムリエがナビゲートする星空観望…。<br class="u-show-pc"/>
+                  ここにしかない極上のアウトドア体験を家族と一緒に。
+                </p>
+
+                <!-- <p class="adventure-content-copy u-show-sp">
+                  贅沢空間でのグランピングやログキャビンでの宿泊やテントでのキャンプをお楽しみいただけます。ホテルのシェフによ <br/>
+                  る厳選食材のBBQや、ビギナーも安心できる充実した設備が魅力のアウトドアエリアです。
+                </p> -->
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/f-glamping/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- hotel -->
+          <li class="adventure-list" id="hoteltwinring">
+            <div class="adventure-bg"
+              style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-twinring.jpg') %>);">
+              <div class="adventure-bg-circle"></div>
+              <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-hotel" src="<%= mix('/assets/images/twinringmotegi/logo-hotel.png') %>"
+                alt="ホテルツインリンク">
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure l-adventure-hotel">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-twinringmotegi heading-title-adventure-hoteltwinring',
+                    subtextvg: 'twinringmotegi-hotel-title',
+                    altSubtextvg: 'ホテルツインリンク'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">小高い丘の上、フィトンチッド溢れる森に囲まれたホテルで寛ぎと癒しの時間を過ごそう。満天の星を眺めながら優雅に疲れを癒す露天風呂、ここでしか味わえない地元素材を使ったこだわりグルメ、宿泊者限定のアクティビティ、そのすべてが特別な体験としてあなたとご家族をおもてなしします。
+                </p>
+
+                <!-- <p class="adventure-content-copy u-show-sp">
+                  森をテーマにした癒やしに包まれるお部屋でくつろぎ、レストラン・料亭で、栃木県、茂木町の美味しい食材を使ったこだわりのお食事で、優雅なひとときを、ご家族みんなで、お過ごしください。
+                </p> -->
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/hoteltwinring/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>   
+          
+          <!-- motorsport -->
+          <li class="adventure-list" id="motorsport">
+            <div class="adventure-bg"
+              style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-motorsports.jpg') %>);">
+              <div class="adventure-bg-circle"></div>
+              <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-motorsport" src="<%= mix('/assets/images/twinringmotegi/logo-motorsports.png') %>"
+                alt="モータースポーツ">
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure l-adventure-motorsport">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-twinringmotegi heading-title-adventure-motorsport',
+                    subtextvg: 'twinringmotegi-motorsport-title',
+                    altSubtextvg: 'モータースポーツ'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  世界中が興奮するバイクレース「MotoGP&trade;」、国内最大の動員を誇る自動車レース<br class="u-show-pc"/>
+                  「SUPER GT」、数々のドラマが生まれるモータースポーツ。<br class="u-show-pc"/>
+                  未体験のサウンド、パワー、スピードをからだ全体で感じよう。
+                </p>
+
+                <!-- <p class="adventure-content-copy u-show-sp">
+                  MotoGP™世界選手権、SUPER GT、スーパーフォーミュラなど国内外のトップレースをはじめアマチュア選手が楽しめる耐久レースも多数開催するサーキットです。レースだけでなく、国際規格のサーキットで本格走行も体験できます。
+                </p> -->
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/motorsports_m/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <!-- hondacollection -->
+          <li class="adventure-list" id="hondacollection">
+            <div class="adventure-bg"
+              style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-honda.jpg') %>);">
+              <div class="adventure-bg-circle"></div>
+              <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-hondacollection" src="<%= mix('/assets/images/twinringmotegi/logo-honda.png') %>"
+                alt="ホンダコレクションホール">
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure l-adventure-hondacollection">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-twinringmotegi heading-title-adventure-hondacollection',
+                    subtextvg: 'twinringmotegi-hondacollection-title',
+                    altSubtextvg: 'ホンダコレクションホール'
+                  }) %>
+                </div>
+
+                <p class="adventure-content-copy">
+                  Honda創業期からの歴史が詰まった世界唯一のミュージアム。創業者 本田宗一郎の熱い言葉が<br class="u-show-pc"/>
+                  刻み込まれた壁面、伝説のF1マシン、ドラマを生んだGPマシン、時代を彩った市販車など約300台を<br class="u-show-pc"/>
+                  目の前にすれば、当時の記憶が色褪せずに甦ることでしょう。
+                </p>
+
+                <!-- <p class="adventure-content-copy u-show-sp">
+                  Hondaの「技術の歴史」と「ものづくりへの情熱」、「チャレンジングスピリット」をコンセプトに、2輪、4輪、汎用製品、レーシングマシン、国内外の良きライバル車など約300台を展示しています。
+                </p> -->
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/collection-hall/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- activesafe -->
+          <li class="adventure-list" id="activesafe">
+            <div class="adventure-bg"
+              style="background-image: url(<%= mix('/assets/images/twinringmotegi/pc/bg-safety.jpg') %>);">
+              <div class="adventure-bg-circle"></div>
+              <img class="adventure-image-logo adventure-image-logo-areaindex adventure-image-logo-areaindex-activesafe" src="<%= mix('/assets/images/twinringmotegi/logo-safety.png') %>"
+                alt="安全運転スクール">
+            </div>
+
+            <div class="l-adventure-sp-container">
+              <div class="l-adventure">
+                <div class="l-section-title l-section-title-adventure">
+                  <%- include('/partials/heading', {
+                    modifier: 'adventure-heading heading-title-adventure-twinringmotegi heading-title-adventure-activesafe',
+                    subtextvg: 'twinringmotegi-active-title',
+                    altSubtextvg: '安全運転スクール'
+                  }) %>
+                </div>
+
+                <!-- <h3 class="subpage-title subpage-title-safety u-show-pc">
+                  <span>
+                    楽しみながら、運転の基本を体感する
+                  </span>
+                </h3> -->
+
+                <p class="adventure-content-copy">
+                  楽しみながら運転の基本を学び、危険な状況を安全に体感しよう。<br class="u-show-pc"/>
+                  普段は決してできない事故直前の疑似体験をはじめ、初心者向けのレッスンやレベルアップのための<br class="u-show-pc"/>
+                  トレーニングを経験豊富なインストラクターとともに楽しみましょう。<br class="u-show-pc"/>
+                  親子バイクスクールや企業向けプログラムなども人気。
+                </p>
+
+                <!-- <p class="adventure-content-copy u-show-sp">
+                  安全運転をアクティブに学んでいただく参加体験型の施設です。インストラクターの丁寧な指導により、運転経験に自信のない方も車やバイクでの走行をお楽しみいただけます。親子向けのバイクのスクールや、企業研修プログラムも提供しています。
+                </p> -->
+
+                <div class="l-button">
+                  <%- include('/partials/button', {
+                    modifier: 'button-adventure',
+                    text: 'もっと見る',
+                    link: '/astp/'
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </li>     
+        </ul>
+      </div>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+
+      <!-- END BOTTOM -->
+    </main>
+  </div>
+</div>
+
+
+<!-- BREADCRUMBS -->
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsAreaindex
+}) -%>
+
+<%- include('/partials/footer', { pageId }) -%>

@@ -1,0 +1,294 @@
+<% if(typeof pageId === 'undefined') { var pageId = ''; } %>
+<% if(typeof page === 'undefined') { var page = ''; } %>
+
+<%
+  let pages = [
+  'index',
+  'sumika',
+  'itadaki',
+  'dokidoki',
+  'mobipark',
+  'areaindex',
+  'challenge',
+  'acroX',
+  'bunBunScooter',
+  'carAndBike',
+  'debDenWalk',
+  'dinnerBuffet',
+  'dream',
+  'drift',
+  'forestDrivingSchool',
+  'motoTouring',
+  'motorCycleTraining',
+  'motoracer',
+  'wildRacer',
+  'hellowoods',
+  'program',
+  'programProgram',
+  'programDetails',
+  'craft',
+  'labo',
+  'musasabi',
+  'tsubasa',
+  'granroom',
+  'familyroom',
+  'standardroom',
+  'hoteltwinring',
+  'nozominoyu',
+  'information',
+  'foodsm',
+  'zipline',
+  'oak',
+  'granTurismo',
+  'rocco',
+  'toya',
+  'donguri',
+  'bbq',
+  'camp',
+  'stay',
+  'toya',
+  'smart_entry',
+  'access',
+  'fee',
+  'marcherant',
+  'breakfastMarcherant',
+  'lunchMarcherant',
+  'dinnerMarcherant',
+  'businessHours',
+  'parkMap',
+  'mobiparkGuide',
+  'service_m',
+  'hours_m',
+  'error404',
+  'collectionPit',
+  'touristInformation',
+  'blueNote',
+  'goods',
+  'events',
+  'collectionHall',
+  'racingKart'
+  ]
+%>
+
+  <!-- START GLOBAL FOOTER -->
+  <footer class="footer" id="lig-footer">
+    <nav class="footer-top-nav-list-wrap">
+      <div class="l-container">
+        <ul class="footer-top-nav-list">
+          <% getData().data.footerTopNav.forEach( topLink => { %>
+          <li class="footer-top-nav-item <%- topLink.modifier %>">
+            <a class="footer-top-nav-link" href="<%- topLink.link %>">
+              <span class="footer-top-nav-icon">
+                <img class="footer-bottom-item-image" src="<%- topLink.image %>" alt="time">
+              </span>
+              <span class="footer-top-nav-text"><%- topLink.text %></span>
+            </a>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="footer-top-links u-show-pc">
+      <div class="l-container">
+        <%- include('/partials/footer-top-links') -%>
+      </div>
+    </div>
+
+    <div class="footer-sns">
+      <%- include('/partials/sns') -%>
+    </div>
+
+    <div class="footer-background"></div>
+
+    <div class="footer-bottom">
+      <div class="l-container">
+        <nav>
+          <ul class="footer-bottom-list">
+            <li class="footer-bottom-item">
+              <a class="footer-bottom-link" href="https://www.mobilityland.co.jp/" target="_blank">
+                <img class="footer-bottom-item-image" src="<%= mix('/assets/images/footer-name.png') %>" alt="株式会社モビリティランド">
+              </a>
+            </li>
+            <% getData().data.footerBottomNav.forEach( bottomLink => { %>
+            <li class="footer-bottom-item">
+              <a class="footer-bottom-link" href="<%- bottomLink.link %>" target="<%- bottomLink.linkTarget %>"><%- bottomLink.text %></a>
+            </li>
+            <% }) %>
+          </ul>
+        </nav>
+
+        <div class="footer-bottom-copyright-wrap">
+          <p class="footer-bottom-copyright">
+            <small>(c) Mobilityland Corporation All Rights Reserved.
+                  <br>Kochira (Kochira family) is an original character of MOBILITYLAND designed by Mr. Osamu Tezuka. (c)TEZUKA PRODUCTIONS</small>
+          </p>
+          <div class="footer-bottom-name u-show-sp">
+            <img class="footer-bottom-name-text" src="<%= mix('/assets/images/footer-name-sp.png') %>" alt="株式会社モビリティランド">
+          </div>
+          <ul class="footer-bottom-logos">
+            <li>
+              <a href="https://www.suzukacircuit.jp/" target="_blank">
+                <img src="<%= mix('/assets/images/suzuka-logo.png') %>" alt="Suzuka">
+              </a>
+
+            </li>
+            <li>
+              <a href="https://www.suzukacircuit.jp/info_s/suzukacircuitpark/" target="_blank">
+                <img src="<%= mix('/assets/images/suzuka-zh-logo.png') %>" alt="Suzuka ZH">
+              </a>
+
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- START LIG ASSETS CSS/JS -->
+    <link rel="stylesheet" href="<%= mix('/assets/css/footer.css') %>">
+    <!-- END LIG ASSETS CSS/JS -->
+  </footer>
+
+</div><!-- end of wrap -->
+<!-- END GLOBAL FOOTER -->
+
+  <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
+  <script src="<%= mix('/assets/js/app.js') %>" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(function() {
+        if( document.querySelector('html').classList.contains('is-edge') ) {
+          svg4everybody({
+            polyfill: true
+          });
+        }
+      }, 500);
+    });
+  </script>
+
+  <% if(pageId == 'mobipark') { %>
+    <script src="<%= mix('/assets/js/mobipark.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'index') { %>
+    <script src="<%= mix('/assets/js/index.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'carAndBike' || pageId == 'access' || pageId === 'fee') { %>
+    <script src="<%= mix('/assets/js/carbike.js') %>" async></script>
+  <% } %>
+
+  <% if(pages.includes(pageId)) { %>
+    <script src="<%= mix('/assets/js/common-slider.js') %>" async></script>
+    <script src="<%= mix('/assets/js/accordion.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'labo' || pageId == "nozominoyu" || pageId == 'stay') { %>
+    <script src="<%= mix('/assets/js/labo.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'program' || pageId == 'programProgram' ) { %>
+    <script src="<%= mix('/assets/js/tabs.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'goods' || pageId == 'racingKart') { %>
+    <script src="<%= mix('/assets/js/tabs-goods.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'hoteltwinring') { %>
+    <script src="<%= mix('/assets/js/tabs-faq.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'programDetails') { %>
+    <script src="<%= mix('/assets/js/program-details.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'tsubasa') { %>
+    <script src="<%= mix('/assets/js/collapse-button.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'granroom' || pageId == 'familyroom' || pageId == 'standardroom') { %>
+    <script src="<%= mix('/assets/js/granroom.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'foodsm') { %>
+    <script src="<%= mix('/assets/js/restaurant-slider.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'toya') { %>
+    <script src="<%= mix('/assets/js/toya.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'access') { %>
+    <script src="<%= mix('/assets/js/access.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'bbq') { %>
+    <script src="<%= mix('/assets/js/bbq.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'dinnerBuffet') { %>
+    <script src="<%= mix('/assets/js/gallery-thumb.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'marcherant' || pageId == 'breakfastMarcherant' || pageId == 'toya' || pageId == 'rocco' || pageId == 'foodsm') { %>
+    <script src="<%= mix('/assets/js/marcherant.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'mobiparkGuide') { %>
+    <script src="<%= mix('/assets/js/mobipark-guide.js') %>" async></script>
+  <% } %>
+
+  <% if(pageId == 'events') { %>
+    <script src="<%= mix('/assets/js/events.js') %>" async></script>
+  <% } %>
+
+<!-- START GTM FOOTER -->
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+ var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+ _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+ _gaq.push(['_setAccount', 'UA-19391983-1']);
+ _gaq.push(['_trackPageview']);
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+</script>
+
+<!-- Yahoo Code for your Target List 20170627-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var yahoo_ss_retargeting_id = 1000394244;
+var yahoo_sstag_custom_params = window.yahoo_sstag_params;
+var yahoo_ss_retargeting = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//s.yimg.jp/images/listing/tool/cv/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//b97.yahoo.co.jp/pagead/conversion/1000394244/?guid=ON&script=0&disvt=false"/>
+</div>
+</noscript>
+
+<!-- 201802google -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 866763717;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/866763717/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- END GTM FOOTER -->
+</body>
+</html>

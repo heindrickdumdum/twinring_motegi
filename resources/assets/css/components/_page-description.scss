@@ -1,0 +1,33 @@
+.page-description {
+  font-size: 24px;
+  line-height: 2;
+  letter-spacing: 2px;
+  padding: 40px 0;
+
+  &.page-description-programdetails {
+    padding: 0;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    line-height: 1;
+    display: block;
+
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 20px;
+      letter-spacing: 3px;
+      line-height: 1.5;
+      padding: 0 20px;
+    }
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    font-size: 13px;
+    padding-bottom: 7px;
+
+    &.l-container-m {
+      max-width: 330px;
+      line-height: 22px;
+      letter-spacing: 2px;
+    }
+  }
+}

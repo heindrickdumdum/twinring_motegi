@@ -1,0 +1,17 @@
+.l-racing-kart {
+  padding-top: 39px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-top: 23px;
+  }
+}
+
+.racing-kart {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: 0;
+
+    &.nozomi {
+      padding-bottom: 160px;
+    }
+  }
+}

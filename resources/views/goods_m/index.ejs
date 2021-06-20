@@ -1,0 +1,117 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'goods';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc"
+            style="background-image:url(<%= mix('/assets/images/goods/mv.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp"
+            style="background-image:url(<%= mix('/assets/images/goods/mv-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading mv-heading-goods">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Goods &amp; Shop',
+            subtextvg: 'goods-mv-title',
+            altSubtextvg: ''
+            // imgPath: mix('/assets/images/access_m/mv-top-title.png')
+          }) %>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="">
+        <div class="l-section-title">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-goods-color',
+            text: '',
+            alt : '',
+            subtextvg: '',
+            altSubtextvg: '',
+            imgPath: mix('/assets/images/goods/top-color-title.jpg')
+          }) %>
+        </div>
+        <section class="subpage-section subapge-section-goods-tab">
+          <%- include('/partials/goods_m/goods-list', {
+            dataGoodList : getData().data.goodsList
+          }) -%> 
+        </section>
+      </div>
+
+      <div class="l-container-m goods-shop-container">
+        <section>
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-wrap-hellowoods',
+              text: 'Shop',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'goods-shop'
+            }) %>
+          </div>
+          <!-- recommendation module -->
+          <%- include('/partials/goods_m/goods-shop', {
+            modifier: '',
+            dataGoodsShopItems : getData().data.goodsShopList
+          }) -%>
+        </section>
+
+
+        <section class="goods-bottom-banners">
+          <div class="banner">
+            <p class="banner-desc">傘やティッシュ、紙おむつやマスクなど <br class="u-show-pc">急に必要になった商品も各ショップで販売しております。</p>
+            <div class="l-button">
+              <%- include('/partials/button', {
+                modifier: 'local',
+                text: '(PDF)日用品・販売ショップ一覧',
+                link: '#'
+              }) %>
+            </div>
+          </div>
+
+          <div class="banner-2">
+            <p class="banner-desc">
+              ※表示金額はすべて税込みです。<br>
+              ※商品のデザインおよび料金等は予告なく変更になる場合がございます。<br>
+              ※品切れの際は、ご容赦ください。
+            </p>
+          </div>
+
+          <div class="banner-3">
+            <img class="u-show-pc" src="<%- mix('/assets/images/goods/bnr-onlineshop.jpg') %>" alt="公式オンラインショップ">
+            <img class="u-show-sp" src="<%- mix('/assets/images/goods/bnr-onlineshop-sp.jpg') %>" alt="公式オンラインショップ">
+          </div>
+        </section>
+      </div>
+
+      
+
+      
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsAccess
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

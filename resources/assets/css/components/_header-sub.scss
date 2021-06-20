@@ -1,0 +1,702 @@
+.header-sub-container {
+  position: relative;
+  height: 100%;
+}
+
+.header-sub-content-inner {
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 auto;
+    padding-right: 20px;
+    width: auto;
+    position: absolute;
+    left: 62px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+    display: none;
+    transition: opacity $duration $ease-in-out;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  &.is-active {
+    opacity: 1;
+    z-index: $z-min;
+  }
+}
+
+.header-sub-content-overlay {
+  @include min-screen($breakpoint-mobile + 1) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    background: rgba($color-black, .5);
+    opacity: 1;
+    transition: opacity $duration $ease-in-out,
+                visibility $duration $ease-in-out;
+
+    &.is-visible {
+      opacity: 1;
+      visibility: visible;
+      z-index: 20;
+    }
+  }
+}
+
+.header-sub-content-wrap {
+  opacity: 0;
+  width: $container;
+  max-height: calc(100vh - (180px + 60px + 52px));
+  margin: 0 auto;
+  position: absolute;
+  top: calc(183px + 52px + 20px);
+  left: 0;
+  right: 0;
+  transition: opacity .5s $ease-in-out;
+  overflow-y: scroll;
+
+  /* Hide scrollbar for IE and Edge */
+  -ms-overflow-style: none;
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    top: 0;
+    width: 100%;
+  }
+
+  &.is-visible {
+    z-index: 20;
+    opacity: 1;
+  }
+}
+
+.header-sub-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 2px;
+  right: 0;
+  margin: 0 auto;
+  z-index: $z-min2;
+}
+
+.header-sub-close {
+  display: block;
+  padding-right: 12px;
+  position: absolute;
+  right: 26px;
+  top: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba($color-mineshaft, .5);
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  z-index: $z-min;
+
+  .is-ie & {
+    padding-top: 3px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 2px;
+    transform-origin: center;
+    height: 17px;
+    width: 2px;
+    background-color: #969696;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+}
+
+.header-sub-content-inner-wrap {
+  margin-top: 2px;
+  padding: 27px 38px 35px;
+  background-color: $color-white;
+  position: relative;
+  z-index: $z-max;
+}
+
+.header-sub-inner {
+  display: flex;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+  }
+
+  &.header-sub-inner-attraction,
+  &.header-sub-inner-restaurant {
+    position: relative;
+  }
+}
+
+.header-sub-right-content {
+  position: absolute;
+  top: 43.2%;
+  right: 4px;
+  z-index: $z-min;
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}
+
+.header-sub-right-content-item {
+  display: block;
+  margin-bottom: 18px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 10px;
+  }
+}
+
+.header-sub-right-content-link {
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: .036em;
+  line-height: 1.6;
+  color: $color-mineshaft;
+  transition: color $duration $ease-in-out;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-left: 15px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 7px;
+      height: 1px;
+      background-color: $color-green;
+    }
+  }
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: $color-green;
+    }
+  }
+}
+
+.header-sub-bottom-list {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 17px;
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+    padding-top: 18px;
+  }
+
+  li {
+    display: block;
+    padding: 0 30px 0 26px;
+    flex-grow: 1;
+    line-height: 1;
+    letter-spacing: 0.035em;
+    border-right: 1px solid rgba($color-mineshaft, .5);
+
+    @include max-screen($breakpoint-mobile) {
+      vertical-align: top;
+      width: 100%;
+      margin-bottom: 26px;
+      padding: 0;
+      border-right: 0;
+    }
+  }
+
+  a {
+    font-size: 15px;
+    font-weight: bold;
+    color: $color-mineshaft;
+    transition: color $duration $ease-in-out;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-left: 15px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 7px;
+        height: 1px;
+        background-color: $color-green;
+      }
+    }
+
+    &:hover {
+      @include min-screen($breakpoint-mobile + 1) {
+        color: $color-green;
+      }
+    }
+  }
+
+  &.header-sub-bottom-list-upper {
+    margin-top: 25px;
+    padding-bottom: 0;
+    padding-top: 0;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 0;
+    }
+
+    li {
+      flex-grow: inherit;
+    }
+  }
+}
+
+.header-sub-inner-block {
+  flex-basis: 100%;
+
+  &.header-sub-inner-block-right {
+    flex-basis: 29.5%;
+    padding-left: 30px;
+    padding-right: 0;
+    border-left: 1px solid rgba($color-mineshaft, .5);
+    position: relative;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 25px;
+      padding-left: 0;
+      border-left: 0;
+    }
+  }
+
+  &.header-sub-inner-block-col2 {
+    flex-basis: 50%;
+    padding-left: 0;
+    padding-right: 30px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-right: 0;
+    }
+
+    &:last-of-type {
+      padding-left: 30px;
+      padding-right: 0;
+
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.header-sub-top-button-arrow {
+  width: 25px;
+  position: absolute;
+  right: 0;
+  top: -1px;
+  transition: transform $duration $ease-in-out;
+
+  svg {
+    width: 100%;
+    height: 12px;
+  }
+}
+
+.header-sub-top-button-icon {
+  position: absolute;
+  left: 0;
+  top: -12px;
+
+  svg {
+    width: 36px;
+    height: 37px;
+    fill: $color-blue;
+  }
+}
+
+.header-sub-top-button {
+  display: inline-block;
+  padding: 0 34px 0 21px;
+  font-size: 15px;
+  font-weight: bold;
+  color: $color-mineshaft;
+  letter-spacing: 0.028em;
+  position: relative;
+  z-index: $z-min;
+  transition: color $duration $ease-in-out,
+              transform $duration $ease-in-out;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 10px;
+    padding: 0 0 0 15px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 11px;
+    height: 2px;
+    background-color: $color-green;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 7px;
+      height: 1px;
+    }
+  }
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: $color-green;
+
+      .header-sub-top-button-arrow {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+.header-sub-button-item {
+  margin-bottom: 20px;
+}
+
+.header-sub-button-link-icon {
+  width: 25px;
+  position: absolute;
+  right: 0;
+  top: -1px;
+  transition: transform $duration $ease-in-out;
+
+  svg {
+    width: 100%;
+    height: 12px;
+    stroke: $color-gray;
+  }
+}
+
+.header-sub-button-link {
+  display: block;
+  padding-right: 34px;
+  font-size: 15px;
+  font-weight: bold;
+  color: $color-mineshaft;
+  letter-spacing: 0.03em;
+  position: relative;
+  transition: color $duration $ease-in-out,
+              transform $duration $ease-in-out;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-right: 0;
+    font-size: 12px;
+  }
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: $color-green;
+
+      .header-sub-button-link-icon {
+        transform: translateX(5px);
+
+        svg {
+          stroke: $color-green;
+        }
+      }
+    }
+  }
+}
+
+.header-sub-image-item {
+  flex: 1;
+  margin: 25px 10px 0;
+
+  @include max-screen($breakpoint-mobile) {
+    flex: none;
+    margin: 0 0 10px;
+    width: calc((100% - 10px) / 2);
+  }
+}
+
+.header-sub-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $color-dark;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: center;
+  transition: transform $duration $ease-in-out;
+}
+
+.header-sub-image-wrap {
+  padding: 27.5% 0;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+
+  .header-sub-image-small {
+    padding: 30.5% 0;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    &:hover {
+      .header-sub-image {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.header-sub-image-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+
+  @include max-screen($breakpoint-mobile) {
+    // display: block;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  &.header-sub-image-list-padding {
+    padding-right: 64px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding-right: 0;
+    }
+  }
+
+  &.header-sub-image-list-col5 {
+    .header-sub-image-item {
+      flex: none;
+      width: calc((100% / 5) - 34px);
+
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+  }
+
+  &.header-sub-image-list-restaurant {
+    .header-sub-image-wrap {
+      padding: 17.5% 0;
+
+      &.header-sub-image-small {
+        //padding: 29.5% 0;
+      }
+    }
+
+    .header-sub-image-item {
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+  }
+
+  &.header-sub-image-list-attraction {
+
+    .header-sub-image-item {
+      @include max-screen($breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+
+    .header-sub-image-wrap {
+      padding: 17.5% 0;
+
+      &.header-sub-image-small {
+        padding: 29.5% 0;
+      }
+    }
+
+    &:not(:first-child) {
+      padding-right: 163px;
+
+      @include max-screen($breakpoint-mobile) {
+        padding-right: 0;
+      }
+
+      .header-sub-image-wrap  {
+        @include max-screen($breakpoint-mobile) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.header-sub-image-list-col2 {
+    .header-sub-image-item {
+      flex: none;
+      width: calc((100% / 2) - 20px);
+
+      .is-ie & {
+        width: calc((99.9% / 2) - 20px);
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: calc((100% - 10px) / 2);
+      }
+    }
+
+    .header-sub-image {
+      padding: 27.88% 0;
+    }
+  }
+
+}
+
+.header-sub-image-list-wrap {
+  position: relative;
+  z-index: $z-min;
+}
+
+.header-sub-image-map {
+  width: 710px;
+  height: 585px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: -146px;
+  top: -119px;
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.header-sub-image-link {
+  font-size: 15px;
+  color: $color-mineshaft;
+  transition: color $duration $ease-in-out;
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: $color-green;
+    }
+  }
+}
+
+.header-sub-image-text {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-left: 15px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 11px;
+      height: 2px;
+      background-color: $color-green;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 7px;
+        height: 1px;
+      }
+    }
+  }
+}
+
+.header-sub-bottom {
+  border-top: 1px solid rgba($color-mineshaft, .5);
+  position: relative;
+  z-index: $z-min;
+}
+
+.header-sub-content-inner-access {
+  .header-sub-inner {
+    margin-bottom: 0;
+  }
+
+  .header-sub-top-button-icon {
+    svg {
+      fill: $color-violet;
+    }
+  }
+}
+
+.header-sub-content-inner-motorsports {
+  margin-bottom: -25px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 0;
+  }
+
+  .header-sub-inner {
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .header-sub-top-button-icon {
+    svg {
+      fill: $color-red;
+    }
+  }
+
+  .header-sub-image-list {
+    padding-right: 30px;
+  }
+
+  .header-sub-inner-block {
+    &.header-sub-inner-block-right {
+      flex-basis: 48.5%;
+
+      .header-sub-image-wrap {
+        margin-top: 25px;
+        margin-bottom: 19px;
+        padding: 18% 0;
+      }
+    }
+
+    &.header-sub-inner-block-no-border {
+      border-left: 0;
+    }
+  }
+
+}

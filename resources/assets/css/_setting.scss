@@ -1,0 +1,69 @@
+//noto sans jp google font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+
+//antialiased,subpixel-antialiased,none
+$font-smoothing: antialiased;
+
+//auto,optimizeSpeed,optimizeLegibility,geometricPrecision
+$text-rendering: auto;
+
+$font-hiragino: 'HiraKakuPro-W6-AlphaNum';
+$font-hiragino-w3: 'HiraKakuPro-W3-AlphaNum';
+$font-holland: 'Holland';
+$font-notosans: 'NotoSansCJKjp-Regular-mix';
+$font-NotoSansCJKjp-Regular: 'NotoSansCJKjp-Regular';
+$font-combined: "Hiragino Kaku Gothic Pro", "\30D2\30E9\30AE\30CE\89D2\30B4 Pro W3", YuGothic, 游ゴシック, メイリオ, Meiryo, "\FF2D\FF33 \FF30\30B4\30B7\30C3\30AF", Helvetica, Arial, Verdana, sans-serif;
+
+$base-font-family: $font-hiragino-w3, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$base-font-size: 14px;
+$base-font-color: #333;
+$base-background-color: #fff;
+
+$color-primary: $base-font-color;
+$color-green: #00a040;
+$color-gossamer: #00a040;
+$color-black: #000;
+$color-white: #fff;
+$color-light: #fefefe;
+$color-light-green: #47b97f;
+$color-gray: #ccc;
+$color-lighter-gray: #f6f6f6;
+$color-light-gray: #f9f9f9;
+$color-mineshaft: #2d2d2d;
+$color-seaweed: #12290f;
+$color-crusoe: #1a4d01;
+$color-blue: #609ed5;
+$color-dark: #15282d;
+$color-darker: #1d1d1d;
+$color-violet: #b756a4;
+$color-red: #dd8080;
+$color-table-head: #f7f7f7;
+$color-dark-yellow: #a38737;
+$color-dark-gray: #dddddd;
+$color-maroon: #532525;
+
+$color-green-2: #368121;
+$color-green-3: #90ae28;
+$color-green-4: #41a327;
+$color-green-5: #d2e737;
+$color-green-6: #4fae32;
+$color-green-7: #bcd63b;
+
+$breakpoint-tablet: 1279px;
+$breakpoint-mobile: 749px;
+
+$container: 1220px;
+$container-inner: 1020px;
+
+//path
+$font-path: "/assets/lib/fonts/";
+$image-path: "/assets/images/";
+
+$ease-in-out: ease-in-out;
+$ease-animation: cubic-bezier(1, 0, 0, 1);
+$duration: .25s;
+
+$z-max: 10;
+$z-max9: 9;
+$z-min2: 2;
+$z-min: 1;

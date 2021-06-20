@@ -1,0 +1,463 @@
+.parkmap-inner {
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 64px;
+  }
+
+  @at-root .smart-entry & {//smart entry page
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-top: 139px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 145px
+    }
+  }
+}
+
+.parkmap-container {
+  position: relative;
+}
+
+.parkmap-image {
+  background: url(#{$image-path}top/parkmap/map-v2.png) no-repeat center top;
+  background-size: contain;
+  width: 1600px;
+  height: 903px;
+  position: relative;
+  left: -346px;
+  top: -65px;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 550px;
+    height: 370px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(#{$image-path}top/parkmap/map-v2-sp.png) no-repeat center top;
+    background-size: contain;
+  }
+
+  @at-root .smart-entry & {//smart entry page
+    background-image: url(#{$image-path}smart_entry/map.jpg);
+    width: 2120px;
+    height: 908px;
+    left: -618px;
+    top: -161px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: calc(100% + 40px);
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url(#{$image-path}smart_entry/map-sp.jpg) no-repeat center top;
+      background-size: contain;
+      position: relative;
+    }
+
+    .map-sp {
+      @include max-screen($breakpoint-mobile) {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.parkmap-image-list {
+  counter-reset: parkmap_image_list;
+  position: relative;
+  left: 330px;
+
+  @include max-screen($breakpoint-mobile) {
+    left: 0;
+  }
+
+  @at-root .smart-entry & {
+    @include max-screen($breakpoint-mobile) {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.parkmap-image-item {
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 38px;
+    height: 38px;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    position: relative;
+    z-index: $z-min;
+  }
+
+  &::before {
+    counter-increment: parkmap_image_list;
+    content: '0'#{counter(parkmap_image_list)};
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: normal;
+    color: $color-white;
+    letter-spacing: 0.08em;
+    background: url(#{$image-path}top/parkmap/number-bg-border.png) no-repeat;
+    background-size: contain;
+
+    @include max-screen($breakpoint-mobile) {
+      padding: 2px 0 0 2px;
+      font-size: 13px;
+    }
+  }
+
+  &:first-child {
+    left: 355px;
+    top: 229px;
+
+    @include max-screen($breakpoint-mobile) {
+      left: 231px;
+      top: 48px;
+    }
+
+    @at-root .smart-entry & {//smart entry page
+      @include min-screen($breakpoint-mobile + 1) {
+        left: 775px;
+        top: 260px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        left: 61%;
+        top: 25%;
+      }
+    }
+  }
+
+  &:nth-of-type(2) {
+    left: 247px;
+    top: 299px;
+
+    @include max-screen($breakpoint-mobile) {
+      left: 174px;
+      top: 86px;
+    }
+
+    @at-root .smart-entry & {//smart entry page
+      @include min-screen($breakpoint-mobile + 1) {
+        left: 865px;
+        top: 333px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        left: 71%;
+        top: 34%;
+      }
+    }
+  }
+
+  &:nth-of-type(3) {
+    left: 521px;
+    top: 374px;
+
+    @include max-screen($breakpoint-mobile) {
+      left: 324px;
+      top: 129px;
+    }
+
+    @at-root .smart-entry & {//smart entry page
+      @include min-screen($breakpoint-mobile + 1) {
+        left: 725px;
+        top: 620px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        left: 57%;
+        top: 68%;
+      }
+    }
+  }
+
+  &:nth-of-type(4) {
+    left: 642px;
+    top: 396px;
+
+    @include max-screen($breakpoint-mobile) {
+      left: 393px;
+      top: 142px;
+    }
+  }
+
+  &:nth-of-type(5) {
+    left: 387px;
+    top: 492px;
+
+    @include max-screen($breakpoint-mobile) {
+      left: 246px;
+      top: 194px;
+    }
+  }
+
+  &:nth-of-type(6) {
+    left: 221px;
+    top: 447px;
+
+    @include max-screen($breakpoint-mobile) {
+      left: 160px;
+      top: 173px;
+    }
+  }
+
+  &:nth-of-type(7) {
+    left: 530px;
+    top: 516px;
+
+    @include max-screen($breakpoint-mobile) {
+      left: 333px;
+      top: 207px;
+    }
+  }
+}
+
+.parkmap-list {
+  counter-reset: parkmap_list;
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+    z-index: $z-min;
+  }
+}
+
+.parkmap-right {
+  position: absolute;
+  right: 0;
+  top: 181px;
+  width: 410px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: -93px;
+    position: relative;
+    right: auto;
+    left: 23px;
+    top: 0;
+    width: calc(100% - 23px);
+  }
+
+  @at-root .page-twinringmotegi & {//twinringmotegi page
+    @include min-screen($breakpoint-mobile + 1) {
+      top: 238px !important;
+    }
+  }
+
+  @at-root .smart-entry & {//smart entry page
+    @include min-screen($breakpoint-mobile + 1) {
+      top: 315px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -200px;
+    }
+  }
+  
+}
+
+.parkmap-link-icon {
+  width: 25px;
+  position: absolute;
+  right: 18px;
+  transition: transform $duration $ease-in-out;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 19px;
+    right: 15px;
+  }
+
+  svg {
+    width: 100%;
+    height: 12px;
+  }
+
+  @at-root .page-twinringmotegi & {//twinringmotegi page
+    transform: rotate(90deg);
+  }
+}
+
+.parkmap-link {
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  height: 73px;
+  background: url(#{$image-path}top/parkmap/button-bg.jpg) repeat;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: $base-font-color;
+  position: relative;
+  transition: color $duration $ease-in-out;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 14px;
+    height: 51px;
+    letter-spacing: 0.05em;
+    padding-left: 39px;
+  }
+
+  &::before {
+    counter-increment: parkmap_list;
+    content: '0'#{counter(parkmap_list)};
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 61px;
+    height: 61px;
+    font-size: 20px;
+    font-weight: normal;
+    color: $color-white;
+    letter-spacing: 0.08em;
+    background: url(#{$image-path}top/parkmap/number-bg.png) no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+
+    @include max-screen($breakpoint-mobile) {
+      left: -23px;
+      width: 45px;
+      height: 45px;
+      font-size: 15px;
+    }
+  }
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      color: $color-green;
+
+      .parkmap-link-icon {
+        svg {
+          stroke: $color-green;
+        }
+      }
+    }
+  }
+}
+
+.parkmap-item {
+  display: block;
+  margin-bottom: 10px;
+  transition: transform $duration $ease-in-out;
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      transform: translateX(-30px);
+    }
+  }
+
+  &.is-active {
+    transform: translateX(-30px);
+
+    .parkmap-link {
+      color: $color-green;
+    }
+
+    .parkmap-link-icon {
+      svg {
+        stroke: $color-green;
+      }
+    }
+  }
+
+  &.parkmap-item-last {
+    margin-top: 20px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 39px;
+      margin-left: -20px;
+    }
+
+    &:hover {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: none;
+
+        .parkmap-link-icon {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+}
+
+//modifier for SP
+.map {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: -42px;
+    margin-bottom: 79px;
+  }
+
+  .map-img {
+    background-image: url(#{$image-path}/mobipark/map-bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -52px;
+      padding-top: 90px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      height: 288px;
+      padding-top: 40px;
+      background-size: contain;
+    }
+
+    img {
+      max-width: 912px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 277px;
+      }
+    }
+  }
+}
+
+@include max-screen($breakpoint-mobile) {
+  .map {
+    margin-bottom: 52px;
+    margin-top: -43px;
+  }
+
+  .map-img {
+    margin: 0 -160px;
+
+    img {
+      max-width: 504px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.design-parkmap-smart-entry {//smart entry page
+  margin-top: -39px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: -11px;
+  }
+}

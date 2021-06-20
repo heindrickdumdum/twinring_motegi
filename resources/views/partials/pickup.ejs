@@ -1,0 +1,38 @@
+<section class="bottom-slider bottom-slider-pickup">
+  <div class="l-section-title u-show-pc">
+    <%- include('/partials/heading', {
+      modifier: 'heading-pickup',
+      text: 'Pick Up',
+      altSubtext: '',
+      subtextvg: 'pickup-new-title-pc'
+    }) %>
+  </div>
+  <div class="l-section-title u-show-sp">
+    <%- include('/partials/heading', {
+      modifier: 'heading-pickup',
+      text: 'Pick Up',
+      altSubtext: '',
+      subtextvg: 'pickup-new-title-sp'
+    }) %>
+  </div>
+
+  <div class="swiper-container slider-pickup js-slider-pickup">
+    <ul class="swiper-wrapper slider-wrapper">
+      <% getData().data.pickup.forEach(item => { %>
+      <li class="swiper-slide slider-item">
+        <%- include('/partials/article-no-design', {
+          category: item.category,
+          image: item.image,
+          heading: item.heading,
+          type: item.type,
+          date: item.date,
+          link: item.link,
+          modifier: 'article-pickup',
+          buttonLink: item.link,
+          buttonText: ''
+        }) %>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>

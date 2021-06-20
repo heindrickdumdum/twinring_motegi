@@ -1,0 +1,39 @@
+<div class="header-sub-content-inner js-header-sub-content-inner" data-content="#header-sub-attraction">
+
+  <a class="header-sub-top-button" href="/attraction/#program">
+    アトラクション・ アクティビティTOP
+  </a>
+
+  <div class="header-sub-inner header-sub-inner-attraction">
+    <div class="header-sub-inner-block">
+      <div class="header-sub-image-list-wrap">
+        <% getData().data.headerAttractionImageList.forEach( list => { %>
+          <ul class="header-sub-image-list header-sub-image-list-attraction">
+            <% list.forEach( item => { %>
+            <li class="header-sub-image-item">
+              <a class="header-sub-image-link" href="<%- item.link %>">
+                <div class="header-sub-image-wrap">
+                  <div class="header-sub-image<% if(list.length > 3) { %> header-sub-image-small<% } %>" style="background-image: url(<%- item.image %>);"></div>
+                </div>
+                <span class="header-sub-image-text"><%- item.text %></span>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+        <% }) %>
+      </div>
+
+      <div class="header-sub-right-content">
+        <ul>
+          <li class="header-sub-right-content-item">
+            <a class="header-sub-right-content-link" href="/kochira_m/">コチラレーシング</a>
+          </li>
+          <li class="header-sub-right-content-item">
+            <a class="header-sub-right-content-link" href="/mobipark_m/guide/">アトラクションの<br class="u-show-pc">ご利用基準</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>

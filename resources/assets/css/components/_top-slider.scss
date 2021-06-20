@@ -1,0 +1,56 @@
+.top-slider-text {
+  font-size: 20px;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+  }
+
+  .forest-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      display: block;
+      margin: 14px 0 0;
+    }
+
+  	@include max-screen($breakpoint-mobile) {
+			font-size: 13px;
+			margin-top: 9px;
+			letter-spacing: 0.1em;
+			line-height: 1.65;
+  	}
+  }
+
+  small {
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    display: block;
+    font-weight: normal;
+
+    @include max-screen($breakpoint-mobile) {
+      display: none;
+    }
+
+    .top-slide-craft & {
+      @include max-screen($breakpoint-mobile) {
+        display: block;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.top-slider-image {
+  text-align: center;
+  margin-bottom: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+
+    @at-root .other-restaurant & {//other restaurant section
+      border-radius: 10px;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+<%
+if (typeof modifier === 'undefined'){
+  var modifier = '';
+}
+
+
+%>
+
+
+<% if(dataGoodList) { var arrTabs = [];%>
+  <div class="u-show-pc tab-underline">
+    <ol id="tabs" class="tabs tabs-goods u-show-pc" >
+      <li class="tab tab-goods tab-motegi">
+        <input autocomplete='on' type="radio" id="tab-1" name="tab-goods" class="tab-month" value="1" checked>
+        <label class="lbl-goods" for="tab-1"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/goods/ico-motegi.png') %>" alt="Motegi">ツインリンクもてぎ<br>オリジナルグッズ</label>
+        
+      </li>
+      <li class="tab tab-goods tab-kids">
+        <input autocomplete='on' type="radio" id="tab-2" name="tab-goods" class="tab-month" value="2" >
+        <label class="lbl-goods" for="tab-2"><img class="lbl-ico ico-kids " src="<%= mix('/assets/images/goods/ico-kids.png') %>" alt="Motegi">お子さま向けグッズ</label>
+      </li>
+      <li class="tab tab-goods tab-motor">
+        <input autocomplete='on' type="radio" id="tab-3" name="tab-goods" class="tab-month" value="3" >
+        <label class="lbl-goods" for="tab-3"><img class="lbl-ico ico-motor" src="<%= mix('/assets/images/goods/ico-motor.png') %>" alt="Motegi">モータースポーツ<br>ファングッズ</label>
+      </li>
+      <li class="tab tab-goods tab-honda">
+        <input autocomplete='on' type="radio" id="tab-4" name="tab-goods" class="tab-month" value="4" >
+        <label class="lbl-goods" for="tab-4"><img class="lbl-ico ico-honda" src="<%= mix('/assets/images/goods/ico-honda.png') %>" alt="Motegi">ホンダファングッズ</label>
+      </li>
+    </ol>
+  </div>
+
+  <div class="bg-white">
+    <div class="custom-select u-show-sp custom-select-goods-sp">
+      <div id="customSelect" class="select-selected select-selected-goods"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/goods/ico-motegi.png') %>" alt="Motegi"> ツインリンクもてぎ<br>オリジナルグッズ</div>
+      <div id="customSelectItems" class="select-items select-items-goods select-hide">
+        <div class="option select-goods-option" value="1"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/goods/ico-motegi.png') %>" alt="Motegi"> ツインリンクもてぎ<br>オリジナルグッズ</div>
+        <div class="option select-goods-option" value="2"><img class="lbl-ico ico-kids" src="<%= mix('/assets/images/goods/ico-kids.png') %>" alt="Motegi">お子さま向けグッズ</div>
+        <div class="option select-goods-option" value="3"><img class="lbl-ico ico-motor" src="<%= mix('/assets/images/goods/ico-motor.png') %>" alt="Motegi">モータースポーツ<br>ファングッズ</div>
+        <div class="option select-goods-option" value="4"><img class="lbl-ico ico-honda" src="<%= mix('/assets/images/goods/ico-honda.png') %>" alt="Motegi">ホンダファングッズ</div>
+      </div>
+    </div>
+  </div>
+
+<% } %>
+
+<% if(dataGoodList) { %>
+  <div class="bg-grey l-container-m">
+    <ul id="tab-banner" class="tab-banner" data-tab="1">
+      <li class="tab-banner-motegi" data-tab="1">
+        販売場所：<br class="u-show-sp">スーベニアもてぎ、モビプラザ、<br class="u-show-sp">ミュージアムショップ<br>
+        ※表示金額はすべて税込みです。<br>
+        ※品切れの際は、ご容赦ください。
+      </li>
+      <li class="tab-banner-motegi" data-tab="2">販売場所：スーベニアもてぎ・モビプラザ<br>
+        ※表示金額はすべて税込みです。<br>
+        ※品切れの際は、ご容赦ください。</li>
+      <li class="tab-banner-motegi" data-tab="3">販売場所：モビプラザ、スーベニアもてぎ、グランツーリスモ カフェ ショップ<br>
+        ※表示金額はすべて税込みです。<br>
+        ※品切れの際は、ご容赦ください。</li>
+      <li class="tab-banner-motegi" data-tab="4">販売場所：ミュージアムショップ<br>
+        ※表示金額はすべて税込みです。<br>
+        ※品切れの際は、ご容赦ください。</li>
+    </ul>
+    <ul id="program-list" class="tiles tilesGoodsList" data-tab="1">
+      <% dataGoodList.forEach(item => { %>
+        <li class="tile program-item program-item-goods" data-tab="<%- item.tab %>">
+          <a href="<%- item.link -%>">
+            <div class="tileImageWrap">
+              <img src="<%- item.imgPath -%>" alt="<%- item.alt -%>">
+            </div>
+            <div class="tileDescWrap">
+              <p class="title <%- item.mods -%>"><%- item.title -%></p>
+            </div>
+          </a>
+        </li>
+      <% } ) %>
+    </ul>
+  </div>
+
+<% } %>

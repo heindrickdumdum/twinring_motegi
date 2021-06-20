@@ -1,0 +1,32 @@
+#lig-footer { /*Prevent mobile.css overiding css below*/
+  .footer {
+    font-family: $font-notosans;
+    
+  }
+
+  .footer-background {
+    height: 524px;
+    background: url(#{$image-path}footer-twinring.png) no-repeat center 55%, url(#{$image-path}footer-bg.jpg) no-repeat center top;
+    background-size: 387px auto, cover;
+
+    @include max-screen($breakpoint-mobile) {
+      height: auto;
+      background-size: 250px auto, cover;
+      background-position: center 52%, center top;
+      padding: 34.7% 0;
+    }
+  }
+
+  .footer-sns {
+    margin-top: -30px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer-top-links-list {
+    font-family: $font-NotoSansCJKjp-Regular;
+  }
+}

@@ -1,0 +1,92 @@
+<%
+if (typeof modifier === 'undefined'){
+  var modifier = '';
+}
+
+if (typeof text === 'undefined'){
+  var text = '';
+}
+
+if (typeof imgPath === 'undefined'){
+  var imgPath = '';
+}
+
+if (typeof alt === 'undefined'){
+  var alt = '';
+}
+
+if (typeof subtextvg === 'undefined'){
+  var subtextvg = '';
+}
+
+if (typeof altSubtextvg === 'undefined'){
+  var altSubtextvg = '';
+}
+
+if (typeof subtext === 'undefined'){
+    var subtext = '';
+}
+
+if (typeof altSubtext === 'undefined'){
+      var altSubtext = '';
+}
+
+if (typeof heading_level === 'undefined'){
+  var heading_level = 2;
+}
+
+if(typeof headingSubtext === 'undefined') {
+  headingSubtext = '';
+}
+
+if(typeof headingText2 === 'undefined') {
+  headingText2 = '';
+}
+
+%>
+
+<div class="heading-wrap<%- ' '+modifier %>">
+  <div class="heading">
+    <% if(text) { %>
+      <span class="u-title-hidden"><%- alt %></span>
+      <h<%- heading_level %> class="heading-text">
+        <%- text %>
+    </h<%= heading_level %>>
+    <% } %>
+
+    <% if(headingText2) { %>
+      <span class="u-title-hidden"><%- alt %></span>
+      <p class="heading-text">
+        <%- headingText2 %>
+      </p>
+    <% } %>
+
+    <% if(subtextvg || imgPath) { %>
+    <p class="heading-subtext">
+      <% if(subtextvg || altSubtextvg) { %>
+        <%- include('/partials/svg', {
+          name: subtextvg,
+          svgtitle: altSubtextvg
+        }) -%>
+      <% } %>
+
+      <% if(imgPath) { %>
+        <span class="u-title-hidden"><%- alt %></span>
+        <img src="<%- imgPath %>" alt="<%- alt %>">
+      <% } %>
+    </p>
+    <% } %>
+
+    <% if(altSubtext) { %>
+    <p class="heading-subtext">
+      <img src="<%- subtext %>" alt="<%- altSubtext %>">
+    </p>
+    <% } %>
+
+    <% if(headingSubtext) { %>
+    <p class="heading-subtext">
+      <span><%- headingSubtext -%></span>
+    </p>
+    <% } %>
+  </div>
+</div>

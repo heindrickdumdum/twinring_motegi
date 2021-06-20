@@ -1,0 +1,134 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'blueNote';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-restaurant restaurant-wrapper">
+    <div class="mv mv-restaurant mv-subpage-restaurant mv-bluenote">
+
+
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/bluenote/mv-bluenote.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/bluenote/mv-bluenote-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading donguri-mv-heading u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Lounge BlueNote',
+            subtextvg: 'bluenote-title',
+            altSubtextvg: 'ラウンジ ブルーノート'
+          }) %>
+        </div>
+        <div class="mv-heading mv-heading-default mv-heading-bluenote u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-bluenote',
+            heading_level: 1,
+            text: 'Lounge Blue Note',
+            subtextvg: 'bluenote-title-sp',
+            altSubtextvg: 'ラウンジ ブルーノート'
+          }) %>
+        </div>
+
+        <div class="u-show-pc mv-today mv-logo mv-granroom-logo" style="background-image: url(<%= mix('/assets/images/bluenote/logo-bluenote.png') %>);">
+          <div class="mv-l-inner">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner-wrap">
+        <div class="subpage-inner">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-donguri',
+              // subtextvg: 'donguri-main-title',
+              // altSubtextvg: `都会の喧騒を忘れ、ゆったりとした時間と共にお酒が楽しめるBar`
+              imgPath: mix('/assets/images/bluenote/top-color-title.jpg'),
+              alt: '都会の喧騒を忘れ、ゆったりとした時間と共にお酒が楽しめるBar'
+            }) %>
+          </div>
+
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-wrap-bluenote',
+              // subtextvg: 'donguri-main-title-sp',
+              // altSubtextvg: `都会の喧騒を忘れ、ゆったりとした時間と共にお酒が楽しめるBar`
+              imgPath: mix('/assets/images/bluenote/top-color-title-sp.jpg'),
+              alt: '都会の喧騒を忘れ、ゆったりとした時間と共にお酒が楽しめるBar'
+            }) %>
+          </div>
+
+          <div class="subpage-banner subpage-banner-craft">
+            <div class="subpage-banner-inner">
+              <img class="u-show-pc" src="<%= mix('/assets/images/bluenote/img-bluenote.jpg') %>" alt="都会の喧騒を忘れ、ゆったりとした時間と共にお酒が楽しめるBar">
+              <img class="u-show-sp" src="<%= mix('/assets/images/bluenote/img-bluenote-sp.jpg') %>" alt="都会の喧騒を忘れ、ゆったりとした時間と共にお酒が楽しめるBar">
+            </div>
+          </div>
+
+          <p>
+            スポーツ走行やレースを楽しんだ後などに仲間と語らう憩いの場所としておすすめ。<br>落ち着いた店内でお酒をたしなみながら、感動を分かち合うひとときをお過ごしください。
+          </p>
+
+          <h2 class="subpage-title">
+            <span>店舗情報</span>
+          </h2>
+          <table class="table table-donguri">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">場所</th>
+                <td class="table-col">
+                  ホテルツインリンク<br><a class="link" href="/map_m/">MAPを見る</a>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">営業時間</th>
+                <td class="table-col">
+                  土曜　19:00～23:00（L.O.9:30）
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">座席数</th>
+                <td class="table-col">64<br>
+                  <!-- ※クレジットカードはご利用いただけません。 -->
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">備考</th>
+                <td class="table-col">
+                  ・クレジットカード利用可
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- restaurant menu -->
+      <%- include('/partials/bluenote/section-menu') -%>
+
+      <!-- other restaurant module-->
+      <%- include('/partials/donguri/section-other-restaurant') -%>
+
+
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsBluenote
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

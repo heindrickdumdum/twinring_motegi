@@ -1,0 +1,57 @@
+.food {
+  width: 911px;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-top: 192px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 80px;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &-item {
+    width: 50%;
+    margin: {
+      bottom: 50px;
+    }
+
+    .food-text {
+      padding: {
+        left: 63px;
+        right: 63px;
+      }
+    }
+  }
+
+  &-image {
+    width: 250px;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+
+  &-title {
+    font-size: 36px;
+    color: #a38737;
+    line-height: 2;    
+    letter-spacing: 0.2em;
+  }
+
+  &-desc {
+    font-size: 15px;
+    color: $color-white;
+    line-height: 2;    
+    letter-spacing: 0.16em;
+  }
+}

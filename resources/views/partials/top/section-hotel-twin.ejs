@@ -1,0 +1,134 @@
+<%
+  sectionHotelTwinCards = [
+    {
+      'category': 'STAY',
+      'image': mix('/assets/images/top/hotel-twin/img1.jpg'),
+      'title': 'スーペリアファミリールーム',
+      'url': '/hoteltwinring/renewal/'
+    },
+    {
+      'category': 'RESTAURANT',
+      'image': mix('/assets/images/top/hotel-twin/img2.jpg'),
+      'title': '森のレストラン MARCHERANT',
+      'url': '/foods_m/marcherant.html'
+    },
+    {
+      'category': 'RESTAURANT',
+      'image': mix('/assets/images/top/hotel-twin/img3.jpg'),
+      'title': '里山懐石 登谷',
+      'url': '/foods_m/toya.html'
+    }
+  ]
+
+
+  hotelTwinBlockImage = [
+    {
+      'modifier': '',
+      'bg': mix('/assets/images/top/hotel-twin/block-img1.jpg'),
+      'title': mix('/assets/images/top/hotel-twin/restaurant.png'),
+      'alt': 'Restaurant',
+      'subtext': 'レストラン',
+      'url': '/foods_m/'
+    },
+    {
+      'modifier': 'block-image-item-last',
+      'bg': mix('/assets/images/top/hotel-twin/block-img2.jpg'),
+      'title': mix('/assets/images/top/hotel-twin/goods-shop.png'),
+      'alt': 'Goods & Shop',
+      'subtext': 'グッズ & ショップ',
+      'url': '/goods_m/'
+    }
+  ]
+%>
+
+<div class="section-inner">
+  <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/hotel-twin/bg.jpg') %>);">
+    <img class="section-image-logo section-image-logo-hotel-twin"
+      src="<%= mix('/assets/images/top/hotel-twin/logo.png') %>" alt="twin Ring">
+  </div>
+  <div class="l-container">
+    <div class="section-contents">
+      <p class="section-contents-copy">
+        <a href="/motegi/phytoncide/">フィトンチッド</a>溢れる森のホテルで優雅なひとときをお過ごしいただけます。
+      </p>
+
+      <ul class="section-cards u-show-pc">
+        <%
+          sectionHotelTwinCards.forEach( card => {
+        %>
+        <li class="section-cards-item">
+          <a href="<%- card.url %>" class="section-card-link">
+            <div class="section-cards-image-wrap image-border">
+              <span class="section-cards-category"><%- card.category %></span>
+              <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+            </div>
+            <p class="section-cards-title"><%- card.title %></p>
+          </a>
+        </li>
+        <%
+          })
+        %>
+      </ul>
+
+      <div class="slider-wrap slider-wrap-section u-show-sp">
+        <div class="swiper-container slider js-slider-sp">
+          <ul class="swiper-wrapper slider-wrapper slider-section-cards section-cards">
+            <%
+              sectionHotelTwinCards.forEach( card => {
+            %>
+            <li class="swiper-slide slider-item slider-section-cards-item">
+              <div class="section-cards-item">
+                <a href="<%- card.url %>" class="section-card-link">
+                  <div class="section-cards-image-wrap image-border">
+                    <span class="section-cards-category"><%- card.category %></span>
+                    <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+                  </div>
+                  <p class="section-cards-title"><%- card.title %></p>
+                </a>
+              </div>
+            </li>
+            <%
+              })
+            %>
+          </ul>
+
+          <div class="swiper-pagination swiper-pagination-section"></div>
+        </div>
+      </div>
+
+      <div class="section-button">
+        <%- include('/partials/button', {
+          newTab: false,
+          modifier: '',
+          text: 'もっと見る',
+          link: '/hoteltwinring/'
+        }) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="block-image">
+  <div class="l-container">
+    <ul class="block-image-list">
+      <%
+        hotelTwinBlockImage.forEach( block => {
+      %>
+      <li class="block-image-item image-border <%- block.modifier %>">
+        <a href="<%- block.url %>" class="block-image-item-link">
+          <div class="block-image-inner" style="background-image: url(<%- block.bg %>);">
+            <div class="block-image-text-wrap">
+              <p class="block-image-text">
+                <img src="<%- block.title %>" alt="<%- block.title %>">
+                <span class="block-image-subtext"><%- block.subtext %></span>
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <%
+        })
+      %>
+    </ul>
+  </div>
+</div>

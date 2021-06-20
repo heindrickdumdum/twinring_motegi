@@ -1,0 +1,387 @@
+<%
+  toyaConceptlist = [
+    {
+      image: mix('/assets/images/toya/concept-1.jpg'),
+      alt: '里の幸',
+      svgtext: 'toya-concept-title-1',
+      desc: '茂木の里山で収穫された旬の恵みに感謝しながら、素材の持ち味を大切にお作りします。四季が織り成す豊かな自然の中で育った野菜や山菜が料理を彩ります。'
+    },
+    {
+      image: mix('/assets/images/toya/concept-2.jpg'),
+      alt: '川の幸',
+      svgtext: 'toya-concept-title-2',
+      desc: 'ツインリンクもてぎから、ほど近い場所を流れる清流那珂川で水揚げされる新鮮な川魚は、料理長 谷田部が直接仕入れ、季節感あふれる茂木ならではの逸品です。'
+    },
+    {
+      image: mix('/assets/images/toya/concept-3.jpg'),
+      alt: '山の幸',
+      svgtext: 'toya-concept-title-3',
+      desc: `那須野ヶ原牛・奥久慈しゃも・八溝しし肉など、
+      吟味した栃木県産食材を炭焼きや藁焼きで仕上げます。素材を引き立てる豊かな香りの演出もお楽しみください。`
+    },
+    {
+      image: mix('/assets/images/toya/concept-4.jpg'),
+      alt: '日本酒 ',
+      svgtext: 'toya-concept-title-4',
+      desc: `栃木・茨城の地酒を中心に取り揃えております。
+      日本酒と里山懐石のマリアージュをお楽しみください。`
+    }
+  ]
+
+  toyaConceptGallery = [
+    {
+      src: mix('/assets/images/toya/concept-gallery-1.jpg'),
+      alt: 'concept 1'
+    },
+    {
+      src: mix('/assets/images/toya/concept-gallery-2.jpg'),
+      alt: 'concept 2'
+    },
+    {
+      src: mix('/assets/images/toya/concept-gallery-3.jpg'),
+      alt: 'concept 3'
+    },
+    {
+      src: mix('/assets/images/toya/concept-gallery-4.jpg'),
+      alt: 'concept 4'
+    },
+    {
+      src: mix('/assets/images/toya/img-05.jpg'),
+      alt: 'concept 5'
+    }
+  ]
+
+  toyaExperienceData = [
+    {
+      bgSrc: mix('/assets/images/toya/experience-bg1.jpg'),
+      image: mix('/assets/images/toya/kodawari-01.jpg'),
+      alt: '素材のこだわり',
+      svgtag: 'toya-material-1',
+      tagalt: '素材のこだわり',
+      svgtitle: 'toya-material-2',
+      titlealt: '料理人が市場で目利き 茂木町の厳選食材',
+      desc: '料理長自ら里・山・川の食材すべてを厳選し、その季節折々の食材を…コピーが入ります。コピーが入ります。コピーが入ります。コピーが入ります。コピーが入ります。',
+      withSP: false
+    },
+    {
+      bgSrc: mix('/assets/images/toya/experience-bg2.jpg'),
+      image: mix('/assets/images/toya/kodawari-02.jpg'),
+      alt: '器のこだわり',
+      svgtag: 'toya-vessels-1',
+      tagalt: '器のこだわり',
+      svgtitle: 'toya-vessels-2',
+      titlealt: '料理人の 〇〇を愉しむ',
+      desc: '最高の料理には、最高の器を。形やジャンルにとらわれることなく、現代の器を店主自ら厳選しております。日本の作り手が生み出すその美しさを手に取り、目で見て、肌で感じ、お愉しみくださいませ（仮）。',
+      withSP: false
+    },
+    {
+      bgSrc: mix('/assets/images/toya/experience-bg3.jpg'),
+      image: mix('/assets/images/toya/kodawari-03.jpg'),
+      alt: '空間のこだわり',
+      svgtag: 'toya-space-1',
+      tagalt: '空間のこだわり',
+      svgtitle: 'toya-space-2',
+      titlealt: '時にとらわれない、 独立した空間で「静」を楽しむ。',
+      desc: '店内全てにおいて最上級の職人たちと念入りに掛け合い、創り上げました。それらは厳選された一つ一つの作品となります。（仮）',
+      withSP: false
+    },
+    {
+      bgSrc: mix('/assets/images/toya/experience-bg4.jpg'),
+      image: mix('/assets/images/toya/kodawari-04.jpg'),
+      alt: '匠のこだわり(仮)',
+      svgtag: 'toya-takumi-1',
+      tagalt: '匠のこだわり(仮)',
+      svgtitle: 'toya-takumi-2',
+      titlealt: '料理人の 〇〇を愉しむ',
+      desc: '日本を代表する老舗料亭　「なだ万」にて和食の礎を築き、国賓や海外からの来賓など著名なお客様をお迎えし、質の高いサービスにも携わる。「厚木都家」・「銀座 遠音近音」料理長を務めた登谷料理長・谷田部義憲が一つ一つの食材・器・空間すべてにおいて細部までこだわった、究極の「里山懐石」を堪能いただけます。（仮）',
+      withSP: true
+    }
+  ]
+
+  toyaMenuTab = [
+    //spring
+    {
+      tabBg: mix('/assets/images/toya/spring-tab.jpg'),
+      tabId: 'spring-menu',
+      tabsvg: 'toya-spring-tab-title-svg',
+      tabLabel: '3-5月',
+      highlightText: 'toya-spring-highlight-svg',
+      highlightTitle: '茂木の四季の旬を味わう',
+      menuText: 'toya-spring-menu-title-svg',
+      menuTitle: '里山懐石コース',
+      menuPrice: 'toya-spring-menu-price-svg',
+      menuPriceTitle: '8,200円',
+      menuDesc: `益子焼の陶器に盛り付けた、<br/>
+      春夏秋冬のおまかせコースをご用意いたします。`,
+      menuFile: '',
+      menuSlider: 'js-spring-gallery',
+      menuSlide: [
+        {
+          img: mix('/assets/images/toya/kaiseki-01.jpg'),
+          alt: '里山懐石コース 春'
+        },
+        {
+          img: mix('/assets/images/toya/kaiseki-02.jpg'),
+          alt: '里山懐石コース 春'
+        },
+        {
+          img: mix('/assets/images/toya/kaiseki-03.jpg'),
+          alt: '里山懐石コース 春'
+        },
+        {
+          img: mix('/assets/images/toya/kaiseki-04.jpg'),
+          alt: '里山懐石コース 春'
+        },
+        {
+          img: mix('/assets/images/toya/kaiseki-05.jpg'),
+          alt: '里山懐石コース 春'
+        },
+        {
+          img: mix('/assets/images/toya/kaiseki-06.jpg'),
+          alt: '里山懐石コース 春'
+        },
+        {
+          img: mix('/assets/images/toya/kaiseki-07.jpg'),
+          alt: '里山懐石コース 春'
+        },
+        {
+          img: mix('/assets/images/toya/kaiseki-08.jpg'),
+          alt: '里山懐石コース 春'
+        }
+      ],
+      subMenu: [
+        {
+          img: mix('/assets/images/toya/okosama-img.jpg'),
+          alt: 'okosama',
+          titlesvg: 'toya-okosamagozen',
+          titletext: 'お子様御膳',
+          pricesvg: 'toya-2800yen',
+          pricetext: '2,800円'
+        },
+        {
+          img: mix('/assets/images/toya/youji-img.jpg'),
+          alt: 'youji',
+          titlesvg: 'toya-youjigozen',
+          titletext: '幼児御膳（3歳～未就学児）',
+          pricesvg: 'toya-1550yen',
+          pricetext: '1,550円'
+        }
+      ]
+    },
+    //summer
+    {
+      tabBg: mix('/assets/images/toya/summer-tab.jpg'),
+      tabId: 'summer-menu',
+      tabsvg: 'toya-summer-tab-title-svg',
+      tabLabel: '6-8月',
+      highlightText: 'toya-spring-highlight-svg',
+      highlightTitle: '茂木の四季の旬を味わう',
+      menuText: 'toya-spring-menu-title-svg',
+      menuTitle: '里山懐石コース',
+      menuPrice: 'toya-spring-menu-price-svg',
+      menuPriceTitle: '8,200円',
+      menuDesc: `益子焼の陶器に盛り付けた、<br/>
+      春夏秋冬のおまかせコースをご用意いたします。`,
+      menuFile: '',
+      menuSlider: 'js-summer-gallery',
+      menuSlide: [
+        {
+          img: mix('/assets/images/toya/summer-01.jpg'),
+          alt: '里山懐石コース 夏'
+        },
+        {
+          img: mix('/assets/images/toya/summer-02.jpg'),
+          alt: '里山懐石コース 夏'
+        },
+        {
+          img: mix('/assets/images/toya/summer-03.jpg'),
+          alt: '里山懐石コース 夏'
+        },
+        {
+          img: mix('/assets/images/toya/summer-04.jpg'),
+          alt: '里山懐石コース 夏'
+        },
+        {
+          img: mix('/assets/images/toya/summer-05.jpg'),
+          alt: '里山懐石コース 夏'
+        },
+        {
+          img: mix('/assets/images/toya/summer-06.jpg'),
+          alt: '里山懐石コース 夏'
+        },
+        {
+          img: mix('/assets/images/toya/summer-07.jpg'),
+          alt: '里山懐石コース 夏'
+        },
+        {
+          img: mix('/assets/images/toya/summer-08.jpg'),
+          alt: '里山懐石コース 夏'
+        }
+      ],
+      subMenu: [
+        {
+          img: mix('/assets/images/toya/okosama-img.jpg'),
+          alt: 'okosama',
+          titlesvg: 'toya-okosamagozen',
+          titletext: 'お子様御膳',
+          pricesvg: 'toya-2800yen',
+          pricetext: '2,800円'
+        },
+        {
+          img: mix('/assets/images/toya/youji-img.jpg'),
+          alt: 'youji',
+          titlesvg: 'toya-youjigozen',
+          titletext: '幼児御膳（3歳～未就学児）',
+          pricesvg: 'toya-1550yen',
+          pricetext: '1,550円'
+        }
+      ]
+    },
+    //autumn
+    {
+      tabBg: mix('/assets/images/toya/autumn-tab.jpg'),
+      tabId: 'autumn-menu',
+      tabsvg: 'toya-autumn-tab-title-svg',
+      tabLabel: '9-11月',
+      highlightText: 'toya-spring-highlight-svg',
+      highlightTitle: '茂木の四季の旬を味わう',
+      menuText: 'toya-spring-menu-title-svg',
+      menuTitle: '里山懐石コース',
+      menuPrice: 'toya-spring-menu-price-svg',
+      menuPriceTitle: '8,200円',
+      menuDesc: `益子焼の陶器に盛り付けた、<br/>
+      春夏秋冬のおまかせコースをご用意いたします。`,
+      menuFile: '',
+      menuSlider: 'js-autumn-gallery',
+      menuSlide: [
+        {
+          img: mix('/assets/images/toya/autumn-01.jpg'),
+          alt: '里山懐石コース 秋'
+        },
+        {
+          img: mix('/assets/images/toya/autumn-02.jpg'),
+          alt: '里山懐石コース 秋'
+        },
+        {
+          img: mix('/assets/images/toya/autumn-03.jpg'),
+          alt: '里山懐石コース 秋'
+        },
+        {
+          img: mix('/assets/images/toya/autumn-04.jpg'),
+          alt: '里山懐石コース 秋'
+        },
+        {
+          img: mix('/assets/images/toya/autumn-05.jpg'),
+          alt: '里山懐石コース 秋'
+        },
+        {
+          img: mix('/assets/images/toya/autumn-06.jpg'),
+          alt: '里山懐石コース 秋'
+        },
+        {
+          img: mix('/assets/images/toya/autumn-07.jpg'),
+          alt: '里山懐石コース 秋'
+        },
+        {
+          img: mix('/assets/images/toya/autumn-08.jpg'),
+          alt: '里山懐石コース 秋'
+        },
+        {
+          img: mix('/assets/images/toya/autumn-09.jpg'),
+          alt: '里山懐石コース 秋'
+        }
+      ],
+      subMenu: [
+        {
+          img: mix('/assets/images/toya/okosama-img.jpg'),
+          alt: 'okosama',
+          titlesvg: 'toya-okosamagozen',
+          titletext: 'お子様御膳',
+          pricesvg: 'toya-2800yen',
+          pricetext: '2,800円'
+        },
+        {
+          img: mix('/assets/images/toya/youji-img.jpg'),
+          alt: 'youji',
+          titlesvg: 'toya-youjigozen',
+          titletext: '幼児御膳（3歳～未就学児）',
+          pricesvg: 'toya-1550yen',
+          pricetext: '1,550円'
+        }
+      ]
+    },
+    //winter
+    {
+      tabBg: mix('/assets/images/toya/winter-tab.jpg'),
+      tabId: 'winter-menu',
+      tabsvg: 'toya-winter-tab-title-svg',
+      tabLabel: '12-2月',
+      highlightText: 'toya-spring-highlight-svg',
+      highlightTitle: '茂木の四季の旬を味わう',
+      menuText: 'toya-spring-menu-title-svg',
+      menuTitle: '里山懐石コース',
+      menuPrice: 'toya-spring-menu-price-svg',
+      menuPriceTitle: '8,200円',
+      menuDesc: `益子焼の陶器に盛り付けた、<br/>
+      春夏秋冬のおまかせコースをご用意いたします。`,
+      menuFile: '',
+      menuSlider: 'js-winter-gallery',
+      menuSlide: [
+        {
+          img: mix('/assets/images/toya/winter-01.jpg'),
+          alt: '里山懐石コース 冬'
+        },
+        {
+          img: mix('/assets/images/toya/winter-02.jpg'),
+          alt: '里山懐石コース 冬'
+        },
+        {
+          img: mix('/assets/images/toya/winter-03.jpg'),
+          alt: '里山懐石コース 冬'
+        },
+        {
+          img: mix('/assets/images/toya/winter-04.jpg'),
+          alt: '里山懐石コース 冬'
+        },
+        {
+          img: mix('/assets/images/toya/winter-05.jpg'),
+          alt: '里山懐石コース 冬'
+        },
+        {
+          img: mix('/assets/images/toya/winter-06.jpg'),
+          alt: '里山懐石コース 冬'
+        },
+        {
+          img: mix('/assets/images/toya/winter-07.jpg'),
+          alt: '里山懐石コース 冬'
+        },
+        {
+          img: mix('/assets/images/toya/winter-08.jpg'),
+          alt: '里山懐石コース 冬'
+        },
+        {
+          img: mix('/assets/images/toya/winter-09.jpg'),
+          alt: '里山懐石コース 冬'
+        }
+      ],
+      subMenu: [
+        {
+          img: mix('/assets/images/toya/okosama-img.jpg'),
+          alt: 'okosama',
+          titlesvg: 'toya-okosamagozen',
+          titletext: 'お子様御膳',
+          pricesvg: 'toya-2800yen',
+          pricetext: '2,800円'
+        },
+        {
+          img: mix('/assets/images/toya/youji-img.jpg'),
+          alt: 'youji',
+          titlesvg: 'toya-youjigozen',
+          titletext: '幼児御膳（3歳～未就学児）',
+          pricesvg: 'toya-1550yen',
+          pricetext: '1,550円'
+        }
+      ]
+    },
+  ]
+%>

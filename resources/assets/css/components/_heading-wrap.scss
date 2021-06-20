@@ -1,0 +1,898 @@
+.heading-wrap {
+
+  &.heading-wrap-bluenote {
+    .heading-subtext {
+      @include max-screen ($breakpoint-mobile) {
+        height: auto;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &.heading-donguri {
+    .heading-subtext {
+      height: 85px;
+      width: 100%;
+      @include max-screen ($breakpoint-mobile) {
+        height: 216px;
+        padding-top: 10px;
+        margin-bottom: 59px;
+      }
+
+      @at-root & {
+        img {
+          @include min-screen($breakpoint-mobile + 1) {
+            margin-bottom: 110px;
+          }
+        }
+      }
+    }
+  }
+
+  &.heading-wrap-information {
+    .heading-text {
+      letter-spacing: 0.01em;
+    }
+    .heading-subtext {
+      margin-top: 14px;
+      width: 309px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &.heading-gradient-tobottom {
+    .heading-text {
+      background: linear-gradient(to bottom, #027cc3 35%, #099f48 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 22.5px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 36px;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+
+  &.heading-dokidoki {
+    .heading-text {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .heading-subtext {
+      margin: 24px auto 0;
+      text-align: center;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.heading-enjoy {
+    margin-bottom: 40px;
+    svg {
+      width: 520px;
+      height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        position: relative;
+        top: -6px;
+        width: 300px;
+        height: 50px;
+      }
+    }
+  }
+
+  &.heading-you-video {
+    margin-bottom: 40px;
+    svg {
+      width: 520px;
+      height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        position: relative;
+        top: -26px;
+        width: 286px;
+        height: 57px;
+      }
+    }
+  }
+
+  &.heading-wrap-craft {
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 10px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 11px;
+      }
+    }
+
+    svg {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 378px;
+        height: 33px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        height: 25px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: -0.04em;
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &.heading-forest {
+    margin-bottom: 40px;
+    svg {
+      width: 520px;
+      height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        position: relative;
+        top: -8px;
+        width: 206px;
+        height: 57px;
+      }
+    }
+  }
+
+  &.heading-video {
+    margin-bottom: 40px;
+    svg {
+      width: 520px;
+      height: 36px;
+      @include max-screen($breakpoint-mobile) {
+        width: 274px;
+        position: relative;
+        top: -14px;
+      }
+    }
+  }
+
+  &.heading-recommend {
+    margin-bottom: 40px;
+
+    svg {
+      width: 513px;
+      height: 34px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
+    }
+  }
+
+  &.heading-pickup {
+    margin-bottom: 37px;
+
+    .heading-text {
+      letter-spacing: 0.05em;
+    }
+
+    .heading-subtext {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    svg {
+      max-width: 389px;
+      height: 34px;
+      @include max-screen($breakpoint-mobile) {
+        max-width: 168px;
+      }
+    }
+  }
+
+  &.heading-forest-craft {
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin-bottom: 0;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 8px;
+        transform: translateX(-10px);
+        text-align: left;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        height: 43px;
+        display: block;
+        padding: 0 14px 0 8px;
+        margin-top: 3px;
+      }
+    }
+
+    svg {
+      @include min-screen($breakpoint-mobile + 1) {
+        width: 413px;
+        height: 36px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 316px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: -0.04em;
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &.heading-wrap-collection-pit {
+
+    @include min-screen ($breakpoint-mobile+1) {
+      .heading-subtext:last-child {
+        span {
+          font-size: 15px;
+          font-weight: bold;
+          line-height: 30px;
+          letter-spacing: 3.4px;
+        }
+      }
+    }
+
+
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 5px;
+      .heading-subtext:last-child {
+        height: auto;
+        margin-bottom: 30px;
+        padding: 0;
+        line-height: 1.7;
+      }
+    }
+
+
+
+
+  }
+
+
+  &.heading-main-pit {
+    text-align: center;
+
+    svg {
+      width: 813px;
+      height: 41px;
+      @include max-screen($breakpoint-mobile) {
+        width: auto;
+      }
+    }
+  }
+
+  &.heading-main-program {
+    // margin-bottom: 70px;
+    margin-bottom: 14px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 42px;
+    }
+
+    svg {
+      height: 54px;
+
+      @include min-screen ($breakpoint-mobile+1) {
+        height: 41px;
+        width: 900px;
+      }
+    }
+
+    .heading-program {
+      margin-bottom: 32px;
+
+      img {
+        height: 110px;
+
+        @include max-screen($breakpoint-mobile) {
+          height: 54px;
+        }
+      }
+    }
+
+    .heading-sub-program {
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 1.8;
+    }
+
+    .heading-sub-program-sp {
+      line-height: 1.7em;
+    }
+  }
+
+  &.heading-reservation {
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: 0.09em;
+      }
+    }
+
+    .heading-subtext {
+
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important
+        width: auto !important;
+      }
+
+      svg {
+        width: 600px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 320px;
+          height: 40px;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &.heading-gradient-toright {
+    .heading-text {
+      background: linear-gradient(to right, #027cc3 0%, #099f48 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 23px;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 36px;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+
+  &.heading-wrap-center {
+    text-align: center;
+
+    .heading-text,
+    .heading-subtext {
+      // margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: -0.01em;
+      font-size: 34px;
+
+      @include max-screen($breakpoint-mobile) {
+        letter-spacing: 0.01em;
+        font-size: 24px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen ($breakpoint-mobile + 1) {
+        margin: 13px auto 0;
+      }
+    }
+  }
+
+  &.heading-wrap-business-hours-guide {
+    .heading-text {
+      font-size: 23px;
+      @include min-screen ($breakpoint-mobile+1) {
+        font-size: 40px;
+      }
+    }
+
+    .heading-subtext {
+      @include max-screen ($breakpoint-mobile) {
+        margin-top: 0;
+        height: 20px;
+      }
+    }
+  }
+
+  &.heading-wrap-hellowoods {
+    .heading-subtext {
+      @include max-screen ($breakpoint-mobile) {
+        height: 30px;
+      }
+    }
+  }
+
+  &.heading-wrap-parkmap {
+    .heading-subtext {
+      width: 750px;
+      max-width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        width: 400px;
+        height: 70px;
+        display: inline-block;
+        text-align: left;
+      }
+    }
+  }
+
+  &.heading-wrap-how-to {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 11px;
+        width: 218px;
+        height: 30px;
+      }
+    }
+  }
+
+  &.heading-wrap-activity {
+    .heading-subtext {
+      width: 800px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 100%;
+        width: 316px;
+      }
+    }
+  }
+
+  &.heading-net-dokidoki {
+    margin-bottom: 40px;
+
+    .heading-text {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &.heading-attraction {
+    .heading-subtext {
+      margin-top: 10px;
+      max-width: 489px;
+      width: 100%;
+    }
+  }
+
+  &.heading-wrap-carbike {
+    @include max-screen ($breakpoint-mobile) {
+      .heading-subtext {
+        height: 70px;
+        max-width: 250px;
+      }
+    }
+  }
+
+  &.heading-wrap-goods-color {
+    max-width: 275px;
+    margin: auto;
+
+    .heading {
+      margin-bottom: 12px;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 180px;
+      margin-bottom: 18px;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    .heading-main-subpage {
+      margin-top: 0;
+    }
+
+    .heading-family-walk {
+      .heading {
+        margin-bottom: 20px;
+      }
+
+      .heading-subtext {
+        width: 315.5px;
+        height: 55.5px;
+        margin-top: 12px;
+      }
+    }
+
+    .heading-guide-walk {
+      .heading {
+        margin-bottom: 20px;
+      }
+
+      .heading-subtext {
+        width: 196.5px;
+        height: 56px;
+        margin-top: 13px;
+      }
+    }
+
+    .heading-free-walk {
+      .heading {
+        margin-bottom: 18px;
+      }
+
+      .heading-subtext {
+        width: 256.5px;
+        height: 25px;
+        margin-top: 14px;
+      }
+    }
+  }
+
+  &.heading-wrap-video-musasabi {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 35px;
+    }
+
+    .heading-subtext {
+      height: 91px;
+      width: 300px;
+
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 10px;
+        height: 65px;
+      }
+
+      @include min-screen($breakpoint-mobile + 1) {
+        height: 37px;
+        width: 731px;
+        transform: translate(-10px, 0px);
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(7px, -1px);
+      }
+    }
+
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 54px;
+      }
+    }
+  }
+
+  &.heading-howto-musasabi {
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-bottom: 54px;
+      }
+    }
+
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(10px, 0px);
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(9px, 1px);
+        height: 33px;
+      }
+    }
+  }
+
+  &.heading-sumika-faq {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 24px;
+    }
+
+    .heading-subtext {
+      svg {
+        @include max-screen($breakpoint-mobile) {
+          position: relative;
+          top: -15px;
+          width: 200px;
+          height: 35px;
+        }
+      }
+    }
+
+    .heading-text {
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &.heading-wrap-menu {
+    .heading-text {
+      @include min-screen($breakpoint-mobile + 1) {
+        letter-spacing: -0.04em;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 22.5px;
+      }
+    }
+
+    .heading-subtext {
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-top: 2px;
+        height: 34px;
+      }
+
+      svg {
+        @include min-screen($breakpoint-mobile + 1) {
+          width: 377px;
+          height: 34px;
+          margin-left: -17px;
+        }
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 7px auto 0;
+        height: 26px;
+      }
+    }
+
+    .heading {
+      @include max-screen($breakpoint-mobile) {
+        margin: 24px 0 41px;
+      }
+    }
+  }
+
+  &.heading-course-challenge {
+    margin-bottom: 35px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 58px;
+    }
+
+    .heading-subtext {
+      max-width: 139px;
+      margin: 0 auto;
+      height: 29px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 201px;
+        height: 36px;
+      }
+    }
+  }
+
+  &.heading-kart-challenge {
+    margin-bottom: 50px;
+    .heading-subtext {
+      max-width: 959px;
+      margin: 0 auto;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        width: 100%;
+        max-width: 335px;
+      }
+    }
+  }
+
+  &.heading-wrap-green-line {
+    text-align: center;
+    .heading-subtext {
+      svg {
+        max-width: 365px;
+        height: 32px;
+        background-image: linear-gradient(0deg, #c3e8d8 21.43%, #ffffff 21.43%, #ffffff 50%, #c3e8d8 50%, #c3e8d8 71.43%, #ffffff 71.43%, #ffffff 100%);
+        background-size: 35.00px 40.00px;
+        background-position-y: 10px;
+        background-repeat: repeat-x;
+      }
+    }
+  }
+
+  &.heading-wrap-youtube {
+    @include max-screen ($breakpoint-mobile) {
+      .heading-subtext {
+        height: 80px;
+        max-width: 240px;
+      }
+    }
+  }
+
+  &.heading-wrap-townList {
+    border-bottom: 1px solid #999999;
+    margin-bottom: 60px;
+    .heading {
+      margin-bottom: 17px;
+    }
+    .heading-subtext {
+      max-width: 122px;
+      margin-top: 0;
+
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 80px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &.heading-nozominoyu-text {
+
+    .heading-text {
+      @include max-screen($breakpoint-mobile) {
+        // sass-lint:disable-block no-important
+        font-size: 38px !important;
+        position: relative;
+        left: 13px;
+      }
+    }
+
+    .heading-subtext {
+      svg {
+        width: 293px;
+        height: 57px;
+        @include max-screen($breakpoint-mobile) {
+          width: 212px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  &.heading-wrap-auto {
+    .heading-subtext {
+      width: 100%;
+      height: 34px;
+
+      svg {
+        margin: auto;
+      }
+
+      @include max-screen ($breakpoint-mobile) {
+        height: 20px;
+        margin-top: 8px;
+      }
+    }
+    @include max-screen ($breakpoint-mobile) {
+      .heading {
+        margin-bottom: 38px;
+      }
+    }
+  }
+
+  &.two-lines-sp {
+    @include max-screen ($breakpoint-mobile) {
+      .heading-subtext {
+        min-height: 60px;
+      }
+    }
+  }
+
+  &.sync-fix {
+    @include min-screen ($breakpoint-mobile+1) {
+      .heading-text {
+        letter-spacing: 0.1em;
+      }
+    }
+    @include max-screen ($breakpoint-mobile) {
+      .heading {
+        .heading-text {
+          font-size: 23px;
+        }
+        .heading-subtext {
+          margin-top: 0;
+          font-size: 22px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  &.heading-exhibit {
+    .heading-subtext {
+      max-width: 297px;
+      height: 48px;
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 206px;
+      }
+    }
+  }
+
+  &.heading-contents {
+    .heading-text {
+      -webkit-text-fill-color: #fff;
+      background: transparent;
+      font-size: 42px;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+    .heading-subtext {
+      margin-top: 0;
+      max-width: 989px;
+      width: 100%;
+    }
+  }
+
+  &.heading-experience {
+    .heading-text {
+      font-size: 41px;
+      letter-spacing: 0.02em;
+    }
+    .heading-subtext {
+      margin-top: 0;
+    }
+  }
+
+  &.heading-comparison {
+    text-align: center;
+
+    &-musasabi { //musasabi comparison SP
+      .heading-subtext {
+        @include max-screen($breakpoint-mobile) {
+          height: 60px;
+        }
+      }
+    }
+    .heading-subtext {
+      max-width: 491px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        height: auto;
+        margin: -46px auto 0;
+        max-width: 350px;
+      }
+    }
+
+    .heading-aqua-labo {
+      .heading-subtext {
+        height: 48px;
+      }
+    }
+
+    .heading-mammal-labo {
+      .heading-subtext {
+        height: 55px;
+      }
+    }
+  }
+
+  &.heading-zipline {
+    .heading {
+      .heading-subtext {
+        max-width: 793px;
+        left: -20px;
+      }
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    .subpage-section-family-walk {
+      margin-top: 72px;
+    }
+
+    .subpage-section-aqua-labo {
+      margin-top: 150px;
+    }
+  }
+
+  &.heading-collection {
+    .heading-text {
+      letter-spacing: 0.10em;
+      font-size: 36px;
+    }
+  }
+
+
+
+
+
+
+}

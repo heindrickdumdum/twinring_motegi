@@ -1,0 +1,33 @@
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+
+  .image-list-item {
+    flex: 0 33%;
+    display: block;
+    max-width: 320px;
+    margin-bottom: 30px;
+    
+    .image-list-desc {
+      padding: 14px 0;
+      font-size: 18px;  
+
+      @include max-screen ($breakpoint-mobile) {
+        padding: 0;
+        font-size: 14px;
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      flex: 0 48%;
+      //max-width: 160px;
+      margin-bottom: 18px;
+    }
+  }
+  
+  @include max-screen ($breakpoint-mobile) {
+    //justify-content: space-evenly;
+  }
+}

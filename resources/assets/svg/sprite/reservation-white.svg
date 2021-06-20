@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="34" viewBox="0 0 104 34">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 36px;
+        fill: #fff;
+        text-anchor: middle;
+        font-family: RoHMinSKokPro-Md, RoHMinSKokPro;
+      }
+    </style>
+  </defs>
+  <text id="ご予約" class="cls-1" transform="translate(49.5 30.99)"><tspan x="0">ご予約</tspan></text>
+</svg>

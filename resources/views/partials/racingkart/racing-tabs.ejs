@@ -1,0 +1,67 @@
+<%
+if (typeof modifier === 'undefined'){
+  var modifier = '';
+}
+
+
+%>
+
+
+<% if(racingKartTabs) { var arrTabs = [];%>
+  <div class="u-show-pc tab-underline">
+    <ol id="tabs" class="tabs tabs-goods u-show-pc" >
+      <li class="tab tab-goods tab-motegi tabs-racing">
+        <input autocomplete='on' type="radio" id="tab-1" name="tab-goods" class="tab-month" value="1" checked>
+        <label class="lbl-goods lbl-racing" for="tab-1">1回目の方</label>
+
+      </li>
+      <li class="tab tab-goods tabs-racing">
+        <input autocomplete='on' type="radio" id="tab-2" name="tab-goods" class="tab-month" value="2" >
+        <label class="lbl-goods lbl-racing-2" for="tab-2">
+          2回目以降の方<br>
+          レーシングカート会員の方
+        </label>
+      </li>
+    </ol>
+  </div>
+
+  <div class="bg-white">
+    <div class="custom-select u-show-sp custom-select-goods-sp">
+      <div id="customSelect" class="select-selected select-selected-goods"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/goods/ico-motegi.png') %>" alt="Motegi"> ツインリンクもてぎ<br>オリジナルグッズ</div>
+      <div id="customSelectItems" class="select-items select-items-goods select-hide">
+        <div class="option select-goods-option" value="1"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/goods/ico-motegi.png') %>" alt="Motegi"> ツインリンクもてぎ<br>オリジナルグッズ</div>
+        <div class="option select-goods-option" value="2"><img class="lbl-ico ico-kids" src="<%= mix('/assets/images/goods/ico-kids.png') %>" alt="Motegi">お子さま向けグッズ</div>
+        <div class="option select-goods-option" value="3"><img class="lbl-ico ico-motor" src="<%= mix('/assets/images/goods/ico-motor.png') %>" alt="Motegi">モータースポーツ<br>ファングッズ</div>
+        <div class="option select-goods-option" value="4"><img class="lbl-ico ico-honda" src="<%= mix('/assets/images/goods/ico-honda.png') %>" alt="Motegi">ホンダファングッズ</div>
+      </div>
+    </div>
+  </div>
+
+<% } %>
+
+<% if(racingKartTabs) { %>
+  <div class="bg-grey l-container-m">
+    <ul id="tab-banner" class="tab-banner tab-banner-racing" data-tab="1">
+      <li class="tab-banner-motegi" data-tab="1">
+        <h3 class="tab-banner-title"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/racingkart/racing-title1.png') %>" alt="タイムアタックセッション"></h3>
+        <span class="table-banner-span">気軽に本格カートにチャレンジ！</span>
+        <p class="table-banner-desc">はじめてレーシングカートに乗る人や練習中のビギナー、また女性も安心して楽しめる初心者だけの走行枠。 <br>
+        普通運転免許証があれば手ぶらでOK！まずはキミの可能性に挑戦してみよう。</p>
+      </li>
+      <li class="tab-banner-motegi" data-tab="2">
+        <h3 class="tab-banner-title"><img class="lbl-ico ico-motegi" src="<%= mix('/assets/images/racingkart/racing-title2.png') %>" alt="タイムアタックセッション"></h3>
+        <span class="table-banner-span">レーサー気分で最速ラップを目指せ！</span>
+        <p class="table-banner-desc">参加ドライバーがベストタイムを狙い、全開アタックをする上級者向けの走行枠。<br>
+        レース同様の実況アナウンスがさらにバトルを盛り上げ、プロドライバーになった気分で走行できます。</p>
+      </li>
+    </ul>
+    <ul id="program-list" class="tiles tilesGoodsList" data-tab="1">
+      <li class="tile program-item program-item-goods" data-tab="1">
+        This is tab 1
+      </li>
+      <li class="tile program-item program-item-goods" data-tab="2">
+        This is tab 2
+      </li>
+    </ul>
+  </div>
+<% } %>

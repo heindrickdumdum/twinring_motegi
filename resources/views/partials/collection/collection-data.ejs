@@ -1,0 +1,30 @@
+<% if(dataCollection) { %>
+  <ul class="goods-shop-list collection-data-list">
+    <% dataCollection.forEach( item => { %>
+      <li class="goods-shop-items experience-item" data-age="<%- item.age %>" data-grade="<%- item.grade %>" data-passport="<%- item.passport %>" >
+        <div class="wrapper-container experience-wrapper">
+          <div class="area-item-image-wrapper">
+            <a href="<%- item.link %>">
+              <img src="<%- item.imgPath %>" alt="Collection Hall">
+            </a>
+          </div>
+          <div class="area-item-desc-wrapper collection-desc-wrapper ">
+            <h3 class="subpage-title">
+              <span><a class="" href="<%- item.link %>"><%- item.colorTitle %> </a></span>
+            </h3>
+            <p class="desc"><%- item.desc %></p>
+            <ul class="carbike-article-list details-list ">
+              <% item.dataList.forEach( dataitem => { %>
+                <li class="carbike-article-list-item details-list-item">
+                  <span class="carbike-article-list-label details-list-item-label"><%= dataitem.label %></span>
+                  <p class="carbike-article-list-desc details-list-item-desc"><%- dataitem.content %></p>
+                </li>
+              <% }) %>
+            </ul>
+            <p class="experience-info"><%- item.info %></p>
+          </div>
+        </div>
+      </li>
+    <% }) %>
+  </ul>
+  <% } %>

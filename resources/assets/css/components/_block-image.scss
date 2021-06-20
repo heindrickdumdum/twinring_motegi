@@ -1,0 +1,250 @@
+.block-image {
+  margin-top: 66px;
+  padding-bottom: 126px;
+  position: relative;
+
+  &-hellowoods-program {//program experience page
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -4px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -12px !important;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc((100% / 2) + 70px);
+    background-color: $color-light-gray;
+
+    @include max-screen($breakpoint-mobile) {
+      height: calc((100% / 2) + 118px);
+    }
+  }
+
+  &.block-image-hellowoods {
+    padding-bottom: 0;
+
+    &-program {//program experience page
+      @include min-screen($breakpoint-mobile + 1) {
+        padding-bottom: 90px !important;
+        margin-bottom: 75px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        padding-bottom: 0px !important;
+        margin-bottom: 45px;
+      }
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 27px;
+    padding-bottom: 36px;
+  }
+}
+
+.block-image-list {
+  display: flex;
+  margin: 0 -8px;
+  position: relative;
+  z-index: $z-min;
+  justify-content: space-between;
+
+
+  &.block-image-list-hellowoods {
+    margin: 0;
+    justify-content: center;
+    padding-bottom: 34px;
+  }
+  @include max-screen($breakpoint-mobile) {
+    margin: 0;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.block-image-text {
+  img {
+    width: 134px;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 92px;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+.block-image-item {
+  margin: 0 8px;
+  width: calc(100% / 2);
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    margin: 0 0 24px;
+  }
+
+  .block-image-item-link {
+    // overflow: hidden;
+    // display: block;
+  }
+
+  &.block-image-item-last {
+    .block-image-text {
+      img {
+        width: 156px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 105px;
+        }
+      }
+    }
+  }
+
+  &.block-image-item-hellowoods {
+    max-width: 598px;
+
+    .block-image-text-hellowoods {
+      text-align: center;
+    }
+    
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 26px;
+      &:last-child {
+        margin-bottom: 4px;
+      }
+    }
+
+    &-program {//program page
+      @include min-screen($breakpoint-mobile + 1) {
+        margin-left: 20px;
+      }
+
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+
+  &.block-image-item-collection-pit {
+    width: auto;
+    margin: auto;
+  }
+}
+
+.block-image-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 255px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &-program {
+    @include max-screen($breakpoint-mobile) {
+      height: 156px !important;
+    }
+  }
+
+  &.hoteltwinring-lounge {
+    height: auto;
+    padding: 150px 0;
+    background-image: url(/assets/images/hoteltwinring/lounge-bg.jpg);
+    display: block;
+
+    .hoteltwinring {
+      width: 100%;
+
+      @include min-screen ($breakpoint-mobile + 1) {
+        max-width: 500px;
+        min-height: 300px;
+        padding-top: 20px;
+      }
+    }
+
+    .svg-subtext {
+      .heading-subtext {
+        max-width: 270px;
+        height: 65px;  
+
+        @include max-screen ($breakpoint-mobile) {
+          max-width: 137px;
+          height: 28px;
+        }
+      }
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 100px;
+      padding-bottom: 105px;
+      background-image: url(/assets/images/hoteltwinring/lounge-bg-sp.jpg);
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    height: auto;
+    padding: 10% 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    transition: ease 0.5s all;
+  }
+}
+
+
+.block-image-text-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 216px;
+  height: 136px;
+  background-color: rgba($color-white, .89);
+
+  &.hoteltwinring {
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 50px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding: 20px;
+      padding-top: 13px;  
+
+      .heading-text {
+        font-size: 26px;
+
+        &.heading-text-default {
+          font-size: 14px;
+          letter-spacing: 6px;
+          font-weight: bold;
+        }
+      }
+      .block-image-subtext {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    width: 141px;
+    height: 76px;
+  }
+}
+
+.block-image-subtext {
+  display: block;
+  font-size: 15px;
+  color: $color-mineshaft;
+  text-align: center;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,430 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'lunchMarcherant';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-restaurant restaurant-wrapper breakfast-marcherant lunch-marcherant">
+    <div class="mv mv-restaurant mv-subpage-restaurant">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/lunch_marcherant/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/lunch_marcherant/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading mv-heading-marcherant-lunch u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-lunch',
+            imgPath: mix('/assets/images/lunch_marcherant/top-title.png'),
+            alt: 'ランチ'
+          }) %>
+        </div>
+
+        <div class="mv-heading hellowoods-mv-heading mv-heading-marcherant-lunch u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-lunch',
+            imgPath: mix('/assets/images/lunch_marcherant/top-title-sp.png'),
+            alt: 'ランチ'
+          }) %>
+        </div>
+
+        <div class="u-show-pc mv-today mv-logo mv-granroom-logo" style="background-image: url(<%= mix('/assets/images/marcherant/logo.png') %>);">
+          <div class="mv-l-inner">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner-wrap">
+        <div class="subpage-inner">
+          <div class="color-title u-show-pc">
+            <img src="<%- mix('/assets/images/lunch_marcherant/color-title.png') -%>" alt="地元のオーガニック野菜やブランド食材を使った
+            ホテルシェフおすすめのランチ">
+          </div>
+
+          <div class="color-title u-show-sp">
+            <img src="<%- mix('/assets/images/lunch_marcherant/color-title-sp.png') -%>" alt="地元のオーガニック野菜やブランド食材を使った
+            ホテルシェフおすすめのランチ">
+          </div>
+          
+          <p class="subpage-desc-breakfast desc-lunch">
+            日帰りのお客様も明るく落ち着いた店内で、<br class="u-show-sp"/>ゆっくりお楽しみいただけます。
+          </p>
+        </div>
+      </div>
+
+      <!-- recommend menu -->
+      <section class="recommend-menu">
+        <div class="l-container">
+          <div class="recommend-menu-container">
+            <div class="l-section-title u-show-pc">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-restaurant heading-recommend-menu',
+                heading_level: 2,
+                text: `Recommend`,
+                subtextvg: 'lunch-marcherant-recommend-title',
+                altSubtextvg: '森のごちそうが詰まったホテルシェフの自信作石窯焼きプレート'
+              }) %>
+            </div>
+            
+            <div class="l-section-title u-show-sp">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-restaurant heading-recommend-menu',
+                heading_level: 2,
+                text: `Recommend`,
+                subtextvg: 'lunch-marcherant-recommend-title-sp',
+                altSubtextvg: '森のごちそうが詰まったホテルシェフの自信作石窯焼きプレート'
+              }) %>
+            </div>
+
+            <div class="recommend-feature">
+              <ul class="recommend-feature-list">
+                <li class="recommend-feature-item">
+                  <div class="recommend-feature-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/recommend-1.jpg') -%>);"></div>
+                  <h3 class="recommend-feature-title u-show-pc">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-recommend-1-title',
+                      svgtitle: 'とちぎ和牛100％石窯焼きハンバーグプレート'
+                    }) -%>
+                  </h3>
+                  <h3 class="recommend-feature-title u-show-sp">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-recommend-1-title-sp',
+                      svgtitle: 'とちぎ和牛100％石窯焼きハンバーグプレート'
+                    }) -%>
+                  </h3>
+                  <p class="recommend-feature-price">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-recommend-1-price',
+                      svgtitle: '1,530円'
+                    }) -%>
+                  </p>
+                  <p class="recommend-feature-desc">石窯で仕上げるMARCHERANT特製ハンバーグはとちぎ和牛の旨みが溢れる自慢の逸品</p>
+                  <div class="recommend-feature-box">
+                    <p class="recommend-feature-tag">付け合わせ</p>
+                    <p class="recommend-feature-text">自然農園空土ファーム直送野菜サラダ / アッシュパルマンティエ(じゃがいものグラタン) / 桐生酵母のパン /自家製キャロットラペ</p>
+                  </div>
+                </li>
+
+                <li class="recommend-feature-item">
+                  <div class="recommend-feature-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/meat-new.jpg') -%>);"></div>
+                  <h3 class="recommend-feature-title feature-title-2">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-recommend-2-title',
+                      svgtitle: '厚切りベーコンの石窯焼きプレート'
+                    }) -%>
+                  </h3>
+                  <p class="recommend-feature-price">
+                    <%- include('/partials/svg', {
+                      name: 'lunch-marcherant-recommend-2-price',
+                      svgtitle: '1,020円'
+                    }) -%>
+                  </p>
+                  <p class="recommend-feature-desc">3種類（ワサビ &sdot; ハニーマスタード &sdot; 黒胡椒）のソースで味わう <br class="u-show-pc"/>
+                    ボリュームたっぷりの特製厚切りベーコン
+                  </p>
+                  <div class="recommend-feature-box">
+                    <p class="recommend-feature-tag">付け合わせ</p>
+                    <p class="recommend-feature-text">自然農園空土ファーム直送野菜サラダ / アッシュパルマンティエ(じゃがいものグラタン) / 桐生酵母のパン / 自家製キャロットラペ</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="recommend-menu-details">
+            <ul class="recommend-menu-details-list">
+              <li class="recommend-menu-details-item">
+                <div class="recommend-menu-details-main-title">
+                  <img src="<%- mix('/assets/images/lunch_marcherant/main-title-1.png') -%>" alt="素材の旨味が広がる
+                  特注の石窯で焼き上げた絶品ランチ">
+                </div>
+                <div class="recommend-feature-image details-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/left-image.jpg') -%>);"></div>
+                <h3 class="recommend-feature-title details-title">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-title-left-title',
+                    svgtitle: '磨宝卵と粗挽き那須野ヶ原牛の石焼きご飯 '
+                  }) -%>
+                </h3>
+                <p class="recommend-feature-price details-price">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-title-left-price',
+                    svgtitle: '1,200円'
+                  }) -%>
+                </p>
+                <div class="recommend-menu-details-context">
+                  <p class="recommend-feature-desc details-desc">コクと旨味が強い磨宝卵と、粗挽きの那須野ヶ原牛を石窯で焼きあげました。お好みでモッツァレラチーズと特製和風ソースをかけてお召し上がりください。</p>
+                  <div class="recommend-feature-box details-box">
+                    <p class="recommend-feature-tag details-tag">付け合わせ</p>
+                    <p class="recommend-feature-text details-text">味噌汁 / 小鉢</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="recommend-menu-details-item">
+                <div class="recommend-menu-details-main-title">
+                  <img src="<%- mix('/assets/images/lunch_marcherant/main-title-2.png') -%>" alt="サラダ・フルーツ・デザート付きで
+                  お子さまに人気のランチセット">
+                </div>
+                <div class="recommend-feature-image details-image" style="background-image: url(<%- mix('/assets/images/lunch_marcherant/right-image.jpg') -%>);"></div>
+                <h3 class="recommend-feature-title details-title title-2">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-title-right-image',
+                    svgtitle: '磨宝卵と粗挽き那須野ヶ原牛の石焼きご飯 '
+                  }) -%>
+                </h3>
+                <p class="recommend-feature-price details-price price-2">
+                  <%- include('/partials/svg', {
+                    name: 'lunch-marcherant-title-right-price',
+                    svgtitle: '850円'
+                  }) -%>
+                </p>
+                <div class="recommend-menu-details-context">
+                  <div class="recommend-feature-box details-box">
+                    <p class="recommend-feature-tag details-tag">セット内容</p>
+                    <p class="recommend-feature-text details-text">MARCHERANT特製カレーライス（甘口）/ 
+                      エビフライ / 唐揚げ / ウィンナー / フレンチフライ / サラダ / フルーツ / デザート</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="recommend-menu-details">
+            <div class="recommend-menu-details-main-title main-title-3">
+              <img src="<%- mix('/assets/images/lunch_marcherant/main-title-3.png') -%>" alt="中華・パスタなど豊富なランチメニュー">
+            </div>
+
+            <ul class="recommend-menu-details-list">
+              <% getData().data.lunchMarcherantRichMenu.forEach(item => { %>
+              <li class="recommend-menu-details-item">
+                <div class="recommend-feature-image details-image" style="background-image: url(<%- item.image -%>);"></div>
+                <h3 class="recommend-feature-title details-title">
+                  <%- include('/partials/svg', {
+                    name: item.titlesvg,
+                    svgtitle: item.titlealt
+                  }) -%>
+                </h3>
+                <p class="recommend-feature-price details-price">
+                  <%- include('/partials/svg', {
+                    name: item.pricesvg,
+                    svgtitle: item.pricealt
+                  }) -%>
+                </p>
+                <div class="recommend-menu-details-context">
+                  <p class="recommend-feature-desc details-desc"><%- item.desc -%>
+                  </p>
+                  <div class="recommend-feature-box details-box">
+                    <p class="recommend-feature-tag details-tag"><%- item.tag -%></p>
+                    <p class="recommend-feature-text details-text"><%- item.tagDesc -%></p>
+                  </div>
+                </div>
+              </li>
+              <% }); %>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- shops info -->
+      <section class="shops-information">
+        <div class="l-container">
+          <div class="subpage-inner">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-restaurant heading-shop-info',
+                text: `Shop's Information`,
+                subtextvg: 'breakfast-marcherant-shop-title',
+                altSubtextvg: '店舗情報'
+              }) %>
+            </div>
+    
+            <table class="table">
+              <tbody>
+                <tr class="table-row">
+                  <th class="table-head">場所</th>
+                  <td class="table-col">ホテルツインリンク１階　<br class="u-show-sp"/><a class="link" href="/map_m/">Mapを見る</a></td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">
+                    ランチ　<br class="u-show-sp"/>営業時間
+                    <!-- 朝食　<br class="u-show-sp"/>営業時間 -->
+                  </th>
+                  <td class="table-col">11: 30 ~14: 00<br class="u-show-sp"/> (L.O.13: 30)</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">定休日
+                  </th>
+                  <td class="table-col"><a class="link" href="/hours_m/">ツインリンクもてぎの休業日</a>に準じます
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">座席数</th>
+                  <td class="table-col">254　※個室4部屋</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head">備考</th>
+                  <td class="table-col">
+                    <p>※レース &sdot; イベント開催時は特別メニューになる場合がございます。</p>
+                    <p>※メニューは仕入れ状況により異なる場合がございます。</p>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="shop-info-collapse">
+              <div class="subpage-section subpage-section-collapse marcherant-collapse-section">
+                <div class="subpage-collapse-heading js-collapse-button">食物アレルギーをお持ちのお客様へ</div>
+                <div class="subpage-collapse-description">
+                  <div class="subpage-collapse-content marcherant-collapse-content">
+                    <p class="text-center">
+                      食物アレルギーをお持ちのお客さまは、ご予約時にお知らせください。<br/>
+                      その場合、できる限りアレルゲンの除去に努めた料理を提供させて頂きますが、<br/>
+                      アレルゲンの除去を保証するものではございませんのでご了承ください。
+                      <!-- 食物アレルギー症状のある客様は、ご予約時にお知らせください。<br>
+                      その場合、できる限りアレルゲンの除去に努めた料理を提供させて頂きますが、<br>
+                      アレルゲンの除去を保証するものではございませんのでご了承ください。 -->
+                    </p>
+                    <p class="text-center"><b>対象</b></p>
+                    <table class="table table-marcherant-collapse">
+                      <tbody>
+                        <tr class="table-row">
+                          <th class="table-head">森のレストラン MARCHERANT</th>
+                          <td class="table-col">
+                           &sdot; ランチ<br/>
+                           &sdot; ディナーセット
+                          </td>
+                        </tr>
+          
+                        <tr class="table-row">
+                          <th class="table-head">里山懐石　登谷</th>
+                          <td class="table-col">
+                           &sdot; 里山懐石コース<br>
+                           &sdot; お子様御膳<br>
+                           &sdot; 幼児御膳
+                          </td>
+                        </tr>
+          
+                        <tr class="table-row">
+                          <th class="table-head">森と星空の<br>
+                            キャンプヴィレッジ</th>
+                          <td class="table-col">
+                            &sdot; グランピング &sdot; ワイド森のテラス　スペシャルＢＢＱプラン<br>
+                            &sdot; らくらくBBQプラン
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="p-red">
+                      また「森のレストラン MARCHERANT」の【ディナービュッフェ】【朝食ビュッフェ】では、特定原材料８品目（卵、乳、小麦、えび、かに、そば、落花生、大豆）の使用について店舗のメニュー表にて表示しております。これらは表示している特定原材料がその料理に使用されていることを明記したものであり、記載のない特定原材料がその料理に含まれていないことを保証するものではありません。
+                    </p>
+                    <p class="">
+                      アレルゲンの除去が保証されないとお困りのお客さまは、お客さまの安全を第一に考え、やむを得ず食事の提供をお断りすることがございます。 その場合ご自身での食事の持ち込みをお受けいたしますので、事前にお申し出ください。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- restaurant menu -->
+      <div class="other-menu">
+        <div class="l-section-title u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-restaurant heading-other-menu',
+            text: 'Other Menu',
+            subtextvg: 'lunch-marcherant-other-menu-title',
+            altSubtextvg: 'ランチ 以外のメニュー'
+          }) %>
+        </div>
+
+        <div class="l-section-title u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-center heading-restaurant heading-other-menu heading-other-lunch-marcherant',
+            text: 'Other Menu',
+            subtextvg: 'lunch-marcherant-other-menu-title-sp',
+            altSubtextvg: 'ランチ 以外のメニュー'
+          }) %>
+        </div>
+
+        <%- include('/partials/restaurant/section-menu-marcherant', {
+          data: getData().data.lunchMarcherantOtherMenu
+        }) -%>
+      </div>
+
+      <section class="toya-reservation">
+        <div class="hoteltwinring-reservation">
+          <div class="hotel-reservation-wrap">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'hoteltwinring-heading-reservation fill-white',
+                text: 'Reservation',
+                alt: '',
+                altSubtext: '',
+                subtextvg: 'breakfast-marcherant-reservation-white',
+                altSubtextvg: 'ご予約・お問い合わせ'
+              }) %>
+            </div>
+
+            <div class="reservation-cta">
+              <div class="l-button cta-btn">
+                <span>ホテルツインリンクにご宿泊で <br/>
+                  マルシェラン利用のお客様</span>
+                <%- include('/partials/button', {
+                  modifier: 'reservation-button',
+                  text: 'ご予約はこちら',
+                  link: 'https://asp.hotel-story.ne.jp/ver3d/planlist.asp?hcod1=61730&hcod2=001&c2plan=9001&clrmode=true',
+                  newTab: true
+                }) -%>
+              </div>
+              <div class="l-button cta-btn">
+                <span>お問い合わせのお客様</span>
+                <div class="u-show-sp">
+                  <%- include('/partials/button', {
+                    modifier: 'reservation-button',
+                    text: '<span>Tel.0285-64-0489<br/><small>受付時間 10:00~17:30</small></span>',
+                    link: 'tel:0285640489'
+                  }) -%>
+                </div>
+
+                <div class="button reservation-button u-show-pc"><span>Tel.0285-64-0489<br><small>受付時間 10:00～17:30</small></span>
+                  <i class="button-icon">
+
+
+                <svg xmlns="http://www.w3.org/2000/svg">
+
+                  <title></title>
+
+
+                  <use xlink:href="/assets/svg/sprite.svg#sprite-arrow"></use>
+                </svg>
+
+
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- other restaurant module-->
+      <%- include('/partials/marcherant_set/section-other-restaurant') -%>
+
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsMarcherantLunch
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

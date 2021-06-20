@@ -1,0 +1,199 @@
+
+.alt-feature {
+  align-items: center;
+  margin-bottom: 130px;
+  display: flex;
+
+  .order-1 {order: 1;}
+  .order-2 {order: 2;}
+
+  @include max-screen ($breakpoint-mobile) {
+    max-width: 514px;
+    margin: auto;
+    margin-bottom: 40px;
+
+    &.row {
+      display: block;
+    }
+  }
+
+  .alt-feature-image-wrapper {
+    text-align: center;
+    width: 50%;
+
+    @include max-screen ($breakpoint-mobile) {
+      width: calc(100% + 12px);
+      max-width: 430px;
+      margin: 0 auto;
+      margin-bottom: 8px;
+    }
+  }
+
+  .alt-feature-desc {
+    max-width: 465px;
+    margin: auto;
+    width: 50%;
+
+    &.right {margin-right: 0;}
+    &.left {margin-left: 0;}
+
+    .alt-feature-desc-wrapper {
+      background: url('/assets/images/frame-v2.png') no-repeat;
+      background-size: 99% 100%;
+      padding: 40px 40px 45px;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        padding: 5px 10px;
+        color: $color-white;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1;
+      }
+
+      &.new::before {
+        content: "NEW!";
+        background-color: #51ca30;
+        top: 10px;
+        left: 12px;
+
+
+        @include max-screen ($breakpoint-mobile) {
+          top: 5px;
+          left: 5px;
+          font-size: 9px;
+        }
+      }
+
+      &.zip-line {
+        @include min-screen ($breakpoint-mobile+1) {
+          padding: 71px 40px 45px;
+        }
+
+        .l-button {
+          @include min-screen ($breakpoint-mobile+1) {
+            margin-top: 85px;
+          }
+        }
+      }
+
+      &.zipline-green-label::before {
+        content: "モビパークパスポート対象";
+        background-color: #4fae32;
+        top: -15px;
+        left: 0;
+        font-size: 17px;
+        padding: 9px 18px;
+        border-radius: 5px;
+
+        @include max-screen ($breakpoint-mobile) {
+          display: none;
+        }
+      }
+
+      &.zipline-grey-label::before {
+        content: "モビパークパスポート対象外";
+        background-color: #9c9c9c;
+        top: -15px;
+        left: 0;
+        font-size: 17px;
+        padding: 9px 18px;
+        border-radius: 5px;
+
+        @include max-screen ($breakpoint-mobile) {
+          display: none;
+        }
+      }
+
+      .zipline-grey-label-sp {
+        background-color: #9c9c9c;
+        padding: 9px 18px;
+        border-radius: 5px;
+        display: block;
+        max-width: 318px;
+        width: 100%;
+        color: #fffefe;
+        margin-bottom: 20px;
+      }
+      .zipline-green-label-sp {
+        background-color: #4fae32;
+        padding: 9px 18px;
+        border-radius: 5px;
+        display: block;
+        max-width: 318px;
+        width: 100%;
+        color: #fffefe;
+        margin-bottom: 20px;
+      }
+
+      .alt-feature-desc-text {
+        line-height: 2;
+      }
+
+      @include max-screen ($breakpoint-mobile) {
+        padding: 10px 15px;
+        padding-bottom: 22px;
+        background-size: 100% 100%;
+      }
+
+      img.animal-icon {
+        position: absolute;
+
+        @include max-screen ($breakpoint-mobile) {
+          right: auto !important;
+          left: -12px !important;
+          max-width: 50px;
+        }
+
+        &.owl {
+          right: 0;
+          top: -50px;
+
+          @include max-screen ($breakpoint-mobile) {
+            top: -48px;
+          }
+        }
+
+        &.rabbit {
+          left: -40px;
+          top: -30px;
+
+          @include max-screen ($breakpoint-mobile) {
+            top: -48px;
+          }
+        }
+
+        &.rabbit-right {
+          right: 0px;
+          top: -30px;
+
+          @include max-screen ($breakpoint-mobile) {
+            top: -48px;
+          }
+        }
+
+        &.bird {
+          top: -40px;
+          right: 0;
+          @include max-screen ($breakpoint-mobile) {
+            top: -48px;
+          }
+        }
+
+
+
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

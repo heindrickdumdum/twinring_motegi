@@ -1,0 +1,223 @@
+<%
+  carList = [
+    {
+      imgPath: mix('/assets/images/car-and-bike/car-1.jpg'),
+      category: 'モビパークパスポート対象',
+      categoryBg: 'green-1',
+      icon: 'family',
+      title: 'アクロエックス',
+      link: '/mobipark_m/attractions/acro-x.html',
+      dataList: [
+        {
+          label: '保護者と',
+          content: '2歳から'
+        },
+        {
+          label: '一人で',
+          content: '小学3年生以上'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/car-and-bike/car-4.jpg'),
+      category: 'モビパークパスポート対象',
+      categoryBg: 'green-1',
+      icon: 'family',
+      title: '森の教習所',
+      link: '/mobipark_m/attractions/forest-driving-school.html',
+      dataList: [
+        {
+          label: '保護者と',
+          content: 'ひとり座りできる0歳以上'
+        },
+        {
+          label: '一人で',
+          content: '5歳以上'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/car-and-bike/car-3.jpg'),
+      category: 'モビパークパスポート対象',
+      categoryBg: 'green-1',
+      icon: 'family',
+      title: 'ワイルドレーサー',
+      link: '/mobipark_m/attractions/wild-racer.html',
+      dataList: [
+        {
+          label: '保護者と',
+          content: '3歳以上'
+        },
+        {
+          label: '一人で',
+          content: '小学1年生以上'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/car-and-bike/car-2.jpg'),
+      category: 'モビパークパスポート対象',
+      categoryBg: 'green-1',
+      icon: '',
+      title: 'おさんぽでんでん',
+      link: '/mobipark_m/attractions/deb-den-walk.html',
+      dataList: [
+        {
+          label: '保護者と',
+          content: 'ひとり座りできる0歳以上'
+        },
+        {
+          label: '一人で',
+          content: '3歳以上'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/car-and-bike/car-5.jpg'),
+      category: 'モビパークパスポート対象',
+      categoryBg: 'green-1',
+      icon: 'family',
+      title: 'ドリフトS',
+      link: '/mobipark_m/attractions/drifts.html',
+      dataList: [
+        {
+          label: '一人で',
+          content: '身長135cm以上'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/car-and-bike/car-6.jpg'),
+      category: 'モビパークパスポート対象',
+      categoryBg: 'green-1',
+      icon: 'family',
+      title: 'ドリームカート',
+      link: '/mobipark_m/attractions/dream.html',
+      dataList: [
+        {
+          label: '一人で',
+          content: '身長135cm以上'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/car-and-bike/car-7.jpg'),
+      category: 'モビパークパスポート優待',
+      categoryBg: 'green-6',
+      icon: 'family',
+      title: 'チャレンジカート',
+      link: '/mobipark_m/attractions/racingkart/challenge.html',
+      dataList: [
+        {
+          label: '一人で',
+          content: '中学生以上、またはドリームカートかドリフトSを体験された小学4年生以上'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/car-and-bike/car-8.jpg'),
+      category: 'モビパークパスポート優待',
+      categoryBg: 'green-6',
+      icon: 'family',
+      title: 'レーシングカート',
+      link: '/mobipark_m/attractions/racingkart/',
+      dataList: [
+        {
+          label: '一人で',
+          content: '身長140cm以上の小学4年生以上、またはレーシングカートBライセンス保持者、または普通自動車免許保持者'
+        }
+      ]
+    }
+  ]
+
+  bikeList = [
+    {
+      imgPath: mix('/assets/images/car-and-bike/bike-4.jpg'),
+      category: 'モビパークパスポート対象',
+      categoryBg: 'green-1',
+      icon: 'family',
+      title: 'モトレーサー',
+      link: '/mobipark_m/attractions/motoracer.html',
+      dataList: [
+        {
+          label: '一人で',
+          content: '小学3年生以上、もしくはモトツーリングでAライセンス取得の小学1年生以上'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/car-and-bike/bike-3.jpg'),
+      category: 'モビパークパスポート対象',
+      categoryBg: 'green-1',
+      icon: 'family',
+      title: 'モトツーリング',
+      link: '/mobipark_m/attractions/moto-touring.html',
+      dataList: [
+        {
+          label: '一人で',
+          content: '小学3年生以上、もしくはモーターサイクルトレーニングでBライセンス取得の3歳以上'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/car-and-bike/bike-2.jpg'),
+      category: 'モビパークパスポート対象',
+      categoryBg: 'green-1',
+      icon: '',
+      title: 'モーターサイクルトレーニング',
+      link: '/mobipark_m/attractions/motor-cycle-training.html',
+      dataList: [
+        {
+          label: '一人で',
+          content: '補助輪なしで自転車に乗れる３歳以上'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/car-and-bike/bike-1.jpg'),
+      category: 'モビパークパスポート対象',
+      categoryBg: 'green-1',
+      icon: '',
+      title: 'ぶんぶんスクーター',
+      link: '/mobipark_m/attractions/bun-bun-scooter.html',
+      dataList: [
+        {
+          label: '一人で',
+          content: '3歳以上'
+        }
+      ]
+    }
+  ]
+
+  workshopList = [
+    {
+      imgPath: mix('/assets/images/car-and-bike/workshop-1.jpg'),
+      category: 'モビパークパスポート優待',
+      categoryBg: 'green-5',
+      icon: '',
+      title: 'ピット工房組み立て',
+      link: '/collection-hall/pit/',
+      dataList: [
+        {
+          label: '一人で',
+          content: '全年齢対象</br>※走行は身長100cm以上から可'
+        }
+      ]
+    },
+    {
+      imgPath: mix('/assets/images/car-and-bike/workshop-2.jpg'),
+      category: 'モビパークパスポート優待',
+      categoryBg: 'green-5',
+      icon: 'family',
+      title: 'NANONANOアクセサリー',
+      link: '/collection-hall/new/#nanonano',
+      dataList: [
+        {
+          label: '一人で',
+          content: '全年齢対象'
+        }
+      ]
+    }
+  ]
+
+%>

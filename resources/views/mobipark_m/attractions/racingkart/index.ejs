@@ -1,0 +1,203 @@
+<%
+  var title = 'Twin Ring Motegi';
+  pageId = 'racingKart';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage racing-subpage">
+
+    <div class="mv mv-racing">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/racingkart/top-image.jpg') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/collection/top-image-sp.png') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <h2 class="mv-heading hellowoods-mv-heading">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-racing',
+            text: 'Racing Kart',
+            alt: '',
+            subtextvg: 'racing-kart-title',
+            altSubtext: ''
+          }) %>
+        </h2>
+        <div class="u-show-pc mv-today mv-log mv-racing-logo">
+          <div class="mv-l-inner"></div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="l-section l-racing">
+        <section class="info-container info-container-hellowoods">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-mobipark heading-collection',
+                text: 'Information',
+                alt: 'information',
+                altSubtext: '',
+                subtextvg: 'info-subtext'
+              }) %>
+            </div>
+
+            <div class="l-container">
+              <ul class="info-list">
+                <% racingInfo.forEach(item => { %>
+                <li class="info-item">
+                  <a href="<%- item.link %>">
+                    <span><%= item.desc %></span>
+                  </a>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+        </section>
+      </div>
+
+      <div class="l-section l-section-racing">
+        <div class="challenge hellowoods">
+          <div class="l-container">
+            <div class="row">
+              <div class="challenge-left">
+                <div class="challenge-img u-show-pc">
+                  <div class="challenge-img1 racing-img1">
+                    <img src="<%- mix('/assets/images/racingkart/overflow-img-1.png') -%>" alt="梟">
+                  </div>
+                  <div class="challenge-img2">
+                    <img src="<%- mix('/assets/images/racingkart/overflow-img-2.png') -%>" alt="女の子">
+                  </div>
+                </div>
+
+                <div class="challenge-img u-show-sp">
+                  <img src="<%- mix('/assets/images/racingkart/life-overflow-images-sp.png') -%>" alt="梟">
+                </div>
+
+
+              </div>
+              <div class="challenge-right">
+                <p class="heading-text heading-text-racing">
+                  <img src="<%- mix('/assets/images/racingkart/life-overflow-heading.png') -%>" alt="F１ドライバーやMotoGP
+ライダーなど世界のトップ選手も走ったコースで 仲間とともに本格バトル">
+                </p>
+                <p class="desc racing">
+                  はじめての人でもチャレンジできる気軽さがありながら、<br>
+                  スピード感・エンジン音・コーナーリングの感覚はレーシングカーそのもの。本格的なカートアトラクションで、レース気分を味わおう。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-container l-container-racing">
+          <ul class="racing-kart-video">
+            <li class="racing-kart-item">
+              <iframe src="https://www.youtube.com/embed/oSWlpcABowk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+              <p class="racing-desc">レーシングカート仲間と走る編</p>
+            </li>
+            <li class="racing-kart-item">
+              <iframe src="https://www.youtube.com/embed/pc8vmd3llUw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+              <p class="racing-desc">レーシングカート オンボード編</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-container l-container-racing">
+          <h3 class="table-heading table-heading-sp table-heading-racing">
+            <img src="<%- mix('/assets/images/racingkart/attraction-title.png') %>" alt="title">
+          </h3>
+
+          <p class="table-subheading">
+            初心者から本格的に走りたい方までレーサー気分で楽しめるレーシングカート。<br>
+            個人戦と団体戦のイベントも随時開催され、年間を通して仲間と一緒に楽しむことができます。<br>
+            また、レーシングカート会員になるとたくさんのお得な特典が受けられるのでおすすめです。
+          </p>
+
+          <table class="table table-racing">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">場所</th>
+                <td class="table-col">モビパーク内レーシングカート <a href="#" class="link">MAPを見る</a></td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">営業時間</th>
+                <td class="table-col">
+                  午前：営業開始時間～11:30 <br>
+                  午後：13:00～営業終了時間 <br>
+                  <p class="table-desc">※イベントの開催や団体様のご利用により営業時間が変更となる場合がございます。その日の営業開始時間・営業終了時間を含め、詳しくは<u>スケジュール</u>をご確認ください。</p>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">受付</th>
+                <td class="table-col">当日予約制です。レーシングカート受付にてご予約をお願いします。<br>
+                <p class="table-desc">※ご予約は定員に達し次第、終了いたします。</p>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">雨天の運行</th>
+                <td class="table-col">レーシングカート体験走行・タイムアタックセッションのＢ車両での営業を行っております。<br>
+                <p class="table-desc">※荒天や降雪などの悪天候時は、スタッフが危険と判断した場合営業中止、または復旧まで一時営業を見合わせる場合がございます。</p>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">服装</th>
+                <td class="table-col">ヘルメット・グローブを貸出いたします。<br>
+                半そで・半ズボン・スカート・サンダル・厚底靴・ブーツのお客さまは、貸出している腕カバー・ズボン・靴に履き替えていただきます。<br>
+                貸出品は全て無料です。</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <p class="table-subheading-racing">※免許の条件等に「眼鏡等」と記載されている方は、眼鏡もしくはコンタクトレンズを走行時に着用していただく必要がございます。</p>
+        </div>
+      </div>
+
+
+      <div class="l-section">
+        <div class="l-container l-container-racing">
+
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-mobipark heading-racing',
+                text: 'Battle Cart',
+                alt: 'Battle Cart',
+                altSubtext: '',
+                subtextvg: 'battle-cart'
+              }) %>
+            </div>
+
+            <section class="subpage-section subpage-section-racing subapge-section-goods-tab">
+              <%- include('/partials/racingkart/racing-tabs', {
+                racingKartTabs : getData().data.racingTabs
+              }) -%>
+            </section>
+
+        </div>
+      </div>
+
+
+    </main>
+
+
+
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsCollectionPit
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

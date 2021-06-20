@@ -1,0 +1,282 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'collectionPit';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc"
+            style="background-image:url(<%= mix('/assets/images/pit/top-image.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp"
+            style="background-image:url(<%= mix('/assets/images/pit/top-image-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+      <div class="l-container mv-container">
+        <div class="mv-heading mv-heading-default mv-collection-pit">
+          <%- include('/partials/heading', {
+            modifier: '',
+            heading_level: 1,
+            text: 'Pit Workshop',
+            subtextvg: 'pit-mv-title',
+            altSubtextvg: 'ピット工房'
+          }) %>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner-wrap">
+        <div class="subpage-inner subpage-inner-pit-margin">
+          <div class="heading-wrap l-heading-main">
+          <h2 class="heading heading-collection-pit">
+              <span class="heading-texts">
+                <img class="u-show-pc" src="<%= mix('/assets/images/pit/color-title.jpg') %>" alt="Colection Pit">
+                <img class="u-show-sp" src="<%= mix('/assets/images/pit/color-title-sp.jpg') %>" alt="Colection Pit">
+              </span>
+            </h2>
+          </div>
+
+          <div class="subpage-banner">
+            <div class="subpage-banner-inner">
+              <img class="u-show-pc" src="<%= mix('/assets/images/pit/content-image.jpg') %>" alt="森のクラフト体験">
+              <img class="u-show-sp" src="<%= mix('/assets/images/pit/content-image-sp.jpg') %>" alt="森のクラフト体験">
+            </div>
+          </div>
+
+          <h3 class="subpage-title">
+            <span>アクティビティ情報</span>
+          </h3>
+
+          <p>本物の工具を使ってクルマを組み立てて、走らせてみよう。<br> 何度もチャレンジすると組み立てるパーツが増え、難易度が上がっていくよ。</p>
+
+          <table class="table">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">場所</th>
+                <td class="table-col">
+                  ホンダコレクションホール別棟<br class="u-show-sp">ピット工房
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">開催日</th>
+                <td class="table-col">
+                  営業スケジュールは<a href="/collection-hall/schedule/">こちら</a>からご確認ください。
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">所要時間</th>
+                <td class="table-col">約60分（受付は営業終了60分前まで）</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">雨天の運行</th>
+                <td class="table-col">雨天でも営業いたします。</td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head">対象者</th>
+                <td class="table-col">
+                  全年齢対象
+                </td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head">身長制限</th>
+                <td class="table-col">
+                  走行は身長100cm以上のお子さまが対象となります。
+                </td>
+              </tr>
+              <tr class="table-row">
+                <th class="table-head">料金</th>
+                <td class="table-col">・モビパークパスポート特典<br />&nbsp;&nbsp;&nbsp;→モビパークパスポートをお持ちの方は、通常1,100円のところ900円でご利用いただけます。<br /> ・アトラクションチケット利用：1,100円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <section class="how-to-enjoy l-section">
+        <div class="l-container">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-enjoy heading-wrap-craft',
+              text: 'How to Experience',
+              alt: 'How to Experience',
+              subtextvg: 'pit-play',
+              altSubtext: '',
+            }) %>
+          </div>
+
+          <div class="how-to-content">
+            <div class="media u-clear media-coll-pit">
+              <div class="media-left">
+                <p class="step-word-no u-show-sp step-word-coll-pit"><span class="step-word">STEP</span><span class="step-no">1</span></p>
+                <div class="media-bg">
+                  <div class="media-thumb media-thumb-coll-pit">
+                    <div class="media-thumb-inner" style="background-image: url(<%= mix('/assets/images/pit/image-1.jpg') %>);"></div>
+                  </div>
+                </div>
+                <div class="arrow-green-down u-show-pc"></div>
+              </div>
+              <div class="media-right">
+                <p class="step-word-no u-show-pc step-word-coll-pit"><span class="step-word">STEP</span><span class="step-no">1</span></p>
+                <h4 class="media-title"><span class="bg-none">本物の工具を使って組み立て</span></h4>
+                <p class="media-desc">
+                  はじめての体験では、基本パーツのタイヤ・サスペンションを取り付けよう。<br>いくつかの種類の中から、自由に選ぼう。
+                </p>
+                <div class="arrow-green-down u-show-sp"></div>
+              </div>
+            </div>
+            <div class="media u-clear media-coll-pit">
+              <div class="media-left">
+                <p class="step-word-no u-show-sp step-word-coll-pit"><span class="step-word">STEP</span><span class="step-no">2</span></p>
+                <div class="media-bg">
+                  <div class="media-thumb media-thumb-coll-pit">
+                    <div class="media-thumb-inner" style="background-image: url(<%= mix('/assets/images/pit/image-2.jpg') %>);"></div>
+                  </div>
+                </div>
+                <div class="arrow-green-down u-show-pc"></div>
+              </div>
+              <div class="media-right">
+                <p class="step-word-no u-show-pc step-word-coll-pit"><span class="step-word">STEP</span><span class="step-no">2</span></p>
+                <h4 class="media-title">
+                  <span class="bg-none">組み立てた車で走行</span>
+                </h4>
+                <p class="media-desc">
+                  自分で組み立てたクルマを運転。ハンドルをしっかり握ってはじめての運転にチャレンジしよう。
+                </p>
+                <div class="arrow-green-down u-show-sp"></div>
+              </div>
+            </div>
+            <div class="media u-clear media-coll-pit">
+              <div class="media-left">
+                <p class="step-word-no u-show-sp step-word-coll-pit"><span class="step-word">STEP</span><span class="step-no">3</span></p>
+                <div class="media-bg">
+                  <div class="media-thumb media-thumb-coll-pit">
+                    <div class="media-thumb-inner" style="background-image: url(<%= mix('/assets/images/pit/image-3.jpg') %>);"></div>
+                  </div>
+                </div>
+                <div class="arrow-green-down u-show-pc"></div>
+              </div>
+              <div class="media-right">
+                <p class="step-word-no u-show-pc step-word-coll-pit"><span class="step-word">STEP</span><span class="step-no">3</span></p>
+                <h4 class="media-title">
+                  <span class="bg-none">パーツを交換</span>
+                </h4>
+                <p class="media-desc">
+                  パーツを交換することで、乗り心地やスピードがどう変わるかな？
+                </p>
+                <div class="arrow-green-down u-show-sp"></div>
+              </div>
+            </div>
+            <div class="media u-clear media-coll-pit">
+              <div class="media-left">
+                <p class="step-word-no u-show-sp step-word-coll-pit"><span class="step-word">STEP</span><span class="step-no">4</span></p>
+                <div class="media-bg">
+                  <div class="media-thumb media-thumb-coll-pit">
+                    <div style="background-image: url(<%= mix('/assets/images/pit/image-4.jpg') %>);"></div>
+                  </div>
+                </div>
+               
+              </div>
+              <div class="media-right">
+                <p class="step-word-no u-show-pc step-word-coll-pit"><span class="step-word">STEP</span><span class="step-no">4</span></p>
+                <h4 class="media-title">
+                  <span class="bg-none">
+                    もう一度走行して違いを実感
+                  </span>
+                </h4>
+                <p class="media-desc">
+                  自分の走りやすいパーツはどのパーツだったかな？<br>
+                  何度もチャレンジして、組み立てられるパーツをどんどん増やしていこう。<br>
+                  クルマの仕組みが少しずつ見えてくるよ。
+                </p>
+                <%- include('/partials/note', {
+                  modifier: 'note-craft',
+                  imgPath: mix('/assets/images/pit/dekitane-banner.jpg')
+                }) %>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="forest l-section">
+        <div class="l-container">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-auto heading-wrap-collection-pit',
+              text: 'Step up Program',
+              alt: 'Step up Program',
+              subtextvg: 'pit-step-up-title',
+              headingSubtext: 'ピット工房にチャレンジする度に組み立てられるパーツが増え、<br> どんどん難しくなっていくよ。たくさん挑戦して、クルマ博士を目指そう。',
+              altSubtext: '',
+            }) %>
+          </div>
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-forest-craft heading-wrap-collection-pit',
+              text: 'Step up Program',
+              alt: 'Step up Program',
+              subtextvg: 'pit-step-up-title',
+              altSubtext: '',
+              headingSubtext: 'ピット工房にチャレンジする度に組み立てられるパ<br>ーツが増え、どんどん難しくなっていくよ。<br>たくさん挑戦して、クルマ博士を目指そう。'
+            }) %>
+          </div>
+
+        </div>
+        <div class="swiper-container slider js-slider common-slider" id="commonSlider">
+          <ul class="swiper-wrapper top-slide top-slide-craft">
+            <% forestPit.forEach(item => { %>
+            <li class="swiper-slide slider-item">
+              <div class="top-slider-image pit-slider">
+                <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+                <p class="pit-slider-price"><%- item.price -%></p>
+              </div>
+              <span class="top-slider-text">
+                <%- item.desc -%>
+              </span>
+            </li>
+            <% } ) %>
+          </ul>
+        </div>
+      </section>
+
+      <div class="l-section block-image">
+        <div class="l-container">
+          <ul class="block-image-list">
+
+            <li class="block-image-item block-image-item-collection-pit">
+              <a href="/mobipark_m/card/" class="block-image-item-link">
+                <img class="u-show-pc" src="<%= mix('/assets/images/pit/license-banner.jpg') %>" alt="ライセンスバナー">
+                <img class="u-show-sp" src="<%= mix('/assets/images/pit/dekitane-banner-sp.jpg') %>" alt="ライセンスバナー">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- recommendation module -->
+      <div class="pit-recommendation">
+        <%- include('/partials/recommendation') -%>
+      </div>
+
+      <!-- pick up module -->
+      <div class="pit-pick-up">
+        <%- include('/partials/pickup') -%>
+      </div>
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsCollectionPit
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

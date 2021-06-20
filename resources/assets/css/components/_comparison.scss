@@ -1,0 +1,151 @@
+.comparison {
+  display: block;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.comparison-inner {
+  width: 100%;
+}
+
+.comparison-col {
+  display: flex;
+  flex-direction: column;
+  background: #f2faf5;
+  width: calc(100% / 2);
+  align-items: center;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: 600;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 15px;
+    line-height: 2.2;
+
+    &.one-line {
+      line-height: 1;
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    justify-content: center;
+    width: calc((100% - 220px) / 2);
+    padding: 20px 35px;
+  }
+
+  &:nth-child(1) {
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 100%;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      order: 2;
+      width: 220px;
+    }
+
+    p {
+      font-size: 14px;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 18px;
+      }
+    }
+
+    span, p {
+      text-align: center;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+
+  &:nth-child(2) {
+    @include min-screen($breakpoint-mobile + 1) {
+      order: 1;
+    }
+  }
+
+  &:nth-child(3) {
+    background: #f2f7fb;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      order: 3;
+    }
+  }
+}
+
+.comparison-row {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #dfdfdf;
+
+  &:first-child {
+    .comparison-col {
+      &:not(:first-child) {
+        padding:40px 15px;
+
+        @include min-screen($breakpoint-mobile + 1) {
+          padding: 40px 50px;
+        }
+      }
+
+      &:first-child {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.comparison-btn {
+  margin-top: 20px;
+  width: calc(100% / 2);
+  padding: 0 15px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 0 20px;
+    margin-top: 34px;
+    width: calc((100% - 220px) / 2);
+  }
+}
+
+.comparison-btn-tsubasa {
+  margin-left: auto;
+}
+
+.comparison-btn-musasabi {
+  // margin-left: auto;
+}
+
+.comparison
+
+.comparison-img-1 {
+  max-width: 216px;
+  margin: 0 auto 30px;
+  width: 100%;
+}
+.comparison-img-2 {
+  max-width: 220px;
+  margin: 0 auto 30px;
+  width: 100%;
+}
+
+.comparison-label  {
+  padding: 5px 10px;
+  border-radius: 2px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.comparison-label-green {
+  background: #4fad31;
+}
+
+.comparison-label-grey {
+  background: #9c9c9c;
+}

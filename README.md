@@ -1,20 +1,69 @@
-# frontplate
+# Laravel Mix Boilerplate for Static Site
 
-フロントエンド開発の効率を上げるテンプレート
+## 使用法
 
-[CHANGELOG](https://github.com/frontainer/frontplate/blob/master/CHANGELOG.md)
+1. `package.json` を開き、各種プロパティを変更してください。
+```
+"name": "foobar-japan",
+"description": "FooBar Japan Corporate site",
+```
 
-[過去バージョン](https://github.com/frontainer/frontplate/releases)
+2. `.env-sample` を複製し、名前を `.env` に変更してください。
+```
+$ cp .env-sample .env
+```
 
-## Dependence
+3. 依存パッケージをインストールします。
+```
+$ npm i
+```
 
-* [NodeJS](https://nodejs.org/) 5.0以上
-* [frontplate-cli](https://www.npmjs.com/package/frontplate-cli) 3.0以上
+4. 開発用コマンドを実行し、`http://localhost:3000` へアクセスすると、サンプルページが表示されます。
+```
+$ npm run dev
+```
+
+5. 本番環境へ反映する前には、本番用コマンドを実行してください。
+```
+$ npm run prod
+```
+Specialized Motegi
+6. STG環境へリリースするコンテンツを作成する場合、以下のコマンドを実行してください。
+```
+$ npm run build-stg
+```
+
 
 ## Usage
 
-`$ frp create YOUR_PROJECT_NAME -g liginc/frontplate`
+1. Open `package.json`, and update properties.
+```
+"name": "foobar-japan",
+"description": "FooBar Japan Corporate site",
+```
 
-詳しくは[wiki](https://github.com/frontainer/frontplate-cli/wiki)を参照ください
+2. Duplicate `.env` as `.env-sample`.
+```
+$ cp .env-sample .env
+```
 
-https://github.com/frontainer/frontplate-cli/wiki
+3. Install dependencies.
+```
+$ npm i
+```
+
+4. Run command for development, then you can see sample page.
+```
+$ npm run dev
+```
+
+5. Before deploying, run command for production.
+```
+$ npm run prod
+```
+
+Specialized Motegi
+6. Run command for create release data for STG.
+```
+$ npm run build-stg
+```

@@ -1,0 +1,508 @@
+.carbike {
+  width: 100%;
+}
+
+
+.carbike-menu {
+  display: flex;
+  max-width: 905px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.carbike-menu-item {
+  // width: 100%;
+
+  width: 245px;
+  margin: 0 auto;
+  //
+  // @include min-screen($breakpoint-mobile + 1) {
+  //   width: calc((100% - 100px) / 3);
+  // }
+}
+
+.arrow-green-down {
+  &:after {
+    @include max-screen ($breakpoint-mobile) {
+      margin: 20px auto 0 auto !important;
+    }
+  }
+}
+
+.carbike-menu-link,
+.arrow-green-down {
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 100%;
+
+  &:after {
+    content: '';
+    display: block;
+    position: relative;
+    border-top: 18px solid #4fae32;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    width: 0;
+    margin: 20px auto;
+
+    @include max-screen ($breakpoint-mobile) {
+      border-top: 12px solid #4fae32;
+      border-left: 17px solid transparent;
+      border-right: 17px solid transparent;
+    }
+  }
+
+  &:hover {
+    @include min-screen(1025px) {
+      &:after {
+        animation: movearrow linear 1s infinite;
+      }
+    }
+  }
+}
+
+
+
+.carbike-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include max-screen($breakpoint-mobile) {
+    flex-direction: column;
+    padding: 0 38px;
+  }
+}
+
+.carbike-item {
+  margin-bottom: 20px;
+  width: 100%;
+
+  .carbike-item-link {
+    color: inherit;
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 75px;
+    width: calc((100% - 60px) / 2);
+  }
+}
+
+.carbike-article-thumb {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 12px;
+
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 23px;
+    width: 480px;
+    height: 284px;
+  }
+}
+
+.carbike-article-thumb-img {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    height: 100%;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    padding-bottom: 54%;
+  }
+
+  &:hover {
+    transition: ease 1s all;
+    transform: scale(1.2);
+  }
+}
+
+.carbike-article-cat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  color: $color-white;
+  font-size: 10px;
+  font-weight: 600;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 5px 10px;
+    min-height: 35px;
+    font-size: 15px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    right: inherit;
+    left: unset;
+  }
+
+  &.carbike-article-cat-bg-green-1 {
+    background-color: #4fae32;
+  }
+  &.carbike-article-cat-bg-green-2 {
+    background-color: #368121;
+  }
+  &.carbike-article-cat-bg-green-3 {
+    background-color: #90ae28;
+  }
+  &.carbike-article-cat-bg-green-4 {
+    background-color: #4fc42e;
+  }
+  &.carbike-article-cat-bg-green-5 {
+    background-color: #d2e737;
+  }
+  &.carbike-article-cat-bg-green-6 {
+    background-color: #bcd63b;
+  }
+  &.carbike-article-cat-bg-grey-1 {
+    background-color: #9c9c9c;
+  }
+
+
+}
+
+.carbike-article-content {
+  position: relative;
+
+  .period {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: rgb(18, 41, 15);
+    letter-spacing: 0.06em;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 20px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 10px;
+    }
+
+    &-icon {
+      display: inline-block;
+      margin-right: 10px;
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+}
+
+.carbike-article-title {
+  font-size: 13px;
+  font-weight: 600;
+  // margin-bottom: 10px;
+  position: relative;
+  letter-spacing: 0.16em;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 15px;
+  }
+
+  span {
+    position: relative;
+  }
+}
+
+.ico-carbike {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+}
+
+.ico-carbike-family {
+  background-image: url('../images/car-and-bike/ico-family.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 28.5px;
+  height: 30.5px;
+  right: -32px;
+
+
+  @include min-screen($breakpoint-mobile + 1) {
+    width: 50px;
+    height: 40px;
+    right: -60px;
+  }
+}
+
+.carbike-article-list {
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: 1px dashed #d5d5d5;
+}
+
+.carbike-article-list-item {
+  border-bottom: 1px dashed #d5d5d5;
+  display: flex;
+}
+
+.carbike-article-list-label {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+  width: 78px;
+  margin-right: 15px;
+  font-size: 11px;
+  font-weight: 600;
+  align-self: stretch;
+
+  &.program {
+    width: 102px;
+    padding: 8px 0;
+    margin-right: 0;
+
+    @include max-screen ($breakpoint-mobile) {
+      text-align: left;
+      justify-content: left;
+      padding: 4px 8px;
+      width: 68px;
+      margin-right: 0;
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 15px;
+    margin-right: 35px;
+    width: 135px;
+  }
+}
+
+.carbike-article-list-desc {
+  font-size: 11px;
+  font-weight: 600;
+  width: calc(100% - 90px);
+  padding: 11.5px 0;
+
+  &.program {
+    width: calc(100% - 102px);
+    padding: 9px 18px;
+    letter-spacing: 0px;
+    font-size: 15px;
+    line-height: 1.7;
+
+    @include max-screen ($breakpoint-mobile) {
+      padding: 4px 12px;
+      width: calc(100% - 68px);
+      font-size: 11px;
+    }
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+    width: calc(100% - 170px);
+    font-size: 14px;
+  }
+}
+
+.carbike-article-list-label,
+.carbike-article-list-desc {
+  line-height: 2;
+  letter-spacing: 0.16em;
+  padding: 7px 0;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    padding: 11.5px 0;
+  }
+}
+
+.carbike-article-more {
+  width: 100%;
+  display: none;
+}
+
+.carbike-article-more-link {
+  display: flex;
+  align-items: center;
+
+  &:before,
+  &:after, {
+    background-image: url('../images/car-and-bike/carbike-line.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 2px;
+    flex: 1;
+    content: '';
+    display: block;
+    position: relative;
+  }
+
+  &:before {
+    background-position: left;
+    transform: rotate(180deg);
+  }
+
+  &:after {
+    background-position: right;
+  }
+
+  span {
+    background-color: $color-white;
+    padding: 3px 20px;
+    color: #4fae32;
+    font-size: 10px;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      font-size: 15px;
+    }
+  }
+}
+
+.carbike-article {
+  &.carbike-article-attractions {
+    .carbike-article-cat {
+      border-radius: 5px;
+      right: -10px;
+      bottom: -10px;
+      padding: 5px 30px;
+
+      @include max-screen ($breakpoint-mobile) {
+        right: -5px;
+        bottom: -5px;
+        padding: 5px 14px;
+      }
+    }
+    .carbike-article-list {
+      border-top: none;
+    }
+    .carbike-article-list-item {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    .carbike-article-thumb {
+      @include max-screen ($breakpoint-mobile) {
+        margin-bottom: 12px;
+      }
+    }
+    .carbike-article-title {
+      @include min-screen($breakpoint-mobile + 1) {
+        font-size: 20px;
+      }
+    }
+    .ico-carbike-family {
+      @include max-screen ($breakpoint-mobile) {
+        display: none;
+      }
+    }
+    .carbike-article-list-label {
+      display: inline-table;
+      text-align: center;
+      padding: 0 5px;
+    }
+    .carbike-article-list-desc {
+      padding: 0 5px;
+    }
+    .carbike-article-more {
+      display: block;
+    }
+  }
+}
+
+
+.program-item {
+  position: relative;
+
+  .ribbon-text {
+    position: absolute;
+    z-index: 1;
+    background-color: $color-white;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 50px 4px;
+    transform: rotate(-45deg);
+    left: -73px;
+    top: -10px;
+    font-size: 19px;
+    letter-spacing: 0px;
+    border-radius: 70px 79px 0 0px;
+
+    @include max-screen ($breakpoint-mobile) {
+      padding: 30px 26px 1px;
+      font-size: 10px;
+      left: -45px;
+      top: -20px;
+    }
+  }
+  
+  .program-cat {
+    padding: 5px 13px;
+    @include min-screen ($breakpoint-mobile + 1) {
+      left: 0;
+      right: inherit;
+      // bottom: -13px;
+      padding: 5px 13px;
+      min-height: auto;
+    }
+  }
+
+  .period {
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 12px;
+    }
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 47px;
+  }
+
+
+}
+
+@keyframes movearrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@at-root .motegi-attraction {//fb 06182020
+  .carbike-article-more {
+    display: none !important;
+  }
+
+  .carbike-article-list {
+    .carbike-article-list-item {
+      &:first-child {
+        padding-top: 10px;
+        border-top: 1px dashed #d5d5d5;
+      }
+
+      &:last-child {
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #d5d5d5;
+      }
+    }
+  }
+
+  .carbike-article-cat {
+    right: 0px !important;
+    bottom: 0px !important;
+    border-radius: 0px !important;
+  }
+}

@@ -1,0 +1,204 @@
+<%
+var title = 'Twin Ring Motegi | 車＆バイクのアトラクション';
+SPRITE_SVG = '/assets/svg/sprite.svg';
+pageId = 'carAndBike';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<main class="l-main">
+  <div class="subpage motegi-attraction">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/attractions/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/attractions/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+  
+      <h1 class="mv-heading mv-heading-subpage  mv-heading-subpage-labo">
+        <span class="mv-heading-text">
+          <!-- アトラクション -->
+          <%- include('/partials/svg', {
+            name: 'attraction-mv-title',
+            svgtitle: 'アトラクション'
+          }) -%>
+        </span>
+      </h1>
+    </div>
+
+    <div class="heading-wrap heading-main">
+      <h2 class="heading">
+        <span class="u-title-hidden">Car and bike</span>
+        <span class="heading-texts">
+          <img class="u-show-pc" src="<%= mix('/assets/images/attractions/attraction-color-title.png') %>" alt="ひとりで挑戦、親子で挑戦してステップアップ">
+          <img class="u-show-sp" src="<%= mix('/assets/images/attractions/attraction-color-title-sp.png') %>" alt="ひとりで挑戦、親子で挑戦してステップアップ">
+        </span>
+      </h2>
+    </div>
+
+    <section class="subpage-section subpage-section-carbike">
+      <div class="carbike-menu">
+        <div class="swiper-container slider-carbike-container js-slider-carbike">
+
+          <div class="swiper-wrapper slider-carbike">
+            <div class="swiper-slide slider-carbike-item">
+              <div class="carbike-menu-item">
+                <a class="carbike-menu-link js-scroll" href="#athletic">
+                  <img src="<%= mix('/assets/images/attractions/category-athletic.jpg') %>" alt="車のアトラクション">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide slider-carbike-item">
+              <div class="carbike-menu-item">
+                <a class="carbike-menu-link js-scroll" href="#forest">
+                  <img src="<%= mix('/assets/images/attractions/category-forest.jpg') %>" alt="車のアトラクション">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide slider-carbike-item">
+              <div class="carbike-menu-item">
+                <a class="carbike-menu-link js-scroll" href="#car">
+                  <img src="<%= mix('/assets/images/car-and-bike/category-car.jpg') %>" alt="車のアトラクション">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide slider-carbike-item">
+              <div class="carbike-menu-item">
+                <a class="carbike-menu-link js-scroll" href="#bike">
+                  <img src="<%= mix('/assets/images/car-and-bike/category-bike.png') %>" alt="バイクのアトラクション">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide slider-carbike-item">
+              <div class="carbike-menu-item">
+                <a class="carbike-menu-link js-scroll" href="#workshop">
+                  <img src="<%= mix('/assets/images/car-and-bike/category-workshop.jpg') %>" alt="車のワークショップ">
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="subpage-section subpage-section-carbike text-banner l-container-m text-center attraction-top">
+      <a href="/mobipark_m/guide/">
+        <img class="icon" src="<%= mix('/assets/images/icon_tall.png') %>" alt="tall">
+        <h3 class="banner-heading">アトラクションのご利用基準について</h3>
+        <p class="banner-text">
+          お客様の安全を守るため、<br class="u-show-sp"> アトラクションごとに<br class="u-show-sp">ご利用基準を設けております。
+        </p>
+      </a>
+    </div>
+
+    <section class="subpage-section subpage-section-carbike " id="athletic">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-carbike heading-carbike-car heading-auto-height',
+          text: '',
+          alt : 'Attraction’s Category',
+          subtextvg: '',
+          altSubtextvg: '',
+          imgPath: '/assets/images/attractions/attraction-playground-title.png'
+        }) %>
+      </div>
+
+      <%- include('/partials/carbike-list', {
+        modifier: 'carbike-article-attractions',
+        dataCarbikeList : getData().data.attractionAthleticList
+      }) -%>
+    </section>
+
+    <section class="subpage-section subpage-section-carbike" id="forest">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-carbike heading-carbike-car heading-auto-height',
+          text: '',
+          alt : 'Attraction’s Category',
+          subtextvg: '',
+          altSubtextvg: '',
+          imgPath: '/assets/images/attractions/attraction-play-forest-title.png'
+        }) %>
+      </div>
+
+      <%- include('/partials/carbike-list', {
+        modifier: 'carbike-article-attractions',
+        dataCarbikeList : getData().data.attractionForestList
+      }) -%>
+    </section>
+
+    <section class="subpage-section subpage-section-carbike" id="car">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-carbike heading-carbike-car heading-auto-height',
+          text: '',
+          alt : 'Attraction’s Category',
+          subtextvg: '',
+          altSubtextvg: '',
+          imgPath: '/assets/images/car-and-bike/attraction-category-car.png'
+        }) %>
+      </div>
+
+      <%- include('/partials/carbike-list', {
+        modifier: 'carbike-article-attractions',
+        dataCarbikeList : getData().data.carList
+      }) -%>
+    </section>
+
+    <section class="subpage-section subpage-section-carbike" id="bike">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-carbike heading-carbike-car heading-auto-height',
+          text: '',
+          alt : 'Attraction’s Category',
+          subtextvg: '',
+          altSubtextvg: '',
+          imgPath: '/assets/images/attractions/attraction-bike-title.png'
+        }) %>
+      </div>
+
+      <%- include('/partials/carbike-list', {
+        modifier: 'carbike-article-attractions',
+        dataCarbikeList : getData().data.bikeList
+      }) -%>
+    </section>
+
+    <section class="subpage-section subpage-section-carbike" id="workshop">
+      <div class="l-section-title">
+        <%- include('/partials/heading', {
+          modifier: 'heading-carbike heading-carbike-workshop u-show-pc heading-auto-height',
+          text: '',
+          alt : 'workshop',
+          subtextvg: '',
+          altSubtext: '',
+          imgPath: '/assets/images/attractions/attraction-workshop-title.png'
+        }) %>
+        <%- include('/partials/heading', {
+          modifier: 'heading-carbike heading-carbike-workshop u-show-sp heading-auto-height',
+          text: '',
+          alt : 'workshop',
+          subtextvg: '',
+          altSubtext: '',
+          imgPath: '/assets/images/attractions/attraction-workshop-title-sp.png'
+        }) %>
+      </div>
+
+      <%- include('/partials/carbike-list', {
+        modifier: 'carbike-article-attractions',
+        dataCarbikeList : getData().data.attractionWorkshopList
+      }) -%>
+
+    </section>
+
+    <%- include('/partials/recommendation') -%>
+
+    <%- include('/partials/pickup') -%>
+  </div>
+</main>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsAttraction
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

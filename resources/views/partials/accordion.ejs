@@ -1,0 +1,37 @@
+
+<% if(dataAccordion) { 
+    if (typeof dataHeading === 'undefined'){
+      var dataHeading = 'FAQ';
+      var dataSVG = 'faq-title';
+    }
+  %>
+  <div class="l-container">
+    <div class="faq-inner">
+      <div class="l-heading">
+        <%- include('/partials/heading', {
+          modifier: 'heading-sumika-faq',
+          text: dataHeading,
+          alt: 'faq',
+          subtextvg: dataSVG,
+          altSubtext: ''
+        }) %>
+      </div>
+        <div class="accordion">
+          <dl class="accordion-inner">
+            <% dataAccordion.forEach(data => { %>
+              <dt class="accordion-btn js-accordion">
+                  <span class="accordion-btn-label">
+                    <img src="<%= mix('/assets/images/acc-q.png') %>" alt="question">
+                  </span>
+                  <%- data.question %>
+                  <span class="accordion-arrow js-arrow"></span>
+              </dt>
+              <dd class="accordion-description js-description">
+                <p><%- data.answer %></p>
+              </dd>
+            <% }) %>
+          </dl>
+        </div>
+    </div>
+  </div>
+<% } %>

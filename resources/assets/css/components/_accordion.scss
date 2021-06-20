@@ -1,0 +1,176 @@
+.accordion {
+  display: block;
+  width: 100%;
+
+  &.accordion-musasabi {
+    background-color: $color-table-head;
+    max-width: 800px;
+    margin: 40px auto 0;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 25px;
+    }
+  }
+}
+
+.accordion-arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform-origin: center;
+  transform: translateY(-50%) rotate(180deg);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5.5px 9px 5.5px;
+  border-color: transparent transparent #719b68 transparent;
+  transition: transform 0.35s ease-in-out;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    right: 40px;
+    border-width: 0 7px 12.1px 7px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    right: 7px;
+  }
+
+  &.is-active {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  &.accordion-arrow-musasabi {
+    display: none;
+  }
+
+  .is-open & {
+    transform: rotate(0);
+  }
+}
+
+// .accordion-inner {}
+
+.accordion-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 28px 95px 28px 44px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+
+  // @include min-screen($breakpoint-mobile + 1) {
+  //   padding: 22px 95px 20px 44px;
+  //   font-size: 12px;
+  // }
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+    padding: 10px 27px 12px;
+  }
+
+  &.accordion-btn-musasabi {
+    text-align: center;
+    padding: 35px 44px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding: 15px 20px;
+    }
+  }
+
+}
+
+
+.accordion-description  {
+  overflow: hidden;
+  transition: height .30s ease-out;
+  height: 0;
+  border-bottom: 1px solid #dfdfdf;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+  }
+
+  p {
+    display: block;
+    background-color: #f7f7f7;
+    font-size: 14px;
+    padding: 20px;
+    line-height: 2;
+    margin: 0 22px 30px;
+
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      margin: 0 0 30px;
+    }
+  }
+
+  &.accordion-description-musasabi {
+    border: 0;
+    padding: 0 20px;
+
+    p {
+      padding: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+}
+
+.accordion-btn-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  img {
+    max-width: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 15px;
+      height: 10px;
+    }
+  }
+}
+
+.accordion-btn-text {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 2;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+  }
+}
+
+// .accordion-content {
+//   display: block;
+//   padding: 20px;
+// }
+// .accordion-desc {
+//   display: block;
+//   background-color: #f7f7f7;
+//   font-size: 14px;
+//   padding: 20px;
+//   line-height: 2;
+// }
+
+
+/*Tsubasa table*/
+.accordion-table-tsubasa {
+  .accordion-btn-table {
+    padding: 0;
+  }
+  .accordion-description-table {
+    border: none;
+    p {
+      padding: 0;
+      margin: 0;
+      background: none;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+}

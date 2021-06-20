@@ -1,0 +1,305 @@
+.goods-shop-list {
+
+  .goods-shop-items {
+    // border-bottom: 1px solid #efefef;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+
+    &.experience-item {
+      clear: both;
+      border-bottom: 1px solid #dadada;
+      &:last-child {
+        border:0;
+      }
+      @include max-screen ($breakpoint-mobile) {
+        border:0;
+      }
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      padding-bottom: 0px;
+
+      .media-title {
+        margin-bottom: 10px;
+        margin-top: 0;
+        letter-spacing: 0px;
+      }
+    }
+  }
+
+  .wrapper-container {
+    // display: flex;
+    // justify-content: space-between;
+
+    .area-item-image-wrapper {
+      max-width: 442px;
+      display: inline-block;
+      @include max-screen ($breakpoint-mobile) {
+        display: block;
+        max-width: 290px;
+        margin: auto;
+        margin-bottom: 23px;
+      }
+      &.collection-image-wrapper {
+        max-width: 557px;
+        text-align: center;
+        .collection-subpage-title {
+          font-size: 20px;
+          margin-top: 14px;
+        }
+        .collection-details {
+          text-align: left;
+          margin: 0 auto;
+          width: 100%;
+          max-width: 363px;
+        }
+      }
+    }
+
+    .area-item-desc-wrapper {
+      display: inline-block;
+      width: 100%;
+      max-width: 500px;
+
+
+      .subpage-title {
+        position: relative;
+        margin-bottom: 20px;
+
+        @include max-screen($breakpoint-mobile) {
+          margin-bottom: 5px;
+        }
+      }
+
+      .desc {
+        font-size: 15px;
+        letter-spacing: 2px;
+        line-height: 2;
+        margin-bottom: 13px;
+
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 12px;
+        }
+      }
+
+      .details-list {
+        .details-list-item {
+          display: table;
+          .details-list-item-label {
+            display: table-cell;
+            padding-top: 16px;
+            line-height: 1;
+            text-align: center;
+            @include min-screen ($breakpoint-mobile + 1) {
+              min-width: 102px;
+              margin-right: 20px;
+              width: 63px;
+            }
+          }
+
+          .details-list-item-desc {
+            display: table-cell;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            padding-left: 19px;
+            width: 100%;
+            letter-spacing: 1.4px;
+
+            @include max-screen ($breakpoint-mobile) {
+              width: auto;
+              padding-left: 10px;
+            }
+          }
+
+          .link {
+            color: #00a040;
+          }
+        }
+      }
+
+      .heading {
+        margin: 0;
+        .heading-text {
+          font-family: unset;
+          font-size: 24px;
+          text-align: left;
+          margin-bottom: 13px;
+          letter-spacing: 5px;
+        }
+      }
+
+      &.collection-desc-wrapper {
+        max-width: 507px;
+        z-index: 2;
+        position: relative;
+        .details-list .details-list-item {
+          .details-list-item-desc {
+            padding: 16px 19px;
+          }
+        }
+      }
+
+      @include min-screen ($breakpoint-mobile + 1) {
+        float: right;
+      }
+    }
+
+
+    @include max-screen ($breakpoint-mobile) {
+      display: block;
+    }
+
+    &.experience-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .area-item-desc-wrapper {
+        float: none;
+      }
+    }
+  }
+
+  &.events-list {
+    .swiper-wrapper {
+      margin-bottom: 15px;
+    }
+    .events-swiper-pagination {
+      text-align: center;
+
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 11px;
+        background-color: #090707;
+        opacity:  initial;
+        margin: 0 5px;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #00a040;
+      }
+    }
+
+    .events-list-item {
+      border-bottom: 1px solid #dfdfdf;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 11px;
+        }
+      }
+
+      .subpage-title {
+        letter-spacing: 5px;
+        margin-bottom: 12px;
+
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 15px;
+        }
+      }
+
+      .desc {
+        margin-bottom: 35px;
+      }
+
+      .details-list {
+        margin-bottom: 0;
+        @include max-screen ($breakpoint-mobile) {
+          margin-bottom: 40px;
+
+          .details-list-item {
+            width: 100%;
+          }
+        }
+      }
+
+      .button {
+        margin: 0;
+      }
+    }
+  }
+
+}
+
+.goods-bottom-banners {
+  .banner {
+    display: table;
+    height: 140px;
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+
+    .banner-desc, .l-button {
+      display: table-cell;
+      vertical-align: middle;
+
+      @include max-screen ($breakpoint-mobile) {
+        display: block;
+      }
+    }
+
+    .banner-desc {
+      color: #333333;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: 1.5px;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+    }
+
+    .l-button {
+
+      .button {
+        margin-right: 0;
+      }
+
+      @include max-screen ($breakpoint-mobile) {
+        margin-top: 17px;
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile + 1) {
+      margin-bottom: 70px;
+      padding: 30px 52px;
+    }
+  }
+
+  .banner-2 {
+    border-top: 1px solid #dfdfdf;
+    padding-top: 12px;
+    margin-bottom: 50px;
+    .banner-desc {
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.7;
+
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 11px;
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile + 1) {
+      margin-bottom: 100px;
+    }
+  }
+
+  .banner-3 {
+    margin-bottom: 100px;
+    @include min-screen ($breakpoint-mobile + 1) {
+      margin-bottom: 220px;
+    }
+  }
+
+}

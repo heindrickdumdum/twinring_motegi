@@ -1,0 +1,230 @@
+.call-to-action {
+  text-align: center;
+  margin-top: 50px 0;
+  position: relative;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin: 80px 0;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 40px 0;
+
+    &.call-to-action-hellowoods {
+      margin-top: 0;
+      margin-bottom: 55px;
+    }
+  }
+
+  &:after {
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      // height: 325px;
+      // height: 255px;
+      height: 120%;
+      content: "";
+      background-color: $color-light-gray;
+      position: absolute;
+      top: 80px;
+      left: 0px;
+      z-index: $z-min2;
+    }
+  }
+
+  &.call-to-action-itadaki {
+    margin: 25px 0 -230px;
+  }
+}
+
+.call-to-action-wrapper {
+  padding: 0 100px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: $color-white;
+    position: relative;
+    z-index: $z-min2 + 1;
+  }
+}
+
+.call-to-action-inner {
+  position: relative;
+  max-height: 320px;
+  padding: 47px;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 27px 31px 10px;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    background-image: url(#{$image-path}sumika/frame-sm.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    background-image: url(#{$image-path}sumika/green-dots.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 22px;
+    left: 33px;
+    right: 23px;
+    bottom: 39px;
+    pointer-events: none;
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url(#{$image-path}sumika/green-dots-sp.png);
+      background-size: contain;
+      background-position: center;
+    }
+  }
+}
+
+.call-to-action-title {
+  display: inline-block;
+  font-size: 31px;
+  background: linear-gradient(to right, #1cc763 0%, #34b0e7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.call-to-action-description-text {
+  font-family: $font-hiragino-w3;
+  font-size: 12px;
+  line-height: 1.667;
+  margin-top: 25px;
+  letter-spacing: 0.16em;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    font-size: 15px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    // font-size: 12px;
+    margin-top: 15px;
+  }
+
+  &.call-to-action-description-text-itadaki {
+    margin-top: -10px;
+  }
+}
+
+.call-to-action-dot {
+  position: absolute;
+
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.call-to-action-dot-1 {
+  left: -40px;
+  bottom: -30px;
+  max-width: 192px;
+  width: 100%;
+}
+
+.call-to-action-dot-2 {
+  top: -19px;
+  left: 128px;
+  max-width: 116px;
+  width: 100%;
+}
+
+.call-to-action-dot-3 {
+  bottom: -30px;
+  right: 135px;
+  max-width: 116px;
+  width: 100%;
+}
+
+.call-to-action-dot-4 {
+  top: -28px;
+  right: -27px;
+  max-width: 192px;
+  width: 100%;
+}
+
+//MODIFIER DOKIDOKI
+// .dokidoki-cta,
+// .mobipark-cta {
+//   .banner-cta-bottom-inner {
+//     position: relative;
+//     z-index: $z-min;
+//   }
+// }
+
+.call-to-action-bunbun {
+  .call-to-action-description-text {
+    letter-spacing: 0.16em;
+  }
+}
+
+// modifier forest driving
+.mobipark.call-to-action {
+  margin-top: 64px;
+}
+.mobipark-cta {
+  .forest-driving-cta-heading {
+    max-width: 420px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading-net-mobipark {
+    margin-top: -17px;
+  }
+}
+// end modifier forest driving
+//modifier subpage
+.call-to-action-inner-subpage {
+  padding-top: 13px;
+  padding-bottom: 37px;
+}
+
+.call-to-action-hellowoods {
+  .call-to-action-inner {
+    padding: 40px;
+  }
+
+  .headig-call-to-action {
+    margin: 0;
+    .heading-text {
+      font-size: 25px;
+    }
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.call-to-action-musasabi {
+  &::before {
+    @include min-screen($breakpoint-mobile + 1) {
+      background-image: url(../images/musasabi/musasabi-cta-bg.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: -32px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+}

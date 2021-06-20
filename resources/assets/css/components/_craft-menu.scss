@@ -1,0 +1,361 @@
+.menu {
+	@include max-screen($breakpoint-mobile) {
+		margin-top: 31px;
+	}
+
+	&::before {
+		@include min-screen($breakpoint-mobile + 1) {
+			background-image: url("../images/craft/craft-menu-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: -127px;
+    	right: 0px;
+      bottom: 0;
+      content: "";
+		}
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url("../images/craft/craft-menu-bg-sp.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: 32px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+}
+
+.menu-container {
+	position: relative;
+}
+
+.menu-list {
+	display: flex;
+	margin: 0 -23px;
+	flex-wrap: wrap;
+
+	@include max-screen($breakpoint-mobile) {
+		margin: 0 -3%;
+		position: relative;
+	}
+}
+
+.menu-list-item {
+	padding: 0 23px 63px;
+
+	@include max-screen($breakpoint-mobile) {
+		padding: 0 3% 34px;
+    flex: 0 0 50%;
+	}
+}
+
+.menu-list-link {
+	display: block;
+	width: 270px;
+
+	@include max-screen($breakpoint-mobile) {
+		width: 100%;
+	}
+}
+
+.menu-list-image {
+	width: 100%;
+	height: 270px;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	@include max-screen($breakpoint-mobile) {
+		height: auto;
+		padding-top: 102.5%;
+		background-size: cover;
+	}
+}
+
+.menu-list-title {
+	font-size: 18px;
+	letter-spacing: 0.06em;
+	line-height: 1.7778;
+	color: $color-mineshaft;
+	margin: 12px 0 5px;
+	position: relative;
+
+	span {
+		font-size: 14px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		font-weight: normal;
+
+		@include max-screen($breakpoint-mobile) {
+			font-size: 9px;
+		}	
+	}
+
+	@include max-screen($breakpoint-mobile) {
+		font-size: 13px;
+		margin: 0;
+	}
+}
+
+.menu-list-price {
+	font-size: 14px;
+	letter-spacing: 0.06em;
+	color: $color-mineshaft;
+	line-height: 2.377;
+
+	@include max-screen($breakpoint-mobile) {
+		font-size: 12px;
+		margin: 0;
+		line-height: 2;
+	}
+}
+
+//modifier
+.craft-recommendation {
+	&::before {
+		@include min-screen($breakpoint-mobile + 1) {
+			background-image: url("../images/craft/craft-recommendation-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 8px;
+    	top: -151px;
+    	right: 0px;
+      bottom: 0;
+      content: "";
+		}
+
+    @include max-screen($breakpoint-mobile) {
+      background-image: url("../images/craft/craft-recommendation-bg-sp.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: -31px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+
+  .heading-subtext {
+  	@include min-screen($breakpoint-mobile + 1) {
+			margin-top: 13px;
+  	}
+
+  	@include max-screen($breakpoint-mobile) {
+  		padding: 0 29px 0 28px;
+    	margin-top: 8px;
+    	height: 34px;
+  	}
+
+  	svg {
+  		@include min-screen($breakpoint-mobile + 1) {
+  			width: 449px;
+		    height: 33px;
+		    margin-left: 13px;
+  		}
+  	}
+  }
+
+  .heading-wrap {
+  	@include max-screen($breakpoint-mobile) {
+			margin-bottom: 32px;
+  	}
+  }
+
+  .heading {
+  	@include max-screen($breakpoint-mobile) {
+			margin-bottom: 0;
+  	}
+
+  	svg {
+	  	@include max-screen($breakpoint-mobile) {
+	  		width: 100%;
+	  	}
+	  }
+  }
+
+  .heading-text {
+  	@include min-screen($breakpoint-mobile + 1) {
+  		letter-spacing: 0.06em;
+  	}
+  }
+
+  .article {
+  	.article-heading {
+	  	@include max-screen($breakpoint-mobile) {
+	  		margin-top: 11px;
+	  		min-height: 54px;
+	  		padding: 0;
+	  	}
+	  }
+
+  	@include max-screen($breakpoint-mobile) {
+			padding: 0 5px 36px;
+  	}
+  }
+
+  .article-image {
+  	@include max-screen($breakpoint-mobile) {
+			padding-top: 61%;
+			background-size: cover;
+  	}
+  }
+
+  @include min-screen($breakpoint-mobile + 1) {
+  	margin-top: 83px;
+  }
+
+  @include max-screen($breakpoint-mobile) {
+		position: relative;
+		margin-top: 76px;
+		padding-bottom: 80px;
+  }
+}
+
+//modifier
+.craft-pick-up {
+	&::before {
+		@include min-screen($breakpoint-mobile + 1) {
+			background-image: url("../images/craft/craft-pickup-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+    	top: 196px;
+    	right: -13px;
+      bottom: 0;
+      content: "";
+		}
+
+		@include max-screen($breakpoint-mobile) {
+      background-image: url("../images/craft/craft-pickup-bg-sp.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 0;
+      top: 155px;
+      height: 160px;
+      width: 126px;
+      content: "";
+    }
+	}
+
+	@include min-screen($breakpoint-mobile + 1) {
+		margin-top: 51px;
+	}
+	
+	@include max-screen($breakpoint-mobile) {
+		margin-top: -29px;
+		padding-bottom: 25px;
+		position: relative;
+	}
+
+	.heading-pickup {
+		svg {
+			@include min-screen($breakpoint-mobile + 1) {
+				margin-left: 14px;
+				max-width: 389px;
+    		height: 33px;
+			}
+
+			@include max-screen($breakpoint-mobile) {
+				width: 282px;
+			}
+		}
+
+		.heading-text {
+			@include min-screen($breakpoint-mobile + 1) {
+				letter-spacing: -0.04em;
+			}
+
+			@include max-screen($breakpoint-mobile) {
+				transform: translate(1px, 1px);
+			}
+		}
+
+		.heading {
+			@include min-screen($breakpoint-mobile + 1) {
+				margin-bottom: 30px;
+			}
+		}
+
+		@include min-screen($breakpoint-mobile + 1) {
+			margin-bottom: 0;
+		}
+		
+		@include max-screen($breakpoint-mobile) {
+			margin-bottom: 48px;
+		}
+	}
+
+	.pickup-list-item {
+		@include max-screen($breakpoint-mobile) {
+			max-width: 100%;
+	    padding: 0 12.5px 25px;
+	    flex: 0 0 50%;
+		}
+	}
+
+	.pick-inner {
+		@include max-screen($breakpoint-mobile) {
+			width: auto;
+			margin: 0;
+		}
+	}
+
+	.pickup-list {
+		@include max-screen($breakpoint-mobile) {
+			width: auto;
+			margin: 0 -12.5px;
+		}
+	}
+
+	.pickup-article {
+		.article-heading {
+			@include max-screen($breakpoint-mobile) {
+				font-size: 12px;
+				letter-spacing: 0.14em;
+				line-height: 1.67;
+				padding: 0;
+				min-height: 0;
+				margin-bottom: 29px;
+			}
+		}
+
+		.article-period {
+			@include max-screen($breakpoint-mobile) {
+				padding: 0;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+
+		@include max-screen($breakpoint-mobile) {
+			padding: 0 0 9px;
+		}
+	}
+
+	.article-image-wrap {
+		@include max-screen($breakpoint-mobile) {
+			padding: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+	.article-image {
+		@include max-screen($breakpoint-mobile) {
+			padding-top: 65%;
+			background-position: -6px -6px;
+			background-size: 109%;
+		}
+	}
+}

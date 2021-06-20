@@ -1,0 +1,99 @@
+//show pc
+.u-show-pc {
+  @media screen and (max-width: $breakpoint-mobile) {
+    // sass-lint:disable-block no-important
+    display: none !important;
+  }
+}
+
+
+//show sp
+.u-show-sp {
+  // sass-lint:disable-block no-important
+  display: none !important;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: block !important;
+
+    &.collection-img-sp {
+      margin-bottom: 32px;
+    }
+  }
+
+  &.u-show-sp-flex {
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: flex !important;
+    }
+  }
+}
+
+.u-clear {
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+}
+
+.u-title-hidden {
+  font-size: 0;
+  letter-spacing: 0;
+  position: absolute;
+}
+
+.fill-white {
+  fill: $color-white;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.hover-wrap {
+  overflow: hidden;
+  &:hover {
+    &>* {
+      transition: ease 1s all;
+      transform: scale(1.2);
+
+      @at-root
+      .breakfast-marcherant &,
+      .lunch-marcherant &,
+      .dinner-set-marcherant & {//lunch marcherant
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.hover-green {
+  transition: color 0.25s ease-in-out;
+
+  &:hover {
+    color: $color-green !important;
+  }
+}
+
+.hover-opacity {
+  transition: opacity 0.25s ease-in-out;
+
+  &:hover {
+    opacity: 0.8 !important;
+  }
+}
+
+.v-hidden {
+  visibility: hidden;
+}

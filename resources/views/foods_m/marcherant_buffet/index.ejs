@@ -1,0 +1,636 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'dinnerBuffet';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-restaurant restaurant-wrapper marcherant-buffet breakfast-marcherant">
+    <div class="mv mv-restaurant mv-subpage-restaurant">
+
+
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/dinner-buffet/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/dinner-buffet/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="u-show-pc mv-heading hellowoods-mv-heading mv-heading-marcherant-dinner-buffet">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-marcherant-dinner-buffet',
+            heading_level: 1,
+            text: 'Dinner Buffet',
+            subtextvg: 'marcherant-dinner-buffet-title',
+            altSubtextvg: '森のキッチン どんぐり'
+          }) %>
+        </div>
+        <div class="u-show-sp mv-heading hellowoods-mv-heading mv-heading-marcherant-dinner-buffet">
+          <%- include('/partials/heading', {
+            modifier: 'heading-wrap-marcherant-dinner-buffet',
+            heading_level: 1,
+            text: 'Dinner Buffet',
+            subtextvg: 'marcherant-dinner-buffet-title-sp',
+            altSubtextvg: '森のキッチン どんぐり'
+          }) %>
+        </div>
+
+        <div class="u-show-pc mv-today mv-logo mv-granroom-logo" style="background-image: url(<%= mix('/assets/images/dinner-buffet/logo.png') %>);">
+          <div class="mv-l-inner">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="l-section">
+        <div class="heading-wrap heading-main heading-main-marcherant dinner-buffet">
+          <h2 class="heading">
+            <span class="u-title-hidden">Car and bike</span>
+            <span class="heading-texts">
+              <img class="u-show-pc" src="<%= mix('/assets/images/dinner-buffet/color-title.png') %>" alt="家族で囲めばお腹も心も満たされる 森のごちそうをご用意してお待ちしております。">
+              <img class="u-show-sp" src="<%= mix('/assets/images/dinner-buffet/color-title-sp.png') %>" alt="家族で囲めばお腹も心も満たされる 森のごちそうをご用意してお待ちしております。">
+            </span>
+          </h2>
+          <p class="heading-main-subtext dinner-buffet">※ディナービュッフェはご宿泊のお客様限定、また毎週土曜日・長期休暇などに開催となります。<br>
+            詳しい日程は<a href="/hoteltwinring/calendar/index.html" class="link">こちら</a>をご確認ください。</p>
+        </div>
+      </section>
+
+      <section class="subpage-section">
+        <div class="subpage-inner">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-auto',
+              heading_level: 1,
+              text: 'Recommend',
+              subtextvg: 'marcherant-dinner-buffet-recommend',
+              altSubtextvg: 'Recommend'
+            }) %>
+          </div>
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-auto two-lines-sp',
+              heading_level: 1,
+              text: 'Recommend',
+              subtextvg: 'marcherant-dinner-buffet-recommend-sp',
+              altSubtextvg: 'Recommend'
+            }) %>
+          </div>
+        <div class="subpage-image-gallery gallery-dinner-buffet">
+            <div class="swiper-container slider-gallery js-gallery">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
+                  <div class="slide-item-desc">
+                    <h3 class="gallery-bot-heading text-center">あらびき那須三元豚とほうれん草のキッシュ</h3>
+                    <p class="gallery-bot-subheading subpage-desc text-center">
+                      お子様にも食べやすいよう、ホワイトソースとパン粉を加えまろやかでやわらかく仕上げました
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-03.jpg') -%>)"></div>
+                  <div class="slide-item-desc">
+                    <h3 class="gallery-bot-heading text-center">ダミータイトル2</h3>
+                    <p class="gallery-bot-subheading subpage-desc text-center">
+                      ダミーテキスト2
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-02.jpg') -%>)"></div>
+                  <div class="slide-item-desc">
+                    <h3 class="gallery-bot-heading text-center">ダミータイトル3</h3>
+                    <p class="gallery-bot-subheading subpage-desc text-center">
+                      ダミーテキスト3
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-04.jpg') -%>)"></div>
+                  <div class="slide-item-desc">
+                    <h3 class="gallery-bot-heading text-center">ダミータイトル4</h3>
+                    <p class="gallery-bot-subheading subpage-desc text-center">
+                      ダミーテキスト4
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-container slider-gallery-thumb js-gallery-thumb">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/recommend-slide-1.jpg') -%>)"></div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-03.jpg') -%>)"></div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-02.jpg') -%>)"></div>
+                </div>
+                <div class="swiper-slide slider-item">
+                  <div class="slider-gallery-thumb-img" style="background-image:url(<%- mix('/assets/images/dinner-buffet/buffet-recommend-04.jpg') -%>)"></div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+
+
+        </div>
+      </section>
+
+      <section class="l-section point-item">
+        <div class="l-container">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-auto',
+              text: 'Point',
+              alt: 'Point',
+              subtextvg: 'marcherant-dinner-buffet-point-title',
+              altSubtext: '',
+            }) %>
+          </div>
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-auto two-lines-sp',
+              text: 'Point',
+              alt: 'Point',
+              subtextvg: 'marcherant-dinner-buffet-point-title-sp',
+              altSubtext: '',
+            }) %>
+          </div>
+        </div>
+        <div class="l-container-m full-sp">
+          <div class="point-heading-wrap">
+            <h3 class="point-heading no-1 u-show-pc">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-point-1'
+              }) %>
+            </h3>
+            <h3 class="point-heading no-1 u-show-sp">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-point-1-sp'
+              }) %>
+            </h3>
+            <p class="point-subtext">一般調理機器では引き出せない特注の石窯は、お肉はこんがりふっくらと、お野菜は本来の甘みが溢れてきます。<br>
+              石窯が設置されたオーブンキッチンでシェフの実演風景とともにお楽しみください。</p>
+          </div>
+        </div>
+
+
+        <div class="l-container">
+          <ul class="point-image-list">
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-1.1.png') %>);"></div>
+              <p>牛フィレ肉の石窯ロースト</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-1.2.png') %>);"></div>
+              <p>那須野ヶ原牛のアッシュパルマンティエ</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-1.3.png') %>);"></div>
+              <p>焼きたての石窯ピザ</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="l-section point-item">
+        <div class="l-container-m full-sp">
+          <div class="point-heading-wrap">
+            <h3 class="point-heading no-2">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-buffet-point-2'
+              }) %>
+            </h3>
+            <p class="point-subtext">那須三元豚・いっこく野州鶏・プレミアムヤシオマス・磨宝卵・大子町の豆腐など<br>
+              栃木県が誇るこだわりの食材を多数使用しています。<br>
+              安心・安全な地場産の食材を、オリジナルメニューでお召し上がりください。 </p>
+          </div>
+        </div>
+
+
+        <div class="l-container">
+          <ul class="point-image-list two-items">
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-2.1.png') %>);"></div>
+              <p>磨宝卵と冬野菜のモッツァレラチーズ焼き</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-2.2.png') %>);"></div>
+              <p>牛スジと茨城県産コンニャクのコムタン風</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="l-section point-item">
+        <div class="l-container-m full-sp">
+          <div class="point-heading-wrap">
+            <h3 class="point-heading no-3 u-show-pc">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-buffet-point-3'
+              }) %>
+            </h3>
+            <h3 class="point-heading no-3 u-show-sp">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-buffet-point-3-sp'
+              }) %>
+            </h3>
+            <p class="point-subtext">空と大地の恵みを受けてのびのびと育った栄養満点の里山の野菜。<br>
+              野菜嫌いなお子さまにも食べやすいよう一品一品工夫して調理しています。</p>
+          </div>
+        </div>
+
+
+        <div class="l-container">
+          <ul class="point-image-list">
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-3.1.png') %>);"></div>
+              <p>かぼちゃサラダとヨーグルトソース</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-3.2.png') %>);"></div>
+              <p>季節の採れたてオーガニック野菜</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-3.3.png') %>);"></div>
+              <p>疲労回復や美肌効果などが<br>
+                期待できるベジタブルウォーター</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="l-section point-item">
+        <div class="l-container-m full-sp">
+          <div class="point-heading-wrap">
+            <h3 class="point-heading no-4 u-show-pc">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-buffet-point-4'
+              }) %>
+            </h3>
+            <h3 class="point-heading no-4 u-show-sp">
+              <%- include('/partials/svg', {
+                name: 'marcherant-dinner-buffet-point-4-sp'
+              }) %>
+            </h3>
+            <p class="point-subtext">フルーツ、ケーキ、アイスクリーム、チョコレートファウンテンなど目にも楽しいほど種類豊富。<br>
+              季節のフルーツと濃厚な那須牛乳を使ったストーンアイスは絶品です。</p>
+          </div>
+        </div>
+
+
+        <div class="l-container">
+          <ul class="point-image-list">
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-4.1.png') %>);"></div>
+              <p>フルーツやケーキだけでなく、<br>
+                和スイーツも充実</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-4.2.png') %>);"></div>
+              <p>様々なフレーバーを楽しめるミニケーキ</p>
+            </li>
+            <li>
+              <div class="point-image" style="background-image:url(<%= mix('/assets/images/dinner-buffet/point-4.3.png') %>);"></div>
+              <p>那須牛乳オリジナルみるくアイスに<br>
+                季節のフルーツを添えたストーンアイス</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="l-section">
+        <div class="l-container">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-auto',
+              text: 'Kids Experience',
+              alt: 'Kids Experience',
+              subtextvg: 'marcherant-dinner-buffet-kids-exp',
+              altSubtext: '',
+            }) %>
+          </div>
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-auto two-lines-sp',
+              text: 'Kids Experience',
+              alt: 'Kids Experience',
+              subtextvg: 'marcherant-dinner-buffet-kids-exp-sp',
+              altSubtext: '',
+            }) %>
+          </div>
+        </div>
+        <div class="swiper-container slider js-slider common-slider" id="commonSlider">
+          <ul class="swiper-wrapper top-slide top-slide-craft">
+            <% marcherantDinnerBuffetKidsExp.forEach(item => { %>
+            <li class="swiper-slide slider-item">
+              <div class="top-slider-image">
+                <img src="<%- item.src -%>" alt="<%- item.alt -%>">
+              </div>
+              <span class="top-slider-text">
+                <%- item.desc -%>
+              </span>
+            </li>
+            <% } ) %>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- breakfast menu 3 -->
+      <section class="">
+        <div class="l-container">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-auto',
+              text: 'Menu',
+              alt: 'Menu',
+              altSubtext: '',
+              subtextvg: 'marcherant-dinner-buffet-menu'
+            }) %>
+          </div>
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-auto two-lines-sp',
+              text: 'Menu',
+              alt: 'Menu',
+              altSubtext: '',
+              subtextvg: 'marcherant-dinner-buffet-menu-sp'
+            }) %>
+          </div>
+          <div class="subpage-inner">
+            <div class="breakfast-menu-3">
+              <div class="l-section-title">
+                <%- include('/partials/heading', {
+                  modifier: 'heading-wrap-center heading-restaurant heading-breakfast-menu color-green',
+                  subtextvg: 'breakfast-marcherant-menu-title',
+                  altSubtextvg: 'メニュー例'
+                }) %>
+              </div>
+
+              <p class="breakfast-menu-subtext">
+                ※メニューは季節・<br class="u-show-sp"/>仕入れ状況により異なる場合がございます。
+              </p>
+
+              <ul class="breakfast-menu-list-container">
+                <% getData().data.marcherantDinnerBuffetMenu.forEach(item => { %>
+                <li class="breakfast-menu-list-cat-item breakfast-menu-list-cat-item-dinner-buffet">
+                  <span><%- item.categoryName -%></span>
+                  <ul class="breakfast-menu-list-cat-list">
+                    <% item.categoryList.forEach(elem => { %>
+                    <li class="breakfast-menu-list-cat-list-item">
+                      <%- elem.listdesc -%>
+                    </li>
+                    <% }); %>
+                  </ul>
+                </li>
+                <% }); %>
+              </ul>
+              <br><br>
+              <img src="<%- mix('/assets/images/dinner-buffet/menu-banner.jpg') -%>" alt="menu">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="l-container-m full-sp">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-auto',
+              text: 'Shop’s Information',
+              alt: 'Shop’s Information',
+              altSubtext: '',
+              subtextvg: 'shop-information-title'
+            }) %>
+          </div>
+          <table class="table table-craft">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">場所</th>
+                <td class="table-col">
+                  ホテルツインリンク１階 <br><a href="/map_m/">Mapを見る</a>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">営業時間</th>
+                <td class="table-col">
+                  17:30～21:00（L.O.20:30）<br>
+                  ※ディナービュッフェはご宿泊のお客様限定、また毎週土曜日・長期休暇などに開催となります。詳しい日程は<a href="/hoteltwinring/calendar/index.html">こちら</a>をご確認ください。
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">ご利用料金</th>
+                <td class="table-col">
+                  大人（中学生以上）  4,600円<br>
+                  子ども（小学生）    3,600円<br>
+                  幼児（3歳以上）     1,600円
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">定休日</th>
+                <td class="table-col">
+                  <a href="/hours_m/">ツインリンクもてぎの休業日に準じます</a>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">座席数</th>
+                <td class="table-col">254　※個室4部屋</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">備考</th>
+                <td class="table-col">
+                  ※レース・イベント開催時は特別メニューになる場合がございます。<br>
+                  ※メニューは仕入れ状況により異なる場合がございます。
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="l-container">
+          <div class="subpage-section subpage-section-collapse marcherant-collapse-section gold">
+            <div class="subpage-collapse-heading js-collapse-button">お子さまのお誕生日や家族の記念日に<br>
+              アニバーサリーケーキのご注文について</div>
+            <div class="subpage-collapse-description">
+              <div class="subpage-collapse-content marcherant-collapse-content">
+                <p class="text-center">アニバーサリーケーキは、お電話にてご注文承ります｡<br/>プレートのお名前は申し込み時にお知らせください｡<br/><b>TEL 0285-64-0489</b>
+                </p>
+                <img class="collapse-banner" src="<%- mix('/assets/images/marcherant/collapse-banner-1.jpg') -%>" alt="">
+
+                <div class="grid-data">
+                  <div class="row">
+                    <div class="column" >
+                      <div class="col-heading-green">苺サンドケーキ</div>
+                      <div class="col-data">
+                        13cm    2,650円<br>
+                        15cm    2,960円<br>
+                        18cm  	3,470円
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="col-heading-green">チョコレートケーキ</div>
+                      <div class="col-data">
+                        18cm  	2,860円
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p>
+                  ※ディナー営業時間でのご提供となります。<br>
+                  ※店内でお召し上がりいただきます。<br>
+                  ※ご予約・キャンセルは5日前まで承ります。4日前～当日はキャンセル料100%となります。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="subpage-section subpage-section-collapse marcherant-collapse-section gold">
+            <div class="subpage-collapse-heading js-collapse-button">食物アレルギーをお持ちのお客様へ
+              <!-- <i class="button-icon">
+                <svg>
+                  <title>Mobipark</title>
+                  <use xlink:href="<%= svgSprite('/assets/svg/sprite.svg', '#sprite-arrow-right-gold') %>"></use>
+                </svg>
+              </i> -->
+            </div>
+            <div class="subpage-collapse-description">
+              <div class="subpage-collapse-content marcherant-collapse-content">
+                <p class="text-center">
+                  食物アレルギーをお持ちのお客さまは、ご予約時にお知らせください。<br>
+                  その場合、できる限りアレルゲンの除去に努めた料理を提供させて頂きますが、<br>
+                  アレルゲンの除去を保証するものではございませんのでご了承ください。
+
+                </p>
+                <p class="text-center"><b>対象</b></p>
+                <table class="table table-marcherant-collapse">
+                  <tbody>
+                    <tr class="table-row">
+                      <th class="table-head">森のレストラン MARCHERANT</th>
+                      <td class="table-col">
+                        ・ランチ<br />・ディナーセット
+                      </td>
+                    </tr>
+
+                    <tr class="table-row">
+                      <th class="table-head">里山懐石　登谷</th>
+                      <td class="table-col">
+                        ・里山懐石コース<br/>
+                        ・お子様御膳<br>
+                        ・幼児御膳
+                      </td>
+                    </tr>
+
+                    <tr class="table-row">
+                      <th class="table-head">森と星空の<br>
+                        キャンプヴィレッジ</th>
+                      <td class="table-col">
+                        ・グランピング・ワイド森のテラス　スペシャルＢＢＱプラン<br>
+                        ・らくらくBBQプラン
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="p-red">
+                  また「森のレストラン MARCHERANT」の【ディナービュッフェ】【朝食ビュッフェ】では、特定原材料８品目（卵、乳、小麦、えび、かに、そば、落花生、大豆）の使用について店舗のメニュー表にて表示しております。これらは表示している特定原材料がその料理に使用されていることを明記したものであり、記載のない特定原材料がその料理に含まれていないことを保証するものではありません。
+                </p>
+                <p class="">
+                  アレルゲンの除去が保証されないとお困りのお客さまは、お客さまの安全を第一に考え、やむを得ず食事の提供をお断りすることがございます。 その場合ご自身での食事の持ち込みをお受けいたしますので、事前にお申し出ください。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- restaurant menu -->
+      <%- include('/partials/restaurant/section-menu-marcherant-dinner-buffet', {
+        data: getData().data.marcherantDinnerBuffetOtherMenu
+      }) -%>
+
+
+      <section class="toya-reservation marcherant-reservation">
+        <div class="hoteltwinring-reservation">
+          <div class="hotel-reservation-wrap marcherant-reservation-wrap">
+            <div class="l-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'hoteltwinring-heading-reservation fill-white',
+                text: 'Reservation',
+                alt: '',
+                altSubtext: '',
+                subtextvg: 'marcherant-reservation-title',
+                altSubtextvg: 'Reservation'
+              }) %>
+            </div>
+
+            <div class="reservation-cta">
+              <div class="l-button cta-btn">
+                <span>ホテルツインリンクにご宿泊で<br>
+                  マルシェラン利用のお客様</span>
+                <%- include('/partials/button', {
+                  modifier: 'reservation-button',
+                  text: 'ご予約はこちら',
+                  newTab: true,
+                  link: 'https://asp.hotel-story.ne.jp/ver3d/planlist.asp?hcod1=61730&hcod2=001&c2plan=9001&clrmode=true'
+                }) -%>
+              </div>
+              <div class="l-button cta-btn">
+                <span>お問い合わせのお客様<br><br></span>
+                <span class="u-show-sp">
+                  <%- include('/partials/button', {
+                    modifier: 'reservation-button',
+                    text: '<span>Tel.0285-64-0489<br/><small>受付時間 10:00～17:30</small></span>',
+                    link: 'tel:0285-64-0489'
+                  }) -%>
+                </span>
+                <div class="button reservation-button u-show-pc"><span>Tel.0285-64-0489<br><small>受付時間 10:00～17:30</small></span>
+                  <i class="button-icon">
+
+
+                <svg xmlns="http://www.w3.org/2000/svg">
+
+                  <title></title>
+
+                  <use xlink:href="/assets/svg/sprite.svg#sprite-arrow"></use>
+                </svg>
+
+
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- other restaurant module-->
+      <%- include('/partials/marcherant-buffet/section-other-restaurant') -%>
+
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsMarcherantDinnerBuffet
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

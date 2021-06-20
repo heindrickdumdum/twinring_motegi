@@ -1,0 +1,347 @@
+//main page title
+.heading-main {
+  margin-bottom: 35px;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 73px;
+
+    .subpage-section-usagefee & {//hotel granroom/familyroom
+      margin-bottom: 77px;
+    }
+  }
+
+  &-subpage {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile + 1) {
+        height: auto;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        width: 202px;
+        height: 49.5px;
+      }
+    }
+
+    &-labo {
+      .heading-subtext {
+        @include max-screen($breakpoint-mobile) {
+          width: 219px;
+          height: 50.5px;
+        }
+      }
+    }
+  }
+
+  .heading {
+    // max-width: 651px;
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &.heading-main-carbike {
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 25px;
+      .heading-texts {
+        img {
+          padding: 0 20px;
+        }
+      }
+    }
+
+    .heading {
+      // margin-bottom: 65px;
+      max-width: 650px;
+    }
+  }
+
+  &.heading-main-dokidoki {
+    .heading {
+      max-width: 497px;
+    }
+  }
+
+  &.heading-main-wild-racer {
+    .heading {
+      max-width: 505px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 320px;
+      }
+    }
+  }
+
+  &.heading-main-bunbun {
+    .heading {
+      max-width: 445px;
+    }
+  }
+
+  &.heading-main-motoracer {
+    .heading {
+      max-width: 610px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 400px;
+      }
+    }
+  }
+
+  &.heading-main-moto-touring {
+    .heading {
+      max-width: 703px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 300px;
+      }
+    }
+  }
+
+  &.heading-main-motorcycle {
+    .heading {
+      max-width: 358px;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 250px;
+      }
+    }
+  }
+
+  &.heading-main-forest-driving {
+    img {
+      max-width: 628px;
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 270px;
+      }
+    }
+  }
+
+  &.heading-main-challenge {
+    img {
+      max-width: 316px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 651px;
+      }
+    }
+  }
+
+  &.heading-main-drift {
+    img {
+      max-width: 335px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 819px;
+      }
+    }
+  }
+
+  &.heading-main-debden {
+    img {
+      max-width: 285px;
+      width: 100%;
+
+      @include min-screen($breakpoint-mobile + 1) {
+        max-width: 569px;
+      }
+    }
+  }
+
+  &.heading-main-tsubasa {
+    margin: 60px 0;
+  }
+
+  &.heading-main-craft {
+    .heading-texts {
+      display: block;
+      img {
+        @include max-screen($breakpoint-mobile) {
+          width: 220px;
+        }
+      }
+    }
+
+    .heading {
+      @include min-screen($breakpoint-mobile + 1) {
+        transform: translate(-9px, 0);
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        margin: 0 auto;
+      }
+    }
+
+    &::before {
+      @include max-screen($breakpoint-mobile) {
+        background-image: url(../images/craft/craft-heading-wrap-bg-sp.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: -20px;
+        top: -19px;
+        right: -21px;
+        bottom: 0;
+        content: "";
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 105px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      position: relative;
+      margin: 0;
+      padding: 29px 0 60px;
+    }
+  }
+
+  &.heading-main-musasabi {
+    .heading {
+      img {
+        @include min-screen($breakpoint-mobile + 1) {
+          transform: translate(-11px, 2px);
+        }
+
+        &:last-child {
+          @include max-screen($breakpoint-mobile) {
+            max-width: 335px;
+          }
+        }
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-bottom: 83px;
+    }
+  }
+
+  &.heading-main-dream {
+    @include max-screen($breakpoint-mobile) {
+      max-width: 350px;
+      margin: 0 auto 45px;
+    }
+  }
+
+  &.heading-main-marcherant {
+    text-align: center;
+    max-width: 882px;
+    margin: 40px auto 20px;
+
+    .heading {
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 300px;
+      }
+    }
+
+    .heading-main-subtext {
+      font-size: 18px;
+      margin-top: 34px;
+      letter-spacing: 4px;
+      line-height: 1.8;
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 12px;
+        margin-top: 26px;
+      }
+
+      &.dinner-buffet {
+        font-size: 15px;
+
+        @include max-screen ($breakpoint-mobile) {
+          font-size: 12px;
+          max-width: 300px;
+          margin: auto;
+          text-align: left;
+        }
+      }
+    }
+
+    &.dinner-buffet {
+      margin: 65px auto 20px;
+      .heading {
+        margin-bottom: 15px;
+        max-width: none;
+        padding: 0px 40px;
+
+        @include max-screen ($breakpoint-mobile) {
+          img {
+            max-width: 270px;
+            margin: initial;
+          }
+        } 
+      }
+
+      @include min-screen ($breakpoint-mobile+1) {
+        margin: 140px auto 0;
+        max-width: none;
+
+        .heading {
+          padding: 0;
+        }
+        .heading-main-subtext {
+          margin-top: 28px;
+        }
+      }
+    }
+
+  }
+
+  &.heading-main-tourism {
+    .heading-tourism {
+      max-width: 481px;
+      margin-bottom: 30px;
+      
+      @include max-screen ($breakpoint-mobile) {
+        max-width: 290px;
+      }
+    }
+
+    .heading-main-subtext-tourism {
+      margin: auto;
+      
+      font-weight: bold;
+      line-height: 2.3;
+
+      @include min-screen ($breakpoint-mobile+1) {
+        font-size: 14px;
+      }
+    }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      margin-bottom: 85px;
+    } 
+  }
+
+  &.heading-main-program-details {
+    .media-title {
+      font-size: 36px;
+    }
+  }
+
+  &.heading-main-mobipark-guide {
+    background-color: #f9f9f9;
+    padding: 30px;
+
+    .heading-text {
+      font-size: 24px;
+      margin-bottom: 45px;
+    }
+    
+    margin-bottom: 23px;
+
+    @include min-screen ($breakpoint-mobile+1) {
+      padding: 56px 70px;
+      margin-bottom: 15px;
+    }
+  }
+
+  
+}

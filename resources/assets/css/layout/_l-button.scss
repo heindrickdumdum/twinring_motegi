@@ -1,0 +1,45 @@
+.l-button {
+  margin-top: 50px;
+
+  &.l-button-call-to-action {
+    margin-top: 25px;
+    @include max-screen($breakpoint-mobile) {
+      margin: 15px;
+    }
+  }
+
+  //modifier
+  .button-adventure {
+    margin-top: -9px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -21px;
+
+      &-racing-kart {
+        margin-top: -24px;
+      }
+    }
+  }
+
+  .button-kids-carbike-attraction {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+//modifier sub-page
+.l-button-call-to-action-subpage {
+  margin-top: 25px;
+}
+
+//modifier SP
+@include max-screen($breakpoint-mobile) {
+  .l-button-kids-carbike {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

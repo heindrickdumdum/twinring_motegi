@@ -1,0 +1,8 @@
+.l-note {
+  margin: 40px 0;
+  text-align: center;
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 0;
+  }
+}

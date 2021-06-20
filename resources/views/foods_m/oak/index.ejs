@@ -1,0 +1,169 @@
+<%
+  var title = 'Twin Ring Motegi | 森の教習所'
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'oak';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage subpage-restaurant restaurant-wrapper oak-wrapper">
+    <div class="mv mv-restaurant mv-subpage-restaurant">
+      
+
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image mv-image-subpage u-show-pc" style="background-image:url(<%= mix('/assets/images/oak/mv-img.jpg') %>);"></div>
+          <div class="mv-image mv-image-subpage u-show-sp" style="background-image:url(<%= mix('/assets/images/oak/mv-img-sp.png') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading hellowoods-mv-heading oak-mv-heading u-show-pc">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Cafe Restaurant OAK',
+            subtextvg: 'oak-top-title',
+            altSubtextvg: 'カフェレストラン オーク'
+          }) %>
+        </div>
+        <div class="mv-heading hellowoods-mv-heading oak-mv-heading u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            heading_level: 1,
+            text: 'Cafe Restaurant OAK',
+            subtextvg: 'oak-top-title-sp',
+            altSubtextvg: 'カフェレストラン オーク'
+          }) %>
+        </div>
+
+        <div class="u-show-pc mv-today mv-logo mv-granroom-logo" style="background-image: url(<%= mix('/assets/images/oak/mv-logo.png') %>);">
+          <div class="mv-l-inner">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner-wrap">
+        <div class="subpage-inner">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant heading-oak',
+              imgPath: mix('/assets/images/oak/color-title.png'),
+              alt: '「森」をテーマにした ここだけの オリジナルメニューが いっぱい'
+              // subtextvg: 'oak-main-title',
+              // altSubtextvg: `「森」をテーマにした ここだけの オリジナルメニューが いっぱい`
+            }) %>
+          </div>
+
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-restaurant heading-oak',
+              imgPath: mix('/assets/images/oak/color-title-sp.png'),
+              alt: '「森」をテーマにした ここだけの オリジナルメニューが いっぱい'
+              // subtextvg: 'oak-main-title-sp',
+              // altSubtextvg: `「森」をテーマにした ここだけの オリジナルメニューが いっぱい`
+            }) %>
+          </div>
+
+          <div class="subpage-banner subpage-banner-craft">
+            <div class="subpage-banner-inner">
+              <img class="u-show-pc" src="<%= mix('/assets/images/oak/subpage-banner.jpg') %>" alt="家族みんなで楽しめる『森』をテーマにした オリジナルメニューが盛りだくさん!!">
+              <img class="u-show-sp" src="<%= mix('/assets/images/oak/subpage-banner-sp.jpg') %>" alt="家族みんなで楽しめる『森』をテーマにした オリジナルメニューが盛りだくさん!!">
+            </div>
+          </div>
+
+          <p class="subpage-desc">
+            小さなお子さまからお父さん &sdot; お母さんまで、家族みんなが大満足の種類豊富なメニューが魅力。サイドメニューやデザート、アルコールもあるので、ひとやすみにもおすすめです。
+          </p>
+
+          <h2 class="subpage-title">
+            <span>店舗情報</span>
+          </h2>
+
+          <table class="table table-craft">
+            <tbody>
+              <tr class="table-row">
+                <th class="table-head">場所</th>
+                <td class="table-col">
+                  中央エントランス <a class="link link-green" href="/map_m/">MAPを見る</a>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">営業時間</th>
+                <td class="table-col">
+                  <a class="link link-green" href="/hours_m/">ツインリンクもてぎ営業時間内</a>（L.O.営業終了30分前）
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">座席数</th>
+                <td class="table-col">店内: 98 　テラス: 120</td>
+              </tr>
+
+              <tr class="table-row">
+                <th class="table-head">備考</th>
+                <td class="table-col">
+                  <p> &sdot; チャイルドシートあり </p>
+                  <p> &sdot; 低アレルゲンメニューあり</p>
+                  <p> &sdot; アルコールあり</p>
+                  <p> &sdot; クレジットカード利用可</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- restaurant menu -->
+      <%- include('/partials/restaurant/section-menu', {
+        data: getData().data.oakMenu
+      }) -%>
+
+      <div class="l-section oak-button">
+        <!-- <p class="u-show-pc">
+          この他にも、様々なメニューをご用意しております。
+        </p>
+
+        <p class="u-show-sp">
+          この他にも、様々なメニューを<br/>ご用意しております。
+        </p> -->
+
+        <div class="u-show-pc">
+          <%- include('/partials/button', {
+            modifier: 'restaurant-button donguri-button oak-button',
+            link: '/foods_m/pdf/oak_menu_202003.pdf',
+            text: '<span>その他のメニューはこちら (PDF：4.3MB)</span>',
+            arrowColor: 'green',
+            newTab: true
+          }) -%>
+        </div>
+
+        <div class="u-show-sp">
+          <%- include('/partials/button', {
+            modifier: 'restaurant-button donguri-button oak-button',
+            link: '/foods_m/pdf/oak_menu_202003.pdf',
+            text: '<span>その他のメニューは<br/>こちら (PDF：4.3MB)</span>',
+            arrowColor: 'green',
+            newTab: true
+          }) -%>
+        </div>
+      </div>
+
+      <!-- other restaurant module-->
+      <%- include('/partials/oak/section-other-restaurant') -%>
+      
+      
+
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsOak
+}) -%>
+<%- include('/partials/footer', { pageId } ) -%>

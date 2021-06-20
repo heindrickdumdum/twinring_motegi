@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <%- include('/partials/meta', { pageId }) %>
+</head>
+<body>
+	<!-- START GTM HEADER -->
+	<!-- Google Tag Manager 201809-->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-TNMNRDZ');</script>
+	<!-- End Google Tag Manager -->
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNMNRDZ"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<!-- END GTM HEADER -->
+
+	 <!-- START LIG ASSETS FILES -->
+ 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+	<link rel="shortcut icon" href="/assets/images/common/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="/assets/images/common/apple-touch-icon-precomposed.png">
+	<link rel="stylesheet" href="<%= mix('/assets/css/app.css') %>">
+	<script>
+	  // IE foreach Polyfill
+	  if ('NodeList' in window && !NodeList.prototype.forEach) {
+	      NodeList.prototype.forEach = function (callback, thisArg) {
+	          thisArg = thisArg || window;
+	          for (let i = 0; i < this.length; i++) {
+	              callback.call(thisArg, this[i], i, this);
+	          }
+	      };
+	  }
+	</script>
+
+	<script>
+	  var viewport = document.getElementById('js-viewport');
+
+	  // SMALLEST SCREENS
+	  if (window.screen.width < 375) {
+	    viewport.setAttribute('content', 'width=375, initial-scale=' + 320 / 375 + ', user-scalable=no');
+	  } else if (window.screen.width >= 375) {
+	    viewport.setAttribute('content', 'width=375, initial-scale=1, user-scalable=yes');
+	  }
+	</script>
+
+	<!-- resize for tab -->
+	<script>
+	  (function () {
+	    var ua = navigator.userAgent;
+	    var isIpad = (ua.indexOf('iPad') > 0);
+	    var isAndroidTab = (ua.indexOf('Android') > 0 && ua.match(/Mobile/i) == null);
+	    var tab = isIpad || isAndroidTab;
+	    var minWidth = tab ? 1240 : 'device-width';
+	    var initialScale = tab ? window.parent.screen.width / minWidth : 1;
+	    if (tab) {
+	      document.head.insertAdjacentHTML('beforeend', '<meta name="viewport" content="width=' + minWidth + ',initial-scale=' + initialScale + '">');
+	    }
+	  })()
+	</script>
+
+	<script> document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+	<!-- END LIG ASSETS FILES -->
+
+	<% if (pageId === 'index') { %>
+	<div class="preload js-preload" id="lig-preload">
+		<div class="preload-image"></div>
+		<img class="preload-text" src="<%= mix('/assets/images/footer-twinring.png') %>" alt="">
+	</div>
+	<% } %>
+
+	<!-- <div class="wrap" id="js-wrap"> -->
+		<% var topHeading; %>
+		<%- include('/partials/header', {
+			topHeading: topHeading
+		}) -%>

@@ -1,0 +1,269 @@
+<% include('./_accordionData') %>
+<% include('./_attractions') %>
+<% include('./_breadcrumbsData') %>
+<% include('./_car-bike') %>
+<% include('./_craft-menu') %>
+<% include('./_faqListData') %>
+<% include('./_feature-content') %>
+<% include('./_footer-top') %>
+<% include('./_forest') %>
+<% include('./_glampingInfo') %>
+<% include('./_header') %>
+<% include('./_header-content-access') %>
+<% include('./_header-content-attraction') %>
+<% include('./_header-content-motor') %>
+<% include('./_header-content-restaurant') %>
+<% include('./_header-content-camp') %>
+<% include('./_hellowoodsFields') %>
+<% include('./_hellowoodsInfo') %>
+<% include('./_hoteltwinringData') %>
+<% include('./_restaurantData') %>
+<% include('./_hellowoodsGallery') %>
+<% include('./_how-to-content') %>
+<% include('./_information-content') %>
+<% include('./_instagram') %>
+<% include('./_meta') %>
+<% include('./_mobiparkData') %>
+<% include('./_mobiparkSlides') %>
+<% include('./_parkmap-buttons') %>
+<% include('./_pickup') %>
+<% include('./_programs') %>
+<% include('./_recommend') %>
+<% include('./_sponsors') %>
+<% include('./_stepData') %>
+<% include('./_campData') %>
+<% include('./_toyaData') %>
+<% include('./_smartEntryData') %>
+<% include('./_accessData') %>
+<% include('./_marcherantData') %>
+<% include('./_mobiparkGuideData') %>
+<% include('./_tourism') %>
+<% include('./_goodsData') %>
+<% include('./_eventsData') %>
+<% include('./_collectionData') %>
+<% include('./_collectionAccordion') %>
+<% include('./_racingInfo') %>
+<% include('./_racingData') %>
+
+<%
+  getData = () => {
+    return {
+      data: {
+        accordionData,
+        accordionChallenge,
+        accordionTsubasa,
+        accordionMusasabi,
+        accordionItadaki,
+        accordionDokidoki,
+        accordionSumika,
+        accordionHellowoods,
+        accordionFaq,
+        accordionGlamping,
+
+        accordionReservationApplication,
+        accordionAccomodationPrevilege,
+        accordionAccessTransportation,
+        accordionArrivalCheckin,
+        accordionHotel,
+        accordionGuestRoom,
+        accordionTheRestaurant,
+        accordionNozominoYu,
+        accordionAmusementPark,
+
+        attractionAthleticList,
+        attractionForestList,
+        attractionWorkshopList,
+        featureContent,
+        forest,
+        forestDokidoki,
+        forestItadaki,
+        forestCraft,
+        howToContent,
+        instagram,
+        mobiparkData,
+        mobiparkSlides,
+        parkmapButtons,
+        informationContent,
+        instagram,
+        instagramItadakiImages,
+        pickup,
+        recommend,
+        recommendDokidoki,
+        sponsorsData,
+        footerTopList,
+        footerTopNav,
+        footerBottomNav,
+        craftMenuData,
+        bikeList,
+        breadcrumbsChallenge,
+        breadcrumbsBunbun,
+        breadcrumbsDream,
+        breadcrumbsDrift,
+        breadcrumbsWildracer,
+        breadcrumbsDebden,
+        breadcrumbsAcrox,
+        breadcrumbsForestDrivingSchool,
+        breadcrumbsForestProgram,
+        breadcrumbsCarbike,
+        breadcrumbsMobipark,
+        breadcrumbsHellowoods,
+        breadcrumbsWalk,
+        breadcrumbsLabo,
+        breadcrumbsTsubasa,
+        breadcrumbsMusasabi,
+        breadcrumbsMotorcycle,
+        breadcrumbsMototouring,
+        breadcrumbsMotoracer,
+        breadcrumbsNozominoyu,
+        breadcrumbsItadaki,
+        breadcrumbsSumika,
+        breadcrumbsDokidoki,
+        breadcrumbsCraft,
+        breadcrumbsCollectionPit,
+        breadcrumbsAreaindex,
+        breadcrumbsGranroom,
+        breadcrumbsFamilyroom,
+        breadcrumbsStandardroom,
+        breadcrumbsReserve,
+        breadcrumbsFoodsM,
+        breadcrumbsOak,
+        breadcrumbsDonguri,
+        breadcrumbsGranturismo,
+        breadcrumbsRocco,
+        breadcrumbsCamp,
+        breadcrumbsStay,
+        breadcrumbsToya,
+        breadcrumbsSmartEntry,
+        breadcrumbsMarcherantBreakfast,
+        breadcrumbsMarcherantLunch,
+        breadcrumbsBusinessHours,
+        breadcrumbsMarcherantDinnerBuffet,
+        breadcrumbsMarcherant,
+        breadcrumbsZipline,
+        breadcrumbsParkMap,
+        breadcrumbsMarcherantDinner,
+        breadcrumbsAttraction,
+        breadcrumbsProgramDetails,
+        breadcrumbsAccess,
+        breadcrumbsServiceM,
+        breadcrumbsFee,
+        breadcrumbsMobiparkGuide,
+        breadcrumbs404,
+        breadcrumbsTouristInformation,
+        breadcrumbsBluenote,
+        breadcrumbsCollectionHall,
+        carList,
+        craftMenuData,
+        donguriMenu,
+        featureContent,
+        footerBottomNav,
+        footerTopList,
+        footerTopNav,
+        forest,
+        forestItadaki,
+        forestCraft,
+        forestPit,
+        faqList,
+        glampingInfo,
+        headerTopNav,
+        headerBottomNav,
+        headerAccessImageList,
+        headerAttractionImageList,
+        headerAttractionRightLinks,
+        headerAttractionBottomLinks,
+        headerMotorImageList,
+        headerMotorRightLinks,
+        headerMotorImageBottomList,
+        headerMotorBottomLinks,
+        headerRestaurantImageList,
+        headerCampImageList,
+        headerCampImageList2,
+        hellowoodsFields,
+        hellowoodsGallery,
+        forest_programGallery,
+        hellowoodsInfo,
+        hoteltwinringInfo,
+        racingInfo,
+        restaurantInfo,
+        restaurantMarcherant,
+        restaurantSlider,
+        restaurantOtherMenu,
+        restaurantOtherMenuMarcherantSet,
+        restaurantOtherMenuGranturismo,
+        restaurantOtherMenuOak,
+        restaurantOtherMenuDonguri,
+        restaurantOtherMenuMarcherant,
+        restaurantOtherMenuRocco,
+        restaurantOtherMenuToya,
+        restaurantRecommended,
+        restaurantToyaFood,
+        restaurantToyaGallery,
+        restaurantToyaMenuTab,
+        toyaSummerGallery,
+        toyaSpringGallery,
+        toyaAutumnGallery,
+        toyaWinterGallery,
+        oakMenu,
+        granTurismoMenu,
+        roccoGelatoMenu,
+        roccoGelatoPopMenu,
+        roccoSubMenu,
+        roccoDrinksMenu1,
+        roccoDrinksMenu2,
+        howToContent,
+        informationContent,
+        instagram,
+        instagramItadakiImages,
+        meta,
+        mobiparkData,
+        mobiparkSlides,
+        marcherantMenu,
+        parkmapButtons,
+        parkmapButtonsAreaList,
+        pickup,
+        programList,
+        recommend,
+        recommendDokidoki,
+        sponsorsData,
+        stepsMusasabi,
+        stepsTsubasa,
+        workshopList,
+        campAnchor,
+        campAnchorStay,
+        toyaConceptlist,
+        toyaConceptGallery,
+        toyaExperienceData,
+        toyaMenuTab,
+        targetAttraction,
+        parkMapSmartEntryData,
+        accordionSmartEntry,
+        flowdata,
+        accessTabCarBike,
+        accessTabTrain,
+        accessTabBus,
+        breakfastMarcherantMenu,
+        breakfastMarcherantMenu1,
+        breakfastMarcherantMenu2,
+        breakfastMarcherantMenu3,
+        lunchMarcherantRichMenu,
+        lunchMarcherantOtherMenu,
+        dinnerMarcherantMenu,
+        recommendedDinnerPlate,
+        marcherantDinnerBuffetKidsExp,
+        marcherantDinnerBuffetMenu,
+        marcherantDinnerBuffetOtherMenu,
+        mobiparkGuideMobipark,
+        mobiparkGuideHellowoods,
+        mobiparkGuideHonda,
+        tourismMogiCho,
+        tourismMogiTown,
+        tourismMashikoTown,
+        goodsList,
+        goodsShopList,
+        eventsList,
+        collectionData,
+        racingTabs
+      }
+    }
+  }
+%>

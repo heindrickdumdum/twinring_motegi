@@ -1,0 +1,17 @@
+#LayoutMerge On
+AddOutputFilter LAYOUT html
+LayoutHeader /autonavi/globalnavi/trm_header.html
+LayoutFooter /autonavi/globalnavi/trm_footer.html
+AddType image/svg+xml .svg .svgz
+
+# For Redirect
+# RewriteRule ^PATH$ URL [R=301,L]
+RewriteEngine on
+RewriteBase /
+RewriteRule ^renewal/index.html$ /hoteltwinring/familyroom/ [R=301,L] 
+RewriteRule ^guest/$ /hoteltwinring/ [R=301,L] 
+RewriteRule ^guest/standard.html$ /hoteltwinring/standardroom/ [R=301,L] 
+RewriteRule ^index.html$ /hoteltwinring/ [R=301,L] 
+#RewriteRule ^motegi/hoteltwinring/$ hoteltwinring/granroom/ [R=301,L] 
+
+

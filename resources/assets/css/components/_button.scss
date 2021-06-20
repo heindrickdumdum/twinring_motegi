@@ -1,0 +1,291 @@
+.button-icon {
+  width: 22px;
+  position: absolute;
+  right: 20px;
+  transition: transform $duration $ease-in-out;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 15px;
+  }
+
+  svg {
+    width: 100%;
+    height: 12px;
+  }
+
+  @at-root .toya-button & {
+    @include min-screen($breakpoint-mobile + 1) {
+      right: 40px;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 364px;
+  height: 62px;
+  font-size: 16px;
+  font-weight: bold;
+  color: $base-font-color;
+  border: 1px dotted $color-primary;
+  position: relative;
+  letter-spacing: 0.08em;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+    max-width: 364px;
+    width: 100%;
+    height: 50px;
+  }
+
+  &:hover {
+    @include min-screen($breakpoint-mobile + 1) {
+      .button-icon {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    width: calc(100% + 10px);
+    height: calc(100% - 7px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -5px;
+    right: 0;
+    border: 1px dotted $color-primary;
+  }
+
+  &.location-btn {//access page
+    @include max-screen($breakpoint-mobile) {
+      width: 257px;
+    }
+  }
+
+  &-rocco {//rocco
+    &:before {
+      content: none;
+    }
+
+    border-width: 0px;
+    background: #532525;
+    color: $color-white;
+    width: 446px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 33px;
+      width: 295px;
+    }
+
+    .button-icon {
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &:hover {
+      .button-icon {
+        transform: translate(5px, -50%);
+      }
+    }
+  }
+
+  &.button-parkmap {
+    width: 98%;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      &:hover {
+        color: $color-green;
+
+        .button-icon {
+          svg {
+            stroke: $color-green;
+          }
+        }
+      }
+    }
+
+    .button-icon {
+      right: 18px;
+    }
+  }
+
+  &.button-sumika {
+    max-width: 381px;
+    letter-spacing: 0.112em;
+
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+    }
+
+    .button-icon {
+      right: 26px;
+      width: 20px;
+    }
+  }
+
+  &.button-sumika-instagram {
+    @include max-screen($breakpoint-mobile) {
+      width: 75%;
+    }
+    .button-icon {
+      @include max-screen($breakpoint-mobile) {
+        width: 17px;
+        right: 15px;
+      }
+    }
+  }
+
+  &.button-instagram {
+    max-width: 381px;
+    letter-spacing: 0.112em;
+    width: 100%;
+    
+    @include max-screen($breakpoint-mobile) {
+      max-width: 248px;
+    }
+  }
+
+  &.button-hellowoods {
+    width: 100%;
+    max-width: 364px;
+
+  }
+
+  &.button-banner-more {
+    max-width: 381px;
+    letter-spacing: 0.112em;
+
+    @include max-screen($breakpoint-mobile) {
+      width: calc(100% - 76px);
+    }
+
+    .button-icon {
+      right: 26px;
+      width: 20px;
+    }
+  }
+
+  &.button-kart {
+    margin: 35px auto 0;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 58px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 246px;
+    }
+  }
+
+  &.button-comparison {
+    max-width: 370px;
+    width: 100%;
+
+    br {
+      display: block;
+
+      @include min-screen(526px) {
+        display: none;
+      }
+    }
+
+    .button-icon {
+      @include max-screen(525px) {
+        right: 0;
+        position: relative;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &.challenge-hellowoods-button {
+    @include min-screen ($breakpoint-mobile + 1) {
+      margin-left: 5px;
+    }
+  }
+
+  &.download-pdf {
+      width: auto;
+      max-width: 730px;
+      background-color: $color-white;
+      height: 95px;
+      border: 1px solid $color-black;
+  
+      &:before {
+        content: none;
+        display: none;
+      }
+  
+      @include max-screen($breakpoint-mobile) {
+        height: 60px;
+        font-size: 12px;
+        max-width: 345px;
+      }
+  }
+
+  &.map_m-pdf {
+    svg {
+      height: 30px;
+    }
+  }
+
+  &.program-details-green {
+    background-image: url('../images/program-details/button-bg-green.jpg');
+    border: none;
+    background-position: center;
+    background-size: 200%;
+    width: 100%;
+    height: auto;
+    max-width: 490px;
+    padding: 30px;
+    margin-bottom: 14px;
+
+    @include min-screen ($breakpoint-mobile+1) {
+      margin-top: 100px;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 14px;
+      padding: 20px;
+    }
+  }
+
+  &.dinner-buffet-gold {
+    border: 1px solid #a38737;
+    max-width: 295px;
+    color: #a38737;
+    margin-bottom: 74px;
+
+    &::before {
+      display: none;
+    }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      width: 100%;
+      max-width: 730px;
+      padding: 46px;
+      margin-bottom: 74px;
+    } 
+  }
+
+}
+
+@at-root .foodsm-button {//foods_m page
+  border-color: $color-green !important;
+  color: $color-green;
+}
+
+@at-root .location-btn {//access page
+  background-color: $color-white;
+}

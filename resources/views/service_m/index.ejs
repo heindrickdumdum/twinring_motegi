@@ -1,0 +1,417 @@
+<%
+  var title = 'Twin Ring Motegi | アクロエックス';
+  SPRITE_SVG = '/assets/svg/sprite.svg';
+  pageId = 'service_m';
+%>
+<% include('/partials/data/index') %>
+<%- include('/partials/head', { pageId, title }) -%>
+
+<div class="lig-content">
+  <div class="subpage">
+    <div class="mv mv-subpage">
+      <ul class="mv-list">
+        <li class="mv-item">
+          <div class="mv-image u-show-pc" style="background-image:url(<%= mix('/assets/images/service-m/mv-img.jpg') %>);"></div>
+          <div class="mv-image u-show-sp" style="background-image:url(<%= mix('/assets/images/service-m/mv-img-sp.jpg') %>);"></div>
+        </li>
+      </ul>
+
+      <div class="l-container mv-container">
+        <div class="mv-heading mv-heading-faq">
+          <%- include('/partials/heading', {
+            modifier: 'heading-faq',
+            heading_level: 1,
+            text: 'Before Visiting',
+            subtextvg: 'service-m-page-title',
+            altSubtextvg: ''
+          }) %>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="subpage-inner">
+        <div class="faq faq-page">
+
+          <section class="faq-sec">
+            <h2 class="faq-sec-title">
+              <span>お出かけ前にかかさずチェック！</span>
+            </h2>
+
+            <p>初めてや久しぶりに訪れる方へ、事前に知っておくと便利な情報などをまとめました。</p>
+
+            <!-- <p>初めてや久しぶりに訪れる⽅へ、事前に知っておくと便利な情報などをまとめました。</p> -->
+
+            <ul class="faq-sec-list">
+              <% [
+                  {
+                    link: '/hours_m/',
+                    svgModifier: 'time',
+                    svg: 'icon01',
+                    text: '<span>営業カレンダー・営業時間</span>'
+                  },
+                  {
+                    link: '/fee_m/',
+                    svgModifier: 'ticket',
+                    svg: 'icon02',
+                    text: '<span>料金・チケット</span>'
+                  },
+                  {
+                    link: '/access_m/',
+                    svgModifier: 'car',
+                    svg: 'icon03',
+                    text: '<span>交通アクセス</span>'
+                  },
+                  {
+                    link: '/map_m/',
+                    svgModifier: 'map',
+                    svg: 'icon04',
+                    text: '<span>場内マップ・駐車場</span>'
+                  },
+                  {
+                    link: '/mobipark_m/guide/',
+                    svgModifier: 'tall',
+                    svg: 'icon05',
+                    text: '<span class="u-show-pc">アトラクションの対象年齢</span><span class="u-show-sp">アトラクションの</span><span class="u-show-sp">対象年齢</span>',
+                  },
+                  {
+                    link: '/smart_entry/',
+                    svgModifier: 'tag',
+                    svg: 'icon06',
+                    text: '<span>スマートエントリー</span><span>（入場整理券）</span>'
+                  },
+                  {
+                    link: '/service_m/child.html',
+                    svgModifier: 'family',
+                    svg: 'icon07',
+                    text: '<span>お子さま連れの方へ</span>'
+                  },
+                  {
+                    link: '/service_m/barrierfree.html',
+                    svgModifier: 'handicap',
+                    svg: 'icon08',
+                    text: '<span>お身体の不自由な方へ</span>'
+                  },
+                  {
+                    link: '/service_m/wifi.html',
+                    svgModifier: 'wifi',
+                    svg: 'icon09',
+                    text: '<span>Wi-Fiについて</span>'
+                  },
+                ].forEach((data) => { %>
+                  <li class="faq-sec-item">
+                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                      <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                        <title>icon <%- data.svgModifier %></title>
+                        <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                      </svg>
+                      <p class="faq-sec-txt">
+                        <%- data.text %>
+                      </p>
+                    </a>
+                  </li>
+              <% }); %>
+
+            </ul>
+          </section>
+
+          <section class="faq-sec">
+            <h2 class="faq-sec-title">
+              <span>ツインリンクもてぎについて</span>
+            </h2>
+
+            <p>家族が1日中楽しめる全7つのエリアで構成された森の中のモビリティテーマパーク。<br />国内外のレースや季節のイベントの他、夏と冬に花火大会も開催しています。</p>
+
+            <ul class="faq-sec-list">
+              <% [
+                  {
+                    link: '/twinringmotegi/',
+                    svgModifier: 'area',
+                    svg: 'icon10',
+                    text: '<span>エリア・施設</span>'
+                  },
+                  {
+                    link: '/mobipark_m/guide/',
+                    svgModifier: 'attraction',
+                    svg: 'icon11',
+                    text: '<span>アトラクション・</span><span>アクティビティ一覧</span>'
+                  },
+                  {
+                    link: '/service_m/jounai.html',
+                    svgModifier: 'info',
+                    svg: 'icon12',
+                    text: '<span>場内サービスのご案内</span>'
+                  },
+                  {
+                    link: '/season-event/',
+                    svgModifier: 'event',
+                    svg: 'icon13',
+                    text: '<span>季節のイベント</span>'
+                  },
+                  {
+                    link: '/twinringmotegi/plan/adults.html',
+                    svgModifier: 'enjoy',
+                    svg: 'icon14',
+                    text: '<span>ツインリンクもてぎ</span><span>の楽しみ方</span>',
+                  }
+                ].forEach((data) => { %>
+                  <li class="faq-sec-item">
+                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                      <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                        <title>icon <%- data.svgModifier %></title>
+                        <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                      </svg>
+                      <p class="faq-sec-txt">
+                        <%- data.text %>
+                      </p>
+                    </a>
+                  </li>
+              <% }); %>
+            </ul>
+          </section>
+
+          <section class="faq-sec">
+            <h2 class="faq-sec-title">
+              <span>宿泊施設のご案内</span>
+            </h2>
+
+            <p>ツインリンクもてぎには2つの宿泊施設があります。<br />自分に合ったスタイルで、くつろぎと癒しのひとときをお過ごしください。</p>
+
+            <ul class="faq-sec-list">
+              <% [
+                  {
+                    link: '/hoteltwinring/',
+                    svgModifier: 'hotel',
+                    svg: 'icon15',
+                    text: '<span>ホテルツインリンク</span>'
+                  },
+                  {
+                    link: '/f-glamping/',
+                    svgModifier: 'camp',
+                    svg: 'icon16',
+                    text: '<span>森と星空の</span><span>キャンプヴィレッジ</span>'
+                  }
+                ].forEach((data) => { %>
+                  <li class="faq-sec-item">
+                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                      <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                        <title>icon <%- data.svgModifier %></title>
+                        <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                      </svg>
+                      <p class="faq-sec-txt">
+                        <%- data.text %>
+                      </p>
+                    </a>
+                  </li>
+              <% }); %>
+            </ul>
+          </section>
+
+          <section class="faq-sec faq-sec-table">
+            <h2 class="faq-sec-title">
+              <span class="u-show-pc">ホテルからモビパークエリアまでの巡回バスのご案内</span>
+              <span class="u-show-sp">ホテルから</span>
+              <span class="u-show-sp">モビパークエリアまでの</span>
+              <span class="u-show-sp">巡回バスのご案内</span>
+            </h2>
+
+            <table class="faq-table">
+              <tr>
+                <td>土日祝</td>
+                <td>
+                  <span class="faq-table-lbl">ループバス運行</span>
+                  ホテルツインリンク ⇔ 中央エントランス（モビパークエリア）
+                </td>
+              </tr>
+              <tr>
+                <td>平日</td>
+                <td>
+                  <span class="faq-table-lbl">リクエストバス運行</span>
+                  インフォメーションセンター・ホンダコレクションホール・ホテルツインリンクのフロントスタッフにお申し付けください。
+                </td>
+              </tr>
+              <tr>
+                <td>レース・<br />イベント日</td>
+                <td>
+                  <span class="faq-table-lbl">ループバス運行</span>
+                  10分～30分間隔で随時運行しておりますので、バス停でお待ちください。<br />レース・イベント日によって運行時間・運行ルートの変更がございます。<br />詳細はバス停の看板をご覧いただくか、インフォメーションセンタースタッフにお問い合わせください。
+                </td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="faq-sec" id="faq">
+            <h2 class="faq-sec-title">
+              <span>よくあるご質問</span>
+            </h2>
+
+            <ul class="faq-sec-list faq-sec-list-cat">
+              <li class="faq-sec-item">
+                <a class="faq-sec-item-link" href="/hellowoods/#hellowoods-faq">
+                  <svg class="faq-sec-svg faq-sec-svg-hellowoods">
+                    <title>icon hellowoods</title>
+                    <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-icon17') %>"></use>
+                  </svg>
+                  <p class="faq-sec-txt">
+                    <span>ハローウッズについて</span>
+                  </p>
+                </a>
+              </li>
+              <li class="faq-sec-item">
+                <a class="faq-sec-item-link" href="/mobipark_m/">
+                  <svg class="faq-sec-svg faq-sec-svg-mobipark">
+                    <title>icon mobipark</title>
+                    <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-icon18') %>"></use>
+                  </svg>
+                  <p class="faq-sec-txt">
+                    <span>モビパークについて</span>
+                  </p>
+                </a>
+              </li>
+              <li class="faq-sec-item">
+                <a class="faq-sec-item-link" href="/f-glamping/#f-glamping-faq">
+                  <div class="faq-sec-img faq-sec-img-twinring">
+                    <img  src="<%= mix('/assets/images/service-m/twinring-hotel.png') %>" alt="">
+                  </div>
+
+                  <p class="faq-sec-txt">
+                    <span>森と星空の</span><span>キャンプヴィレッジ</span>
+                  </p>
+                </a>
+              </li>
+              <li class="faq-sec-item">
+                <a class="faq-sec-item-link" href="/hoteltwinring/">
+                  <svg class="faq-sec-svg faq-sec-svg-twinringhotel">
+                    <title>icon twinringhotel</title>
+                    <use xlink:href="<%= svgSprite( SPRITE_SVG , '#sprite-icon20') %>"></use>
+                  </svg>
+                  <p class="faq-sec-txt">
+                    <span>ホテルツインリンクについて</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="faq-sec">
+            <h2 class="faq-sec-title">
+              <span>その他</span>
+            </h2>
+
+            <ul class="faq-sec-list faq-sec-list-cat">
+              <% [
+                  {
+                    link: '/hoteltwinring/tourism/',
+                    svgModifier: 'direction',
+                    svg: 'icon21',
+                    text: '<span>周辺の観光案内</span>'
+                  },
+                  {
+                    link: '/fieldtrip_m/',
+                    svgModifier: 'group',
+                    svg: 'icon22',
+                    text: '<span>団体でご利用の方へ</span>'
+                  }
+                ].forEach((data) => { %>
+                  <li class="faq-sec-item">
+                    <a class="faq-sec-item-link" href="<%- data.link %>">
+                      <svg class="faq-sec-svg faq-sec-svg-<%- data.svgModifier %>">
+                        <title>icon <%- data.svgModifier %></title>
+                        <use xlink:href="<%= svgSprite( SPRITE_SVG , `#sprite-${data.svg}`) %>"></use>
+                      </svg>
+                      <p class="faq-sec-txt">
+                        <%- data.text %>
+                      </p>
+                    </a>
+                  </li>
+              <% }); %>
+            </ul>
+          </section>
+
+          <section class="faq-sec faq-sec-table">
+            <h2 class="faq-sec-title">
+              <span>お問い合わせ先</span>
+            </h2>
+
+            <p>お問い合わせ前に<a class="faq-sec-link" href="#faq">よくあるご質問</a>をご覧ください。</p>
+
+            <table class="table faq-table  faq-table-contact">
+              <tr>
+                <td>
+                  インターネット
+
+                  <span class="faq-table-note">
+                    お問い合わせ内容によって<br />フォームが異なります。
+                  </span>
+                </td>
+                <td>
+                  <div class="faq-table-box">
+                    <div class="faq-table-box-item">
+                      <h3>下記項目に関するお問い合わせ</h3>
+                      <p>モータースポーツ / チケット / インフォメーション / ゲート / 駐車場<br class="u-show-pc"/>ハローウッズ / ホテル / レストラン / 森と星空のキャンプヴィレッジ<br class="u-show-pc"/>アクティブセーフティトレーニングパーク / 団体プラン / 校外学習</p>
+
+                      <a class="faq-table-link" target="_blank" href="/contact_m/form/">お問い合わせフォーム</a>
+                    </div>
+
+                    <div class="faq-table-box-item">
+                      <h3>下記項目に関するお問い合わせ</h3>
+                      <p>TRMC-S会員 / スポーツ走行 / スクール走行会</p>
+                      <a class="faq-table-link" target="_blank" href="https://www.mobilityland.co.jp/contact/mls_form/">お問い合わせフォーム</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>電話</td>
+                <td>
+                  <ul>
+                    <li>
+                      <span>ツインリンクもてぎ（代表）</span>
+                      <span>TEL <a href="tel:0285640001">0285-64-0001</a></span>
+                    </li>
+                    <li>
+                      <span>予約センター（個人予約）</span>
+                      <span>TEL <a href="tel:0285640489">0285-64-0489</a></span>
+                    </li>
+                    <li>
+                      <span>営業課（団体予約）</span>
+                      <span>TEL <a href="tel:0285640090">0285-64-0090</a></span>
+                    </li>
+                    <li>
+                      <span>モータースポーツ</span>
+                      <span>TEL <a href="tel:0285640200">0285-64-0200</a></span>
+                    </li>
+                    <li>
+                      <span>ハローウッズ</span>
+                      <span>TEL <a href="tel:0285640155">0285-64-0155</a> / <br class="u-show-sp"/>FAX 0285-64-0156</span>
+                    </li>
+                    <li>
+                      <span>ホテルツインリンク</span>
+                      <span>TEL <a href="tel:0285640123">0285-64-0123</a> /<br class="u-show-sp"/> FAX 0285-64-0125</span>
+                    </li>
+                    <li>
+                      <span>アクティブセーフティトレーニングパーク</span>
+                      <span>TEL <a href="tel:0285640100">0285-64-0100</a></span>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </section>
+        </div>
+      </div>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
+    </main>
+    <!-- END BOTTOM -->
+  </div>
+</div>
+
+<%- include('/partials/breadcrumbs', {
+  breadcrumbs : getData().data.breadcrumbsServiceM
+}) -%>
+<%- include('/partials/footer', { pageId }) -%>

@@ -1,0 +1,134 @@
+<ul class="adventure-container adventure-container-hellowoods">
+  <!-- Musasabi -->
+
+  <li class="adventure-list ">
+    <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/hoteltwinring/room-gran.jpg') %>);">
+    </div>
+
+    <div class="l-adventure-sp-container">
+      <div class="l-adventure hoteltwinring">
+        <div class="l-section-title l-section-title-adventure hellowoods">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'hellowoods-adventure-title hoteltwinring room-gran',
+              text: '',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'hoteltwinring-room-gran'
+            }) %>
+          </div>
+          
+          <div class="adventure-sub-heading"><%- include('/partials/heading', {
+            modifier: 'room-type svg-block room-gran',
+            subtextvg: 'gran-room-english',
+          }) %></div>
+        </div>
+        
+        <p class="adventure-content-copy hoteltwinring">
+          木の温もりを感じながら、ゆったりした時間を過ごせる3部屋だけの特別室「グランルーム」<br>
+広々とした部屋には幅4mのワイドベッドをはじめロッキングチェア、ハンモックがあり、<br>
+森の中のようにリラックスしてお過ごしいただけます。
+
+        </p>
+
+        <div class="l-button">
+          <%- include('/partials/button', {
+            modifier: 'button-adventure',
+            text: 'もっと見る',
+            link: '/hoteltwinring/granroom/'
+          }) %>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="adventure-list ">
+    <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/hoteltwinring/room-superior.jpg') %>);">
+    </div>
+
+    <div class="l-adventure-sp-container">
+      <div class="l-adventure hoteltwinring">
+        <div class="adventure-ribbon">
+          <!-- <div class="adventure-ribbon-inner">
+            <h2 class="heading-text">New</h2>
+            <p class="ribbon-date">2020.03.13</p>
+          </div> -->
+        </div>
+        <div class="l-section-title l-section-title-adventure hellowoods">
+          
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'hellowoods-adventure-title hoteltwinring room-superior',
+              text: '',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'hoteltwinring-room-superior'
+            }) %>
+          </div>
+          
+          <div class="adventure-sub-heading">
+            <%- include('/partials/heading', {
+              modifier: 'room-type svg-block room-superior',
+              subtextvg: 'superior-title-english',
+            }) %>
+          </div>
+
+          
+        </div>
+        
+        <p class="adventure-content-copy hoteltwinring">
+          コンセプトは「DANRAN」
+          森の中で団らんしているかのような客室は、家族でゆったりと心地よくお過ごしいただけます。
+
+        </p>
+
+        <div class="l-button">
+          <%- include('/partials/button', {
+            modifier: 'button-adventure',
+            text: 'もっと見る',
+            link: '/hoteltwinring/familyroom/'
+          }) %>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="adventure-list ">
+    <div class="adventure-bg" style="background-image: url(<%= mix('/assets/images/hoteltwinring/room-standard.jpg') %>);">
+
+    </div>
+
+    <div class="l-adventure-sp-container">
+      <div class="l-adventure hoteltwinring">
+        <div class="l-section-title l-section-title-adventure hellowoods">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'hellowoods-adventure-title hoteltwinring room-standard',
+              text: '',
+              alt: '',
+              altSubtext: '',
+              subtextvg: 'standard-room-title'
+            }) %>
+          </div>
+          
+          <div class="adventure-sub-heading">
+            <%- include('/partials/heading', {
+            modifier: 'room-type svg-block svg-subtext room-standard',
+            subtextvg: 'standard-room-english',
+          }) %>
+        </div>
+        </div>
+        
+        <p class="adventure-content-copy hoteltwinring">
+          広大な森とレーシングコースを一望しながら、優雅な気分でゆったりとした時間をお過ごしください。
+        </p>
+
+        <div class="l-button">
+          <%- include('/partials/button', {
+            modifier: 'button-adventure room-standard',
+            text: 'もっと見る',
+            link: '/hoteltwinring/standardroom/'
+          }) %>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

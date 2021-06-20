@@ -1,0 +1,99 @@
+<!-- header sp -->
+<div class="u-show-sp">
+  <div class="header-sp" id="js-header-sp">
+    <div class="header-sp-top">
+      <div class="header-sp-logo">
+        <a class="header-sp-logo-link" href="/">
+          <img src="<%= mix('/assets/images/logo.png') %>" alt="Twin Ring Motegi">
+        </a>
+      </div>
+
+      <a class="header-sp-others-link" href="/motogp/">
+        <img src="<%= mix('/assets/images/logo-motogp-sp.png') %>" alt="MotoGP">
+      </a>
+
+      <div class="header-sp-burger-wrap" id="js-header-burger-wrap">
+        <div class="header-sp-burger" href="#" id="js-header-burger">
+          <span class="header-sp-burger-text header-sp-burger-open">MENU</span>
+          <span class="header-sp-burger-text header-sp-burger-close">CLOSE</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="header-sp-toggle" id="js-header-toggle">
+      <div class="header-sp-toggle-inner" id="js-header-toggle-inner">
+        <nav>
+          <ul class="header-bottom-list">
+            <li class="header-bottom-item">
+              <a class="header-bottom-link" href="/">
+                <span class="header-bottom-link-text">トップページ</span>
+              </a>
+            </li>
+            <% getData().data.headerBottomNav.forEach( bottomNavItem => { %>
+            <li class="header-bottom-item<%- ' '+bottomNavItem.modifier %>">
+              <a class="header-bottom-link header-sp-bottom-link js-header-button-sub" data-target="<%- bottomNavItem.link %>" href="<%- bottomNavItem.link %>">
+                <span class="header-bottom-link-text"><%- bottomNavItem.text %></span>
+                <i class="header-bottom-icon">
+                  <%- include('/partials/svg', {
+                    name: bottomNavItem.icon
+                  }) %>
+                </i>
+              </a>
+            </li>
+            <% }) %>
+            <li class="header-bottom-item header-bottom-item-shop">
+              <a class="header-bottom-link header-sp-bottom-link" href="/goods_m/">
+                <span class="header-bottom-link-text">グッズ＆<br class="u-show-pc">ショップ</span>
+                <i class="header-bottom-icon">
+                  <%- include('/partials/svg', {
+                    name: 'shop'
+                  }) %>
+                </i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="header-top-nav">
+          <% getData().data.headerTopNav.forEach( topNavItem => { %>
+          <li class="header-top-nav-item js-top-nav-button">
+            <a class="header-top-nav-link" href="<%- topNavItem.link %>"><%- topNavItem.text %></a>
+            <% if(typeof topNavItem.sub === 'object') { %>
+            <div class="header-top-nav-sub js-top-nav-sub">
+              <% topNavItem.sub.forEach( subItem => { %>
+                <ul>
+                <% if(typeof subItem === 'object') {
+                  subItem.forEach( item => { %>
+                  <li class="header-top-nav-sub-item"><a class="header-top-nav-sub-link" href="<%- item.link %>"><%- item.text %></a></li>
+                <% });
+                  } %>
+                </ul>
+              <% }) %>
+            </div>
+            <% } %>
+          </li>
+          <% }) %>
+        </nav>
+
+        <ul class="header-lang">
+          <li class="header-lang-item">
+            <a href="/">JP</a>
+          </li>
+          <li class="header-lang-item">
+            <a href="/english/">EN</a>
+          </li>
+          <li class="header-lang-item">
+            <a href="/tw/">CH</a>
+          </li>
+        </ul>
+
+        <%- include('/partials/header-content-access') %>
+        <%- include('/partials/header-content-attraction') %>
+        <%- include('/partials/header-content-motorsports') %>
+        <%- include('/partials/header-content-camp') %>
+        <%- include('/partials/header-content-restaurant') %>
+      </div>
+    </div>
+  </div>
+</div>  <!-- end of header sp -->

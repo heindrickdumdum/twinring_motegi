@@ -1,0 +1,119 @@
+.banner-cta {
+  margin: 180px 0 86px;
+  position: relative;
+  text-align: center;
+  z-index: $z-max;
+
+  // modifier
+  // &.banner-cta-bg-itadaki {
+  //   margin: 0 0 239px;
+
+  //   @include sp {
+  //     margin: 0 0 59px;
+  //   }
+
+  //   &:before {
+  //     position: relative;
+  //     top: 41px;
+  //     left: -78px;
+  //     z-index: 2;
+  //     content: "";
+  //     display: block;
+  //     width: 228px;
+  //     height: 183px;
+  //     background-size: 100%;
+  //     background-position: center;
+  //     background-attachment: no-repeat;
+  //     background-image: url(#{$image-path}mount.png);
+
+  //     @include sp {
+  //       display: none;
+  //     }
+  //   }
+
+  //   &:after {
+  //     margin-top: -252px;
+
+  //     @include sp {
+  //       margin-top: -37px;
+  //     }
+  //   }
+  // }
+
+  @include max-screen($breakpoint-mobile) {
+    margin: 50px 0;
+  }
+
+  &:after {
+    display: block;
+    position: relative;
+    content: "";
+    background-color: $color-light-gray;
+    height: 100px;
+    margin-top: -113px;
+    width: 100%;
+    z-index: 1;
+
+    @include min-screen($breakpoint-mobile + 1) {
+      height: 240px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: -56px;
+      height: 97px;
+    }
+  }
+
+  .banner-cta-inner {
+    position: relative;
+    z-index: $z-max;
+  }
+
+  .banner-cta-bottom-inner {
+    display: block;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+
+    &:hover {
+      @include min-screen($breakpoint-mobile + 1) {
+        opacity: 0.8;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    //SP
+    @include max-screen($breakpoint-mobile) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+
+// SP
+@include min-screen($breakpoint-mobile + 1) {
+  .subpage-mobipark {
+    .banner-cta {
+      margin-top: 180px;
+      margin-bottom: 108px;
+
+      &:after {
+        margin-top: -137px;
+      }
+    }
+  }
+}
+
+@include max-screen($breakpoint-mobile) {
+  .subpage-mobipark {
+    .banner-cta {
+      margin-top: 96px;
+    }
+  }
+}

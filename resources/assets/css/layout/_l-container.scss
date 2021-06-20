@@ -1,0 +1,133 @@
+.l-container {
+  padding: 0 32px;
+  width: $container + 64;
+  margin: 0 auto;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    padding: 0 20px;
+
+    @at-root .recommend-menu & {//marcherant lunch page
+      padding: 0px;
+    }
+  }
+
+  @at-root .camp-wrapper & {
+    &-m {
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+  }
+  &.l-container-racing {
+      width: 1085px;
+  }
+}
+
+.l-container-kids-attraction {
+  max-width: 1062px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-container-inner {
+  padding: 0 30px;
+  width: $container-inner + 60;
+  margin: 0 auto;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.l-container-inner-nozominoyu {
+  padding: 0 30px;
+  width: $container-inner + 60;
+  margin: 0 auto;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.business-calendar-wrapper {
+  text-align: center;
+  background: url(../images/hellowoods/field-intro-bg.png);
+  background-size: 100% 95%;
+  max-width: none;
+  background-repeat: no-repeat;
+
+  .business-calendar-inner {
+    max-width: 1021px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    padding-top: 25px;
+
+    iframe {
+      width: 100%;
+    }
+    .calendar-note {
+      text-align: left;
+      margin-top: 19px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    @include min-screen ($breakpoint-mobile+1) {
+      padding: 60px 0;
+      padding-bottom: 100px;
+      .calendar-note {
+        text-align: left;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+
+
+
+  @include max-screen ($breakpoint-mobile) {
+    width: 100%;
+    padding: 0 20px;
+    max-width: none;
+  }
+}
+
+.l-container-mobi-guide {
+  max-width: 1170px;
+}
+
+.l-container-m {
+  max-width: 1021px;margin: 0 auto;
+
+  @include max-screen ($breakpoint-mobile) {
+    max-width: 252px;
+
+    &.full-sp {
+      max-width: none;
+      padding: 0 20px;
+    }
+  }
+
+  &.collection-data-container {
+    max-width: 1116px;
+    margin-top: 64px;
+    @include max-screen ($breakpoint-mobile) {
+      margin-top: 0;
+      padding: 0 30px;
+    }
+  }
+}
+
+.goods-shop-container {
+  @include max-screen ($breakpoint-mobile) {
+    max-width: 265px;
+    &.experience-container-sp {
+      max-width: 373px;
+      width: 94%;
+    }
+  }
+}

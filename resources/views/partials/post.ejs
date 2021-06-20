@@ -1,0 +1,26 @@
+<div class="post-wrap">
+  <% postContent.forEach(content => {%>
+  <ul class="post-list">
+
+    <% content.forEach(item => { %>
+    <li class="post-item">
+      <a class="post-link" href="<%- item.link %>">
+        <div class="post-text">
+          <h3><%- item.text %></h3>
+          <span class="post-text-bottom">
+            <span class="post-category"><%- item.category %></span>
+            <time class="post-time" datetime="<%- item.time %>"><%- item.time %></time>
+          </span>
+        </div>
+
+        <i class="post-link-icon">
+          <%- include('/partials/svg', {
+            name: 'arrow'
+          }) %>
+        </i>
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+  <% }) %>
+</div>

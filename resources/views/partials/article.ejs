@@ -1,0 +1,39 @@
+<%
+if (typeof modifier === 'undefined') {
+  var modifier = '';
+}
+
+if (typeof link === 'undefined') {
+  var link = '';
+}
+
+if (typeof type === 'undefined') {
+  var type = '';
+}
+
+if (typeof date === 'undefined') {
+  var date = '';
+}
+
+%>
+<article class="article <%- modifier %>">
+  <a class="article-link" href="<%- link %>">
+    <% if(category) { %>
+    <span class="article-category<% if(category === 'NEWS') { %> article-category-news<% } %>"><%- category %></span>
+    <% } %>
+    <div class="article-image-wrap">
+      <div class="article-image"
+           style="background-image: url(<%= (image) ? image : mix('/assets/images/noimage.jpg') %>)"></div>
+    </div>
+    <% if(type) { %>
+      <span class="article-type article-type-<%- type %>"><%- type %></span>
+    <% } %>
+
+    <h3 class="article-heading"><%- heading %></h3>
+    <% if(date !== '' && typeof date !== 'undefined') { %>
+    <p class="article-period">
+      開催期間：<time class="article-period-date" datetime="P1D"><%- date %></time>
+    </p>
+    <% } %>
+  </a>
+</article>

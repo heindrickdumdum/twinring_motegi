@@ -1,0 +1,29 @@
+.forest {
+  &.forest-craft {
+    overflow: hidden;
+
+    &::before {
+      @include max-screen($breakpoint-mobile) {
+        background-image: url("../images/craft/craft-monthly-bg-sp.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        left: 0;
+        top: -59px;
+        right: 0;
+        height: 120px;
+        content: "";
+      }
+    }
+
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: -59px;
+      padding-bottom: 91px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 40px;
+      padding-bottom: 65px;
+    }
+  }
+}

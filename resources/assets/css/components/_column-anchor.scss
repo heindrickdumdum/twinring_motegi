@@ -1,0 +1,188 @@
+.column-link {
+  &-walk { //forest walk
+    .link-container {
+      max-width: 840px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-camp {//f-glamping camp
+    @include min-screen($breakpoint-mobile + 1) {
+      margin-top: 50px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 30px;
+    }
+
+    .link-container {
+      max-width: 840px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      flex-wrap: wrap;
+
+      .link-item {
+        flex-basis: 33.33% !important;
+        margin-bottom: 70px;
+
+        @at-root & {
+          &:nth-child(4),
+          &:nth-child(5) {
+            @include max-screen($breakpoint-mobile) {
+              margin-bottom: 20px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-labo { //forest lab
+    .link-container {
+      max-width: 600px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: space-evenly;
+    }
+  }
+
+  .link-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    .link-item {
+      flex-grow: 1;
+      flex-basis: 0;
+      position: relative;
+      text-align: center;
+
+      // @include min-screen($breakpoint-mobile + 1) {
+      //   &:first-child {
+      //     top: 3px;
+      //     left: 30px;
+      //   }
+
+      //   &:nth-child(2) {
+      //     top: 2px;
+      //     left: 17px;
+      //   }
+
+      //   &:last-child {
+      //     top: 2px;
+      //     left: -4px;
+      //   }
+      // }
+
+      // @include max-screen($breakpoint-mobile) {
+      //   &:first-child {
+      //     top: -11px;
+      //   }
+
+      //   &:nth-child(2) {
+      //     top: -11px;
+      //   }
+
+      //   &:last-child {
+      //     top: -10px;
+      //   }
+      // }
+
+      a {
+        display: inline-block;
+        text-align: center;
+        color: $color-black;
+        font-size: 17px;
+        font-family: $font-hiragino; 
+        position: relative;
+        height: 100%;
+
+        &:after {
+          width: 40px;
+          height: 14px;
+          content: url(/assets/images/hellowoods/caret-down.png);
+          position: absolute;
+          left: 50%;
+          bottom: -25px;
+          transform: translateX(-50%);
+          transition: all 0.3s ease;
+          pointer-events: none;
+
+          //sp
+          @include max-screen($breakpoint-mobile) {
+            content: "";
+            background-image: url(/assets/images/hellowoods/caret-down.png);
+            background-size: 100%;
+            width: 26px;
+            height: 8.5px;
+            bottom: -16px;
+          }
+        }
+
+        &:hover:after {
+          bottom: -35px;
+        }
+
+        img {
+          @include max-screen($breakpoint-mobile) {
+            width: 112px;
+            height: 111.5px;
+          }
+        }
+        
+        span {
+          display: block;
+          margin-top: 10px;
+          letter-spacing: 0.1em;
+
+          @include max-screen($breakpoint-mobile) {
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 13px;
+            margin-top: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.column-link-reserve {
+  margin-top: 90px;
+
+  @include max-screen($breakpoint-mobile) {
+    margin-top: 35px;
+  }
+
+  .link-container {
+    max-width: 579px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    left: 4px;
+
+   .link-item {
+     a {
+      img {
+        width: 170px;
+        height: 171px;
+
+        @include max-screen($breakpoint-mobile) {
+          width: 112px;
+          height: 111.5px;
+        }
+      }
+     }
+   }
+  }
+}
+
+//modifier anchor
+.subpage-inner-anchor {
+  @include min-screen($breakpoint-mobile + 1) {
+    margin-bottom: 147px;
+  }
+}

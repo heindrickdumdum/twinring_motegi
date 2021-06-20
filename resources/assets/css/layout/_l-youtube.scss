@@ -1,0 +1,6 @@
+.l-youtube {
+  margin-top: 78px;
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 -20px;
+  }
+}

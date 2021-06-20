@@ -1,0 +1,5 @@
+#LayoutMerge On
+AddOutputFilter LAYOUT html
+LayoutHeader /globalnavi/blank.html
+LayoutFooter /globalnavi/blank.html
+AddType image/svg+xml .svg .svgz

@@ -1,0 +1,122 @@
+.how-to-container {
+  border-bottom: 1px solid $color-gray;
+  max-width: $container;
+  margin: 0 auto;
+
+  @include max-screen($breakpoint-mobile) {
+    width: 69%;
+    max-width: 100%;
+  }
+}
+
+//modifier
+.how-to-craft {
+  &::before {
+    @include min-screen($breakpoint-mobile + 1) {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -123px;
+      right: 0;
+      background-image: url("../images/craft/craft-howto-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      bottom: 0;
+    }
+    
+    @include max-screen($breakpoint-mobile) {
+      background-image: url("../images/craft/craft-how-to-bg-sp1.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: -20px;
+      top: 34px;
+      right: 0;
+      bottom: 0;
+      content: "";
+    }
+  }
+
+  &::after {
+    @include max-screen($breakpoint-mobile) {
+      background-image: url("../images/craft/craft-how-to-bg-sp2.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 49px;
+      content: "";
+      height: 309px;
+    }
+  }
+
+  .subpage-craft & {
+    @include min-screen($breakpoint-mobile + 1) {
+      padding-bottom: 130px;
+    }
+
+    @include max-screen($breakpoint-mobile) {
+      padding-bottom: 26px;
+    }
+  }
+
+  .heading-wrap-craft {
+    .heading-subtext {
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 18px;
+      }
+    }
+
+    svg {
+      @include max-screen($breakpoint-mobile) {
+        width: 300px;
+      }
+    }
+  }
+}
+
+.how-to-craft-container {
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+  }
+}
+
+
+.enjoy-list-marcherant {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 98px;
+  padding-left: 20px;
+  padding-right: 20px;
+  li {
+    width: 49%;
+    margin-bottom: 20px;
+
+    .alt-feature-heading {
+      margin-bottom: 16px;
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 19px;
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+    }
+
+    .alt-feature-desc-text {
+      letter-spacing: 3px;
+      line-height: 1.9;
+    }
+
+    @include max-screen ($breakpoint-mobile) {
+      width: 100%;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+  }
+
+  @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 20px;
+  }
+}

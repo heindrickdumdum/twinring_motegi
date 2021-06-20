@@ -1,0 +1,76 @@
+.button-gradient-icon {
+  width: 25px;
+  position: absolute;
+  right: 0;
+  transition: transform $duration $ease-in-out;
+
+  @include min-screen($breakpoint-mobile + 1) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .is-ie & {
+    top: 0px;
+  }
+
+  // .is-safari & {
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  // }
+
+  svg {
+    width: 100%;
+    height: 12px;
+
+    @at-root .breakfast-marcherant & {//breakfast marcherant page
+      @include max-screen($breakpoint-mobile) {
+        height: 7.5px;
+      }
+    }
+  }
+
+  @at-root .smart-entry-attraction & {
+    @include max-screen($breakpoint-mobile) {
+      top: -20px;
+    }
+  }
+}
+
+.button-gradient {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 62px;
+  font-size: 16px;
+  font-weight: bold;
+  color: $base-font-color;
+  position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+  }
+
+  &.button-gradient-cmn {
+    height: auto;
+  }
+}
+
+.button-gradient-text {
+  background: linear-gradient(to right, $color-blue 0%, $color-green 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  
+  .is-ie & {
+    background: none;
+    color: $color-gossamer;
+    -webkit-text-fill-color: $color-gossamer;
+    -moz-text-fill-color: $color-gossamer;
+    -ms-text-fill-color: $color-gossamer;
+  }
+}

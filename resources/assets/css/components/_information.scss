@@ -1,0 +1,34 @@
+.information {
+  padding: 47px 0 110px;
+  position: relative;
+
+  @include max-screen($breakpoint-mobile) {
+    padding: 53px 0 50px;
+  }
+}
+
+.information-container {
+  position: relative;
+}
+
+.information-button {
+  position: absolute;
+  right: 34px;
+  top: 43px;
+
+  @include max-screen($breakpoint-mobile) {
+    position: relative;
+    right: 0;
+    top: auto;
+    margin: 43px 5px 0;
+  }
+
+  //accessing _button.scss
+  .button {
+    width: 374px;
+
+    @include max-screen($breakpoint-mobile) {
+      max-width: 100%;
+    }
+  }
+}

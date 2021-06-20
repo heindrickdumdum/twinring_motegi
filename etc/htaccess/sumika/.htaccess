@@ -1,0 +1,12 @@
+AddType image/svg+xml .svg .svgz
+
+# For Redirect
+# RewriteRule ^PATH$ URL [R=301,L] 
+RewriteRule ^campaign-contest/index.html$ /sumika/ [R=301,L] 
+RewriteRule ^campaign/index.html$ /sumika/ [R=301,L] 
+RewriteRule ^point/index.html$ /sumika/ [R=301,L] 
+RewriteRule ^landscape/index.html$ /sumika/ [R=301,L] 
+RewriteRule ^hw/index.html$ /sumika/ [R=301,L] 
+RewriteRule ^faq/index.html$ /sumika/ [R=301,L] 
+
+

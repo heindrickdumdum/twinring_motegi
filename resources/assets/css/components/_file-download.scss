@@ -1,0 +1,28 @@
+.file-dl {
+  .file-dl-wrap {
+    border-top: 1px solid #a6a5a5;
+    border-bottom: 1px solid #a6a5a5;
+    font-size: 24px;
+    text-align: center;
+    padding: 66px;
+    max-height: 170px;
+
+    @include max-screen ($breakpoint-mobile) {
+      padding: 28px 0px;
+      font-size: 15px;
+    }
+
+    .file-link {
+      color: $color-black;
+
+      .file-name {
+        display: inline-block;
+          @include max-screen ($breakpoint-mobile) {
+            img {
+              width: 20px;
+            }
+          }
+      }
+    }
+  }
+}

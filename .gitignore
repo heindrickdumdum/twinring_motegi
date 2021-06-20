@@ -1,7 +1,11 @@
 .idea
+.atom
+.vscode
 .sass-cache
 .DS_Store
 node_modules
+npm-debug.log
 public
-public/data/*
-guide
+release
+release_UTF8_STG
+work

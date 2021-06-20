@@ -1,0 +1,150 @@
+.note {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+
+  @include max-screen($breakpoint-mobile) {
+    max-width: 235px;
+    margin: 0 auto;
+    left: 12px;
+    width: 100%;
+  }
+
+  @include max-screen(450px) {
+    left: 2%;
+  }
+  // height: 106px;
+
+  // Itadaki banners
+  &.note-itadaki-banner-1 {
+    > div {
+      position: relative;
+      top: 6px;
+      left: 54px;
+      width: 96%;
+
+      @include sp {
+        // top: 4px;
+        // left: 34px;
+        // width: 76%;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &.note-itadaki-banner-2 {
+    > div {
+      position: relative;
+      top: 6px;
+      left: 66px;
+      width: 98%;
+
+      @include sp {
+        // top: -2px;
+        // left: 15px;
+        // width: 76%;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.note-message {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-bottom: 37%;
+}
+
+@at-root .page-fee {//fee page
+  .info-note {
+    border: 1px solid $color-black;
+    position: relative;
+    padding: {
+      top: 35px;
+      left: 40px;
+      right: 40px;
+      bottom: 35px;
+    }
+    margin-bottom: 20px;
+
+    @include max-screen($breakpoint-mobile) {
+      padding: {
+        left: 20px;
+        right: 20px;
+        top: 40px;
+      }
+      margin-top: 46px;
+    }
+
+    &-title {
+      font-size: 18px;
+      line-height: 1.778;
+      position: absolute;
+      letter-spacing: 0.1em;
+      background-color: $color-white;
+      padding: {
+        left: 15px;
+        right: 15px;
+      }
+      left: 50%;
+      top: -17px;
+      white-space: nowrap;
+      transform: translateX(-50%);
+      font-weight: bold;
+
+      @include max-screen($breakpoint-mobile) {
+        white-space: normal;
+        font-size: 13.5px;
+        line-height: 1.357;
+        width: 300px;
+        text-align: center;
+        top: -10px;     
+      }
+    }
+
+    &-item {
+      font-size: 17px;
+      letter-spacing: 0.1em;
+      margin-right: 38px;
+      font-weight: bold;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-right: 0px;
+        margin-bottom: 0px;
+      }
+
+      @include max-screen($breakpoint-mobile) {
+        font-size: 13px;
+        line-height: 1.727;
+        margin-right: 0px !important;
+      }
+
+      span {
+        &:first-child {
+          width: 220px;
+          margin-right: 20px;
+          display: inline-block;
+          white-space: nowrap;
+        }
+
+        &:last-child {
+          font-weight: normal !important;
+        }
+
+        @include max-screen($breakpoint-mobile) {
+          display: block !important;
+          text-align: center;
+          width: 100% !important;
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}

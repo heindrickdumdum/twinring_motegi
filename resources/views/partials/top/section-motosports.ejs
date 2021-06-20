@@ -1,0 +1,84 @@
+<%
+  sectionMotoSportsCards = [
+    {
+      'category': 'WATCHING',
+      'image': mix('/assets/images/top/motosports/img1.jpg'),
+      'title': 'MotoGP&trade;',
+      'url': '/motogp/'
+    },
+    {
+      'category': 'DRIVING',
+      'image': mix('/assets/images/top/motosports/img2.jpg'),
+      'title': 'CIRCUIT RUN',
+      'url': '/motorsports_m/run/'
+    },
+    {
+      'category': 'DRIVING',
+      'image': mix('/assets/images/top/motosports/img3.jpg'),
+      'title': 'ファミリーで楽しむ',
+      'url': '/motorsports_m/family/'
+    }
+  ]
+%>
+
+<div class="section-inner">
+  <div class="section-image" style="background-image: url(<%= mix('/assets/images/top/motosports/bg.jpg') %>);"></div>
+  <div class="l-container">
+    <div class="section-contents">
+      <p class="section-contents-copy">世界が注目する数々のドラマが生まれる。<br class="u-show-pc">未体験のサウンド、パワー、スピードをからだ全体で感じよう。</p>
+
+      <ul class="section-cards u-show-pc">
+        <%
+          sectionMotoSportsCards.forEach( card => {
+        %>
+        <li class="section-cards-item">
+          <a href="<%- card.url %>" class="section-card-link">
+            <div class="section-cards-image-wrap image-border">
+              <span class="section-cards-category"><%- card.category %></span>
+              <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+            </div>
+            <p class="section-cards-title"><%- card.title %></p>
+          </a>
+        </li>
+        <%
+          })
+        %>
+      </ul>
+
+      <div class="slider-wrap slider-wrap-section u-show-sp">
+        <div class="swiper-container slider js-slider-sp">
+          <ul class="swiper-wrapper slider-wrapper slider-section-cards section-cards">
+            <%
+              sectionMotoSportsCards.forEach( card => {
+            %>
+            <li class="swiper-slide slider-item slider-section-cards-item">
+              <div class="section-cards-item">
+                <a href="<%- card.url %>" class="section-card-link">
+                  <div class="section-cards-image-wrap image-border">
+                    <span class="section-cards-category"><%- card.category %></span>
+                    <div class="section-cards-image" style="background-image: url(<%- card.image %>);"></div>
+                  </div>
+                  <p class="section-cards-title"><%- card.title %></p>
+                </a>
+              </div>
+            </li>
+            <%
+              })
+            %>
+          </ul>
+
+          <div class="swiper-pagination swiper-pagination-section"></div>
+        </div>
+      </div>
+
+      <div class="section-button">
+        <%- include('/partials/button', {
+          newTab: false,
+          modifier: '',
+          text: 'もっと見る',
+          link: '/motorsports_m/'
+        }) %>
+      </div>
+    </div>
+  </div>
+</div>

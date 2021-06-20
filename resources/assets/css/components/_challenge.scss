@@ -1,0 +1,226 @@
+.challenge {
+  margin-top: 34px;
+  background-image: url(../images/mobipark/challenge-bg.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+
+  &-left {
+    order: 2
+  }
+
+  &-right {
+    order: 1;
+    flex-grow: 1;
+    flex-basis: 50%;
+
+    @include max-screen($breakpoint-mobile) {
+      margin-top: 13px;
+      max-width: 612px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      .heading-text {
+        text-align: left;
+      }
+
+      img {
+        max-width: 245px;
+        width: 100%;
+      }
+    }
+
+    &.events {
+      z-index: 10;
+      .heading-text {
+        width: 127%;
+
+        img {
+          max-width: none;
+        }
+
+        @include max-screen ($breakpoint-mobile) {
+          max-width: none;
+          width: 100%;
+        }
+
+      }
+
+      @include max-screen ($breakpoint-mobile)  {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    background-image: url(../images/mobipark/challenge-bg-sp.png);
+    background-size: 100%;
+    background-position: center top;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include max-screen($breakpoint-mobile) {
+      display: block;
+      position: relative;
+    }
+  }
+
+  .desc {
+    margin-top: 66px;
+    margin-left: 4px;
+    font-size: 20px;
+    letter-spacing: 0.16em;
+    line-height: 2.25;
+
+    @include max-screen($breakpoint-mobile) {
+      line-height: 2.25;
+      margin: 0;
+      margin-top: 22px;
+      font-size: 12px;
+    }
+
+    &.hellowoods {
+      max-width: 600px;
+
+      @include max-screen ($breakpoint-mobile) {
+        line-height: 2;
+      }
+    }
+    &.collection {
+      max-width: 603px;
+
+      @include max-screen ($breakpoint-mobile) {
+        line-height: 2;
+      }
+
+    }
+    &.racing {
+      max-width: 605px;
+
+      @include max-screen ($breakpoint-mobile) {
+        line-height: 2;
+      }
+
+    }
+  }
+
+  .challenge-img {
+    > * {
+      width: 100%;
+
+      @include max-screen($breakpoint-mobile) {
+        max-width: 310px;
+        display: block;
+        padding-top: 15px;
+        margin: auto;
+
+      }
+    }
+  }
+
+  .challenge-img1 {
+    max-width: 274px;
+    position: relative;
+    top: -46px;
+    left: -32px;
+
+    &.events {
+      max-width: 235px;
+    }
+
+    &.collection {
+      max-width: 233px;
+      top: 64px;
+      left: 17px;
+    }
+    &.racing-img1 {
+      max-width: 233px;
+      top: -101px;
+      left: 13px;
+    }
+  }
+
+  .challenge-img2 {
+    max-width: 592px;
+    position: relative;
+    left: 95px;
+    top: -134px;
+
+    &.collection {
+      left: 96px;
+      top: 22px;
+    }
+  }
+
+  .challenge-img3 {
+    max-width: 192px;
+    position: relative;
+    left: 24px;
+    top: -220px;
+
+    &.collection {
+      left: -32px;
+      top: -87px;
+    }
+  }
+
+  &.events-page {
+    // overflow: hidden;
+    .challenge-img {
+      @include max-screen ($breakpoint-mobile) {
+        img {
+          max-width: none;
+        }
+      }
+    }
+  }
+
+  &.hellowoods-life-overflowing {
+    .desc {
+      max-width: 584px;
+    }
+
+    .challenge-img {max-height: 500px;}
+    .challenge-img1 {
+      max-width: 230px;
+      left: 30px;
+    }
+    .challenge-img2 {
+      max-width: 600px;
+      left: 110px;
+      top: -110px;
+    }
+    .challenge-img3 {
+      max-width: 193px;
+      left: -20px;
+    }
+  }
+
+  &.hellowoods {
+    max-height: 800px;
+  }
+
+  &.collection {
+    background-position: right 32px top 84px;
+    .heading-text img{
+      max-width: 155%;
+    }
+  }
+
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 90px;
+    margin-top: -27px;
+
+    &.hellowoods {
+      margin-bottom: 0;
+    }
+  }
+
+
+}
+
+//modifier for SP

@@ -1,0 +1,68 @@
+<div class="header-sub-content-inner header-sub-content-inner-motorsports js-header-sub-content-inner" data-content="#header-sub-motorsports">
+
+
+  <div class="header-sub-inner">
+    <div class="header-sub-inner-block">
+      <a class="header-sub-top-button" href="/motorsports_m/">モータースポーツTOP</a>
+
+      <div class="header-sub-image-list-wrap">
+        <% getData().data.headerMotorImageList.forEach( list => { %>
+          <ul class="header-sub-image-list header-sub-image-list-padding">
+            <% list.forEach( item => { %>
+            <li class="header-sub-image-item">
+              <a class="header-sub-image-link" href="<%- item.link %>">
+                <div class="header-sub-image-wrap">
+                  <div class="header-sub-image<% if(list.length > 3) { %> header-sub-image-small<% } %>" style="background-image: url(<%- item.image %>);"></div>
+                </div>
+                <span class="header-sub-image-text"><%- item.text %></span>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+        <% }) %>
+
+        <ul class="header-sub-bottom-list header-sub-bottom-list-upper">
+          <% getData().data.headerMotorImageBottomList.forEach( item => { %>
+          <li>
+            <a href="<%- item.link %>"><%- item.text %></a>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+    <div class="header-sub-inner-block header-sub-inner-block-right">
+      <a class="header-sub-top-button" href="/motorsports_m/run/">
+        サーキットを走るTOP
+      </a>
+
+      <div class="header-sub-image-wrap">
+        <div class="header-sub-image" style="background-image: url(<%= mix('/assets/images/header/motor-img7.jpg') %>);"></div>
+      </div>
+
+      <ul class="header-sub-button-list">
+        <% getData().data.headerMotorRightLinks.forEach( item => { %>
+        <li class="header-sub-button-item">
+          <a class="header-sub-button-link" href="<%- item.link %>">
+            <%- item.text %>
+            <i class="header-sub-button-link-icon">
+              <%- include('/partials/svg', {
+                name: 'arrow'
+              }) %>
+            </i>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+  <div class="header-sub-bottom">
+    <ul class="header-sub-bottom-list">
+      <% getData().data.headerMotorBottomLinks.forEach( item => { %>
+      <li>
+        <a href="<%- item.link %>"><%- item.text %></a>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
+
+</div>

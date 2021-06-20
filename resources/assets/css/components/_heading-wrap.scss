@@ -377,7 +377,7 @@
       font-size: 34px;
 
       @include max-screen($breakpoint-mobile) {
-        letter-spacing: 0.01em;
+        letter-spacing: 0.05em;
         font-size: 24px;
       }
     }
@@ -480,6 +480,10 @@
 
     .heading {
       margin-bottom: 12px;
+    }
+
+    .heading-subtext {
+      max-width: 275px;
     }
 
     @include max-screen ($breakpoint-mobile) {
@@ -800,6 +804,9 @@
       height: 48px;
       @include max-screen ($breakpoint-mobile) {
         max-width: 206px;
+        .heading-text {
+          letter-spacing: 0.05em;
+        }
       }
     }
   }
@@ -808,15 +815,21 @@
     .heading-text {
       -webkit-text-fill-color: #fff;
       background: transparent;
-      font-size: 42px;
       line-height: 1;
       letter-spacing: 0.02em;
       margin-bottom: 14px;
+      @at-root .is-ie & {
+        color: #fff;
+        -webkit-text-fill-color: #fff;
+      }
     }
     .heading-subtext {
       margin-top: 0;
       max-width: 989px;
       width: 100%;
+      svg {
+        fill:#fff;
+      }
     }
   }
 
@@ -824,6 +837,9 @@
     .heading-text {
       font-size: 41px;
       letter-spacing: 0.02em;
+      @include max-screen($breakpoint-mobile) {
+        font-size: 24px;
+      }
     }
     .heading-subtext {
       margin-top: 0;
@@ -864,14 +880,23 @@
     }
   }
 
+
   &.heading-zipline {
     .heading {
       .heading-subtext {
         max-width: 793px;
-        left: -20px;
+        left: 0;
+        @include max-screen($breakpoint-mobile) {
+          max-width: 260px;
+          width: 100%;
+          height: 94px;
+          left: -20px;
+        }
       }
     }
   }
+
+
 
   @include max-screen($breakpoint-mobile) {
     .subpage-section-family-walk {
@@ -885,14 +910,14 @@
 
   &.heading-collection {
     .heading-text {
-      letter-spacing: 0.10em;
-      font-size: 36px;
+      letter-spacing: 0;
     }
   }
 
-
-
-
-
+  &.heading-goods {
+    .heading-text {
+      font-size: 24px;
+    }
+  }
 
 }

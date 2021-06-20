@@ -38,6 +38,9 @@
 
   &.mv-events {
     margin-bottom: 90px;
+    @include max-screen ($breakpoint-mobile) {
+      margin-bottom: 80px;
+    }
     .events-mv-heading {
       bottom: 60px;
 
@@ -769,7 +772,11 @@
   }
 
   &.mv-collection-pit {
-    max-width: 270px;
+    max-width: 330px;
+
+    .heading {
+      margin: 40px 0 14px;
+    }
 
     @include max-screen ($breakpoint-mobile) {
       .heading {
@@ -820,9 +827,14 @@
 
       .heading-subtext {
         height: 80px;
-        top: -25px;
+        top: -15px;
         left: -43px;
         max-width: 210px;
+      }
+      .heading-wrap-bluenote {
+        .heading {
+          margin: 60px 0;
+        }
       }
     }
   }
@@ -893,11 +905,22 @@
       }
     }
 
+    &.mv-heading-goods {
+      .heading-subtext {
+        max-width: 458px;
+        @include max-screen ($breakpoint-mobile) {
+          width: 300px;
+        }
+      }
+    }
+
     .heading-collection {
       .heading-subtext {
         max-width: 688px;
         @include max-screen ($breakpoint-mobile) {
-          width: 68%;
+          width: 100%;
+          max-width: 388px;
+          height: 96px;
         }
       }
     }
@@ -906,7 +929,7 @@
       .heading-subtext {
         max-width: 490px;
         @include max-screen ($breakpoint-mobile) {
-          width: 68%;
+          width: 92%;
         }
       }
     }
@@ -1739,6 +1762,16 @@
 
     @include max-screen($breakpoint-mobile) {
       bottom: -25px;
+    }
+  }
+
+  .mv-tourism {
+    &::after {
+      bottom: -68px;
+
+      @include max-screen($breakpoint-mobile) {
+        bottom: -25px;
+      }
     }
   }
 

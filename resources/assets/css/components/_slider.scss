@@ -128,7 +128,7 @@
       padding-bottom: 56.4444%;
     }
   }
-} 
+}
 
 .slider-mobipark-attraction {
   .slider-item {
@@ -384,5 +384,23 @@
 .top-slider {
   .swiper-wrapper {
     margin: 0 -95px;
+  }
+}
+
+.slick-track,
+.slick-list,
+.slick-slide {
+    transform: translateZ(0);
+    perspective: 1000;
+    backface-visibility: hidden;
+}
+
+// Events Slider 
+.events-swiper {
+  overflow: hidden;
+  position: relative;
+
+  .events-swiper-pagination {
+    position: initial !important;
   }
 }

@@ -10,6 +10,11 @@
   &.heading-collection-pit {
     max-width: 808px;
     margin: auto;
+    .heading-texts {
+      @include max-screen($breakpoint-mobile) {
+        display: inline-block;
+      }
+    }
   }
 
   &.heading-sumika {
@@ -205,6 +210,13 @@
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.1em;
   font-size: 36px;
+
+  @at-root .is-safari & {
+    @include max-screen ($breakpoint-tablet) {
+      margin-top: -3px;
+      -webkit-mask-image: linear-gradient(180deg, #027cc3 0, #099f48 100%);
+    }
+  }
 
   @at-root .heading-white & {//white text for dark background
     background: none !important;

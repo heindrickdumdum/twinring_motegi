@@ -12,6 +12,19 @@
     }
   }
 }
+.accordion-link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #333;
+  &.underline {
+    font-weight: 400;
+    @include max-screen($breakpoint-mobile) {
+      &.u-show-sp {
+        display: inline-block !important;
+      }
+    }
+  }
+}
 
 .accordion-arrow {
   display: block;
@@ -69,6 +82,7 @@
   @include max-screen($breakpoint-mobile) {
     font-size: 12px;
     padding: 10px 27px 12px;
+    font-weight: bold;
   }
 
   &.accordion-btn-musasabi {
@@ -124,6 +138,10 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  @include max-screen($breakpoint-mobile) {
+    top: 10px;
+    transform: none;
+  }
   img {
     max-width: 100%;
 

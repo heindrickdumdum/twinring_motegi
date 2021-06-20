@@ -7,6 +7,10 @@
   font-weight: 700;
   text-align: left;
 
+  &.table-battle-cart {
+    margin-top: 42px;
+  }
+
   @at-root .shops-information & {
     p {
       @include max-screen($breakpoint-mobile) {
@@ -261,7 +265,7 @@
             }
           }
         }
-        
+
         @include max-screen ($breakpoint-mobile) {
           font-size: 10px;
           letter-spacing: normal;
@@ -283,7 +287,7 @@
           width: 315px;
           letter-spacing: 0.2px;
           line-height: 24px;
-        } 
+        }
       }
 
       .line-height-inherit {
@@ -303,7 +307,7 @@
 
     @include min-screen ($breakpoint-mobile + 1) {
       border-top: 2px solid #00a040;
-    } 
+    }
   }
 
   @at-root .smart-entry & {//smart entry page
@@ -394,6 +398,9 @@
   a {
     color: $base-font-color;
     text-decoration: underline;
+    &:hover {
+      color: #00a040;
+    }
   }
 }
 
@@ -798,7 +805,7 @@
     small {
       display: block;
       font-weight: normal;
-      font-size: 13px; 
+      font-size: 13px;
     }
 
     .not-bold {

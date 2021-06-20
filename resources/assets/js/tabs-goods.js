@@ -17,7 +17,7 @@ function tabs(){
   });
 
   /* SP Dropdown - select option */
-  var optionSP = document.querySelectorAll('.option'); 
+  var optionSP = document.querySelectorAll('.option');
   var o;
   for (o = 0; o < optionSP.length; o++) {
     optionSP[0].classList.add('active');//Initial items
@@ -30,12 +30,12 @@ function tabs(){
       document.getElementById('tab-banner').setAttribute("data-tab", this.getAttribute('value'));
       document.getElementById('customSelect').classList.toggle('open');
       document.getElementById('customSelectItems').classList.toggle('select-hide');
-      
+
       this.classList.add('active');
     })
   }
 
-  
+
 }
 
 tabs();
@@ -45,7 +45,7 @@ tabs();
 function fixTabsIE(){
   document.getElementById('program-list').setAttribute("data-tab", document.querySelector('.tab [type="radio"]:checked').value);
   document.getElementById('tab-banner').setAttribute("data-tab", document.querySelector('.tab [type="radio"]:checked').value);
-  
+
 }
 
 setTimeout(() => {
@@ -55,4 +55,27 @@ setTimeout(() => {
 window.onload = () => {
   document.querySelector('.tab [type="radio"]:checked').click();
   fixTabsIE();
+
+  if(window.location.search.split("?tab=")[1]) {
+    let tabNo = window.location.search.split("?tab=")[1];
+    document.getElementById('tab-'+tabNo).click()
+
+    // SP
+    document.querySelectorAll('.select-goods-option[value="'+tabNo+'"]')[0].click();
+    document.getElementById('customSelect').classList.remove("open");
+    document.getElementById('customSelectItems').classList.add("select-hide");
+
+  }
+
+
+  //Scroll to ID
+  if(window.location.hash) {
+    setTimeout(function(){
+      const y = document.querySelector(window.location.hash).getBoundingClientRect().top + window.scrollY-80;
+      window.scroll({
+        top: y,
+        behavior: 'smooth'
+      });
+    },100);
+  }
 }

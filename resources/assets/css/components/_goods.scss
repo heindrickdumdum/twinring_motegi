@@ -18,6 +18,7 @@
 
     @include max-screen ($breakpoint-mobile) {
       padding-bottom: 0px;
+      padding-top: 12px;
 
       .media-title {
         margin-bottom: 10px;
@@ -34,24 +35,40 @@
     .area-item-image-wrapper {
       max-width: 442px;
       display: inline-block;
+      flex: 0 0 50%;
       @include max-screen ($breakpoint-mobile) {
         display: block;
         max-width: 290px;
         margin: auto;
-        margin-bottom: 23px;
+        margin-bottom: 25px;
+        flex: 0 0 100%;
+        min-height: 0;
       }
       &.collection-image-wrapper {
         max-width: 557px;
         text-align: center;
+        iframe {
+          max-width: 100%;
+          width: 557px;
+          height: 304px;
+        }
         .collection-subpage-title {
           font-size: 20px;
           margin-top: 14px;
+          @include max-screen ($breakpoint-mobile) {
+            font-size: 19px;
+            letter-spacing: 0.02em;
+          }
         }
         .collection-details {
           text-align: left;
           margin: 0 auto;
           width: 100%;
           max-width: 363px;
+          @include max-screen ($breakpoint-mobile) {
+            font-size: 12px;
+            letter-spacing: 0.03em;
+          }
         }
       }
     }
@@ -85,11 +102,13 @@
       .details-list {
         .details-list-item {
           display: table;
+          width: 100%;
           .details-list-item-label {
             display: table-cell;
             padding-top: 16px;
             line-height: 1;
             text-align: center;
+            font-weight: bold;
             @include min-screen ($breakpoint-mobile + 1) {
               min-width: 102px;
               margin-right: 20px;
@@ -104,10 +123,20 @@
             padding-left: 19px;
             width: 100%;
             letter-spacing: 1.4px;
+            font-weight: bold;
+
+            &.padding-left-none {
+              padding-left:0;
+            }
 
             @include max-screen ($breakpoint-mobile) {
               width: auto;
               padding-left: 10px;
+              font-weight: bold;
+            }
+            a {
+              text-decoration: underline;
+              color: #00a040;
             }
           }
 
@@ -163,8 +192,14 @@
     .swiper-wrapper {
       margin-bottom: 15px;
     }
+
     .events-swiper-pagination {
       text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: -36px;
 
       .swiper-pagination-bullet {
         width: 10px;
@@ -178,8 +213,16 @@
       }
     }
 
+    .events-swiper[data-imgcount="1"] .events-swiper-pagination {
+      display: none;
+    }
+
     .events-list-item {
       border-bottom: 1px solid #dfdfdf;
+
+      @include max-screen ($breakpoint-mobile) {
+        padding-bottom: 40px;
+      }
 
       &:last-child {
         border-bottom: 0;
@@ -193,6 +236,7 @@
 
         @include max-screen ($breakpoint-mobile) {
           font-size: 11px;
+          letter-spacing: 0.06em;
         }
       }
 
@@ -202,6 +246,7 @@
 
         @include max-screen ($breakpoint-mobile) {
           font-size: 15px;
+          letter-spacing: 0.10em;
         }
       }
 
@@ -212,7 +257,7 @@
       .details-list {
         margin-bottom: 0;
         @include max-screen ($breakpoint-mobile) {
-          margin-bottom: 40px;
+          margin-bottom: 0;
 
           .details-list-item {
             width: 100%;
@@ -296,9 +341,9 @@
   }
 
   .banner-3 {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     @include min-screen ($breakpoint-mobile + 1) {
-      margin-bottom: 220px;
+      margin-bottom: 70px;
     }
   }
 

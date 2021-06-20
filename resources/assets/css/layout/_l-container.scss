@@ -20,9 +20,37 @@
       }
     }
   }
-  &.l-container-racing {
-      width: 1085px;
-  }
+
+}
+
+.l-container-racing {
+    max-width: 1086px;
+    margin: 0 auto;
+    padding: 0 32px;
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+      padding: 0 20px;
+
+      &.l-racing-sp {
+        padding: 0;
+      }
+
+      @at-root .recommend-menu & {//marcherant lunch page
+        padding: 0px;
+      }
+      &.for-sp {
+        padding: 0;
+      }
+    }
+
+    @at-root .camp-wrapper & {
+      &-m {
+        margin: {
+          left: auto;
+          right: auto;
+        }
+      }
+    }
 }
 
 .l-container-kids-attraction {

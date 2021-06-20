@@ -8,22 +8,29 @@
 
 <div class="lig-content">
   <div class="subpage">
-    <div class="mv mv-subpage">
+    <div class="mv mv-subpage mv-tourism">
       <ul class="mv-list">
         <li class="mv-item">
-          <div class="mv-image mv-image-subpage u-show-pc"
-            style="background-image:url(<%= mix('/assets/images/pit/top-image.jpg') %>);"></div>
-          <div class="mv-image mv-image-subpage u-show-sp"
+          <div class="mv-image mv-image-subpage u-show-pc mv-image-tourism"
+            style="background-image:url(<%= mix('/assets/images/pit/top-image.jpg') %>); background-position: top -30px center;"></div>
+          <div class="mv-image mv-image-subpage u-show-sp mv-image-tourism"
             style="background-image:url(<%= mix('/assets/images/pit/top-image-sp.jpg') %>);"></div>
         </li>
       </ul>
       <div class="l-container mv-container">
         <div class="mv-heading mv-heading-default mv-collection-pit">
           <%- include('/partials/heading', {
-            modifier: '',
+            modifier: 'u-show-pc',
             heading_level: 1,
             text: 'Pit Workshop',
             subtextvg: 'pit-mv-title',
+            altSubtextvg: 'ピット工房'
+          }) %>
+          <%- include('/partials/heading', {
+            modifier: 'u-show-sp',
+            heading_level: 1,
+            text: 'Pit Workshop',
+            subtextvg: 'pit-mv-title-sp',
             altSubtextvg: 'ピット工房'
           }) %>
         </div>
@@ -36,16 +43,16 @@
           <div class="heading-wrap l-heading-main">
           <h2 class="heading heading-collection-pit">
               <span class="heading-texts">
-                <img class="u-show-pc" src="<%= mix('/assets/images/pit/color-title.jpg') %>" alt="Colection Pit">
-                <img class="u-show-sp" src="<%= mix('/assets/images/pit/color-title-sp.jpg') %>" alt="Colection Pit">
+                <img class="u-show-pc" src="<%= mix('/assets/images/pit/color-title.jpg') %>" alt="電動モーターのクルマを組み立てて走らせよう">
+                <img class="u-show-sp" src="<%= mix('/assets/images/pit/color-title-sp.jpg') %>" alt="電動モーターのクルマを組み立てて走らせよう">
               </span>
             </h2>
           </div>
 
           <div class="subpage-banner">
             <div class="subpage-banner-inner">
-              <img class="u-show-pc" src="<%= mix('/assets/images/pit/content-image.jpg') %>" alt="森のクラフト体験">
-              <img class="u-show-sp" src="<%= mix('/assets/images/pit/content-image-sp.jpg') %>" alt="森のクラフト体験">
+              <img class="u-show-pc" src="<%= mix('/assets/images/pit/content-image.jpg') %>" alt="電動モーターのクルマを組み立てて走らせよう">
+              <img class="u-show-sp" src="<%= mix('/assets/images/pit/content-image-sp.jpg') %>" alt="電動モーターのクルマを組み立てて走らせよう">
             </div>
           </div>
 
@@ -93,7 +100,11 @@
               </tr>
               <tr class="table-row">
                 <th class="table-head">料金</th>
-                <td class="table-col">・モビパークパスポート特典<br />&nbsp;&nbsp;&nbsp;→モビパークパスポートをお持ちの方は、通常1,100円のところ900円でご利用いただけます。<br /> ・アトラクションチケット利用：1,100円</td>
+                <td class="table-col">・モビパークパスポート特典
+                  <ul class="racing-kart-ul">
+                    <li>→モビパークパスポートをお持ちの方は、通常1,100円のところ900円でご利用いただけます。</li>
+                  </ul>
+                  ・アトラクションチケット利用：1,100円</td>
               </tr>
             </tbody>
           </table>
@@ -182,7 +193,7 @@
                     <div style="background-image: url(<%= mix('/assets/images/pit/image-4.jpg') %>);"></div>
                   </div>
                 </div>
-               
+
               </div>
               <div class="media-right">
                 <p class="step-word-no u-show-pc step-word-coll-pit"><span class="step-word">STEP</span><span class="step-no">4</span></p>
@@ -248,17 +259,13 @@
         </div>
       </section>
 
-      <div class="l-section block-image">
-        <div class="l-container">
-          <ul class="block-image-list">
-
-            <li class="block-image-item block-image-item-collection-pit">
-              <a href="/mobipark_m/card/" class="block-image-item-link">
-                <img class="u-show-pc" src="<%= mix('/assets/images/pit/license-banner.jpg') %>" alt="ライセンスバナー">
-                <img class="u-show-sp" src="<%= mix('/assets/images/pit/dekitane-banner-sp.jpg') %>" alt="ライセンスバナー">
-              </a>
-            </li>
-          </ul>
+      <div class="banner-cta-racing">
+        <div class="banner-cta ">
+          <div class="l-container">
+            <a class="banner-cta-bottom-inner" href="/mobipark_m/card/">
+              <img src="/assets/images/subpage-banner-bottom.png" alt="上手に乗れたらライセンスカードをつくろう">
+            </a>
+          </div>
         </div>
       </div>
 

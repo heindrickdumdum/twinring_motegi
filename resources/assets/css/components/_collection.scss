@@ -37,6 +37,9 @@
     max-width: 100%;
     font-size: 15px;
   }
+  .exhibit-item-link {
+    color: #333;
+  }
 }
 .exhibit-title {
   display: block;
@@ -120,7 +123,7 @@
   display: block;
   font-family:$font-hiragino;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1.8;
   letter-spacing: 0.07em;
   margin-bottom: 21px;
@@ -138,6 +141,6 @@
 }
 .collection-data-list{
   @include max-screen ($breakpoint-mobile) {
-      margin-top: 62px;
+      margin-top: 0px;
   }
 }

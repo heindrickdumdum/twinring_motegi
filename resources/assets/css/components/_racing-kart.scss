@@ -2,24 +2,40 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @include max-screen ($breakpoint-mobile) {
+    margin-top: 45px;
+    justify-content: center;
+    &.battle-cart {
+      margin-top: 30px;
+    }
+  }
 }
 .racing-kart-item {
+  @include max-screen ($breakpoint-mobile) {
+    margin-top: 28px;
+  }
   iframe {
     width: 487px;
     height: 285px;
+    max-width: 100%;
+  }
+  &.racing-kart-img {
+    max-width: 487px;
+    width: 100%;
   }
 }
 .racing-desc {
   color: #2d2d2d;
   font-family: $font-hiragino;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 2;
   letter-spacing: 0.09em;
   margin-top: 21px;
 }
 .table-heading-racing {
   max-width: 234px;
+  margin-top: 0;
 }
 .table-racing {
   .link {
@@ -31,4 +47,548 @@
 }
 .table-subheading-racing {
   margin-top: 32px;
+}
+
+// Battle Cart
+.battle-cart-title {
+  text-align: center;
+  color: #2d2d2d;
+  font-family: $font-hiragino;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  position: relative;
+  z-index: 1;
+  margin: 38px auto 51px;
+  @include max-screen ($breakpoint-mobile) {
+    margin-bottom: 0;
+    &.member-pass {
+      margin: 0 auto 30px;
+    }
+    &.events {
+      margin: 30px auto;
+    }
+  }
+  &::after {
+    content: '';
+    width: 95px;
+    height: 7px;
+    background: url(/assets/images/racingkart/line.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+    max-width: 100%;
+    opacity: 0.5;
+    @at-root .is-ie & {
+      bottom: 2px;
+    }
+  }
+}
+.battle-cart-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 60px;
+  padding: 47px 55px;
+  z-index: 1;
+  @include max-screen ($breakpoint-mobile) {
+    padding: 30px;
+    text-align: center;
+  }
+  &:before {
+    content: "";
+    background: url('/assets/images/racingkart/border.png');
+    background-size: 100% 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    @include max-screen ($breakpoint-mobile) {
+      background-image:url('/assets/images/racingkart/border-sp.png');
+    }
+  }
+  .battle-cart-item {
+    max-width: 446px;
+    flex: 0 0 50%;
+    @include max-screen ($breakpoint-mobile) {
+      margin:0 auto 20px;
+      flex: 0 0 100%;
+      &:last-child {
+        margin:0 auto;
+      }
+    }
+    .battle-cart-heading {
+      max-width: 444px;
+      width: 100%;
+      margin: 7px 0 33px;
+      &.tab2 {
+        max-width: 103px;
+        @include max-screen ($breakpoint-mobile)  {
+          margin: 7px auto 33px;
+        }
+      }
+    }
+    .battle-cart-desc {
+      color: #333333;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: 0.06em;
+      margin-bottom: 25px;
+      @include max-screen ($breakpoint-mobile)  {
+        line-height: 1.5;
+      }
+    }
+    .battle-cart-desc-list {
+      line-height: 2;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    .l-button {
+      margin-top: 33px;
+      .button-adventure  {
+        margin: 0 8px 0;
+        @include max-screen ($breakpoint-mobile) {
+          margin: 0 auto;
+        }
+      }
+      &.tab2 {
+        .button-icon {
+          @include max-screen ($breakpoint-mobile) {
+            right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+.battle-cart-fee-section {
+
+  .battle-cart-title {
+    &:after {
+      width: 76px;
+    }
+  }
+  .battle-cart-fee-table {
+    width: 100%;
+    margin-bottom: 35px;
+    .battle-cart-fee-th {
+      background-color: #f7f7f7;
+      border:1px solid #4EBD7B;
+      text-align: center;
+      padding: 42px 34px;
+      @include max-screen ($breakpoint-mobile) {
+        width: 45%;
+        padding: 15px 20px;
+      }
+    }
+    tr, td {
+      border:1px solid #4EBD7B;
+      text-align: center;
+    }
+    td {
+      @include max-screen ($breakpoint-mobile) {
+        padding: 20px;
+        width: 475px;
+      }
+    }
+    .align-left {
+      text-align: left;
+      padding: 20px 24px;
+    }
+  }
+}
+.battle-cart-fee-desc {
+  line-height: 2;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  &.align-center {
+    text-align: center;
+  }
+}
+.battle-cart-challenge {
+  margin-top: 64px;
+  .battle-cart-challenge-heading {
+    font-family: $font-hiragino;
+    font-size: 24px;
+    letter-spacing: 2.88px;
+    line-height: 1;
+    position: relative;
+    color: #2d2d2d;
+    text-align: center;
+    z-index: 1;
+    font-weight: 400;
+    @include max-screen ($breakpoint-mobile) {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    &::after {
+      content: '';
+      width: 532px;
+      height: 7px;
+      background: url(/assets/images/racingkart/line2.png) no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: -1;
+      max-width: 100%;
+      opacity: 0.5;
+      @include max-screen ($breakpoint-mobile) {
+        width: 385px;
+      }
+    }
+    &.challenge-heading-tab2 {
+      margin-bottom: 38px;
+      &::after {
+        width: 230px;
+        height: 7px;
+      }
+    }
+    &.sub {
+      letter-spacing: 2.16px;
+      line-height: 1;
+      font-size: 18px;
+      margin-top: 13px;
+      margin-bottom: 38px;
+      font-weight: 400;
+      &::after {
+        width: 478px;
+      }
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 15px;
+        &.sub-sp {
+          &::after {
+            width: 95px;
+          }
+        }
+      }
+    }
+  }
+  .battle-cart-challenge-info {
+    margin-top: 50px;
+    position: relative;
+    padding-bottom: 60px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      background-image: url(../images/program/underline.png);
+      bottom: 0px;
+      left: 1px;
+      opacity: 0.8;
+    }
+    .battle-cart-challenge-info-ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 704px;
+      margin: 0 auto;
+      .battle-cart-challenge-info-li {
+        width: 292px;
+        position: relative;
+        max-width: 100%;
+        @include max-screen ($breakpoint-mobile) {
+          margin: 0 auto 88px;
+          width: 100%;
+          text-align: center;
+        }
+        &::after {
+          content: url('/assets/images/racingkart/arrow.png');
+          position: absolute;
+          right: -75px;
+          top: 50%;
+          transform: translateY(-50%);
+          @include max-screen ($breakpoint-mobile) {
+            content: url('/assets/images/racingkart/arrow-sp.png');
+            right: 0;
+            top: auto;
+            left: 0;
+            bottom: -95px;
+          }
+        }
+        &.tab2 {
+          width: 320px;
+          @include max-screen ($breakpoint-mobile) {
+            width: 48%;
+          }
+          &::after {
+            display: none;
+          }
+        }
+        &:last-child {
+          @include max-screen ($breakpoint-mobile) {
+            margin: 0 auto;
+          }
+          &::after {
+            display: none;
+          }
+        }
+        .battle-cart-challenge-link {
+          display: block;
+          height: 160px;
+          border-radius: 8px;
+          border: 1px solid #333333;
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 1;
+          text-decoration: underline;
+          color: #333333;
+          padding: 112px 20px 20px;
+          position: relative;
+          @include max-screen ($breakpoint-mobile) {
+            font-size: 15px;
+          }
+          &:hover {
+            border-color: #4EBD7B;
+            color: #4EBD7B;
+            transition: 0.3s;
+          }
+          &::before {
+            content: "";
+            background: url('/assets/images/racingkart/daily-ranking.png');
+            background-size: cover;
+            position: absolute;
+            top:20px;
+            left:0;
+            right: 0;
+            width: 73px;
+            margin:0 auto;
+            height: 74px;
+          }
+          &.monthly {
+            &::before {
+              background-image: url('/assets/images/racingkart/monthly-ranking.png');
+            }
+          }
+        }
+        .battle-cart-challenge-box {
+          border: 1px solid #4EBD7B;
+          height: 95px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          @include max-screen ($breakpoint-mobile) {
+            width: 292px;
+            margin: 0 auto;
+          }
+          &.gray {
+            background-color: #f7f7f7;
+          }
+          .red {
+            display: block;
+            color: #c1272d;
+          }
+        }
+      }
+    }
+  }
+}
+.battle-cart-layout {
+  .heading-subtext {
+    width: 595px;
+    max-width: 100%;
+    @include max-screen ($breakpoint-mobile) {
+      height: 60px !important;
+    }
+  }
+}
+.map-flag {
+  max-width: 902px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.schedule-section {
+  @include max-screen ($breakpoint-mobile) {
+    padding-top: 22px;
+    margin-top: -22px;
+  }
+  .business-calendar-wrapper {
+    background: none;
+    @include max-screen ($breakpoint-mobile) {
+      max-width: 720px;
+      width: 100%;
+    }
+  }
+}
+.member-pass-section {
+  .heading-subtext {
+    width: 639px;
+    max-width: 100%;
+    @include max-screen ($breakpoint-mobile) {
+      height: 54px !important;
+      margin-top: 12px !important;
+    }
+  }
+  .member-pass-box {
+    border:1px solid #bfbfbf;
+    margin-top: 39px;
+    padding: 11px 67px 52px;
+    @include max-screen ($breakpoint-mobile) {
+      border: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .battle-cart-title {
+      &::after {
+        width: 181px;
+        height: 8px;
+      }
+    }
+    .member-pass-list {
+      list-style: decimal;
+      counter-reset: my-sec-counter;
+      .member-pass-item {
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 32px;
+        padding-left: 22px;
+        position: relative;
+        &:before {
+          counter-increment: my-sec-counter;
+          content: " " counter(my-sec-counter) ". ";
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-weight: bold;
+        }
+        .member-pass-title {
+          font-weight: bold;
+          letter-spacing: 0.16em;
+        }
+        .member-pass-item-red {
+          color: #c1272d;
+        }
+        .member-pass-info {
+          text-indent: 53px;
+          line-height: 2;
+          letter-spacing: 0.16em;
+        }
+      }
+    }
+    .member-pass-link {
+      display: block;
+      margin: 0 auto;
+      background: #F7F7F7;
+      max-width: 858px;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1;
+      text-decoration: underline;
+      letter-spacing: 1.8px;
+      text-align: center;
+      color: #2d2d2d;
+      position: relative;
+      padding: 32px 20px;
+      @include max-screen ($breakpoint-mobile) {
+        font-size: 14px;
+      }
+
+      &.open {
+        .is-open {display: inline-block;}
+        .is-close {display: none;}
+      }
+
+      span {
+        position: relative;
+        display: inline-block;
+        padding-left: 23px;
+        text-decoration: underline;
+        &:before {
+          content: "";
+          position:absolute;
+          left: 0;
+          top: 10px;
+          border-width: 0 7px 12.1px 7px;
+          transform: translateY(-50%) rotate(180deg);
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-color: transparent transparent #719b68 transparent;
+          @include max-screen ($breakpoint-mobile) {
+            top: 6px;
+          }
+        }
+
+        &.is-open {
+          display: none;
+          &:before {
+            transform: rotate(0);
+            top: 3px;
+            @include max-screen ($breakpoint-mobile) {
+              top: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.member-pass-table-section {
+  .battle-cart-fee-section {
+     .battle-cart-fee-table {
+       .battle-cart-fee-th {
+         padding: 27px 34px;
+       }
+     }
+  }
+  .member-pass-div {
+    font-size: 15px;
+    margin-top: 50px;
+    line-height: 2;
+    margin-bottom: 40px;
+    .member-heading {
+      font-weight: bold;
+    }
+  }
+}
+.moretext {
+  display: none;
+}
+
+.battle-cart-section-title {
+  .heading-subtext {
+    @include max-screen ($breakpoint-mobile) {
+      height: 83px;
+    }
+  }
+}
+.battle-cart-fee-table-title-sp {
+  margin-bottom: 20px;
+}
+.banner-cta-racing{
+  .banner-cta {
+    margin-top: 44px;
+    @include max-screen ($breakpoint-mobile) {
+      margin-top: 10px;
+    }
+  }
+}
+.racing-kart-ul {
+  padding-left: 17px;
+}
+.tabs-goods-section {
+  @include max-screen ($breakpoint-mobile) {
+    padding-top: 50px;
+    margin-top: -50px;
+  }
 }

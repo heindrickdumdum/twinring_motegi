@@ -12,17 +12,26 @@
       <ul class="mv-list">
         <li class="mv-item">
           <div class="u-show-pc mv-image" style="background-image:url(<%= mix('/assets/images/racingkart/top-image.jpg') %>);"></div>
-          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/collection/top-image-sp.png') %>);"></div>
+          <div class="u-show-sp mv-image" style="background-image:url(<%= mix('/assets/images/racingkart/top-image-sp.jpg') %>);"></div>
         </li>
       </ul>
 
       <div class="l-container mv-container">
-        <h2 class="mv-heading hellowoods-mv-heading">
+        <h2 class="mv-heading hellowoods-mv-heading u-show-pc">
           <%- include('/partials/heading', {
             modifier: 'heading-hellowoods heading-racing',
             text: 'Racing Kart',
             alt: '',
-            subtextvg: 'racing-kart-title',
+            subtextvg: 'racing-kart-pc',
+            altSubtext: ''
+          }) %>
+        </h2>
+        <h2 class="mv-heading hellowoods-mv-heading u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods heading-racing',
+            text: 'Racing Kart',
+            alt: '',
+            subtextvg: 'top-title',
             altSubtext: ''
           }) %>
         </h2>
@@ -48,8 +57,8 @@
             <div class="l-container">
               <ul class="info-list">
                 <% racingInfo.forEach(item => { %>
-                <li class="info-item">
-                  <a href="<%- item.link %>">
+                <li class="info-item info-item-racing">
+                  <a href="<%- item.link %>" target="_blank">
                     <span><%= item.desc %></span>
                   </a>
                 </li>
@@ -66,10 +75,10 @@
               <div class="challenge-left">
                 <div class="challenge-img u-show-pc">
                   <div class="challenge-img1 racing-img1">
-                    <img src="<%- mix('/assets/images/racingkart/overflow-img-1.png') -%>" alt="梟">
+                    <img src="<%- mix('/assets/images/racingkart/overflow-img-1.png') -%>" alt="レーシングカートイメージ">
                   </div>
                   <div class="challenge-img2">
-                    <img src="<%- mix('/assets/images/racingkart/overflow-img-2.png') -%>" alt="女の子">
+                    <img src="<%- mix('/assets/images/racingkart/overflow-img-2.png') -%>" alt="レーシングカートバトルイメージ">
                   </div>
                 </div>
 
@@ -81,11 +90,11 @@
               </div>
               <div class="challenge-right">
                 <p class="heading-text heading-text-racing">
-                  <img src="<%- mix('/assets/images/racingkart/life-overflow-heading.png') -%>" alt="F１ドライバーやMotoGP
-ライダーなど世界のトップ選手も走ったコースで 仲間とともに本格バトル">
+                  <img class="u-show-pc" src="<%- mix('/assets/images/racingkart/life-overflow-heading.png') -%>" alt="F１ドライバーやMotoGP ライダーなど世界のトップ選手も走ったコースで 仲間とともに本格バトル">
+                  <img class="u-show-sp" src="<%- mix('/assets/images/racingkart/life-overflow-heading-sp.png') -%>" alt="F１ドライバーやMotoGP ライダーなど世界のトップ選手も走ったコースで 仲間とともに本格バトル">
                 </p>
                 <p class="desc racing">
-                  はじめての人でもチャレンジできる気軽さがありながら、<br>
+                  はじめての人でもチャレンジできる気軽さがありながら、<br class="u-show-pc">
                   スピード感・エンジン音・コーナーリングの感覚はレーシングカーそのもの。本格的なカートアトラクションで、レース気分を味わおう。
                 </p>
               </div>
@@ -94,7 +103,7 @@
         </div>
       </div>
 
-      <div class="l-section">
+      <div class="l-section l-racing">
         <div class="l-container l-container-racing">
           <ul class="racing-kart-video">
             <li class="racing-kart-item">
@@ -125,7 +134,7 @@
             <tbody>
               <tr class="table-row">
                 <th class="table-head">場所</th>
-                <td class="table-col">モビパーク内レーシングカート <a href="#" class="link">MAPを見る</a></td>
+                <td class="table-col">モビパーク内レーシングカート<br class="u-show-sp"> <a href="/map_m" class="link">MAPを見る</a></td>
               </tr>
 
               <tr class="table-row">
@@ -133,7 +142,7 @@
                 <td class="table-col">
                   午前：営業開始時間～11:30 <br>
                   午後：13:00～営業終了時間 <br>
-                  <p class="table-desc">※イベントの開催や団体様のご利用により営業時間が変更となる場合がございます。その日の営業開始時間・営業終了時間を含め、詳しくは<u>スケジュール</u>をご確認ください。</p>
+                  <p class="table-desc">※イベントの開催や団体様のご利用により営業時間が変更となる場合がございます。その日の営業開始時間・営業終了時間を含め、詳しくは<a href="/mobipark_m/attractions/racingkart#schedule">スケジュール</a>をご確認ください。</p>
                 </td>
               </tr>
 
@@ -166,10 +175,10 @@
       </div>
 
 
-      <div class="l-section">
-        <div class="l-container l-container-racing">
-
-            <div class="l-section-title">
+      <div class="l-section l-section-battle-cart">
+        <div class="l-container ">
+          <div class="l-container-racing">
+            <div class="l-section-title u-show-pc">
               <%- include('/partials/heading', {
                 modifier: 'heading-wrap-center heading-mobipark heading-racing',
                 text: 'Battle Cart',
@@ -178,26 +187,324 @@
                 subtextvg: 'battle-cart'
               }) %>
             </div>
-
-            <section class="subpage-section subpage-section-racing subapge-section-goods-tab">
-              <%- include('/partials/racingkart/racing-tabs', {
-                racingKartTabs : getData().data.racingTabs
-              }) -%>
-            </section>
-
+            <div class="l-section-title u-show-sp battle-cart-section-title">
+              <%- include('/partials/heading', {
+                modifier: 'heading-wrap-center heading-mobipark heading-racing',
+                text: 'Battle Cart',
+                alt: 'Battle Cart',
+                altSubtext: '',
+                subtextvg: 'battle-cart-sp'
+              }) %>
+            </div>
+          </div>
+          <section class="subpage-section subpage-section-racing subapge-section-goods-tab" id="banner">
+            <%- include('/partials/racingkart/racing-tabs' ) -%>
+          </section>
         </div>
       </div>
 
+      <div class="field-introduction battle-cart-layout">
+        <div class="field-introduction-container">
+          <div class="u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-how-to heading-wrap-center heading-wrap-hellowoods',
+              text: 'Course Layout',
+              alt: '',
+              subtextvg: 'course-layout-svg',
+              altSubtext: ''
+            }) %>
+          </div>
+          <div class="u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-how-to heading-wrap-center heading-wrap-hellowoods',
+              text: 'Course Layout',
+              alt: '',
+              subtextvg: 'course-layout-svg-sp',
+              altSubtext: ''
+            }) %>
+          </div>
+
+          <div class="map-wrapper">
+            <img class="map-image u-show-pc" src="<%= mix('/assets/images/racingkart/map.png') %>" alt="course layout">
+            <img class="map-image u-show-sp" src="<%= mix('/assets/images/racingkart/map-sp.png') %>" alt="course layout">
+          </div>
+          <div class="smap">
+            <div class="l-container-racing">
+              <img class="map-flag" src="<%= mix('/assets/images/racingkart/map-flag.jpg') %>" alt="map flag">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="schedule-section" id="schedule">
+        <div class="l-container-racing">
+          <div class="l-section-title">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-wrap-business-hours-guide',
+              text: 'Schedule',
+              alt: 'Schedule',
+              altSubtext: '',
+              subtextvg: 'schedule'
+            }) %>
+          </div>
+          <div class="l-container-m business-calendar-wrapper">
+            <div class="business-calendar-inner">
+              <div class="responsive-calendar u-show-pc">
+                <iframe class="pc" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=trm.kartland%40gmail.com&amp;color=%2323164E&amp;src=hq3dmg4nt68cecbikhr447fe60%40group.calendar.google.com&amp;color=%238C500B&amp;src=gq9ldn3ducoonvdiqd9nfi6d7k%40group.calendar.google.com&amp;color=%23711616&amp;ctz=Asia%2FTokyo" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+              </div>
+              <div class="responsive-calendar u-show-sp">
+                <iframe class="sp" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=trm.kartland%40gmail.com&amp;color=%2323164E&amp;src=hq3dmg4nt68cecbikhr447fe60%40group.calendar.google.com&amp;color=%238C500B&amp;src=gq9ldn3ducoonvdiqd9nfi6d7k%40group.calendar.google.com&amp;color=%23711616&amp;ctz=Asia%2FTokyo&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0" style="border-width:0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+              </div>
+              <p class="calendar-note">※イベント開催や団体様のご利用により、コースが貸切となる場合がございます。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="member-pass-section">
+        <div class="l-container-racing">
+          <div class="l-section-title u-show-pc">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-wrap-business-hours-guide',
+              text: 'Member Pass',
+              alt: 'Member Pass',
+              altSubtext: '',
+              subtextvg: 'member-pass'
+            }) %>
+          </div>
+
+          <div class="l-section-title u-show-sp">
+            <%- include('/partials/heading', {
+              modifier: 'heading-wrap-center heading-wrap-business-hours-guide',
+              text: 'Member Pass',
+              alt: 'Member Pass',
+              altSubtext: '',
+              subtextvg: 'member-pass-sp'
+            }) %>
+          </div>
+
+          <p class="battle-cart-fee-desc">1年通してお得にレーシングカートをお楽しみいただける会員制度をご用意しています。</p>
+
+          <div class="member-pass-box">
+            <h3 class="battle-cart-title member-pass">会員特典内容</h3>
+            <div class="member-pass-list">
+              <div class="member-pass-item">
+                <h3 class="member-pass-title">チャレンジカート・レーシングカートのご利用料金が割引に</h3>
+                <ul>
+                  <li>・チャレンジカート
+                    <ul>
+                      <li class="member-pass-info">通常価格：800円</li>
+                      <li class="member-pass-info">会員価格：<span class="member-pass-item-red">500円</span></li>
+                    </ul>
+                  </li>
+                  <li>・レーシングカート体験走行
+                    <ul>
+                      <li class="member-pass-info">通常価格：1,500円</li>
+                      <li class="member-pass-info">会員価格：<span class="member-pass-item-red">1,200円</span></li>
+                    </ul>
+                  </li>
+                  <li>・タイムアタックセッション
+                    <ul>
+                      <li class="member-pass-info">通常価格：2,600円</li>
+                      <li class="member-pass-info">会員価格：<span class="member-pass-item-red">2,000円</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="member-pass-item">
+                <h3 class="member-pass-title">タイムアタックセッションでお得な回数券の利用が可能に</h3>
+                <ul>
+                  <li>・５回分　
+                    <ul>
+                      <li class="member-pass-info">通常価格：10,000円</li>
+                      <li class="member-pass-info">会員価格：<span class="member-pass-item-red">8,000円</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="member-pass-item">
+                <h3 class="member-pass-title">会員ご本人様＋同伴者2名様まで<span class="member-pass-item-red">入場料・クルマ1台分の駐車料が無料に</span></h3>
+                ※レース・イベント日を除きます。
+              </div>
+              <div class="moretext">
+                <div class="member-pass-item">
+                  <h3 class="member-pass-title">モビパークパスポート　20%OFF</h3>
+                </div>
+                <div class="member-pass-item">
+                  <h3 class="member-pass-title">森のジップライン ムササビ　10%OFF</h3>
+                </div>
+                <div class="member-pass-item">
+                  <h3 class="member-pass-title">ショップにて1,000円以上のご利用で10%OFF</h3>
+                  ※ツインリンクもてぎ直営店に限ります。<br>※一部の商品を除きます。
+                </div>
+                <div class="member-pass-item">
+                  <h3 class="member-pass-title">のぞみの湯　入浴料150円引き</h3>
+                </div>
+
+                <div class="member-pass-table-section">
+                  <div class="battle-cart-fee-section">
+                    <h3 class="battle-cart-title">入会費・年会費</h3>
+                    <table class="battle-cart-fee-table u-show-pc">
+                      <tbody>
+                        <tr>
+                          <th class="battle-cart-fee-th">区分</th>
+                          <th class="battle-cart-fee-th">入会金</th>
+                          <th class="battle-cart-fee-th">年会費</th>
+                          <th class="battle-cart-fee-th">条件</th>
+                        </tr>
+                        <tr>
+                          <th class="battle-cart-fee-th">一般会員</th>
+                          <td>5,300円</td>
+                          <td>5,000円</td>
+                          <td rowspan="2" class="align-left">①身長140cm以上の高校生以上<br>
+                          ②普通運転免許証またはレーシングカートBライセンス以上を所持<br><br>
+
+                          ①②すべての条件を満たす方<br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="battle-cart-fee-th">女性会員</th>
+                          <td>4,200円</td>
+                          <td>4,000円</td>
+                        </tr>
+                        <tr>
+                          <th class="battle-cart-fee-th">ジュニア会員</th>
+                          <td>2,100円</td>
+                          <td>3,000円</td>
+                          <td class="align-left">①身長140cm以上の中学生以下<br>
+                          ②レーシングカートBライセンス以上を所持<br>
+                          ①②すべての条件を満たす方</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- table for sp -->
+                    <div class="u-show-sp">
+                      <h3 class="battle-cart-fee-table-title-sp">一般会員</h3>
+                      <table class="battle-cart-fee-table">
+                        <tbody>
+                          <tr>
+                            <th class="battle-cart-fee-th">入会金</th>
+                            <td>5,300円</td>
+                          </tr>
+                          <tr>
+                            <th class="battle-cart-fee-th">年会費</th>
+                            <td>5,000円</td>
+                          </tr>
+                          <tr>
+                            <th class="battle-cart-fee-th">条件</th>
+                            <td class="align-left">①身長140cm以上の高校生以上<br>
+                            ②普通運転免許証またはレーシン<br>
+                            グカートBライセンス以上を所持<br><br>
+
+                            ①②すべての条件を満たす方</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h3 class="battle-cart-fee-table-title-sp">女性会員</h3>
+                      <table class="battle-cart-fee-table">
+                        <tbody>
+                          <tr>
+                            <th class="battle-cart-fee-th">入会金</th>
+                            <td>4,200円</td>
+                          </tr>
+                          <tr>
+                            <th class="battle-cart-fee-th">年会費</th>
+                            <td>4,000円</td>
+                          </tr>
+                          <tr>
+                            <th class="battle-cart-fee-th">条件</th>
+                            <td class="align-left">①身長140cm以上の高校生以上<br>
+                            ②普通運転免許証またはレーシン<br>
+                            グカートBライセンス以上を所持<br><br>
+
+                            ①②すべての条件を満たす方</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h3 class="battle-cart-fee-table-title-sp">ジュニア会員</h3>
+                      <table class="battle-cart-fee-table">
+                        <tbody>
+                          <tr>
+                            <th class="battle-cart-fee-th">入会金</th>
+                            <td>2,100円</td>
+                          </tr>
+                          <tr>
+                            <th class="battle-cart-fee-th">年会費</th>
+                            <td>3,000円</td>
+                          </tr>
+                          <tr>
+                            <th class="battle-cart-fee-th">条件</th>
+                            <td class="align-left">①身長140cm以上の中学生以下<br>
+                            ②レーシングカートBライセンス<br>
+                            以上を所持<br><br>
+
+                            ①②すべての条件を満たす方
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <p class="battle-cart-fee-desc">※2年目以降は、年会費のみとなります。</p>
+                  </div>
+
+                  <div class="member-pass-div">
+                    <h3 class="member-heading">受付場所</h3>
+                    レーシングカート　コントロールタワー <br><br>
+
+                    <h3 class="member-heading">必要書類</h3>
+                    1．身分証明書（学生証、免許証等）<br>
+                    2．入会金・年会費　※料金表参照 <br><br>
+
+                    ※血液型をあらかじめご確認ください。 <br>
+                    ※ジュニア会員の場合、保護者同伴でご来場ください（保護者の同意が必要となります）。<br>
+                    ※郵送での受付はいたしません。<br>
+                    ※入会ご来場日の入場料・駐車料は別途必要です。（特典適用にはなりません。）
+                  </div>
+
+                </div>
+              </div> <!-- end of More -->
+
+              <a class="moreless-button member-pass-link" href="javascript:;">
+                <span class="is-close">その他全７つのお得な特典と入会方法</span>
+                <span class="is-open">閉じる</span>
+              </a>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+     </section>
+
+      <section id="hellowoods-faq" class="l-section l-section-hellowoods faq-file-dl">
+        <%- include('/partials/racingkart-faq', {
+          racingkartAccordion: getData().data.racingkartAccordion
+        }) %>
+      </section>
+
+      <div class="banner-cta-racing">
+        <%- include('/partials/banner-cta', {
+          link: '/mobipark_m/card/',
+          imgPath: mix('/assets/images/subpage-banner-bottom.png'),
+          alt: '上手に乗れたらライセンスカードをつくろう'
+        }) -%>
+      </div>
+
+      <!-- recommendation module -->
+      <%- include('/partials/recommendation') -%>
+
+      <!-- pick up module -->
+      <%- include('/partials/pickup') -%>
 
     </main>
-
-
-
     <!-- END BOTTOM -->
   </div>
 </div>
 
 <%- include('/partials/breadcrumbs', {
-  breadcrumbs : getData().data.breadcrumbsCollectionPit
+  breadcrumbs : getData().data.breadcrumbsRacingKart
 }) -%>
 <%- include('/partials/footer', { pageId } ) -%>

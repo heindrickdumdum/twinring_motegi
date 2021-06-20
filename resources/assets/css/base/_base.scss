@@ -9,11 +9,11 @@
 body {
   $wrap: '.wrap:not(.client-content)';
   $client: '.wrap .client-content';
-  
+
   #{$wrap} {
     overflow-x: hidden;
   }
-  
+
   #{$wrap},
   #lig-header,
   #lig-preload,
@@ -29,7 +29,7 @@ body {
       color: $base-font-color;
       background-color: $base-background-color;
       min-width: $breakpoint-tablet;
-    
+
       @media screen and (max-width: $breakpoint-mobile + 1) {
         min-width: 100%;
       }

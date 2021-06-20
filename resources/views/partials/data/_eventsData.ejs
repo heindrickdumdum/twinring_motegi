@@ -6,6 +6,7 @@ eventsList = [
       colorTitle: 'もてぎの森 思い出フォトラリー',
       desc: 'アトラクションやイベントを体験して、スマートフォンで思い出のシーンを撮影してみよう。画像を受付でプリントアウトして本にすれば、たくさんの思い出が詰まったアルバムの出来上がり！',
       link: '#',
+      classMods: 'slide-images-1',
       dataList: [
         {
           label: '開催日',
@@ -13,7 +14,7 @@ eventsList = [
         },
         {
           label: '開催時間',
-          content: '<a class="link" href="#">営業時間中</a>'
+          content: '<a class="link" href="/hours_m/">営業時間中</a>'
         },
         {
           label: '料金',
@@ -25,15 +26,21 @@ eventsList = [
         },
         {
           label: '受付場所',
-          content: '・インフォメーションセンター<br>・モビパーク「巨大ネットの森 SUMIKA」前 特設 受付<br>・ハローウッズ ぐるぐる広場受付<br><a class="link" href="#">場内マップ</a>'
+          content: '<ul class="carbike-article-list-desc details-list-item-desc padding-left-none"><li class="collection-item-list">インフォメーションセンター</li><li class="collection-item-list">モビパーク「巨大ネットの森 SUMIKA」前 特設 受付</li><li class="collection-item-list">ハローウッズ ぐるぐる広場受付<br><a class="link" href="/map_m/">場内マップ</a></li></ul>'
         }
       ],
       imgList: [
         {
-          imgUrl: mix('/assets/images/events/event-01.jpg')
+          imgUrl: mix('/assets/images/events/event-01.jpg'),
+          alt: 'もてぎの森思い出フォトライブラリー'
         },
         {
-          imgUrl: mix('/assets/images/events/event-0.jpg')
+          imgUrl: mix('/assets/images/events/event-02.jpg'),
+          alt: 'もてぎの森思い出フォトライブラリー'
+        },
+        {
+          imgUrl: mix('/assets/images/events/event-03.jpg'),
+          alt: 'もてぎの森思い出フォトライブラリー'
         }
       ]
     },
@@ -43,6 +50,7 @@ eventsList = [
       colorTitle: '世界に1つだけの思い出コーヒー',
       desc: '豆から挽く本格的なコーヒーをお父さんやお母さんに作ってみませんか？カフェに隣接する寛ぎ空間では、ソファやハンモックなどもご用意しています。',
       link: '#',
+      classMods: 'slide-images',
       dataList: [
         {
           label: '開催日',
@@ -50,7 +58,7 @@ eventsList = [
         },
         {
           label: '開催時間',
-          content: '<a class="link" href="#">営業時間中</a>'
+          content: '<a class="link" href="/hours_m/">営業時間中</a>'
         },
         {
           label: '料金',
@@ -62,15 +70,21 @@ eventsList = [
         },
         {
           label: '受付場所',
-          content: 'ハローウッズの森 ぐるぐる広場<br><a class="link" href="#">場内マップ</a>'
+          content: 'ハローウッズの森 ぐるぐる広場<br><a class="link" href="/map_m/">場内マップ</a>'
         }
       ],
       imgList: [
         {
-          imgUrl: mix('/assets/images/events/event-02.jpg')
+          imgUrl: mix('/assets/images/events/event-02.jpg'),
+          alt: '世界に一つだけの思い出コーヒー'
         },
         {
-          imgUrl: mix('/assets/images/events/event-01.jpg')
+          imgUrl: mix('/assets/images/events/event-03.jpg'),
+          alt: '世界に一つだけの思い出コーヒー'
+        },
+        {
+          imgUrl: mix('/assets/images/events/event-01.jpg'),
+          alt: '世界に一つだけの思い出コーヒー'
         }
       ]
     },
@@ -80,6 +94,7 @@ eventsList = [
       colorTitle: '里山でチャレンジ！はじめての焚火',
       desc: '森で小枝をひろって焚き火にくべてみませんか？<br>森カフェでマシュマロをプレゼント！焚き火で焼きマシュマロを作ってみよう！',
       link: '#',
+      classMods: 'slide-images',
       dataList: [
         {
           label: '開催日',
@@ -99,15 +114,21 @@ eventsList = [
         },
         {
           label: '受付場所',
-          content: 'ハローウッズの森 どんぐり広場 特設受付<br><a class="link" href="#">場内マップ</a>'
+          content: 'ハローウッズの森 どんぐり広場 特設受付<br><a class="link" href="/map_m/">場内マップ</a>'
         }
       ],
       imgList: [
         {
-          imgUrl: mix('/assets/images/events/event-03.jpg')
+          imgUrl: mix('/assets/images/events/event-03.jpg'),
+          alt: '里山でチャレンジ！はじめての焚火'
         },
         {
-          imgUrl: mix('/assets/images/events/event-01.jpg')
+          imgUrl: mix('/assets/images/events/event-03.jpg'),
+          alt: '里山でチャレンジ！はじめての焚火'
+        },
+        {
+          imgUrl: mix('/assets/images/events/event-03.jpg'),
+          alt: '里山でチャレンジ！はじめての焚火'
         }
       ]
     },
@@ -118,6 +139,7 @@ eventsList = [
       desc: 'お散歩しながらカエルの卵や産まれたばかりのオタマジャクシ、芽を出したフキノトウなどを探して遊んでみませんか。',
       link: '#',
       ctaLink: '#',
+      classMods: '',
       dataList: [
         {
           label: '開催日',
@@ -126,10 +148,8 @@ eventsList = [
       ],
       imgList: [
         {
-          imgUrl: mix('/assets/images/events/event-04.jpg')
-        },
-        {
-          imgUrl: mix('/assets/images/events/event-01.jpg')
+          imgUrl: mix('/assets/images/events/event-04.jpg'),
+          alt: '野遊び里山デイキャンプ'
         }
       ]
     },    {
@@ -139,6 +159,7 @@ eventsList = [
       desc: 'ハローウッズの森で木こり体験！里山の森には、どんな木が生えてるの？木の違いってなに？謎解きしながら探険しよう！',
       link: '#',
       ctaLink: '#',
+      classMods: '',
       dataList: [
         {
           label: '開催日',
@@ -147,10 +168,8 @@ eventsList = [
       ],
       imgList: [
         {
-          imgUrl: mix('/assets/images/events/event-05.jpg')
-        },
-        {
-          imgUrl: mix('/assets/images/events/event-01.jpg')
+          imgUrl: mix('/assets/images/events/event-05.jpg'),
+          alt: '森とあそぼ！さぁ、きみも木こりになろう！'
         }
       ]
     }

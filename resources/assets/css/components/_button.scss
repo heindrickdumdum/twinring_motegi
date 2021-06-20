@@ -6,6 +6,7 @@
 
   @include max-screen($breakpoint-mobile) {
     width: 15px;
+    right: 5px;
   }
 
   svg {
@@ -146,7 +147,7 @@
     max-width: 381px;
     letter-spacing: 0.112em;
     width: 100%;
-    
+
     @include max-screen($breakpoint-mobile) {
       max-width: 248px;
     }
@@ -217,12 +218,12 @@
       background-color: $color-white;
       height: 95px;
       border: 1px solid $color-black;
-  
+
       &:before {
         content: none;
         display: none;
       }
-  
+
       @include max-screen($breakpoint-mobile) {
         height: 60px;
         font-size: 12px;
@@ -276,7 +277,7 @@
       max-width: 730px;
       padding: 46px;
       margin-bottom: 74px;
-    } 
+    }
   }
 
 }

@@ -103,6 +103,11 @@ mix
   )
 
   .js(
+    `${srcRelativePath}/assets/js/read-more.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
     `${srcRelativePath}/assets/js/bbq.js`,
     `${distRelativePath}/assets/js`,
   )
@@ -124,6 +129,11 @@ mix
 
   .js(
     `${srcRelativePath}/assets/js/tabs-goods.js`,
+    `${distRelativePath}/assets/js`,
+  )
+
+  .js(
+    `${srcRelativePath}/assets/js/racing-kart.js`,
     `${distRelativePath}/assets/js`,
   )
 

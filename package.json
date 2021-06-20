@@ -79,6 +79,6 @@
     "gulp-tag-content-replace": "0.0.1",
     "jquery": "^3.4.1",
     "smooth-scroll": "^16.1.2",
-    "swiper": "^4.5.0"
+    "swiper": "^4.5.1"
   }
 }

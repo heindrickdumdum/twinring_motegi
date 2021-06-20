@@ -193,8 +193,13 @@
     <script src="<%= mix('/assets/js/tabs.js') %>" async></script>
   <% } %>
 
-  <% if(pageId == 'goods' || pageId == 'racingKart') { %>
+  <% if(pageId == 'goods') { %>
     <script src="<%= mix('/assets/js/tabs-goods.js') %>" async></script>
+  <% } %>
+
+  <% if( pageId == 'racingKart') { %>
+    <script src="<%= mix('/assets/js/read-more.js') %>" async></script>
+    <script src="<%= mix('/assets/js/racing-kart.js') %>" async></script>
   <% } %>
 
   <% if(pageId == 'hoteltwinring') { %>

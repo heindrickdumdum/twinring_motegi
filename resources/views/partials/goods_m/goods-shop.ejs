@@ -4,13 +4,11 @@
       <li class="goods-shop-items" data-age="<%- item.age %>" data-grade="<%- item.grade %>" data-passport="<%- item.passport %>" >
         <div class="wrapper-container">
           <div class="area-item-image-wrapper">
-            <a href="<%- item.link %>">
-              <img src="<%- item.imgPath %>" alt="Mobi Park">
-            </a>
+            <img src="<%- item.imgPath %>" alt="<%- item.imgAlt %>">
           </div>
           <div class="area-item-desc-wrapper">
             <h3 class="subpage-title">
-              <span><a class="" href="<%- item.link %>"><%- item.colorTitle %> </a></span>
+              <span><%- item.colorTitle %></span>
             </h3>
             <p class="desc"><%- item.desc %></p>
             <ul class="carbike-article-list details-list">

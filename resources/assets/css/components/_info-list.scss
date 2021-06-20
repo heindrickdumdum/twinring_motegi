@@ -73,6 +73,15 @@
         }
       }
 
+      &.info-item-racing {
+        &:before {
+          @include max-screen($breakpoint-mobile) {
+            top: 5px;
+            height: 30px;
+          }
+        }
+      }
+
       span {
         //margin-top: 24px;
         //margin-bottom: 24px;
@@ -103,16 +112,38 @@
         }
       }
       &.collection-item {
-        height: 199px;
+        height: auto;
         padding:0;
         line-height: 2;
         overflow-y: auto;
+        @include max-screen ($breakpoint-mobile) {
+          font-weight: bold;
+          height: 100%;
+          overflow: hidden;
+        }
         &:before {
-          height: 40%;
+          height: 17px;
+          top: 30px;
+          @include max-screen ($breakpoint-mobile) {
+            top: 25px;
+          }
+        }
+        &.goods-item {
+          height: 120px;
+          @include max-screen ($breakpoint-mobile) {
+            height: 135px;
+          }
+          &:before {
+            height: 10px;
+            top: 36px;
+            @include max-screen ($breakpoint-mobile) {
+              top: 30px;
+            }
+          }
         }
         .collection-item-div {
           padding-top: 23px;
-          padding-bottom: 14px;
+          padding-bottom: 22px;
           padding-left: 45px;
           width: 100%;
           height: 100%;
@@ -120,10 +151,18 @@
           background-position: top;
           background-size: 10px 1px;
           background-repeat: repeat-x;
-          position: absolute;
+          position: relative;
           top: 0;
           left: 0;
           right: 0;
+          font-weight: bold;
+          @include max-screen ($breakpoint-mobile) {
+            position: relative;
+            padding-left: 28px;
+          }
+          .collection-item-margin {
+            margin-top: 15px;
+          }
         }
       }
     }
@@ -153,6 +192,9 @@
       margin-top: 26px;
       margin-bottom: 55px;
       max-height: 178px;
+      &.collection-list {
+        max-height: none;
+      }
 
       .info-item {
         padding-top: 10px;

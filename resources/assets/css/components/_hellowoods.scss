@@ -14,7 +14,7 @@
       }
     }
   }
-   
+
   .field-introduction {
     .field-introduction-container {
       padding: 0;
@@ -23,6 +23,12 @@
         @include min-screen ($breakpoint-mobile+1) {
           margin-top: -30px;
           margin-bottom: 152px;
+
+        }
+        @include max-screen ($breakpoint-mobile) {
+          .map-image {
+            padding-bottom: 55px;
+          }
         }
       }
     }
@@ -44,7 +50,7 @@
       margin-bottom: 23px;
     }
   }
-  
+
   .text-ribbon {
     position: absolute;
     top: 30px;

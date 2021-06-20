@@ -16,12 +16,21 @@
       </ul>
 
       <div class="l-container mv-container">
-        <h2 class="mv-heading hellowoods-mv-heading events-mv-heading">
+        <h2 class="mv-heading hellowoods-mv-heading events-mv-heading u-show-pc">
           <%- include('/partials/heading', {
             modifier: 'heading-hellowoods',
-            text: 'Sprind Event',
+            text: 'Spring Event',
             alt: '',
             subtextvg: 'events-mv-title',
+            altSubtext: ''
+          }) %>
+        </h2>
+        <h2 class="mv-heading hellowoods-mv-heading events-mv-heading u-show-sp">
+          <%- include('/partials/heading', {
+            modifier: 'heading-hellowoods',
+            text: 'Spring Event',
+            alt: '',
+            subtextvg: 'events-mv-title-sp',
             altSubtext: ''
           }) %>
         </h2>
@@ -46,18 +55,18 @@
               <div class="challenge-left">
                 <div class="challenge-img u-show-pc">
                   <div class="challenge-img1 events">
-                    <img src="<%- mix('/assets/images/events/image-02.png') -%>" alt="梟">
+                    <img src="<%- mix('/assets/images/events/image-02.png') -%>" alt="ジップライン">
                   </div>
                   <div class="challenge-img2">
-                    <img src="<%- mix('/assets/images/events/image-03.png') -%>" alt="女の子">
+                    <img src="<%- mix('/assets/images/events/image-03.png') -%>" alt="森遊びをしている子供たち">
                   </div>
                   <div class="challenge-img3">
-                    <img src="<%- mix('/assets/images/events/image-01.png') -%>" alt="モモンガ">
+                    <img src="<%- mix('/assets/images/events/image-01.png') -%>" alt="女の子">
                   </div>
                 </div>
 
                 <div class="challenge-img u-show-sp">
-                  <img src="<%- mix('/assets/images/events/bubbles-sp.png') -%>" alt="梟">
+                  <img src="<%- mix('/assets/images/events/bubbles-sp.png') -%>" alt="森遊びをしている子供たち">
                 </div>
 
 
